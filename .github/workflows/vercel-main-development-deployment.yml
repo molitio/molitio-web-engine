@@ -1,0 +1,24 @@
+name: Publish Development
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  NODE_ENV: production
+
+jobs:  
+  build-ui-core:
+    name: Build
+    uses: ./.github/workflows/build-molitio-core-packages.yml
+  run-unit-tests:
+    name: Test
+    needs: build-ui-core
+    uses: ./.github/workflows/ui-core-unit-test.yml
+  deploy-main-to-vercel:
+    name: Deploy
+    needs: run-unit-tests
+    secrets: inherit
+    uses: ./.github/workflows/vercel-development-deploy.yml

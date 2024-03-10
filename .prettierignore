@@ -1,0 +1,6 @@
+.github
+.yarn
+docs
+node_modules
+wiki
+*.md

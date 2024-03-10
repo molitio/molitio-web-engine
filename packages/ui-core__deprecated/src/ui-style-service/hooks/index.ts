@@ -1,0 +1,1 @@
+export { useMolitioTheme } from './ThemeContextStore';

@@ -1,0 +1,17 @@
+type GeoLocation {
+    id: ID!
+    lat: Int!
+    lng: Int!
+}
+
+type Rating {
+    id: ID!
+    positive: Int!
+    negative: Int!
+}
+
+type TimeInterval {
+    id: ID!
+    start: DateTime!
+    end: DateTime!
+}

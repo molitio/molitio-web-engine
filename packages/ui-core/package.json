@@ -1,0 +1,86 @@
+{
+    "name": "@molitio/ui-core",
+    "version": "1.0.3-0",
+    "author": "Peter Koller",
+    "main": "src/index.ts",
+    "type": "module",
+    "types": "dist/index.d.ts",
+    "description": "Re-usable React UI Components",
+    "license": "CC0-1.0",
+    "repository": "git+https://github.com/molitio/molitio-core.git",
+    "keywords": [
+        "molitio",
+        "ui-core"
+    ],
+    "bugs": {
+        "url": "https://github.com/molitio/molitio-core/issues",
+        "email": "info@molitio.com"
+    },
+    "homepage": "https://github.com/molitio/molitio-core#readme",
+    "engines": {
+        "node": ">=18"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "eslint '*/**/*.{js,ts,tsx, css, scss}' --quiet --fix"
+        }
+    },
+    "size-limit": [
+        {
+            "path": "dist/index.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/bundle/esm/index.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/bundle/umd/index.js",
+            "limit": "10 KB"
+        },
+        {
+            "path": "dist/index.d.ts",
+            "limit": "10 KB"
+        }
+    ],
+    "scripts": {
+        "dev": "yarn build:watch",
+        "clean": "rm -rf dist && rm -rf .artifact && prettier --write src",
+        "packageBuilder": "node packageBuilder",
+        "publish-ui-core": "yarn packageBuilder && cd dist && npm publish --access=public && cd ..",
+        "build:watch": "rollup -c -w",
+        "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+        "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
+        "size": "size-limit",
+        "create-artifacts": "mkdir -p .artifact/package && cd dist/ && npm pack --pack-destination .artifact/package && cd .."
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-is": "^18.2.0"
+    },
+    "devDependencies": {
+        "@types/eslint": "^8.4.6",
+        "@types/node": "^18.11.9",
+        "@types/prettier": "^2.7.0",
+        "@types/react": "18.2.21",
+        "@types/react-dom": "^18.2.7",
+        "@typescript-eslint/eslint-plugin": "^5.35.1",
+        "@typescript-eslint/parser": "^5.35.1",
+        "core-js": "^3.25.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.23.0",
+        "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "^2.7.1",
+        "react": "^18.2.0",
+        "react-docgen": "^5.4.3",
+        "react-dom": "^18.2.0",
+        "react-is": "^18.2.0",
+        "tslib": "^2.4.1",
+        "typescript": "^5.2.2"
+    },
+    "stableVersion": "1.0.2"
+}

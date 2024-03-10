@@ -1,0 +1,45 @@
+{
+    "name": "@molitio/john-glenn",
+    "version": "1.0.3-0",
+    "private": true,
+    "moduleFileExtensions": [
+        "js",
+        "json",
+        "vue",
+        "scss"
+    ],
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "clean": "rm -rf .next",
+        "test": "npx jest"
+    },
+    "dependencies": {
+        "@emotion/cache": "^11.11.0",
+        "@molitio/ui-core": "workspace:*",
+        "@types/debug": "^4.1.8",
+        "@types/node": "18.11.10",
+        "@types/react": "18.2.21",
+        "@types/react-dom": "^18.2.7",
+        "debug": "^4.3.4",
+        "eslint": "8.29.0",
+        "eslint-config-next": "13.0.6",
+        "next": "^14.0.1",
+        "next-transpile-modules": "^10.0.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-is": "^18.2.0",
+        "styled-components": "6.0.8",
+        "typescript": "^5.2.2"
+    },
+    "stableVersion": "1.0.2",
+    "devDependencies": {
+        "@vercel/build-utils": "^7.2.2",
+        "@vercel/nft": "^0.24.3",
+        "sass": "^1.69.4",
+        "tslib": "2.6.2",
+        "vercel": "^32.2.2"
+    }
+}

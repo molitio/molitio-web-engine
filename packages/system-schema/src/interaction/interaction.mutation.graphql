@@ -1,0 +1,22 @@
+input InteractionInput {
+    responseEmail: String!
+    message: String!
+    interactionType: InteractionType!
+}
+
+type Mutation {
+    interaction(input: InteractionInput): Interaction
+}
+
+mutation createInteraction($message: String!, $responseEmail: String!, $interactionType: InteractionType!) {
+    interaction(input: { message: $message, responseEmail: $responseEmail, interactionType: $interactionType }) {
+        id
+        app {
+            id
+            name
+        }
+        interactionType
+        responseEmail
+        message
+    }
+}

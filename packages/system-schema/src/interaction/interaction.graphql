@@ -1,0 +1,14 @@
+type Interaction {
+    id: ID!
+    app: App!
+    interactionType: InteractionType!
+    responseEmail: String!
+    message: String!
+}
+
+enum InteractionType {
+    EMAIL
+    PHONE
+    TEXT
+    IN_APP_MESSAGE
+}

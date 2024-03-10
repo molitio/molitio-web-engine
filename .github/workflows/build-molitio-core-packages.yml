@@ -1,0 +1,31 @@
+name: Build
+
+on:
+  workflow_call:
+
+env:
+  NODE_ENV: production
+
+jobs:
+  install-dependencies:
+    name: Molitio Core
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: yarn
+    - run: |
+        yarn install --immutable
+        yarn build
+    - name: Upload UI Core 
+      uses: actions/upload-artifact@v3
+      with: 
+        name: ui-core
+        path: packages/ui-core/dist
+    - name: Upload John-Glenn
+      uses: actions/upload-artifact@v3
+      with: 
+        name: john-glenn
+        path: packages/john-glenn/.next

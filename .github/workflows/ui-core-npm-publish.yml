@@ -1,0 +1,23 @@
+name: publish @molitio/ui-core
+
+on:
+    release:
+        types: [created]
+        
+jobs:
+    build-and-publish-ui-core:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: packages/ui-core
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+                  registry-url: 'https://registry.npmjs.org'
+            - run: node --version
+            - run: yarn install --immutable --immutable-cache --check-cache
+            - run: yarn publish-ui-core
+              env:
+                  YARN_NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

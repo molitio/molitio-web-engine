@@ -1,0 +1,7 @@
+type Organization {
+    id: ID!
+    name: String!
+    description: String
+    organizationUrl: String
+    apps: [App]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "@molitio/data-core",
+    "version": "1.0.3-0",
+    "type": "module",
+    "scripts": {
+        "dev": "ts-node src/index.ts"
+    },
+    "dependencies": {
+        "@molitio/system-schema": "workspace:^",
+        "@types/node": "^18.11.15",
+        "fastify": "^4.10.2",
+        "tslib": "^2.4.1",
+        "typescript": "^5.2.2"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.1"
+    },
+    "stableVersion": "1.0.2"
+}

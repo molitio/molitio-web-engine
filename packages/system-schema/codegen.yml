@@ -1,0 +1,17 @@
+schema: '**/*.graphql'
+documents:
+    - './src/**/*.graphql'
+generates:
+    './dist/uiClient/graphql.ts': { plugins: ['typescript'] }
+    './dist/uiClient/':
+        {
+            preset: 'near-operation-file',
+            presetConfig: { extension: '.generated.tsx', baseTypesPath: 'graphql.ts' },
+            plugins: ['typescript-operations', 'typescript-react-apollo'],
+            config:
+                {
+                    withHooks: true,
+                    mappers: [Organization: ../dbClient#Organization as OrganizationModel],
+                    inputMaybeValue: undefined | T,
+                },
+        }

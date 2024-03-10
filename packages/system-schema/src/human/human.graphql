@@ -1,0 +1,19 @@
+type Human {
+    id: ID!
+    userName: String!
+    publicInfo: PublicInfo
+    resourceValet: ResourceValet
+}
+
+type PublicInfo {
+    id: ID!
+    name: String!
+    email: String!
+    phone: String!
+}
+
+type QuestionFormData {
+    id: ID!
+    question: String!
+    responseEmail: String!
+}

@@ -1,0 +1,1 @@
+export { ResourceGalleryActionType } from './ResourceGalleryActionType';

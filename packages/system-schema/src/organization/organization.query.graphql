@@ -1,0 +1,12 @@
+type Query {
+    getOrganizations: [Organization]
+}
+
+query getOrganizations {
+    getOrganizations {
+        id
+        name
+        description
+        organizationUrl
+    }
+}

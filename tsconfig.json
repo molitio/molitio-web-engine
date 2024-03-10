@@ -1,0 +1,27 @@
+{
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules", "dist"],
+    "compilerOptions": {
+        "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
+        "moduleResolution": "node",
+        "jsx": "react",
+        "target": "es2020",
+        "module": "es2020",
+        "paths": {
+            "@molitio/*": ["./packages/*"]
+        },
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "importHelpers": true,
+        "downlevelIteration": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "esModuleInterop": true,
+        "skipLibCheck": false,
+        "forceConsistentCasingInFileNames": true
+    }
+}

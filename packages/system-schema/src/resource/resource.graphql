@@ -1,0 +1,29 @@
+type Resource {
+    name: String!
+    description: String
+    publicRating: Rating
+    currentLocation: GeoLocation
+    tags: [ResourceTag]
+}
+
+type ResourceValet {
+    resources: [Resource]
+}
+
+type ResourceTag {
+    description: [ResourceTagDescriptor]
+    approvalRating: Rating
+}
+
+type ResourceTagDescriptor {
+    description: String
+}
+
+type TransitionResource {
+    contributor: Human
+    desiredBy: Human
+    dateCreated: DateTime
+    dateCompleted: DateTime
+    transitionTimes: [TimeInterval]
+    resourceValet: ResourceValet
+}
