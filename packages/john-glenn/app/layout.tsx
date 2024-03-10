@@ -1,5 +1,4 @@
 import React from 'react';
-import './globalStyles/globals.scss';
 
 const Layout: React.FC<React.PropsWithChildren> = (props) => {
     const { children } = props;

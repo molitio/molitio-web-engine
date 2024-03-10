@@ -1,3 +1,5 @@
+import React from 'react';
+
 export type ButtonProps = {
     type: ButtonType;
     onClick?: () => void;

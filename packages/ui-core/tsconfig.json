@@ -2,7 +2,6 @@
     "extends": "../../tsconfig.json",
     "exclude": ["dist", "node_modules", "**/*.test.ts", "**/*.test.tsx"],
     "compilerOptions": {
-        "baseUrl": "./src",
-        "types": ["react", "react-dom"]
+        "baseUrl": "./src"
     }
 }

@@ -6,10 +6,8 @@ import size from 'rollup-plugin-size';
 import { visualizer } from 'rollup-plugin-visualizer';
 import fg from 'fast-glob';
 import resolve from '@rollup/plugin-node-resolve';
-/* import nodePolyfills from 'rollup-plugin-polyfill-node'; */
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-/* import preserveDirectives from 'rollup-plugin-preserve-directives'; */
 import packageJson from './package.json' assert { type: 'json' };
 
 const { moduleDefinitions } = packageJson;
@@ -52,15 +50,9 @@ const modules = Array.from(
                     includeDependencies: true,
                 }),
                 resolve(),
-                /* {
-                    dedupe: [
-                        'react',
-                        'react-dom',
-                         'styled-components',  'react-is',
-                         'device-detector-js', 'crypto',
-                    ],
-                    } */
-
+                {
+                    dedupe: ['react', 'react-dom', 'styled-components', 'react-is', 'device-detector-js', 'crypto'],
+                },
                 commonjs(),
                 /*       nodePolyfills(), */
                 typescript({

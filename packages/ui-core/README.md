@@ -11,8 +11,3 @@
 A universal component library built mainly with React and TypeScript, targeting esm, cjs, umd
 module types and made to work with server and client side alike. With styled-components it provides predefined markup and style with system driven theme management, and many options to customize.
 
-## Contributors
-
-    Peter Koller
-    Sandor Hepp
-    Erzsébet Antal-Somogyi

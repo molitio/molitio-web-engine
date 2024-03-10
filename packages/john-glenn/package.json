@@ -34,12 +34,17 @@
         "styled-components": "6.0.8",
         "typescript": "^5.2.2"
     },
-    "stableVersion": "1.0.2",
     "devDependencies": {
         "@vercel/build-utils": "^7.2.2",
         "@vercel/nft": "^0.24.3",
         "sass": "^1.69.4",
         "tslib": "2.6.2",
         "vercel": "^32.2.2"
-    }
+    },
+    "resolutions": {
+        "react": "18.2.0",
+        "react-is": "^18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "stableVersion": "1.0.2"
 }

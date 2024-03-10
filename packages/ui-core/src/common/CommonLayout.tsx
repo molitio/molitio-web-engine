@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 
 //generate a Layout component for middleware injection and other common layout components using mainly React
 const CommonLayout: React.FC<React.PropsWithChildren> = (props) => {
@@ -24,6 +24,5 @@ const CommonLayout: React.FC<React.PropsWithChildren> = (props) => {
         </html>
     );
 };
-
 
 export default CommonLayout;

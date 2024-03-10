@@ -6,7 +6,7 @@
     "type": "module",
     "types": "dist/index.d.ts",
     "description": "Re-usable React UI Components",
-    "license": "CC0-1.0",
+    "license": "MIT",
     "repository": "git+https://github.com/molitio/molitio-core.git",
     "keywords": [
         "molitio",
@@ -63,7 +63,7 @@
         "@types/eslint": "^8.4.6",
         "@types/node": "^18.11.9",
         "@types/prettier": "^2.7.0",
-        "@types/react": "18.2.21",
+        "@types/react": "^18.2.64",
         "@types/react-dom": "^18.2.7",
         "@typescript-eslint/eslint-plugin": "^5.35.1",
         "@typescript-eslint/parser": "^5.35.1",
@@ -81,6 +81,11 @@
         "react-is": "^18.2.0",
         "tslib": "^2.4.1",
         "typescript": "^5.2.2"
+    },
+    "resolutions": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-is": "^18.2.0"
     },
     "stableVersion": "1.0.2"
 }

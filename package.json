@@ -34,7 +34,7 @@
         "packages/ui-core-tests"
     ],
     "resolutions": {
-        "@molitio/ui-core": "workspace:packages/ui-core"
+        "@molitio/*": "workspace:packages/*"
     },
     "moduleDefinitions": {
         "ui-core": {
@@ -114,7 +114,6 @@
         "rollup": "4.0.2",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-pnp-resolve": "^2.0.0",
-        "rollup-plugin-polyfill-node": "^0.10.2",
         "rollup-plugin-preserve-directives": "^0.2.0",
         "rollup-plugin-size": "^0.2.2",
         "rollup-plugin-visualizer": "^5.9.2",

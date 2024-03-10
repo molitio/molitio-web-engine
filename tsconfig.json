@@ -1,5 +1,5 @@
 {
-    "include": ["**/*.ts", "**/*.tsx"],
+    "include": ["./packages/**/*.ts", "./packages/**/*.tsx"],
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
