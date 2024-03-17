@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node", // debug Node.js
+      "name": "Attach Node Debugger",
+      "request": "attach", // only attach to existing, don't launch
+      "sourceMaps": true, // look for source maps
+      "restart": true, // restart when loosing connection due to re-compile
+      // look for source-maps based on our bundle result
+      "outFiles": ["${workspaceFolder}/dist/server.js"]
+    }
+  ]
+}
