@@ -1,0 +1,11 @@
+{
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:form-manager-concept}/rest-api/rest-api.sqlite",
+      "name": "sql-lite"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}
