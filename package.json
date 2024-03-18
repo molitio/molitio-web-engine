@@ -35,13 +35,9 @@
         "ui-core": {
             "name": "ui-core",
             "basePath": "./packages/ui-core",
-            "outDir": "dist",
-            "baseUrl": "src",
             "inputPath": "src/index.ts",
-            "main": "dist/index.js",
+            "outDir": "dist",
             "module": "dist/esm/index.js",
-            "tsConfigPath": "tsconfig.json",
-            "declarationDir": "dist",
             "bundle": {
                 "esm": "dist/bundle/esm/index.js",
                 "umd": "dist/bundle/umd/index.js"
@@ -109,7 +105,6 @@
         "rollup": "4.0.2",
         "rollup-plugin-peer-deps-external": "^2.2.4",
         "rollup-plugin-pnp-resolve": "^2.0.0",
-        "rollup-plugin-preserve-directives": "^0.2.0",
         "rollup-plugin-size": "^0.2.2",
         "rollup-plugin-visualizer": "^5.9.2",
         "styled-components": "6.0.8",

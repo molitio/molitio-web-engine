@@ -1,7 +1,0 @@
-undecided:
-  - "@molitio/web-engine"
-  - "@molitio/data-core"
-  - "@molitio/john-glenn"
-  - "@molitio/system-schema"
-  - "@molitio/ui-core"
-  - "@molitio/ui-core-tests"

@@ -1,7 +1,14 @@
 {
-    "extends": "../../tsconfig.json",
-    "exclude": ["dist", "node_modules", "**/*.test.ts", "**/*.test.tsx"],
+    "exclude": ["dist", "node_modules"],
+    "include": ["**/*.ts", "**/*.tsx"],
     "compilerOptions": {
-        "baseUrl": "./src"
+        "jsx": "react",
+        "baseUrl": "src",
+        "declarationDir": "dist",
+        "strict": true,
+        "noEmit": false,
+        "declaration": true,
+        "declarationMap": true,
+        "allowSyntheticDefaultImports": true
     }
 }

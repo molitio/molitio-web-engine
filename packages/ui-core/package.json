@@ -7,18 +7,18 @@
     "types": "dist/index.d.ts",
     "description": "Re-usable React UI Components",
     "license": "MIT",
-    "repository": "git+https://github.com/molitio/molitio-core.git",
+    "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [
         "molitio",
         "ui-core"
     ],
     "bugs": {
-        "url": "https://github.com/molitio/molitio-core/issues",
+        "url": "https://github.com/molitio/molitio-web-engine/issues",
         "email": "info@molitio.com"
     },
-    "homepage": "https://github.com/molitio/molitio-core#readme",
+    "homepage": "https://github.com/molitio/molitio-web-engine#readme",
     "engines": {
-        "node": ">=18"
+        "node": ">=20"
     },
     "husky": {
         "hooks": {
