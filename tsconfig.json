@@ -1,6 +1,6 @@
 {
     "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "dist", ".yarn/cache"],
+    "exclude": ["node_modules", "dist", "**/.yarn/cache"],
     "compilerOptions": {
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
         "baseUrl": "./",

@@ -31,9 +31,6 @@
     "workspaces": [
         "packages/*"
     ],
-    "resolutions": {
-        "@molitio/*": "workspace:packages/*"
-    },
     "moduleDefinitions": {
         "ui-core": {
             "name": "ui-core",
