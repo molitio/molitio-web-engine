@@ -1,8 +1,8 @@
 {
     "name": "@molitio/web-engine",
     "private": true,
-    "packageManager": "yarn@4.1.0",
-    "type": "module",
+    "packageManager": "yarn@4.1.1",
+    "type": "commonjs",
     "version": "1.0.3-0",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
@@ -25,12 +25,11 @@
         "docgen-show-config": "yarn typedoc --showConfig",
         "predocgen": "rm -rf docs && mkdir -p docs",
         "docgen": "yarn run typedoc --options typedoc.json",
+        "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks"
     },
     "workspaces": [
-        "packages/ui-core",
-        "packages/john-glenn",
-        "packages/ui-core-tests"
+        "packages/*"
     ],
     "resolutions": {
         "@molitio/*": "workspace:packages/*"
