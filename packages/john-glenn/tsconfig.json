@@ -1,9 +1,9 @@
 {
     "extends": "../../tsconfig.json",
-    "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "../ui-core/src/system-theme/ApplicationTheme.ts"],
+    "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
-        "baseUrl": "src",
+        "baseUrl": "./",
         "lib": ["dom", "dom.iterable", "esnext", "es2020"],
         "moduleResolution": "node",
         "jsx": "preserve",

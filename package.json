@@ -2,7 +2,7 @@
     "name": "@molitio/web-engine",
     "private": true,
     "packageManager": "yarn@4.1.1",
-    "type": "commonjs",
+    "type": "module",
     "version": "1.0.3-0",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
