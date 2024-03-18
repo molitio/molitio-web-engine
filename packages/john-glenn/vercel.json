@@ -1,6 +1,6 @@
 {
-    "buildCommand": "yarn workspace @molitio/john-glenn next build",
-    "outputDirectory": "packages/john-glenn/.next",
+    "buildCommand": "yarn next build",
+    "outputDirectory": ".next",
     "headers": [
         {
             "source": "/(.*)",

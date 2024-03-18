@@ -1,8 +1,9 @@
 {
-    "include": ["./packages/**/*.ts", "./packages/**/*.tsx"],
+    "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "dist"],
     "compilerOptions": {
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
+        "baseUrl": "./",
         "moduleResolution": "node",
         "jsx": "react",
         "target": "es2020",
