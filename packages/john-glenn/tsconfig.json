@@ -1,45 +1,33 @@
 {
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
-  "compilerOptions": {
-    "baseUrl": "./",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext",
-      "es2020"
-    ],
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "target": "es2020",
-    "module": "es2020",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "importHelpers": true,
-    "downlevelIteration": true,
-    "strict": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "esModuleInterop": true,
-    "skipLibCheck": false,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    "noEmit": true,
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
-  }
+    "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules", "dist"],
+    "compilerOptions": {
+        "baseUrl": "src",
+        "lib": ["dom", "dom.iterable", "esnext", "es2020"],
+        "moduleResolution": "node",
+        "jsx": "preserve",
+        "target": "es2020",
+        "module": "es2020",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "importHelpers": true,
+        "downlevelIteration": true,
+        "strict": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "esModuleInterop": true,
+        "skipLibCheck": false,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": true,
+        "noEmit": true,
+        "incremental": true,
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ]
+    }
 }
