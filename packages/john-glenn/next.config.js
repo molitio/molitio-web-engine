@@ -3,9 +3,9 @@
 //const path = require('path');
 
 const nextConfig = {
-    reactStrictMode: true,
+    /*  reactStrictMode: true,
     swcMinify: true,
-    /*  sassOptions: {
+   sassOptions: {
         includePaths: [path.join(__dirname, 'globalStyles')],
             prependData: `@import "./app/globalStyles/Variables.scss";`,
         prependData: `@import "./app/globalStyles/globals.scss";`, 
