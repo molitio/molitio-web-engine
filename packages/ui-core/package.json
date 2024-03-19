@@ -55,9 +55,9 @@
         "create-artifacts": "mkdir -p .artifact/package && cd dist/ && npm pack --pack-destination .artifact/package && cd .."
     },
     "peerDependencies": {
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-is": "^18.2.0"
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-is": "18.2.0"
     },
     "devDependencies": {
         "@types/eslint": "^8.4.6",
