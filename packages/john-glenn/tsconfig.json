@@ -1,33 +1,26 @@
 {
-    "include": ["**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-    "exclude": ["node_modules", "dist"],
     "compilerOptions": {
-        "baseUrl": "src",
-        "lib": ["dom", "dom.iterable", "esnext", "es2020"],
-        "moduleResolution": "node",
-        "jsx": "preserve",
-        "target": "es2020",
-        "module": "es2020",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "bundler",
         "resolveJsonModule": true,
         "isolatedModules": true,
-        "importHelpers": true,
-        "downlevelIteration": true,
-        "strict": true,
-        "noImplicitReturns": true,
-        "noFallthroughCasesInSwitch": true,
-        "allowSyntheticDefaultImports": true,
-        "noUnusedLocals": true,
-        "noUnusedParameters": true,
-        "esModuleInterop": true,
-        "skipLibCheck": false,
-        "forceConsistentCasingInFileNames": true,
-        "allowJs": true,
-        "noEmit": true,
+        "jsx": "preserve",
         "incremental": true,
         "plugins": [
             {
                 "name": "next"
             }
-        ]
-    }
+        ],
+        "paths": {
+            "@/*": ["./*"]
+        }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+    "exclude": ["node_modules"]
 }
