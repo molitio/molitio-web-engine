@@ -1,0 +1,17 @@
+export const AppConfig = {
+  apiRootUrl: "http://localhost:3030",
+  appUrl: `http://localhost:4242`,
+  home: "/",
+  apiLoginPath: "/authentication",
+  apiRegisterPath: "/users",
+  apiSurveysPath: "/surveys",
+  loginPath: "/login",
+  registerPath: "/register",
+  surveyPath: "/survey",
+  surveysPath: "/surveys",
+  newSurveysPath: "/new",
+  editSurveysPath: "/edit",
+  responsesPath: "/responses",
+  profilePath: "/profile",
+  logoutPath: "/logout",
+};

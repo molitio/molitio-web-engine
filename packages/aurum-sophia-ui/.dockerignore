@@ -1,0 +1,5 @@
+# distribution
+# **/dist
+
+# node
+**/node_modules

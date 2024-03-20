@@ -1,4 +1,4 @@
-const AppContextRoot = {
+export const AppContextRoot = {
     ui: {
         componentGraph: {
             appShell: {

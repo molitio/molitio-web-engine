@@ -14,7 +14,7 @@ const { moduleDefinitions } = packageJson;
 
 const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.ts', '.tsx'];
-const exclusions = ['**/dist', '.yarn/*', '**/*.scss', '**/*.css', 'tsconfig.tsbuildinfo'];
+const exclusions = ['**/dist', '**/.yarn', 'tsconfig.tsbuildinfo'];
 const globals = {
     crypto: 'crypto',
     react: 'React',
@@ -34,7 +34,6 @@ const modules = Array.from(
             treeshake: true,
             external: ['react', 'react-dom', 'react-is'],
             plugins: [
-                /*    preserveDirectives(), */
                 {
                     name: 'watch-external',
                     async buildStart() {
@@ -44,27 +43,17 @@ const modules = Array.from(
                         }
                     },
                 },
-
                 terser(),
                 peerDepsExternal({
-                    includeDependencies: true,
+                    includeDependencies: false,
                 }),
                 resolve(),
                 {
                     dedupe: ['react', 'react-dom', 'styled-components', 'react-is', 'device-detector-js', 'crypto'],
                 },
-                commonjs(),
-                /*       nodePolyfills(), */
                 typescript({
-                    tsconfig: `${module.tsConfigPath}`,
-                    outDir: `${module.basePath}/${module.outDir}`,
-                    baseUrl: `${module.basePath}/${module.baseUrl}`,
-                    declarationDir: `${module.basePath}/${module.declarationDir}`,
-                    declaration: true,
-                    declarationMap: true,
-                    noEmit: false,
-                    include: [`${module.basePath}/**/*.ts`, `${module.basePath}/**/*.tsx`],
-                    exclude: [...exclusions, `${module.basePath}/${module.outDir}`, `${module.basePath}/.yarn`],
+                    tsconfig: `${module.basePath}/tsconfig.json`,
+                    outDir: `${module.basePath}/dist`,
                     outputToFilesystem: true,
                 }),
                 babel({
@@ -72,7 +61,7 @@ const modules = Array.from(
                     exclude: [...exclusions],
                     extensions: [...extensions],
                 }),
-
+                commonjs(),
                 json(),
                 size({ details: true }),
                 visualizer({

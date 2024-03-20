@@ -1,0 +1,15 @@
+{
+  "name": "@molitio/resource-hub",
+  "packageManager": "yarn@3.2.3",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "yarn workspace @molito/resource-hub-api run dev"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.11",
+    "typescript": "^4.7.4"
+  }
+}
