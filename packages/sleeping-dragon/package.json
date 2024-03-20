@@ -24,7 +24,7 @@
     "@types/smoothscroll-polyfill": "^0.3.1",
     "device-detector-js": "^3.0.3",
     "nanoid": "^4.0.0",
-    "next": "12.2.5",
+    "next": "13.5.1",
     "next-fonts": "^1.5.1",
     "next-videos": "1.5.0",
     "react": "18.2.0",
