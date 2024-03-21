@@ -6683,8 +6683,8 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:18.11.10"],\
           ["@types/react", "npm:18.2.21"],\
           ["@types/react-dom", "npm:18.2.7"],\
-          ["@vercel/build-utils", "npm:7.9.1"],\
-          ["autoprefixer", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.4.18"],\
+          ["@vercel/build-utils", "npm:7.2.2"],\
+          ["autoprefixer", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.0.1"],\
           ["eslint", "npm:8.29.0"],\
           ["eslint-config-next", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:13.0.6"],\
           ["next", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:14.1.3"],\
@@ -11046,6 +11046,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:7.2.2", {\
+        "packageLocation": "./.yarn/cache/@vercel-build-utils-npm-7.2.2-a604a78b68-ec86e2d468.zip/node_modules/@vercel/build-utils/",\
+        "packageDependencies": [\
+          ["@vercel/build-utils", "npm:7.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:7.3.0", {\
         "packageLocation": "./.yarn/cache/@vercel-build-utils-npm-7.3.0-85bc1fa7ee-4f6bf41d92.zip/node_modules/@vercel/build-utils/",\
         "packageDependencies": [\
@@ -13109,10 +13116,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["autoprefixer", [\
-      ["npm:10.4.18", {\
-        "packageLocation": "./.yarn/cache/autoprefixer-npm-10.4.18-98c236b887-c5bc0b5394.zip/node_modules/autoprefixer/",\
+      ["npm:10.0.1", {\
+        "packageLocation": "./.yarn/cache/autoprefixer-npm-10.0.1-0f2e7dc91a-1d00fff400.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
-          ["autoprefixer", "npm:10.4.18"]\
+          ["autoprefixer", "npm:10.0.1"]\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -13130,16 +13137,16 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.4.18", {\
-        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-5083787d28/0/cache/autoprefixer-npm-10.4.18-98c236b887-c5bc0b5394.zip/node_modules/autoprefixer/",\
+      ["virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.0.1", {\
+        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-b9935e5789/0/cache/autoprefixer-npm-10.0.1-0f2e7dc91a-1d00fff400.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
-          ["autoprefixer", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.4.18"],\
+          ["autoprefixer", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.0.1"],\
           ["@types/postcss", null],\
           ["browserslist", "npm:4.23.0"],\
           ["caniuse-lite", "npm:1.0.30001599"],\
-          ["fraction.js", "npm:4.3.7"],\
+          ["colorette", "npm:1.4.0"],\
           ["normalize-range", "npm:0.1.2"],\
-          ["picocolors", "npm:1.0.0"],\
+          ["num2fraction", "npm:1.2.2"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-value-parser", "npm:4.2.0"]\
         ],\
@@ -15198,6 +15205,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["colorette", [\
+      ["npm:1.4.0", {\
+        "packageLocation": "./.yarn/cache/colorette-npm-1.4.0-7e94b44dc3-c8d6c8c3ef.zip/node_modules/colorette/",\
+        "packageDependencies": [\
+          ["colorette", "npm:1.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:2.0.20", {\
         "packageLocation": "./.yarn/cache/colorette-npm-2.0.20-692d428726-0b8de48bfa.zip/node_modules/colorette/",\
         "packageDependencies": [\
@@ -21114,15 +21128,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/forwarded-npm-0.2.0-6473dabe35-29ba9fd347.zip/node_modules/forwarded/",\
         "packageDependencies": [\
           ["forwarded", "npm:0.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["fraction.js", [\
-      ["npm:4.3.7", {\
-        "packageLocation": "./.yarn/cache/fraction.js-npm-4.3.7-c2c7e95a8e-bb5ebcdeef.zip/node_modules/fraction.js/",\
-        "packageDependencies": [\
-          ["fraction.js", "npm:4.3.7"]\
         ],\
         "linkType": "HARD"\
       }]\
