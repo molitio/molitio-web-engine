@@ -17,6 +17,8 @@ jobs:
         node-version: 20
         cache: yarn
     - run: |
+        corepack enable
+        yarn set version 4.1.1
         yarn install --immutable
         yarn build
     - name: Upload UI Core 
