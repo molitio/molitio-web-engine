@@ -131,9 +131,6 @@ storybook-build
 # Testing
 .jest-test-results.json
 
-# Yarn PnP
-.pnp.*
-
 .yarn/*
 !.yarn/patches
 !.yarn/plugins
