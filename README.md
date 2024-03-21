@@ -1,7 +1,6 @@
 # Molitio Web Engine
 
-
-
+A vison of an integrated web platform that allows rapid deployment and customiziablity of web applications.
 
 ## Who we are and what we do
 
@@ -9,15 +8,15 @@ Molitio is an open-source software development initiative dedicated to creating 
 
 The purpose of our organization is to provide public pro bono utilities that can be of service to humanity. Our initiatives address various aspects of human needs, from basic resource requirements to environmental conservation.
 
-## Molitio Web Engine - Open Soures Web Component Toolkit of Reusable Components
+## Molitio Web Engine - Open Soures Web Platform
 
-### Gettign started
+### Getting started
  
  The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. After coloning the repository a few steps need to be performed in order to run the poject.
 
- * :rocket: Install the Molitio Web Engine by running the following commands
-  * ``` corepack enable ``` > to enable corepack
-  * ``` yarn set version 4.1.1 ``` > to set the version of yarn
+ :rocket: Install the Molitio Web Engine by running the following commands
+  * ``` corepack enable ``` to enable corepack
+  * ``` yarn set version 4.1.1 ``` to set the version of yarn
   * ``` yarn bootstrap ``` that runs initialization of the yarn SDKs
   * ``` yarn install ```  to install all dependencies for development and build process
   * ``` yarn dev ``` to run the development server with hot module replacement (HMR)
