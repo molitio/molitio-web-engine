@@ -1,15 +1,24 @@
 {
-  "name": "@molitio/resource-hub",
-  "packageManager": "yarn@3.2.3",
-  "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "scripts": {
-    "dev": "yarn workspace @molito/resource-hub-api run dev"
-  },
-  "devDependencies": {
-    "@types/node": "^18.11.11",
-    "typescript": "^4.7.4"
-  }
+    "name": "@molito/resource-hub-api",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "author": "molitio",
+    "description": "resource API for molitio resource distribution engine",
+    "license": "CC0-1.0",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:molitio/molitio-resource-engine.git"
+    },
+    "keywords": [
+        "molitio",
+        "ui-core"
+    ],
+    "bugs": {
+        "url": "https://github.com/molitio/molitio-core/issues"
+    },
+    "homepage": "https://github.com/molitio/molitio-core#readme",
+    "scripts": {
+        "dev": "docker-compose up -d"
+    }
 }

@@ -14,12 +14,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molito/resource-hub-api@workspace:packages/resource-hub-api":
-  version: 0.0.0-use.local
-  resolution: "@molito/resource-hub-api@workspace:packages/resource-hub-api"
-  languageName: unknown
-  linkType: soft
-
 "@types/node@npm:^18.11.11":
   version: 18.11.13
   resolution: "@types/node@npm:18.11.13"

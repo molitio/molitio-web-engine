@@ -22,10 +22,6 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:packages/resource-hub"\
     },\
     {\
-      "name": "@molito/resource-hub-api",\
-      "reference": "workspace:packages/resource-hub/packages/resource-hub-api"\
-    },\
-    {\
       "name": "@molitio/system-schema",\
       "reference": "workspace:packages/system-schema"\
     },\
@@ -46,8 +42,7 @@ const RAW_RUNTIME_STATE =
     ["@molitio/system-schema", ["workspace:packages/system-schema"]],\
     ["@molitio/ui-core", ["workspace:packages/ui-core"]],\
     ["@molitio/ui-core-tests", ["workspace:packages/ui-core-tests"]],\
-    ["@molitio/web-engine", ["workspace:."]],\
-    ["@molito/resource-hub-api", ["workspace:packages/resource-hub/packages/resource-hub-api"]]\
+    ["@molitio/web-engine", ["workspace:."]]\
   ],\
   "fallbackPool": [\
   ],\
@@ -5245,15 +5240,6 @@ const RAW_RUNTIME_STATE =
           ["typedoc", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.25.12"],\
           ["typescript", "patch:typescript@npm%3A5.4.2#optional!builtin<compat/typescript>::version=5.4.2&hash=5adc0c"],\
           ["vercel", "npm:32.7.2"]\
-        ],\
-        "linkType": "SOFT"\
-      }]\
-    ]],\
-    ["@molito/resource-hub-api", [\
-      ["workspace:packages/resource-hub/packages/resource-hub-api", {\
-        "packageLocation": "./packages/resource-hub/packages/resource-hub-api/",\
-        "packageDependencies": [\
-          ["@molito/resource-hub-api", "workspace:packages/resource-hub/packages/resource-hub-api"]\
         ],\
         "linkType": "SOFT"\
       }]\

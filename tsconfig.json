@@ -5,7 +5,6 @@
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
         "baseUrl": "./",
         "moduleResolution": "node",
-
         "target": "es2020",
         "module": "es2020",
         "paths": {

@@ -1,12 +1,12 @@
-[Molitio Web Engine](https://github.com/molitio/molitio-web-engine)
-[Wiki Home](https://github.com/molitio/molitio-web-engine/wiki)
+[Molitio Web Engine](../../README.md)
+[Wiki Home](Home.md)
 
 
 ## Organization Statement
 
 ### North Star Objective
 
-Develop, 
+Develop an Open Source Web Application Platform to enable wide range of digital integration for all aspect of scociety. As the core directive is to build, maintain, and nurture a Resource Hub, witch serve as a Universal Resoure Distribution Engine, accompanied by Web Engine Components that implements reusable User Interface building blocks. The platform should allow rapid deployment of turnkey web based digital solutions.
 
 ### Directives
 

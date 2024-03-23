@@ -24,7 +24,6 @@
     "eslint-config-next": "12.1.0",
     "typescript": "4.5.5"
   },
-  "packageManager": "yarn@3.2.2",
   "description": "music in the air",
   "main": "index.js",
   "repository": "git@github.com:molitio/sonic-boom.git",

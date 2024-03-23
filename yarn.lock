@@ -3091,12 +3091,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molito/resource-hub-api@workspace:packages/resource-hub/packages/resource-hub-api":
-  version: 0.0.0-use.local
-  resolution: "@molito/resource-hub-api@workspace:packages/resource-hub/packages/resource-hub-api"
-  languageName: unknown
-  linkType: soft
-
 "@next/env@npm:13.5.6":
   version: 13.5.6
   resolution: "@next/env@npm:13.5.6"

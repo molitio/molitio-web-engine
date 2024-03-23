@@ -1,0 +1,6 @@
+#import "./folder1/schema.graphql"
+#import "./folder2/schema.graphql"
+
+type Query {
+    # ...
+}

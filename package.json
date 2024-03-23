@@ -10,7 +10,7 @@
         "lint": "yarn prettier . --write",
         "dev-sb": "yarn build:watch & yarn storybook",
         "dev": "yarn build:watch & yarn workspace @molitio/john-glenn dev",
-        "build": "yarn ",
+        "build": "yarn workspaces foreach --all run build",
         "build-system-schema": "yarn workspace @molitio/system-schema build",
         "build-ui-core": "yarn workspace @molitio/ui-core clean && yarn rollup -c",
         "build-john-glenn": "yarn workspace @molitio/john-glenn clean && yarn workspace @molitio/john-glenn build",
@@ -28,8 +28,7 @@
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "i": "yarn workspaces foreach --all install",
-        "ci:install": "yarn workspaces foreach --all install --immutable",
-        "ci:build": "yarn workspaces foreach --all run build"
+        "ci:install": "yarn workspaces foreach --all install --immutable"
     },
     "workspaces": [
         "packages/*"

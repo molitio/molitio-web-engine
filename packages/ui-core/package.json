@@ -61,6 +61,7 @@
         "react-is": "18.2.0"
     },
     "devDependencies": {
+        "@molitio/system-schema": "workspace:*",
         "@types/eslint": "^8.4.6",
         "@types/node": "^18.11.9",
         "@types/prettier": "^2.7.0",
