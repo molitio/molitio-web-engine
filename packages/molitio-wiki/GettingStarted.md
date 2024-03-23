@@ -1,7 +1,7 @@
 [Molitio Web Engine](https://github.com/molitio/molitio-web-engine)
-[Home](https://github.com/molitio/molitio-web-engine/wiki)
+[Wiki Home](https://github.com/molitio/molitio-web-engine/wiki)
 
-### Getting started
+## Getting started
  
  The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. After coloning the repository a few steps need to be performed in order to run the poject.
 
@@ -14,4 +14,10 @@
   * ``` yarn dev ``` to run the development server with hot module replacement (HMR)
 
   * ``` yarn i ``` to install dependencies when dependancy tree changed. This will over write the yarn.lock file.
+
+## Developer Certificate of Origin
+
+In a future it is planed to introduce commit sign off, to ensure that the code is not being contributed by a third party.
+
+[Developer Certificate of Origin](DeveloperCertificateOfOrigin.md)
 
