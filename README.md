@@ -30,7 +30,7 @@ Visons for the future, and descriptions of the current projects we are working o
 
 ### Organization Statement
 
-[Organization Statement](packages/molitio-wiki/organization-identity/OrganizationStatement.md)
+[Organization Statement](packages/molitio-wiki/organization-identity/OrganizationIdentity.md)
 
 Our core philosopies and guiding principle. Our Nort Star Objective.
 
