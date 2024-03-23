@@ -1,4 +1,5 @@
 rollup.config.js
 **/*.js
+packages_off_build
 
 dist

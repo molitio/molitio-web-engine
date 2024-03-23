@@ -5,7 +5,6 @@
     "dependencies": {
         "@jest/expect": "^29.6.4",
         "@jest/globals": "^29.6.4",
-        "@molitio/ui-core": "workspace:^",
         "@testing-library/dom": "^9.3.1",
         "@testing-library/jest-dom": "^6.1.2",
         "@testing-library/react": "^14.0.0",
