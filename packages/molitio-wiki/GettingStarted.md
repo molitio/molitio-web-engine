@@ -1,10 +1,13 @@
+[Molitio Web Engine](https://github.com/molitio/molitio-web-engine)
+[Home](https://github.com/molitio/molitio-web-engine/wiki)
+
 ### Getting started
  
  The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. After coloning the repository a few steps need to be performed in order to run the poject.
 
  :rocket: Install the Molitio Web Engine by running the following commands
-  * ``` corepack enable ``` to enable corepack
-  * ``` yarn set version 4.1.1 ``` to set the version of yarn
+  * ``` corepack enable ``` to enable corepack.  1 time / dev environment, to be integrated in a development container in future versions
+  * ``` yarn set version 4.1.1 ``` to set the version of yarn /  1 time / dev environment, to be integrated in a development container in future versions
   * ``` yarn bootstrap ``` that runs initialization of the yarn SDKs
   * ``` yarn ci:install ```  to install all dependencies for development and build process
   * ``` yarn ci:build ``` to build the project
