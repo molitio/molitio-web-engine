@@ -12,25 +12,25 @@ The purpose of our organization is to provide public pro bono utilities that can
 
 ### Getting started
 
-[Install Molitio Web Engine Development Environment](packages/molitio-wiki/GettingStarted.md)
+[Install @molitio/web-engine Development Environment](packages/molitio-wiki/GettingStarted.md)
 
 Feel free to reuse the components and services we provide. Under standard MIT regulations we are open for contributions. And honored be chosen by you.
 
 ### Wiki
 
-[Molitio Web Engine Wiki](packages/molitio-wiki/Home.md)
+[Wiki](packages/molitio-wiki/Home.md)
 
 The main source of all documentation and information about the Molitio Web Engine platform, and the Molitio Organization.
 
 ### Projects
 
-[Molitio Organization Wide Projects](packages/molitio-wiki/Projects.md)
+[Organization Wide Projects](packages/molitio-wiki/Projects.md)
 
 Visons for the future, and descriptions of the current projects we are working on.
 
 ### Organization Statement
 
-[Molitio Organization Statement](packages/molitio-wiki/OrganizationStatement.md)
+[Organization Statement](packages/molitio-wiki/OrganizationStatement.md)
 
 Our core philosopies and guiding principle. Our Nort Star Objective.
 
