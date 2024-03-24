@@ -1,0 +1,10 @@
+type UserPublic {
+    id: ID!
+    createdAt: String!
+    updatedAt: String
+    createdBy: String
+    updatedBy: String
+    usernamePublic: String!
+    resourceCollectionId: ID
+    userPersistedConfigId: ID
+}
