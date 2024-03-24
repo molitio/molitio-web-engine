@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+        "baseUrl": "./",
         "target": "es2020",
         "module": "Node16",
         "strict": true,
@@ -7,6 +8,5 @@
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true
     },
-    "include": ["src/**/*"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
+    "include": ["**/*.ts"]
 }

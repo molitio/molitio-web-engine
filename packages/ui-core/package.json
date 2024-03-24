@@ -20,29 +20,6 @@
     "engines": {
         "node": ">=20"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "eslint '*/**/*.{js,ts,tsx, css, scss}' --quiet --fix"
-        }
-    },
-    "size-limit": [
-        {
-            "path": "dist/index.js",
-            "limit": "10 KB"
-        },
-        {
-            "path": "dist/bundle/esm/index.js",
-            "limit": "10 KB"
-        },
-        {
-            "path": "dist/bundle/umd/index.js",
-            "limit": "10 KB"
-        },
-        {
-            "path": "dist/index.d.ts",
-            "limit": "10 KB"
-        }
-    ],
     "scripts": {
         "dev": "yarn build:watch",
         "packageBuilder": "node packageBuilder",
@@ -61,23 +38,11 @@
     },
     "devDependencies": {
         "@molitio/system-schema": "workspace:*",
-        "@types/eslint": "^8.4.6",
         "@types/node": "^18.11.9",
-        "@types/prettier": "^2.7.0",
         "@types/react": "^18.2.64",
         "@types/react-dom": "^18.2.7",
-        "@typescript-eslint/eslint-plugin": "^5.35.1",
-        "@typescript-eslint/parser": "^5.35.1",
-        "core-js": "^3.25.0",
-        "cross-env": "^7.0.3",
-        "eslint": "^8.23.0",
-        "eslint-config-google": "^0.14.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-prettier": "^4.2.1",
-        "eslint-plugin-react-hooks": "^4.6.0",
         "postcss": "8.4.36",
         "react": "18.2.0",
-        "react-docgen": "^5.4.3",
         "react-dom": "^18.2.0",
         "react-is": "^18.2.0",
         "tailwindcss": "3.3.0",

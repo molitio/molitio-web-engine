@@ -1,0 +1,12 @@
+query getInteractions {
+    interactions {
+        id
+        app {
+            id
+            name
+        }
+        interactionType
+        responseEmail
+        message
+    }
+}

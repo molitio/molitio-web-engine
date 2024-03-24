@@ -4,8 +4,8 @@
     "description": "Generated schema models",
     "type": "module",
     "scripts": {
-        "build": "yarn clean && graphql-codegen --config src/codegen.ts",
-        "dev": "yarn clean && graphql-codegen --config src/codegen.ts --watch"
+        "build": "graphql-codegen --config codegen.ts",
+        "dev": "graphql-codegen --config codegen.ts --watch"
     },
     "devDependencies": {
         "@graphql-codegen/add": "^3.2.3",
@@ -23,8 +23,11 @@
         "@graphql-typed-document-node/core": "^3.1.1",
         "@tanstack/react-query": "^4.20.4",
         "@types/node": "16.11.26",
+        "@types/react": "18.2.21",
         "graphql": "^16.6.0",
         "graphql-request": "5.1.0",
+        "graphql-tag": "2.12.6",
+        "react": "18.2.0",
         "ts-node": "^10.9.1",
         "tslib": "^2.4.1",
         "typescript": "^5.2.2"
