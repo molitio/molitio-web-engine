@@ -1,14 +1,21 @@
 {
     "compilerOptions": {
-        "strict": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "forceConsistentCasingInFileNames": true,
+        "module": "commonjs",
+        "declaration": true,
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "allowSyntheticDefaultImports": true,
         "target": "ES2022",
-        "lib": ["ES2022"],
-        "module": "Node16",
-        "rootDir": "./src",
-        "outDir": "./dist",
-        "moduleResolution": "node16"
+        "sourceMap": true,
+        "outDir": "../../.artifacts/resource-hub",
+        "baseUrl": "./",
+        "incremental": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "noImplicitAny": false,
+        "strictBindCallApply": false,
+        "forceConsistentCasingInFileNames": false,
+        "noFallthroughCasesInSwitch": false
     }
 }
