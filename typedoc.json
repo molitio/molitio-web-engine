@@ -16,7 +16,7 @@
         "packages/system-schema/src/**/*",
         "packages/john-glenn/src/**/*"
     ],
-    "out": "docs",
+    "out": "./artifacts/docs",
     "compilerOptions": {
         "jsx": "react-jsx"
     }

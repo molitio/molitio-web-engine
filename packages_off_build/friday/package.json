@@ -1,0 +1,10 @@
+{
+  "name": "@molitio/friday",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development yarn workspace @molitio/friday-ui run dev"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "typescript": "5.1.6"
+  }
+}

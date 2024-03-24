@@ -3,6 +3,7 @@
 //const path = require('path');
 
 const nextConfig = {
+    distDir: '../../.artifacts/john-glenn/.next',
     /*  reactStrictMode: true,
     swcMinify: true,
    sassOptions: {

@@ -2,3 +2,4 @@
 *.spec.*
 packageBuilder.*
 version.txt
+packages_off_build

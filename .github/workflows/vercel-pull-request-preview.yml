@@ -15,13 +15,18 @@ jobs:
       name: preview
 ##    url: ${{ steps.deploy.outputs.url }}
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 20
-          cache: yarn
-      - run: yarn install --immutable
-      - run: yarn build
+    - uses: actions/checkout@v4
+    - name: Enable Corepack
+      run: corepack enable
+    - name: Set Node version to 4.x
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: yarn
+    - name: Install Dependencies
+      run: yarn ci:install
+    - name: Build Project
+      run: yarn build
     ##  - run: yarn test
 
     ##  - run: yarn vercel ../packages/john-glenn pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}

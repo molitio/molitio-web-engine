@@ -1,0 +1,4 @@
+type Query {
+    userPublic(id: ID!): UserPublic
+    userPublicCollection: [UserPublic]
+}
