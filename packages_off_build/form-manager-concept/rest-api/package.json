@@ -51,7 +51,7 @@
     "@feathersjs/knex": "5.0.5",
     "@feathersjs/koa": "5.0.5",
     "@feathersjs/schema": "5.0.5",
-    "@feathersjs/transport-commons": "5.0.5",
+    "@feathersjs/transport-commons": "5.0.8",
     "@feathersjs/typebox": "5.0.5",
     "feathers-hooks-common": "7.0.3",
     "knex": "2.4.2",
