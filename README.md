@@ -12,7 +12,7 @@ The purpose of our organization is to provide public pro bono utilities that can
 
 ### Getting started
 
-[Install @molitio/web-engine Development Environment](packages/molitio-wiki/GettingStarted.md)
+[Install @molitio/web-engine Development Environment](packages/molitio-wiki/development/GettingStarted.md)
 
 Feel free to reuse the components and services we provide. Under standard MIT regulations we are open for contributions. And honored be chosen by you.
 
@@ -24,7 +24,7 @@ The main source of all documentation and information about the Molitio Web Engin
 
 ### Projects
 
-[Organization Wide Projects](packages/molitio-wiki/Projects.md)
+[Organization Wide Projects](packages/molitio-wiki/organization-identity/Projects.md)
 
 Visons for the future, and descriptions of the current projects we are working on.
 
