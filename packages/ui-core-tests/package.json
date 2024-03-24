@@ -3,22 +3,22 @@
     "version": "1.0.3-0",
     "type": "module",
     "dependencies": {
-        "@jest/expect": "^29.6.4",
-        "@jest/globals": "^29.6.4",
-        "@testing-library/dom": "^9.3.1",
-        "@testing-library/jest-dom": "^6.1.2",
-        "@testing-library/react": "^14.0.0",
-        "@types/debug": "^4.1.8",
-        "@types/jest": "^29.5.4",
+        "@jest/expect": "29.6.4",
+        "@jest/globals": "29.6.4",
+        "@testing-library/dom": "9.3.1",
+        "@testing-library/jest-dom": "6.1.2",
+        "@testing-library/react": "14.0.0",
+        "@types/debug": "4.1.8",
+        "@types/jest": "29.5.4",
         "@types/react": "18.2.21",
-        "@types/react-dom": "^18.2.7",
-        "debug": "^4.3.4",
+        "@types/react-dom": "18.2.7",
+        "debug": "4.3.4",
         "react": "18.2.0",
-        "react-dom": "^18.2.0",
-        "tslib": "^2.6.2"
+        "react-dom": "18.2.0",
+        "tslib": "2.6.2"
     },
     "stableVersion": "1.0.2",
     "devDependencies": {
-        "identity-obj-proxy": "^3.0.0"
+        "identity-obj-proxy": "3.0.0"
     }
 }
