@@ -24,7 +24,7 @@ jobs:
         node-version: 20
         cache: yarn
     - name: Install Dependencies
-      run: yarn install --immutable
+      run: yarn ci:install
     - name: Build Project
       run: yarn build
     ##  - run: yarn test

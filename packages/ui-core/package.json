@@ -45,14 +45,13 @@
     ],
     "scripts": {
         "dev": "yarn build:watch",
-        "clean": "rm -rf dist && rm -rf .artifact && prettier --write src",
         "packageBuilder": "node packageBuilder",
         "publish-ui-core": "yarn packageBuilder && cd dist && npm publish --access=public && cd ..",
         "build:watch": "rollup -c -w",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
         "size": "size-limit",
-        "create-artifacts": "mkdir -p .artifact/package && cd dist/ && npm pack --pack-destination .artifact/package && cd .."
+        "create-artifacts": "mkdir -p ../.artifact/package && cd ui-core/ && npm pack --pack-destination ../.artifact/packages && cd ../../"
     },
     "peerDependencies": {
         "next": "14.1.3",

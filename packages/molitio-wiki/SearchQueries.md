@@ -1,3 +1,5 @@
+[Wiki Home](Home.md)
+
 ### Collection of Search Queries
 
 look for numbers with uncertain parts with regex:

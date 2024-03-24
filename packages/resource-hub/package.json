@@ -1,24 +1,21 @@
 {
-    "name": "@molito/resource-hub-api",
+    "name": "@molito/resource-hub",
     "version": "1.0.0",
     "main": "index.js",
     "type": "module",
     "author": "molitio",
-    "description": "resource API for molitio resource distribution engine",
-    "license": "CC0-1.0",
+    "description": "Resource Distribution Engine",
+    "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "git@github.com:molitio/molitio-resource-engine.git"
+        "url": "git@github.com:molitio/molitio-web-engine.git"
     },
     "keywords": [
         "molitio",
         "ui-core"
     ],
     "bugs": {
-        "url": "https://github.com/molitio/molitio-core/issues"
+        "url": "https://github.com/molitio/molitio-web-engine/issues"
     },
-    "homepage": "https://github.com/molitio/molitio-core#readme",
-    "scripts": {
-        "dev": "docker-compose up -d"
-    }
+    "homepage": "https://github.com/molitio/molitio-web-engine#readme"
 }

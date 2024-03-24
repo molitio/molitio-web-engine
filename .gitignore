@@ -10,7 +10,6 @@ ui-core_bundle-map.html
 data-core_bundle-map.html
 
 # Docs
-
 docs
 
 # AWS file folder
@@ -123,7 +122,7 @@ deploy
 storybook-build
 .rollup.cache
 .rollup.tscache
-.artifact
+**/.artifacts
 
 # Dev Keys
 *.pem

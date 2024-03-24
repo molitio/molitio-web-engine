@@ -1,4 +1,6 @@
+
 [Molitio Web Engine](../../../README.md)
+
 [Wiki Home](../Home.md)
 
 ## Getting started
@@ -14,6 +16,8 @@
   * ``` yarn dev ``` to run the development server with hot module replacement (HMR)
 
   * ``` yarn i ``` to install dependencies when dependancy tree changed. This will over write the yarn.lock file.
+
+  * ``` yarn test:watch ``` to run the tests in watch mode
 
 ## Developer Certificate of Origin
 

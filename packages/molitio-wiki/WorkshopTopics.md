@@ -1,3 +1,6 @@
+[Wiki Home](Home.md)
+
+
 # Open-door workshop
 The goal is to proactively and collaboratively explore emerging technical challenges and develop potential solutions.
 

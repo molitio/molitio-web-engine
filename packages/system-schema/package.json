@@ -2,15 +2,14 @@
     "name": "@molitio/system-schema",
     "version": "1.0.3-0",
     "description": "Generated schema models",
-    "main": "dist/index.js",
     "type": "module",
     "scripts": {
-        "clean": "rm -rf ./dist",
-        "build": "yarn clean && graphql-codegen --config codegen.yml"
+        "build": "yarn clean && graphql-codegen --config src/codegen.ts",
+        "dev": "yarn clean && graphql-codegen --config src/codegen.ts --watch"
     },
     "devDependencies": {
         "@graphql-codegen/add": "^3.2.3",
-        "@graphql-codegen/cli": "^2.11.8",
+        "@graphql-codegen/cli": "5.0.2",
         "@graphql-codegen/client-preset": "^1.2.3",
         "@graphql-codegen/graphql-modules-preset": "^2.5.1",
         "@graphql-codegen/near-operation-file-preset": "^2.4.4",
