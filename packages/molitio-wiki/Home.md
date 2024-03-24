@@ -13,20 +13,14 @@ To enhance efficiency and success, it is advisable to establish a framework and 
 ## What should you know on this portal?
 
 We record the discussed project concepts, solutions, issues, and milestones in the appropriate places.
-  * [Wiki (this page) :)](https://github.com/NestMediaHu/to-be-determined/wiki)
+  * [Wiki (this page) :)](https://github.com/molitio/molitio-web-engine/blob/main/packages/molitio-wiki/Home.md)
 
     "Knowledge applied with good intention is wisdom" - the more we document, the more our toolbox expands.
-  * [Data repository collection (let's stick with the repository) :), 1 project = 1 repository = 1 concept](https://github.com/orgs/NestMediaHu/repositories)
+  * [Monorepo for an interconnected web application platfrom](https://github.com/molitio/molitio-web-engine/tree/main/packages/molitio-wiki/development)
 
-    Projects and concepts are recorded in separate repositories, along with their related topics.
-  * [Issues for bugs/tasks/epics](https://github.com/NestMediaHu/to-be-determined/issues)
+    Focusing on one web application platform, all interconnected components and services are in the Web Engine monorepo.
+  * [Issues for bugs/tasks/epics](https://github.com/molitio/molitio-web-engine)
 
-    Used to store tasks, bugs, and other operational to-dos.
-  * [Solutions](https://github.com/NestMediaHu/to-be-determined/wiki)
+    Open Issues on the public side. We have an internal YouTrack for internal development tasks, but we maintain the issues section to be able to recieve feedback.
+  * [Solutions](https://github.com/molitio/molitio-web-engine/issues)
 
-    Every repository has a dedicated wiki where we document various project-specific solutions.
-  * [Milestones](https://github.com/NestMediaHu/to-be-determined/milestones)
-
-    Milestones reflect the estimated time window and completion status of the associated task collections.
-
-  * Workshop topics
