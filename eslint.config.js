@@ -6,6 +6,7 @@ export default [
     {
         files: ['packages/ui-core/**/*.ts', 'packages/ui-core/**/*.tsx'],
         env: {
+            module: 'Node16',
             browser: true,
             es2022: true,
         },
@@ -31,7 +32,7 @@ export default [
                 jsx: true,
             },
             ecmaVersion: 2020,
-            project: './tsconfig.json',
+            project: 'packages/ui-core/tsconfig.json',
             sourceType: 'module',
             createDefaultProgram: true,
         },
@@ -61,7 +62,7 @@ export default [
                 // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
                 // default to latest and warns if missing
                 // It will default to "detect" in the future
-                flowVersion: '0.53', // Flow version
+                // flowVersion: '0.53', // Flow version
             },
             propWrapperFunctions: [
                 // The names of any function used to wrap propTypes, e.g. `forbidExtraProps`. If this isn't set, any propTypes wrapped in a function will be skipped.

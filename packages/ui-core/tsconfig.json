@@ -1,10 +1,14 @@
 {
-    "exclude": ["dist", "node_modules"],
+    "exclude": ["node_modules"],
     "include": ["**/*.ts", "**/*.tsx"],
     "compilerOptions": {
+        "moduleResolution": "node",
+        "target": "es2022",
+        "module": "es2022",
+        "resolveJsonModule": true,
         "jsx": "react",
         "baseUrl": "src",
-        "declarationDir": "dist/types",
+        "declarationDir": "../../.artifacts/ui-core/types",
         "strict": true,
         "noEmit": false,
         "declaration": true,

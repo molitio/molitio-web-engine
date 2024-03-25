@@ -9,6 +9,9 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import packageJson from './package.json' assert { type: 'json' };
+import postcss from 'rollup-plugin-postcss';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 
 const { moduleDefinitions } = packageJson;
 
@@ -20,6 +23,23 @@ const globals = {
     react: 'React',
     'react-dom': 'ReactDOM',
     'react-is': 'react-is',
+};
+
+export const tailwindcssConfig = {
+    content: [
+        './pages/**/*.{js,ts,jsx,tsx,mdx}',
+        './components/**/*.{js,ts,jsx,tsx,mdx}',
+        './app/**/*.{js,ts,jsx,tsx,mdx}',
+    ],
+    theme: {
+        extend: {
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+            },
+        },
+    },
+    plugins: [],
 };
 
 Object.keys(moduleDefinitions).map((moduleName) =>
@@ -43,14 +63,35 @@ const modules = Array.from(
                         }
                     },
                 },
-                terser(),
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
+                postcss({
+                    modules: true,
+                    minimize: true,
+                    writeDefinitions: true,
+                    extensions: ['.css', '.scss'],
+                    inject: {
+                        insertAt: 'top',
+                    },
+                    plugins: [autoprefixer()],
+                }),
                 resolve(),
+                commonjs(),
                 {
-                    dedupe: ['react', 'react-dom', 'styled-components', 'react-is', 'device-detector-js', 'crypto'],
+                    dedupe: [
+                        'react',
+                        'react-dom',
+                        'react-is',
+                        'next',
+                        'tailwind',
+                        'postcss',
+                        'autoprefixer',
+                        'device-detector-js',
+                        'crypto',
+                    ],
                 },
+
                 typescript({
                     tsconfig: `${module.basePath}/tsconfig.json`,
                     outDir: `${module.basePath}/dist`,
@@ -61,8 +102,8 @@ const modules = Array.from(
                     exclude: [...exclusions],
                     extensions: [...extensions],
                 }),
-                commonjs(),
                 json(),
+                terser(),
                 size({ details: true }),
                 visualizer({
                     filename: `./artifacts/bundle-map/${module.name}_bundle-map.html`,

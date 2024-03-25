@@ -1,16 +1,15 @@
 {
-    "include": ["**/*.ts", "**/*.tsx"],
+    "include": ["**/*.ts", "**/*.tsx", "tailwind.config.js"],
     "exclude": ["node_modules", "dist", "**/.yarn/cache", "packages_off_build"],
     "compilerOptions": {
-        "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
+        "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
-        "moduleResolution": "node",
-        "target": "es2020",
-        "module": "es2020",
+        "moduleResolution": "NodeNext",
+        "target": "es2022",
+        "module": "NodeNext",
         "paths": {
             "@molitio/*": ["./packages/*"]
         },
-        "resolveJsonModule": true,
         "isolatedModules": true,
         "importHelpers": true,
         "downlevelIteration": true,
