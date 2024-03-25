@@ -1,6 +1,7 @@
 {
     "name": "@molitio/web-engine",
     "private": true,
+    "type": "module",
     "packageManager": "yarn@4.1.1",
     "version": "1.0.3-0",
     "authors": "Peter Koller",

@@ -12,7 +12,6 @@
         "build": "next build",
         "start": "next start",
         "lint": "next lint",
-        "clean": "rm -rf .next",
         "test": "npx jest"
     },
     "dependencies": {

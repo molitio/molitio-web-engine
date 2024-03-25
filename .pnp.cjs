@@ -6600,6 +6600,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.21"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["@types/react-is", null],\
+          ["autoprefixer", "virtual:937ab11edac3812ba15c9d0c24b86ad838ca9ddafa8867c2db96526e63c758855939495e875135907e5eaabb5c2a7d236083aef2406cf75e62daf97c535f0f32#npm:10.4.19"],\
           ["next", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.2.0"],\
@@ -6629,6 +6630,8 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:18.11.9"],\
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.7"],\
+          ["autoprefixer", "virtual:937ab11edac3812ba15c9d0c24b86ad838ca9ddafa8867c2db96526e63c758855939495e875135907e5eaabb5c2a7d236083aef2406cf75e62daf97c535f0f32#npm:10.4.19"],\
+          ["next", "virtual:5c518cb509690de76646b4635364ae16ae883f13f080d456c15fdd6b033b2f3a957adbccfd7ab2ce8ffb058614e7201bc5875fe36e6443c19699fd792b3e228e#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:5c518cb509690de76646b4635364ae16ae883f13f080d456c15fdd6b033b2f3a957adbccfd7ab2ce8ffb058614e7201bc5875fe36e6443c19699fd792b3e228e#npm:18.2.0"],\
@@ -9961,6 +9964,13 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
+      ["npm:10.4.19", {\
+        "packageLocation": "./.yarn/cache/autoprefixer-npm-10.4.19-7c86a73b2f-98378eae37.zip/node_modules/autoprefixer/",\
+        "packageDependencies": [\
+          ["autoprefixer", "npm:10.4.19"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
       ["virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:10.0.1", {\
         "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-b9935e5789/0/cache/autoprefixer-npm-10.0.1-0f2e7dc91a-1d00fff400.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
@@ -9971,6 +9981,25 @@ const RAW_RUNTIME_STATE =
           ["colorette", "npm:1.4.0"],\
           ["normalize-range", "npm:0.1.2"],\
           ["num2fraction", "npm:1.2.2"],\
+          ["postcss", "npm:8.4.36"],\
+          ["postcss-value-parser", "npm:4.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/postcss",\
+          "postcss"\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["virtual:937ab11edac3812ba15c9d0c24b86ad838ca9ddafa8867c2db96526e63c758855939495e875135907e5eaabb5c2a7d236083aef2406cf75e62daf97c535f0f32#npm:10.4.19", {\
+        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-27e9fc51be/0/cache/autoprefixer-npm-10.4.19-7c86a73b2f-98378eae37.zip/node_modules/autoprefixer/",\
+        "packageDependencies": [\
+          ["autoprefixer", "virtual:937ab11edac3812ba15c9d0c24b86ad838ca9ddafa8867c2db96526e63c758855939495e875135907e5eaabb5c2a7d236083aef2406cf75e62daf97c535f0f32#npm:10.4.19"],\
+          ["@types/postcss", null],\
+          ["browserslist", "npm:4.23.0"],\
+          ["caniuse-lite", "npm:1.0.30001600"],\
+          ["fraction.js", "npm:4.3.7"],\
+          ["normalize-range", "npm:0.1.2"],\
+          ["picocolors", "npm:1.0.0"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-value-parser", "npm:4.2.0"]\
         ],\
@@ -10620,6 +10649,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001599-834cd4cb82-c9a5ad806f.zip/node_modules/caniuse-lite/",\
         "packageDependencies": [\
           ["caniuse-lite", "npm:1.0.30001599"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:1.0.30001600", {\
+        "packageLocation": "./.yarn/cache/caniuse-lite-npm-1.0.30001600-89d888d155-4c52f83ed7.zip/node_modules/caniuse-lite/",\
+        "packageDependencies": [\
+          ["caniuse-lite", "npm:1.0.30001600"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13685,6 +13721,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/forwarded-npm-0.2.0-6473dabe35-29ba9fd347.zip/node_modules/forwarded/",\
         "packageDependencies": [\
           ["forwarded", "npm:0.2.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["fraction.js", [\
+      ["npm:4.3.7", {\
+        "packageLocation": "./.yarn/cache/fraction.js-npm-4.3.7-c2c7e95a8e-bb5ebcdeef.zip/node_modules/fraction.js/",\
+        "packageDependencies": [\
+          ["fraction.js", "npm:4.3.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -17010,6 +17055,47 @@ const RAW_RUNTIME_STATE =
           "sass"\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["virtual:5c518cb509690de76646b4635364ae16ae883f13f080d456c15fdd6b033b2f3a957adbccfd7ab2ce8ffb058614e7201bc5875fe36e6443c19699fd792b3e228e#npm:14.1.3", {\
+        "packageLocation": "./.yarn/__virtual__/next-virtual-03470bab60/0/cache/next-npm-14.1.3-8ad6e32792-6e77d5d351.zip/node_modules/next/",\
+        "packageDependencies": [\
+          ["next", "virtual:5c518cb509690de76646b4635364ae16ae883f13f080d456c15fdd6b033b2f3a957adbccfd7ab2ce8ffb058614e7201bc5875fe36e6443c19699fd792b3e228e#npm:14.1.3"],\
+          ["@next/env", "npm:14.1.3"],\
+          ["@next/swc-darwin-arm64", "npm:14.1.3"],\
+          ["@next/swc-darwin-x64", "npm:14.1.3"],\
+          ["@next/swc-linux-arm64-gnu", "npm:14.1.3"],\
+          ["@next/swc-linux-arm64-musl", "npm:14.1.3"],\
+          ["@next/swc-linux-x64-gnu", "npm:14.1.3"],\
+          ["@next/swc-linux-x64-musl", "npm:14.1.3"],\
+          ["@next/swc-win32-arm64-msvc", "npm:14.1.3"],\
+          ["@next/swc-win32-ia32-msvc", "npm:14.1.3"],\
+          ["@next/swc-win32-x64-msvc", "npm:14.1.3"],\
+          ["@opentelemetry/api", null],\
+          ["@swc/helpers", "npm:0.5.2"],\
+          ["@types/opentelemetry__api", null],\
+          ["@types/react", "npm:18.2.64"],\
+          ["@types/react-dom", "npm:18.2.7"],\
+          ["@types/sass", null],\
+          ["busboy", "npm:1.6.0"],\
+          ["caniuse-lite", "npm:1.0.30001599"],\
+          ["graceful-fs", "npm:4.2.11"],\
+          ["postcss", "npm:8.4.31"],\
+          ["react", "npm:18.2.0"],\
+          ["react-dom", "virtual:5c518cb509690de76646b4635364ae16ae883f13f080d456c15fdd6b033b2f3a957adbccfd7ab2ce8ffb058614e7201bc5875fe36e6443c19699fd792b3e228e#npm:18.2.0"],\
+          ["sass", null],\
+          ["styled-jsx", "virtual:03470bab604258c79c6e99c4c38682924a5db7399de5f49db8ce66d82931f90a07159357dc15e3f997d9268fcf5a33c67fc1526f47ad1cb77748642a1155bcfd#npm:5.1.1"]\
+        ],\
+        "packagePeers": [\
+          "@opentelemetry/api",\
+          "@types/opentelemetry__api",\
+          "@types/react-dom",\
+          "@types/react",\
+          "@types/sass",\
+          "react-dom",\
+          "react",\
+          "sass"\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["no-case", [\
@@ -19618,6 +19704,28 @@ const RAW_RUNTIME_STATE =
           ["styled-jsx", "npm:5.1.1"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:03470bab604258c79c6e99c4c38682924a5db7399de5f49db8ce66d82931f90a07159357dc15e3f997d9268fcf5a33c67fc1526f47ad1cb77748642a1155bcfd#npm:5.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-a38cd01903/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\
+        "packageDependencies": [\
+          ["styled-jsx", "virtual:03470bab604258c79c6e99c4c38682924a5db7399de5f49db8ce66d82931f90a07159357dc15e3f997d9268fcf5a33c67fc1526f47ad1cb77748642a1155bcfd#npm:5.1.1"],\
+          ["@babel/core", null],\
+          ["@types/babel-plugin-macros", null],\
+          ["@types/babel__core", null],\
+          ["@types/react", "npm:18.2.64"],\
+          ["babel-plugin-macros", null],\
+          ["client-only", "npm:0.0.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@babel/core",\
+          "@types/babel-plugin-macros",\
+          "@types/babel__core",\
+          "@types/react",\
+          "babel-plugin-macros",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:63f084e97953ca3d3fdfc7e94637f2857b7220f5d197401a8a7d7a944a74b1f79be24379dd2d38a67308c6996d9fdf7723d2a72fc9c11c6f58e498ba76c01633#npm:5.1.1", {\
         "packageLocation": "./.yarn/__virtual__/styled-jsx-virtual-90a57ccbe6/0/cache/styled-jsx-npm-5.1.1-2557a209ba-4f6a5d0010.zip/node_modules/styled-jsx/",\
