@@ -1,12 +1,12 @@
 {
-    "include": ["**/*.ts", "**/*.tsx", "tailwind.config.js"],
-    "exclude": ["node_modules", "dist", "**/.yarn/cache", "packages_off_build"],
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "packages_off_build"],
     "compilerOptions": {
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "Node16",
         "target": "es2022",
-        "module": "NodeNext",
+        "module": "Node16",
         "paths": {
             "@molitio/*": ["./packages/*"]
         },

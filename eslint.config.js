@@ -2,6 +2,7 @@ export default [
     {
         files: ['packages/john-glenn/**/*.ts', 'packages/john-glenn/**/*.tsx'],
         extends: 'next/core-web-vitals',
+        ignorePatterns: ['./.artifacts'],
     },
     {
         files: ['packages/ui-core/**/*.ts', 'packages/ui-core/**/*.tsx'],

@@ -1,6 +1,6 @@
 {
     "buildCommand": "yarn build",
-    "outputDirectory": "../.artifacts/.next",
+    "outputDirectory": "../../.artifacts/john-glenn",
     "headers": [
         {
             "source": "/(.*)",
