@@ -1,5 +1,8 @@
-export const plugins = {
-    'postcss-import': {},
-    tailwindcss: {},
-    autoprefixer: {},
+/* eslint-env node */
+module.exports = {
+    plugins: {
+        'postcss-import': {},
+        tailwindcss: {},
+        autoprefixer: {},
+    },
 };

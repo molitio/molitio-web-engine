@@ -9,9 +9,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import packageJson from './package.json' assert { type: 'json' };
-import postcss from 'rollup-plugin-postcss';
-import autoprefixer from 'autoprefixer';
-import tailwindcss from 'tailwindcss';
+import styles from 'rollup-plugin-styles';
 
 const { moduleDefinitions } = packageJson;
 
@@ -66,16 +64,7 @@ const modules = Array.from(
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
-                postcss({
-                    modules: true,
-                    minimize: true,
-                    writeDefinitions: true,
-                    extensions: ['.css', '.scss'],
-                    inject: {
-                        insertAt: 'top',
-                    },
-                    plugins: [autoprefixer()],
-                }),
+                styles(),
                 resolve(),
                 commonjs(),
                 {
@@ -122,6 +111,7 @@ const modules = Array.from(
                 {
                     name: `${module.basePath}/${module.name}`,
                     dir: `${module.outDir}`,
+                    assetFileNames: '[name]-[hash][extname]',
                     //   file: `${module.basePath}/${module.module}`,
                     format: 'esm',
                     sourcemap: true,
