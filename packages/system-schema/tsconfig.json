@@ -1,12 +1,13 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": "./src",
+        "moduleResolution": "node",
         "target": "es2022",
         "module": "ES2022",
-        "strict": true,
-        "esModuleInterop": true,
         "skipLibCheck": true,
-        "forceConsistentCasingInFileNames": true
+        "outDir": "../../.artifacts/system-schema",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
     },
-    "include": ["**/*.ts"]
+    "include": ["src/**/*.*.ts"]
 }

@@ -2,10 +2,11 @@
     "name": "@molitio/system-schema",
     "version": "1.0.3-0",
     "description": "Generated schema models",
+    "main": "src/main.ts",
     "type": "module",
     "scripts": {
-        "build": "graphql-codegen --config codegen.ts",
-        "dev": "graphql-codegen --config codegen.ts --watch"
+        "build": "node --loader ts-node/esm --inspect ./src/main.ts && yarn tsc --build --verbose --generateTrace",
+        "dev": "yarn tsc --watch"
     },
     "devDependencies": {
         "@graphql-codegen/add": "3.2.3",
@@ -21,16 +22,20 @@
         "@graphql-codegen/typescript-react-query": "4.0.6",
         "@graphql-codegen/typescript-resolvers": "2.7.3",
         "@graphql-typed-document-node/core": "3.1.1",
-        "@tanstack/react-query": "4.20.4",
         "@types/node": "16.11.26",
-        "@types/react": "18.2.21",
-        "graphql": "16.6.0",
+        "class-validator": "0.14.1",
+        "graphql": "15.3.0",
         "graphql-request": "5.1.0",
+        "graphql-scalars": "1.23.0",
         "graphql-tag": "2.12.6",
-        "react": "18.2.0",
-        "ts-node": "10.9.1",
+        "reflect-metadata": "0.2.1",
+        "tsc": "2.0.4",
         "tslib": "2.4.1",
+        "type-graphql": "1.1.1",
         "typescript": "5.2.2"
     },
-    "stableVersion": "1.0.2"
+    "stableVersion": "1.0.2",
+    "dependencies": {
+        "ts-node": "10.9.2"
+    }
 }

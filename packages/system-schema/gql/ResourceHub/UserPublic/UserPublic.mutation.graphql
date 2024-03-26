@@ -1,5 +1,0 @@
-type Mutation {
-    createUserPublic(usernamePublic: String!, resourceCollectionId: ID, userPersistedConfigId: ID): UserPublic
-    updateUserPublic(id: ID!, usernamePublic: String, resourceCollectionId: ID, userPersistedConfigId: ID): UserPublic
-    deleteUserPublic(id: ID!): UserPublic
-}

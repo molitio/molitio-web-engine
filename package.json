@@ -68,6 +68,9 @@
     "dependenciesMeta": {
         "prettier@3.0.3": {
             "unplugged": true
+        },
+        "tsx@4.7.1": {
+            "unplugged": true
         }
     }
 }
