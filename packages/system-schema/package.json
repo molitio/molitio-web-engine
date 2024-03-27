@@ -2,11 +2,12 @@
     "name": "@molitio/system-schema",
     "version": "1.0.3-0",
     "description": "Generated schema models",
-    "main": "src/main.ts",
+    "main": "src/index.ts",
     "type": "module",
     "scripts": {
-        "build": "node --loader ts-node/esm --inspect ./src/main.ts && yarn tsc --build --verbose --generateTrace",
-        "dev": "yarn tsc --watch"
+        "build": "tsc --build --verbose",
+        "gen": "node --loader ts-node/esm utils/createResourceHubSchema.ts --inspect ",
+        "dev": "tsc --watch"
     },
     "devDependencies": {
         "@graphql-codegen/add": "3.2.3",
@@ -24,13 +25,14 @@
         "@graphql-typed-document-node/core": "3.1.1",
         "@types/node": "16.11.26",
         "class-validator": "0.14.1",
+        "core-js": "3.30.2",
         "graphql": "15.3.0",
         "graphql-request": "5.1.0",
         "graphql-scalars": "1.23.0",
         "graphql-tag": "2.12.6",
         "reflect-metadata": "0.2.1",
         "tsc": "2.0.4",
-        "tslib": "2.4.1",
+        "tslib": "2.6.2",
         "type-graphql": "1.1.1",
         "typescript": "5.2.2"
     },

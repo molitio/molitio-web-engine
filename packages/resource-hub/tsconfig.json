@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+        "outDir": "../../.artifacts/resource-hub",
+        "baseUrl": "./",
         "module": "commonjs",
         "declaration": true,
         "removeComments": true,
@@ -8,8 +10,6 @@
         "allowSyntheticDefaultImports": true,
         "target": "ES2022",
         "sourceMap": true,
-        "outDir": "../../.artifacts/resource-hub",
-        "baseUrl": "./",
         "incremental": true,
         "skipLibCheck": false,
         "strictNullChecks": false,

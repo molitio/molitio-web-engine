@@ -3300,6 +3300,7 @@ __metadata:
     "@graphql-typed-document-node/core": "npm:3.1.1"
     "@types/node": "npm:16.11.26"
     class-validator: "npm:0.14.1"
+    core-js: "npm:3.30.2"
     graphql: "npm:15.3.0"
     graphql-request: "npm:5.1.0"
     graphql-scalars: "npm:1.23.0"
@@ -3307,7 +3308,7 @@ __metadata:
     reflect-metadata: "npm:0.2.1"
     ts-node: "npm:10.9.2"
     tsc: "npm:2.0.4"
-    tslib: "npm:2.4.1"
+    tslib: "npm:2.6.2"
     type-graphql: "npm:1.1.1"
     typescript: "npm:5.2.2"
   languageName: unknown
@@ -3401,6 +3402,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:6.5.0"
     "@typescript-eslint/parser": "npm:6.5.0"
     babel-jest: "npm:29.7.0"
+    core-js: "npm:3.30.2"
     eslint: "npm:8.28.0"
     eslint-config-prettier: "npm:9.0.0"
     eslint-plugin-react: "npm:7.33.2"
@@ -3418,9 +3420,7 @@ __metadata:
     typedoc: "npm:0.25.0"
     typescript: "npm:5.2.2"
   dependenciesMeta:
-    prettier@3.0.3:
-      unplugged: true
-    tsx@4.7.1:
+    core-js@3.36.1:
       unplugged: true
   languageName: unknown
   linkType: soft
@@ -7012,6 +7012,13 @@ __metadata:
   dependencies:
     browserslist: "npm:^4.23.0"
   checksum: 10/d86b46805de7f5ba3675ed21532ecc64b6c1f123be7286b9efa7941ec087cd8d2446cb555f03a407dbbbeb6e881d1baf92eaffb7f051b11d9103f39c8731fa62
+  languageName: node
+  linkType: hard
+
+"core-js@npm:3.30.2":
+  version: 3.30.2
+  resolution: "core-js@npm:3.30.2"
+  checksum: 10/7476995aad7b01e51240fa1b19a26ec064825feece47290903d392e8b624749d06e8d72ce4c2ede9ab02afe34c6c08c001fd288bc1cfa3f5593ab03f2778719e
   languageName: node
   linkType: hard
 

@@ -47,6 +47,7 @@
         "@typescript-eslint/eslint-plugin": "6.5.0",
         "@typescript-eslint/parser": "6.5.0",
         "babel-jest": "29.7.0",
+        "core-js": "3.30.2",
         "eslint": "8.28.0",
         "eslint-config-prettier": "9.0.0",
         "eslint-plugin-react": "7.33.2",
@@ -66,10 +67,7 @@
     },
     "stableVersion": "1.0.2",
     "dependenciesMeta": {
-        "prettier@3.0.3": {
-            "unplugged": true
-        },
-        "tsx@4.7.1": {
+        "core-js@3.36.1": {
             "unplugged": true
         }
     }

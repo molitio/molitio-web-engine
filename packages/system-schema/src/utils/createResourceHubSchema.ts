@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
 import { UserPublicResolver } from '../ResourceHub';
 
@@ -16,3 +17,5 @@ export default async function createResourceHubSchema() {
         throw error;
     }
 }
+
+createResourceHubSchema();

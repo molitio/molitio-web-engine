@@ -1,11 +1,10 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
-        "moduleResolution": "node",
-        "target": "es2022",
-        "module": "ES2022",
-        "skipLibCheck": true,
         "outDir": "../../.artifacts/system-schema",
+        "baseUrl": "./",
+        "moduleResolution": "Node",
+        "target": "es2022",
+        "skipLibCheck": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true
     },

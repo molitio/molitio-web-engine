@@ -1,6 +1,4 @@
-import { CodegenConfig } from '@graphql-codegen/cli';
-
-const config: CodegenConfig = {
+const codeGenConfig = {
     generates: {
         //  '../../.artifacts/gql/types/index.ts': { documents: '**/*.type.graphql', plugins: ['typescript'] },
         '../../.artifacts/system-schema/gql_client/': {
@@ -10,4 +8,4 @@ const config: CodegenConfig = {
     },
 };
 
-export default config;
+export default codeGenConfig;
