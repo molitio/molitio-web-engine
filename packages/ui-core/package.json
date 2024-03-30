@@ -22,8 +22,8 @@
     },
     "scripts": {
         "dev": "yarn build:watch",
-        "build": "npx rollup -c",
-        "build:watch": "npx rollup -c -w",
+        "build": "yarn rollup -c",
+        "build:watch": "yarn rollup -c -w",
         "packageBuilder": "node packageBuilder",
         "publish-ui-core": "yarn packageBuilder && cd dist && npm publish --access=public && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",

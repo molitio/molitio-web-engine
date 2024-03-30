@@ -7,7 +7,7 @@
     "scripts": {
         "build": "tsc --build --verbose",
         "gen": "node --loader ts-node/esm utils/createResourceHubSchema.ts --inspect ",
-        "dev": "tsc --watch"
+        "dev": "yarn tsc --watch"
     },
     "devDependencies": {
         "@graphql-codegen/add": "3.2.3",

@@ -10,6 +10,7 @@ const inter = Inter({ subsets: ['latin'] });
     title: 'molitio web engine',
     description: 'powered by bits',
 };
+
  */
 export default function RootLayout({
     children,
