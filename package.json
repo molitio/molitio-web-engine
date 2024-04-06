@@ -11,7 +11,7 @@
         "ci:install": "yarn workspaces foreach --all --interlaced --topological install --immutable",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
-        "dev": "yarn workspaces foreach --all --interlaced --topological dev",
+        "dev": "yarn workspaces foreach --all --interlaced --parallel run dev",
         "lint": "yarn prettier . --write",
         "test": "yarn jest",
         "test:watch": "yarn jest --watch",
