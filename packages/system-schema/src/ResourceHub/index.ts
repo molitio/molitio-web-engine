@@ -1,1 +1,1 @@
-export * from './UserPublic'
+export * from './UserPublic';
