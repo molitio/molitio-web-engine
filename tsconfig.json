@@ -1,11 +1,10 @@
 {
     "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "dist", "**/.yarn/cache"],
+    "exclude": ["node_modules", "dist", "**/.yarn/cache", "packages_off_build"],
     "compilerOptions": {
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
         "baseUrl": "./",
         "moduleResolution": "node",
-
         "target": "es2020",
         "module": "es2020",
         "paths": {

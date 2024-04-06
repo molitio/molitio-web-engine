@@ -11,12 +11,17 @@ jobs:
     name: Molitio Web Engine
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
+    - uses: actions/checkout@v4
+    - name: Enable Corepack
+      run: corepack enable
+    - name: Set Node version to 4.x
+      uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: yarn
     - run: |
+        corepack enable
+        yarn set version 4.1.1
         yarn install --immutable
         yarn build
     - name: Upload UI Core 

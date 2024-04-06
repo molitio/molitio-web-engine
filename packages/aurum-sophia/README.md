@@ -1,2 +1,0 @@
-# aurum-sophia
-NGO

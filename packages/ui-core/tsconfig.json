@@ -4,7 +4,7 @@
     "compilerOptions": {
         "jsx": "react",
         "baseUrl": "src",
-        "declarationDir": "dist",
+        "declarationDir": "dist/types",
         "strict": true,
         "noEmit": false,
         "declaration": true,

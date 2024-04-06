@@ -1,0 +1,3 @@
+#import "./UserPublic/**/*.type.graphql"
+#import "./UserPublic/**/*.query.graphql"
+#import "./UserPublic/**/*.mutation.graphql"

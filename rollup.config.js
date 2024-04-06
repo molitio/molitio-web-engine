@@ -32,7 +32,7 @@ const modules = Array.from(
         return {
             input: `${module.basePath}/${module.inputPath}`,
             treeshake: true,
-            external: ['react', 'react-dom', 'react-is'],
+            external: ['react', 'react-dom', 'react-is', 'next'],
             plugins: [
                 {
                     name: 'watch-external',
@@ -65,7 +65,7 @@ const modules = Array.from(
                 json(),
                 size({ details: true }),
                 visualizer({
-                    filename: `${module.name}_bundle-map.html`,
+                    filename: `./artifacts/bundle-map/${module.name}_bundle-map.html`,
                     open: false,
                 }),
             ],
@@ -80,7 +80,7 @@ const modules = Array.from(
                 //unbundled esm
                 {
                     name: `${module.basePath}/${module.name}`,
-                    dir: `${module.basePath}/${module.outDir}`,
+                    dir: `${module.outDir}`,
                     //   file: `${module.basePath}/${module.module}`,
                     format: 'esm',
                     sourcemap: true,

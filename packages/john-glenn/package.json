@@ -22,6 +22,8 @@
         "react-is": "18.2.0"
     },
     "devDependencies": {
+        "@molitio/system-schema": "workspace:*",
+        "@molitio/ui-core": "workspace:*",
         "@types/node": "18.11.10",
         "@types/react": "18.2.21",
         "@types/react-dom": "18.2.7",

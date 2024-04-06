@@ -12,7 +12,7 @@ export * from './core';
  * Common components for the UI
  */
 
-export * from './common';
+export * from './layout';
 
 /**
  * ui-page
