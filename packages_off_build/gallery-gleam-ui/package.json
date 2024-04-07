@@ -1,6 +1,6 @@
 {
     "name": "@molitio/gallery-gleam",
-    "version": "0.0.0",
+    "version": "1.1.0",
     "private": true,
     "scripts": {
         "dev": "npm run install-local-packages && next dev",

@@ -1,7 +1,6 @@
 {
-    "name": "aurum-sophia-node",
-    "version": "1.0.0",
-    "description": "",
+    "name": "@molitio/aurum-sophia-ui",
+    "version": "1.1.0",
     "main": "dist/index.js",
     "dependencies": {
         "@material-ui/core": "4.12.3",

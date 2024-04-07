@@ -1,6 +1,6 @@
 {
     "name": "@molitio/afro-deli",
-    "version": "0.1.0",
+    "version": "1.1.0",
     "type": "module",
     "dependencies": {
         "@material-ui/core": "4.11.3",

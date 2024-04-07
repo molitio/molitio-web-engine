@@ -1,6 +1,7 @@
 {
-  "name": "sense-radio-next-pwa",
-  "version": "0.1.0",
+  "name": "@molitio/sonic-boom",
+  "version": "1.1.0",
+  "keywords": ["PWA"],
   "scripts": {
     "dev": "next dev",
     "build": "next build",

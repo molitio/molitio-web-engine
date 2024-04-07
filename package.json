@@ -3,7 +3,7 @@
     "private": true,
     "type": "module",
     "packageManager": "yarn@4.1.1",
-    "version": "1.0.3-0",
+    "version": "1.1.0",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {

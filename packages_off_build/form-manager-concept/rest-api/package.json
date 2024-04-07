@@ -1,15 +1,11 @@
 {
-  "name": "rest-api",
-  "description": "REST API for wizard home assigment",
-  "version": "0.0.0",
-  "homepage": "",
+  "name": "@molitio/form-manager-concept-api",
+  "description": "REST API for form manager",
+  "version": "1.1.0",
   "private": true,
   "keywords": [
     "feathers"
   ],
-  "author": {},
-  "contributors": [],
-  "bugs": {},
   "engines": {
     "node": ">= 20.1.0"
   },
