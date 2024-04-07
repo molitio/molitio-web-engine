@@ -3,7 +3,6 @@
     "version": "1.1.0",
     "description": "Generated schema models",
     "main": "src/index.ts",
-    "type": "module",
     "scripts": {
         "build": "tsc --build --verbose",
         "gen": "node --loader ts-node/esm utils/createResourceHubSchema.ts --inspect ",
