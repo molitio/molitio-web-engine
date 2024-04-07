@@ -7,7 +7,7 @@
     "description": "Molitio Core Libraries",
     "scripts": {
         "i": "yarn workspaces foreach --all --parallel --interlaced --topological install",
-        "ci:install": "yarn install --immutable",
+        "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "yarn workspaces foreach --all --interlaced --parallel run dev",
