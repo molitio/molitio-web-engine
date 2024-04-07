@@ -23,7 +23,7 @@
     "@types/react": "18.0.28",
     "eslint": "8.9.0",
     "eslint-config-next": "12.1.0",
-    "typescript": "4.5.5"
+    "typescript": "5.2.2"
   },
   "description": "music in the air",
   "main": "index.js",

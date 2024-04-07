@@ -1,10 +1,10 @@
-import { Query, Arg, ID } from 'type-graphql';
+import { Args, Query } from '@nestjs/graphql';
 import { UserPublic } from './UserPublic.type'; // Assuming UserPublic is defined in 'UserPublic.ts'
-import { UserPublicResolver } from './UserPublic';
+import { UserPublicResolver } from './';
 
-export class UserPublicResolverQuery extends UserPublicResolver {
+export default class UserPublicResolverQuery extends UserPublicResolver {
     @Query((returns) => UserPublic)
-    async userPublic(@Arg('id', () => ID) id: string): Promise<UserPublic | undefined> {
+    async userPublic(@Args('id') id: string): Promise<UserPublic | undefined> {
         return;
         // Implementation to fetch user by id
         // Return a UserPublic instance or null/undefined if not found

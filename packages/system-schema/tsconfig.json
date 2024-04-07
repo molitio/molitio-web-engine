@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
         "outDir": "../../.artifacts/system-schema",
-        "baseUrl": "./",
-        "moduleResolution": "Node",
+        "baseUrl": "./src",
+        "moduleResolution": "Bundler",
         "target": "es2022",
         "skipLibCheck": true,
         "experimentalDecorators": true,

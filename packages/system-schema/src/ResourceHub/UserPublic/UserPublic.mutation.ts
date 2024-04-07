@@ -1,12 +1,13 @@
-import { Mutation, Arg, ID } from 'type-graphql';
+import { Args, Mutation } from '@nestjs/graphql';
 import { UserPublic } from './UserPublic.type'; // Assuming UserPublic is defined in 'UserPublic.ts'
+import { UserPublicResolver } from './';
 
-export class UserPublicResolverMutation {
+export default class UserPublicResolverMutation extends UserPublicResolver {
     @Mutation(() => UserPublic)
     async createUserPublic(
-        @Arg('usernamePublic') usernamePublic: string,
-        @Arg('resourceCollectionId', () => ID, { nullable: true }) resourceCollectionId?: string,
-        @Arg('userPersistedConfigId', () => ID, { nullable: true }) userPersistedConfigId?: string,
+        @Args('usernamePublic') usernamePublic: string,
+        @Args('resourceCollectionId', { nullable: true }) resourceCollectionId?: string,
+        @Args('userPersistedConfigId', { nullable: true }) userPersistedConfigId?: string,
     ): Promise<UserPublic> {
         return;
         // Implementation to create a new UserPublic
@@ -15,10 +16,10 @@ export class UserPublicResolverMutation {
 
     @Mutation(() => UserPublic)
     async updateUserPublic(
-        @Arg('id', () => ID) id: string,
-        @Arg('usernamePublic', { nullable: true }) usernamePublic?: string,
-        @Arg('resourceCollectionId', () => ID, { nullable: true }) resourceCollectionId?: string,
-        @Arg('userPersistedConfigId', () => ID, { nullable: true }) userPersistedConfigId?: string,
+        @Args('id') id: string,
+        @Args('usernamePublic', { nullable: true }) usernamePublic?: string,
+        @Args('resourceCollectionId', { nullable: true }) resourceCollectionId?: string,
+        @Args('userPersistedConfigId', { nullable: true }) userPersistedConfigId?: string,
     ): Promise<UserPublic> {
         return;
 
@@ -27,7 +28,7 @@ export class UserPublicResolverMutation {
     }
 
     @Mutation(() => UserPublic)
-    async deleteUserPublic(@Arg('id', () => ID) id: string): Promise<UserPublic> {
+    async deleteUserPublic(@Args('id') id: string): Promise<UserPublic> {
         return;
 
         // Implementation to delete a UserPublic
