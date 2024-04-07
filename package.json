@@ -8,7 +8,7 @@
     "description": "Molitio Core Libraries",
     "scripts": {
         "i": "yarn workspaces foreach --all --parallel --interlaced --topological install",
-        "ci:install": "yarn workspaces foreach --all --interlaced --topological install --immutable",
+        "ci:install": "corepack enable && yarn set version 4.1.1 && yarn workspaces foreach --all --interlaced --topological install --immutable",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "yarn workspaces foreach --all --interlaced --parallel run dev",
