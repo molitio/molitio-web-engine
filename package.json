@@ -9,7 +9,7 @@
         "i": "yarn workspaces foreach --all --parallel --interlaced --topological install",
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
-        "build-john-glenn": "yarn workspace @molitio/ui-core build && yarn workspace @molition/john-glenn build",
+        "build-john-glenn": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/john-glenn build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "yarn workspaces foreach --all --interlaced --parallel run dev",
         "lint": "yarn prettier . --write",
