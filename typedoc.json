@@ -9,11 +9,10 @@
     "exclude": [
         ".yarn/**/*",
         "packages/data-core/src/**/*",
-        "packages/system-schema/src/**/*",
+        "packages/resource-hub-modules/src/**/*",
         "packages/ui-core-test/src/**/*",
         "packages/ui-core__deprecated/src/**/*",
         "packages/ui-storybook__deprecated/src/**/*",
-        "packages/system-schema/src/**/*",
         "packages/john-glenn/src/**/*"
     ],
     "out": "./artifacts/docs",

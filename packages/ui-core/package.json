@@ -62,7 +62,6 @@
         "@babel/preset-typescript": "7.18.6",
         "@headlessui/react": "1.7.18",
         "@heroicons/react": "2.1.3",
-        "@molitio/system-schema": "workspace:*",
         "@rollup/plugin-babel": "6.0.4",
         "@rollup/plugin-commonjs": "25.0.5",
         "@rollup/plugin-image": "3.0.3",
