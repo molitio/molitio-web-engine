@@ -8,10 +8,11 @@
     ],
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && yarn artifact",
         "start": "next start",
         "lint": "next lint",
-        "test": "npx jest"
+        "test": "npx jest",
+        "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.next/* ../../.artifacts/john-glenn"
     },
     "dependencies": {
         "next": "14.1.3",
