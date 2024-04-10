@@ -1,0 +1,92 @@
+{
+    "name": "@molitio/resource-hub-api",
+    "version": "1.1.0",
+    "author": "molitio",
+    "description": "Resource Distribution Engine",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:molitio/molitio-web-engine.git"
+    },
+    "bugs": {
+        "url": "https://github.com/molitio/molitio-web-engine/issues"
+    },
+    "homepage": "https://github.com/molitio/molitio-web-engine#readme",
+    "keywords": [
+        "molitio",
+        "ui-core"
+    ],
+    "scripts": {
+        "nest:cli": "nest --",
+        "build": "nest build",
+        "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.nest/* ../../.artifacts/resource-hub-api",
+        "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+        "start": "nest start",
+        "dev": "yarn ts-node src/main --watch",
+        "dev:debug": "ts-node src/main --debug --watch",
+        "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "test:cov": "jest --coverage",
+        "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
+        "test:e2e": "jest --config ./test/jest-e2e.json"
+    },
+    "dependencies": {
+        "@apollo/gateway": "2.7.2",
+        "@apollo/server": "4.10.2",
+        "@as-integrations/fastify": "2.1.1",
+        "@nestjs/apollo": "12.1.0",
+        "@nestjs/common": "10.3.7",
+        "@nestjs/core": "10.3.7",
+        "@nestjs/graphql": "12.1.1",
+        "@nestjs/platform-fastify": "10.3.7",
+        "fastify": "4.26.2",
+        "graphql": "16.8.1",
+        "reflect-metadata": "^0.2.0",
+        "rxjs": "^7.8.1",
+        "ts-morph": "21.0.1"
+    },
+    "devDependencies": {
+        "@molitio/resource-hub-modules": "workspace:*",
+        "@nestjs/cli": "10.3.2",
+        "@nestjs/schematics": "10.1.1",
+        "@nestjs/testing": "10.0.0",
+        "@swc/cli": "0.3.12",
+        "@swc/core": "1.4.12",
+        "@types/jest": "^29.5.2",
+        "@types/node": "^20.3.1",
+        "@types/supertest": "^6.0.0",
+        "@typescript-eslint/eslint-plugin": "^6.0.0",
+        "@typescript-eslint/parser": "^6.0.0",
+        "eslint": "^8.42.0",
+        "eslint-config-prettier": "^9.0.0",
+        "eslint-plugin-prettier": "^5.0.0",
+        "jest": "^29.5.0",
+        "prettier": "^3.0.0",
+        "source-map-support": "^0.5.21",
+        "supertest": "^6.3.3",
+        "ts-jest": "^29.1.0",
+        "ts-loader": "^9.4.3",
+        "ts-node": "10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "5.2.2",
+        "webpack": "5.91.0"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "rootDir": "src",
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": "ts-jest"
+        },
+        "collectCoverageFrom": [
+            "**/*.(t|j)s"
+        ],
+        "coverageDirectory": "../../artifacts/coverage",
+        "testEnvironment": "node"
+    }
+}

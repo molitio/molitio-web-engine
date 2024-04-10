@@ -1,19 +1,18 @@
 {
     "name": "@molitio/john-glenn",
-    "version": "1.0.3-0",
+    "version": "1.1.0",
     "moduleFileExtensions": [
         "js",
         "json",
-        "vue",
         "scss"
     ],
     "scripts": {
         "dev": "next dev",
-        "build": "next build",
+        "build": "next build && yarn artifact",
         "start": "next start",
         "lint": "next lint",
-        "clean": "rm -rf .next",
-        "test": "npx jest"
+        "test": "npx jest",
+        "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.next/* ../../.artifacts/john-glenn"
     },
     "dependencies": {
         "next": "14.1.3",
@@ -22,8 +21,6 @@
         "react-is": "18.2.0"
     },
     "devDependencies": {
-        "@molitio/system-schema": "workspace:*",
-        "@molitio/ui-core": "workspace:*",
         "@types/node": "18.11.10",
         "@types/react": "18.2.21",
         "@types/react-dom": "18.2.7",

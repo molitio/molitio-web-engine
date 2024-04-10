@@ -1,7 +1,21 @@
 {
-    "extends": "../../tsconfig.json",
     "compilerOptions": {
+        "baseUrl": "./",
         "jsx": "react-jsx",
-        "baseUrl": "./"
+        "target": "es2022",
+        "module": "Node16",
+        "moduleResolution": "Node16",
+        "strict": true,
+        "importHelpers": true,
+        "skipLibCheck": false,
+        "noUnusedLocals": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+        "downlevelIteration": true,
+        "noFallthroughCasesInSwitch": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true
     }
 }

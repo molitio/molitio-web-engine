@@ -5,7 +5,7 @@
         "rootDir": "src",
         "outDir": "build",
         "allowJs": false,
-        "skipLibCheck": true,
+        "skipLibCheck": false,
         "esModuleInterop": true,
         "allowSyntheticDefaultImports": true,
         "strict": true,

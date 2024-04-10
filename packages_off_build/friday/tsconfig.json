@@ -9,7 +9,7 @@
       "es2015.iterable"
     ],
     "allowJs": false,
-    "skipLibCheck": true,
+    "skipLibCheck": false,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,

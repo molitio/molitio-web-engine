@@ -1,16 +1,15 @@
 {
     "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "dist", "**/.yarn/cache", "packages_off_build"],
+    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "packages_off_build"],
     "compilerOptions": {
-        "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020"],
+        "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
-        "moduleResolution": "node",
-        "target": "es2020",
-        "module": "es2020",
+        "moduleResolution": "Node16",
+        "target": "es2022",
+        "module": "Node16",
         "paths": {
             "@molitio/*": ["./packages/*"]
         },
-        "resolveJsonModule": true,
         "isolatedModules": true,
         "importHelpers": true,
         "downlevelIteration": true,
