@@ -6999,6 +6999,7 @@ const RAW_RUNTIME_STATE =
           ["next", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.2.0"],\
+          ["react-cookie-consent", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:9.0.0"],\
           ["react-dom", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:18.2.0"],\
           ["react-is", "npm:18.2.0"],\
           ["tailwindcss", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:3.3.0"],\
@@ -17998,6 +17999,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["js-cookie", [\
+      ["npm:2.2.1", {\
+        "packageLocation": "./.yarn/cache/js-cookie-npm-2.2.1-e879cd2148-4387f5f569.zip/node_modules/js-cookie/",\
+        "packageDependencies": [\
+          ["js-cookie", "npm:2.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["js-levenshtein", [\
       ["npm:1.1.6", {\
         "packageLocation": "./.yarn/cache/js-levenshtein-npm-1.1.6-ab883e61a3-bb034043fd.zip/node_modules/js-levenshtein/",\
@@ -21654,6 +21664,29 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["react", "npm:18.2.0"],\
           ["loose-envify", "npm:1.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-cookie-consent", [\
+      ["npm:9.0.0", {\
+        "packageLocation": "./.yarn/cache/react-cookie-consent-npm-9.0.0-bde759f40d-74398466bd.zip/node_modules/react-cookie-consent/",\
+        "packageDependencies": [\
+          ["react-cookie-consent", "npm:9.0.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:9.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-cookie-consent-virtual-db72290a64/0/cache/react-cookie-consent-npm-9.0.0-bde759f40d-74398466bd.zip/node_modules/react-cookie-consent/",\
+        "packageDependencies": [\
+          ["react-cookie-consent", "virtual:6f701abcee1cbc03ed7da6a831e306d4fe2a60acf153a25ba091c9c265d0db72022e376cb9af4086aa7533ee528f7f990a92458608a5ff744da5a7186e690f1e#npm:9.0.0"],\
+          ["@types/react", "npm:18.2.21"],\
+          ["js-cookie", "npm:2.2.1"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

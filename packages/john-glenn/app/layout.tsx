@@ -1,6 +1,7 @@
 import Navigation from './components/navigation';
 import './globals.css';
 import { Inter } from 'next/font/google';
+import CookieConsentPopup from './components/consent/CookieConsentPopup';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={inter.className}>
                 <Navigation />
                 {children}
+                <CookieConsentPopup />
             </body>
         </html>
     );
