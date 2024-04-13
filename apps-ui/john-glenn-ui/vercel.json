@@ -1,6 +1,5 @@
 {
-    "buildCommand": "yarn build",
-    "outputDirectory": ".next",
+    "platfrom": "nextjs",
     "headers": [
         {
             "source": "/(.*)",
