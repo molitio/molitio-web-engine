@@ -1,6 +1,6 @@
 {
     "framework": null,
-    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/dashing-bumblebee-ui",
+    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/john-glenn-ui",
     "buildCommand": "yarn build-john-glenn-ui",
     "outputDirectory": "packages-ui/john-glenn-ui/.next",
     "installCommand": "yarn install --immutable --immutable-cache --check-cache",
