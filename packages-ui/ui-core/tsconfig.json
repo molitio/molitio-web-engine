@@ -8,7 +8,7 @@
         "resolveJsonModule": true,
         "jsx": "react",
         "baseUrl": "./src",
-        "declarationDir": "./dist/declarations",
+        "outDir": "./dist",
         "strict": true,
         "noEmit": false,
         "declaration": true,
