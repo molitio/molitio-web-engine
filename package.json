@@ -10,6 +10,7 @@
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
         "build-john-glenn": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/john-glenn build",
+        "build-dashing-bumblebee": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/dashing-bumblebee build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "yarn workspaces foreach --all --interlaced --parallel run dev",
         "lint": "yarn prettier . --write",
