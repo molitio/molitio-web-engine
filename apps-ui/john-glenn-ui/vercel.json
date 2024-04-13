@@ -1,8 +1,8 @@
 {
     "framework": null,
-    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/john-glenn-ui",
+    "ignoreCommand": "git diff HEAD^ HEAD --quiet -- ./apps-ui/john-glenn-ui",
     "buildCommand": "yarn build-john-glenn-ui",
-    "outputDirectory": "packages-ui/john-glenn-ui/.next",
+    "outputDirectory": "apps-ui/john-glenn-ui/.next",
     "installCommand": "yarn install --immutable --immutable-cache --check-cache",
     "devCommand": "yarn dev",
     "headers": [
