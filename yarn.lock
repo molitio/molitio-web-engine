@@ -4358,9 +4358,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@molitio/dashing-bumblebee-ui@workspace:packages/dashing-bumblebee-ui":
+"@molitio/dashing-bumblebee-ui@workspace:apps-ui/dashing-bumblebee-ui":
   version: 0.0.0-use.local
-  resolution: "@molitio/dashing-bumblebee-ui@workspace:packages/dashing-bumblebee-ui"
+  resolution: "@molitio/dashing-bumblebee-ui@workspace:apps-ui/dashing-bumblebee-ui"
   dependencies:
     "@emotion/cache": "npm:^11.11.0"
     "@emotion/react": "npm:^11.11.1"
@@ -4381,9 +4381,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/john-glenn@workspace:packages/john-glenn":
+"@molitio/john-glenn@workspace:apps-ui/john-glenn":
   version: 0.0.0-use.local
-  resolution: "@molitio/john-glenn@workspace:packages/john-glenn"
+  resolution: "@molitio/john-glenn@workspace:apps-ui/john-glenn"
   dependencies:
     "@molitio/ui-core": "workspace:*"
     "@types/node": "npm:18.11.10"
@@ -4405,9 +4405,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/resource-hub-api@workspace:packages/resource-hub-api":
+"@molitio/resource-hub-api@workspace:apps-api/resource-hub-api":
   version: 0.0.0-use.local
-  resolution: "@molitio/resource-hub-api@workspace:packages/resource-hub-api"
+  resolution: "@molitio/resource-hub-api@workspace:apps-api/resource-hub-api"
   dependencies:
     "@apollo/gateway": "npm:2.7.2"
     "@apollo/server": "npm:4.10.2"
@@ -4449,9 +4449,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/resource-hub-modules@workspace:*, @molitio/resource-hub-modules@workspace:packages/resource-hub-modules":
+"@molitio/resource-hub-modules@workspace:*, @molitio/resource-hub-modules@workspace:packages-api/resource-hub-modules":
   version: 0.0.0-use.local
-  resolution: "@molitio/resource-hub-modules@workspace:packages/resource-hub-modules"
+  resolution: "@molitio/resource-hub-modules@workspace:packages-api/resource-hub-modules"
   dependencies:
     "@graphql-codegen/add": "npm:3.2.3"
     "@graphql-codegen/cli": "npm:5.0.2"
@@ -4485,9 +4485,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/ui-core-tests@workspace:packages/ui-core-tests":
+"@molitio/ui-core-tests@workspace:packages-ui/ui-core-tests":
   version: 0.0.0-use.local
-  resolution: "@molitio/ui-core-tests@workspace:packages/ui-core-tests"
+  resolution: "@molitio/ui-core-tests@workspace:packages-ui/ui-core-tests"
   dependencies:
     "@jest/expect": "npm:29.6.4"
     "@jest/globals": "npm:29.6.4"
@@ -4506,9 +4506,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/ui-core@workspace:*, @molitio/ui-core@workspace:packages/ui-core":
+"@molitio/ui-core@workspace:*, @molitio/ui-core@workspace:packages-ui/ui-core":
   version: 0.0.0-use.local
-  resolution: "@molitio/ui-core@workspace:packages/ui-core"
+  resolution: "@molitio/ui-core@workspace:packages-ui/ui-core"
   dependencies:
     "@babel/cli": "npm:7.18.10"
     "@babel/core": "npm:7.22.17"
