@@ -2,9 +2,9 @@
     "name": "@molitio/ui-core",
     "version": "1.1.0",
     "author": "Peter Koller",
-    "main": "src/index.ts",
+    "main": "./src/index.ts",
     "type": "module",
-    "types": "../../.artifacts/ui-core/types/index.d.ts",
+    "types": "./dist/types/index.d.ts",
     "description": "Re-usable React UI Components",
     "license": "MIT",
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
@@ -28,18 +28,18 @@
         "publish-ui-core": "yarn packageBuilder && cd dist && npm publish --access=public && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
-        "create-artifacts": "mkdir -p ../.artifact/package && cd ui-core/ && npm pack --pack-destination ../.artifact/packages && cd ../../"
+        "create-artifacts": "mkdir -p ../../.artifacts/ui-core/ && npm pack --pack-destination ../../.artifacts/ui-core/"
     },
     "moduleDefinitions": {
         "ui-core": {
             "name": "ui-core",
             "basePath": "./src",
             "inputPath": "index.ts",
-            "outDir": "../../.artifacts/ui-core",
-            "module": "../../.artifacts/ui-core/esm/index.js",
+            "outDir": "./dist",
+            "module": "./dist/esm/index.js",
             "bundle": {
-                "esm": "../../.artifacts/ui-core/bundle/esm/index.js",
-                "umd": "../../.artifacts/ui-core//bundle/umd/index.js"
+                "esm": "./dist/bundle/esm/index.js",
+                "umd": "./dist/bundle/umd/index.js"
             }
         }
     },

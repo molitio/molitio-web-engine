@@ -69,7 +69,7 @@ const modules = Array.from(
                 },
                 typescript({
                     tsconfig: `./tsconfig.json`,
-                    outDir: `../../.artifacts/ui-core/`,
+                    outDir: `./dist`,
                     outputToFilesystem: true,
                 }),
                 babel({
