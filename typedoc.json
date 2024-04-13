@@ -1,20 +1,12 @@
 {
     "$schema": "https://typedoc.org/schema.json",
-    "entryPoints": ["packages/*"],
+    "entryPoints": ["packages-ui/*", "packages-api/*", "packages-utils/*", "apps-ui/*", "apps-api/*"],
     "name": "@molitio/web-engine",
     "entryPointStrategy": "packages",
     "includeVersion": true,
     "logLevel": "Verbose",
     "excludeNotDocumented": true,
-    "exclude": [
-        ".yarn/**/*",
-        "packages/data-core/src/**/*",
-        "packages/resource-hub-modules/src/**/*",
-        "packages/ui-core-test/src/**/*",
-        "packages/ui-core__deprecated/src/**/*",
-        "packages/ui-storybook__deprecated/src/**/*",
-        "packages/john-glenn/src/**/*"
-    ],
+    "exclude": [".yarn/**/*", "packages-ui/ui-core-test/src/**/*"],
     "out": "./artifacts/docs",
     "compilerOptions": {
         "jsx": "react-jsx"
