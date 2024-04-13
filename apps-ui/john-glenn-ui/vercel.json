@@ -2,7 +2,7 @@
     "platfrom": "nextjs",
     "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/dashing-bumblebee-ui",
     "buildCommand": "yarn build-john-glenn-ui",
-    "outPutDirectory": "packages-ui/john-glenn-ui/.next",
+    "outputDirectory": "packages-ui/john-glenn-ui/.next",
     "installCommand": "yarn install --immutable --immutable-cache --check-cache",
     "devCommand": "yarn dev",
     "headers": [
