@@ -1,5 +1,5 @@
 {
-    "framework": "nextjs",
+    "framework": null,
     "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/dashing-bumblebee-ui",
     "buildCommand": "yarn build-john-glenn-ui",
     "outputDirectory": "packages-ui/john-glenn-ui/.next",
