@@ -1,5 +1,5 @@
 {
-    "name": "@molitio/john-glenn",
+    "name": "@molitio/john-glenn-ui",
     "version": "1.1.0",
     "moduleFileExtensions": [
         "js",
@@ -8,7 +8,7 @@
     ],
     "scripts": {
         "dev": "next dev",
-        "build": "next build && yarn artifact",
+        "build": "next build",
         "start": "next start",
         "lint": "next lint",
         "test": "npx jest",
