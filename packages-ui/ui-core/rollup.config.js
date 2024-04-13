@@ -13,7 +13,19 @@ import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
-const { moduleDefinitions } = packageJson;
+const moduleDefinitions = {
+    'ui-core': {
+        name: '@molitio/ui-core',
+        basePath: './src',
+        inputPath: 'index.ts',
+        outDir: './dist',
+        module: './dist/esm/index.js',
+        bundle: {
+            esm: './dist/bundle/esm/index.js',
+            umd: './dist/bundle/umd/index.js',
+        },
+    },
+};
 
 const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.ts', '.tsx'];
@@ -26,7 +38,7 @@ const globals = {
 };
 
 Object.keys(moduleDefinitions).map((moduleName) =>
-    console.log(`moduleName: ${moduleDefinitions[moduleName].name} v${packageJson.version}`),
+    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}`),
 );
 
 const modules = Array.from(
@@ -40,7 +52,7 @@ const modules = Array.from(
                 {
                     name: 'watch-external',
                     async buildStart() {
-                        const files = await fg(`${module.basePath}/${module.baseUrl}/**/*`);
+                        const files = await fg(`${module.basePath}/**/*`);
                         for (let file of files) {
                             this.addWatchFile(file);
                         }
@@ -69,7 +81,7 @@ const modules = Array.from(
                 },
                 typescript({
                     tsconfig: `./tsconfig.json`,
-                    outDir: `./dist`,
+                    declarationMap: false,
                     outputToFilesystem: true,
                 }),
                 babel({
@@ -96,7 +108,7 @@ const modules = Array.from(
                             }, */
                 //unbundled esm
                 {
-                    name: `${module.basePath}/${module.name}`,
+                    name: `${module.name}`,
                     dir: `${module.outDir}`,
                     assetFileNames: '[name]-[hash][extname]',
                     //   file: `${module.basePath}/${module.module}`,
