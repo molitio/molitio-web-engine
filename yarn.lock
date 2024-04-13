@@ -4381,9 +4381,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/john-glenn@workspace:apps-ui/john-glenn":
+"@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui":
   version: 0.0.0-use.local
-  resolution: "@molitio/john-glenn@workspace:apps-ui/john-glenn"
+  resolution: "@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui"
   dependencies:
     "@molitio/ui-core": "workspace:*"
     "@types/node": "npm:18.11.10"
