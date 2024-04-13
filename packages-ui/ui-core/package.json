@@ -6,7 +6,7 @@
     "license": "MIT",
     "type": "module",
     "main": "./dist/index.js",
-    "types": "./dist/types/index.d.ts",
+    "types": "./dist/index.d.ts",
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [
         "molitio",
