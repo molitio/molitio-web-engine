@@ -1,8 +1,8 @@
 {
-    "framework": "nextjs",
-    "ignoreCommand": "git diff --quiet HEAD^ HEAD ./packages-ui/dashing-bumblebee-ui",
+    "framework": null,
+    "ignoreCommand": "git diff HEAD^ HEAD --quiet -- ./apps-ui/dashing-bumblebee-ui",
     "buildCommand": "yarn build-dashing-bumblebee-ui",
-    "outputDirectory": "packages-ui/dashing-bumblebee-ui/.next",
+    "outputDirectory": "apps-ui/dashing-bumblebee-ui/.next",
     "installCommand": "yarn install --immutable --immutable-cache --check-cache",
     "devCommand": "yarn dev",
     "headers": [
