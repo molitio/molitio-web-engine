@@ -25,7 +25,11 @@
         "publish-ui-core": "yarn build-ui-core && yarn workspace @molitio/ui-core publish-ui-core"
     },
     "workspaces": [
-        "packages/*"
+        "apps-ui/*",
+        "apps-api/*",
+        "packages-ui/*",
+        "packages-api/*",
+        "packages-utils/*"
     ],
     "husky": {
         "hooks": {

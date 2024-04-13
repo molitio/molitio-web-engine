@@ -1,5 +1,5 @@
 {
-    "exclude": ["node_modules"],
+    "exclude": ["node_modules", "dist"],
     "include": ["**/*.ts", "**/*.tsx"],
     "compilerOptions": {
         "moduleResolution": "node",
@@ -7,7 +7,7 @@
         "module": "es2022",
         "resolveJsonModule": true,
         "jsx": "react",
-        "baseUrl": "src",
+        "baseUrl": "./src",
         "declarationDir": "./dist/declarations",
         "strict": true,
         "noEmit": false,

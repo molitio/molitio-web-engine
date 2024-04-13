@@ -1,4 +1,4 @@
-import { sum } from '../mock';
+import { sum } from '../mock/index.js';
 
 test('basic', async () => {
     expect(sum()).toBe(0);

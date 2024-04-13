@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "./.nest",
+        "outDir": "./dist",
         "baseUrl": "./",
         "module": "commonjs",
         "declaration": true,
