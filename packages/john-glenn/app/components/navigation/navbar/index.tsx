@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
-import Button from './Button';
+import { Button, ButtonType } from '@molitio/ui-core';
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
     return (
@@ -15,6 +15,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                                 <path fill="#fff" d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z" />
                             </svg>
                         </button>
+                        <Button type={ButtonType.Primary}>{`Hi`}</Button>
                         <ul className="hidden md:flex gap-x-8 text-white">
                             <p>Bejelentkezés +36 30 123 4567</p>
                             <li>
@@ -34,7 +35,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                             </li>
                         </ul>
                         <div className="hidden md:block">
-                            <Button />
+                            <Button type={ButtonType.Secondary} />
                         </div>
                     </div>
                 </div>

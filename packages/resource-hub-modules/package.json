@@ -37,9 +37,9 @@
     "stableVersion": "1.0.2",
     "dependencies": {
         "@nestjs/common": "^10.0.0",
-        "@nestjs/core": "10.3.5",
+        "@nestjs/core": "10.3.7",
         "@nestjs/graphql": "12.1.1",
-        "rxjs": "^7.8.1",
+        "rxjs": "7.8.1",
         "ts-node": "10.9.2"
     }
 }
