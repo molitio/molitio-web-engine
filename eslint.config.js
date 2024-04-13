@@ -1,11 +1,11 @@
 export default [
     {
-        files: ['packages/john-glenn/**/*.ts', 'packages/john-glenn/**/*.tsx'],
+        files: ['packages-ui/john-glenn-ui/**/*.ts', 'packages-ui/john-glenn-ui/**/*.tsx'],
         extends: 'next/core-web-vitals',
         ignorePatterns: ['.artifacts', '.next', 'dist', 'node_modules'],
     },
     {
-        files: ['packages/ui-core/**/*.ts', 'packages/ui-core/**/*.tsx'],
+        files: ['packages-ui/ui-core/**/*.ts', 'packages-ui/ui-core/**/*.tsx'],
         env: {
             module: 'Node16',
             browser: true,

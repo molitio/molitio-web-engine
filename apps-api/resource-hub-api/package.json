@@ -19,7 +19,6 @@
     "scripts": {
         "nest:cli": "nest --",
         "build": "nest build",
-        "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.nest/* ../../.artifacts/resource-hub-api",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "nest start",
         "dev": "yarn ts-node src/main --watch",
