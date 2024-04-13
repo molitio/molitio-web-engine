@@ -1,10 +1,4 @@
 {
-    "framework": null,
-    "ignoreCommand": "git diff HEAD^ HEAD --quiet -- ./apps-ui/dashing-bumblebee-ui",
-    "buildCommand": "yarn build-dashing-bumblebee-ui",
-    "outputDirectory": "apps-ui/dashing-bumblebee-ui/.next",
-    "installCommand": "yarn install --immutable --immutable-cache --check-cache",
-    "devCommand": "yarn dev",
     "headers": [
         {
             "source": "/(.*)",
