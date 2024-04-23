@@ -75,5 +75,8 @@
         "ws@8.16.0": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "components": "0.1.0"
     }
 }

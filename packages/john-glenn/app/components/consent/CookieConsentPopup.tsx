@@ -23,7 +23,7 @@ function CookieConsentPopup() {
 
   
   return (
-    <div>
+    <>
     { showCookie 
       ? <div className="cookie-consent bg-white p-7 rounded-lg shadow-lg">     
           <h1 className="text-xl font-bold">We value your privacy</h1>
@@ -37,7 +37,7 @@ function CookieConsentPopup() {
         </div>
       : null 
     } 
-    </div>   
+    </>   
   );
 }
 

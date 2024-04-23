@@ -1,7 +1,7 @@
 import Navigation from './components/navigation';
 import './globals.css';
 import { Inter } from 'next/font/google';
-import CookieConsentPopup from './components/consent/CookieConsentPopup';
+import { CookieConsentPopup } from './components';
 
 const inter = Inter({ subsets: ['latin'] });
 
