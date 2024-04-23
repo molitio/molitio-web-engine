@@ -4567,7 +4567,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.24.3"
     "@types/jest": "npm:29.5.4"
-    "@types/node": "npm:18.11.9"
+    "@types/node": "npm:20.12.7"
     "@types/ws": "npm:8.5.10"
     "@typescript-eslint/eslint-plugin": "npm:6.5.0"
     "@typescript-eslint/parser": "npm:6.5.0"
@@ -6358,6 +6358,15 @@ __metadata:
   version: 18.11.9
   resolution: "@types/node@npm:18.11.9"
   checksum: 10/d87a947519d8c1569b812a95cd18383f7a1500204c18454b69ba817f4aef2a563bb925432debcab25a3db1ba116c8ddb1ef79d8fded054fb3866424847325bae
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:20.12.7":
+  version: 20.12.7
+  resolution: "@types/node@npm:20.12.7"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 10/b4a28a3b593a9bdca5650880b6a9acef46911d58cf7cfa57268f048e9a7157a7c3196421b96cea576850ddb732e3b54bc982c8eb5e1e5ef0635d4424c2fce801
   languageName: node
   linkType: hard
 

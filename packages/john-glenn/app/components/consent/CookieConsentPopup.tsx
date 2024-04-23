@@ -24,7 +24,7 @@ function CookieConsentPopup() {
   
   return (
     <>
-    { showCookie 
+     {showCookie} 
       ? <div className="cookie-consent bg-white p-7 rounded-lg shadow-lg">     
           <h1 className="text-xl font-bold">We value your privacy</h1>
           <p className="mb-3">We use cookies to enhance your browsing experience, serve personalized ads or content, 
@@ -35,10 +35,8 @@ function CookieConsentPopup() {
           </button>
           <button onClick={handleDecline} className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 mr-2 rounded">Decline</button>
         </div>
-      : null 
-    } 
-    </>   
-  );
+    : </>
+  )
 }
 
 export default CookieConsentPopup;
