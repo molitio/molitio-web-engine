@@ -1,11 +1,8 @@
 name: molitio-web-engine
-volumes:
-    base:
 services:
     resource-hub-db:
         image: mongo:5.0.26
         container_name: resource-hub-db
-
         restart: always
         env_file:
             - path: ./.env
@@ -25,9 +22,9 @@ services:
             - resource-hub-db
         restart: always
         build:
-            context: ./
-            dockerfile: ./apps-api/resource-hub-api/Dockerfile
-            args:
-                - BUILD_CONTEXT=resource-hub-api
+            context: .
+            dockerfile: ResourceHubApi.Dockerfile
         volumes:
             - base:/base
+volumes:
+    base:

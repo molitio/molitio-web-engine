@@ -1,5 +1,6 @@
-# distribution
-# **/dist
-
-# node
-**/node_modules
+*
+!package.json
+!README.md
+!nginx.conf
+!mime.types
+!security-header.conf

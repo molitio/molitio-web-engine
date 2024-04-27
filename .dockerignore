@@ -9,7 +9,7 @@
 !.pnp.cjs
 !.pnp.loader.mjs
 !tsconfig.json
-!.yarn/
-!apps-api/
-!packages-api/
+!.yarn/**/*
+!apps-api/**/*
+!packages-api/**/*
 
