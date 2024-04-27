@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Include neccessary files
+
+!package.json
+!yarn.lock
+!.yarnrc.yml
+!.pnp.cjs
+!.pnp.loader.mjs
+!tsconfig.json
+!.yarn/
+!apps-api/
+!packages-api/
+

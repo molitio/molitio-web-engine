@@ -1,0 +1,33 @@
+name: molitio-web-engine
+volumes:
+    base:
+services:
+    resource-hub-db:
+        image: mongo:5.0.26
+        container_name: resource-hub-db
+
+        restart: always
+        env_file:
+            - path: ./.env
+        expose:
+            - '27017'
+        ports:
+            - 27017:27017
+        volumes:
+            - '/resource-hub-db-volume:/resource-hub-db-volume/db'
+        environment:
+            MONGO_INITDB_DATABASE: ${MONGO_DB}
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    resource-hub-api:
+        container_name: resource-hub-api
+        depends_on:
+            - resource-hub-db
+        restart: always
+        build:
+            context: ./
+            dockerfile: ./apps-api/resource-hub-api/Dockerfile
+            args:
+                - BUILD_CONTEXT=resource-hub-api
+        volumes:
+            - base:/base
