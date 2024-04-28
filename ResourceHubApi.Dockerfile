@@ -13,7 +13,7 @@ WORKDIR $WORK_DIR
 
 COPY  . ./
 
-RUN --mount=type=cache,target=/.yarn/cache YARN_CACHE_FOLDER=/.yarn/cache yarn
+RUN yarn install
 
 RUN yarn add global @nestjs/cli
 RUN yarn build-resource-hub
@@ -25,13 +25,11 @@ ARG WORKSPACE
 
 WORKDIR $APP_DIR
 
-ENV PM2_PUBLIC_KEY=$PM2_PUBLIC_KEY
-ENV PM2_SECRET_KEY=$PM2_SECRET_KEY
-
-RUN npm install pm2 -g
-
 COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock process.yml ./
 
-COPY --from=builder $WORK_DIR/$WORKSPACE $WORKSPACE
+COPY --from=builder $WORK_DIR/.yarn ./.yarn
+COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
 
-CMD ["pm2-runtime", "--raw", "process.yml", "--only", "resource-hub-api"]
+ENV  YARN_CACHE_FOLDER=/.yarn/cache
+
+CMD ["yarn", "workspace", "@molitio/resource-hub-api", "start"]
