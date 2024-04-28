@@ -21,10 +21,8 @@ services:
         depends_on:
             - resource-hub-db
         restart: always
+        env_file:
+            - path: ./.env
         build:
             context: .
             dockerfile: ResourceHubApi.Dockerfile
-        volumes:
-            - base:/base
-volumes:
-    base:

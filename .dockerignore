@@ -1,15 +1,21 @@
-# Ignore everything
 *
-
-# Include neccessary files
-
 !package.json
 !yarn.lock
 !.yarnrc.yml
 !.pnp.cjs
 !.pnp.loader.mjs
 !tsconfig.json
-!.yarn/**/*
+!ecosystem.config.js
+!README.md
+!LICENSE
+
 !apps-api/**/*
 !packages-api/**/*
 
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
