@@ -4583,11 +4583,6 @@ __metadata:
     tslib: "npm:2.6.2"
     typedoc: "npm:0.25.0"
     typescript: "npm:5.2.2"
-  dependenciesMeta:
-    ts-morph@21.0.1:
-      unplugged: true
-    ws@8.16.0:
-      unplugged: true
   languageName: unknown
   linkType: soft
 

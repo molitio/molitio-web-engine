@@ -68,13 +68,5 @@
         "typedoc": "0.25.0",
         "typescript": "5.2.2"
     },
-    "stableVersion": "1.0.2",
-    "dependenciesMeta": {
-        "ts-morph@21.0.1": {
-            "unplugged": true
-        },
-        "ws@8.16.0": {
-            "unplugged": true
-        }
-    }
+    "stableVersion": "1.0.2"
 }

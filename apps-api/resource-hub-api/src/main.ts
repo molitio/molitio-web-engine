@@ -7,3 +7,7 @@ async function bootstrap() {
     await app.listen(4000);
 }
 bootstrap();
+
+process.on('SIGINT', function () {
+    console.log('Resource Hub API is shutting down...');
+});

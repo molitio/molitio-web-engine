@@ -1,6 +1,8 @@
-resource-hub-api:
-    name: 'resource-hub-api'
-    cwd: '/usr/src/app/apps-api/resource-hub-api/'
-    script: './dist/main.js'
-    exec_mode: 'cluster'
-    instances: 2
+apps:
+    - name: 'resource-hub-api'
+      script: 'nest start'
+      interpreter_args: '--require /usr/src/app/.pnp.cjs'
+      cwd: '/usr/src/app'
+      args: ''
+      exec_mode: 'cluster'
+      instances: 2

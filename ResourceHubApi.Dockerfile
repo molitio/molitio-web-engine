@@ -11,15 +11,11 @@ ARG WORKSPACE
 
 WORKDIR $WORK_DIR
 
-COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json yarn.lock README.md LICENSE ./
-COPY  .yarn .yarn
-COPY $WORKSPACE $WORKSPACE/
-COPY $APP_MODULES $APP_MODULES/
+COPY  . ./
 
-RUN corepack enable 
-RUN yarn set version 4.1.1 
-RUN --mount=type=cache,target=/.yarn/cache YARN_CACHE_FOLDER=/.yarn/cache yarn install --immutable --immutable-cache  
+RUN --mount=type=cache,target=/.yarn/cache YARN_CACHE_FOLDER=/.yarn/cache yarn
 
+RUN yarn add global @nestjs/cli
 RUN yarn build-resource-hub
 
 FROM node:current-alpine3.19
@@ -38,4 +34,4 @@ COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md 
 
 COPY --from=builder $WORK_DIR/$WORKSPACE $WORKSPACE
 
-CMD ["pm2-runtime","--json", "process.yml", "--only", "resource-hub-api"]
+CMD ["pm2-runtime", "--raw", "process.yml", "--only", "resource-hub-api"]
