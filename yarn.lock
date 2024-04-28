@@ -4403,7 +4403,7 @@ __metadata:
     "@apollo/gateway": "npm:2.7.2"
     "@apollo/server": "npm:4.10.2"
     "@as-integrations/fastify": "npm:2.1.1"
-    "@molitio/resource-hub-modules": "file:*"
+    "@molitio/resource-hub-modules": "workspace:*"
     "@nestjs/apollo": "npm:12.1.0"
     "@nestjs/cli": "npm:10.3.2"
     "@nestjs/common": "npm:10.3.7"
@@ -4446,7 +4446,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/resource-hub-modules@file:*, @molitio/resource-hub-modules@workspace:packages-api/resource-hub-modules":
+"@molitio/resource-hub-modules@workspace:*, @molitio/resource-hub-modules@workspace:packages-api/resource-hub-modules":
   version: 0.0.0-use.local
   resolution: "@molitio/resource-hub-modules@workspace:packages-api/resource-hub-modules"
   dependencies:

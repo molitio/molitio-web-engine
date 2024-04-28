@@ -5,7 +5,7 @@
 !.pnp.cjs
 !.pnp.loader.mjs
 !tsconfig.json
-!ecosystem.config.js
+!process.yml
 !README.md
 !LICENSE
 
