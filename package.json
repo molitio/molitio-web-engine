@@ -77,6 +77,8 @@
         }
     },
     "dependencies": {
-        "components": "0.1.0"
+        "@reduxjs/toolkit": "2.2.3",
+        "components": "0.1.0",
+        "react-redux": "9.1.2"
     }
 }
