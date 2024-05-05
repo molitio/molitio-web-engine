@@ -35,5 +35,8 @@
         "typescript": "5.2.2",
         "vercel": "32.2.2"
     },
+    "resolutions": {
+        "@molitio/ui-core": "0.1.1"
+    },
     "stableVersion": "1.0.2"
 }
