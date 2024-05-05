@@ -30,6 +30,7 @@
     "workspaces": [
         "apps-ui/*",
         "apps-api/*",
+        "packages-ui/*",
         "packages-api/*",
         "packages-utils/*"
     ],
