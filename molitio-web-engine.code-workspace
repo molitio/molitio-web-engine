@@ -1,25 +1,28 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"search.exclude": {
-			"**/.yarn": true,
-			"**/.pnp.*": true
-		},
-		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true,
-		"prettier.prettierPath": ".yarn/sdks/prettier/index.js",
-		"testing.alwaysRevealTestOnStateChange": true,
-		"testing.automaticallyOpenPeekViewDuringAutoRun": true,
-		"testing.openTesting": "neverOpen",
-		"testing.showAllMessages": true,
-		"editor.inlineSuggest.enabled": true,
-		"jest.runMode": "on-save",
-		"eslint.nodePath": ".yarn/sdks",
-		"typescript.tsdk": ".yarn/sdks/typescript/lib",
-		"typescript.enablePromptUseWorkspaceTsdk": true
-	}
+    "folders": [
+        {
+            "path": "."
+        }
+    ],
+    "settings": {
+        "search.exclude": {
+            "**/.yarn": true,
+            "**/.pnp.*": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
+        "testing.alwaysRevealTestOnStateChange": true,
+        "testing.automaticallyOpenPeekViewDuringAutoRun": true,
+        "testing.openTesting": "neverOpen",
+        "testing.showAllMessages": true,
+        "editor.inlineSuggest.enabled": true,
+        "jest.runMode": "on-save",
+        "eslint.nodePath": ".yarn/sdks",
+        "typescript.tsdk": ".yarn/sdks/typescript/lib",
+        "typescript.enablePromptUseWorkspaceTsdk": true,
+        "[dockerfile]": {
+            "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+        }
+    }
 }

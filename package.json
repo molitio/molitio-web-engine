@@ -9,6 +9,7 @@
         "i": "yarn workspaces foreach --all --parallel --interlaced --topological install",
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
+        "build-resource-hub": "yarn workspace @molitio/resource-hub-api build",
         "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/john-glenn-ui build",
         "build-dashing-bumblebee-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/dashing-bumblebee-ui build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
@@ -67,13 +68,5 @@
         "typedoc": "0.25.0",
         "typescript": "5.2.2"
     },
-    "stableVersion": "1.0.2",
-    "dependenciesMeta": {
-        "ts-morph@21.0.1": {
-            "unplugged": true
-        },
-        "ws@8.16.0": {
-            "unplugged": true
-        }
-    }
+    "stableVersion": "1.0.2"
 }
