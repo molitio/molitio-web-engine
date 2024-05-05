@@ -4376,7 +4376,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui"
   dependencies:
-    "@molitio/ui-core": "npm:0.1.0"
+    "@molitio/ui-core": "npm:0.1.1"
     "@types/node": "npm:18.11.10"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
@@ -4504,7 +4504,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/ui-core@npm:0.1.0, @molitio/ui-core@workspace:packages-ui/ui-core":
+"@molitio/ui-core@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@molitio/ui-core@npm:0.1.1"
+  checksum: 10/278bba034ab6664a3673a96165b1fdac105dcc18d0ba0f009b4aed276d3015a10c546cab59b2e31d32cbb22a9adff82e9cd4606f1d54f01ab0ae3491c5f448a0
+  languageName: node
+  linkType: hard
+
+"@molitio/ui-core@workspace:packages-ui/ui-core":
   version: 0.0.0-use.local
   resolution: "@molitio/ui-core@workspace:packages-ui/ui-core"
   dependencies:
