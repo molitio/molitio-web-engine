@@ -2,7 +2,7 @@ import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { LoggerMiddleware } from './logger/logger.middleware';
-import { UserPublicModule } from './user-public/user-public.module';
+import { UserPublicModule } from '@molitio/resource-hub-modules';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
@@ -10,7 +10,8 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
     imports: [
         GraphQLModule.forRoot<ApolloDriverConfig>({
             driver: ApolloDriver,
-            autoSchemaFile: '../.nest/gql/schema.graphql',
+            autoSchemaFile: './gql/schema.graphql',
+            playground: true,
         }),
         UserPublicModule,
     ],
