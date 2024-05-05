@@ -25,7 +25,7 @@
         "docgen": "yarn run typedoc --options typedoc.json",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
-        "publish-ui-core": "yarn build-ui-core && yarn workspace @molitio/ui-core publish-ui-core"
+        "publish-ui-core": "yarn workspace @molitio/ui-core publish-ui-core"
     },
     "workspaces": [
         "apps-ui/*",
