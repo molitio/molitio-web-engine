@@ -1,0 +1,34 @@
+name: mwe
+services:
+    resource-hub-db:
+        image: mongo:5.0.26
+        container_name: resource-hub-db
+        restart: always
+        env_file:
+            - path: ./.env
+        expose:
+            - '27017'
+        ports:
+            - 27017:27017
+        volumes:
+            - '/resource-hub-db-volume:/resource-hub-db-volume/db'
+        environment:
+            MONGO_INITDB_DATABASE: ${MONGO_DB}
+            MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+            MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+    resource-hub-api:
+        container_name: resource-hub-api
+        depends_on:
+            - resource-hub-db
+        restart: 'no'
+        env_file:
+            - path: ./.env
+        build:
+            context: .
+            dockerfile: ResourceHubApi.Dockerfile
+        ports:
+            - 4000:4000
+volumes:
+    resource-hub-db-volume:
+        driver: local
