@@ -14,5 +14,5 @@
     "devDependencies": {
         "ts-node": "10.9.1"
     },
-    "stableVersion": "1.0.2"
+    "stableVersion": "0.1.1"
 }
