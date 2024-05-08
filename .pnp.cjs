@@ -8543,7 +8543,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.50.0"],\
           ["eslint-config-next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:13.5.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:13.5.2"],\
-          ["postcss", "npm:8.4.30"],\
+          ["postcss", "npm:8.4.31"],\
           ["react", "npm:18.2.0"],\
           ["react-dom", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:18.2.0"],\
           ["tailwindcss", "npm:3.3.3"],\
@@ -13426,7 +13426,7 @@ const RAW_RUNTIME_STATE =
           ["fraction.js", "npm:4.3.7"],\
           ["normalize-range", "npm:0.1.2"],\
           ["picocolors", "npm:1.0.0"],\
-          ["postcss", "npm:8.4.30"],\
+          ["postcss", "npm:8.4.31"],\
           ["postcss-value-parser", "npm:4.2.0"]\
         ],\
         "packagePeers": [\
@@ -23281,16 +23281,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/postcss-npm-8.4.14-c0d448b728-1940e8d1da.zip/node_modules/postcss/",\
         "packageDependencies": [\
           ["postcss", "npm:8.4.14"],\
-          ["nanoid", "npm:3.3.7"],\
-          ["picocolors", "npm:1.0.0"],\
-          ["source-map-js", "npm:1.2.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["npm:8.4.30", {\
-        "packageLocation": "./.yarn/cache/postcss-npm-8.4.30-b2330f9182-e7c22d1d05.zip/node_modules/postcss/",\
-        "packageDependencies": [\
-          ["postcss", "npm:8.4.30"],\
           ["nanoid", "npm:3.3.7"],\
           ["picocolors", "npm:1.0.0"],\
           ["source-map-js", "npm:1.2.0"]\
