@@ -1,5 +1,3 @@
 dist
-**/*.js
 .artifacts
-rollup.config.js
 packages_off_build
