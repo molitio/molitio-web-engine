@@ -28,7 +28,8 @@
         ".next/types/**/*.ts",
         "../../.artifacts/john-glenn/types/**/*.ts",
         "../../.artifacts/john-glenn/.next/types/**/*.ts",
-        "../../.artifacts/john-glenn//types/**/*.ts"
+        "../../.artifacts/john-glenn//types/**/*.ts",
+        "../../packages-ui/ui-core/src/ui-nav-menu/NavBar.tsx"
     ],
     "exclude": ["node_modules"]
 }

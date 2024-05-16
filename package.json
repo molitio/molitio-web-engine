@@ -72,9 +72,6 @@
     },
     "stableVersion": "0.1.1",
     "dependenciesMeta": {
-        "postcss@8.4.36": {
-            "unplugged": true
-        },
         "ts-node@10.9.2": {
             "unplugged": true
         }

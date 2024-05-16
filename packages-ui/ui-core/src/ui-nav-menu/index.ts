@@ -1,2 +1,2 @@
 //TODO: Implement nav menu
-export {};
+export { default as NavBar } from './NavBar';
