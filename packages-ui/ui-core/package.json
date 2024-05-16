@@ -24,7 +24,7 @@
         "dev": "yarn build:watch",
         "build": "rm -rf ./dist && yarn package:builder && yarn rollup -c",
         "build:watch": "yarn rollup -c -w",
-        "package:builder": "node ./package-builder/package-builder.mjs",
+        "package:builder": "node ./package-builder/package-builder.js",
         "publish-ui-core": "cd dist && npm publish --access=public --auth-type=legacy && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",

@@ -1,4 +1,4 @@
-module.exports = [
+export default [
     {
         files: ['packages-ui/ui-core/package-builder/package-builder.mjs'],
         parser: '@babel/eslint-parser',
