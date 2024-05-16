@@ -3,28 +3,23 @@
 # ------------------------------------------------------
 
 type UserPublic {
-    id: ID!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
-    usernamePublic: String!
-    resourceCollectionId: ID
-    userPersistedConfigId: ID
+  id: ID!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  usernamePublic: String!
+  resourceCollectionId: ID
+  userPersistedConfigId: ID
 }
 
 type Query {
-    userPublic(id: String!): UserPublic!
-    userPublicCollection: [UserPublic!]!
+  userPublic(id: String!): UserPublic!
+  userPublicCollection: [UserPublic!]!
 }
 
 type Mutation {
-    createUserPublic(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
-    updateUserPublic(
-        id: String!
-        usernamePublic: String
-        resourceCollectionId: String
-        userPersistedConfigId: String
-    ): UserPublic!
-    deleteUserPublic(id: String!): UserPublic!
+  createUserPublic(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
+  updateUserPublic(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
+  deleteUserPublic(id: String!): UserPublic!
 }

@@ -4,7 +4,6 @@
     "description": "Resource Distribution Engine",
     "author": "Peter Koller",
     "license": "MIT",
-    "type": "module",
     "repository": {
         "type": "git",
         "url": "git@github.com:molitio/molitio-web-engine.git"
