@@ -1,1 +1,1 @@
-export * from "./ApplicationContextRoot";
+export * from './ApplicationContextRoot';

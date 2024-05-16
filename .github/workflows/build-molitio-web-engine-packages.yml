@@ -1,34 +1,34 @@
-name: Build
+# name: Build
 
-on:
-  workflow_call:
+# on:
+#   workflow_call:
 
-env:
-  NODE_ENV: production
+# env:
+#   NODE_ENV: production
 
-jobs:
-  install-dependencies:
-    name: Molitio Web Engine
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Enable Corepack
-      run: corepack enable
-    - name: Install Dependencies
-      uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        cache: yarn
-    - run: |
-        yarn install --immutable
-        yarn build
-    - name: Upload UI Core 
-      uses: actions/upload-artifact@v3
-      with: 
-        name: ui-core
-        path: packages/ui-core/dist
-    - name: Upload John-Glenn
-      uses: actions/upload-artifact@v3
-      with: 
-        name: john-glenn
-        path: packages-ui/john-glenn-ui/.next
+# jobs:
+#   install-dependencies:
+#     name: Molitio Web Engine
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v4
+#     - name: Enable Corepack
+#       run: corepack enable
+#     - name: Install Dependencies
+#       uses: actions/setup-node@v4
+#       with:
+#         node-version: 20
+#         cache: yarn
+#     - run: |
+#         yarn install --immutable
+#         yarn build
+#     - name: Upload UI Core 
+#       uses: actions/upload-artifact@v3
+#       with: 
+#         name: ui-core
+#         path: packages/ui-core/dist
+#     - name: Upload John-Glenn
+#       uses: actions/upload-artifact@v3
+#       with: 
+#         name: john-glenn
+#         path: packages-ui/john-glenn-ui/.next

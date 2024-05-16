@@ -2,17 +2,17 @@
     "exclude": ["node_modules", "dist"],
     "include": ["**/*.ts", "**/*.tsx"],
     "compilerOptions": {
-        "moduleResolution": "node",
-        "target": "es2022",
-        "module": "es2022",
-        "resolveJsonModule": true,
         "jsx": "react",
-        "baseUrl": "./src",
         "outDir": "./dist",
+        "target": "ESNext",
+        "module": "ESNext",
+        "rootDirs": ["src"],
+        "moduleResolution": "node",
         "strict": true,
         "noEmit": false,
         "declaration": true,
-        "declarationMap": true,
+        "declarationMap": false,
+        "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true
     }
 }

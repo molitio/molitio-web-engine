@@ -27,3 +27,10 @@ export * from './ui-page';
  * Interactive components for the UI
  */
 export * from './ui-interactive';
+
+/**
+ * ui-nav-menu
+ *
+ * Navigation menu components for the UI
+ */
+export * from './ui-nav-menu';
