@@ -113,7 +113,7 @@ const modules = Array.from(
                     assetFileNames: '[name]-[hash][extname]',
                     //   file: `${module.basePath}/${module.module}`,
                     format: 'esm',
-                    sourcemap: true,
+                    sourcemap: false,
                     esModule: true,
                     globals,
                     strict: true,
