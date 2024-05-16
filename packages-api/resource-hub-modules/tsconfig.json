@@ -1,12 +1,14 @@
 {
     "compilerOptions": {
-        "outDir": "../../.artifacts/resource-hub-modules",
+        "outDir": "./dist",
         "baseUrl": "./src",
-        "moduleResolution": "Bundler",
         "target": "es2022",
+        "moduleResolution": "Bundler",
+        "declaration": true,
         "skipLibCheck": true,
-        "experimentalDecorators": true,
-        "emitDecoratorMetadata": true
+        "declarationMap": false,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
     },
     "include": ["src/**/*.ts"]
 }

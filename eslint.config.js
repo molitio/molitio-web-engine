@@ -1,6 +1,6 @@
-export default [
+module.exports = [
     {
-        files: ['packages-ui/ui-core/package-builder/package-builder.mjs'],
+        files: ['**/*.js'],
         parser: '@babel/eslint-parser',
         parserOptions: {
             sourceType: 'module',
@@ -15,6 +15,28 @@ export default [
         files: ['apps-ui/dashing-bumblebee-ui/**/*.ts', 'apps-ui/dashing-bumblebee-ui/**/*.tsx}'],
         extends: 'next/core-web-vitals',
         ignorePatterns: ['.next', 'dist'],
+    },
+    {
+        files: ['apps-api/resource-hub-api/**/*.ts'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+            project: 'tsconfig.json',
+            tsconfigRootDir: __dirname,
+            sourceType: 'module',
+        },
+        plugins: ['@typescript-eslint/eslint-plugin'],
+        extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+        root: true,
+        env: {
+            node: true,
+            jest: true,
+        },
+        rules: {
+            '@typescript-eslint/interface-name-prefix': 'off',
+            '@typescript-eslint/explicit-function-return-type': 'off',
+            '@typescript-eslint/explicit-module-boundary-types': 'off',
+            '@typescript-eslint/no-explicit-any': 'off',
+        },
     },
     {
         files: ['packages-ui/ui-core/**/*.ts, packages-ui/ui-core/**/*.tsx}'],

@@ -1,22 +1,24 @@
 {
     "compilerOptions": {
         "outDir": "./dist",
-        "baseUrl": "./",
-        "module": "commonjs",
-        "declaration": true,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true,
+        "module": "CommonJS",
         "target": "ES2022",
-        "sourceMap": true,
+        "baseUrl": "./src",
+        "declaration": true,
+        "declarationMap": true,
+        "sourceMap": false,
         "incremental": true,
         "skipLibCheck": false,
-        "strictNullChecks": false,
         "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": false,
         "strictBindCallApply": false,
-        "forceConsistentCasingInFileNames": false,
-        "noFallthroughCasesInSwitch": false
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "noFallthroughCasesInSwitch": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": false
     },
-    "exclude": ["**/.yarn", "**/node_modules", "dist"]
+
+    "exclude": ["./dist"]
 }
