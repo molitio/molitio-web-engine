@@ -12,17 +12,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div style={{ margin: '0 0 0 1em', position: 'absolute', zIndex: 5 }}>
-                <Image
-                    src={ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg']}
-                    alt={'logo'}
-                    width={300}
-                    height={100}
-                />
-            </div>
-            <NavBar />
-            <div>{children}</div>
-        </div>
+        <html>
+            <body>
+                <div className="hero min-h-screen bg-base-200">
+                    <div style={{ margin: '0 0 0 1em', position: 'absolute', zIndex: 5 }}>
+                        <Image
+                            src={ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg']}
+                            alt={'logo'}
+                            width={300}
+                            height={100}
+                        />
+                    </div>
+                    <NavBar />
+                    <div>{children}</div>
+                </div>
+            </body>
+        </html>
     );
 }

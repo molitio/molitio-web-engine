@@ -1,10 +1,10 @@
-import type { Config } from 'tailwindcss';
+/* eslint-env node */
+/** @type {import('tailwindcss').Config} */
 
-const config: Config = {
+module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require('daisyui')],
 };
-export default config;

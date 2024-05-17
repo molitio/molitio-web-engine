@@ -73,6 +73,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-tsdoc", "npm:0.2.17"],\
           ["jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.6.4"],\
           ["jest-environment-jsdom", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.6.4"],\
+          ["postcss", "npm:8.4.36"],\
           ["prettier", "npm:3.0.3"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
           ["rimraf", "npm:5.0.5"],\
@@ -6597,6 +6598,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.2.64"],\
           ["@types/react-dom", "npm:18.2.7"],\
           ["autoprefixer", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:10.4.15"],\
+          ["daisyui", "npm:4.11.1"],\
           ["eslint", "npm:8.50.0"],\
           ["eslint-config-next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:13.5.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
@@ -6847,6 +6849,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-tsdoc", "npm:0.2.17"],\
           ["jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.6.4"],\
           ["jest-environment-jsdom", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.6.4"],\
+          ["postcss", "npm:8.4.36"],\
           ["prettier", "npm:3.0.3"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
           ["rimraf", "npm:5.0.5"],\
@@ -19794,7 +19797,7 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }],\
       ["npm:8.4.36", {\
-        "packageLocation": "./.yarn/cache/postcss-npm-8.4.36-b1cd359dc2-8b8bb8e6b6.zip/node_modules/postcss/",\
+        "packageLocation": "./.yarn/unplugged/postcss-npm-8.4.36-b1cd359dc2/node_modules/postcss/",\
         "packageDependencies": [\
           ["postcss", "npm:8.4.36"],\
           ["nanoid", "npm:3.3.7"],\
