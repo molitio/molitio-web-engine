@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                     <div>{children}</div>
                 </div>
-                <Footer licenceText="kópi rájt" />
+                <Footer licenceText={ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']} />
             </body>
         </html>
     );
