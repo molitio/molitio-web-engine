@@ -5,6 +5,10 @@ export const ApplicationContextRoot = {
             label: 'Főoldal',
             path: '/',
         },
+        contact: {
+            label: 'Kapcsolat',
+            path: '/contact',
+        },
     },
     contentRoot: {
         common: {
