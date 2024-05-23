@@ -41,3 +41,9 @@ export * from './ui-nav-menu';
  * 
  */
 export * from './ui-common';
+
+/**
+ * ui-card
+ * 
+ */
+export * from './ui-card';

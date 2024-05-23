@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ApplicationContextRoot } from '../context';
-import { NavBar, Footer } from '@molitio/ui-core';
+import { NavBar, Footer} from '@molitio/ui-core';
 
 import './styles/globals.css';
 
@@ -30,6 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     />
                     <div>{children}</div>
                 </div>
+              
                 <Footer licenceText={ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']} />
             </body>
         </html>

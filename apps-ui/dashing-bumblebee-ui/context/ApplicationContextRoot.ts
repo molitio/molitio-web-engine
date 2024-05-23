@@ -24,7 +24,7 @@ export const ApplicationContextRoot = {
                 },
                 footer: {
                     textContent: {
-                        maintainer: `© 2023 All Rights Reserved | molitio llc | Dashing Bumblebee v0.1.0"`,
+                        maintainer: `© 2024 All Rights Reserved | molitio llc | Dashing Bumblebee v0.1.0`,
                     },
                 },
             },
@@ -47,6 +47,34 @@ export const ApplicationContextRoot = {
                         phoneNumberHref: 'tel:+36204131238',
                         backgroundImage: '/background_combined.png',
                     },
+                },
+                coverCards: {
+                    cardContent: [
+                        {
+                            title: 'string1',
+                            description: 'strin2',
+                            imageUrl: 'apple.svg',
+                            imageAlt: 'apple',
+                        },
+                        {
+                            title: 'string4',
+                            description: 'string5',
+                            imageUrl: 'apple.svg',
+                            imageAlt: 'apple',
+                        },
+                        {
+                            title: 'string1',
+                            description: 'strin2',
+                            imageUrl: 'apple.svg',
+                            imageAlt: 'apple',
+                        },
+                        {
+                            title: 'string4',
+                            description: 'string5',
+                            imageUrl: 'apple.svg',
+                            imageAlt: 'apple',
+                        },
+                    ],
                 },
             },
         },
