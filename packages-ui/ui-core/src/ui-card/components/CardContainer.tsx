@@ -7,7 +7,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     return (
         <div className="flex">
             {cards.map((card: CardData, i) => {
-                return <Card key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} />;
+                return <Card key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} imageAlt={card.imageAlt}/>;
             })}
         </div>
     );
