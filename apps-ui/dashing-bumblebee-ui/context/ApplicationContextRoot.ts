@@ -51,28 +51,19 @@ export const ApplicationContextRoot = {
                 coverCards: {
                     cardContent: [
                         {
-                            title: 'string1',
-                            description: 'strin2',
-                            imageUrl: 'apple.svg',
-                            imageAlt: 'apple',
+                            title: 'Tematikus',
+                            imageUrl: 'ware.svg',
+                            imageAlt: 'Tematikus',
                         },
                         {
-                            title: 'string4',
-                            description: 'string5',
-                            imageUrl: 'apple.svg',
-                            imageAlt: 'apple',
+                            title: 'Gyors',
+                            imageUrl: 'fast.svg',
+                            imageAlt: 'Gyors',
                         },
                         {
-                            title: 'string1',
-                            description: 'strin2',
-                            imageUrl: 'apple.svg',
-                            imageAlt: 'apple',
-                        },
-                        {
-                            title: 'string4',
-                            description: 'string5',
-                            imageUrl: 'apple.svg',
-                            imageAlt: 'apple',
+                            title: 'Dinamikus',
+                            imageUrl: 'accu.svg',
+                            imageAlt: 'Dinamikus',
                         },
                     ],
                 },

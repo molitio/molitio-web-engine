@@ -1,1 +1,1 @@
-export { CardData, CardContainerProps } from './CardData';
+export { CardData } from './CardData';

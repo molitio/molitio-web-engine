@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
 import { ApplicationContextRoot } from '../context';
-import { NavBar, Footer} from '@molitio/ui-core';
+import { NavBar, Footer } from '@molitio/ui-core';
 
 import './styles/globals.css';
 
@@ -16,8 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html data-theme="dashing-bumblebee">
             <body>
-                <div className="hero min-h-screen bg-base-200">
-                    <div style={{ margin: '0 0 0 1em', position: 'absolute', zIndex: 5 }}></div>
+                <section>
                     <NavBar
                         logo={
                             <Image
@@ -28,10 +27,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             />
                         }
                     />
-                    <div>{children}</div>
-                </div>
-              
-                <Footer licenceText={ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']} />
+                </section>
+                <main>{children}</main>
+                <Footer
+                    licenceText={ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']}
+                />
             </body>
         </html>
     );
