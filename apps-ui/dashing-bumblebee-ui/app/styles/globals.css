@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    .dev-outline {
+        border: 3px dashed purple;
+    }
+}
