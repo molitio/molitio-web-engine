@@ -1,20 +1,20 @@
-import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { NavMenuReducerState } from "./types";
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
+import { NavMenuReducerState } from './types';
 
 const initialState: NavMenuReducerState = {
-  navMenuControl: {
-    isNavMenuOpen: false,
-  },
+    navMenuControl: {
+        toggleNavMenuOpen: false,
+    },
 };
 
 const navMenuSlice = createSlice({
-  name: "nav-menu",
-  initialState,
-  reducers: {
-    setNavMenuOpen: (state, action: PayloadAction<boolean>) => {
-      state.navMenuControl.isNavMenuOpen = action.payload;
-    }
-  },
+    name: 'nav-menu',
+    initialState,
+    reducers: {
+        setNavMenuOpen: (state, action: PayloadAction<boolean>) => {
+            state.navMenuControl.toggleNavMenuOpen = action.payload;
+        },
+    },
 });
 
 export const navMenuSliceReducer = navMenuSlice.reducer;

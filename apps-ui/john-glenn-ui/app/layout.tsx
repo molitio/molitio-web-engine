@@ -8,7 +8,7 @@ export const metadata = {
     title: 'Fashion and spa',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.JSX.Element }) {
     return (
         <html lang="en">
             <body className={inter.className}>

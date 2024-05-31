@@ -1,7 +1,7 @@
 export type NavMenuControlState = {
-  isNavMenuOpen: boolean;
-}
+    toggleNavMenuOpen: boolean;
+};
 
 export type NavMenuReducerState = {
-  navMenuControl: NavMenuControlState;
-}
+    navMenuControl: NavMenuControlState;
+};

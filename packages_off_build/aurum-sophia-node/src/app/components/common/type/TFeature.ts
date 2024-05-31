@@ -8,5 +8,5 @@ export type TFeature = {
     isNavOption: boolean;
     path: string;
     icon?: TIcon;
-    component?: (P?: {}) => React.ReactNode;
+    component?: (P?: {}) => React.JSX.Element;
 };

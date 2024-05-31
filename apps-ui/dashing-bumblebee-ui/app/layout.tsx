@@ -13,30 +13,28 @@ export const metadata: Metadata = {
     description: ApplicationContextRoot.contentRoot['common'].leafs['app'].textContent['appDescription'],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.JSX.Element }) {
     return (
         <html data-theme="dashing-bumblebee">
             <body>
-         {/*        <Provider store={appContext}> */}
-                    <section>
-                        <NavBar
-                            logo={
-                                <Image
-                                    src={ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg']}
-                                    alt={'logo'}
-                                    width={300}
-                                    height={100}
-                                />
-                            }
-                        />
-                    </section>
-                    <main>{children}</main>
-                    <Footer
-                        licenceText={
-                            ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']
+                {/*        <Provider store={appContext}> */}
+                <section>
+                    <NavBar
+                        logo={
+                            <Image
+                                src={ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg']}
+                                alt={'logo'}
+                                width={300}
+                                height={100}
+                            />
                         }
                     />
-         {/*        </Provider> */}
+                </section>
+                <main>{children}</main>
+                <Footer
+                    licenceText={ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer']}
+                />
+                {/*        </Provider> */}
             </body>
         </html>
     );

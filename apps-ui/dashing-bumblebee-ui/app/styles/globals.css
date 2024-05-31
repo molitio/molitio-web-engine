@@ -4,6 +4,6 @@
 
 @layer base {
     .dev-outline {
-        border: 3px dashed purple;
+        outline: 3px dashed purple;
     }
 }

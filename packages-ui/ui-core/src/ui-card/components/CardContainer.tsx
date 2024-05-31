@@ -10,7 +10,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-col md:flex-row gap-8 pb-16 max-w-full">
+        <div className="flex flex-nowrap overflow-x-auto">
             {cards.map((card: CardData, i) => {
                 return (
                     <Card

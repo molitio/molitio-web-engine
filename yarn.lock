@@ -3208,6 +3208,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     react-is: "npm:18.2.0"
+    react-redux: "npm:9.1.2"
     tailwindcss: "npm:3.4.1"
     tslib: "npm:2.6.2"
     typescript: "npm:5.2.2"
@@ -3339,6 +3340,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     react-is: 18.2.0
+    react-redux: 9.1.2
     tailwindcss: 3.4.1
   languageName: unknown
   linkType: soft

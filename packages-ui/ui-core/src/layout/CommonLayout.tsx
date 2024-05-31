@@ -15,7 +15,7 @@ const inter = Inter({ subsets: ['latin'] });
 export default function RootLayout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: React.JSX.Element;
 }>) {
     return (
         <html lang="en">
