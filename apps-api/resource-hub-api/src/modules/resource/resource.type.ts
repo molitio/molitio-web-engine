@@ -4,7 +4,7 @@ import { Schema as MongooseSchema } from 'mongoose';
 
 @ObjectType()
 @Schema()
-export class UserPrivate {
+export class Resource {
     @Field(() => String)
     _id: MongooseSchema.Types.ObjectId;
 
@@ -23,4 +23,12 @@ export class UserPrivate {
     @Field({ nullable: true })
     @Prop()
     updatedBy?: string;
+
+    @Field(() => String)
+    @Prop()
+    name: string;
+
+    @Field(() => String)
+    @Prop()
+    decription: string;
 }
