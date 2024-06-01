@@ -23,6 +23,8 @@
         "typescript.enablePromptUseWorkspaceTsdk": true,
         "[dockerfile]": {
             "editor.defaultFormatter": "ms-azuretools.vscode-docker"
-        }
+        },
+        "codeium.enableSearch": true,
+        "codeium.indexingRetentionPeriod": 360
     }
 }
