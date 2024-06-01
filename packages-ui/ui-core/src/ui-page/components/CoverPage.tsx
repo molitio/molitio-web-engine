@@ -16,7 +16,7 @@ import { ThemeColorVariant } from '../../system-theme';
  * @type {React.FC<CoverPageProps>}
  * @param {string} coverContentTitle - The header text of the CoverPage.
  * @param {string} coverContentText - The content text of the CoverPage.
- * @param {React.JSX.Element} background - The background of the CoverPage.
+ * @param {React.ReactNode} background - The background of the CoverPage.
  * @returns {React.FC<CoverPageProps>}
  *
  * @example

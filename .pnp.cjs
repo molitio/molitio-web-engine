@@ -6603,6 +6603,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.50.0"],\
           ["eslint-config-next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:13.5.2"],\
           ["formik", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.4.6"],\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.2.0"],\
@@ -6629,6 +6630,7 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:10.4.15"],\
           ["eslint", "npm:8.29.0"],\
           ["eslint-config-next", "virtual:d109921afaaa7d2c3d2e803f90f3cab029b964d1fa3aec05981c9a613cb75f41ee09aa4e0a4e4b899a8f0049c85f36112db836782fc82c87b8f152b21d2779ef#npm:13.0.6"],\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.2.0"],\
@@ -6721,6 +6723,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:11.1.5"],\
           ["@types/eslint", "npm:8.56.10"],\
+          ["@types/jotai", null],\
           ["@types/next", null],\
           ["@types/node", "npm:18.11.9"],\
           ["@types/postcss", null],\
@@ -6735,6 +6738,7 @@ const RAW_RUNTIME_STATE =
           ["daisyui", "npm:4.11.1"],\
           ["eslint", "npm:8.28.0"],\
           ["fast-glob", "npm:3.3.2"],\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-import", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:16.1.0"],\
@@ -6754,6 +6758,7 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "packagePeers": [\
+          "@types/jotai",\
           "@types/next",\
           "@types/postcss-import",\
           "@types/postcss",\
@@ -6763,6 +6768,7 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "@types/reduxjs__toolkit",\
           "@types/tailwindcss",\
+          "jotai",\
           "next",\
           "postcss",\
           "react-dom",\
@@ -6799,6 +6805,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:11.1.5"],\
           ["@types/eslint", "npm:8.56.10"],\
+          ["@types/jotai", null],\
           ["@types/next", null],\
           ["@types/node", "npm:18.11.9"],\
           ["@types/postcss", null],\
@@ -6813,6 +6820,7 @@ const RAW_RUNTIME_STATE =
           ["daisyui", "npm:4.11.1"],\
           ["eslint", "npm:8.28.0"],\
           ["fast-glob", "npm:3.3.2"],\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-import", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:16.1.0"],\
@@ -6833,6 +6841,7 @@ const RAW_RUNTIME_STATE =
         ],\
         "packagePeers": [\
           "@reduxjs/toolkit",\
+          "@types/jotai",\
           "@types/next",\
           "@types/postcss-import",\
           "@types/postcss",\
@@ -6842,6 +6851,7 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "@types/reduxjs__toolkit",\
           "@types/tailwindcss",\
+          "jotai",\
           "next",\
           "postcss",\
           "react-dom",\
@@ -6884,6 +6894,7 @@ const RAW_RUNTIME_STATE =
           ["daisyui", "npm:4.11.1"],\
           ["eslint", "npm:8.28.0"],\
           ["fast-glob", "npm:3.3.2"],\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
           ["next", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-import", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:16.1.0"],\
@@ -17945,6 +17956,28 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/jju-npm-1.4.0-670678eaa3-1067ff8ce0.zip/node_modules/jju/",\
         "packageDependencies": [\
           ["jju", "npm:1.4.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["jotai", [\
+      ["npm:2.8.2", {\
+        "packageLocation": "./.yarn/cache/jotai-npm-2.8.2-0574dda136-5dd3df79e1.zip/node_modules/jotai/",\
+        "packageDependencies": [\
+          ["jotai", "npm:2.8.2"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2", {\
+        "packageLocation": "./.yarn/__virtual__/jotai-virtual-5c4729b119/0/cache/jotai-npm-2.8.2-0574dda136-5dd3df79e1.zip/node_modules/jotai/",\
+        "packageDependencies": [\
+          ["jotai", "virtual:fb1ae9cb3116b8fc4deb9497c46a52e828ff1b786bfa743d21636fad4346d4fc40fdd53ae08444b73f9b220e2c96c307a8d757e9b4d9ae6b58ac620d09486239#npm:2.8.2"],\
+          ["@types/react", "npm:18.2.64"],\
+          ["react", "npm:18.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\

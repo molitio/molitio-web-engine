@@ -2,7 +2,7 @@ import React from 'react';
 import ContactForm from './ContactForm';
 
 export type FormContainerProps = {
-    form: React.JSX.Element;
+    form: React.ReactNode;
 };
 
 const FormContainer: React.FC<FormContainerProps> = (props) => {

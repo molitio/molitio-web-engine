@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
 import { CardData, CardContainer } from '@molitio/ui-core';
 
-export default function Home() {
+export default function Page() {
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
 
     return (
@@ -28,14 +28,15 @@ export default function Home() {
                 <div className="">
                     <CardContainer cards={cardData} />
                 </div>
-                <h2 className='text-4xl font-bold'>Vegye fel velünk a kapcsolatot</h2>
-                <div className="FormContainer w-full"
-                style={{
-                    backgroundColor:'gray',
-                    padding:'10px',
-                    borderRadius: '5px'
-                }}
-                >                    
+                <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
+                {/*  <div
+                    className="w-full"
+                    style={{
+                        backgroundColor: 'gray',
+                        padding: '10px',
+                        borderRadius: '5px',
+                    }}
+                >
                     <label className="input flex items-center w-full mb-3">
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +75,7 @@ export default function Home() {
                         </svg>
                         <input type="text" className="grow" value="text" />
                     </label>
-                </div>
+                </div> */}
             </div>
         </section>
     );

@@ -1,3 +1,3 @@
 export interface AppContextProviderProps {
-    children?: React.JSX.Element;
+    children?: React.ReactNode;
 }

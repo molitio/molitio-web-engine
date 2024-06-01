@@ -3179,6 +3179,7 @@ __metadata:
     eslint: "npm:8.50.0"
     eslint-config-next: "npm:13.5.2"
     formik: "npm:2.4.6"
+    jotai: "npm:2.8.2"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
     react: "npm:18.2.0"
@@ -3203,6 +3204,7 @@ __metadata:
     autoprefixer: "npm:10.4.15"
     eslint: "npm:8.29.0"
     eslint-config-next: "npm:13.0.6"
+    jotai: "npm:2.8.2"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
     react: "npm:18.2.0"
@@ -3316,6 +3318,7 @@ __metadata:
     daisyui: "npm:4.11.1"
     eslint: "npm:8.28.0"
     fast-glob: "npm:3.3.2"
+    jotai: "npm:2.8.2"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
     postcss-import: "npm:16.1.0"
@@ -3334,6 +3337,7 @@ __metadata:
     typescript: "npm:5.2.2"
   peerDependencies:
     "@reduxjs/toolkit": 2.2.5
+    jotai: "*"
     next: 14.1.3
     postcss: 8.4.36
     postcss-import: 16.1.0
@@ -11827,6 +11831,21 @@ __metadata:
   version: 1.4.0
   resolution: "jju@npm:1.4.0"
   checksum: 10/1067ff8ce02221faac5a842116ed0ec79a53312a111d0bf8342a80bd02c0a3fdf0b8449694a65947db0a3e8420e8b326dffb489c7dd5866efc380c0d1708a707
+  languageName: node
+  linkType: hard
+
+"jotai@npm:2.8.2":
+  version: 2.8.2
+  resolution: "jotai@npm:2.8.2"
+  peerDependencies:
+    "@types/react": ">=17.0.0"
+    react: ">=17.0.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    react:
+      optional: true
+  checksum: 10/5dd3df79e18c49bbc21b8c886723d79529cce69664090246deabe8cac1aeb89477b3a2ae08597fc01cae2648774fb3f039468d93dbe0d183e20aaa2346ff0a7b
   languageName: node
   linkType: hard
 

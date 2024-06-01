@@ -1,8 +1,8 @@
-@layer component {
+/* @layer component {
     .nav-control {
-        @apply flex-none hidden md:flex dev-outline;
+        @apply flex-none hidden md:flex;
     }
     .nav-control-hidden {
         @apply navbar-end md:hidden;
     }
-}
+} */
