@@ -6668,6 +6668,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:cb4b162abb48f82a385fe29fc8bb6da4949bce402dc3d70e20428a3f6d57c1b6a95e6f34b8879c2831509a2a20d4b36cccce9a140f71fa00ee653c4ffcf3d4ba#npm:6.21.0"],\
           ["@typescript-eslint/parser", "virtual:cb4b162abb48f82a385fe29fc8bb6da4949bce402dc3d70e20428a3f6d57c1b6a95e6f34b8879c2831509a2a20d4b36cccce9a140f71fa00ee653c4ffcf3d4ba#npm:6.21.0"],\
           ["chokidar", "npm:3.6.0"],\
+          ["class-validator", "npm:0.14.1"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:cb4b162abb48f82a385fe29fc8bb6da4949bce402dc3d70e20428a3f6d57c1b6a95e6f34b8879c2831509a2a20d4b36cccce9a140f71fa00ee653c4ffcf3d4ba#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:cb4b162abb48f82a385fe29fc8bb6da4949bce402dc3d70e20428a3f6d57c1b6a95e6f34b8879c2831509a2a20d4b36cccce9a140f71fa00ee653c4ffcf3d4ba#npm:5.1.3"],\
@@ -7021,7 +7022,7 @@ const RAW_RUNTIME_STATE =
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
           ["class-transformer", null],\
-          ["class-validator", null],\
+          ["class-validator", "npm:0.14.1"],\
           ["iterare", "npm:1.2.1"],\
           ["reflect-metadata", "npm:0.2.1"],\
           ["rxjs", "npm:7.8.1"],\
@@ -7118,7 +7119,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ts-morph", null],\
           ["chokidar", "npm:3.6.0"],\
           ["class-transformer", null],\
-          ["class-validator", null],\
+          ["class-validator", "npm:0.14.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["graphql", "npm:16.8.1"],\
           ["graphql-tag", "virtual:26e69f4a35209a1fcb1d51f0c5c8f2b7b58c1a5fab195f97e68b58e332b35833ee4a7dd59ffbefe0d9a9f21eb89d01c91986522dce1af04f56a07af360684e20#npm:2.12.6"],\
@@ -7171,7 +7172,7 @@ const RAW_RUNTIME_STATE =
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
           ["class-transformer", null],\
-          ["class-validator", null],\
+          ["class-validator", "npm:0.14.1"],\
           ["reflect-metadata", "npm:0.2.1"]\
         ],\
         "packagePeers": [\
@@ -9074,6 +9075,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-uuid-npm-9.0.8-3eeeaa5abb-b8c60b7ba8.zip/node_modules/@types/uuid/",\
         "packageDependencies": [\
           ["@types/uuid", "npm:9.0.8"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/validator", [\
+      ["npm:13.11.10", {\
+        "packageLocation": "./.yarn/cache/@types-validator-npm-13.11.10-2fc6610ef6-5f074f7d0b.zip/node_modules/@types/validator/",\
+        "packageDependencies": [\
+          ["@types/validator", "npm:13.11.10"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -11965,6 +11975,18 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-1.3.1-6a27eff8d1-6629188d5c.zip/node_modules/cjs-module-lexer/",\
         "packageDependencies": [\
           ["cjs-module-lexer", "npm:1.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["class-validator", [\
+      ["npm:0.14.1", {\
+        "packageLocation": "./.yarn/cache/class-validator-npm-0.14.1-f0ce3b1130-0c34592a1c.zip/node_modules/class-validator/",\
+        "packageDependencies": [\
+          ["class-validator", "npm:0.14.1"],\
+          ["@types/validator", "npm:13.11.10"],\
+          ["libphonenumber-js", "npm:1.11.2"],\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -18287,6 +18309,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["libphonenumber-js", [\
+      ["npm:1.11.2", {\
+        "packageLocation": "./.yarn/cache/libphonenumber-js-npm-1.11.2-9ebeb04483-9fc858151a.zip/node_modules/libphonenumber-js/",\
+        "packageDependencies": [\
+          ["libphonenumber-js", "npm:1.11.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["light-my-request", [\
       ["npm:5.13.0", {\
         "packageLocation": "./.yarn/cache/light-my-request-npm-5.13.0-3af0a4e344-29407ecd0f.zip/node_modules/light-my-request/",\
@@ -24503,6 +24534,15 @@ const RAW_RUNTIME_STATE =
           ["@jridgewell/trace-mapping", "npm:0.3.25"],\
           ["@types/istanbul-lib-coverage", "npm:2.0.6"],\
           ["convert-source-map", "npm:2.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["validator", [\
+      ["npm:13.12.0", {\
+        "packageLocation": "./.yarn/cache/validator-npm-13.12.0-6c8a423cbf-db6eb0725e.zip/node_modules/validator/",\
+        "packageDependencies": [\
+          ["validator", "npm:13.12.0"]\
         ],\
         "linkType": "HARD"\
       }]\

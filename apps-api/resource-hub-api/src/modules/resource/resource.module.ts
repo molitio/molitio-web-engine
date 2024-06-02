@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { Resource, ResourceSchema } from './resource.schema';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: 'Resource', schema: ResourceSchema }])],
+    imports: [MongooseModule.forFeature([{ name: Resource.name, schema: ResourceSchema }])],
     providers: [ResourceQuery, ResourceMutation, ResourceService],
 })
 export class ResourceModule {}

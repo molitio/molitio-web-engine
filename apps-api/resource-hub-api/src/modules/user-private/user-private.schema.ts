@@ -1,6 +1,8 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Prop, Schema } from '@nestjs/mongoose';
-import { Schema as MongooseSchema } from 'mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
+
+export type UserPrivateDocument = HydratedDocument<UserPrivate>;
 
 @ObjectType()
 @Schema()
@@ -24,3 +26,5 @@ export class UserPrivate {
     @Prop()
     updatedBy?: string;
 }
+
+export const UserPrivateSchema = SchemaFactory.createForClass(UserPrivate);

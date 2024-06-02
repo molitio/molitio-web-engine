@@ -2,7 +2,7 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
-type Resource {
+type SpecificationLabel {
   _id: String!
   createdAt: String!
   updatedAt: String
@@ -10,6 +10,16 @@ type Resource {
   updatedBy: String
   name: String!
   decription: String
+}
+
+type Resource {
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  name: String!
+  description: String
+  specificationLabels: [SpecificationLabel!]!
 }
 
 type UserPublic {
@@ -43,7 +53,7 @@ type Mutation {
   createUserPrivate(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
   updateUserPrivate(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
   deleteUserPrivate(id: String!): UserPrivate!
-  createResource(name: String!, decription: String): Resource!
-  updateResource(_id: String!, name: String!, decription: String): Resource!
+  createResource(name: String!, description: String!): Resource!
+  updateResource(_id: String!, name: String!, description: String): Resource!
   deleteResource(id: String!): Resource!
 }

@@ -14,7 +14,7 @@ import { defaultConfig } from './configuration';
             driver: ApolloDriver,
             autoSchemaFile: './gql/schema.graphql',
         }),
-        MongooseModule.forRoot(defaultConfig.databaseUrl),
+        MongooseModule.forRoot(defaultConfig.resourceDatabaseUrl),
         UserPublicModule,
         UserPrivateModule,
         ResourceModule,

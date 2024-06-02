@@ -1,6 +1,8 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Schema as MongooseSchema } from 'mongoose';
-import { Prop, Schema } from '@nestjs/mongoose';
+import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+
+export type UserPublicDocument = HydratedDocument<UserPublic>;
 
 @ObjectType()
 @Schema()
@@ -34,3 +36,5 @@ export class UserPublic {
     @Field(() => String, { nullable: true })
     userPersistedConfigId?: MongooseSchema.Types.ObjectId; */
 }
+
+export const UserPublicSchema = SchemaFactory.createForClass(UserPublic);

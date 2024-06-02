@@ -1,4 +1,4 @@
-import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
+import { Args, Mutation, Resolver } from '@nestjs/graphql';
 import { ResourceService } from './resource.service';
 import { Resource } from './resource.schema';
 
@@ -6,12 +6,9 @@ import { Resource } from './resource.schema';
 export class ResourceMutation {
     constructor(private readonly resouceService: ResourceService) {}
 
-    @Mutation(() => Resource)
-    async createResource(
-        @Args('name') name: string,
-        @Args('decription', { nullable: true }) decription?: string,
-    ): Promise<Resource> {
-        return this.resouceService.create({ name: name, decription: decription });
+    @Mutation((returns) => Resource)
+    async createResource(@Args('name') name: string, @Args('description') description?: string): Promise<Resource> {
+        return this.resouceService.create({ name: name, description: description });
         // Implementation to create a new Resource
         // Return the newly created Resource instance
     }
@@ -20,7 +17,7 @@ export class ResourceMutation {
     async updateResource(
         @Args('_id') id: string,
         @Args('name') name?: string,
-        @Args('decription', { nullable: true }) decription?: string,
+        @Args('description', { nullable: true }) description?: string,
     ): Promise<Resource> {
         return;
 
@@ -29,7 +26,7 @@ export class ResourceMutation {
     }
 
     @Mutation(() => Resource)
-    async deleteResource(@Args('id') id: string): Promise<Resource> {
+    async deleteResource(@Args('id') id: string): Promise<void> {
         return;
 
         // Implementation to delete a Resource
