@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
-import { UserPublic } from './UserPublic.type.js';
+import { UserPublic } from './user-public.type.js';
+import { Schema as MongooseSchema } from 'mongoose';
 
 @Injectable()
 export class UserPublicService {
@@ -10,7 +11,7 @@ export class UserPublicService {
     public getUserPublicCollection = async (): Promise<UserPublic[]> => {
         return [
             {
-                id: '1',
+                _id: '665717564ede61180ea6fb1b' as unknown as MongooseSchema.Types.ObjectId,
                 usernamePublic: 'John Doe',
                 createdAt: new Date().toLocaleString(),
                 createdBy: 'System',
