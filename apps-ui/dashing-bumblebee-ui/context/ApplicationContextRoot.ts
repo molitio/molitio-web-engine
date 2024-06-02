@@ -5,6 +5,10 @@ export const ApplicationContextRoot = {
             label: 'Főoldal',
             path: '/',
         },
+        contact: {
+            label: 'Kapcsolat',
+            path: '/contact',
+        },
     },
     contentRoot: {
         common: {
@@ -20,7 +24,7 @@ export const ApplicationContextRoot = {
                 },
                 footer: {
                     textContent: {
-                        maintainer: `© 2023 All Rights Reserved | molitio llc | Dashing Bumblebee v0.1.0"`,
+                        maintainer: `© 2024 All Rights Reserved | molitio llc | Dashing Bumblebee v0.1.0`,
                     },
                 },
             },
@@ -43,6 +47,25 @@ export const ApplicationContextRoot = {
                         phoneNumberHref: 'tel:+36204131238',
                         backgroundImage: '/background_combined.png',
                     },
+                },
+                coverCards: {
+                    cardContent: [
+                        {
+                            title: 'Tematikus',
+                            imageUrl: 'ware.svg',
+                            imageAlt: 'Tematikus',
+                        },
+                        {
+                            title: 'Gyors',
+                            imageUrl: 'fast.svg',
+                            imageAlt: 'Gyors',
+                        },
+                        {
+                            title: 'Dinamikus',
+                            imageUrl: 'accu.svg',
+                            imageAlt: 'Dinamikus',
+                        },
+                    ],
                 },
             },
         },

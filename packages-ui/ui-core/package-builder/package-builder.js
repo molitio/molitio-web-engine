@@ -28,7 +28,7 @@ const build = () => {
         delete sourceObj['devDependencies'];
 
         sourceObj.main = sourceObj.main.replace('src/index.ts', 'index.js');
-        sourceObj.types = sourceObj.types.replace('dist/index.d.ts', 'index.d.ts');
+        sourceObj.types = 'index.d.ts';
 
         fs.writeFile('dist/package.json', Buffer.from(JSON.stringify(sourceObj, null, 2), 'utf-8'));
         fs.writeFile('dist/version.txt', Buffer.from(sourceObj.version, 'utf-8'));
