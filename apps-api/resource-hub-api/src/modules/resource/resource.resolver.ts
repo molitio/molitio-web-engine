@@ -1,6 +1,6 @@
 import { Resolver } from '@nestjs/graphql';
-import { ResourceService } from './resource.service.js';
-import { Resource } from './resource.type.js';
+import { ResourceService } from './resource.service';
+import { Resource } from './resource.type';
 
 @Resolver((of: any) => Resource)
 export class ResourceResolver {

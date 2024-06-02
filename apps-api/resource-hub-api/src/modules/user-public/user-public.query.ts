@@ -1,6 +1,6 @@
 import { Args, Query, Resolver } from '@nestjs/graphql';
 import { UserPublic } from './user-public.type'; // Assuming UserPublic is defined in 'UserPublic.ts'
-import { UserPublicService } from './user-public.service.js';
+import { UserPublicService } from './user-public.service';
 
 @Resolver((of: any) => UserPublic)
 export class UserPublicResolverQuery {

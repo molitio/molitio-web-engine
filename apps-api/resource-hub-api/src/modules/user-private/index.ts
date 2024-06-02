@@ -1,3 +1,3 @@
-export * from './user-private.resolver.js';
-export * from './user-private.service.js';
-export * from './user-private.type.js';
+export * from './user-private.resolver';
+export * from './user-private.service';
+export * from './user-private.type';

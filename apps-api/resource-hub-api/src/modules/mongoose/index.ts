@@ -1,1 +1,1 @@
-export * from './mongoose.module.js';
+export * from './mongoose.module';

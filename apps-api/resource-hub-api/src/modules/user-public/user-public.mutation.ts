@@ -1,5 +1,5 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql';
-import { UserPublic } from './user-public.type.js';
+import { UserPublic } from './user-public.type';
 
 @Resolver((of: any) => UserPublic)
 export class UserPublicResolverMutation {

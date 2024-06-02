@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { UserPublicService } from './user-public.service.js';
-import { UserPublicResolverQuery } from './user-public.query.js';
-import { UserPublicResolverMutation } from './user-public.mutation.js';
+import { UserPublicService } from './user-public.service';
+import { UserPublicResolverQuery } from './user-public.query';
+import { UserPublicResolverMutation } from './user-public.mutation';
 
 @Module({
     providers: [UserPublicResolverQuery, UserPublicResolverMutation, UserPublicService],
