@@ -10,18 +10,16 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-nowrap overflow-x-auto">
-            {cards.map((card: CardData, i) => {
-                return (
-                    <Card
-                        key={i}
-                        title={card.title}
-                        description={card.description}
-                        imageUrl={card.imageUrl}
-                        imageAlt={card.imageAlt}
-                    />
-                );
-            })}
+        <div className="flex flex-col md:flex-row overflow-x-auto">
+            {cards.map((card, i) => (
+                <Card
+                    key={i}
+                    title={card.title}
+                    description={card.description}
+                    imageUrl={card.imageUrl}
+                    imageAlt={card.imageAlt}
+                />
+            ))}
         </div>
     );
 };
