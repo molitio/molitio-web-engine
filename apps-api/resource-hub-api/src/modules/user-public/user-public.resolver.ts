@@ -1,6 +1,6 @@
 import { Resolver } from '@nestjs/graphql';
-import { UserPublicService } from './UserPublic.service.js';
-import { UserPublic } from './UserPublic.type.js';
+import { UserPublicService } from './user-public.service.js';
+import { UserPublic } from './user-public.type.js';
 
 @Resolver((of: any) => UserPublic)
 export class UserPublicResolver {

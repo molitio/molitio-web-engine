@@ -5,6 +5,8 @@ import { AppService } from './app.service.js';
 import { AppController } from './app.controller.js';
 import { LoggerMiddleware } from './logger/logger.middleware.js';
 import { UserPublicModule } from './modules';
+import { MongooseModule } from '@nestjs/mongoose';
+import { config } from './application-configuration.js';
 
 @Module({
     imports: [
@@ -12,6 +14,7 @@ import { UserPublicModule } from './modules';
             driver: ApolloDriver,
             autoSchemaFile: './gql/schema.graphql',
         }),
+        MongooseModule.forRoot(config.databaseUrl),
         UserPublicModule,
     ],
     controllers: [AppController],

@@ -3,14 +3,12 @@
 # ------------------------------------------------------
 
 type UserPublic {
-  id: ID!
+  _id: String!
   createdAt: String!
   updatedAt: String
   createdBy: String!
   updatedBy: String
   usernamePublic: String!
-  resourceCollectionId: ID
-  userPersistedConfigId: ID
 }
 
 type Query {
