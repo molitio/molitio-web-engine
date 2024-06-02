@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserPrivateResolver } from './user-private.query';
+import { UserPrivateQuery } from './user-private.query';
 
 describe('UserPrivateResolver', () => {
-    let resolver: UserPrivateResolver;
+    let resolver: UserPrivateQuery;
 
     beforeEach(async () => {
         const module: TestingModule = await Test.createTestingModule({
-            providers: [UserPrivateResolver],
+            providers: [UserPrivateQuery],
         }).compile();
 
-        resolver = module.get<UserPrivateResolver>(UserPrivateResolver);
+        resolver = module.get<UserPrivateQuery>(UserPrivateQuery);
     });
 
     it('should be defined', () => {

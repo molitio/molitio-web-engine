@@ -2,6 +2,16 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type Resource {
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  name: String!
+  decription: String
+}
+
 type UserPublic {
   _id: String!
   createdAt: String!
@@ -22,6 +32,8 @@ type UserPrivate {
 type Query {
   userPublic(id: String!): UserPublic!
   userPublicCollection: [UserPublic!]!
+  resource(id: String!): Resource!
+  resourceCollection: [Resource!]!
 }
 
 type Mutation {
@@ -31,4 +43,7 @@ type Mutation {
   createUserPrivate(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
   updateUserPrivate(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
   deleteUserPrivate(id: String!): UserPrivate!
+  createResource(name: String!, decription: String): Resource!
+  updateResource(_id: String!, name: String!, decription: String): Resource!
+  deleteResource(id: String!): Resource!
 }
