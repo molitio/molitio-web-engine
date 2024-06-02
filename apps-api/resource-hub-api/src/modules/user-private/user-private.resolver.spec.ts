@@ -1,18 +1,18 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { UserPrivateResolver } from './user-private.resolver';
+import { UserPrivateResolver } from './user-private.query';
 
 describe('UserPrivateResolver', () => {
-  let resolver: UserPrivateResolver;
+    let resolver: UserPrivateResolver;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      providers: [UserPrivateResolver],
-    }).compile();
+    beforeEach(async () => {
+        const module: TestingModule = await Test.createTestingModule({
+            providers: [UserPrivateResolver],
+        }).compile();
 
-    resolver = module.get<UserPrivateResolver>(UserPrivateResolver);
-  });
+        resolver = module.get<UserPrivateResolver>(UserPrivateResolver);
+    });
 
-  it('should be defined', () => {
-    expect(resolver).toBeDefined();
-  });
+    it('should be defined', () => {
+        expect(resolver).toBeDefined();
+    });
 });

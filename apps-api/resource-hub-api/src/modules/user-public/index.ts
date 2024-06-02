@@ -1,4 +1,3 @@
-export * from './user-public.resolver';
 export * from './user-public.query';
 export * from './user-public.mutation';
 export * from './user-public.module';
