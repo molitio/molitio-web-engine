@@ -6,11 +6,9 @@ import { Resource } from './resource.schema';
 export class ResourceMutation {
     constructor(private readonly resouceService: ResourceService) {}
 
-    @Mutation((returns) => Resource)
+    @Mutation(() => Resource)
     async createResource(@Args('name') name: string, @Args('description') description?: string): Promise<Resource> {
         return this.resouceService.create({ name: name, description: description });
-        // Implementation to create a new Resource
-        // Return the newly created Resource instance
     }
 
     @Mutation(() => Resource)
@@ -27,8 +25,7 @@ export class ResourceMutation {
 
     @Mutation(() => Resource)
     async deleteResource(@Args('id') id: string): Promise<void> {
-        return;
-
+        this.resouceService.delete(id);
         // Implementation to delete a Resource
         // Return the deleted Resource instance (or null/undefined if it doesn't exist)
     }

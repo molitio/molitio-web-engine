@@ -1,16 +1,19 @@
-import mongoose, { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
 import { IsString } from 'class-validator';
 import { Field, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { SpecificationLabel } from './specification-label.schema';
+import { SpecificationLabel } from '../specification-label';
 
 export type ResourceDocument = HydratedDocument<Resource>;
 
 @ObjectType()
 @Schema()
 export class Resource {
-    @Field()
-    @Prop()
+    @Field(() => String)
+    _id: MongooseSchema.Types.ObjectId;
+
+    @Field(() => String)
+    @Prop({ required: true })
     createdAt: string;
 
     @Field({ nullable: true })
@@ -36,7 +39,7 @@ export class Resource {
     description?: string;
 
     @Field(() => [SpecificationLabel])
-    @Prop({ type: [{ type: mongoose.Schema.Types.ObjectId, ref: 'SpecificationLabel' }] })
+    @Prop({ type: [{ type: MongooseSchema.Types.ObjectId, ref: 'SpecificationLabel' }] })
     specificationLabels: SpecificationLabel[];
 }
 

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { UserPublic } from './user-public.type';
+import { UserPublic } from './user-public.schema';
 import { Schema as MongooseSchema } from 'mongoose';
 
 @Injectable()

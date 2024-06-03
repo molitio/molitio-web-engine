@@ -6,18 +6,13 @@ import { Resource } from './resource.schema';
 export class ResourceQuery {
     constructor(private readonly resouceService: ResourceService) {}
 
-    @Query((returns) => Resource)
+    @Query(() => Resource)
     async resource(@Args('id') id: string): Promise<Resource | undefined> {
-        return;
-        // Implementation to fetch user by id
-        // Return a Resource instance or null/undefined if not found
+        return this.resouceService.findOne(id);
     }
 
-    @Query((returns) => [Resource])
+    @Query(() => [Resource])
     async resourceCollection(): Promise<Resource[]> {
-        return [];
-        //return this.ResourceService.getResourceCollection();
-        // Implementation to fetch all Resource entries
-        // Return an array of Resource instances
+        return this.resouceService.findAll();
     }
 }

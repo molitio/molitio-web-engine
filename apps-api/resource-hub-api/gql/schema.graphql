@@ -2,6 +2,16 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+type LabelValue {
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  unitOfMesure: String!
+  value: String!
+}
+
 type SpecificationLabel {
   _id: String!
   createdAt: String!
@@ -9,10 +19,12 @@ type SpecificationLabel {
   createdBy: String!
   updatedBy: String
   name: String!
-  decription: String
+  description: String
+  labelValue: [LabelValue!]!
 }
 
 type Resource {
+  _id: String!
   createdAt: String!
   updatedAt: String
   createdBy: String!

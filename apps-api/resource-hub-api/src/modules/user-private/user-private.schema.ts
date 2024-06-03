@@ -27,4 +27,6 @@ export class UserPrivate {
     updatedBy?: string;
 }
 
+export interface UserPrivateDto extends Omit<UserPrivate, '_id' | 'createdAt' | 'createdBy'> {}
+
 export const UserPrivateSchema = SchemaFactory.createForClass(UserPrivate);
