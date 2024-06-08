@@ -1,22 +1,29 @@
-import { Args, Mutation, Resolver } from '@nestjs/graphql';
+import { Args, ArgsType, Field, Mutation, Resolver } from '@nestjs/graphql';
 import { SpecificationLabelService } from './specification-label.service';
 import { SpecificationLabel } from './specification-label.schema';
-import { LabelValue } from './label-value.schema';
+import { CreateLabelValueDto, LabelValue, LabelValueSchema } from './label-value.schema';
+
+@ArgsType()
+class CreateSpecificationLabelArgs {
+    @Field()
+    name: string;
+    @Field({ nullable: true })
+    description?: string;
+    @Field(() => [String], {})
+    labelValueIdCollection?: string[];
+}
 
 @Resolver((of: any) => SpecificationLabel)
 export class SpecificationLabelMutation {
     constructor(private readonly resouceService: SpecificationLabelService) {}
 
     @Mutation(() => SpecificationLabel)
-    async createSpecificationLabel(
-        @Args('name') name: string,
-        @Args('labelValue') labelValue: LabelValue[],
-        @Args('description') description?: string,
-    ): Promise<SpecificationLabel> {
+    async createSpecificationLabel(@Args() args: CreateSpecificationLabelArgs): Promise<SpecificationLabel> {
+        const { name, description, labelValueIdCollection } = args;
         return this.resouceService.create({
-            name: name,
-            description: description,
-            labelValue: labelValue,
+            name,
+            description,
+            labelValueIdCollection,
         });
     }
 

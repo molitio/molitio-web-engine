@@ -3,10 +3,12 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { CreateResourceDto, Resource } from './resource.schema';
 import { CreateSpecificationLabelDto, SpecificationLabel } from '../specification-label';
+import { UserPublicService } from '../user-public/user-public.service';
 
 @Injectable()
 export class ResourceService {
     constructor(
+        private readonly userPublicService: UserPublicService,
         @InjectModel('Resource') private resource: Model<Resource>,
         @InjectModel('SpecificationLabel') private specificationLabel: Model<SpecificationLabel>,
     ) {}
@@ -27,6 +29,10 @@ export class ResourceService {
     }
 
     async delete(_id: string): Promise<void> {
+        const userAuthenticated = this.userPublicService.isAuthenticated();
+        if (!userAuthenticated) {
+            return;
+        }
         await this.resource.deleteOne({ _id });
     }
 

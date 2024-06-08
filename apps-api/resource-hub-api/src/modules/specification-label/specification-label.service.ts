@@ -6,6 +6,7 @@ import { CreateSpecificationLabelDto, SpecificationLabel } from './specification
 @Injectable()
 export class SpecificationLabelService {
     constructor(@InjectModel('SpecificationLabel') private SpecificationLabel: Model<SpecificationLabel>) {}
+
     async create(createSpecificationLabelDto: CreateSpecificationLabelDto): Promise<SpecificationLabel> {
         const createdSpecificationLabel = new this.SpecificationLabel(createSpecificationLabelDto);
         createdSpecificationLabel.createdAt = new Date().getTime().toString();

@@ -7,12 +7,12 @@ export class SpecificationLabelQuery {
     constructor(private readonly resouceService: SpecificationLabelService) {}
 
     @Query(() => SpecificationLabel)
-    async SpecificationLabel(@Args('_id') _id: string): Promise<SpecificationLabel | undefined> {
+    async specificationLabel(@Args('_id') _id: string): Promise<SpecificationLabel | undefined> {
         return this.resouceService.findOne(_id);
     }
 
     @Query(() => [SpecificationLabel])
-    async SpecificationLabelCollection(): Promise<SpecificationLabel[]> {
+    async specificationLabelCollection(): Promise<SpecificationLabel[]> {
         return this.resouceService.findAll();
     }
 }

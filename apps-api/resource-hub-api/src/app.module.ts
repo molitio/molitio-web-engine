@@ -5,7 +5,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
 import { LoggerMiddleware } from './logger/logger.middleware';
-import { ResourceModule, UserPublicModule, UserPrivateModule } from './modules';
+import { ResourceModule, UserPublicModule, UserPrivateModule, SpecificationLabelModule } from './modules';
 import { defaultConfig } from './configuration';
 
 @Module({
@@ -18,6 +18,7 @@ import { defaultConfig } from './configuration';
         UserPublicModule,
         UserPrivateModule,
         ResourceModule,
+        SpecificationLabelModule,
     ],
     controllers: [AppController],
     providers: [AppService],

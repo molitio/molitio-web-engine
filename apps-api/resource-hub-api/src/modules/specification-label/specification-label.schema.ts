@@ -43,9 +43,12 @@ export class SpecificationLabel {
 
     @Field(() => [LabelValue])
     @Prop({ type: [{ type: MongooseSchema.Types.ObjectId, ref: 'LabelValue' }] })
-    labelValue: LabelValue[];
+    labelValueClolection: LabelValue[];
 }
 
-export interface CreateSpecificationLabelDto extends Omit<SpecificationLabel, '_id' | 'createdAt' | 'createdBy' | ''> {}
+export interface CreateSpecificationLabelDto
+    extends Omit<SpecificationLabel, '_id' | 'createdAt' | 'createdBy' | 'labelValueClolection'> {
+    labelValueIdCollection: string[];
+}
 
 export const SpecificationLabelSchema = SchemaFactory.createForClass(SpecificationLabel);

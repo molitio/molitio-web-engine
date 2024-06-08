@@ -8,6 +8,10 @@ export class UserPublicService {
         console.log('UserPublicService instantiated');
     }
 
+    public isAuthenticated = async (): Promise<boolean> => {
+        return true;
+    };
+
     public getUserPublicCollection = async (): Promise<UserPublic[]> => {
         return [
             {
