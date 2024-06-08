@@ -67,6 +67,15 @@ export const ApplicationContextRoot = {
                         },
                     ],
                 },
+                verticalCards: {
+                    verticalCardContent: [
+                        {
+                            title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
+                            imageUrl: 'ware.svg',
+                            imageAlt: 'Tematikus',
+                        },
+                    ],
+                },
             },
         },
     },

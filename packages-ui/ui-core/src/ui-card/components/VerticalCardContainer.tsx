@@ -1,18 +1,18 @@
 import React from 'react';
-import type { CardData } from '../types';
-import Card from './Card';
+import type { VerticalCardData } from '../types';
+import VerticalCard from './VerticalCard';
 
-export type CardContainerProps = {
-    cards: CardData[];
+export type VerticalCardContainerProps = {
+    cards: VerticalCardData[];
 };
 
-const CardContainer: React.FC<CardContainerProps> = (props) => {
+const VerticalCardContainer: React.FC<VerticalCardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-row justify-evenly">
+        <div className="w-full flex-wrap">
             {cards.map((card, i) => (
-                <Card
+                <VerticalCard
                     key={i}
                     title={card.title}
                     description={card.description}
@@ -23,4 +23,4 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         </div>
     );
 };
-export default CardContainer;
+export default VerticalCardContainer;

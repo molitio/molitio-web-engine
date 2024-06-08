@@ -24,12 +24,31 @@ export const NavMenu: React.FC<NavMenuProps> = (props) => {
         <div className="flex items-stretch">
             <NavMenuControl onClick={handleToggleMenu} />
             <div className="dropdown dropdown-end">
-                <ul className={` md:hidden menu dropdown-content z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4`}>
+                <ul className={`
+                dropdown-content 
+                md:hidden 
+                menu 
+                z-[1] 
+                p-2 
+                shadow 
+                bg-base-100 
+                rounded-box 
+                w-52 
+                mt-4`}>
                     {Object.keys(navElementCollection.navElements).map((key) => (
                         <NavElement key={key} elementData={navElementCollection.navElements[key]} />
                     ))}
                 </ul>
-                <ul className="md:flex hidden z-[1] p-2 shadow bg-base-100 rounded-box w-52 mt-4">
+                <ul className={`
+                md:flex 
+                hidden 
+                z-[1] 
+                p-2 
+                shadow 
+                bg-base-100 
+                rounded-box 
+                w-52 
+                mt-4`}>
                     {Object.keys(navElementCollection.navElements).map((key) => (
                         <NavElement key={key} elementData={navElementCollection.navElements[key]} />
                     ))}
