@@ -1,26 +1,22 @@
 'use client';
 import React from 'react';
 import { NavBarProps } from './NavBar';
-import NavMenu from './NavMenu';
-import { NavElementData } from '../types';
+/* import NavMenu from './NavMenu'; */
 import Link from 'next/link';
+import { NavRoot } from '../types';
+import { useAtom } from 'jotai';
+import { navMenuAtomRW } from '../../context';
 
-const navMenuElements: Record<string, NavElementData> = {
-    home: {
-        text: 'Home',
-        href: '/',
-    },
-    portfolio: {
-        text: 'Portfolio',
-        href: '/portfolio',
-    },
-    about: {
-        text: 'About',
-        href: '/about',
-    },
+
+
+type NavProps = {
+    logo?: React.ReactNode;
+
 };
+const Nav: React.FC<NavProps> = (props) => {
 
-const Nav: React.FC<NavBarProps> = (props) => {
+
+    const [navRoot] = useAtom(navMenuAtomRW);
     const { logo } = props;
 
     return (
@@ -29,7 +25,7 @@ const Nav: React.FC<NavBarProps> = (props) => {
                 <Link href={'/'}>{logo ? logo : <></>}</Link>
             </div>
             <div className="flex px-2 justify-end flex-1">
-                <NavMenu navElementCollection={{ navElements: navMenuElements }} />
+                {/* <NavMenu  navElementCollection={{ navElements: navMenuElements }}  /> */}
             </div>
         </nav>
     );

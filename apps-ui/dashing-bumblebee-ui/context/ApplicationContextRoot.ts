@@ -3,10 +3,22 @@ export const ApplicationContextRoot = {
     navRoot: {
         home: {
             label: 'Főoldal',
+            icon: 'planet.svg',
             path: '/',
+        },
+        message: {
+            label: 'Ajánlat kérés',
+            icon: 'request.svg',
+            path: '/',
+        },
+        about: {
+            label: 'Rólunk',
+            icon: 'lamp.svg',
+            path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
+            icon: 'document.svg',
             path: '/contact',
         },
     },
@@ -75,6 +87,15 @@ export const ApplicationContextRoot = {
                             imageAlt: 'Tematikus',
                         },
                     ],
+                },
+            },
+        },
+        contact: {
+            leafs: {
+                contactForm: {
+                    textContent: {
+                        title: 'Kapcsolat',
+                    },
                 },
             },
         },

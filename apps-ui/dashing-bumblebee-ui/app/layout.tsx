@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { NavBar, Footer } from '@molitio/ui-core';
+import { NavBar,NavigationMenu, Footer } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
 
-import './styles/globals.css';
+ import './styles/globals.css'; 
 
 export const metadata: Metadata = {
     title: ApplicationContextRoot.contentRoot['common'].leafs['app'].textContent['appTitle'],
@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html data-theme="dashing-bumblebee">
             <body>
                 <section>
-                    <NavBar
+                      <NavBar
                         logo={
                             <Image
                                 src={ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg']}
@@ -26,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             />
                         }
                     />
+                    
                 </section>
                 <main>{children}</main>
                 <Footer

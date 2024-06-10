@@ -1,3 +1,5 @@
+
+{/*   
 import React from 'react';
 import { NavElementCollection } from '../types';
 import NavElement from './NavElement';
@@ -59,3 +61,4 @@ export const NavMenu: React.FC<NavMenuProps> = (props) => {
 };
 
 export default NavMenu;
+*/}
