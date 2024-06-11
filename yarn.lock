@@ -5438,6 +5438,7 @@ __metadata:
   dependencies:
     "@babel/core": "npm:7.24.3"
     "@babel/eslint-parser": "npm:7.18.9"
+    "@compodoc/compodoc": "npm:1.1.25"
     "@graphql-codegen/cli": "npm:5.0.2"
     "@graphql-codegen/client-preset": "npm:4.2.6"
     "@graphql-codegen/introspection": "npm:4.0.3"

@@ -48,6 +48,7 @@
     "devDependencies": {
         "@babel/core": "7.24.3",
         "@babel/eslint-parser": "7.18.9",
+        "@compodoc/compodoc": "1.1.25",
         "@graphql-codegen/cli": "5.0.2",
         "@graphql-codegen/client-preset": "4.2.6",
         "@graphql-codegen/introspection": "4.0.3",
