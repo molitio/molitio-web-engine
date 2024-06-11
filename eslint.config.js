@@ -1,13 +1,47 @@
-export default [
+module.exports = [
     {
-        files: ['packages-ui/john-glenn-ui/**/*.ts', 'packages-ui/john-glenn-ui/**/*.tsx'],
-        extends: 'next/core-web-vitals',
-        ignorePatterns: ['.artifacts', '.next', 'dist', 'node_modules'],
+        files: ['**/*.js'],
+        parser: '@babel/eslint-parser',
+        parserOptions: {
+            sourceType: 'module',
+        },
     },
     {
-        files: ['packages-ui/ui-core/**/*.ts', 'packages-ui/ui-core/**/*.tsx'],
+        files: ['apps-ui/john-glenn-ui/**/*.ts', 'apps-ui/john-glenn-ui/**/*.tsx}'],
+        extends: 'next/core-web-vitals',
+        ignorePatterns: ['.next', 'dist'],
+    },
+    {
+        files: ['apps-ui/dashing-bumblebee-ui/**/*.ts', 'apps-ui/dashing-bumblebee-ui/**/*.tsx}'],
+        extends: 'next/core-web-vitals',
+        ignorePatterns: ['.next', 'dist'],
+    },
+    {
+        files: ['apps-api/resource-hub-api/**/*.ts'],
+        parser: '@typescript-eslint/parser',
+        parserOptions: {
+            project: 'tsconfig.json',
+            tsconfigRootDir: __dirname,
+            sourceType: 'module',
+        },
+        plugins: ['@typescript-eslint/eslint-plugin'],
+        extends: ['plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
+        root: true,
         env: {
-            module: 'Node16',
+            node: true,
+            jest: true,
+        },
+        rules: {
+            '@typescript-eslint/interface-name-prefix': 'off',
+            '@typescript-eslint/explicit-function-return-type': 'off',
+            '@typescript-eslint/explicit-module-boundary-types': 'off',
+            '@typescript-eslint/no-explicit-any': 'off',
+        },
+    },
+    {
+        files: ['packages-ui/ui-core/**/*.ts, packages-ui/ui-core/**/*.tsx}'],
+        env: {
+            module: 'ESNext',
             browser: true,
             es2022: true,
         },
@@ -26,7 +60,6 @@ export default [
             ],
         },
         plugins: ['eslint-plugin-tsdoc'],
-        //tsconfigRootDir: 'src',
         parser: '@typescript-eslint/parser',
         parserOptions: {
             ecmaFeatures: {

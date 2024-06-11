@@ -1,0 +1,23 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserPublic {
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  usernamePublic: String!
+}
+
+type Query {
+  userPublic(id: String!): UserPublic!
+  userPublicCollection: [UserPublic!]!
+}
+
+type Mutation {
+  createUserPublic(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
+  updateUserPublic(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
+  deleteUserPublic(id: String!): UserPublic!
+}

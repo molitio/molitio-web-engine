@@ -1,141 +1,82 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
-import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import PhoneIcon from "@mui/icons-material/Phone";
-import { ApplicationTheme } from "../src/components/theme/ApplicationTheme";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import { ApplicationContextRoot } from "../context";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
-import Link from "next/link";
-import style from "./style/page.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ApplicationContextRoot } from '../context';
+import { CardData, CardContainer } from '@molitio/ui-core';
 
-export default function Home() {
-  const theme = useTheme();
+export default function Page() {
+    const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
 
-  return (
-    <Box
-      sx={{
-        position: "relative",
-        zIndex: "0",
-        inset: "0",
-        height: "80vh",
-        width: "100%",
-        padding: "12em 0 0 0",
-      }}
-    >
-      <Box
-        component={Image}
-        src={"/background_combined.png"}
-        alt={`cover_page_background`}
-        sx={{
-          top: "0",
-          objectFit: "cover",
-          objectPosition: "center right",
-          zIndex: "-9",
-        }}
-        fill
-      />
-      <Container
-        maxWidth="sm"
-        sx={{
-          color: ApplicationTheme.palette.text.main,
-          marginLeft: useMediaQuery(theme.breakpoints.down("sm")) ? "0" : "4em",
-          textAlign: "center",
-          overflowWrap: "break-word",
-        }}
-      >
-        <Typography
-          variant="h1"
-          color={ApplicationTheme.palette.text.main}
-          sx={{
-            fontSize: "2rem",
-            fontWeight: 600,
-            overflowWrap: "break-word",
-          }}
+    return (
+        <section
+            className="hero min-h-screen "
+            style={{
+                backgroundImage: `url(${ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage']})`,
+            }}
         >
-          {
-            ApplicationContextRoot.contentRoot["home"].leafs["cover"]
-              .textContent["title"]
-          }
-        </Typography>
-        <Typography
-          variant="subtitle1"
-          fontWeight="200"
-          sx={{ overflowWrap: "break-word" }}
-        >
-          {
-            ApplicationContextRoot.contentRoot["home"].leafs["cover"]
-              .textContent["subTitle"]
-          }
-        </Typography>
-        <Stack
-          spacing={2}
-          direction="column"
-          sx={{ padding: 2, justifyContent: "left" }}
-        >
-          <Link className={style.link} href={ApplicationContextRoot.contentRoot["home"].leafs["cover"].assetUrls["phoneNumberHref"]} style={{
-              
-            
-            }}>
-          <Stack direction="row" alignItems="center">
-            <Button color="primary" variant="contained">
-              <PhoneIcon />
-            </Button>
-            <Typography
-              variant="button"
-              sx={{ overflowWrap: "break-word", padding: "0.5em" }}
-            >
-               {
-                 ApplicationContextRoot.contentRoot["home"].leafs["cover"]
-              .textContent["phoneNumber"]
-          }
-            </Typography>
-          </Stack>
-            </Link>
-            <Link className={style.link}  href={ApplicationContextRoot.contentRoot["home"].leafs["cover"].assetUrls["infoEmailHref"]}>
-          <Stack direction="row" alignItems="center">
-           
-              
-            <Button
-              color="primary"
-              variant="contained"
-              sx={{
-                backgroundColor:
-                ApplicationTheme?.palette?.interactiveSecondary?.main,
-              }}
-              >
-              {
-                <AlternateEmailIcon />
-                
-              }
-            </Button>{" "}
-            <Typography
-              variant="button"
-              fontSize={"0.8em"}
-              sx={{ overflowWrap: "break-word", padding: "0.5em" }}
-              >
-                  {
-                    ApplicationContextRoot.contentRoot["home"].leafs["cover"]
-                    .textContent["infoEmail"]
-                  }
-            </Typography>
-          </Stack>
-          </Link>
-        </Stack>
-        <Typography variant="subtitle2" sx={{textAlign: "left", padding: "0 0 0 2em"}}>
-          {
-            ApplicationContextRoot.contentRoot["home"].leafs["cover"]
-            .textContent["subTitle2"]
-          }
-        </Typography>
-      </Container>
-      <Box sx={{ height: "500px" }} />
-    </Box>
-  );
+            <div className="hero-content top-0 z-1 flex-col">
+                <div className="hero-content text-center text-neutral-content">
+                    <div className="max-w-md">
+                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
+                        <p className="mb-5">
+                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
+                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        </p>
+                    </div>
+                </div>
+                <div className="">
+                    <CardContainer cards={cardData} />
+                </div>
+                <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
+                {/*  <div
+                    className="w-full"
+                    style={{
+                        backgroundColor: 'gray',
+                        padding: '10px',
+                        borderRadius: '5px',
+                    }}
+                >
+                    <label className="input flex items-center w-full mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            className="w-4 h-4 opacity-70"
+                        >
+                            <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
+                            <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
+                        </svg>
+                        <input type="text" className="grow" placeholder="Email" />
+                    </label>
+                    <label className="input flex items-center w-full mb-3">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            className="w-4 h-4 opacity-70"
+                        >
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
+                        </svg>
+                        <input type="text" className="grow" placeholder="Username" />
+                    </label>
+                    <label className="input flex items-center w-full">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 16 16"
+                            fill="currentColor"
+                            className="w-4 h-4 opacity-70"
+                        >
+                            <path
+                                fillRule="evenodd"
+                                d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                                clipRule="evenodd"
+                            />
+                        </svg>
+                        <input type="text" className="grow" value="text" />
+                    </label>
+                </div> */}
+            </div>
+        </section>
+    );
 }

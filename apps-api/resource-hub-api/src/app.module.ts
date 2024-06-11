@@ -1,17 +1,20 @@
-import { MiddlewareConsumer, Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { LoggerMiddleware } from './logger/logger.middleware';
-import { UserPublicModule } from './user-public/user-public.module';
 import { GraphQLModule } from '@nestjs/graphql';
+import { MiddlewareConsumer, Module } from '@nestjs/common';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
+import { AppService } from './app.service.js';
+import { AppController } from './app.controller.js';
+import { LoggerMiddleware } from './logger/logger.middleware.js';
+import { UserPublicModule } from './modules';
+import { MongooseModule } from '@nestjs/mongoose';
+import { config } from './application-configuration.js';
 
 @Module({
     imports: [
         GraphQLModule.forRoot<ApolloDriverConfig>({
             driver: ApolloDriver,
-            autoSchemaFile: '../.nest/gql/schema.graphql',
+            autoSchemaFile: './gql/schema.graphql',
         }),
+        MongooseModule.forRoot(config.databaseUrl),
         UserPublicModule,
     ],
     controllers: [AppController],
