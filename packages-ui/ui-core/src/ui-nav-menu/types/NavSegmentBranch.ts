@@ -1,8 +1,7 @@
-import { NavSegmentLeaf } from "./NavSegmentLeaf";
-export type NavSegmentBranch = {
-    path: string;
-    label: string;
-    icon?: React.ReactNode;
-    iconUrl?: string;
-    leafs?: Record<string, NavSegmentLeaf>;
-};
+import { NavSegment, NavSegmentIcon, NavSegmentLeaf } from './NavSegmentLeaf';
+
+export type NavSegmentBranch = NavSegment &
+    NavSegmentIcon & {
+        label: string;
+        leafs?: Record<string, NavSegmentLeaf>;
+    };

@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { NavElementData } from '../types';
+import { NavSegmentLeaf } from '../types';
 
 export type NavElementProps = {
-    elementData: NavElementData;
+    navSegmentLeaf: NavSegmentLeaf;
 };
 
 /**
@@ -15,16 +15,16 @@ export type NavElementProps = {
  */
 
 const NavElement: React.FC<NavElementProps> = (props, key) => {
-    const { elementData } = props;
+    const { navSegmentLeaf: elementData } = props;
 
     return (
         <li key={key} className="px-2">
-            {elementData.iconSvg ? (
-                elementData.iconSvg
+            {elementData.icon ? (
+                elementData.icon
             ) : (
-                <Image src={elementData.iconSvg ?? ''} width={20} height={20} alt={elementData.iconAlt ?? ''} />
+                <Image src={elementData.iconUrl ?? ''} width={20} height={20} alt={elementData.iconAlt ?? ''} />
             )}
-            <Link href={elementData.href ?? ''}>{elementData.label}</Link>
+            <Link href={elementData.path ?? ''}>{elementData.label}</Link>
         </li>
     );
 };

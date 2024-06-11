@@ -5,9 +5,11 @@ import { navMenuStore } from '../../context';
 import Nav from './Nav';
 import { NavRoot } from '../types';
 
-export interface NavBarProps {
+export type NavBarProps = {
     logo?: React.ReactNode;
-}
+    appNavRoot?: NavRoot;
+    headerText?: string;
+};
 
 /**
  * NavBar
@@ -16,9 +18,10 @@ export interface NavBarProps {
  */
 
 const NavBar: React.FC<NavBarProps> = (props) => {
+    const { headerText, logo, appNavRoot } = props;
     return (
         <Provider store={navMenuStore}>
-            {/*        Itt a jotia-t kell be integrlni az egész nav barba, ezt majd szóban */}
+            {headerText}
             <Nav logo={props.logo} />
         </Provider>
     );

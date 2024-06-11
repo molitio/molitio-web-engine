@@ -1,20 +1,17 @@
 import { atom, createStore } from 'jotai';
 import { NavMenu, NavMenuControlState } from './types';
+import { NavRoot } from '../../ui-nav-menu';
 
 const navMenuStore = createStore();
-export const navMenuAtom = atom<NavMenu>({});
+export const navMenuAtom = atom<NavRoot>({});
 
 export const navMenuAtomRW = atom(
     (get) => get(navMenuAtom),
-    (get, set, navMenuState: NavMenu) => {
-        set(navMenuAtom, navMenuState);
+    (get, set, navRootState: NavRoot) => {
+        set(navMenuAtom, navRootState);
     },
 );
 
-navMenuStore.set(navMenuAtomRW, {
-    navMenuControlState: {
-        navMenuOpen: false,
-    },
-});
+navMenuStore.set(navMenuAtomRW, {});
 
 export default navMenuStore;
