@@ -1,6 +1,7 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { UserPublicRoles } from './user-public.types';
 
 export type UserPublicDocument = HydratedDocument<UserPublic>;
 
@@ -29,6 +30,9 @@ export class UserPublic {
     @Field()
     @Prop({ unique: true })
     usernamePublic: string;
+
+    /*  @Prop({ type: String, enum: UserPublicRoles, default: UserPublicRoles.GUEST })
+    role: UserPublicRoles; */
     /* 
     @Field(() => String, { nullable: true })
     publicRsourceCollectionId?: MongooseSchema.Types.ObjectId;
@@ -36,5 +40,7 @@ export class UserPublic {
     @Field(() => String, { nullable: true })
     userPersistedConfigId?: MongooseSchema.Types.ObjectId; */
 }
+
+export interface CreateUserPublicDto extends Omit<UserPublic, '_id' | 'createdAt' | 'createdBy'> {}
 
 export const UserPublicSchema = SchemaFactory.createForClass(UserPublic);

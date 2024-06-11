@@ -9,8 +9,9 @@ import { UserPublicService } from '../user-public/user-public.service';
 export class ResourceService {
     constructor(
         private readonly userPublicService: UserPublicService,
-        @InjectModel('Resource') private resource: Model<Resource>,
-        @InjectModel('SpecificationLabel') private specificationLabel: Model<SpecificationLabel>,
+        @InjectModel(Resource.name, 'resource') private resource: Model<Resource>,
+        @InjectModel(SpecificationLabel.name, 'specification-label')
+        private specificationLabel: Model<SpecificationLabel>,
     ) {}
 
     async create(createResourceDto: CreateResourceDto): Promise<Resource> {

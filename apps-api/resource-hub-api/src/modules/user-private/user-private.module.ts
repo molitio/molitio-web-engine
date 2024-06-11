@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { UserPrivate, UserPrivateSchema } from './user-private.schema';
 
 @Module({
-    imports: [MongooseModule.forFeature([{ name: UserPrivate.name, schema: UserPrivateSchema }])],
+    imports: [MongooseModule.forFeature([{ name: UserPrivate.name, schema: UserPrivateSchema }], 'user-private')],
     providers: [UserPrivateQuery, UserPrivateMutation, UserPrivateService],
 })
 export class UserPrivateModule {}
