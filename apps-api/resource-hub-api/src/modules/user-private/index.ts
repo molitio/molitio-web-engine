@@ -1,3 +1,4 @@
-export * from './user-private.resolver.js';
-export * from './user-private.service.js';
-export * from './user-private.type.js';
+export * from './user-private.query';
+export * from './user-private.service';
+export * from './user-private.schema';
+export * from './user-private.module';

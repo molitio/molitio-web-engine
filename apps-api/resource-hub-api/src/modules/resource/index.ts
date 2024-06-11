@@ -1,3 +1,4 @@
-export * from './resource.resolver.js';
-export * from './resource.service.js';
-export * from './resource.type.js';
+export * from './resource.query';
+export * from './resource.service';
+export * from './resource.schema';
+export * from './resource.module';

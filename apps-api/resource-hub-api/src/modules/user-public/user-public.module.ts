@@ -1,9 +1,12 @@
 import { Module } from '@nestjs/common';
-import { UserPublicService } from './user-public.service.js';
-import { UserPublicResolverQuery } from './user-public.query.js';
-import { UserPublicResolverMutation } from './user-public.mutation.js';
+import { UserPublicService } from './user-public.service';
+import { UserPublicQuery } from './user-public.query';
+import { UserPublicMutation } from './user-public.mutation';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UserPublic, UserPublicSchema } from './user-public.schema';
 
 @Module({
-    providers: [UserPublicResolverQuery, UserPublicResolverMutation, UserPublicService],
+    imports: [MongooseModule.forFeature([{ name: UserPublic.name, schema: UserPublicSchema }], 'user-public')],
+    providers: [UserPublicQuery, UserPublicMutation, UserPublicService],
 })
 export class UserPublicModule {}
