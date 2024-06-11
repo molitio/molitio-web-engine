@@ -57,7 +57,7 @@
         "@graphql-codegen/typescript-react-query": "6.1.0",
         "@parcel/watcher": "2.4.1",
         "@types/jest": "29.5.4",
-        "@types/node": "18.11.9",
+        "@types/node": "20.12.7",
         "@types/ws": "8.5.10",
         "@typescript-eslint/eslint-plugin": "6.5.0",
         "@typescript-eslint/parser": "6.5.0",
@@ -92,5 +92,10 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "2.2.3",
+        "components": "0.1.0",
+        "react-redux": "9.1.2"
     }
 }
