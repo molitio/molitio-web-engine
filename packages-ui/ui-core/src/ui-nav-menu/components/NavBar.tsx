@@ -1,9 +1,9 @@
 'use client';
 import React from 'react';
-import { Provider } from 'jotai';
-import { navMenuStore } from '../../context';
+import { navMenuAtomRW, navMenuStore } from '../../context';
 import Nav from './Nav';
 import { NavRoot } from '../types';
+import { useAtom } from 'jotai';
 
 export type NavBarProps = {
     logo?: React.ReactNode;
@@ -18,12 +18,22 @@ export type NavBarProps = {
  */
 
 const NavBar: React.FC<NavBarProps> = (props) => {
-    const { headerText, logo, appNavRoot } = props;
+    const { headerText, logo, appNavRoot = {} } = props;
+    const [navMenuAtom, setNavMenuAtom] = useAtom(navMenuAtomRW);
+
+    React.useEffect(() => {
+        function effect() {
+            setNavMenuAtom(appNavRoot);
+        }
+
+        effect();
+    }, [navMenuAtom]);
+
     return (
-        <Provider store={navMenuStore}>
+        <div>
             {headerText}
-            <Nav logo={props.logo} />
-        </Provider>
+            <Nav logo={logo} />
+        </div>
     );
 };
 

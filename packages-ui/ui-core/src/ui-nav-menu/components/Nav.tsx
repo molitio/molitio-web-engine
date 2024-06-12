@@ -6,13 +6,12 @@ import Link from 'next/link';
 import { NavRoot } from '../types';
 import { useAtom } from 'jotai';
 import { navMenuAtomRW } from '../../context';
-import NavigationMenu from './NavigationMenu';
+import NavMenu from './NavMenu';
 
 type NavProps = {
     logo?: React.ReactNode;
 };
 const Nav: React.FC<NavProps> = (props) => {
-    const [navRoot] = useAtom(navMenuAtomRW);
     const { logo } = props;
 
     return (
@@ -21,7 +20,7 @@ const Nav: React.FC<NavProps> = (props) => {
                 <Link href={'/'}>{logo ? logo : <></>}</Link>
             </div>
             <div className="flex px-2 justify-end flex-1">
-                <NavigationMenu navRoot={navRoot} />
+                <NavMenu  />
             </div>
         </nav>
     );

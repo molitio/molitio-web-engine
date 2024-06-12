@@ -1,64 +1,40 @@
+'use client';
 
-{/*   
-import React from 'react';
-import { NavElementCollection } from '../types';
-import NavElement from './NavElement';
-import NavMenuControl from './NavMenuControl';
+import React, { useState } from 'react';
+// import '../styles/navigation-menu.css';
+import { NavRoot } from '../types';
 import { useAtom } from 'jotai';
 import { navMenuAtomRW } from '../../context';
 
-export type NavMenuProps = {
-    navElementCollection: NavElementCollection;
-};
+/**
+ * Navigation Menu
+ *
+ * The portion of the NavBar that contains interactive menu elements as NavSegments
+ *
+ */
 
-export const NavMenu: React.FC<NavMenuProps> = (props) => {
-    const { navElementCollection } = props;
-    const [navMenuOpenState, setNavMenuOpenState] = useAtom(navMenuAtomRW);
-
-    const handleToggleMenu = () => {
-        console.log('handleToggleMenu');
-        setNavMenuOpenState({
-            navMenuOpen: !navMenuOpenState.navMenuOpen,
-        });
-    };
+const NavMenu: React.FC = () => {
+    const [navRoot] = useAtom(navMenuAtomRW);
 
     return (
-        <div className="flex items-stretch">
-            <NavMenuControl onClick={handleToggleMenu} />
-            <div className="dropdown dropdown-end">
-                <ul className={`
-                dropdown-content 
-                md:hidden 
-                menu 
-                z-[1] 
-                p-2 
-                shadow 
-                bg-base-100 
-                rounded-box 
-                w-52 
-                mt-4`}>
-                    {Object.keys(navElementCollection.navElements).map((key) => (
-                        <NavElement key={key} elementData={navElementCollection.navElements[key]} />
-                    ))}
-                </ul>
-                <ul className={`
-                md:flex 
-                hidden 
-                z-[1] 
-                p-2 
-                shadow 
-                bg-base-100 
-                rounded-box 
-                w-52 
-                mt-4`}>
-                    {Object.keys(navElementCollection.navElements).map((key) => (
-                        <NavElement key={key} elementData={navElementCollection.navElements[key]} />
-                    ))}
-                </ul>
-            </div>
+        <div className="dev-outline">
+            {Object.keys(navRoot).map((navBranch) => (
+                <div className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
+                    <figure className="flex-none w-2/4 h-full">
+                        <img
+                            src={navRoot[navBranch].iconUrl}
+                            alt={navRoot[navBranch].iconAlt}
+                            className="object-cover w-full h-full"
+                        />
+                    </figure>
+                    <div className="flex-grow p-4">
+                        <>{navRoot[navBranch].label}</>
+                        <h2 className="card-title"> {'label'}</h2>
+                    </div>
+                </div>
+            ))}
         </div>
     );
 };
 
 export default NavMenu;
-*/}

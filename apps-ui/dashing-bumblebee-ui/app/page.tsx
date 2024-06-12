@@ -8,8 +8,7 @@ import { VerticalCardData, VerticalCardContainer } from '@molitio/ui-core';
 
 export default function Page() {
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
-    const verticalCardData: VerticalCardData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
+    const verticalCardData: VerticalCardData[] =  ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
 
     return (
         <section

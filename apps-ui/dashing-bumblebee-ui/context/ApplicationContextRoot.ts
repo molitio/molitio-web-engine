@@ -1,6 +1,6 @@
 import { AppContext } from "@molitio/ui-core";
 
-export const ApplicationContextRoot: AppContext = {
+export const ApplicationContextRoot = {
     appName: 'Dashing Bumblebee',
     navRoot: {
         home: {
