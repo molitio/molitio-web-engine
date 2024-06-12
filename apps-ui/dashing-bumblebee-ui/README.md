@@ -4,4 +4,4 @@ UI for logistics dashboard
 
 Imported ui-core components
 
-vercel build 03
+vercel build 04

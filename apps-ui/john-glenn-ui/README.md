@@ -5,4 +5,4 @@ Sandbox UI for @molitio/web-engine with the aim of providing a reference impleme
 CSS Target DaisyUI
 Vercel deploy via monorepo setup.
 
-vercel build 03
+vercel build 04
