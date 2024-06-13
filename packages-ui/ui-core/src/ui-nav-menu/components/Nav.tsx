@@ -1,11 +1,6 @@
 'use client';
 import React from 'react';
-import { NavBarProps } from './NavBar';
-/* import NavMenu from './NavMenu'; */
 import Link from 'next/link';
-import { NavRoot } from '../types';
-import { useAtom } from 'jotai';
-import { navMenuAtomRW } from '../../context';
 import NavMenu from './NavMenu';
 
 type NavProps = {
@@ -20,7 +15,7 @@ const Nav: React.FC<NavProps> = (props) => {
                 <Link href={'/'}>{logo ? logo : <></>}</Link>
             </div>
             <div className="flex px-2 justify-end flex-1">
-                <NavMenu  />
+                <NavMenu />
             </div>
         </nav>
     );
