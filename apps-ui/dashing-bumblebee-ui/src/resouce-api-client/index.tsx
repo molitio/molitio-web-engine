@@ -1,4 +1,3 @@
-/* eslint-disable */
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -29,12 +28,15 @@ export type LabelValue = {
 export type Mutation = {
   __typename?: 'Mutation';
   createResource: Resource;
+  createSpecificationLabel: SpecificationLabel;
   createUserPrivate: UserPrivate;
   createUserPublic: UserPublic;
   deleteResource: Resource;
+  deleteSpecificationLabel: SpecificationLabel;
   deleteUserPrivate: UserPrivate;
   deleteUserPublic: UserPublic;
   updateResource: Resource;
+  updateSpecificationLabel: SpecificationLabel;
   updateUserPrivate: UserPrivate;
   updateUserPublic: UserPublic;
 };
@@ -42,6 +44,13 @@ export type Mutation = {
 
 export type MutationCreateResourceArgs = {
   description: Scalars['String']['input'];
+  name: Scalars['String']['input'];
+};
+
+
+export type MutationCreateSpecificationLabelArgs = {
+  description?: InputMaybe<Scalars['String']['input']>;
+  labelValue: Array<Scalars['String']['input']>;
   name: Scalars['String']['input'];
 };
 
@@ -65,6 +74,11 @@ export type MutationDeleteResourceArgs = {
 };
 
 
+export type MutationDeleteSpecificationLabelArgs = {
+  id: Scalars['String']['input'];
+};
+
+
 export type MutationDeleteUserPrivateArgs = {
   id: Scalars['String']['input'];
 };
@@ -76,6 +90,13 @@ export type MutationDeleteUserPublicArgs = {
 
 
 export type MutationUpdateResourceArgs = {
+  _id: Scalars['String']['input'];
+  description?: InputMaybe<Scalars['String']['input']>;
+  name: Scalars['String']['input'];
+};
+
+
+export type MutationUpdateSpecificationLabelArgs = {
   _id: Scalars['String']['input'];
   description?: InputMaybe<Scalars['String']['input']>;
   name: Scalars['String']['input'];
@@ -101,6 +122,8 @@ export type Query = {
   __typename?: 'Query';
   resource: Resource;
   resourceCollection: Array<Resource>;
+  specificationLabel: SpecificationLabel;
+  specificationLabelCollection: Array<SpecificationLabel>;
   userPublic: UserPublic;
   userPublicCollection: Array<UserPublic>;
 };
@@ -108,6 +131,11 @@ export type Query = {
 
 export type QueryResourceArgs = {
   id: Scalars['String']['input'];
+};
+
+
+export type QuerySpecificationLabelArgs = {
+  _id: Scalars['String']['input'];
 };
 
 
@@ -157,3 +185,5 @@ export type UserPublic = {
   updatedBy?: Maybe<Scalars['String']['output']>;
   usernamePublic: Scalars['String']['output'];
 };
+
+
