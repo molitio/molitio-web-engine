@@ -6,7 +6,10 @@ const config: CodegenConfig = {
         'apps-ui/dashing-bumblebee-ui/src/resouce-api-client/': {
             schema: 'apps-api/resource-hub-api/gql/schema.graphql',
             plugins: ['typescript', 'typescript-operations', 'typescript-react-query'],
-            /*        config: { withHooks: true }, */
+            config: {
+                fetcher: 'graphql-request',
+                reactQueryVersion: 5,
+            },
         },
     },
 };
