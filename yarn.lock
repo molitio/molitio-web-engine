@@ -4501,7 +4501,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui"
   dependencies:
-    "@molitio/ui-core": "npm:0.1.2"
+    "@molitio/ui-core": "workspace:0.1.2"
     "@types/node": "npm:18.11.10"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
