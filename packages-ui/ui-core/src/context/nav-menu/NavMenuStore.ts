@@ -1,5 +1,4 @@
 import { atom, createStore } from 'jotai';
-import { NavMenu, NavMenuControlState } from './types';
 import { NavRoot } from '../../ui-nav-menu';
 
 const navMenuStore = createStore();

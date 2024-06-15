@@ -1,8 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
-// import '../styles/navigation-menu.css';
-import { NavRoot } from '../types';
+import React from 'react';
 import { useAtom } from 'jotai';
 import { navMenuAtomRW } from '../../context';
 
@@ -19,7 +17,7 @@ const NavMenu: React.FC = () => {
     return (
         <div className="dev-outline">
             {Object.keys(navRoot).map((navBranch) => (
-                <div className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
+                <div key={navBranch} className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
                     <figure className="flex-none w-2/4 h-full">
                         <img
                             src={navRoot[navBranch].iconUrl}
