@@ -5444,6 +5444,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/gallery-display-ui@workspace:apps-ui/gallery-display-ui"
   dependencies:
+    "@molitio/ui-core": "workspace:0.1.1"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"

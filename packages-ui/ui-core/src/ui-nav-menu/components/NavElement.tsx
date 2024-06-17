@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import { NavElementData } from '../types';
 
 export type NavElementProps = {
@@ -11,7 +10,7 @@ const NavElement: React.FC<NavElementProps> = (props, key) => {
 
     return (
         <li key={key} className="px-2">
-            <Link href={elementData.href ?? ''}>{elementData.text}</Link>
+            <a href={elementData.href ?? ''}>{elementData.text}</a>
         </li>
     );
 };
