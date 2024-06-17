@@ -92,10 +92,5 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
-    },
-    "dependencies": {
-        "@reduxjs/toolkit": "2.2.3",
-        "components": "0.1.0",
-        "react-redux": "9.1.2"
     }
 }
