@@ -1,6 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
 import { NavSegmentLeaf } from '../types';
 
 export type NavElementProps = {
@@ -22,9 +20,9 @@ const NavElement: React.FC<NavElementProps> = (props, key) => {
             {elementData.icon ? (
                 elementData.icon
             ) : (
-                <Image src={elementData.iconUrl ?? ''} width={20} height={20} alt={elementData.iconAlt ?? ''} />
+                <img className="w-4 h-4" src={elementData.iconUrl ?? ''} alt={elementData.iconAlt ?? ''} />
             )}
-            <Link href={elementData.path ?? ''}>{elementData.label}</Link>
+            <a href={elementData.path ?? ''}>{elementData.label}</a>
         </li>
     );
 };

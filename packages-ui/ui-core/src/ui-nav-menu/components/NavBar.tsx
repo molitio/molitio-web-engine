@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
         <nav className="navbar bg-base-100 fixed top-0 left-0 w-full z-5">
             {headerText}
             <div className="flex-1 px-2 md:flex-none">
-                <Link href={'/'}>{logo ? logo : <></>}</Link>
+                <a href={'/'}>{logo ? logo : <></>}</a>
             </div>
             <div className="flex px-2 justify-end flex-1">
                 <NavMenu />

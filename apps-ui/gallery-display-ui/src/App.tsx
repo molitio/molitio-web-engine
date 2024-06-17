@@ -1,11 +1,16 @@
 import React from 'react';
+import { NavBar, NavRootProvider } from '@molitio/ui-core';
+import { ApplicationContextRoot } from '../context';
 import './style/global.css';
-import { NavBar, NavBarType } from '@molitio/ui-core';
 
 const App: React.FC = () => {
+    const { navRoot } = ApplicationContextRoot;
+    console.log(navRoot, 'navRoot');
     return (
         <div className="text-5xl">
-            <NavBar type={NavBarType.Default} logo={<div>logo</div>} />
+            <NavRootProvider>
+                <NavBar appNavRoot={navRoot} logo={<div>logo</div>} />
+            </NavRootProvider>
             hello world
         </div>
     );
