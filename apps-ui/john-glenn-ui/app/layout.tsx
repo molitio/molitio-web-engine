@@ -8,6 +8,7 @@ import {Provider} from 'react-redux'
 
 const store = createStore(allReducers);
 
+
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <body className={inter.className}>
                 <Navigation />
+                
                 {children}
                 <Provider store ={store}>
                 <CookieConsentPopup />
