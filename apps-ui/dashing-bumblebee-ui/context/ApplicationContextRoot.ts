@@ -1,12 +1,26 @@
+import { AppContext } from "@molitio/ui-core";
+
 export const ApplicationContextRoot = {
     appName: 'Dashing Bumblebee',
     navRoot: {
         home: {
             label: 'Főoldal',
+            icon: 'planet.svg',
             path: '/',
+        },
+        message: {
+            label: 'Ajánlat kérés',
+            icon: 'request.svg',
+            path: '/',
+        },
+        about: {
+            label: 'Rólunk',
+            icon: 'lamp.svg',
+            path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
+            icon: 'document.svg',
             path: '/contact',
         },
     },
@@ -66,6 +80,24 @@ export const ApplicationContextRoot = {
                             imageAlt: 'Dinamikus',
                         },
                     ],
+                },
+                verticalCards: {
+                    verticalCardContent: [
+                        {
+                            title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
+                            imageUrl: 'ware.svg',
+                            imageAlt: 'Tematikus',
+                        },
+                    ],
+                },
+            },
+        },
+        contact: {
+            leafs: {
+                contactForm: {
+                    textContent: {
+                        title: 'Kapcsolat',
+                    },
                 },
             },
         },

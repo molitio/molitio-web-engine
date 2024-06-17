@@ -10,7 +10,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-col md:flex-row overflow-x-auto">
+        <div className="flex flex-row justify-evenly">
             {cards.map((card, i) => (
                 <Card
                     key={i}

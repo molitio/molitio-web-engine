@@ -4,21 +4,22 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
 import { CardData, CardContainer } from '@molitio/ui-core';
+import { VerticalCardData, VerticalCardContainer } from '@molitio/ui-core';
 
 export default function Page() {
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
+    const verticalCardData: VerticalCardData[] =  ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
 
     return (
         <section
-            className="hero min-h-screen "
+            className="hero min-h-screen py-8"
             style={{
                 backgroundImage: `url(${ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage']})`,
             }}
         >
-            <div className="hero-content top-0 z-1 flex-col">
+            <div className="hero-content top-0 z-1 flex-col py-8">
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">
-                        <h1 className="mb-5 text-5xl font-bold">Hello there</h1>
                         <p className="mb-5">
                             Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
                             quasi. In deleniti eaque aut repudiandae et a id nisi.
@@ -28,8 +29,30 @@ export default function Page() {
                 <div className="">
                     <CardContainer cards={cardData} />
                 </div>
+                <div className="">
+                    <VerticalCardContainer cards={verticalCardData} />
+                </div>
                 <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
-                {/*  <div
+
+                {/*
+                <div className="card lg:card-side bg-base-100 shadow-xl">
+                    <figure>
+                        <Image
+                            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg"
+                            alt="Album"
+                            width={500}
+                            height={500}
+                        />
+                    </figure>
+                    <div className="card-body">
+                        <h2 className="card-title">New album is released!</h2>
+                        <p>Click the button to listen on Spotiwhy app.</p>
+                        <div className="card-actions justify-end">
+                            <button className="btn btn-primary">Listen</button>
+                        </div>
+                    </div>
+                </div> 
+                  <div
                     className="w-full"
                     style={{
                         backgroundColor: 'gray',

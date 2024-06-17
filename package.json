@@ -84,6 +84,9 @@
         "typedoc": "0.25.0",
         "typescript": "5.2.2"
     },
+    "resolutions": {
+        "@molitio/ui-core": "workspace:0.1.2"
+    },
     "stableVersion": "0.1.1",
     "dependenciesMeta": {
         "postcss@8.4.36": {
@@ -95,7 +98,6 @@
     },
     "dependencies": {
         "@reduxjs/toolkit": "2.2.3",
-        "components": "0.1.0",
-        "react-redux": "9.1.2"
+        "components": "0.1.0"
     }
 }
