@@ -11,6 +11,10 @@ export const navMenuAtomRW = atom(
     },
 );
 
-navMenuStore.set(navMenuAtomRW, {});
 
-export default navMenuStore;
+async function initNavMenuStore(navMenuStore: any): Promise<void> {
+    navMenuStore.set(navMenuAtomRW, {});
+    await Promise.resolve();
+}
+
+export default initNavMenuStore(navMenuStore)

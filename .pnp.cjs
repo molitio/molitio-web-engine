@@ -9052,6 +9052,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.57.0"],\
           ["eslint-plugin-react-hooks", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:4.6.2"],\
           ["eslint-plugin-react-refresh", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:0.4.7"],\
+          ["jotai", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:2.8.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:18.3.1"],\
@@ -9186,7 +9187,7 @@ const RAW_RUNTIME_STATE =
           ["eslint", "npm:8.28.0"],\
           ["fast-glob", "npm:3.3.2"],\
           ["formik", "virtual:b6340a59da32e84de8a340a6a363cd72ea134d76457af8f4e546e5cda9d3811b6977bb57bde9d329bbc3af455763f92345b2212b7e0bcea6f56fbfd496aae780#npm:2.4.6"],\
-          ["jotai", "virtual:b6340a59da32e84de8a340a6a363cd72ea134d76457af8f4e546e5cda9d3811b6977bb57bde9d329bbc3af455763f92345b2212b7e0bcea6f56fbfd496aae780#npm:2.8.3"],\
+          ["jotai", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:2.8.3"],\
           ["next", "virtual:b6340a59da32e84de8a340a6a363cd72ea134d76457af8f4e546e5cda9d3811b6977bb57bde9d329bbc3af455763f92345b2212b7e0bcea6f56fbfd496aae780#npm:14.1.3"],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-import", "virtual:8ee7e7e9f4031acdfe99bd0076cfecfcd1a668908591caf99414f997b3eee7ec4b18a9ea56783335f0fa6d14324fd6a809f7ee851bc955a40e2c1f4224007fc9#npm:16.1.0"],\
@@ -9214,6 +9215,7 @@ const RAW_RUNTIME_STATE =
           "@types/react",\
           "@types/reduxjs__toolkit",\
           "@types/tailwindcss",\
+          "jotai",\
           "postcss",\
           "react-dom",\
           "react",\
@@ -21978,10 +21980,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:b6340a59da32e84de8a340a6a363cd72ea134d76457af8f4e546e5cda9d3811b6977bb57bde9d329bbc3af455763f92345b2212b7e0bcea6f56fbfd496aae780#npm:2.8.3", {\
-        "packageLocation": "./.yarn/__virtual__/jotai-virtual-7eb13e92f7/0/cache/jotai-npm-2.8.3-d80ff9e6f4-9dd603d854.zip/node_modules/jotai/",\
+      ["virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:2.8.3", {\
+        "packageLocation": "./.yarn/__virtual__/jotai-virtual-a616f19132/0/cache/jotai-npm-2.8.3-d80ff9e6f4-9dd603d854.zip/node_modules/jotai/",\
         "packageDependencies": [\
-          ["jotai", "virtual:b6340a59da32e84de8a340a6a363cd72ea134d76457af8f4e546e5cda9d3811b6977bb57bde9d329bbc3af455763f92345b2212b7e0bcea6f56fbfd496aae780#npm:2.8.3"],\
+          ["jotai", "virtual:80b5d37e869b100d717ea4d643d08fac5f706eb1712eb45934359597fa0849c0f83d191283cc1634a823322678f2498afcb88a38d150281414ebcb79d088a846#npm:2.8.3"],\
           ["@types/react", "npm:18.3.3"],\
           ["react", "npm:18.3.1"]\
         ],\

@@ -4679,6 +4679,7 @@ __metadata:
     eslint: "npm:^8.57.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.6"
+    jotai: "npm:2.8.3"
     postcss: "npm:8.4.36"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"

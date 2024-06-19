@@ -15,7 +15,7 @@ const NavMenu: React.FC = () => {
     const [navRoot] = useAtom(navMenuAtomRW);
 
     return (
-        <div className="dev-outline">
+        <div className="dev-outline flex">
             {Object.keys(navRoot).map((navBranch) => (
                 <div key={navBranch} className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
                     <figure className="flex-none w-2/4 h-full">

@@ -1,26 +1,26 @@
-import { AppContext } from "@molitio/ui-core";
+{/* import { AppContext } from "@molitio/ui-core"; */}
 
 export const ApplicationContextRoot = {
-    appName: 'Dashing Bumblebee',
+    appName: 'Gallery Display',
     navRoot: {
         home: {
             label: 'Főoldal',
-            icon: 'planet.svg',
+            iconUrl: 'vite.svg',
             path: '/',
         },
         message: {
             label: 'Ajánlat kérés',
-            icon: 'request.svg',
+            iconUrl: 'vite.svg',
             path: '/',
         },
         about: {
             label: 'Rólunk',
-            icon: 'lamp.svg',
+            iconUrl: 'vite.svg',
             path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
-            icon: 'document.svg',
+            iconUrl: 'vite.svg',
             path: '/contact',
         },
     },
