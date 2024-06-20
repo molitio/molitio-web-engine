@@ -1,5 +1,4 @@
-import { NavRoot } from '../../../ui-nav-menu/index.js';
-
+import { NavRoot } from './NavRoot';
 export type NavMenuState = {
     navRoot?: NavRoot;
 };

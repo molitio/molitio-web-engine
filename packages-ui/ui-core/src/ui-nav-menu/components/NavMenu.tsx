@@ -14,6 +14,7 @@ import { navMenuAtomRW } from '../../context';
 const NavMenu: React.FC = () => {
     const [navRoot] = useAtom(navMenuAtomRW);
 
+    console.log('navRoot', navRoot);
     return (
         <div className="dev-outline flex">
             {Object.keys(navRoot).map((navBranch) => (

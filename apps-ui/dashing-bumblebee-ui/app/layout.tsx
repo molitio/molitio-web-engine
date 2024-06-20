@@ -28,14 +28,15 @@ export const metadata: Metadata = {
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
     const context: AppContext = await getAppContext();
 
+    console.log('context at DB Root', context);
+    
     return (
         <html data-theme="dashing-bumblebee">
             <body>
                 <section>
                     <Suspense fallback={<Loading />}>
-                        <NavRootProvider>
+                        <NavRootProvider navRoot={context['navRoot']}>
                             <NavBar
-                                appNavRoot={context['navRoot']}
                                 headerText={context['appName']}
                                 logo={
                                     <Image
