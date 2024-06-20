@@ -6,8 +6,7 @@ const App: React.FC = () => {
     const appName = ApplicationContextRoot['appName'];
     const navRoot = ApplicationContextRoot['navRoot'];
 
-    // ui server-t osszal kerlek
-    // meg console read write-ot
+
 
     return (
         <div className="navbar bg-base-100 fixed top-0 flex-1 w-full grid grid-cols-2 px-4">

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useAtom } from 'jotai';
-import { navMenuAtomRW } from '../../context';
+import { DefaultApplicationContextRoot, NavRoot, navMenuAtomRW } from '../../context';
 
 /**
  * Navigation Menu
@@ -12,9 +12,9 @@ import { navMenuAtomRW } from '../../context';
  */
 
 const NavMenu: React.FC = () => {
-    const [navRoot] = useAtom(navMenuAtomRW);
+    //const [navRoot] = useAtom(navMenuAtomRW);
+    const navRoot: NavRoot = DefaultApplicationContextRoot['navRoot'];
 
-    console.log('navRoot', navRoot);
     return (
         <div className="dev-outline flex">
             {Object.keys(navRoot).map((navBranch) => (

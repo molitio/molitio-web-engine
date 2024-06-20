@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavSegmentLeaf } from '../types';
+import { NavSegmentLeaf } from '../../context';
 
 export type NavElementProps = {
     navSegmentLeaf: NavSegmentLeaf;
