@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavSegmentLeaf } from '../../context';
-
+import '../styles/navbar.css';
 export type NavElementProps = {
     navSegmentLeaf: NavSegmentLeaf;
 };
@@ -14,16 +14,21 @@ export type NavElementProps = {
 
 const NavElement: React.FC<NavElementProps> = (props, key) => {
     const { navSegmentLeaf: elementData } = props;
+    // Get the container element
+
 
     return (
-        <li key={key} className="px-2">
-            {elementData.icon ? (
-                elementData.icon
+        <div  className="btn">
+        <li key={key}>
+            {elementData.iconUrl ? (
+                elementData.iconUrl
             ) : (
-                <img className="w-4 h-4" src={elementData.iconUrl ?? ''} alt={elementData.iconAlt ?? ''} />
+                <img className="w-4 h-4" src={elementData.iconUrl ?? ''}  />
             )}
             <a href={elementData.path ?? ''}>{elementData.label}</a>
         </li>
+        </div>
+  
     );
 };
 

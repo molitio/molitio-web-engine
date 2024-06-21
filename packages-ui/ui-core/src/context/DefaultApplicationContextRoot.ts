@@ -5,22 +5,22 @@ export const DefaultApplicationContextRoot = {
     navRoot: {
         home: {
             label: 'Cover',
-            icon: 'planet.svg',
+            iconUrl: 'planet.svg',
             path: '/',
         },
         message: {
-            label: 'Business Case 1',
-            icon: 'request.svg',
+            label: 'Business',
+            iconUrl: 'request.svg',
             path: '/',
         },
         about: {
             label: 'About',
-            icon: 'lamp.svg',
+            iconUrl: 'lamp.svg',
             path: '/',
         },
         contact: {
             label: 'Contact',
-            icon: 'document.svg',
+            iconUrl: 'document.svg',
             path: '/',
         },
     },

@@ -1,8 +1,52 @@
-/* @layer component {
-    .nav-control {
-        @apply flex-none hidden md:flex;
-    }
-    .nav-control-hidden {
-        @apply navbar-end md:hidden;
-    }
-} */
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+
+
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s ease;
+    cursor: pointer; 
+}
+
+.nav-item:hover {
+    background-color: #f0f0f0; 
+}
+
+.nav-item.selected {
+    background-color: #007bff; 
+    color: white; 
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    min-height: 20px;
+    margin-right: 0.5rem; 
+}
+
+.icon {
+    width: 100%;
+    height: auto;
+}
+
+.label {
+    font-size: 1rem;
+    font-weight: bold;
+}

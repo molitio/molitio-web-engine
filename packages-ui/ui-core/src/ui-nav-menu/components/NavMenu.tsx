@@ -1,39 +1,39 @@
 'use client';
 
-import React from 'react';
-import { useAtom } from 'jotai';
-import { DefaultApplicationContextRoot, NavRoot, navMenuAtomRW } from '../../context';
-
-/**
- * Navigation Menu
- *
- * The portion of the NavBar that contains interactive menu elements as NavSegments
- *
- */
+import React, { useState } from 'react';
+import { DefaultApplicationContextRoot, NavRoot } from '../../context';
+import '../styles/navbar.css';
 
 const NavMenu: React.FC = () => {
-    //const [navRoot] = useAtom(navMenuAtomRW);
     const navRoot: NavRoot = DefaultApplicationContextRoot['navRoot'];
+    const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null);
+
+    const handleNavItemClick = (navBranch: string) => {
+        setSelectedNavItem(navBranch);
+    };
 
     return (
-        <div className="dev-outline flex">
-            {Object.keys(navRoot).map((navBranch) => (
-                <div key={navBranch} className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
-                    <figure className="flex-none w-2/4 h-full">
-                        <img
-                            src={navRoot[navBranch].iconUrl}
-                            alt={navRoot[navBranch].iconAlt}
-                            className="object-cover w-full h-full"
-                        />
-                    </figure>
-                    <div className="flex-grow p-4">
-                        <>{navRoot[navBranch].label}</>
-                        <h2 className="card-title"> {'label'}</h2>
+        <nav className="navbar ">
+            <div className="nav-menu flex">
+                {Object.keys(navRoot).map((navBranch) => (
+                    <div
+                        key={navBranch}
+                        className={`nav-item flex align-center ${selectedNavItem === navBranch ? 'selected' : ''}`}
+                        onClick={() => handleNavItemClick(navBranch)}
+                    >
+                        <figure className="icon-container flex justify-center">
+                            <img
+                                src={navRoot[navBranch].iconUrl}
+                                className="icon"
+                            />
+                        </figure>
+                        <span className="label">{navRoot[navBranch].label}</span>
                     </div>
-                </div>
-            ))}
-        </div>
+                ))}
+            </div>
+        </nav>
     );
 };
 
 export default NavMenu;
+
