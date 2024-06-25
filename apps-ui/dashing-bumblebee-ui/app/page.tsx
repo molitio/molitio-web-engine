@@ -17,12 +17,20 @@ export default function Page() {
                 backgroundImage: `url(${ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage']})`,
             }}
         >
-            <div className="hero-content top-0 z-1 flex-col py-8">
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
+            <div className="hero-content top-0 z-1 flex-col py-10">
+                <div className="hero-content  text-neutral-content">
+                    <div className="max-w-xl">
+                        <h2 className='text-2xl font-bold'>A sikerhez vezető út, nálunk kezdődik!</h2>
                         <p className="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+                        Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén.Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyens zó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!
+                        </p>
+                    </div>
+                </div>
+                <div className="hero-content top-0 z-1 flex-col py-2">
+                <div className='max-w-xl'>
+                        <h2 className='text-2xl font-bold'>25 éve az Ön szolgálatában</h2>
+                        <p className='mb-5'>
+                        Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
                         </p>
                     </div>
                 </div>
@@ -32,6 +40,7 @@ export default function Page() {
                 <div className="">
                     <VerticalCardContainer cards={verticalCardData} />
                 </div>
+                
                 <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
 
                 {/*

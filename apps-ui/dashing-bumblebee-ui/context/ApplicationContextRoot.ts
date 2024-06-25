@@ -65,19 +65,22 @@ export const ApplicationContextRoot = {
                 coverCards: {
                     cardContent: [
                         {
-                            title: 'Tematikus',
+                            title: 'Belföldi és Nemzetközi Fuvarozás',
                             imageUrl: 'ware.svg',
                             imageAlt: 'Tematikus',
+                            description: 'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                         {
-                            title: 'Gyors',
+                            title: 'Túlméretes Áruszállítás',
                             imageUrl: 'fast.svg',
                             imageAlt: 'Gyors',
+                            description:'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                         {
-                            title: 'Dinamikus',
-                            imageUrl: 'accu.svg',
+                            title: 'Szállítmányozás',
+                            imageUrl: 'fast.svg',
                             imageAlt: 'Dinamikus',
+                            description: 'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                     ],
                 },
