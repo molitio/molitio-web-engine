@@ -2,12 +2,31 @@
 
 import React from 'react';
 import { Provider } from 'jotai';
-import { navMenuStore } from '../../context';
+import { NavRoot, initNavMenuStore, navMenuAtomRW } from '../../context';
 
-const NavRootProvider: React.FC<React.PropsWithChildren> = (props) => {
-    const { children } = props;
+export type NavRootProviderProps = React.PropsWithChildren & {
+    navRoot?: NavRoot;
+};
 
-    return <Provider store={navMenuStore}>{children}</Provider>;
+const NavRootProvider: React.FC<NavRootProviderProps> = (props) => {
+    const { children, navRoot } = props;
+    const [store, setStore] = React.useState<any>({});
+
+    React.useEffect(() => {
+        async function initProvider() {
+            if (!navRoot) {
+                return;
+            }
+            const resolvedStore = await initNavMenuStore(navRoot);
+            console.log('store', resolvedStore.get(navMenuAtomRW));
+
+             setStore(resolvedStore); 
+        }
+
+        initProvider();
+    }, [navRoot]);
+
+    return <Provider store={store}>{children}</Provider>;
 };
 
 export default NavRootProvider;

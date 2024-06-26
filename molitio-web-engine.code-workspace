@@ -32,8 +32,8 @@
         "[typescriptreact]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
-        "[json]": {
-            "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+        "[javascript]": {
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
         }
     }
 }

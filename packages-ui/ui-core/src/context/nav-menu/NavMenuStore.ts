@@ -1,16 +1,21 @@
 import { atom, createStore } from 'jotai';
-import { NavRoot } from '../../ui-nav-menu';
+import { NavRoot } from '../../context';
 
-const navMenuStore = createStore();
 export const navMenuAtom = atom<NavRoot>({});
 
 export const navMenuAtomRW = atom(
     (get) => get(navMenuAtom),
     (get, set, navRootState: NavRoot) => {
+        get(navMenuAtom);
         set(navMenuAtom, navRootState);
     },
 );
 
-navMenuStore.set(navMenuAtomRW, {});
+export async function initNavMenuStore(navRoot: NavRoot) {
+    const navMenuStore = createStore();
+    navMenuStore.set(navMenuAtomRW, { ...navRoot });
+    try {
+        return Promise.resolve(navMenuStore);    
+    } catch (error) {return Promise.reject(error);}
+}
 
-export default navMenuStore;
