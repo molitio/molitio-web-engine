@@ -53,11 +53,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     </Suspense>
                 </section>
                 <main>{children}</main>
-                <Footer
-                    licenceText={
-                        'footer default text' /* ApplicationContextRoot.contentRoot['common'].leafs['footer'].textContent['maintainer'] */
-                    }
-                />
             </body>
         </html>
     );

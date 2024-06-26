@@ -3,47 +3,75 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
-import { CardData, CardContainer } from '@molitio/ui-core';
-import { VerticalCardData, VerticalCardContainer } from '@molitio/ui-core';
+import {InfoPanelData, InfoPanelContainer ,CardData, CardContainer,CardTheTwoData, CardTheTwoContainer,  VerticalCardData, VerticalCardContainer,HeroData, HeroContainer  } from '@molitio/ui-core';
+
 
 export default function Page() {
+    const heroData: HeroData[] = ApplicationContextRoot.contentRoot['home'].leafs['hero'].heroContent;
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
-    const verticalCardData: VerticalCardData[] =  ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
+    const cardTheTwoData: CardTheTwoData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContentTheTwo;
+    const infoPanelData: InfoPanelData[] = ApplicationContextRoot.contentRoot['home'].leafs['infoPanels'].infoPanelContent;
+    const verticalCardData: VerticalCardData[] = ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
+    const backgroundImageUrl = ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage'];
 
     return (
-        <section
-            className="hero min-h-screen py-8"
-            style={{
-                backgroundImage: `url(${ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage']})`,
-            }}
-        >
-            <div className="hero-content top-0 z-1 flex-col py-10">
-                <div className="hero-content  text-neutral-content">
-                    <div className="max-w-xl">
-                        <h2 className='text-2xl font-bold'>A sikerhez vezető út, nálunk kezdődik!</h2>
-                        <p className="mb-5">
-                        Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén.Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyens zó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!
-                        </p>
-                    </div>
+        <section className="hero min-h-screen py-8">      
+            <div className="hero-content top-0 z-1 flex-col py-10">               
+                <div className="w-full">
+                    <HeroContainer cards={heroData} />
                 </div>
-                <div className="hero-content top-0 z-1 flex-col py-2">
-                <div className='max-w-xl'>
-                        <h2 className='text-2xl font-bold'>25 éve az Ön szolgálatában</h2>
-                        <p className='mb-5'>
-                        Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
-                        </p>
-                    </div>
-                </div>
-                <div className="">
+                <div className="w-full">
                     <CardContainer cards={cardData} />
                 </div>
-                <div className="">
+                <div className='w-full'>
+                    <InfoPanelContainer cards={infoPanelData} />
+                </div>
+                <div className='w-full'>
+                    <CardTheTwoContainer cards={cardTheTwoData} />
+                </div>
+                <div className="w-full">
                     <VerticalCardContainer cards={verticalCardData} />
                 </div>
-                
+
                 <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
 
                 {/*
+                // HERO SECTION :
+
+                <div className="hero-content text-neutral-content flex flex-wrap w-full">
+            <div
+                className="w-full lg:w-2/2 p-4"
+                style={{
+                    backgroundImage: `url(${backgroundImageUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '400px',
+                }}
+            >
+                <div className="lg:w-1/2 bg-white bg-opacity-5 p-4">
+                    <h2 className="text-2xl font-bold">A sikerhez vezető út, nálunk kezdődik!</h2>
+                    <p className="mb-5">
+                        Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!
+                    </p>
+                </div>
+                <br></br>
+                <div className="lg:w-1/2 bg-white bg-opacity-5 py-1">
+                    <h2 className="text-2xl font-bold">25 éve az Ön szolgálatában</h2>
+                    <p className="mb-5 py-4">
+                        Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <div className="hero-content top-0 z-1 flex-col py-2">
+                    <div className='max-w-xl'>
+                        <h2 className='text-2xl font-bold'>25 éve az Ön szolgálatában</h2>
+                        <p className='mb-5'>
+                            Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
+                        </p>
+                    </div>
+                </div>
                 <div className="card lg:card-side bg-base-100 shadow-xl">
                     <figure>
                         <Image
