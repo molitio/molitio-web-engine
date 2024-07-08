@@ -11,8 +11,13 @@
 @layer component {
     .default-nav {
         @apply fixed top-0 left-0 w-full;
+        
     }
 }
+
+.bg {
+    @apply bg-gradient-to-b from-black to-white;
+  }
 .decorationContainer {
     height: 70px;
     width: 100%;}
@@ -38,3 +43,4 @@
     transform: translate(-70%, 5%);
 
 }
+

@@ -3,11 +3,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
-import {InfoPanelData, InfoPanelContainer ,CardData, CardContainer,CardTheTwoData, CardTheTwoContainer,  VerticalCardData, VerticalCardContainer,HeroData, HeroContainer  } from '@molitio/ui-core';
-
+import {InfoPanelData, InfoPanelContainer ,CardData, CardContainer,CardTheTwoData, CardTheTwoContainer,  VerticalCardData, VerticalCardContainer,HeroTheTwoData, HeroTheTwoContainer, HeroTheOneData, HeroTheOneContainer  } from '@molitio/ui-core';
+import '../app/styles/globals.css';
 
 export default function Page() {
-    const heroData: HeroData[] = ApplicationContextRoot.contentRoot['home'].leafs['hero'].heroContent;
+    const heroTheTwoData: HeroTheTwoData[] = ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
+    const heroTheOneData: HeroTheOneData[] = ApplicationContextRoot.contentRoot['home'].leafs['heroTheOne'].heroTheOneContent;
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
     const cardTheTwoData: CardTheTwoData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContentTheTwo;
     const infoPanelData: InfoPanelData[] = ApplicationContextRoot.contentRoot['home'].leafs['infoPanels'].infoPanelContent;
@@ -15,26 +16,27 @@ export default function Page() {
     const backgroundImageUrl = ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage'];
 
     return (
-        <section className="hero min-h-screen py-8">      
-            <div className="hero-content top-0 z-1 flex-col py-10">               
-                <div className="w-full">
-                    <HeroContainer cards={heroData} />
+        <section className="hero py-12">      
+            <div className="hero-content top-0 z-10 flex-col py-2  ">               
+                <div className='w-full mb-4'>
+                    <HeroTheOneContainer cards={heroTheOneData} />
                 </div>
-                <div className="w-full">
+                <div className="w-full mb-4 py-2">
                     <CardContainer cards={cardData} />
                 </div>
-                <div className='w-full'>
+                <div className="w-full mb-4">
+                    <HeroTheTwoContainer cards={heroTheTwoData} />
+                </div>
+                <div className='w-full mb-4 '>
                     <InfoPanelContainer cards={infoPanelData} />
                 </div>
-                <div className='w-full'>
+                <div className='w-full mb-4 '>
                     <CardTheTwoContainer cards={cardTheTwoData} />
                 </div>
-                <div className="w-full">
+                <div className="w-full mb-4 ">
                     <VerticalCardContainer cards={verticalCardData} />
                 </div>
-
-                <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
-
+                
                 {/*
                 // HERO SECTION :
 

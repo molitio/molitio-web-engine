@@ -3,7 +3,7 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { NavBar, Footer, NavRootProvider, AppContext } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
-import './styles/globals.css';
+
 import Loading from './loading';
 
 //TODO: when coming from conig DB it will be depricated
@@ -53,6 +53,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     </Suspense>
                 </section>
                 <main>{children}</main>
+                
+                <Footer />
+                
             </body>
         </html>
     );

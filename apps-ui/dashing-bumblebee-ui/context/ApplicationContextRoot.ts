@@ -5,7 +5,7 @@ export const ApplicationContextRoot = {
     navRoot: {
         home: {
             label: 'Főoldal',
-            icon: 'planet.svg',
+            iconUrl: './lamp.svg',
             path: '/',
         },
         message: {
@@ -62,8 +62,8 @@ export const ApplicationContextRoot = {
                         backgroundImage: '/background_combined.png',
                     },
                 },
-                hero: {
-                    heroContent: [
+                heroTheTwo: {
+                    heroTheTwoContent: [
                         {
                             title: 'A sikerhez vezető út, nálunk kezdődik!',
                             description: 'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
@@ -72,6 +72,16 @@ export const ApplicationContextRoot = {
                         },
                     ],
                 },
+                heroTheOne: {
+                    heroTheOneContent: [
+                    {
+                        title:'Roadistics Kft.',
+                        description: 'Logistical Solutions',
+                        imageUrl: 'background_combined.png',
+                        imageAlt: 'Unique system',
+                    },
+                ],
+            },
                 coverCards: {
                     cardContent: [
                         {
