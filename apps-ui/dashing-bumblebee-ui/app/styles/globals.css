@@ -2,45 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    .dev-outline {
-        outline: 3px dashed purple;
-    }
-}
-
 @layer component {
     .default-nav {
         @apply fixed top-0 left-0 w-full;
         
     }
-}
-
-.bg {
-    @apply bg-gradient-to-b from-black to-white;
-  }
-.decorationContainer {
-    height: 70px;
-    width: 100%;}
-.decorationLeft {
-    height: 600px;
-    width: 600px;
-    background-color: aqua;
-    position: relative;
-    rotate: 45deg;
-    left: 0%;
-    top: 20%;
-    transform: translate(-70%, 5%);
-
-}
-.decorationRight {
-    height: 600px;
-    width: 600px;
-    background-color: aqua;
-    position: relative;
-    rotate: 45deg;
-    left: 100%;
-    top: 20%;
-    transform: translate(-70%, 5%);
-
+    
 }
 

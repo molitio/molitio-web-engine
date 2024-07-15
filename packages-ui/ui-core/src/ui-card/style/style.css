@@ -1,0 +1,65 @@
+/* PLEASE DONT EDIT THIS FILE  */
+/* ITS MUST NEED FOR THE SQUARE DESIGN  */
+/* PLEASE DONT EDIT THIS FILE  */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card-background {
+    @apply h-[400px] w-[250px] mt-[5px]; /* @apply bg-gradient-to-b from-blue-500 to-black; */
+    @apply bg-gradient-to-b from-green-500 to-black;
+  }
+  .blue-transparent {
+    @apply bg-[rgba(59,130,246,0.5)];
+  }
+  .bg {
+    @apply bg-gradient-to-b from-black to-white;
+  }
+  .font-bold {
+    @apply relative inline-block text-[white] after:content-[""] after:absolute after:w-full after:h-full after:z-[-1] after:right-0 after:top-0;
+  }
+  .font-bold::after {
+    background: inherit;
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 85% 100%, 0 100%);
+  }
+  .hero {
+    @apply h-[600px];
+  }
+  .heroSquare {
+    @apply w-[12000px] h-[1200px] relative -translate-x-2/4 translate-y-[-70%] left-2/4 top-[30%];
+    @apply bg-gradient-to-b from-black to-green-500;
+    rotate: -45deg;
+  }
+  .heroSquareTheTwo {
+    @apply w-[1250px] h-[1250px] relative translate-x-[0%] translate-y-[-20%] left-[45%] top-[65%];
+    @apply bg-gradient-to-b from-green-500 to-black;
+    rotate: -45deg;
+  }
+  .heroText {
+    @apply w-[600px] relative -translate-x-2/4 translate-y-2/4 left-2/4 top-[80%];
+    rotate: 45deg;
+  }
+  .heroTextTheTwo {
+    @apply w-[600px] relative top-[-20%] left-[-60%] translate-x-[95%] translate-y-2/4;
+    rotate: 45deg;
+  }
+  .heroTextTheTwo h2 {
+    @apply text-[32px];
+  }
+  .square {
+    @apply w-[600px] h-[600px] relative -left-1/4;
+    @apply bg-gradient-to-b from-black to-blue-500;
+    rotate: -45deg;
+  }
+  .squareRight {
+    @apply w-[650px] h-[650px] absolute translate-x-[-15%] -translate-y-2/4 rotate-45 left-[70%] top-2/4;
+    @apply bg-gradient-to-b from-black to-green-500;
+  }
+  .non-square {
+    @apply relative translate-x-[-30%] translate-y-[-30%] h-[350px] w-[350px] left-[30%] top-2/4;
+    rotate: 45deg;
+  }
+  .text-color {
+    @apply text-[black];
+  }

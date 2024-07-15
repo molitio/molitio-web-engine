@@ -19,7 +19,7 @@ export type NavBarProps = {
 const NavBar: React.FC<NavBarProps> = (props) => {
     const { headerText, logo } = props;
     return (
-        <nav className="navbar flex bg-base-100 fixed top-0 w-full z-5">        
+        <nav className="navbar flex bg-base-100 fixed top-0 w-full z-5 ">        
                 <NavMenu />        
         </nav>
     );

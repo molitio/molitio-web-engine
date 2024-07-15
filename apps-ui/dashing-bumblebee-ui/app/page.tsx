@@ -17,11 +17,11 @@ export default function Page() {
 
     return (
         <section className="hero py-12">      
-            <div className="hero-content top-0 z-10 flex-col py-2  ">               
-                <div className='w-full mb-4'>
+            <div className="hero-content flex-col py-2  ">               
+                <div>
                     <HeroTheOneContainer cards={heroTheOneData} />
                 </div>
-                <div className="w-full mb-4 py-2">
+                <div className="py-2">
                     <CardContainer cards={cardData} />
                 </div>
                 <div className="w-full mb-4">

@@ -5,10 +5,11 @@ module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         screens: {
-            sm: '480px',
+            sm: '640px',
             md: '768px',
-            lg: '976px',
-            xl: '1440px',
+            lg: '1024px',
+            xl: '1280px',
+            xxl: '1536px', /* if we use a " 2xl " , as the documentaion say --> got a beutiful error message */
           },
         extend: {
             zIndex: {

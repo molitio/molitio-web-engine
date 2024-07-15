@@ -10,7 +10,16 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-row justify-evenly">
+        <div className={`
+        flex
+        container
+        md:container 
+        md:mx-auto
+        mx-auto
+        align-items-center 
+        justify-center 
+        my-4
+        `}>
             {cards.map((card, i) => (
                 <Card
                     key={i}

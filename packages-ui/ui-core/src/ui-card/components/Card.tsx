@@ -1,36 +1,39 @@
 import React from 'react';
 import { CardData } from '../types';
+import '../style/style.css'; 
 
 const Card: React.FC<CardData> = (props) => {
-    const { title, imageUrl, imageAlt } = props;
+    const { title, imageUrl, imageAlt, description } = props;
     return (
         <div className={`
-        card
-        w-32
-        h-32
-        sm:w-32
-        sm:h-32
-        md:w-64
-        md:h-64 
-        hover:shadow-lg 
-        hover:shadow-gray-400 
-        shrink
-        flex 
-        flex-nowrap 
+        hover:shadow-lg
+        rounded-lg 
+        hover:shadow-blue-400 
+        flex
+        justify-center
         card-side 
-        bg-base-100 
         shadow-xl 
         flex-col 
-        items-stretch 
-        m-4`}>
-            <figure className="flex-1 ">
-                <img src={imageUrl} alt={imageAlt}/>
+        items-center 
+        m-4
+        card-background`}> 
+            <figure className="flex-1  flex justify-center items-center  rounded-full">
+                <img 
+                    src={imageUrl} 
+                    alt={imageAlt} 
+                    className="rounded-full w-32 h-32 object-cover"
+                />
             </figure>
-            <div className="flex-1 card-body max-h-2">
-                <h2 className="card-title"> {title}</h2>
+            <div className="flex-1 card-body flex flex-col justify-center items-center text-center text-white ">
+                <h3 className="card-title"> {title}</h3>
+                <p className='text-sm'>{description}</p>
             </div>
         </div>
     );
 };
 
 export default Card;
+
+
+
+
