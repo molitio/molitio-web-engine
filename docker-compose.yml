@@ -5,7 +5,7 @@ services:
         container_name: resource-hub-db
         restart: always
         env_file:
-            - path: ./.env
+            - .env
         expose:
             - '27017'
         ports:
@@ -16,14 +16,13 @@ services:
             MONGO_INITDB_DATABASE: ${MONGO_DB}
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
             MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
-
     resource-hub-api:
         container_name: resource-hub-api
         depends_on:
             - resource-hub-db
         restart: 'no'
         env_file:
-            - path: ./.env
+            - .env
         build:
             context: .
             dockerfile: ResourceHubApi.Dockerfile
