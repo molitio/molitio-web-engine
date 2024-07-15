@@ -44,7 +44,7 @@
             var context = res.title.split(' - ')[0];
             if (typeof groups[context] === 'undefined') {
                 groups[context] = {
-                    results: [res]
+                    results: [res],
                 };
             } else {
                 groups[context].results.push(res);
@@ -57,7 +57,7 @@
             var property = sortedGroups[i];
 
             var $li = $('<li>', {
-                class: 'search-results-group'
+                class: 'search-results-group',
             });
             var finalPropertyLabel = '';
             var propertyLabels = property.split('-');
@@ -77,8 +77,7 @@
                     groups[property].results.length +
                     ')';
             } else if (propertyLabels[0] === 'additional') {
-                finalPropertyLabel =
-                    'Additional pages' + ' (' + groups[property].results.length + ')';
+                finalPropertyLabel = 'Additional pages' + ' (' + groups[property].results.length + ')';
             } else {
                 finalPropertyLabel =
                     propertyLabels[0].charAt(0).toUpperCase() +
@@ -88,18 +87,18 @@
                     ')';
             }
             var $groupTitle = $('<h3>', {
-                text: finalPropertyLabel
+                text: finalPropertyLabel,
             });
             $groupTitle.appendTo($li);
 
             var $ulResults = $('<ul>', {
-                class: 'search-results-list'
+                class: 'search-results-list',
             });
 
             groups[property].results.forEach(function (res) {
                 var link = '';
                 var $liResult = $('<li>', {
-                    class: 'search-results-item'
+                    class: 'search-results-item',
                 });
                 switch (COMPODOC_CURRENT_PAGE_DEPTH) {
                     case 0:
@@ -114,11 +113,10 @@
                         break;
                 }
                 var finalResLabel =
-                    res.title.split(' - ')[1].charAt(0).toUpperCase() +
-                    res.title.split(' - ')[1].substring(1);
+                    res.title.split(' - ')[1].charAt(0).toUpperCase() + res.title.split(' - ')[1].substring(1);
                 var $link = $('<a>', {
                     href: link + res.url,
-                    text: finalResLabel
+                    text: finalResLabel,
                 });
                 $link.appendTo($liResult);
                 $liResult.appendTo($ulResults);
@@ -141,7 +139,7 @@
             compodoc.search.query(q, 0, MAX_SEARCH_RESULTS).then(function (results) {
                 displayResults(results);
             }),
-            1000
+            1000,
         );
     }
 

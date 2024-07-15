@@ -10,7 +10,8 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className={`
+        <div
+            className={`
         flex
         container
         md:container 
@@ -19,7 +20,8 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         align-items-center 
         justify-center 
         my-4
-        `}>
+        `}
+        >
             {cards.map((card, i) => (
                 <Card
                     key={i}

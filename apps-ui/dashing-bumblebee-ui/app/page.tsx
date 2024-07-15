@@ -3,21 +3,39 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
-import {InfoPanelData, InfoPanelContainer ,CardData, CardContainer,CardTheTwoData, CardTheTwoContainer,  VerticalCardData, VerticalCardContainer,HeroTheTwoData, HeroTheTwoContainer, HeroTheOneData, HeroTheOneContainer  } from '@molitio/ui-core';
+import {
+    InfoPanelData,
+    InfoPanelContainer,
+    CardData,
+    CardContainer,
+    CardTheTwoData,
+    CardTheTwoContainer,
+    VerticalCardData,
+    VerticalCardContainer,
+    HeroTheTwoData,
+    HeroTheTwoContainer,
+    HeroTheOneData,
+    HeroTheOneContainer,
+} from '@molitio/ui-core';
 import '../app/styles/globals.css';
 
 export default function Page() {
-    const heroTheTwoData: HeroTheTwoData[] = ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
-    const heroTheOneData: HeroTheOneData[] = ApplicationContextRoot.contentRoot['home'].leafs['heroTheOne'].heroTheOneContent;
+    const heroTheTwoData: HeroTheTwoData[] =
+        ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
+    const heroTheOneData: HeroTheOneData[] =
+        ApplicationContextRoot.contentRoot['home'].leafs['heroTheOne'].heroTheOneContent;
     const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
-    const cardTheTwoData: CardTheTwoData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContentTheTwo;
-    const infoPanelData: InfoPanelData[] = ApplicationContextRoot.contentRoot['home'].leafs['infoPanels'].infoPanelContent;
-    const verticalCardData: VerticalCardData[] = ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
+    const cardTheTwoData: CardTheTwoData[] =
+        ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContentTheTwo;
+    const infoPanelData: InfoPanelData[] =
+        ApplicationContextRoot.contentRoot['home'].leafs['infoPanels'].infoPanelContent;
+    const verticalCardData: VerticalCardData[] =
+        ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
     const backgroundImageUrl = ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage'];
 
     return (
-        <section className="hero py-12">      
-            <div className="hero-content flex-col py-2  ">               
+        <section className="hero py-12">
+            <div className="hero-content flex-col py-2  ">
                 <div>
                     <HeroTheOneContainer cards={heroTheOneData} />
                 </div>
@@ -27,16 +45,16 @@ export default function Page() {
                 <div className="w-full mb-4">
                     <HeroTheTwoContainer cards={heroTheTwoData} />
                 </div>
-                <div className='w-full mb-4 '>
+                <div className="w-full mb-4 ">
                     <InfoPanelContainer cards={infoPanelData} />
                 </div>
-                <div className='w-full mb-4 '>
+                <div className="w-full mb-4 ">
                     <CardTheTwoContainer cards={cardTheTwoData} />
                 </div>
                 <div className="w-full mb-4 ">
                     <VerticalCardContainer cards={verticalCardData} />
                 </div>
-                
+
                 {/*
                 // HERO SECTION :
 

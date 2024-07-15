@@ -15,7 +15,8 @@ export async function initNavMenuStore(navRoot: NavRoot) {
     const navMenuStore = createStore();
     navMenuStore.set(navMenuAtomRW, { ...navRoot });
     try {
-        return Promise.resolve(navMenuStore);    
-    } catch (error) {return Promise.reject(error);}
+        return Promise.resolve(navMenuStore);
+    } catch (error) {
+        return Promise.reject(error);
+    }
 }
-

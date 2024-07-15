@@ -1,10 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     function htmlEntities(str) {
-        return String(str)
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;');
+        return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
     function foundLazyModuleWithPath(path) {
@@ -52,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
     engine.nodeSize(function (d) {
         return [
             document.getElementById(d.id).getBBox()['height'] + 70,
-            document.getElementById(d.id).getBBox()['width'] + 30
+            document.getElementById(d.id).getBBox()['width'] + 30,
         ];
     });
 
@@ -81,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return d.id;
         },
         dx: 0,
-        dy: 0
+        dy: 0,
     });
 
     //Node icon
@@ -280,13 +276,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     var links = engine.links(nodes);
-    var links = svg_p
-        .selectAll('.link')
-        .data(links)
-        .enter()
-        .append('path')
-        .attr('class', 'link')
-        .attr('d', diagonal);
+    var links = svg_p.selectAll('.link').data(links).enter().append('path').attr('class', 'link').attr('d', diagonal);
 
     var _svg = document.getElementById('main'),
         main_g = _svg.childNodes[0];
@@ -296,6 +286,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     svg.attr({
         width: document.getElementById('main-group').getBBox()['width'] + 30,
-        height: document.getElementById('main-group').getBBox()['height'] + 50
+        height: document.getElementById('main-group').getBBox()['height'] + 50,
     });
 });

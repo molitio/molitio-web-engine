@@ -9,8 +9,8 @@ module.exports = {
             md: '768px',
             lg: '1024px',
             xl: '1280px',
-            xxl: '1536px', /* if we use a " 2xl " , as the documentaion say --> got a beutiful error message */
-          },
+            xxl: '1536px' /* if we use a " 2xl " , as the documentaion say --> got a beutiful error message */,
+        },
         extend: {
             zIndex: {
                 '0': '0',

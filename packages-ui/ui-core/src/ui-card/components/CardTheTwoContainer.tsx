@@ -12,12 +12,7 @@ const CardTheTwoContainer: React.FC<CardTheTwoContainerProps> = (props) => {
     return (
         <div className="flex flex-row align-items-center justify-center my-4">
             {cards.map((card, i) => (
-                <CardTheTwo
-                    key={i}
-                    title={card.title}
-                    description={card.description}
-                    imageUrl={card.imageUrl}
-                />
+                <CardTheTwo key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} />
             ))}
         </div>
     );

@@ -214,8 +214,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             parentChapterMenu = parentUl.parentNode;
                             if (parentChapterMenu) {
                                 var toggler = parentChapterMenu.querySelector('.menu-toggler'),
-                                    elementIconChild =
-                                        toggler.getElementsByClassName(faAngleUpClass)[0];
+                                    elementIconChild = toggler.getElementsByClassName(faAngleUpClass)[0];
                                 if (toggler && !elementIconChild) {
                                     toggler.click();
                                 }
@@ -225,15 +224,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (linkContext && linkContext === 'sub-entity') {
                         // Toggle also the master parent menu
                         var linkContextId = activeLink.getAttribute('data-context-id');
-                        var toggler = activeMenu.querySelector(
-                            '.chapter.' + linkContextId + ' a .menu-toggler'
-                        );
+                        var toggler = activeMenu.querySelector('.chapter.' + linkContextId + ' a .menu-toggler');
                         if (toggler) {
                             toggler.click();
                         }
                         if (linkContextId === 'additional') {
                             var mainToggler = activeMenu.querySelector(
-                                '.chapter.' + linkContextId + ' div.menu-toggler'
+                                '.chapter.' + linkContextId + ' div.menu-toggler',
                             );
                             if (mainToggler) {
                                 mainToggler.click();
@@ -247,9 +244,7 @@ document.addEventListener('DOMContentLoaded', function () {
                         toggler.click();
                     }
                     if (linkContextId === 'additional') {
-                        var mainToggler = activeMenu.querySelector(
-                            '.chapter.' + linkContextId + ' div.menu-toggler'
-                        );
+                        var mainToggler = activeMenu.querySelector('.chapter.' + linkContextId + ' div.menu-toggler');
                         if (mainToggler) {
                             mainToggler.click();
                         }

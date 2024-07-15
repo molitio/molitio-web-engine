@@ -1,6 +1,6 @@
-import React from "react";
-import type { InfoPanelData } from "../types";
-import InfoPanel from "./InfoPanel";
+import React from 'react';
+import type { InfoPanelData } from '../types';
+import InfoPanel from './InfoPanel';
 import '../style/style.css';
 
 export type InfoPanelContainerProps = {
@@ -15,11 +15,7 @@ const InfoPanelContainer: React.FC<InfoPanelContainerProps> = (props) => {
             <div className="squareRight"></div>
             <div className="relative w-full flex-col align-items-center justify-center">
                 {cards.map((card, i) => (
-                    <InfoPanel
-                        key={i}
-                        title={card.title}
-                        description={card.description}
-                    />
+                    <InfoPanel key={i} title={card.title} description={card.description} />
                 ))}
             </div>
         </div>
@@ -27,4 +23,3 @@ const InfoPanelContainer: React.FC<InfoPanelContainerProps> = (props) => {
 };
 
 export default InfoPanelContainer;
-

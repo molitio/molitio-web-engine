@@ -29,7 +29,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     const context: AppContext = await getAppContext();
 
     console.log('context at DB Root', context);
-    
+
     return (
         <html data-theme="dashing-bumblebee">
             <body>
@@ -53,9 +53,8 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     </Suspense>
                 </section>
                 <main>{children}</main>
-                
+
                 <Footer />
-                
             </body>
         </html>
     );

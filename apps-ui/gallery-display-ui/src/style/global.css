@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply h-screen bg-purple-300;
-  }
+    body {
+        @apply h-screen bg-purple-300;
+    }
 }

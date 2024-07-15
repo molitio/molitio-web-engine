@@ -1,4 +1,4 @@
-import { AppContext } from "@molitio/ui-core";
+import { AppContext } from '@molitio/ui-core';
 
 export const ApplicationContextRoot = {
     appName: 'Dashing Bumblebee',
@@ -66,7 +66,8 @@ export const ApplicationContextRoot = {
                     heroTheTwoContent: [
                         {
                             title: 'A sikerhez vezető út, nálunk kezdődik!',
-                            description: 'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                            description:
+                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
                             imageUrl: 'background_combined.png',
                             imageAlt: 'Tematikus',
                         },
@@ -74,50 +75,53 @@ export const ApplicationContextRoot = {
                 },
                 heroTheOne: {
                     heroTheOneContent: [
-                    {
-                        title:'Roadistics Kft.',
-                        description: 'Logistical Solutions',
-                        imageUrl: 'background_combined.png',
-                        imageAlt: 'Unique system',
-                    },
-                ],
-            },
+                        {
+                            title: 'Roadistics Kft.',
+                            description: 'Logistical Solutions',
+                            imageUrl: 'background_combined.png',
+                            imageAlt: 'Unique system',
+                        },
+                    ],
+                },
                 coverCards: {
                     cardContent: [
                         {
                             title: 'Belföldi és Nemzetközi Fuvarozás',
                             imageUrl: 'ware.svg',
                             imageAlt: 'Tematikus',
-                            description: 'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra.',
+                            description:
+                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra.',
                         },
                         {
                             title: 'Túlméretes Áruszállítás',
                             imageUrl: 'fast.svg',
                             imageAlt: 'Gyors',
-                            description:'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
+                            description:
+                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                         {
                             title: 'Szállítmányozás',
                             imageUrl: 'fast.svg',
                             imageAlt: 'Dinamikus',
-                            description: 'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
+                            description:
+                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                     ],
                     cardContentTheTwo: [
                         {
                             title: '180',
                             imageUrl: '',
-                            description: 'Dolgozó'
+                            description: 'Dolgozó',
                         },
                         {
                             title: '25 év',
                             imageUrl: '',
-                            description: 'Tapasztalat'
+                            description: 'Tapasztalat',
                         },
                         {
                             title: '130',
                             imageUrl: '',
-                            description: 'Gépjármű'
+                            description: 'Gépjármű',
                         },
                     ],
                 },
@@ -138,15 +142,16 @@ export const ApplicationContextRoot = {
                         },
                         {
                             title: 'Szállítmányozás',
-                            description: 'valami szöveget rakunk ide ',},
-                            {
-                                title: 'Túlméretes Áruszállítás',
-                                description: 'valami szöveget rakunk ide ',
-                            },
-                            {
-                                title: 'Szállítmányozás',
-                                description: 'valami szöveget rakunk ide ',}
-                        
+                            description: 'valami szöveget rakunk ide ',
+                        },
+                        {
+                            title: 'Túlméretes Áruszállítás',
+                            description: 'valami szöveget rakunk ide ',
+                        },
+                        {
+                            title: 'Szállítmányozás',
+                            description: 'valami szöveget rakunk ide ',
+                        },
                     ],
                 },
             },

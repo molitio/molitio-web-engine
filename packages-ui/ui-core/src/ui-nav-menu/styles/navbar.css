@@ -1,32 +1,23 @@
-
 .navbar {
     @apply flex justify-center w-full text-[white];
     @apply bg-gradient-to-b from-black to-green-500;
-    clip-path: polygon(
-      0 0,
-      calc(100% - 40px) 0,
-      100% 40px,
-      100% 100%,
-      40px 100%,
-      0 calc(100% - 40px)
-    );
-  }
-  .nav-menu {
+    clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+}
+.nav-menu {
     @apply flex items-center gap-4;
-  }
-  .nav-item {
+}
+.nav-item {
     @apply flex items-center border transition-[background-color] duration-[0.3s] ease-[ease] cursor-pointer rounded-lg border-solid border-[#ddd] hover:bg-[#f0f0f0] hover:text-[black];
-  }
-  .nav-item.selected {
+}
+.nav-item.selected {
     @apply bg-[#007bff] text-[white];
-  }
-  .icon-container {
+}
+.icon-container {
     @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2;
-  }
-  .icon {
+}
+.icon {
     @apply w-full h-auto;
-  }
-  .label {
+}
+.label {
     @apply text-base font-[bold];
-  }
-  
+}

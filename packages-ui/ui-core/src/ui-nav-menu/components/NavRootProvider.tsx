@@ -20,7 +20,7 @@ const NavRootProvider: React.FC<NavRootProviderProps> = (props) => {
             const resolvedStore = await initNavMenuStore(navRoot);
             console.log('store', resolvedStore.get(navMenuAtomRW));
 
-             setStore(resolvedStore); 
+            setStore(resolvedStore);
         }
 
         initProvider();

@@ -1,12 +1,4 @@
 .footer {
     @apply flex h-20 justify-center w-full bg-[#007bff] text-[white] mt-[30px] mb-[5px];
-    clip-path: polygon(
-      40px 0,
-      100% 0,
-      100% calc(100% - 40px),
-      calc(100% - 40px) 100%,
-      0 100%,
-      0 40px
-    );
-  }
-  
+    clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+}

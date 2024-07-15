@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var $tabSource = document.querySelector('#source-tab'),
         $tabInfo = document.querySelector('#info-tab'),
         $tabReadme = document.querySelector('#readme-tab'),
@@ -7,9 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
         $tabExample = document.querySelector('#example-tab'),
         $prismPre = document.querySelector('pre.compodoc-sourcecode');
     if ($tabSource && $prismPre) {
-        $prismCode = $prismPre.querySelector('code'),
-        $content = document.querySelector('.content'),
-        prismLinks = document.querySelectorAll('.link-to-prism')
+        ($prismCode = $prismPre.querySelector('code')),
+            ($content = document.querySelector('.content')),
+            (prismLinks = document.querySelectorAll('.link-to-prism'));
 
         for (var i = 0; i < prismLinks.length; i++) {
             prismLinks[i].addEventListener('click', linkToPrism, false);
@@ -20,18 +20,18 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();
 
             $prismPre.setAttribute('data-line', targetLine);
-            Prism.highlightElement($prismCode, function() {});
+            Prism.highlightElement($prismCode, function () {});
 
             $tabSource.click();
 
-            setTimeout(function() {
+            setTimeout(function () {
                 var $prismHighlightLine = document.querySelector('.line-highlight'),
                     top = parseInt(getComputedStyle($prismHighlightLine)['top']);
                 $content.scrollTop = top;
             }, 500);
-        };
+        }
 
-        window.onhashchange = function(event) {
+        window.onhashchange = function (event) {
             switch (window.location.hash) {
                 case '':
                 case '#info':
@@ -53,6 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     $tabExample.click();
                     break;
             }
-        }
+        };
     }
 });

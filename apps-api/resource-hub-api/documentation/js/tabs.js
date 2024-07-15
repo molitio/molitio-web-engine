@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var tabs = document.getElementsByClassName('nav-tabs'),
-        updateAddress = function(e) {
-            if(history.pushState && e.target.dataset.link) {
+        updateAddress = function (e) {
+            if (history.pushState && e.target.dataset.link) {
                 history.pushState(null, null, '#' + e.target.dataset.link);
             }
         };

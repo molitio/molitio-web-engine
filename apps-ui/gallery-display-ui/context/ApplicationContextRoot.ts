@@ -1,4 +1,6 @@
-{/* import { AppContext } from "@molitio/ui-core"; */}
+{
+    /* import { AppContext } from "@molitio/ui-core"; */
+}
 
 export const ApplicationContextRoot = {
     appName: 'Gallery Display',

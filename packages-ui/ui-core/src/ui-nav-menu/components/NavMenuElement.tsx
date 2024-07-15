@@ -16,19 +16,17 @@ const NavElement: React.FC<NavElementProps> = (props, key) => {
     const { navSegmentLeaf: elementData } = props;
     // Get the container element
 
-
     return (
-        <div  className="btn">
-        <li key={key}>
-            {elementData.iconUrl ? (
-                elementData.iconUrl
-            ) : (
-                <img className="w-4 h-4" src={elementData.iconUrl ?? ''}  />
-            )}
-            <a href={elementData.path ?? ''}>{elementData.label}</a>
-        </li>
+        <div className="btn">
+            <li key={key}>
+                {elementData.iconUrl ? (
+                    elementData.iconUrl
+                ) : (
+                    <img className="w-4 h-4" src={elementData.iconUrl ?? ''} />
+                )}
+                <a href={elementData.path ?? ''}>{elementData.label}</a>
+            </li>
         </div>
-  
     );
 };
 

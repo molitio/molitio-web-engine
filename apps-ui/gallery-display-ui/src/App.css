@@ -2,77 +2,75 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-  }
-  
-  .horizontal-menu {
+}
+
+.horizontal-menu {
     display: flex;
     justify-content: space-between;
     justify-content: center;
     background-color: #333;
     color: white;
     padding: 10px;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
     background: none;
     border: none;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
-  }
-  
-  .menu-item:hover {
+}
+
+.menu-item:hover {
     background-color: #555;
-  }
-  
-  .main-content {
+}
+
+.main-content {
     display: flex;
     flex: 1;
-  }
-  
-  .sidebar {
+}
+
+.sidebar {
     width: 200px;
     background-color: #f4f4f4;
     padding: 10px;
-  }
-  
-  .sidebar-item {
+}
+
+.sidebar-item {
     padding: 10px;
     cursor: pointer;
-  }
-  
-  .sidebar-item.active {
+}
+
+.sidebar-item.active {
     background-color: #ddd;
-  }
-  
-  .sidebar-subitems {
+}
+
+.sidebar-subitems {
     padding-left: 20px;
-  }
-  
-  .content {
+}
+
+.content {
     flex: 1;
     padding: 20px;
     background-color: #fff;
-  }
-  
-  .child-items {
+}
+
+.child-items {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-  }
-  
-  .child-item {
+}
+
+.child-item {
     background-color: #e4e4f4;
     padding: 10px;
     text-align: center;
     border: 1px solid #ccc;
     cursor: pointer;
-  }
-  
-  
+}
