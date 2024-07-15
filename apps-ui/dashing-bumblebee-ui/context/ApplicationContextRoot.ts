@@ -2,6 +2,8 @@ import { AppContext } from '@molitio/ui-core';
 
 export const ApplicationContextRoot = {
     appName: 'Dashing Bumblebee',
+    appLogoUrl: './logo_v1.svg',
+    appLogoAlt: 'Dashing Bumblebee Logo',
     navRoot: {
         home: {
             label: 'Főoldal',
