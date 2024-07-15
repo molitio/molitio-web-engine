@@ -17,7 +17,7 @@ import {
     HeroTheOneData,
     HeroTheOneContainer,
 } from '@molitio/ui-core';
-import '../app/styles/globals.css';
+
 
 export default function Page() {
     const heroTheTwoData: HeroTheTwoData[] =
@@ -34,17 +34,17 @@ export default function Page() {
     const backgroundImageUrl = ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage'];
 
     return (
-        <section className="hero py-12">
-            <div className="hero-content flex-col py-2  ">
+        <section className="hero">
+            <div className="hero-content flex-col">
                 <div>
                     <HeroTheOneContainer cards={heroTheOneData} />
                 </div>
-                <div className="py-2">
+                
+                
                     <CardContainer cards={cardData} />
-                </div>
-                <div className="w-full mb-4">
                     <HeroTheTwoContainer cards={heroTheTwoData} />
-                </div>
+                
+                 {/* 
                 <div className="w-full mb-4 ">
                     <InfoPanelContainer cards={infoPanelData} />
                 </div>
@@ -54,6 +54,7 @@ export default function Page() {
                 <div className="w-full mb-4 ">
                     <VerticalCardContainer cards={verticalCardData} />
                 </div>
+                */}
 
                 {/*
                 // HERO SECTION :

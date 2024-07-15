@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { NavBar, Footer, NavRootProvider, AppContext } from '@molitio/ui-core';
+import { NavBar,  NavRootProvider, AppContext } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
 
 import Loading from './loading';
@@ -46,15 +46,16 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                                         alt={'logo'}
                                         width={300}
                                         height={100}
+                                        
                                     />
                                 }
                             />
                         </NavRootProvider>
                     </Suspense>
                 </section>
-                <main>{children}</main>
+                <main className='py-16 my-4'>{children}</main>
 
-                <Footer />
+              
             </body>
         </html>
     );
