@@ -5,11 +5,11 @@ import '../style/style.css';
 const InfoPanel: React.FC<InfoPanelData> = (props) => {
     const { title, description } = props;
     return (
-        <div className="relative lg:w-1/2 p-4 flex center bg-white px-4 ">
+        <div className="row-gap-8 grid grid-cols-2 md:grid-cols-4 my-8 border-spacing-2">
             <div className="text-2xl lg:w-1/2 font-bold">
-                <h2 className="text-2xl font-bold mb-4 text-color underline">{title}</h2>
+                <h2 className="font-heading text-[2.6rem] font-bold dark:text-white lg:text-2xl xl:text-2xl">{title}</h2>
             </div>
-            <div className="md:w-3/4 w-full md:pl-4">
+            <div className="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
                 <p>{description}</p>
             </div>
         </div>

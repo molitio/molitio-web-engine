@@ -1,6 +1,5 @@
 .navbar {
     @apply flex justify-center w-full text-[white];
-    @apply bg-gradient-to-b from-black to-green-500;
     clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));
 }
 .nav-menu {

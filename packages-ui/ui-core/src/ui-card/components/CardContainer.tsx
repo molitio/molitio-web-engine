@@ -12,6 +12,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     return (
         <div
         className={`
+        bg-primary
         grid 
         sm:grid-cols-3 
         gap-4 
