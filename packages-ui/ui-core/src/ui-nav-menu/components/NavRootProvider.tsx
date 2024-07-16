@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
 import { NavRoot, initNavMenuStore, navMenuAtomRW } from '../../context';
 
@@ -10,21 +10,8 @@ export type NavRootProviderProps = React.PropsWithChildren & {
 
 const NavRootProvider: React.FC<NavRootProviderProps> = (props) => {
     const { children, navRoot } = props;
-    const [store, setStore] = React.useState<any>({});
 
-    React.useEffect(() => {
-        async function initProvider() {
-            if (!navRoot) {
-                return;
-            }
-            const resolvedStore = await initNavMenuStore(navRoot);
-            console.log('store', resolvedStore.get(navMenuAtomRW));
-
-            setStore(resolvedStore);
-        }
-
-        initProvider();
-    }, [navRoot]);
+    const store = useMemo(() => initNavMenuStore(navRoot ?? {}), [navRoot]);
 
     return <Provider store={store}>{children}</Provider>;
 };

@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { NavBar,  NavRootProvider, AppContext } from '@molitio/ui-core';
+import { NavBar, NavRootProvider, AppContext } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
-
+import { AppContextFields } from '@molitio/ui-core';
 import Loading from './loading';
 
 //TODO: when coming from conig DB it will be depricated
@@ -26,36 +26,29 @@ export const metadata: Metadata = {
 };
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    const context: AppContext = await getAppContext();
-
-    console.log('context at DB Root', context);
+    const context: AppContext = ApplicationContextRoot;
 
     return (
         <html data-theme="dashing-bumblebee">
             <body>
                 <section>
                     <Suspense fallback={<Loading />}>
-                        <NavRootProvider navRoot={context['navRoot']}>
+                        <NavRootProvider navRoot={context.navRoot}>
                             <NavBar
-                                headerText={context['appName']}
+                                headerText={context.appName}
                                 logo={
                                     <Image
-                                        src={
-                                            '/logo_v1.svg' /* ApplicationContextRoot.contentRoot['common'].leafs['app'].assetUrls['logoSvg'] */
-                                        }
-                                        alt={'logo'}
+                                        src={context.appLogoUrl ?? ''}
+                                        alt={context.appLogoAlt ?? ''}
                                         width={300}
                                         height={100}
-                                        
                                     />
                                 }
                             />
                         </NavRootProvider>
                     </Suspense>
                 </section>
-                <main className='py-16 my-4'>{children}</main>
-
-              
+                <main className="py-16 my-4">{children}</main>
             </body>
         </html>
     );

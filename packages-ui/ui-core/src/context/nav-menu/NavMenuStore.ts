@@ -11,12 +11,9 @@ export const navMenuAtomRW = atom(
     },
 );
 
-export async function initNavMenuStore(navRoot: NavRoot) {
+export function initNavMenuStore(navRoot: NavRoot) {
     const navMenuStore = createStore();
     navMenuStore.set(navMenuAtomRW, { ...navRoot });
-    try {
-        return Promise.resolve(navMenuStore);
-    } catch (error) {
-        return Promise.reject(error);
-    }
+    //TODO: extend validation to navRoot type
+    return navMenuStore;
 }
