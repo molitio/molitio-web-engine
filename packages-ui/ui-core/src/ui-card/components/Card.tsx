@@ -5,29 +5,26 @@ import '../style/style.css';
 const Card: React.FC<CardData> = (props) => {
     const { title, imageUrl, imageAlt, description } = props;
     return (
-        <div
-            className={`
-        hover:shadow-lg
-        rounded-lg 
-        hover:shadow-blue-400 
-        flex
-        justify-center
-        card-side 
-        shadow-xl 
-        flex-col 
-        items-center 
-        m-4
-        card-background`}
-        >
-            <figure className="flex-1  flex justify-center items-center  rounded-full">
-                <img src={imageUrl} alt={imageAlt} className="rounded-full w-32 h-32 object-cover" />
-            </figure>
-            <div className="flex-1 card-body flex flex-col justify-center items-center text-center text-white ">
-                <h3 className="card-title"> {title}</h3>
-                <p className="text-sm">{description}</p>
+        <div className='flex flex-col items-center gap-4 sm:gap-6 mt-4 sm:mt-24 border:2px'>
+            <div className="text-center max-w-xs">
+                <div className="relative w-28 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto">
+                    <div className="z-10 relative w-full h-full rounded-full border border-gray-300 shadow flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5" stroke="currentColor" className="text-gray-500 w-1/2 h-1/2">
+                            {imageUrl}
+                        </svg>
+                    </div>
+                    <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-500 rounded-full"></div>
+                </div>
+                <h3 className="font-headline text-sm sm:text-lg mt-2">{title}</h3>
+                <p className="leading-normal mt-2 text-sm">{description}</p>
             </div>
         </div>
     );
 };
 
 export default Card;
+
+
+
+
+

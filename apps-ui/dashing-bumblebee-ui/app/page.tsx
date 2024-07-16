@@ -36,11 +36,8 @@ export default function Page() {
     return (
         <section className="hero">
             <div className="hero-content flex-col">
-                <div>
+                
                     <HeroTheOneContainer cards={heroTheOneData} />
-                </div>
-                
-                
                     <CardContainer cards={cardData} />
                     <HeroTheTwoContainer cards={heroTheTwoData} />
                 

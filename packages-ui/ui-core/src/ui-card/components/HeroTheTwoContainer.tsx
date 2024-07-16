@@ -11,7 +11,7 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
 
     return (
         <div>
-            <div className="w-full bg flex-wrap">
+            <div className="bg-indigo-600 text-white ">
                 {cards.map((card, i) => (
                     <HeroTheTwo
                         key={i}

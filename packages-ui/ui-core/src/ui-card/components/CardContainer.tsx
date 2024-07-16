@@ -11,15 +11,13 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
 
     return (
         <div
-            className={`
-        flex
-        container
-        md:container 
-        md:mx-auto
-        mx-auto
-        align-items-center 
-        justify-center 
-        my-4
+        className={`
+        grid 
+        sm:grid-cols-3 
+        gap-4 
+        sm:gap-6 
+        mt-4 
+        sm:mt-8
         `}
         >
             {cards.map((card, i) => (
@@ -34,4 +32,6 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         </div>
     );
 };
+
 export default CardContainer;
+

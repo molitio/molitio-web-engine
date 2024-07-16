@@ -11,7 +11,7 @@ const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
 
     return (
         <div>
-            <div className="flex-wrap py-6 flex justify-center gap-4 md:w-3/4 lg:w-full">
+            <div className="bg-indigo-600 text-white ">
                 {cards.map((card, i) => (
                     <HeroTheOne
                         key={i}

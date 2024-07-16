@@ -6,21 +6,17 @@ const HeroTheTwo: React.FC<HeroTheTwoData> = (props) => {
     const { title, description, imageUrl, imageAlt } = props;
 
     return (
-        <div className="w-full  flex items-center align-middle bg-base-100 shadow-xl hero overflow-hidden">
-            <div className="heroSquare">
-                <div className="p-8 text-white heroText">
-                    <h2 className="text-2xl font-bold ">{title}</h2>
-                    <div>
-                        <p>{description}</p>
-                    </div>
-                </div>
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center py-4 px-4">
+            <div className="md:w-1/2 px-4">
+            <h2 className='text-4xl font-bold leading-tight mb-4'>{title}</h2>
+                    <p className='text-xl mb-4'>{description}</p>   
             </div>
-
-            <figure className="flex-none w-2/4 h-full">
-                <img src={imageUrl} alt={imageAlt} className="object-cover w-full h-full" />
-            </figure>
+            <div className="md:w-1/2 mb-10 md:mb-0">
+            <img src={imageUrl} alt={imageAlt} className="w-full rounded-xl" />     
+            </div>
         </div>
     );
 };
+
 
 export default HeroTheTwo;
