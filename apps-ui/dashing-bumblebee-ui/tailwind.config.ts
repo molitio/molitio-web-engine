@@ -28,7 +28,7 @@ module.exports = {
                 'dashing-bumblebee': {
                     /* primary: "#6C9AC3" */
                     primary: 'green',
-                    secondary: '#6C9AC3',
+                    secondary: '#1f2937',
                 },
             },
         ],

@@ -35,7 +35,10 @@ export const ApplicationContextRoot = {
                         appDescription: 'Mozdítsa meg a világot velünk!',
                     },
                     assetUrls: {
-                        logoSvg: '/logo_v1.svg',
+                        logoSvg: {
+                            src: '/ logo_v1.svg',
+                            alt: 'Logo',
+                        },
                     },
                 },
                 footer: {
@@ -58,10 +61,12 @@ export const ApplicationContextRoot = {
                         phoneNumber: '+36 20 413 1238',
                         infoEmail: 'infoconnect@roadistics.com',
                     },
+                    refLinkUrls: {
+                        infoEmailHref: { url: 'mailto:infoconnect@roadistics.com' },
+                        phoneNumberHref: { url: 'tel:+36204131238' },
+                    },
                     assetUrls: {
-                        infoEmailHref: 'mailto:infoconnect@roadistics.com',
-                        phoneNumberHref: 'tel:+36204131238',
-                        backgroundImage: '/background_combined.png',
+                        backgroundImage: { src: '/background_combined.png' },
                     },
                 },
                 heroTheTwo: {
@@ -148,10 +153,6 @@ export const ApplicationContextRoot = {
                         },
                         {
                             title: 'Túlméretes Áruszállítás',
-                            description: 'valami szöveget rakunk ide ',
-                        },
-                        {
-                            title: 'Szállítmányozás',
                             description: 'valami szöveget rakunk ide ',
                         },
                     ],

@@ -35,16 +35,17 @@ export default function Page() {
 
     return (
         <section className="hero">
-            <div className="hero-content flex-col">
+            <div className="hero-content flex-col bg-secondary">
                 
-                    <HeroTheOneContainer cards={heroTheOneData} />
+                    <HeroTheOneContainer cards={heroTheOneData}  />
                     <CardContainer cards={cardData} />
                     <HeroTheTwoContainer cards={heroTheTwoData} />
+                    <InfoPanelContainer cards={infoPanelData} />
                 
                  {/* 
-                <div className="w-full mb-4 ">
-                    <InfoPanelContainer cards={infoPanelData} />
-                </div>
+                
+                    
+               
                 <div className="w-full mb-4 ">
                     <CardTheTwoContainer cards={cardTheTwoData} />
                 </div>
