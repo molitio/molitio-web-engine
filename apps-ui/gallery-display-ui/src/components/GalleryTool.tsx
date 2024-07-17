@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import HorizontalMenu from './HorizontalMenu';
+import { ApplicationContextRoot } from '../../context';
 import { sidebarData, SidebarItem } from '../data/sidebarData';
 
 interface GalleryToolProps {}

@@ -4,3 +4,4 @@ export * from './CardData';
 export * from './CardTheTwoData';
 export * from './VerticalCardData';
 export * from './InfoPanelData';
+export * from './ShowcaseData';

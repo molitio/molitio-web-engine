@@ -10,3 +10,7 @@ export { default as VerticalCard } from './VerticalCard';
 export { default as VerticalCardContainer } from './VerticalCardContainer';
 export { default as InfoPanel } from './InfoPanel';
 export { default as InfoPanelContainer } from './InfoPanelContainer';
+export { default as ShowcaseItem } from './ShowcaseItem';
+export { default as ShowcaseContainer } from './ShowcaseContainer';
+
+

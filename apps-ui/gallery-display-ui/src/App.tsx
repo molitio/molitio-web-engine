@@ -1,11 +1,14 @@
 import React from 'react';
-import GalleryTool from './components/GalleryTool';
+import { ShowcaseData, ShowcaseContainer } from '@molitio/ui-core';
+
+import { ApplicationContextRoot } from '../context';
 import './App.css';
 
 const App: React.FC = () => {
+    const ShowcaseData: ShowcaseData[] = ApplicationContextRoot.contentRoot['home'].leafs['showcaseCards'].cardContent;
     return (
         <div className="App">
-            <GalleryTool />
+           <ShowcaseContainer cards={ShowcaseData} /> 
         </div>
     );
 };

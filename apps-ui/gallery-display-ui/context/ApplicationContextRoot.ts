@@ -64,34 +64,17 @@ export const ApplicationContextRoot = {
                         backgroundImage: '/background_combined.png',
                     },
                 },
-                coverCards: {
+                showcaseCards: {
                     cardContent: [
                         {
                             title: 'Tematikus',
-                            imageUrl: 'ware.svg',
-                            imageAlt: 'Tematikus',
-                        },
-                        {
-                            title: 'Gyors',
-                            imageUrl: 'fast.svg',
-                            imageAlt: 'Gyors',
-                        },
-                        {
-                            title: 'Dinamikus',
-                            imageUrl: 'accu.svg',
-                            imageAlt: 'Dinamikus',
-                        },
-                    ],
+                            subTitle: 'lorem ipsum dolor sit amet',
+                        }
+                    ]
                 },
-                verticalCards: {
-                    verticalCardContent: [
-                        {
-                            title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
-                            imageUrl: 'ware.svg',
-                            imageAlt: 'Tematikus',
-                        },
-                    ],
-                },
+              
+                
+                
             },
         },
         contact: {
