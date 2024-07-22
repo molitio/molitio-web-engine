@@ -12,5 +12,4 @@ export { default as InfoPanel } from './InfoPanel';
 export { default as InfoPanelContainer } from './InfoPanelContainer';
 export { default as ShowcaseItem } from './ShowcaseItem';
 export { default as ShowcaseContainer } from './ShowcaseContainer';
-
-
+export { default as ShowcaseBranch } from './ShowcaseBranch';

@@ -1,16 +1,20 @@
 import React from 'react';
-import type { ShowcaseData } from '../types';
+import { useAtom } from 'jotai';
+import { ResourceGalleryRoot, initResourceGalleryStore, resourceGalleryAtomRW } from '../../context';
+import ShowcaseBranch from './ShowcaseBranch';
 import ShowcaseItem from './ShowcaseItem';
+import type { ShowcaseData } from '../types';
 
 export type ShowcaseContainerProps = {
-    cards: ShowcaseData[];
+    resourceGalleryData: ResourceGalleryRoot;
 };
 
-const ShowcaseContainer: React.FC<ShowcaseContainerProps> = (props) => {
-    const { cards } = props;
+const ShowcaseContainer: React.FC = (props) => {
+    const [resourceGalleryRoot] = useAtom(resourceGalleryAtomRW);
+
     return (
         <div
-        className={`
+            className={`
         bg-primary
         grid 
         sm:grid-cols-3 
@@ -20,15 +24,11 @@ const ShowcaseContainer: React.FC<ShowcaseContainerProps> = (props) => {
         sm:mt-8
         `}
         >
-            {cards.map((card, i) => (
-                <ShowcaseItem
-                    key={i}
-                    title={card.title}
-                    subTitle={card.subTitle} 
-                />
+            {Object.keys(resourceGalleryRoot).map((branch) => (
+                <ShowcaseBranch resourceGalleryBranch={resourceGalleryRoot[branch]} key={branch} />
             ))}
         </div>
-    )
+    );
 };
 
 export default ShowcaseContainer;

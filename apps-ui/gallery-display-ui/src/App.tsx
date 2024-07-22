@@ -1,14 +1,21 @@
 import React from 'react';
-import { ShowcaseData, ShowcaseContainer } from '@molitio/ui-core';
+import { ResourceGalleryRoot, ShowcaseContainer, initResourceGalleryStore } from '@molitio/ui-core';
 
 import { ApplicationContextRoot } from '../context';
 import './App.css';
+import { Provider } from 'jotai';
 
 const App: React.FC = () => {
-    const ShowcaseData: ShowcaseData[] = ApplicationContextRoot.contentRoot['home'].leafs['showcaseCards'].cardContent;
+    const resourceGalleryData: ResourceGalleryRoot = ApplicationContextRoot.resourceGalleryRoot;
+
+    const store = initResourceGalleryStore(resourceGalleryData);
+
     return (
         <div className="App">
-           <ShowcaseContainer cards={ShowcaseData} /> 
+            <h1>hi hello</h1>
+            <Provider store={store}>
+                <ShowcaseContainer />
+            </Provider>
         </div>
     );
 };

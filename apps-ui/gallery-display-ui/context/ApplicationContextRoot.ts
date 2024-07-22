@@ -69,12 +69,9 @@ export const ApplicationContextRoot = {
                         {
                             title: 'Tematikus',
                             subTitle: 'lorem ipsum dolor sit amet',
-                        }
-                    ]
+                        },
+                    ],
                 },
-              
-                
-                
             },
         },
         contact: {
@@ -83,6 +80,63 @@ export const ApplicationContextRoot = {
                     textContent: {
                         title: 'Kapcsolat',
                     },
+                },
+            },
+        },
+    },
+    resourceGalleryRoot: {
+        drills: {
+            name: 'dirlls',
+            leafs: {
+                dirll1: {
+                    title: 'dirll1 title',
+                    subTitle: 'lorem ipsum dolor sit amet',
+                },
+                drill2: {
+                    title: 'drill2 title',
+                    subTitle: 'lorem ipsum dolor sit amet',
+                },
+            },
+            branches: {
+                electricDrill: {
+                    name: 'electricDrills',
+                    leafs: {
+                        dirll3: {
+                            title: 'dirll3 title',
+                            subTitle: 'lorem ipsum dolor sit amet',
+                        },
+                        dirll4: {
+                            title: 'dirll4 title',
+                            subTitle: 'lorem ipsum dolor sit amet',
+                        },
+                    },
+                    branches: {
+                        batteryDrills: {
+                            name: 'battery drills',
+                            leafs: {
+                                bateryDrill1: {
+                                    title: 'bateryDrill1 title',
+                                    subTitle: 'lorem ipsum dolor sit amet',
+                                },
+                                bateryDrill2: {
+                                    title: 'bateryDrill1 title',
+                                    subTitle: 'lorem ipsum dolor sit amet',
+                                },
+                            },
+                        },
+                    },
+                },
+            },
+        },
+        mixer: {
+            name: 'mixer',
+            leafs: {
+                mixer1: {
+                    title: 'mixer1 title',
+                    subTitle: 'lorem ipsum dolor sit amet',
+                },
+                mixer2: {
+                    title: 'mixer2 title',
                 },
             },
         },

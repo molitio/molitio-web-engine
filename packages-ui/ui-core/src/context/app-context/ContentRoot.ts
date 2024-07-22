@@ -1,5 +1,5 @@
 export type ContentRoot = {
-    [key: string]: Record<string, ContentBranch>;
+    [key: string]: ContentBranch;
 };
 export type ContentBranch = {
     branchContent: ContentLeaf;
