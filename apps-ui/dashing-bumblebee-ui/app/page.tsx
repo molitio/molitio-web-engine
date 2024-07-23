@@ -18,7 +18,6 @@ import {
     HeroTheOneContainer,
 } from '@molitio/ui-core';
 
-
 export default function Page() {
     const heroTheTwoData: HeroTheTwoData[] =
         ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
@@ -36,13 +35,12 @@ export default function Page() {
     return (
         <section className="hero">
             <div className="hero-content flex-col bg-secondary">
-                
-                    <HeroTheOneContainer cards={heroTheOneData}  />
-                    <CardContainer cards={cardData} />
-                    <HeroTheTwoContainer cards={heroTheTwoData} />
-                    <InfoPanelContainer cards={infoPanelData} />
-                
-                 {/* 
+                <HeroTheOneContainer cards={heroTheOneData} />
+                <CardContainer cards={cardData} />
+                <HeroTheTwoContainer cards={heroTheTwoData} />
+                <InfoPanelContainer cards={infoPanelData} />
+
+                {/* 
                 
                     
                

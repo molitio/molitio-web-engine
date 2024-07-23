@@ -11,7 +11,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
 
     return (
         <div
-        className={`
+            className={`
         bg-primary
         grid 
         sm:grid-cols-3 
@@ -35,4 +35,3 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
 };
 
 export default CardContainer;
-

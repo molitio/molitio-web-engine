@@ -12,7 +12,6 @@ module.exports = {
                 /* primary: "#6C9AC3" */
                 primary: 'green',
                 secondary: '#1f2937',
-                
             },
         },
     },

@@ -3,7 +3,7 @@ export type ResourceGalleryRoot = {
 };
 
 export type ResourceGalleryBranch = {
-  name?: string;
+    name?: string;
     branches?: Record<string, ResourceGalleryBranch>;
     leafs?: Record<string, ResourceGalleryLeaf>;
 };

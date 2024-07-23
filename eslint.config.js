@@ -17,8 +17,20 @@ module.exports = [
         ignorePatterns: ['.next', 'dist'],
     },
     {
+        files: ['apps-ui/gallery-display-ui/**/*.ts', 'apps-ui/gallery-display-ui/**/*.tsx}'],
+        env: { browser: true, es2020: true },
+        extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended'],
+        ignorePatterns: ['dist', '.eslintrc.cjs'],
+        parser: '@typescript-eslint/parser',
+        plugins: ['react-refresh'],
+        rules: {
+            'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+        },
+    },
+    {
         files: ['apps-api/resource-hub-api/**/*.ts'],
         parser: '@typescript-eslint/parser',
+        ignorePatterns: ['resource-hub-api/documentation/**/*'],
         parserOptions: {
             project: 'tsconfig.json',
             tsconfigRootDir: __dirname,
