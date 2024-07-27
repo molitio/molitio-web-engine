@@ -1,6 +1,6 @@
 import { AppContext } from '@molitio/ui-core';
 
-export const ApplicationContextRoot = {
+export const ApplicationContextRoot: AppContext = {
     appName: 'Dashing Bumblebee',
     appLogoUrl: './logo_v1.svg',
     appLogoAlt: 'Dashing Bumblebee Logo',
@@ -70,28 +70,24 @@ export const ApplicationContextRoot = {
                     },
                 },
                 heroTheTwo: {
-                    heroTheTwoContent: [
-                        {
-                            title: 'A sikerhez vezető út, nálunk kezdődik!',
-                            description:
-                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                            imageUrl: 'background_combined.png',
-                            imageAlt: 'Tematikus',
-                        },
-                    ],
+                    textContent: {
+                        title: 'A sikerhez vezető út, nálunk kezdődik!',
+                        description:
+                            'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                        imageUrl: 'background_combined.png',
+                        imageAlt: 'Tematikus',
+                    },
                 },
                 heroTheOne: {
-                    heroTheOneContent: [
-                        {
-                            title: 'Roadistics Kft.',
-                            description: 'Logistical Solutions',
-                            imageUrl: 'background_combined.png',
-                            imageAlt: 'Unique system',
-                        },
-                    ],
+                    textContent: {
+                        title: 'Roadistics Kft.',
+                        description: 'Logistical Solutions',
+                        imageUrl: 'background_combined.png',
+                        imageAlt: 'Unique system',
+                    },
                 },
                 coverCards: {
-                    cardContent: [
+                    textContentCollection: [
                         {
                             title: 'Belföldi és Nemzetközi Fuvarozás',
                             imageUrl: 'ware.svg',
@@ -114,7 +110,9 @@ export const ApplicationContextRoot = {
                                 'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
                         },
                     ],
-                    cardContentTheTwo: [
+                },
+                coverCardsSecondary: {
+                    textContentCollection: [
                         {
                             title: '180',
                             imageUrl: '',
@@ -133,7 +131,7 @@ export const ApplicationContextRoot = {
                     ],
                 },
                 verticalCards: {
-                    verticalCardContent: [
+                    textContentCollection: [
                         {
                             title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
                             imageUrl: 'ware.svg',
@@ -142,7 +140,7 @@ export const ApplicationContextRoot = {
                     ],
                 },
                 infoPanels: {
-                    infoPanelContent: [
+                    textContentCollection: [
                         {
                             title: 'Túlméretes Áruszállítás',
                             description: 'valami szöveget rakunk ide ',

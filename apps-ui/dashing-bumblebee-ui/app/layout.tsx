@@ -3,7 +3,6 @@ import Image from 'next/image';
 import type { Metadata } from 'next';
 import { NavBar, NavRootProvider, AppContext } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
-import { AppContextFields } from '@molitio/ui-core';
 import Loading from './loading';
 
 //TODO: when coming from conig DB it will be depricated

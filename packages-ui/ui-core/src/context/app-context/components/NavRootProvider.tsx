@@ -2,7 +2,8 @@
 
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
-import { NavRoot, initNavMenuStore, navMenuAtomRW } from '../../context';
+import { NavRoot } from '../types';
+import { initNavMenuStore } from '../NavMenuStore';
 
 export type NavRootProviderProps = React.PropsWithChildren & {
     navRoot?: NavRoot;

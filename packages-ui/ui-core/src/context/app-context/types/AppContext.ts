@@ -1,4 +1,4 @@
-import { NavRoot, ContentRoot } from '../../context';
+import { NavRoot, ContentRoot } from '../..';
 
 export type AppContext = {
     appName: string;

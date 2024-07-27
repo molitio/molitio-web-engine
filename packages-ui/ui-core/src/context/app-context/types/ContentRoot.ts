@@ -2,7 +2,7 @@ export type ContentRoot = {
     [key: string]: ContentBranch;
 };
 export type ContentBranch = {
-    branchContent: ContentLeaf;
+    branchContent?: ContentLeaf;
     leafs?: Record<string, ContentLeaf>;
 };
 
@@ -15,14 +15,24 @@ export type ContentLeaf = {
     contentTitle?: string;
     imageAssetUrls?: Record<string, ContentImage>;
     refLinkUrls?: Record<string, RefLinkUrl>;
-    textContent?: Record<string, ContentTextSegment>;
+    textContent?: TextContent;
+    textContentCollection?: TextContent[];
+    assetUrls?: AsserUrlCollection;
 };
 
-export type ContentTextSegment = {
-    segmentTitle?: string;
-    segmentBody?: string;
+export type TextContent = {
+    [key: string]: string;
 };
 
 export type RefLinkUrl = {
     url: string;
+};
+
+export type AsserUrlCollection = {
+    [key: string]: AssetUrl;
+};
+
+export type AssetUrl = {
+    src?: string;
+    alt?: string;
 };

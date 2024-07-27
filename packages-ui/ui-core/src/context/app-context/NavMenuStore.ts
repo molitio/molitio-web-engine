@@ -1,5 +1,5 @@
 import { atom, createStore } from 'jotai';
-import { NavRoot } from '../../context';
+import { NavRoot } from './types';
 
 export const navMenuAtom = atom<NavRoot>({});
 
