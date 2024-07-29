@@ -1,8 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { useAtom } from 'jotai';
 import NavMenu from './NavMenu';
-import { NavRoot, navMenuAtomRW } from '../../context';
 import '../styles/navbar.css';
 
 export type NavBarProps = {

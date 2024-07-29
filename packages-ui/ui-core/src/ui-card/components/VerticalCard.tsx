@@ -1,8 +1,8 @@
 import React from 'react';
-import { VerticalCardData } from '../types';
+import { CardData } from '../types';
 import '../style/style.css';
 
-const VerticalCard: React.FC<VerticalCardData> = (props) => {
+const VerticalCard: React.FC<CardData> = (props) => {
     const { title, imageUrl, imageAlt } = props;
     return (
         <div className="w-full bg flex items-center align-middle bg-base-100 shadow-xl relative">

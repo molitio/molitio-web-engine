@@ -1,10 +1,10 @@
 import React from 'react';
-import type { InfoPanelData } from '../types';
+import type { CardData } from '../types';
 import InfoPanel from './InfoPanel';
 import '../style/style.css';
 
 export type InfoPanelContainerProps = {
-    cards: InfoPanelData[];
+    cards: CardData[];
 };
 
 const InfoPanelContainer: React.FC<InfoPanelContainerProps> = (props) => {

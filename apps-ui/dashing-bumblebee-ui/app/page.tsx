@@ -4,34 +4,35 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
 import {
-    InfoPanelData,
     InfoPanelContainer,
     CardData,
     CardContainer,
-    CardTheTwoData,
     CardTheTwoContainer,
-    VerticalCardData,
     VerticalCardContainer,
-    HeroTheTwoData,
     HeroTheTwoContainer,
-    HeroTheOneData,
     HeroTheOneContainer,
+    contentRootAtomRW,
+    AssetUrl,
 } from '@molitio/ui-core';
+import { useAtom } from 'jotai';
 
 export default function Page() {
-    const heroTheTwoData: HeroTheTwoData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
-    const heroTheOneData: HeroTheOneData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['heroTheOne'].heroTheOneContent;
-    const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
-    const cardTheTwoData: CardTheTwoData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContentTheTwo;
-    const infoPanelData: InfoPanelData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['infoPanels'].infoPanelContent;
-    const verticalCardData: VerticalCardData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
-    const backgroundImageUrl = ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage'];
+    const [contentRoot] = useAtom(contentRootAtomRW);
 
+    const contentRootLeafs = contentRoot['home'].leafs ?? {};
+
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
+    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne'].textContentCollection ?? [];
+    const cardData: CardData[] = contentRootLeafs['coverCards'].textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
+    const verticalCardData: CardData[] = contentRootLeafs['verticalCards'].textContentCollection ?? [];
+    /* 
+    TODO: Fix single asset retrieval.
+    const backgroundImageUrl: AssetUrl =
+        contentRootLeafs['cover']?.assetUrls[
+            'backgroundImage'
+        ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
         <section className="hero">
             <div className="hero-content flex-col bg-secondary">

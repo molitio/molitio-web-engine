@@ -1,15 +1,9 @@
 import React from 'react';
 import { useAtom } from 'jotai';
-import { ResourceGalleryRoot, initResourceGalleryStore, resourceGalleryAtomRW } from '../../context';
+import { resourceGalleryAtomRW } from '../../context';
 import ShowcaseBranch from './ShowcaseBranch';
-import ShowcaseItem from './ShowcaseItem';
-import type { ShowcaseData } from '../types';
 
-export type ShowcaseContainerProps = {
-    resourceGalleryData: ResourceGalleryRoot;
-};
-
-const ShowcaseContainer: React.FC = (props) => {
+const ShowcaseContainer: React.FC = () => {
     const [resourceGalleryRoot] = useAtom(resourceGalleryAtomRW);
 
     return (

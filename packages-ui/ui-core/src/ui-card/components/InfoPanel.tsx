@@ -1,8 +1,8 @@
 import React from 'react';
-import { InfoPanelData } from '../types';
+import { CardData } from '../types';
 import '../style/style.css';
 
-const InfoPanel: React.FC<InfoPanelData> = (props) => {
+const InfoPanel: React.FC<CardData> = (props) => {
     const { title, description } = props;
     return (
         <div className="row-gap-8 grid grid-cols-2 md:grid-cols-4 my-8 border-spacing-2">

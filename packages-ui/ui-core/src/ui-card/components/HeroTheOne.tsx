@@ -1,8 +1,8 @@
 import React from 'react';
-import { HeroTheOneData } from '../types';
+import { CardData } from '../types';
 import '../style/style.css';
 
-const HeroTheOne: React.FC<HeroTheOneData> = (props) => {
+const HeroTheOne: React.FC<CardData> = (props) => {
     const { title, description, imageUrl, imageAlt } = props;
 
     return (

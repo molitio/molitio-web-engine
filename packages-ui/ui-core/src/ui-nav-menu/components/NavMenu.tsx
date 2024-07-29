@@ -1,15 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { DefaultApplicationContextRoot, NavRoot, initNavMenuStore, navMenuAtomRW } from '../../context';
+import { navMenuAtomRW } from '../../context';
 import '../styles/navbar.css';
 import { useAtom } from 'jotai';
 
 const NavMenu: React.FC = () => {
-    //TODO: remove this mocked when jotai state is available
-    const navRootD: NavRoot = DefaultApplicationContextRoot['navRoot'];
-    initNavMenuStore(navRootD);
-
     const [navRoot] = useAtom(navMenuAtomRW);
     const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null);
 

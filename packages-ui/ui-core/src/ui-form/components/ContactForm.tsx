@@ -2,11 +2,11 @@ import React from 'react';
 
 /* import { Formik, Form, Field } from 'formik';
  */
-const ContactForm: React.FC = (props) => {
-    const initialValues = {
+const ContactForm: React.FC = () => {
+    /*     const initialValues = {
         firstName: '',
     };
-
+ */
     return (
         <div>
             {/*         <Formik

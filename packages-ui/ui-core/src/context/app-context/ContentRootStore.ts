@@ -1,5 +1,5 @@
 import { atom, createStore } from 'jotai';
-import { ContentRoot, NavRoot } from './types';
+import { ContentRoot } from './types';
 
 export const contentRootAtom = atom<ContentRoot>({});
 

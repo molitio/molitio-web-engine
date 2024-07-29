@@ -1,10 +1,15 @@
+'use client';
+
 import React from 'react';
 import { ApplicationContextRoot } from '../../context';
-import { HeroTheTwoContainer, HeroTheTwoData } from '@molitio/ui-core';
+import { HeroTheTwoContainer, CardData, contentRootAtomRW } from '@molitio/ui-core';
 import '../styles/globals.css';
+import { useAtom } from 'jotai';
 export default function Page() {
-    const heroTheTwoData: HeroTheTwoData[] =
-        ApplicationContextRoot.contentRoot['home'].leafs['heroTheTwo'].heroTheTwoContent;
+    const [contentRoot] = useAtom(contentRootAtomRW);
+
+    const contentRootLeafs = contentRoot['home'].leafs ?? {};
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
     return (
         <section className="hero min-h-screen py-12">
             <div className="hero-content bg top-0 z-1 flex-col py-2">

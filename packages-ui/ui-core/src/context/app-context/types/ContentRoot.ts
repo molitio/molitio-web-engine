@@ -26,6 +26,7 @@ export type TextContent = {
 
 export type RefLinkUrl = {
     url: string;
+    displayText?: string;
 };
 
 export type AsserUrlCollection = {

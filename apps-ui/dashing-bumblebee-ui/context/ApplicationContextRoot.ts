@@ -66,7 +66,10 @@ export const ApplicationContextRoot: AppContext = {
                         phoneNumberHref: { url: 'tel:+36204131238' },
                     },
                     assetUrls: {
-                        backgroundImage: { src: '/background_combined.png' },
+                        backgroundImage: {
+                            src: '/background_combined.png',
+                            alt: 'Background',
+                        },
                     },
                 },
                 heroTheTwo: {

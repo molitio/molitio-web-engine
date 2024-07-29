@@ -1,9 +1,9 @@
 import React from 'react';
-import type { VerticalCardData } from '../types';
+import type { CardData } from '../types';
 import VerticalCard from './VerticalCard';
 
 export type VerticalCardContainerProps = {
-    cards: VerticalCardData[];
+    cards: CardData[];
 };
 
 const VerticalCardContainer: React.FC<VerticalCardContainerProps> = (props) => {

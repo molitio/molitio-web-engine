@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResourceGalleryBranch, ResourceGalleryLeaf } from '../../context';
+import { ResourceGalleryBranch } from '../../context';
 import ShowcaseItem from './ShowcaseItem';
 
 export type ShowcaseBranchProps = {
@@ -15,7 +15,7 @@ const ShowcaseBranch: React.FC<ShowcaseBranchProps> = (props) => {
                 <ShowcaseItem
                     key={i}
                     title={resourceGalleryBranch.leafs?.[resourceLeaf].title ?? ''}
-                    subTitle={resourceGalleryBranch.leafs?.[resourceLeaf].subTitle ?? ''}
+                    subtitle={resourceGalleryBranch.leafs?.[resourceLeaf].subTitle ?? ''}
                 />
             ))}
             {resourceGalleryBranch.branches ? (

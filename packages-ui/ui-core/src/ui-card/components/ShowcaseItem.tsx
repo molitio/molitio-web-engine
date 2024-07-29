@@ -1,8 +1,8 @@
 import React from 'react';
-import { ShowcaseData } from '../types';
+import { CardData } from '../types';
 
-const ShowcaseItem: React.FC<ShowcaseData> = (props) => {
-    const { title, subTitle } = props;
+const ShowcaseItem: React.FC<CardData> = (props) => {
+    const { title, subtitle } = props;
     return (
         <div
             onClick={() => {
@@ -10,7 +10,7 @@ const ShowcaseItem: React.FC<ShowcaseData> = (props) => {
             }}
         >
             {title} <br />
-            {subTitle}
+            {subtitle}
         </div>
     );
 };

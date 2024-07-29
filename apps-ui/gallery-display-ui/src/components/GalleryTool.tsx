@@ -1,12 +1,9 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
 import HorizontalMenu from './HorizontalMenu';
-import { ApplicationContextRoot } from '../../context';
 import { sidebarData, SidebarItem } from '../data/sidebarData';
 
-interface GalleryToolProps {}
-
-const GalleryTool: React.FC<GalleryToolProps> = () => {
+const GalleryTool: React.FC = () => {
     const [activeItemId, setActiveItemId] = useState<string | null>(null);
     const [selectedItem, setSelectedItem] = useState<SidebarItem | null>(null);
     const [openMenuId, setOpenMenuId] = useState<string | null>(null);

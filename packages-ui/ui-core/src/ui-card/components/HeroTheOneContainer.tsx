@@ -1,9 +1,9 @@
 import React from 'react';
-import type { HeroTheOneData } from '../types';
+import { CardData } from '../types';
 import HeroTheOne from './HeroTheOne';
 
 export type HeroTheOneContainerProps = {
-    cards: HeroTheOneData[];
+    cards: CardData[];
 };
 
 const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
