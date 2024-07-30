@@ -73,44 +73,47 @@ export const ApplicationContextRoot: AppContext = {
                     },
                 },
                 heroTheTwo: {
-                    textContent: {
+                    textContentCollection: [
+                        {
                         title: 'A sikerhez vezető út, nálunk kezdődik!',
                         description:
                             'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
                         imageUrl: 'background_combined.png',
                         imageAlt: 'Tematikus',
-                    },
+                }],
                 },
                 heroTheOne: {
-                    textContent: {
+                    textContentCollection: [
+                        {
                         title: 'Roadistics Kft.',
-                        description: 'Logistical Solutions',
+                        description: 'A sikerhez vezető út, nálunk kezdődik!',
                         imageUrl: 'background_combined.png',
                         imageAlt: 'Unique system',
-                    },
+                    }
+                    ],
                 },
                 coverCards: {
                     textContentCollection: [
                         {
-                            title: 'Belföldi és Nemzetközi Fuvarozás',
+                            title: 'Teljes körű szállítmányozás',
                             imageUrl: 'ware.svg',
                             imageAlt: 'Tematikus',
                             description:
-                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra.',
+                                'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
-                            title: 'Túlméretes Áruszállítás',
+                            title: 'Vámkezelés',
                             imageUrl: 'fast.svg',
                             imageAlt: 'Gyors',
                             description:
-                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
+                                'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
-                            title: 'Szállítmányozás',
+                            title: 'Raktározás',
                             imageUrl: 'fast.svg',
                             imageAlt: 'Dinamikus',
                             description:
-                                'Cégünk fő tevékenysége a túlméretes áruszállítás. Flottánk 80%-a alkalmas a célra, így a legkülömbözőbb méretű feladatokat is eltudjuk látni.',
+                                'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
                         },
                     ],
                 },
@@ -145,16 +148,16 @@ export const ApplicationContextRoot: AppContext = {
                 infoPanels: {
                     textContentCollection: [
                         {
-                            title: 'Túlméretes Áruszállítás',
-                            description: 'valami szöveget rakunk ide ',
+                            title: 'Spedíció',
+                            description: 'Költséghatékonyan oldjuk meg fuvarfeladatait, beleértve az expressz fuvarokat is. Sürgős esetben, akár 24 órán belüli szállítást is vállalunk, továbbá egyedi megrendelés esetén is állunk rendelkezésére. ',
                         },
                         {
-                            title: 'Szállítmányozás',
-                            description: 'valami szöveget rakunk ide ',
+                            title: 'Vámszolgáltatások',
+                            description: 'Komplex vámkezelési szolgáltatásokat nyújtunk, hogy rakománya zökkenőmentesen átjusson a határokon. Hatékonyan intézzük az import és export vámkezeléseket, hogy minél előbb kiadhassuk a szükséges engedélyeket.',
                         },
                         {
-                            title: 'Túlméretes Áruszállítás',
-                            description: 'valami szöveget rakunk ide ',
+                            title: 'Raktározás',
+                            description: 'Biztonságos és korszerű raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését. Szolgáltatásaink az általános raktározástól kezdve, a speciális igények kielégítéséig terjednek.',
                         },
                     ],
                 },

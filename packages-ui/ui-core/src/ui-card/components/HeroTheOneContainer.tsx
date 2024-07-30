@@ -17,8 +17,7 @@ const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
                         key={i}
                         title={card.title}
                         description={card.description}
-                        imageUrl={card.imageUrl}
-                        imageAlt={card.imageAlt}
+                         imageUrl={card.imageUrl}
                     />
                 ))}
             </div>
