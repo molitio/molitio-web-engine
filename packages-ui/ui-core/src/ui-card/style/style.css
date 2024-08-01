@@ -5,3 +5,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-headline {
+    font-size: large;
+    font-weight: 700;
+}

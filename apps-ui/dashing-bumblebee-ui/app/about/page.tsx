@@ -2,19 +2,21 @@
 
 import React from 'react';
 import { ApplicationContextRoot } from '../../context';
-import { HeroTheTwoContainer, CardData, contentRootAtomRW } from '@molitio/ui-core';
+import { InfoPanelContainer, CardData, contentRootAtomRW } from '@molitio/ui-core';
 import '../styles/globals.css';
 import { useAtom } from 'jotai';
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
 
     const contentRootLeafs = contentRoot['home'].leafs ?? {};
-    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
+    const aboutTheOneData: CardData[] = contentRootLeafs['aboutTheOne'].textContentCollection ?? [];
+    
     return (
-        <section className="hero min-h-screen py-12">
+        <section className="hero min-h-screen bg-gray-800 items-start">
             <div className="hero-content bg top-0 z-1 flex-col py-2">
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miért válasszon minket?</h2></div>
                 <div className="w-full mb-4 py-2">
-                    <HeroTheTwoContainer cards={heroTheTwoData} />
+                    <InfoPanelContainer cards={aboutTheOneData} />
                 </div>
             </div>
         </section>

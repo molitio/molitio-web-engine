@@ -1,4 +1,5 @@
 import { AppContext } from '@molitio/ui-core';
+import { describe } from 'node:test';
 
 export const ApplicationContextRoot: AppContext = {
     appName: 'Dashing Bumblebee',
@@ -71,6 +72,34 @@ export const ApplicationContextRoot: AppContext = {
                             alt: 'Background',
                         },
                     },
+                },
+                aboutTheOne: {
+                    textContentCollection: [
+                        {
+                        title: 'Teljes körű szállítmányozás',
+                        description: 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
+                        imageUrl: 'background_combined.png'
+                    },
+                    {
+                        title: 'Raktározás',
+                        description: 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
+                        imageUrl: 'background_combined.png'
+                    },
+                    {
+                        title: 'Egyedi megoldások',
+                        description: 'Különleges fuvarokat is vállalunk, akár express szállítással, 24 órán belüli kiérkezéssel. Rugalmas ügyfélszolgálatunk segítségével hétfőtől péntekig minden egyedi igényt teljesítünk.',
+                        imageUrl: 'background_combined.png'
+                    },
+
+                ],
+                },
+                avoutTheTwo: {
+                    textContentCollection: [
+                        {
+                            title: 'asd',
+                            description: 'asd',
+                        },
+                    ],
                 },
                 heroTheTwo: {
                     textContentCollection: [

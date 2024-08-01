@@ -1,9 +1,13 @@
 .navbar {
     @apply flex justify-center w-full text-[white];
-    clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 40px, 100% 100%, 40px 100%, 0 calc(100% - 40px));
+    clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
+    background: linear-gradient(45deg, #306825, #9a98ab);
+   
 }
+
 .nav-menu {
     @apply flex items-center gap-4;
+    
 }
 .nav-item {
     @apply flex items-center border transition-[background-color] duration-[0.3s] ease-[ease] cursor-pointer rounded-lg border-solid border-[#ddd] hover:bg-[#f0f0f0] hover:text-[black];

@@ -14,11 +14,11 @@ export type NavBarProps = {
  */
 
 const NavBar: React.FC<NavBarProps> = (props) => {
-    const { headerText, logo } = props;
+    const { logo } = props;
     return (
         <div className="navbar flex bg-primary fixed top-0 w-full z-5 ">
             {logo}
-            {headerText}
+            
             <NavMenu />
         </div>
     );
