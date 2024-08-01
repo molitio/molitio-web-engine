@@ -40,6 +40,7 @@ export default function Page() {
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />
                 <InfoPanelContainer cards={infoPanelData} />
+                <CardTheTwoContainer cards={cardTheTwoData} />
 
                 {/* 
                 

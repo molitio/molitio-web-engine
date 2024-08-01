@@ -7,26 +7,15 @@ const CardTheTwo: React.FC<CardData> = (props) => {
     return (
         <div
             className={`
-        hover:shadow-lg 
-        hover:shadow-gray-400 
-        shrink
-        flex 
-        flex-nowrap 
-        justify-center
-        bg-white
-        rounded-lg
-        card-side 
-        shadow-xl 
-        flex-col 
-        items-center 
-        m-4 `}
+        flex flex-col items-center gap-4 sm:gap-6 mt-4 sm:mt-24 border:2px my-3 border rounded-box  p-3 `}
         >
-            <figure className="flex-1 max-w-20 flex justify-center card-background items-center   rounded-full">
+            
+            <figure className="relative w-28 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto">
                 <img src={imageUrl} className="rounded-full w-32 h-32 object-cover" />
             </figure>
             <div className="flex-1 card-body flex flex-col justify-center items-center text-center ">
-                <h3 className="card-title"> {title}</h3>
-                <p className="text-sm">{description}</p>
+                <h3 className="card-title text-white"> {title}</h3>
+                <p className="text-xl font-bold text-white underline">{description}</p>
             </div>
         </div>
     );

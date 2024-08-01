@@ -5,13 +5,13 @@ import '../style/style.css';
 const InfoPanel: React.FC<CardData> = (props) => {
     const { title, description } = props;
     return (
-        <div className="row-gap-8 grid grid-cols-2 md:grid-cols-4 my-8 border-spacing-2">
-            <div className="text-2xl lg:w-1/2 font-bold">
-                <h2 className="font-heading text-[2.6rem] font-bold dark:text-white lg:text-2xl xl:text-2xl">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center p-4 border rounded-box m-3 ">
+            <div className="md:w-1/2 ">
+                <h2 className="text-4xl font-bold leading-tight mb-4 p-5 underline ">
                     {title}
                 </h2>
             </div>
-            <div className="text-sm font-medium uppercase tracking-widest text-gray-800 dark:text-slate-400 lg:text-base">
+            <div className="md:w-1/2 mb-10 md:mb-0">
                 <p>{description}</p>
             </div>
         </div>

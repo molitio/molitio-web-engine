@@ -75,7 +75,7 @@ export const ApplicationContextRoot: AppContext = {
                 heroTheTwo: {
                     textContentCollection: [
                         {
-                        title: 'A sikerhez vezető út, nálunk kezdődik!',
+                        title: '25 éve az Ön szolgálatában!',
                         description:
                             'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
                         imageUrl: 'background_combined.png',
@@ -120,19 +120,19 @@ export const ApplicationContextRoot: AppContext = {
                 coverCardsSecondary: {
                     textContentCollection: [
                         {
-                            title: '180',
-                            imageUrl: '',
-                            description: 'Dolgozó',
+                            title: '„A megrendelt fuvar gyorsan és pontosan érkezett, a csapat pedig mindig készségesen válaszolt a kérdéseinkre. Különösen értékelem a gyors reakcióidőt és a rugalmasságot, ami tapasztalataim alapján ritka ezen a területen.”',
+                            imageUrl: 'fast.svg',
+                            description: ' - Kovács István',
                         },
                         {
-                            title: '25 év',
-                            imageUrl: '',
-                            description: 'Tapasztalat',
+                            title: '„A csapat munkája jelentősen megkönnyítette az export-import folyamatainkat. A vámkezelés gyors és gördülékeny volt, minden dokumentumot időben elkészítettek és benyújtottak. A szakértelmük maximálisan meggyőző volt, így biztos vagyok benne, hogy a jövőben is rájuk bízzuk ezt a feladatot.”',
+                            imageUrl: 'fast.svg',
+                            description: ' - Vincze Áron ',
                         },
                         {
-                            title: '130',
-                            imageUrl: '',
-                            description: 'Gépjármű',
+                            title: '„A Road-istics raktározási megoldásai minden szempontból meghaladták az elvárásainkat. A raktár biztonságos és jól karbantartott, az áruk kezelése pedig precíz és szakszerű. Különösen tetszett, hogy lehetővé tették a valós idejű nyomon követést.”',
+                            imageUrl: 'fast.svg',
+                            description: ' - Nagy Károly',
                         },
                     ],
                 },
@@ -142,6 +142,7 @@ export const ApplicationContextRoot: AppContext = {
                             title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
                             imageUrl: 'ware.svg',
                             imageAlt: 'Tematikus',
+                            
                         },
                     ],
                 },
