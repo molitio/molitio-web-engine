@@ -11,10 +11,10 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: './lamp.svg',
             path: '/',
         },
-        message: {
-            label: 'Ajánlat kérés',
-            icon: 'request.svg',
-            path: '/',
+        services: {
+            label: 'Szolgáltatásaink',
+            iconUrl: './settings.svg',
+            path: '/services',
         },
         about: {
             label: 'Rólunk',
@@ -73,33 +73,29 @@ export const ApplicationContextRoot: AppContext = {
                         },
                     },
                 },
-                aboutTheOne: {
+                serviceTheOne: {
                     textContentCollection: [
                         {
                         title: 'Teljes körű szállítmányozás',
-                        description: 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
-                        imageUrl: 'background_combined.png'
+                        description: 'Szállítmányozó cégként minden logisztikai igényét kielégítjük, legyen szó belföldi vagy nemzetközi fuvarozásról. Rugalmasan és gyorsan reagálunk a megkeresésekre,- egyedi fuvarokat és expressz szállításokat is vállalunk, akár 24 órán belüli kiérkezéssel is. Célunk, hogy a mögöttünk álló technológia gyorsan és hatékonyan kiszolgálja a változó üzleti igényeket, biztosítva a maximális hatékonyságot az Ön sikere érdekében.',
+                        
                     },
                     {
                         title: 'Raktározás',
                         description: 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
-                        imageUrl: 'background_combined.png'
+                        
                     },
                     {
                         title: 'Egyedi megoldások',
                         description: 'Különleges fuvarokat is vállalunk, akár express szállítással, 24 órán belüli kiérkezéssel. Rugalmas ügyfélszolgálatunk segítségével hétfőtől péntekig minden egyedi igényt teljesítünk.',
-                        imageUrl: 'background_combined.png'
+                        
+                    },
+                    {
+                        title: 'Gyors reakcióidő',
+                        description: 'Számunkra a gyors reakció elengedhetetlen. Ha hétköznap délig leadja ajánlatkérését, másnap délig válaszolunk, biztosítva a gyors szállítást.',
                     },
 
                 ],
-                },
-                avoutTheTwo: {
-                    textContentCollection: [
-                        {
-                            title: 'asd',
-                            description: 'asd',
-                        },
-                    ],
                 },
                 heroTheTwo: {
                     textContentCollection: [
@@ -108,6 +104,7 @@ export const ApplicationContextRoot: AppContext = {
                         description:
                             'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
                         imageUrl: 'background_combined.png',
+                        
                         imageAlt: 'Tematikus',
                 }],
                 },
@@ -169,8 +166,7 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
-                            imageUrl: 'ware.svg',
-                            imageAlt: 'Tematikus',
+                            description: 'asdfghjlk',
                             
                         },
                     ],
