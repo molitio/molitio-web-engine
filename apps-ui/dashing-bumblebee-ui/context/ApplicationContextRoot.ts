@@ -23,7 +23,7 @@ export const ApplicationContextRoot: AppContext = {
         },
         contact: {
             label: 'Kapcsolat',
-            iconUrl: 'document.svg',
+            iconUrl: './document.svg',
             path: '/contact',
         },
     },
