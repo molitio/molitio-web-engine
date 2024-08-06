@@ -3,38 +3,97 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
-import { CardData, CardContainer } from '@molitio/ui-core';
-import { VerticalCardData, VerticalCardContainer } from '@molitio/ui-core';
+import {
+    InfoPanelContainer,
+    CardData,
+    CardContainer,
+    CardTheTwoContainer,
+    VerticalCardContainer,
+    HeroTheTwoContainer,
+    HeroTheOneContainer,
+    contentRootAtomRW,
+    AssetUrl,
+} from '@molitio/ui-core';
+import { useAtom } from 'jotai';
 
 export default function Page() {
-    const cardData: CardData[] = ApplicationContextRoot.contentRoot['home'].leafs['coverCards'].cardContent;
-    const verticalCardData: VerticalCardData[] =  ApplicationContextRoot.contentRoot['home'].leafs['verticalCards'].verticalCardContent;
+    const [contentRoot] = useAtom(contentRootAtomRW);
 
+    const contentRootLeafs = contentRoot['home'].leafs ?? {};
+
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
+    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne'].textContentCollection ?? [];
+    const cardData: CardData[] = contentRootLeafs['coverCards'].textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
+    const verticalCardData: CardData[] = contentRootLeafs['verticalCards'].textContentCollection ?? [];
+    /* 
+    TODO: Fix single asset retrieval.
+    const backgroundImageUrl: AssetUrl =
+        contentRootLeafs['cover']?.assetUrls[
+            'backgroundImage'
+        ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section
-            className="hero min-h-screen py-8"
-            style={{
-                backgroundImage: `url(${ApplicationContextRoot.contentRoot['home'].leafs['cover'].assetUrls['backgroundImage']})`,
-            }}
-        >
-            <div className="hero-content top-0 z-1 flex-col py-8">
-                <div className="hero-content text-center text-neutral-content">
-                    <div className="max-w-md">
-                        <p className="mb-5">
-                            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
-                            quasi. In deleniti eaque aut repudiandae et a id nisi.
+        <section className="hero bg-secondary">
+            <div className="hero-content flex-col ">
+                <HeroTheOneContainer cards={heroTheOneData} />
+                <HeroTheTwoContainer cards={heroTheTwoData} />
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Szolgáltatásaink:</h2></div>
+                <CardContainer cards={cardData} />
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miben segítünk Önnek a spedíció során?</h2></div>
+                <InfoPanelContainer cards={infoPanelData} />
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Vélemények:</h2></div>
+                <CardTheTwoContainer cards={cardTheTwoData} />
+
+                {/* 
+                
+                    
+               
+                <div className="w-full mb-4 ">
+                    <CardTheTwoContainer cards={cardTheTwoData} />
+                </div>
+                <div className="w-full mb-4 ">
+                    <VerticalCardContainer cards={verticalCardData} />
+                </div>
+                */}
+
+                {/*
+                // HERO SECTION :
+
+                <div className="hero-content text-neutral-content flex flex-wrap w-full">
+            <div
+                className="w-full lg:w-2/2 p-4"
+                style={{
+                    backgroundImage: `url(${backgroundImageUrl})`,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    height: '400px',
+                }}
+            >
+                <div className="lg:w-1/2 bg-white bg-opacity-5 p-4">
+                    <h2 className="text-2xl font-bold">A sikerhez vezető út, nálunk kezdődik!</h2>
+                    <p className="mb-5">
+                        Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!
+                    </p>
+                </div>
+                <br></br>
+                <div className="lg:w-1/2 bg-white bg-opacity-5 py-1">
+                    <h2 className="text-2xl font-bold">25 éve az Ön szolgálatában</h2>
+                    <p className="mb-5 py-4">
+                        Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <div className="hero-content top-0 z-1 flex-col py-2">
+                    <div className='max-w-xl'>
+                        <h2 className='text-2xl font-bold'>25 éve az Ön szolgálatában</h2>
+                        <p className='mb-5'>
+                            Cégünk mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.
                         </p>
                     </div>
                 </div>
-                <div className="">
-                    <CardContainer cards={cardData} />
-                </div>
-                <div className="">
-                    <VerticalCardContainer cards={verticalCardData} />
-                </div>
-                <h2 className="text-4xl font-bold">Vegye fel velünk a kapcsolatot</h2>
-
-                {/*
                 <div className="card lg:card-side bg-base-100 shadow-xl">
                     <figure>
                         <Image

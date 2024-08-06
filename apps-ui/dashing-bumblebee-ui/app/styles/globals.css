@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    .dev-outline {
-        outline: 3px dashed purple;
-    }
-}
-
 @layer component {
     .default-nav {
         @apply fixed top-0 left-0 w-full;

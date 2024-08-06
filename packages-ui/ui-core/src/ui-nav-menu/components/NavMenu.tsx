@@ -1,37 +1,37 @@
 'use client';
 
-import React from 'react';
-import { useAtom } from 'jotai';
+import React, { useState } from 'react';
 import { navMenuAtomRW } from '../../context';
-
-/**
- * Navigation Menu
- *
- * The portion of the NavBar that contains interactive menu elements as NavSegments
- *
- */
+import '../styles/navbar.css';
+import { useAtom } from 'jotai';
 
 const NavMenu: React.FC = () => {
     const [navRoot] = useAtom(navMenuAtomRW);
+    const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null);
+
+    const handleNavItemClick = (navBranch: string) => {
+        setSelectedNavItem(navBranch);
+    };
 
     return (
-        <div className="dev-outline">
-            {Object.keys(navRoot).map((navBranch) => (
-                <div key={navBranch} className="w-full flex items-center align-middle bg-base-100 shadow-xl ">
-                    <figure className="flex-none w-2/4 h-full">
-                        <img
-                            src={navRoot[navBranch].iconUrl}
-                            alt={navRoot[navBranch].iconAlt}
-                            className="object-cover w-full h-full"
-                        />
-                    </figure>
-                    <div className="flex-grow p-4">
-                        <>{navRoot[navBranch].label}</>
-                        <h2 className="card-title"> {'label'}</h2>
-                    </div>
-                </div>
-            ))}
-        </div>
+        <nav className="navbar">
+            <div className="nav-menu flex">
+                {Object.keys(navRoot).map((navBranch) => (
+                    <a key={navBranch} href={`${navRoot[navBranch].path}`}>
+                        <div
+                            key={navBranch}
+                            className={`nav-item flex align-center ${selectedNavItem === navBranch ? 'selected' : ''}`}
+                            onClick={() => handleNavItemClick(navBranch)}
+                        >
+                            <figure className="icon-container flex justify-center">
+                                <img src={navRoot[navBranch].iconUrl} className="icon" />
+                            </figure>
+                            <span className="label hidden md:inline-block">{navRoot[navBranch].label}</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </nav>
     );
 };
 

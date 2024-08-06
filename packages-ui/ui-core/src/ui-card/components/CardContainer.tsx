@@ -10,7 +10,14 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="flex flex-row justify-evenly">
+        <div
+            className={`
+        bg-primary
+        grid 
+        sm:grid-cols-3 
+        rounded-box 
+        `}
+        >
             {cards.map((card, i) => (
                 <Card
                     key={i}
@@ -23,4 +30,5 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         </div>
     );
 };
+
 export default CardContainer;

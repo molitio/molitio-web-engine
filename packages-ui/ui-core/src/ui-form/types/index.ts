@@ -1,1 +1,1 @@
-export * from './ContactFormData'
+export * from './ContactFormData';

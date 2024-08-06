@@ -1,0 +1,12 @@
+/* PLEASE DONT EDIT THIS FILE  */
+/* ITS MUST NEED FOR THE SQUARE DESIGN  */
+/* PLEASE DONT EDIT THIS FILE  */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font-headline {
+    font-size: large;
+    font-weight: 700;
+}
