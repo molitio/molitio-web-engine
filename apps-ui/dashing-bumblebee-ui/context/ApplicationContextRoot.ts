@@ -140,7 +140,7 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Teljes körű szállítmányozás',
-                            imageUrl: 'ware.svg',
+                            imageUrl: 'fast.svg',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
