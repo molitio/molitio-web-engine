@@ -6,9 +6,10 @@ import { ApplicationContextRoot } from '../context';
 import {
     InfoPanelContainer,
     CardData,
+    ImageCardData,
     CardContainer,
     CardTheTwoContainer,
-    VerticalCardContainer,
+    ImageCardContainer,
     HeroTheTwoContainer,
     HeroTheOneContainer,
     contentRootAtomRW,
@@ -26,7 +27,7 @@ export default function Page() {
     const cardData: CardData[] = contentRootLeafs['coverCards'].textContentCollection ?? [];
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
-    const verticalCardData: CardData[] = contentRootLeafs['verticalCards'].textContentCollection ?? [];
+    const imageCardData: CardData[] = contentRootLeafs['imageCards'].textContentCollection ?? [];
     /* 
     TODO: Fix single asset retrieval.
     const backgroundImageUrl: AssetUrl =
@@ -44,6 +45,8 @@ export default function Page() {
                 <InfoPanelContainer cards={infoPanelData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Vélemények:</h2></div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
+                <ImageCardContainer cards={imageCardData} />
+                
 
                 {/* 
                 
