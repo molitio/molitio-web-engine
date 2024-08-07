@@ -8,7 +8,7 @@ export type ContentRootProviderProps = React.PropsWithChildren & {
     contentRoot?: ContentRoot;
 };
 
-const NavRootProvider: React.FC<ContentRootProviderProps> = (props) => {
+const ContentRootProvider: React.FC<ContentRootProviderProps> = (props) => {
     const { children, contentRoot } = props;
 
     const store = useMemo(() => initContentRootStore(contentRoot ?? {}), [contentRoot]);
@@ -16,4 +16,4 @@ const NavRootProvider: React.FC<ContentRootProviderProps> = (props) => {
     return <Provider store={store}>{children}</Provider>;
 };
 
-export default NavRootProvider;
+export default ContentRootProvider;
