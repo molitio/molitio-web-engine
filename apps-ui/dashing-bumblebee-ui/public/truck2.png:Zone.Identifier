@@ -1,3 +1,4 @@
 [ZoneTransfer]
 ZoneId=3
-HostUrl=about:internet
+ReferrerUrl=https://www.canva.com/
+HostUrl=https://export-download.canva.com/qrVA8/DAGNLoqrVA8/8/0/0001-5635565739124878329.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJHKNGJLC2J7OGJ6Q%2F20240806%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240806T151247Z&X-Amz-Expires=91314&X-Amz-Signature=009dc887a0a300c058fc4bca67a74c63363429a6b80575210e95da8afc4541b4&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%2A%3DUTF-8%27%27N%25C3%25A9vtelen%2520terv.png&response-expires=Wed%2C%2007%20Aug%202024%2016%3A34%3A41%20GMT

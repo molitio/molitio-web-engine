@@ -6,7 +6,9 @@ import { ApplicationContextRoot } from '../context';
 import {
     InfoPanelContainer,
     CardData,
+    ImageSectionData,
     ImageCardData,
+    ImageSectionContainer,
     CardContainer,
     CardTheTwoContainer,
     ImageCardContainer,
@@ -28,6 +30,7 @@ export default function Page() {
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
     const imageCardData: CardData[] = contentRootLeafs['imageCards'].textContentCollection ?? [];
+    const ImageSectionData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
     /* 
     TODO: Fix single asset retrieval.
     const backgroundImageUrl: AssetUrl =
@@ -41,11 +44,14 @@ export default function Page() {
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Szolgáltatásaink:</h2></div>
                 <CardContainer cards={cardData} />
+                <ImageSectionContainer imageSection={ImageSectionData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miben segítünk Önnek a spedíció során?</h2></div>
                 <InfoPanelContainer cards={infoPanelData} />
+                <ImageSectionContainer imageSection={ImageSectionData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Vélemények:</h2></div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
                 <ImageCardContainer cards={imageCardData} />
+                <ImageSectionContainer imageSection={ImageSectionData} />
                 
 
                 {/* 

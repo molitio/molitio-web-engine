@@ -122,7 +122,7 @@ export const ApplicationContextRoot: AppContext = {
                         title: '25 éve az Ön szolgálatában!',
                         description:
                             'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                        imageUrl: 'truck.jpg',
+                        imageUrl: 'truck2.png',
                         imageAlt: 'Tematikus',
                 }],
                 },
@@ -131,7 +131,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                         title: 'Roadistics Kft.',
                         description: 'A sikerhez vezető út, nálunk kezdődik!',
-                        imageUrl: 'road.cover2.png',
+                        imageUrl: 'roadCover3.png',
                         imageAlt: 'Unique system',
                     }
                     ],
@@ -219,6 +219,14 @@ export const ApplicationContextRoot: AppContext = {
                             imageUrl: './fast.svg',
                             imageAlt: '',
                             
+                        },
+                    ],
+                },
+                imageSectionOne:{
+                    textContentCollection: [
+                        {
+                            imageUrl: 'imageSectionOne.png',
+                            imageAlt: '',
                         },
                     ],
                 },
