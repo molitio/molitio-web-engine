@@ -1,5 +1,4 @@
 'use client';
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { ApplicationContextRoot } from '../context';
@@ -40,11 +39,11 @@ export default function Page() {
             'backgroundImage'
         ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section className="hero bg-secondary">
+        <section className="hero bg-gray-800">
             <div className="hero-content flex-col ">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
-                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Szolgáltatásaink:</h2></div>
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center font-press-start'>SZOLGÁLTATÁSAINK:</h2></div>
                 <CardContainer cards={cardData} />
                 <ImageSectionContainer imageSection={ImageSectionOneData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miben segítünk Önnek a spedíció során?</h2></div>

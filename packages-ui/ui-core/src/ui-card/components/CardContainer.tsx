@@ -13,7 +13,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         <div
             className={`
         bg-primary
-        grid 
+        grid
         sm:grid-cols-3 
         rounded-box 
         `}

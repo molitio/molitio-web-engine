@@ -8,22 +8,22 @@ export const ApplicationContextRoot: AppContext = {
     navRoot: {
         home: {
             label: 'Főoldal',
-            iconUrl: './home2.png',
+            iconUrl: './home3.png',
             path: '/',
         },
         services: {
             label: 'Szolgáltatásaink',
-            iconUrl: './settings2.png',
+            iconUrl: './settings4.png',
             path: '/services',
         },
         about: {
             label: 'Rólunk',
-            iconUrl: './information.png',
+            iconUrl: './information2.png',
             path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
-            iconUrl: './contact2.png',
+            iconUrl: './contact3.png',
             path: '/contact',
         },
     },
@@ -131,7 +131,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                         title: 'Roadistics Kft.',
                         description: 'A sikerhez vezető út, nálunk kezdődik!',
-                        imageUrl: 'roadCover3.png',
+                        imageUrl: 'roadCoverBlack.png',
                         imageAlt: 'Unique system',
                     }
                     ],
@@ -139,7 +139,7 @@ export const ApplicationContextRoot: AppContext = {
                 coverCards: {
                     textContentCollection: [
                         {
-                            title: 'Teljes körű szállítmányozás',
+                            title: 'Szállítmányozás',
                             imageUrl: 'truck4.png',
                             imageAlt: 'Tematikus',
                             description:

@@ -11,6 +11,7 @@ module.exports = {
             xl: '1280px',
             xxl: '1536px' /* if we use a " 2xl " , as the documentaion say --> got a beutiful error message */,
         },
+        
         extend: {
             zIndex: {
                 '0': '0',
@@ -20,6 +21,9 @@ module.exports = {
                 '4': '4',
                 '5': '5',
             },
+            fontFamily: {
+                'press-start': ['"Oswald"'],
+              },
         },
     },
     daisyui: {
@@ -27,8 +31,10 @@ module.exports = {
             {
                 'dashing-bumblebee': {
                     /* primary: "#6C9AC3" */
-                    primary: 'green',
-                    secondary: '#1f2937',
+                    primary: '#FF0000',
+                    secondary: '#332828',
+                    background: '#202741',
+                    
                 },
             },
         ],

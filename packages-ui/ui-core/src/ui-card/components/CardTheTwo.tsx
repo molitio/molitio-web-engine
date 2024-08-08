@@ -7,7 +7,7 @@ const CardTheTwo: React.FC<CardData> = (props) => {
     return (
         <div
             className={`
-        flex flex-col items-center gap-4 sm:gap-6 border:2px my-3 rounded-box bg-gray-800  p-3 `}
+        flex flex-col items-center gap-4 sm:gap-6 border:2px my-3 rounded-box bg-gray-800  p-3 hover:bg-base-content`}
         >
             
             <figure className="relative w-28 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto">

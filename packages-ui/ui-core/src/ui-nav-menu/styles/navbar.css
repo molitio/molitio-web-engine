@@ -1,6 +1,7 @@
 .navbar {
     @apply flex justify-center w-full text-[white];
-    background: linear-gradient(45deg, #306825, #3f3f41);
+    background: rgb(75, 72, 72);
+    
    
 }
 
@@ -9,10 +10,10 @@
     
 }
 .nav-item {
-    @apply flex items-center  transition-[background-color] duration-[0.3s] ease-[ease] cursor-pointer rounded-lg border-solid border-[#ddd] hover:bg-[#f0f0f0] hover:text-[black];
+    @apply flex items-center  transition-[background-color] duration-[0.3s] ease-[ease] cursor-pointer rounded-lg border-solid border-[#ddd] hover:bg-[#FF0000] hover:text-[white] hover:text-[bold] p-2;
 }
 .nav-item.selected {
-    @apply bg-[#007bff] text-[white];
+    @apply bg-[#FF0000] text-[white];
 }
 .icon-container {
     @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2;

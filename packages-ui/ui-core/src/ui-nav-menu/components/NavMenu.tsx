@@ -20,7 +20,7 @@ const NavMenu: React.FC = () => {
                     <a key={navBranch} href={`${navRoot[navBranch].path}`}>
                         <div
                             key={navBranch}
-                            className={`nav-item flex align-center ${selectedNavItem === navBranch ? 'selected' : ''}`}
+                            className={` nav-item flex align-center ${selectedNavItem === navBranch ? 'selected' : ''}`}
                             onClick={() => handleNavItemClick(navBranch)}
                         >
                             <figure className="icon-container flex justify-center">
