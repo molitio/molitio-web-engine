@@ -30,7 +30,9 @@ export default function Page() {
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
     const imageCardData: CardData[] = contentRootLeafs['imageCards'].textContentCollection ?? [];
-    const ImageSectionData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
+    const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
+    const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo'].textContentCollection ?? [];
+    const ImageSectionThreeData: ImageSectionData[] = contentRootLeafs['imageSectionThree'].textContentCollection ?? [];
     /* 
     TODO: Fix single asset retrieval.
     const backgroundImageUrl: AssetUrl =
@@ -44,14 +46,14 @@ export default function Page() {
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Szolgáltatásaink:</h2></div>
                 <CardContainer cards={cardData} />
-                <ImageSectionContainer imageSection={ImageSectionData} />
+                <ImageSectionContainer imageSection={ImageSectionOneData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miben segítünk Önnek a spedíció során?</h2></div>
                 <InfoPanelContainer cards={infoPanelData} />
-                <ImageSectionContainer imageSection={ImageSectionData} />
+                <ImageSectionContainer imageSection={ImageSectionTwoData} />
                 <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Vélemények:</h2></div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
                 <ImageCardContainer cards={imageCardData} />
-                <ImageSectionContainer imageSection={ImageSectionData} />
+                <ImageSectionContainer imageSection={ImageSectionThreeData} />
                 
 
                 {/* 

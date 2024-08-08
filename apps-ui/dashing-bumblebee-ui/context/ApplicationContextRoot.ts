@@ -140,7 +140,7 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Teljes körű szállítmányozás',
-                            imageUrl: 'truck3.png',
+                            imageUrl: 'truck4.png',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
@@ -226,6 +226,22 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             imageUrl: 'imageSectionOne.png',
+                            imageAlt: '',
+                        },
+                    ],
+                },
+                imageSectionTwo:{
+                    textContentCollection: [
+                        {
+                            imageUrl: 'imageSectionTwo.png',
+                            imageAlt: '',
+                        },
+                    ],
+                },
+                imageSectionThree:{
+                    textContentCollection: [
+                        {
+                            imageUrl: 'imageSectionThree.png',
                             imageAlt: '',
                         },
                     ],

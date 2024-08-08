@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/ui-core';
 import { ApplicationContextRoot } from '../context';
@@ -34,15 +33,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     <Suspense fallback={<Loading />}>
                         <NavRootProvider navRoot={context.navRoot}>
                             <NavBar
-                                headerText={context.appName}
-                                logo={
-                                    <Image
-                                        src={context.appLogoUrl ?? ''}
-                                        alt={context.appLogoAlt ?? ''}
-                                        width={300}
-                                        height={100}
-                                    />
-                                }
                             />
                         </NavRootProvider>
                     </Suspense>

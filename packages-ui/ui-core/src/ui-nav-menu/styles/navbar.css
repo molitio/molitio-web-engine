@@ -1,7 +1,6 @@
 .navbar {
     @apply flex justify-center w-full text-[white];
-    clip-path: polygon(40px 0, 100% 0, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0 100%, 0 40px);
-    background: linear-gradient(45deg, #306825, #9a98ab);
+    background: linear-gradient(45deg, #306825, #3f3f41);
    
 }
 
@@ -19,7 +18,8 @@
     @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2;
 }
 .icon {
-    @apply w-full h-auto;
+    @apply w-full h-auto ;
+    
 }
 .label {
     @apply text-base font-[bold];
