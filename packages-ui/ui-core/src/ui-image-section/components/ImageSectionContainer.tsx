@@ -10,7 +10,7 @@ const ImageSectionContainer: React.FC<ImageSectionContainerProps> = (props) => {
     const { imageSection } = props;
     return (
         <div>
-            <div className="bg-primary text-white rounded-box">
+            <div className=" text-white rounded-box w-screen">
                 {imageSection.map((section, i) => (
                     <ImageSection
                         key={i}

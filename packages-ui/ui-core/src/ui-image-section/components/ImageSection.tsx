@@ -8,7 +8,7 @@ const ImageSection: React.FC<ImageSectionData> = (props) => {
     return (
         <div className="container mx-auto flex flex-col md:flex-row sm:flex-row justify-between items-start  ">
             <div>
-                <img src={imageUrl} alt={imageAlt} className="h-50 rounded-xl" />
+                <img src={imageUrl} alt={imageAlt} className="h-50" />
             </div>
             
             

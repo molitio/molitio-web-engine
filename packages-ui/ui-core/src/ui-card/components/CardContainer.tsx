@@ -15,7 +15,6 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         bg-primary
         grid
         sm:grid-cols-3 
-        rounded-box 
         `}
         >
             {cards.map((card, i) => (

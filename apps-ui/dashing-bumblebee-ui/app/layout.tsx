@@ -34,13 +34,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                 <section>
                     <Suspense fallback={<Loading />}>
                         <NavRootProvider navRoot={context.navRoot}>
-                            <NavBar
-                            />
+                            <NavBar />
                         </NavRootProvider>
                     </Suspense>
                 </section>
                 <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main className="py-16 my-4">{children}</main>
+                    <main className="w-screen py-14 my-4">{children}</main>
                 </ContentRootProvider>
             </body>
         </html>
