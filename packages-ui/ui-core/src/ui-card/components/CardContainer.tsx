@@ -13,6 +13,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         <div
             className={`
         bg-primary
+        overflow-hidden
         grid
         sm:grid-cols-3 
         `}

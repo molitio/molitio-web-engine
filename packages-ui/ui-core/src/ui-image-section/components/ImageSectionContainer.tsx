@@ -9,8 +9,8 @@ export type ImageSectionContainerProps = {
 const ImageSectionContainer: React.FC<ImageSectionContainerProps> = (props) => {
     const { imageSection } = props;
     return (
-        <div>
-            <div className=" text-white rounded-box w-screen">
+        <div className="w-screen">
+            <div className="text-white h-[600px]">
                 {imageSection.map((section, i) => (
                     <ImageSection
                         key={i}

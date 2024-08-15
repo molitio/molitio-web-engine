@@ -18,6 +18,8 @@ import {
 } from '@molitio/ui-core';
 import { useAtom } from 'jotai';
 
+
+
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
 
@@ -32,6 +34,8 @@ export default function Page() {
     const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
     const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo'].textContentCollection ?? [];
     const ImageSectionThreeData: ImageSectionData[] = contentRootLeafs['imageSectionThree'].textContentCollection ?? [];
+
+    
     /* 
     TODO: Fix single asset retrieval.
     const backgroundImageUrl: AssetUrl =
@@ -39,10 +43,12 @@ export default function Page() {
             'backgroundImage'
         ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section className="hero bg-background w-full bg-gradient-to-r from-green-100 backdrop-blur-sm">
+        <section className="hero bg-background w-full bg-gradient-to-r from-green-100 backdrop-blur-sm overflow-hidden">
             <div className="hero-content flex-col ">
-                <HeroTheOneContainer cards={heroTheOneData} />
+                <ImageSectionContainer imageSection={ImageSectionOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
+                <ImageSectionContainer imageSection={ImageSectionOneData}   />
+                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center text-center'>Miben segítünk Önnek a spedíció során?</h2></div>
                 <div className='container'><h2 className='font-bold text-white text-5xl align-items-center font-press-start text-center'>SZOLGÁLTATÁSAINK:</h2></div>
                 <CardContainer cards={cardData} />
                 <ImageSectionContainer imageSection={ImageSectionOneData} />

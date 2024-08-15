@@ -39,7 +39,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     </Suspense>
                 </section>
                 <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main className="w-screen py-14 my-4">{children}</main>
+                    <main className="w-screen overflow-hidden my-4">{children}</main>
                 </ContentRootProvider>
             </body>
         </html>
