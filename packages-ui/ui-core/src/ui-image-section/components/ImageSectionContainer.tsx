@@ -1,24 +1,25 @@
 import React from 'react';
-import type { ImageSectionData } from '../types';
+import { ImageSectionData } from '../types';
 import ImageSection from './ImageSection';
 
 export type ImageSectionContainerProps = {
     imageSection: ImageSectionData[];
+    parallaxFactors?: number[]; // Extra prop a parallax tényezőkhöz
+    initialHeights?: string[]; // Opciósan beállítható kezdő magasságok
 };
 
-const ImageSectionContainer: React.FC<ImageSectionContainerProps> = (props) => {
-    const { imageSection } = props;
+const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({ imageSection, parallaxFactors = [], initialHeights = [] }) => {
     return (
         <div className="w-screen">
-            <div className="text-white h-[600px]">
-                {imageSection.map((section, i) => (
-                    <ImageSection
-                        key={i}
-                        imageUrl={section.imageUrl}
-                        imageAlt={section.imageAlt}
-                    />
-                ))}
-            </div>
+            {imageSection.map((section, i) => (
+                <ImageSection
+                    key={i}
+                    imageUrl={section.imageUrl}
+                    imageAlt={section.imageAlt}
+                    parallaxFactor={parallaxFactors[i]} // Beállítjuk a tényezőt
+                    initialHeight={initialHeights[i]} // Beállítjuk a kezdő magasságot
+                />
+            ))}
         </div>
     );
 };

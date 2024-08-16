@@ -225,7 +225,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionOne:{
                     textContentCollection: [
                         {
-                            imageUrl: 'imageSectionTheOne.png',
+                            imageUrl: 'highWayOne.png',
                             imageAlt: '',
                         },
                     ],
@@ -233,7 +233,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionTwo:{
                     textContentCollection: [
                         {
-                            imageUrl: 'imageSectionTwo.png',
+                            imageUrl: 'highWayOne.png',
                             imageAlt: '',
                         },
                     ],
@@ -241,7 +241,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionThree:{
                     textContentCollection: [
                         {
-                            imageUrl: 'imageSectionThree.png',
+                            imageUrl:'highway.jpg',
                             imageAlt: '',
                         },
                     ],
