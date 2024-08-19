@@ -28,9 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
     return (
         <html data-theme="dashing-bumblebee">
-            
             <body>
-            
                 <section>
                     <Suspense fallback={<Loading />}>
                         <NavRootProvider navRoot={context.navRoot}>

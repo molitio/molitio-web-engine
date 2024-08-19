@@ -8,7 +8,11 @@ export type ImageSectionContainerProps = {
     initialHeights?: string[]; // Opciósan beállítható kezdő magasságok
 };
 
-const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({ imageSection, parallaxFactors = [], initialHeights = [] }) => {
+const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
+    imageSection,
+    parallaxFactors = [],
+    initialHeights = [],
+}) => {
     return (
         <div className="w-screen">
             {imageSection.map((section, i) => (

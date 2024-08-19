@@ -1,5 +1,5 @@
 // ImageSectionContainer.tsx
-"use client";
+'use client';
 import React, { useEffect, useState } from 'react';
 import { ImageSectionData } from '../types';
 
@@ -8,7 +8,12 @@ interface ImageSectionProps extends ImageSectionData {
     initialHeight?: string;
 }
 
-const ImageSection: React.FC<ImageSectionProps> = ({ imageUrl, imageAlt, parallaxFactor = 0.2, initialHeight = '800px' }) => {
+const ImageSection: React.FC<ImageSectionProps> = ({
+    imageUrl,
+    imageAlt,
+    parallaxFactor = 0.2,
+    initialHeight = '800px',
+}) => {
     const [scrollY, setScrollY] = useState(0);
     const [containerHeight, setContainerHeight] = useState(initialHeight);
 
@@ -44,4 +49,3 @@ const ImageSection: React.FC<ImageSectionProps> = ({ imageUrl, imageAlt, paralla
 };
 
 export default ImageSection;
-

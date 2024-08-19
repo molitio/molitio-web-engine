@@ -7,8 +7,7 @@ const ShowcaseContainer: React.FC = () => {
     const [resourceGalleryRoot] = useAtom(resourceGalleryAtomRW);
 
     return (
-        <div className='flex flex-col'>
-        
+        <div className="flex flex-col">
             {Object.keys(resourceGalleryRoot).map((branch) => (
                 <ShowcaseBranch resourceGalleryBranch={resourceGalleryRoot[branch]} key={branch} />
             ))}

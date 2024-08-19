@@ -13,7 +13,9 @@ const Card: React.FC<CardData> = (props) => {
                     </div>
                     <div className="absolute inset-0 -translate-x-2 -translate-y-2 rounded-full"></div>
                 </div>
-                <h3 className=" text-3xl font-extrabold mt-2 bg-neutral text-white py-1 rounded-box font-press-start p-3">{title}</h3>
+                <h3 className=" text-3xl font-extrabold mt-2 bg-neutral text-white py-1 rounded-box font-press-start p-3">
+                    {title}
+                </h3>
                 <p className="leading-normal mt-2 text-2xl font-press-start  rounded-box p-3">{description}</p>
             </div>
         </div>

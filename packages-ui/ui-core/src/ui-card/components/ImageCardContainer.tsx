@@ -21,11 +21,7 @@ const ImageCardContainer: React.FC<ImageCardContainerProps> = (props) => {
         `}
         >
             {cards.map((card, i) => (
-                <ImageCard
-                    key={i}
-                    imageUrl={card.imageUrl}
-                    imageAlt={card.imageAlt}
-                />
+                <ImageCard key={i} imageUrl={card.imageUrl} imageAlt={card.imageAlt} />
             ))}
         </div>
     );
