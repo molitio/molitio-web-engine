@@ -4,6 +4,7 @@ import HorizontalMenu from './HorizontalMenu';
 import { sidebarData, SidebarItem } from '../data/sidebarData';
 
 const GalleryTool: React.FC = () => {
+    // Replace useState with jotai state management
     const [activeItemId, setActiveItemId] = useState<string | null>(null);
     const [selectedItem, setSelectedItem] = useState<SidebarItem | null>(null);
     const [openMenuId, setOpenMenuId] = useState<string | null>(null);

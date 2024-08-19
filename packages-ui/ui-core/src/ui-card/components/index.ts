@@ -6,6 +6,8 @@ export { default as Card } from './Card';
 export { default as CardContainer } from './CardContainer';
 export { default as CardTheTwo } from './CardTheTwo';
 export { default as CardTheTwoContainer } from './CardTheTwoContainer';
+export { default as ImageCard } from './ImageCard';
+export { default as ImageCardContainer } from './ImageCardContainer';
 export { default as VerticalCard } from './VerticalCard';
 export { default as VerticalCardContainer } from './VerticalCardContainer';
 export { default as InfoPanel } from './InfoPanel';

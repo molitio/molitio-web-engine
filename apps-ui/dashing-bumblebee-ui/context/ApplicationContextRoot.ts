@@ -8,22 +8,22 @@ export const ApplicationContextRoot: AppContext = {
     navRoot: {
         home: {
             label: 'Főoldal',
-            iconUrl: './planet.svg',
+            iconUrl: './home3.png',
             path: '/',
         },
         services: {
             label: 'Szolgáltatásaink',
-            iconUrl: './settings.svg',
+            iconUrl: './settings4.png',
             path: '/services',
         },
         about: {
             label: 'Rólunk',
-            iconUrl: './lamp.svg',
+            iconUrl: './information2.png',
             path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
-            iconUrl: './document.svg',
+            iconUrl: './contact3.png',
             path: '/contact',
         },
     },
@@ -122,7 +122,7 @@ export const ApplicationContextRoot: AppContext = {
                         title: '25 éve az Ön szolgálatában!',
                         description:
                             'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                        imageUrl: 'background_combined.png',
+                        imageUrl: '',
                         imageAlt: 'Tematikus',
                 }],
                 },
@@ -131,7 +131,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                         title: 'Roadistics Kft.',
                         description: 'A sikerhez vezető út, nálunk kezdődik!',
-                        imageUrl: 'background_combined.png',
+                        imageUrl: 'roadCoverBlack.png',
                         imageAlt: 'Unique system',
                     }
                     ],
@@ -139,22 +139,22 @@ export const ApplicationContextRoot: AppContext = {
                 coverCards: {
                     textContentCollection: [
                         {
-                            title: 'Teljes körű szállítmányozás',
-                            imageUrl: 'fast.svg',
+                            title: 'Szállítmányozás',
+                            imageUrl: 'truck4.png',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Vámkezelés',
-                            imageUrl: 'fast.svg',
+                            imageUrl: 'store3.svg',
                             imageAlt: 'Gyors',
                             description:
                                 'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
                             title: 'Raktározás',
-                            imageUrl: 'fast.svg',
+                            imageUrl: 'store4.png',
                             imageAlt: 'Dinamikus',
                             description:
                                 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
@@ -183,14 +183,66 @@ export const ApplicationContextRoot: AppContext = {
                         },
                     ],
                 },
-                verticalCards: {
+                imageCards: {
                     textContentCollection: [
                         {
-                            title: 'Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.',
-                            description: 'asdfghjlk',
-                            imageUrl: '',
+                            imageUrl: './fast.svg',
                             imageAlt: '',
                             
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                        {
+                            imageUrl: './fast.svg',
+                            imageAlt: '',
+                            
+                        },
+                    ],
+                },
+                imageSectionOne:{
+                    textContentCollection: [
+                        {
+                            imageUrl: 'highWayOne.png',
+                            imageAlt: '',
+                        },
+                    ],
+                },
+                imageSectionTwo:{
+                    textContentCollection: [
+                        {
+                            imageUrl: 'highWayOne.png',
+                            imageAlt: '',
+                        },
+                    ],
+                },
+                imageSectionThree:{
+                    textContentCollection: [
+                        {
+                            imageUrl:'highway.jpg',
+                            imageAlt: '',
                         },
                     ],
                 },

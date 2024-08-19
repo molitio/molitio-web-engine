@@ -13,9 +13,9 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         <div
             className={`
         bg-primary
-        grid 
+        overflow-hidden
+        grid
         sm:grid-cols-3 
-        rounded-box 
         `}
         >
             {cards.map((card, i) => (
