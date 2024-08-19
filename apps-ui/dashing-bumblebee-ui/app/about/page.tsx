@@ -8,8 +8,8 @@ import { useAtom } from 'jotai';
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
 
-    const contentRootLeafs = contentRoot['home'].leafs ?? {};
-    const aboutTheOneData: CardData[] = contentRootLeafs['aboutTheOne'].textContentCollection ?? [];
+    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    const aboutTheOneData: CardData[] = contentRootLeafs['aboutTheOne']?.textContentCollection ?? [];
 
     return (
         <section className="hero min-h-screen bg-gray-800 items-start">

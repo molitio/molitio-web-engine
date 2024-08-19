@@ -1,5 +1,4 @@
 import { AppContext } from '@molitio/mwe-ui-core';
-import { describe } from 'node:test';
 
 export const ApplicationContextRoot: AppContext = {
     appName: 'Dashing Bumblebee',
