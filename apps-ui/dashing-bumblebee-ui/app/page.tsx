@@ -1,37 +1,33 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ApplicationContextRoot } from '../context';
+
 import {
     InfoPanelContainer,
     CardData,
     ImageSectionData,
-    ImageCardData,
     ImageSectionContainer,
     CardContainer,
     CardTheTwoContainer,
     ImageCardContainer,
     HeroTheTwoContainer,
-    HeroTheOneContainer,
     contentRootAtomRW,
-    AssetUrl,
 } from '@molitio/mwe-ui-core';
 import { useAtom } from 'jotai';
 
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
 
-    const contentRootLeafs = contentRoot['home'].leafs ?? {};
+    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
 
-    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
-    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne'].textContentCollection ?? [];
-    const cardData: CardData[] = contentRootLeafs['coverCards'].textContentCollection ?? [];
-    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
-    const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
-    const imageCardData: CardData[] = contentRootLeafs['imageCards'].textContentCollection ?? [];
-    const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
-    const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo'].textContentCollection ?? [];
-    const ImageSectionThreeData: ImageSectionData[] = contentRootLeafs['imageSectionThree'].textContentCollection ?? [];
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
+    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
+    const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
+    const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
+    const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne']?.textContentCollection ?? [];
+    const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo']?.textContentCollection ?? [];
+    const ImageSectionThreeData: ImageSectionData[] =
+        contentRootLeafs['imageSectionThree']?.textContentCollection ?? [];
 
     // Példa parallax tényezőkre
     const imageSectionOneParallaxFactors = [0.2, 0.2]; // Állítsd be az egyes képeknél
