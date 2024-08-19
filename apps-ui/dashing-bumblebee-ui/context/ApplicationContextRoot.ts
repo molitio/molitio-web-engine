@@ -217,7 +217,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionOne: {
                     textContentCollection: [
                         {
-                            imageUrl: 'highWayOne.png',
+                            imageUrl: '/highWayOne.png',
                             imageAlt: '',
                         },
                     ],
