@@ -5,6 +5,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
+                <title>Jeliza Services</title>
                 <link
                     href="https://fonts.googleapis.com/css2?family=Fahkwang&family=Lato:ital,wght@0,100;0,400;1,300&display=swap"
                     rel="stylesheet"
