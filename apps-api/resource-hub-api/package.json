@@ -1,5 +1,5 @@
 {
-    "name": "@molitio/resource-hub-api",
+    "name": "@molitio/mwe-resource-hub-api",
     "version": "0.1.1",
     "description": "Resource Distribution Engine",
     "author": "Peter Koller",

@@ -1,5 +1,5 @@
 {
-    "name": "@molitio/resource-hub-gateway",
+    "name": "@molitio/mwe-resource-hub-gateway",
     "version": "0.1.1",
     "description": "Nginx API Gateway",
     "main": "index.js",

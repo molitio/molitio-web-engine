@@ -1,5 +1,5 @@
 {
-    "name": "@molitio/ui-core",
+    "name": "@molitio/mwe-ui-core",
     "version": "0.1.2",
     "author": "Peter Koller",
     "description": "Re-usable React UI Components",
