@@ -14,7 +14,6 @@ const HeroTheOne: React.FC<CardData> = (props) => {
                 <h2 className="text-4xl font-bold leading-tight mb-4 bg-primary w-1/2 rounded-box p-1">{title}</h2>
                 <p className="text-xl mb-4">{description}</p>
             </div>
-            
         </div>
     );
 };

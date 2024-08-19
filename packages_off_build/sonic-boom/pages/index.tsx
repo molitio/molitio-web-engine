@@ -13,7 +13,7 @@ import {
   LogoNestMediaSvg,
   LogoGooglePlaySvg,
   LogoAppStoreSvg, */
-} from "@molitio/ui-core";
+} from "@molitio/mwe-ui-core";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";

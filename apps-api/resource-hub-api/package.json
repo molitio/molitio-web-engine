@@ -14,7 +14,7 @@
     "homepage": "https://github.com/molitio/molitio-web-engine#readme",
     "keywords": [
         "molitio",
-        "ui-core"
+        "mwe-ui-core"
     ],
     "scripts": {
         "nest:cli": "nest --",

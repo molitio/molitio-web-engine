@@ -2,7 +2,7 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-    content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
+    content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/mwe-ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         screens: {
             sm: '640px',

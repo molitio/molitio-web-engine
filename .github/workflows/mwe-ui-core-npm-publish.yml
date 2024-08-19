@@ -1,0 +1,23 @@
+name: publish @molitio/mwe-ui-core
+
+on:
+    release:
+        types: [created]
+        
+jobs:
+    build-and-publish-mwe-ui-core:
+        runs-on: ubuntu-latest
+        defaults:
+            run:
+                working-directory: packages/mwe-ui-core
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 20
+                  registry-url: 'https://registry.npmjs.org'
+            - run: node --version
+            - run: yarn install --immutable --immutable-cache --check-cache
+            - run: yarn publish-mwe-ui-core
+              env:
+                  YARN_NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

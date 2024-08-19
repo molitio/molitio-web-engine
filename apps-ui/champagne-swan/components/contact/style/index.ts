@@ -1,3 +1,3 @@
-export * from "./StyledContactCover";
-export * from "./StyledContactContent";
-export * from "./StyledContactInfo";
+export * from './StyledContactCover';
+export * from './StyledContactContent';
+export * from './StyledContactInfo';

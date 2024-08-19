@@ -51,7 +51,7 @@ module.exports = [
         },
     },
     {
-        files: ['packages-ui/ui-core/**/*.ts, packages-ui/ui-core/**/*.tsx}'],
+        files: ['packages-ui/mwe-ui-core/**/*.ts, packages-ui/mwe-ui-core/**/*.tsx}'],
         env: {
             module: 'ESNext',
             browser: true,
@@ -78,7 +78,7 @@ module.exports = [
                 jsx: true,
             },
             ecmaVersion: 2020,
-            project: 'packages/ui-core/tsconfig.json',
+            project: 'packages/mwe-ui-core/tsconfig.json',
             sourceType: 'module',
             createDefaultProgram: true,
         },

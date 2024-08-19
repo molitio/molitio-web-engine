@@ -1,3 +1,3 @@
-export { default as Opinions } from "./Opinions";
+export { default as Opinions } from './Opinions';
 
-export * from "./style";
+export * from './style';

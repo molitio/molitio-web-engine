@@ -18,7 +18,7 @@ const NavBar: React.FC<NavBarProps> = (props) => {
     return (
         <div className="navbar flex bg-primary fixed top-0 w-full z-5 ">
             {logo}
-            
+
             <NavMenu />
         </div>
     );

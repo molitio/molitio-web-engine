@@ -3,7 +3,7 @@ import { render, screen, waitFor } from '@testing-library/react';
 import Debug from 'debug';
 import '@testing-library/jest-dom';
 import '@jest/globals';
-/* import { StyledGlobal } from '@molitio/ui-core'; */
+/* import { StyledGlobal } from '@molitio/mwe-ui-core'; */
 
 const debug = Debug('jest');
 

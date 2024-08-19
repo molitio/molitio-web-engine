@@ -1,6 +1,6 @@
-import React from "react";
-import { StyledBreakPointDisplay } from "./style";
+import React from 'react';
+import { StyledBreakPointDisplay } from './style';
 
 export const BreakPointDisplay = () => {
-  return <StyledBreakPointDisplay />;
+    return <StyledBreakPointDisplay />;
 };

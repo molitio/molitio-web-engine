@@ -1,3 +1,3 @@
-export { default as Partners } from "./PartnersLanding";
+export { default as Partners } from './PartnersLanding';
 
-export * from "./style";
+export * from './style';

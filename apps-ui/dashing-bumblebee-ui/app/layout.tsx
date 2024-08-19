@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 import Image from 'next/image';
 import type { Metadata } from 'next';
-import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/ui-core';
+import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
 import Loading from './loading';
 

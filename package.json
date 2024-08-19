@@ -8,10 +8,10 @@
     "scripts": {
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
-        "build-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build",
+        "build-mwe-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build",
         "build-resource-hub": "yarn workspace @molitio/resource-hub-api build",
-        "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/john-glenn-ui build",
-        "build-dashing-bumblebee-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/dashing-bumblebee-ui build",
+        "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/john-glenn-ui build",
+        "build-dashing-bumblebee-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/dashing-bumblebee-ui build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "yarn workspaces foreach --all --parallel --interlaced run dev",
         "lint": "yarn prettier . --write",
@@ -24,7 +24,7 @@
         "docgen": "yarn run typedoc --options typedoc.json",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
-        "publish-ui-core": "yarn workspace @molitio/ui-core publish-ui-core",
+        "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
         "codegen": "graphql-codegen --config codegen.ts"
     },
     "workspaces": [
@@ -41,7 +41,7 @@
     },
     "size-limit": [
         {
-            "path": "./packages/ui-core/index.js",
+            "path": "./packages/mwe-ui-core/index.js",
             "limit": "500 KB"
         }
     ],
@@ -85,7 +85,7 @@
         "typescript": "5.2.2"
     },
     "resolutions": {
-        "@molitio/ui-core": "workspace:0.1.2"
+        "@molitio/mwe-ui-core": "workspace:0.1.2"
     },
     "stableVersion": "0.1.1",
     "dependenciesMeta": {

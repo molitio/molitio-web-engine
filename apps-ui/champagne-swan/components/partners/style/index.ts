@@ -1,1 +1,1 @@
-export * from "./StyledPartnersLanding";
+export * from './StyledPartnersLanding';

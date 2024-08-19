@@ -15,7 +15,7 @@
         "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.next/* ../../.artifacts/john-glenn"
     },
     "dependencies": {
-        "@molitio/ui-core": "0.1.2",
+        "@molitio/mwe-ui-core": "0.1.2",
         "jotai": "2.8.3",
         "next": "14.1.3",
         "react": "18.2.0",
@@ -24,7 +24,7 @@
         "react-is": "18.2.0"
     },
     "devDependencies": {
-        "@molitio/ui-core": "workspace:0.1.2",
+        "@molitio/mwe-ui-core": "workspace:0.1.2",
         "@types/node": "18.11.10",
         "@types/react": "18.2.64",
         "@types/react-dom": "18.2.7",

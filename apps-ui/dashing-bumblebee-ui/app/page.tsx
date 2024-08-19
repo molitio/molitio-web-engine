@@ -13,7 +13,7 @@ import {
     HeroTheOneContainer,
     contentRootAtomRW,
     AssetUrl,
-} from '@molitio/ui-core';
+} from '@molitio/mwe-ui-core';
 import { useAtom } from 'jotai';
 
 export default function Page() {
@@ -38,11 +38,19 @@ export default function Page() {
             <div className="hero-content flex-col ">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
-                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Szolgáltatásaink:</h2></div>
+                <div className="container">
+                    <h2 className="text-white font-bold text-5xl align-items-center">Szolgáltatásaink:</h2>
+                </div>
                 <CardContainer cards={cardData} />
-                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Miben segítünk Önnek a spedíció során?</h2></div>
+                <div className="container">
+                    <h2 className="text-white font-bold text-5xl align-items-center">
+                        Miben segítünk Önnek a spedíció során?
+                    </h2>
+                </div>
                 <InfoPanelContainer cards={infoPanelData} />
-                <div className='container'><h2 className='text-white font-bold text-5xl align-items-center'>Vélemények:</h2></div>
+                <div className="container">
+                    <h2 className="text-white font-bold text-5xl align-items-center">Vélemények:</h2>
+                </div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
 
                 {/* 

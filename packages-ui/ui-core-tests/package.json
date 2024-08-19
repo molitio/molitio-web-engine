@@ -1,5 +1,5 @@
 {
-    "name": "@molitio/ui-core-tests",
+    "name": "@molitio/mwe-ui-core-tests",
     "version": "1.1.0",
     "type": "module",
     "dependencies": {

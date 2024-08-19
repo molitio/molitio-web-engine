@@ -1,2 +1,2 @@
-export * from "./StyledBrandFeats";
-export * from "./StyledBrandMessage";
+export * from './StyledBrandFeats';
+export * from './StyledBrandMessage';

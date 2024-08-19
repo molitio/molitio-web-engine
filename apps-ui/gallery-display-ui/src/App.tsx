@@ -1,5 +1,5 @@
 import React from 'react';
-import { ResourceGalleryRoot, ShowcaseContainer, initResourceGalleryStore } from '@molitio/ui-core';
+import { ResourceGalleryRoot, ShowcaseContainer, initResourceGalleryStore } from '@molitio/mwe-ui-core';
 
 import { ApplicationContextRoot } from '../context';
 import './App.css';

@@ -1,2 +1,2 @@
-export * from "./AuthReducer";
-export * from "./RootReducer";
+export * from './AuthReducer';
+export * from './RootReducer';

@@ -1,4 +1,4 @@
-import { AppContext } from '@molitio/ui-core';
+import { AppContext } from '@molitio/mwe-ui-core';
 import { describe } from 'node:test';
 
 export const ApplicationContextRoot: AppContext = {
@@ -76,35 +76,34 @@ export const ApplicationContextRoot: AppContext = {
                 serviceTheOne: {
                     textContentCollection: [
                         {
-                        title: 'Teljes körű szállítmányozás',
-                        description: 'Szállítmányozó cégként minden logisztikai igényét kielégítjük, legyen szó belföldi vagy nemzetközi fuvarozásról. Rugalmasan és gyorsan reagálunk a megkeresésekre,- egyedi fuvarokat és expressz szállításokat is vállalunk, akár 24 órán belüli kiérkezéssel is. Célunk, hogy a mögöttünk álló technológia gyorsan és hatékonyan kiszolgálja a változó üzleti igényeket, biztosítva a maximális hatékonyságot az Ön sikere érdekében.',
-                        imageUrl: '',
-                        imageAlt: '',
-
-                        
-                    },
-                    {
-                        title: 'Raktározás',
-                        description: 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
-                        imageUrl: '',
-                        imageAlt: '',
-                        
-                    },
-                    {
-                        title: 'Egyedi megoldások',
-                        description: 'Különleges fuvarokat is vállalunk, akár express szállítással, 24 órán belüli kiérkezéssel. Rugalmas ügyfélszolgálatunk segítségével hétfőtől péntekig minden egyedi igényt teljesítünk.',
-                        imageUrl: '',
-                        imageAlt: '',
-                        
-                    },
-                    {
-                        title: 'Gyors reakcióidő',
-                        description: 'Számunkra a gyors reakció elengedhetetlen. Ha hétköznap délig leadja ajánlatkérését, másnap délig válaszolunk, biztosítva a gyors szállítást.',
-                        imageUrl: '',
-                        imageAlt: '',
-                    },
-
-                ],
+                            title: 'Teljes körű szállítmányozás',
+                            description:
+                                'Szállítmányozó cégként minden logisztikai igényét kielégítjük, legyen szó belföldi vagy nemzetközi fuvarozásról. Rugalmasan és gyorsan reagálunk a megkeresésekre,- egyedi fuvarokat és expressz szállításokat is vállalunk, akár 24 órán belüli kiérkezéssel is. Célunk, hogy a mögöttünk álló technológia gyorsan és hatékonyan kiszolgálja a változó üzleti igényeket, biztosítva a maximális hatékonyságot az Ön sikere érdekében.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Raktározás',
+                            description:
+                                'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Egyedi megoldások',
+                            description:
+                                'Különleges fuvarokat is vállalunk, akár express szállítással, 24 órán belüli kiérkezéssel. Rugalmas ügyfélszolgálatunk segítségével hétfőtől péntekig minden egyedi igényt teljesítünk.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Gyors reakcióidő',
+                            description:
+                                'Számunkra a gyors reakció elengedhetetlen. Ha hétköznap délig leadja ajánlatkérését, másnap délig válaszolunk, biztosítva a gyors szállítást.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                    ],
                 },
                 aboutTheOne: {
                     textContentCollection: [
@@ -119,21 +118,22 @@ export const ApplicationContextRoot: AppContext = {
                 heroTheTwo: {
                     textContentCollection: [
                         {
-                        title: '25 éve az Ön szolgálatában!',
-                        description:
-                            'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                        imageUrl: 'background_combined.png',
-                        imageAlt: 'Tematikus',
-                }],
+                            title: '25 éve az Ön szolgálatában!',
+                            description:
+                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                            imageUrl: 'background_combined.png',
+                            imageAlt: 'Tematikus',
+                        },
+                    ],
                 },
                 heroTheOne: {
                     textContentCollection: [
                         {
-                        title: 'Roadistics Kft.',
-                        description: 'A sikerhez vezető út, nálunk kezdődik!',
-                        imageUrl: 'background_combined.png',
-                        imageAlt: 'Unique system',
-                    }
+                            title: 'Roadistics Kft.',
+                            description: 'A sikerhez vezető út, nálunk kezdődik!',
+                            imageUrl: 'background_combined.png',
+                            imageAlt: 'Unique system',
+                        },
                     ],
                 },
                 coverCards: {
@@ -190,7 +190,6 @@ export const ApplicationContextRoot: AppContext = {
                             description: 'asdfghjlk',
                             imageUrl: '',
                             imageAlt: '',
-                            
                         },
                     ],
                 },
@@ -198,19 +197,22 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Spedíció',
-                            description: 'Költséghatékonyan oldjuk meg fuvarfeladatait, beleértve az expressz fuvarokat is. Sürgős esetben, akár 24 órán belüli szállítást is vállalunk, továbbá egyedi megrendelés esetén is állunk rendelkezésére. ',
+                            description:
+                                'Költséghatékonyan oldjuk meg fuvarfeladatait, beleértve az expressz fuvarokat is. Sürgős esetben, akár 24 órán belüli szállítást is vállalunk, továbbá egyedi megrendelés esetén is állunk rendelkezésére. ',
                             imageUrl: '',
                             imageAlt: '',
                         },
                         {
                             title: 'Vámszolgáltatások',
-                            description: 'Komplex vámkezelési szolgáltatásokat nyújtunk, hogy rakománya zökkenőmentesen átjusson a határokon. Hatékonyan intézzük az import és export vámkezeléseket, hogy minél előbb kiadhassuk a szükséges engedélyeket.',
+                            description:
+                                'Komplex vámkezelési szolgáltatásokat nyújtunk, hogy rakománya zökkenőmentesen átjusson a határokon. Hatékonyan intézzük az import és export vámkezeléseket, hogy minél előbb kiadhassuk a szükséges engedélyeket.',
                             imageUrl: '',
                             imageAlt: '',
                         },
                         {
                             title: 'Raktározás',
-                            description: 'Biztonságos és korszerű raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését. Szolgáltatásaink az általános raktározástól kezdve, a speciális igények kielégítéséig terjednek.',
+                            description:
+                                'Biztonságos és korszerű raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését. Szolgáltatásaink az általános raktározástól kezdve, a speciális igények kielégítéséig terjednek.',
                             imageUrl: '',
                             imageAlt: '',
                         },

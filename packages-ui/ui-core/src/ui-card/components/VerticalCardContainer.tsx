@@ -12,11 +12,7 @@ const VerticalCardContainer: React.FC<VerticalCardContainerProps> = (props) => {
     return (
         <div className="w-full flex-wrap ">
             {cards.map((card, i) => (
-                <VerticalCard
-                    key={i}
-                    title={card.title}
-                    description={card.description}
-                />
+                <VerticalCard key={i} title={card.title} description={card.description} />
             ))}
         </div>
     );

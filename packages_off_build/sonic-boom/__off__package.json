@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@molitio/ui-core": "0.16.21",
+    "@molitio/mwe-ui-core": "0.16.21",
     "device-detector-js": "3.0.3",
     "dom": "0.0.3",
     "next": "13.2.1",

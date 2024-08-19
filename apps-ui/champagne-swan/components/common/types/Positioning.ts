@@ -16,14 +16,14 @@
  */
 
 export type Positioning = {
-  position?: string;
-  top?: string;
-  right?: string;
-  bottom?: string;
-  left?: string;
-  transform?: string;
-  padding?: string;
-  margin?: string;
-  objectFit?: string;
-  zIndex?: string;
+    position?: string;
+    top?: string;
+    right?: string;
+    bottom?: string;
+    left?: string;
+    transform?: string;
+    padding?: string;
+    margin?: string;
+    objectFit?: string;
+    zIndex?: string;
 };

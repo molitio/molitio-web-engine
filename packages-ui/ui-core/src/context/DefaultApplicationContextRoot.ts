@@ -1,4 +1,4 @@
-import { AppContext } from '@molitio/ui-core';
+import { AppContext } from './app-context';
 
 export const DefaultApplicationContextRoot: AppContext = {
     appName: 'MWE',

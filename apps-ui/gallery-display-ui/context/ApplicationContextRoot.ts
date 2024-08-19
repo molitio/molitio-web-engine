@@ -1,5 +1,5 @@
 {
-    /* import { AppContext } from "@molitio/ui-core"; */
+    /* import { AppContext } from "@molitio/mwe-ui-core"; */
 }
 
 export const ApplicationContextRoot = {

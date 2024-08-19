@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const StyledParagraphBullet = styled.span`
-  margin: 1.8em 0.8em;
-  font-size: 0.6rem;
+    margin: 1.8em 0.8em;
+    font-size: 0.6rem;
 `;

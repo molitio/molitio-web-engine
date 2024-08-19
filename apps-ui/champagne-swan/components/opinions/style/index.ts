@@ -1,1 +1,1 @@
-export * from "./StyledOpinions";
+export * from './StyledOpinions';

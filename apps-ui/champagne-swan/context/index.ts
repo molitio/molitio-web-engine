@@ -1,5 +1,5 @@
-export { ApplicationContextRoot } from "./ApplicationContextRoot";
-export { ApplicationTheme } from "./ApplicationTheme";
+export { ApplicationContextRoot } from './ApplicationContextRoot';
+export { ApplicationTheme } from './ApplicationTheme';
 
-export * from "./types";
-export * from "./store";
+export * from './types';
+export * from './store';

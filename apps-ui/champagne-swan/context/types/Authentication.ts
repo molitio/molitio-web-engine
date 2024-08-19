@@ -1,24 +1,21 @@
 type User = {
-  id: number;
-  fullname: string;
-  email: string;
-  password: string;
-  confirmPassword: string;
-  accessToken: string;
+    id: number;
+    fullname: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+    accessToken: string;
 };
 
-export type UserRegister = Omit<User, "id" | "accessToken">;
+export type UserRegister = Omit<User, 'id' | 'accessToken'>;
 
-export type UserLogin = Omit<
-  User,
-  "confirmPassword" | "fullname" | "id" | "accessToken"
->;
+export type UserLogin = Omit<User, 'confirmPassword' | 'fullname' | 'id' | 'accessToken'>;
 
-export type AuthenticatedUser = Omit<User, "confirmPassword" | "password">;
+export type AuthenticatedUser = Omit<User, 'confirmPassword' | 'password'>;
 
 export type AuthStoreState = {
-  user: {
-    loggedIn: boolean;
-    authenticatedUser?: AuthenticatedUser;
-  };
+    user: {
+        loggedIn: boolean;
+        authenticatedUser?: AuthenticatedUser;
+    };
 };
