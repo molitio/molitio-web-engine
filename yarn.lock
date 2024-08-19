@@ -5574,6 +5574,7 @@ __metadata:
   resolution: "@molitio/mwe-dashing-bumblebee-ui@workspace:apps-ui/dashing-bumblebee-ui"
   dependencies:
     "@molitio/mwe-ui-core": "workspace:0.1.2"
+    "@molitio/ui-core": "npm:0.1.2"
     "@types/node": "npm:20.6.3"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
@@ -5751,6 +5752,23 @@ __metadata:
     tailwindcss: 3.4.1
   languageName: unknown
   linkType: soft
+
+"@molitio/ui-core@npm:0.1.2":
+  version: 0.1.2
+  resolution: "@molitio/ui-core@npm:0.1.2"
+  peerDependencies:
+    "@reduxjs/toolkit": 2.2.5
+    formik: 2.4.6
+    jotai: 2.8.3
+    next: 14.1.3
+    postcss: 8.4.36
+    postcss-import: 16.1.0
+    react: 18.2.0
+    react-dom: 18.2.0
+    tailwindcss: 3.4.1
+  checksum: 10/f63830d956c5d1c17fadfe19c8a54212f9393192837dddaf8fd183e7cb0c24b0580dc15b15e88226b3594e9b27de9e64c0097f5b71f859c1cc02a53da5380104
+  languageName: node
+  linkType: hard
 
 "@molitio/ui-core@npm:0.16.24":
   version: 0.16.24
