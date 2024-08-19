@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import Image from 'next/image';
 import type { Metadata } from 'next';
 import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
@@ -29,26 +28,18 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
     return (
         <html data-theme="dashing-bumblebee">
+            
             <body>
+            
                 <section>
                     <Suspense fallback={<Loading />}>
                         <NavRootProvider navRoot={context.navRoot}>
-                            <NavBar
-                                headerText={context.appName}
-                                logo={
-                                    <Image
-                                        src={context.appLogoUrl ?? ''}
-                                        alt={context.appLogoAlt ?? ''}
-                                        width={300}
-                                        height={100}
-                                    />
-                                }
-                            />
+                            <NavBar />
                         </NavRootProvider>
                     </Suspense>
                 </section>
                 <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main className="py-16 my-4">{children}</main>
+                    <main className="w-screen overflow-hidden my-4">{children}</main>
                 </ContentRootProvider>
             </body>
         </html>

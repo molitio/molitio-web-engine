@@ -7,6 +7,5 @@ export type InteractivityBranch = {
 };
 
 export type InteractivityLeaf = {
-    componentName: string;
     expanded?: boolean;
 };

@@ -91,10 +91,14 @@ export const ApplicationContextRoot = {
                 dirll1: {
                     title: 'dirll1 title',
                     subTitle: 'lorem ipsum dolor sit amet',
+                    imageUrl: '',
+                    imageAlt: '',
                 },
                 drill2: {
                     title: 'drill2 title',
                     subTitle: 'lorem ipsum dolor sit amet',
+                    imageUrl: '',
+                    imageAlt: '',
                 },
             },
             branches: {
@@ -104,10 +108,14 @@ export const ApplicationContextRoot = {
                         dirll3: {
                             title: 'dirll3 title',
                             subTitle: 'lorem ipsum dolor sit amet',
+                            imageUrl: '',
+                            imageAlt: '',
                         },
                         dirll4: {
                             title: 'dirll4 title',
                             subTitle: 'lorem ipsum dolor sit amet',
+                            imageUrl: '',
+                            imageAlt: '',
                         },
                     },
                     branches: {
@@ -117,10 +125,14 @@ export const ApplicationContextRoot = {
                                 bateryDrill1: {
                                     title: 'bateryDrill1 title',
                                     subTitle: 'lorem ipsum dolor sit amet',
+                                    imageUrl: '',
+                                    imageAlt: '',
                                 },
                                 bateryDrill2: {
                                     title: 'bateryDrill1 title',
                                     subTitle: 'lorem ipsum dolor sit amet',
+                                    imageUrl: '',
+                                    imageAlt: '',
                                 },
                             },
                         },

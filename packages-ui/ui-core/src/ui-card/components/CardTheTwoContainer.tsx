@@ -16,7 +16,7 @@ const CardTheTwoContainer: React.FC<CardTheTwoContainerProps> = (props) => {
         sm:grid-cols-3 
         gap-4 
         sm:gap-6 
-        p-4
+        
         rounded-box "
         >
             {cards.map((card, i) => (

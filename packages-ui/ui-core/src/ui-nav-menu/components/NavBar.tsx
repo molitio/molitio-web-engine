@@ -3,7 +3,6 @@ import NavMenu from './NavMenu';
 import '../styles/navbar.css';
 
 export type NavBarProps = {
-    logo?: React.ReactNode;
     headerText?: string;
 };
 
@@ -14,11 +13,8 @@ export type NavBarProps = {
  */
 
 const NavBar: React.FC<NavBarProps> = (props) => {
-    const { logo } = props;
     return (
-        <div className="navbar flex bg-primary fixed top-0 w-full z-5 ">
-            {logo}
-
+        <div className="navbar bg-neutral fixed top-0 w-full z-5 ">
             <NavMenu />
         </div>
     );

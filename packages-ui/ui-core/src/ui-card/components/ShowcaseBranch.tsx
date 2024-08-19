@@ -9,7 +9,7 @@ export type ShowcaseBranchProps = {
 const ShowcaseBranch: React.FC<ShowcaseBranchProps> = (props) => {
     const { resourceGalleryBranch } = props;
     return (
-        <div>
+        <div className='flex flex-col'>
             <h1>{resourceGalleryBranch.name}</h1>
             {Object.keys(resourceGalleryBranch.leafs ?? {}).map((resourceLeaf, i) => (
                 <ShowcaseItem
