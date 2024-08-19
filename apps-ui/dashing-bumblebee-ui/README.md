@@ -4,4 +4,4 @@ UI for logistics dashboard
 
 Imported mwe-ui-core components
 
-vercel build 07
+vercel build 08
