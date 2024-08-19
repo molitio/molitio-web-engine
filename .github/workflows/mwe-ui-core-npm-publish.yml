@@ -9,7 +9,7 @@ jobs:
         runs-on: ubuntu-latest
         defaults:
             run:
-                working-directory: packages/mwe-ui-core
+                working-directory: packages-ui/mwe-ui-core
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-node@v3
