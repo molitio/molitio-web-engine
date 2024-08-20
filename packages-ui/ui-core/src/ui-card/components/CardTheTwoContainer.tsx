@@ -12,11 +12,11 @@ const CardTheTwoContainer: React.FC<CardTheTwoContainerProps> = (props) => {
     return (
         <div
             className="bg-primary
-        grid 
+         
         sm:grid-cols-3 
         gap-4 
         sm:gap-6 
-        
+        flex
         rounded-box "
         >
             {cards.map((card, i) => (

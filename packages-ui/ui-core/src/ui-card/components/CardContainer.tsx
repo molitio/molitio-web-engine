@@ -13,9 +13,10 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         <div
             className={`
         bg-primary
-        overflow-hidden
-        grid
-        sm:grid-cols-3 
+        center
+        align-items-center
+        sm:grid-cols-3
+        flex 
         `}
         >
             {cards.map((card, i) => (

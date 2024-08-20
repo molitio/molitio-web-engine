@@ -8,6 +8,7 @@ import {
     CardContainer,
     CardTheTwoContainer,
     ImageCardContainer,
+    HeroTheOneContainer,
     HeroTheTwoContainer,
     contentRootAtomRW,
 } from '@molitio/mwe-ui-core';
@@ -30,56 +31,19 @@ export default function Page() {
         contentRootLeafs['imageSectionThree']?.textContentCollection ?? [];
 
     // Példa parallax tényezőkre
-    const imageSectionOneParallaxFactors = [0.2, 0.2]; // Állítsd be az egyes képeknél
-    const imageSectionTwoParallaxFactors = [0.2, 0.1];
-    const imageSectionThreeParallaxFactors = [0.2, 0.5];
-    const imageSectionOneHeights = ['100px', '100px'];
-    const imageSectionTwoHeights = ['2000px', '2000px'];
-    const imageSectionThreeHeights = ['4000px', '4000px'];
-
-    /* 
-    TODO: Fix single asset retrieval.
-    const backgroundImageUrl: AssetUrl =
-        contentRootLeafs['cover']?.assetUrls[
-            'backgroundImage'
-        ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
+ 
+ 
+  /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
         <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm overflow-hidden">
             <div className="hero-content flex-col ">
-                <div className="position-relative">
-                    <ImageSectionContainer
-                        imageSection={ImageSectionOneData}
-                        parallaxFactors={imageSectionOneParallaxFactors}
-                        initialHeights={imageSectionOneHeights}
-                    />
-                </div>
+                <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
-                <div className="position-relative">
-                    <ImageSectionContainer
-                        imageSection={ImageSectionTwoData}
-                        parallaxFactors={imageSectionTwoParallaxFactors}
-                        initialHeights={imageSectionTwoHeights}
-                    />
-                </div>
-                <div className="container">
-                    <h2 className="text-white font-bold text-5xl text-center">
-                        Miben segítünk Önnek a spedíció során?
-                    </h2>
-                </div>
                 <CardContainer cards={cardData} />
                 <ImageSectionContainer
                     imageSection={ImageSectionThreeData}
-                    initialHeights={imageSectionThreeHeights}
-                    parallaxFactors={imageSectionThreeParallaxFactors}
                 />
-                <div className="container">
-                    <h2 className="font-bold text-white text-5xl text-center">SZOLGÁLTATÁSAINK:</h2>
-                </div>
                 <InfoPanelContainer cards={infoPanelData} />
-
-                <div className="container">
-                    <h2 className="text-white font-bold text-5xl text-center">Vélemények:</h2>
-                </div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
                 <ImageCardContainer cards={imageCardData} />
 

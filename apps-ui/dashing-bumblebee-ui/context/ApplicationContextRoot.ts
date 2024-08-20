@@ -138,18 +138,18 @@ export const ApplicationContextRoot: AppContext = {
                 coverCards: {
                     textContentCollection: [
                         {
-                            title: 'Szállítmányozás',
-                            imageUrl: './truck4.png',
-                            imageAlt: 'Tematikus',
-                            description:
-                                'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
-                        },
-                        {
                             title: 'Vámkezelés',
                             imageUrl: './store3.svg',
                             imageAlt: 'Gyors',
                             description:
                                 'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
+                        },
+                        {
+                            title: 'Szállítmányozás',
+                            imageUrl: './truck4.png',
+                            imageAlt: 'Tematikus',
+                            description:
+                                'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Raktározás',

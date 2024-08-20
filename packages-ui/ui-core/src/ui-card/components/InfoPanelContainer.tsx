@@ -11,7 +11,7 @@ const InfoPanelContainer: React.FC<InfoPanelContainerProps> = (props) => {
     const { cards } = props;
 
     return (
-        <div className="bg-primary text-white p-5">
+        <div className="bg-primary text-white p-7">
             {cards.map((card, i) => (
                 <InfoPanel key={i} title={card.title} description={card.description} />
             ))}
