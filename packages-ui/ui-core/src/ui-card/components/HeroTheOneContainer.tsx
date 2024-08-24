@@ -11,7 +11,7 @@ const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
 
     return (
         <div>
-            <div className="bg-primary text-white">
+            <div className="bg-primary">
                 {cards.map((card, i) => (
                     <HeroTheOne key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} />
                 ))}

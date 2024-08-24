@@ -6,10 +6,10 @@ const HeroTheTwo: React.FC<CardData> = (props) => {
     const { title, description, imageUrl, imageAlt } = props;
 
     return (
-        <div className="container items-stretch">
-            <div className="md:w-1/1 mb-10 md:mb-0  text-center  overflow-hidden">
-                <h2 className="text-5xl font-bold  mb-2 p-2  font-press-start">{title}</h2>
-                <p className="text-3xl font-bold mb-4  font-press-start ">{description}</p>
+        <div className="container ">
+            <div className=" text-center">
+                <h2 className="text-5xl font-bold  mb-2   font-press-start p-5">{title}</h2>
+                <h3 className="text-4xl mb-4  font-press-start">{description}</h3>
             </div>
         </div>
     );

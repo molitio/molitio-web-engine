@@ -12,7 +12,7 @@ const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
     initialHeights = [],
 }) => {
     return (
-        <div className="w-screen">
+        <div className="">
             {imageSection.map((section, i) => (
                 <ImageSection
                     key={i}
