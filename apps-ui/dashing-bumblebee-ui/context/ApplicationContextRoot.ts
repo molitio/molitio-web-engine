@@ -2,27 +2,27 @@ import { AppContext } from '@molitio/mwe-ui-core';
 
 export const ApplicationContextRoot: AppContext = {
     appName: 'Dashing Bumblebee',
-    appLogoUrl: './logo_v1.svg',
+    appLogoUrl: '/logo_v1.svg',
     appLogoAlt: 'Dashing Bumblebee Logo',
     navRoot: {
         home: {
             label: 'Főoldal',
-            iconUrl: './home3.png',
+            iconUrl: '/home3.png',
             path: '/',
         },
         services: {
             label: 'Szolgáltatásaink',
-            iconUrl: './settings4.png',
+            iconUrl: '/settings4.png',
             path: '/services',
         },
         about: {
             label: 'Rólunk',
-            iconUrl: './information2.png',
+            iconUrl: '/information2.png',
             path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
-            iconUrl: './contact3.png',
+            iconUrl: '/contact3.png',
             path: '/contact',
         },
     },
@@ -36,7 +36,7 @@ export const ApplicationContextRoot: AppContext = {
                     },
                     assetUrls: {
                         logoSvg: {
-                            src: './logo_v1.svg',
+                            src: '/logo_v1.svg',
                             alt: 'Logo',
                         },
                     },
@@ -67,7 +67,7 @@ export const ApplicationContextRoot: AppContext = {
                     },
                     assetUrls: {
                         backgroundImage: {
-                            src: './background_combined.png',
+                            src: '/background_combined.png',
                             alt: 'Background',
                         },
                     },
@@ -130,7 +130,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                             title: 'Roadistics Kft.',
                             description: 'A sikerhez vezető út, nálunk kezdődik!',
-                            imageUrl: './roadCoverBlack.png',
+                            imageUrl: '/roadCoverBlack.png',
                             imageAlt: 'Unique system',
                         },
                     ],
@@ -139,21 +139,21 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Vámkezelés',
-                            imageUrl: './store3.svg',
+                            imageUrl: '/store3.svg',
                             imageAlt: 'Gyors',
                             description:
                                 'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
                             title: 'Szállítmányozás',
-                            imageUrl: './truck4.png',
+                            imageUrl: '/truck4.png',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Raktározás',
-                            imageUrl: './store4.png',
+                            imageUrl: '/store4.png',
                             imageAlt: 'Dinamikus',
                             description:
                                 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
@@ -164,19 +164,19 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: '„A megrendelt fuvar gyorsan és pontosan érkezett, a csapat pedig mindig készségesen válaszolt a kérdéseinkre. Különösen értékelem a gyors reakcióidőt és a rugalmasságot, ami tapasztalataim alapján ritka ezen a területen.”',
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                             description: ' - Kovács István',
                         },
                         {
                             title: '„A csapat munkája jelentősen megkönnyítette az export-import folyamatainkat. A vámkezelés gyors és gördülékeny volt, minden dokumentumot időben elkészítettek és benyújtottak. A szakértelmük maximálisan meggyőző volt, így biztos vagyok benne, hogy a jövőben is rájuk bízzuk ezt a feladatot.”',
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                             description: ' - Vincze Áron ',
                         },
                         {
                             title: '„A Road-istics raktározási megoldásai minden szempontból meghaladták az elvárásainkat. A raktár biztonságos és jól karbantartott, az áruk kezelése pedig precíz és szakszerű. Különösen tetszett, hogy lehetővé tették a valós idejű nyomon követést.”',
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                             description: ' - Nagy Károly',
                         },
@@ -185,31 +185,31 @@ export const ApplicationContextRoot: AppContext = {
                 imageCards: {
                     textContentCollection: [
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                         {
-                            imageUrl: './fast.svg',
+                            imageUrl: '/fast.svg',
                             imageAlt: '',
                         },
                     ],
@@ -217,7 +217,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionOne: {
                     textContentCollection: [
                         {
-                            imageUrl: './highWayOne.png',
+                            imageUrl: '/highWayOne.png',
                             imageAlt: '',
                         },
                     ],
@@ -225,7 +225,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionTwo: {
                     textContentCollection: [
                         {
-                            imageUrl: './highWayOne.png',
+                            imageUrl: '/highWayOne.png',
                             imageAlt: '',
                         },
                     ],
@@ -233,7 +233,7 @@ export const ApplicationContextRoot: AppContext = {
                 imageSectionThree: {
                     textContentCollection: [
                         {
-                            imageUrl: './highway.jpg',
+                            imageUrl: '/highway.jpg',
                             imageAlt: '',
                         },
                     ],
