@@ -89,5 +89,5 @@
         "tslib": "2.4.1",
         "typescript": "5.2.2"
     },
-    "stableVersion": "0.1.1"
+    "stableVersion": "0.1.3"
 }
