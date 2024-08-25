@@ -3,8 +3,6 @@
 import {
     InfoPanelContainer,
     CardData,
-    ImageSectionData,
-    ImageSectionContainer,
     CardContainer,
     CardTheTwoContainer,
     ImageCardContainer,
@@ -16,36 +14,26 @@ import { useAtom } from 'jotai';
 
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
-
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
-
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
-    const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
-    const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne']?.textContentCollection ?? [];
-    const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo']?.textContentCollection ?? [];
-    const ImageSectionThreeData: ImageSectionData[] =
-        contentRootLeafs['imageSectionThree']?.textContentCollection ?? [];
 
-    // Példa parallax tényezőkre
+    
  
  
   /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm overflow-hidden">
-            <div className="hero-content flex-col ">
+        <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm ">
+            <div className="hero-content container flex  flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />
-                <ImageSectionContainer
-                    imageSection={ImageSectionThreeData}
-                />
                 <InfoPanelContainer cards={infoPanelData} />
                 <CardTheTwoContainer cards={cardTheTwoData} />
-                <ImageCardContainer cards={imageCardData} />
+
 
                 {/* 
                 

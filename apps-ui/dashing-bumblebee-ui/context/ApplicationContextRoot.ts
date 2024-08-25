@@ -120,7 +120,7 @@ export const ApplicationContextRoot: AppContext = {
                             title: '25 éve az Ön szolgálatában!',
                             description:
                                 'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                            imageUrl: '',
+                            imageUrl: '/roadCoverBlack.png',
                             imageAlt: 'Tematikus',
                         },
                     ],

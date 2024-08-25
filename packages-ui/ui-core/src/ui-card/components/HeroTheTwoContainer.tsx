@@ -11,7 +11,7 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
 
     return (
         <div>
-            <div className="container overflow-hidden ">
+            <div className="container">
                 {cards.map((card, i) => (
                     <HeroTheTwo
                         key={i}

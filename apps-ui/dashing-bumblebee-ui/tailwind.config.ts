@@ -10,7 +10,6 @@ module.exports = {
             md: '768px', // Medium
             lg: '1024px', // Large
             xl: '1280px', // Extra Large
-            xxl: '1920px', // Extra Extra Large
         },
         extend: {
             zIndex: {
