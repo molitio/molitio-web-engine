@@ -1,8 +1,6 @@
 import React from 'react';
 import { ImageCardData } from '../types';
 
-import '../style/style.css';
-
 const ImageCard: React.FC<ImageCardData> = (props) => {
     const { imageUrl, imageAlt } = props;
     return (

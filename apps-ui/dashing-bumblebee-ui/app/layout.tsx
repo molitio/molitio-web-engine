@@ -14,7 +14,7 @@ const MOCK_APPLICATION_CONTEXT = async () => {
 };
 
 async function getAppContext() {
-    'use server';
+    'use client';
     return await MOCK_APPLICATION_CONTEXT();
 }
 
@@ -37,7 +37,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                     </Suspense>
                 </section>
                 <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main className="w-screen overflow-hidden my-4">{children}</main>
+                    <main>{children}</main>
                 </ContentRootProvider>
             </body>
         </html>

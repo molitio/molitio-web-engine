@@ -15,7 +15,7 @@ const ImageSection: React.FC<ImageSectionProps> = ({
     const [containerHeight] = useState(initialHeight);
 
     return (
-        <div className="relative w-full overflow-hidden" style={{ height: containerHeight }}>
+        <div className=" w-full " style={{ height: containerHeight }}>
             <img
                 src={imageUrl}
                 alt={imageAlt}
