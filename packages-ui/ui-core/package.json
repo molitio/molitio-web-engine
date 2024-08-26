@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-ui-core",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "author": "Peter Koller",
     "description": "Re-usable React UI Components",
     "license": "MIT",
