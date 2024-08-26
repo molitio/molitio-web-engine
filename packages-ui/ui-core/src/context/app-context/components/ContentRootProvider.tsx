@@ -3,7 +3,7 @@
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
 import { ContentRoot } from '../types';
-import {  initContentRootStore } from '../../app-context';
+import { initContentRootStore } from '../../app-context';
 
 export type ContentRootProviderProps = React.PropsWithChildren & {
     contentRoot?: ContentRoot;
@@ -14,7 +14,13 @@ const ContentRootProvider: React.FC<ContentRootProviderProps> = (props) => {
 
     const store = useMemo(() => initContentRootStore(contentRoot ?? {}), [contentRoot]);
 
-    return <Provider store={store}>{children}</Provider>;
+    return (
+        <Provider store={store}>
+            {JSON.stringify(store)}
+            {JSON.stringify(contentRoot)}
+            {children}
+        </Provider>
+    );
 };
 
 export default ContentRootProvider;

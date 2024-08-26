@@ -2,8 +2,8 @@ import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
-import Loading from './loading';
 
+import Loading from './loading';
 //TODO: when coming from conig DB it will be depricated
 const MOCK_APPLICATION_CONTEXT = async () => {
     return new Promise<AppContext>((resolve) => {
@@ -36,12 +36,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         </NavRootProvider>
                     </Suspense>
                 </section>
-                <Suspense fallback={<Loading />}>
-                    <main>
-                        {JSON.stringify(context)}
+                <main>
+                    <Suspense fallback={<Loading />}>
                         <ContentRootProvider contentRoot={context.contentRoot}>{children}</ContentRootProvider>
-                    </main>
-                </Suspense>
+                    </Suspense>
+                </main>
             </body>
         </html>
     );
