@@ -14,13 +14,7 @@ const ContentRootProvider: React.FC<ContentRootProviderProps> = (props) => {
 
     const store = useMemo(() => initContentRootStore(contentRoot ?? {}), [contentRoot]);
 
-    return (
-        <Provider store={store}>
-            {JSON.stringify(store)}
-            {JSON.stringify(contentRoot)}
-            {children}
-        </Provider>
-    );
+    return <Provider store={store}>{children}</Provider>;
 };
 
 export default ContentRootProvider;

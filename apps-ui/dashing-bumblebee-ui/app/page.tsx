@@ -21,19 +21,16 @@ export default function Page() {
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
 
-    
- 
- 
-  /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
+    /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
         <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm ">
+            {JSON.stringify(contentRoot)}
             <div className="hero-content container flex  flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />
                 <InfoPanelContainer cards={infoPanelData} />
                 <CardTheTwoContainer cards={cardTheTwoData} />
-
 
                 {/* 
                 
