@@ -7,22 +7,22 @@ export const ApplicationContextRoot: AppContext = {
     navRoot: {
         home: {
             label: 'Főoldal',
-            iconUrl: '/home3.png',
+            iconUrl: '/lamp.svg',
             path: '/',
         },
         services: {
             label: 'Szolgáltatásaink',
-            iconUrl: '/settings4.png',
+            iconUrl: '/settings.svg',
             path: '/services',
         },
         about: {
             label: 'Rólunk',
-            iconUrl: '/information2.png',
+            iconUrl: '/request.svg',
             path: '/about',
         },
         contact: {
             label: 'Kapcsolat',
-            iconUrl: '/contact3.png',
+            iconUrl: '/document.svg',
             path: '/contact',
         },
     },
@@ -120,7 +120,7 @@ export const ApplicationContextRoot: AppContext = {
                             title: '25 éve az Ön szolgálatában!',
                             description:
                                 'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                            imageUrl: '/roadCoverBlack.png',
+                            imageUrl: '/background_combined.png',
                             imageAlt: 'Tematikus',
                         },
                     ],
@@ -130,7 +130,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                             title: 'Roadistics Kft.',
                             description: 'A sikerhez vezető út, nálunk kezdődik!',
-                            imageUrl: '/roadCoverBlack.png',
+                            imageUrl: '/background_combined.png',
                             imageAlt: 'Unique system',
                         },
                     ],
@@ -139,21 +139,21 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Vámkezelés',
-                            imageUrl: '/store3.svg',
+                            imageUrl: '/ware.svg',
                             imageAlt: 'Gyors',
                             description:
                                 'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
                             title: 'Szállítmányozás',
-                            imageUrl: '/truck4.png',
+                            imageUrl: '/ware.svg',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Raktározás',
-                            imageUrl: '/store4.png',
+                            imageUrl: '/ware.svg',
                             imageAlt: 'Dinamikus',
                             description:
                                 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',

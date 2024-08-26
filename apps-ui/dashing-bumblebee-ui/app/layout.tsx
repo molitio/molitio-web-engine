@@ -14,7 +14,7 @@ const MOCK_APPLICATION_CONTEXT = async () => {
 };
 
 async function getAppContext() {
-    'use server';
+    'use client';
     return await MOCK_APPLICATION_CONTEXT();
 }
 
