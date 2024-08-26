@@ -36,9 +36,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         </NavRootProvider>
                     </Suspense>
                 </section>
-                <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main>{children}</main>
-                </ContentRootProvider>
+                <Suspense fallback={<Loading />}>
+                    <main>
+                        {JSON.stringify(context)}
+                        <ContentRootProvider contentRoot={context.contentRoot}>{children}</ContentRootProvider>
+                    </main>
+                </Suspense>
             </body>
         </html>
     );
