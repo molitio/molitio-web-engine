@@ -1,12 +1,16 @@
 import React from 'react';
 import type { ImageCardData } from '../types';
 import ImageCard from './ImageCard';
-
+import { useAtom } from 'jotai';
+import { contentRootAtomRW } from '../../context';
 export type ImageCardContainerProps = {
     cards: ImageCardData[];
 };
 
 const ImageCardContainer: React.FC<ImageCardContainerProps> = (props) => {
+    const [contentRoot] = useAtom(contentRootAtomRW);
+    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    const imageCardData: ImageCardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
     const { cards } = props;
 
     return (
@@ -20,7 +24,7 @@ const ImageCardContainer: React.FC<ImageCardContainerProps> = (props) => {
         rounded-box 
         `}
         >
-            {cards.map((card, i) => (
+            {imageCardData.map((card, i) => (
                 <ImageCard key={i} imageUrl={card.imageUrl} imageAlt={card.imageAlt} />
             ))}
         </div>

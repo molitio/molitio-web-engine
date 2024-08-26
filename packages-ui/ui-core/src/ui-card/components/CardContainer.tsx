@@ -1,12 +1,17 @@
 import React from 'react';
 import type { CardData } from '../types';
 import Card from './Card';
+import { contentRootAtomRW } from '../../context';
+import { useAtom } from 'jotai';
 
 export type CardContainerProps = {
     cards: CardData[];
 };
 
 const CardContainer: React.FC<CardContainerProps> = (props) => {
+    const [contentRoot] = useAtom(contentRootAtomRW);
+    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
     const { cards } = props;
 
     return (
@@ -19,7 +24,7 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
         flex 
         `}
         >
-            {cards.map((card, i) => (
+            {cardData.map((card, i) => (
                 <Card
                     key={i}
                     title={card.title}
