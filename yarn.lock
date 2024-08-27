@@ -118,21 +118,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/composition@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/composition@npm:2.7.7"
+"@apollo/composition@npm:2.8.5":
+  version: 2.8.5
+  resolution: "@apollo/composition@npm:2.8.5"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-graphs": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.8.5"
+    "@apollo/query-graphs": "npm:2.8.5"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/19c27c857ccf18d037bc3257c4425c04c00ccd67dc04e976364fe0a93f4235453b2058f40998f4b01b96b7a5be45d42aff78caf5d3f147dd991b51144235a77a
+  checksum: 10/10740580465e31d848dbbf2ec4a866d39c03dabf07560c4fa535b3cad127e59647430f542a2eee426fe5820b0d549bb9648b512e514a00ad9b1cc86b80f92e81
   languageName: node
   linkType: hard
 
-"@apollo/federation-internals@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/federation-internals@npm:2.7.7"
+"@apollo/federation-internals@npm:2.8.5":
+  version: 2.8.5
+  resolution: "@apollo/federation-internals@npm:2.8.5"
   dependencies:
     "@types/uuid": "npm:^9.0.0"
     chalk: "npm:^4.1.0"
@@ -140,17 +140,17 @@ __metadata:
     uuid: "npm:^9.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/b86390685747ad3f4d19022083e4cd95c26bcb2248fa63ab55fc98bd6312a02e5d966c2ee00adbb0113dce9a907ca8475c3df4604847f79a2aff0e1e8316940a
+  checksum: 10/0af264155e73e866a49b22ad9e7822ec6e7125c8c381f4e2283ff6afd81f94370fe60bf1ddd2bd35b54c092246c02a196847ab5d583cb1101cc581737cfe5425
   languageName: node
   linkType: hard
 
-"@apollo/gateway@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/gateway@npm:2.7.7"
+"@apollo/gateway@npm:2.8.5":
+  version: 2.8.5
+  resolution: "@apollo/gateway@npm:2.8.5"
   dependencies:
-    "@apollo/composition": "npm:2.7.7"
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-planner": "npm:2.7.7"
+    "@apollo/composition": "npm:2.8.5"
+    "@apollo/federation-internals": "npm:2.8.5"
+    "@apollo/query-planner": "npm:2.8.5"
     "@apollo/server-gateway-interface": "npm:^1.1.0"
     "@apollo/usage-reporting-protobuf": "npm:^4.1.0"
     "@apollo/utils.createhash": "npm:^2.0.0"
@@ -168,7 +168,7 @@ __metadata:
     node-fetch: "npm:^2.6.7"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/c180113fa718e03070e883ff3acaddb149c73c7e11a1d61c302095d3329e6ede7165ddb503e1aa5ca30e3390b5415432a3fff9df34af5c4707c715c28b27bc48
+  checksum: 10/699d473a6f231fb5252b63e91e01aad18c9a54f5ffc1b233c2a6af4583ea672ed045b027d58cd54bd4273e3d5dd1d9ff9700499db6fc46c138791944004120d0
   languageName: node
   linkType: hard
 
@@ -195,33 +195,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/query-graphs@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/query-graphs@npm:2.7.7"
+"@apollo/query-graphs@npm:2.8.5":
+  version: 2.8.5
+  resolution: "@apollo/query-graphs@npm:2.8.5"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.8.5"
     deep-equal: "npm:^2.0.5"
     ts-graphviz: "npm:^1.5.4"
     uuid: "npm:^9.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/85a3d7fae221e65247829be27fb9af1b50497553c6ce9cf01dc3b965558dced959ea182728d31865f81826d7eba779b0ec7f65621c6ffae0733a3f9666f999d0
+  checksum: 10/458715ca12a3bce8fbb122af72dfda04e79722fd7d66f5b124fa5d77dde572a56f25b742971cbd4bf15d82403f7f773fe7e3739b3c70e2b9cb4743a83ae6da6c
   languageName: node
   linkType: hard
 
-"@apollo/query-planner@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/query-planner@npm:2.7.7"
+"@apollo/query-planner@npm:2.8.5":
+  version: 2.8.5
+  resolution: "@apollo/query-planner@npm:2.8.5"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-graphs": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.8.5"
+    "@apollo/query-graphs": "npm:2.8.5"
     "@apollo/utils.keyvaluecache": "npm:^2.1.0"
     chalk: "npm:^4.1.0"
     deep-equal: "npm:^2.0.5"
     pretty-format: "npm:^29.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/26ff81a34654301cf5122b0f43da90ab0c0678888d1545a54d5029003675122a3aee192bef852d3ad094396cdb044fd00e53ce8d5e2718f738011658599b0aa9
+  checksum: 10/72e395651e8c365e892544704c6443f77f0acbaaa7c8457b7c9619cadac14b9c2ced65f1405c0029dec25e1bd009dc1c58884478a6fe2c5dd1fdf7c964e82e14
   languageName: node
   linkType: hard
 
@@ -5622,7 +5622,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-resource-hub-api@workspace:apps-api/resource-hub-api"
   dependencies:
-    "@apollo/gateway": "npm:2.7.7"
+    "@apollo/gateway": "npm:2.8.5"
     "@apollo/server": "npm:4.10.4"
     "@as-integrations/fastify": "npm:2.1.1"
     "@nestjs/apollo": "npm:12.1.0"
