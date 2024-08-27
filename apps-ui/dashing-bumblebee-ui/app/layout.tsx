@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
-import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/ui-core';
+import { NavBar, NavRootProvider, AppContext, ContentRootProvider } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
-import Loading from './loading';
 
+import Loading from './loading';
 //TODO: when coming from conig DB it will be depricated
 const MOCK_APPLICATION_CONTEXT = async () => {
     return new Promise<AppContext>((resolve) => {
@@ -14,7 +14,7 @@ const MOCK_APPLICATION_CONTEXT = async () => {
 };
 
 async function getAppContext() {
-    'use server';
+    'use client';
     return await MOCK_APPLICATION_CONTEXT();
 }
 
@@ -28,9 +28,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
     return (
         <html data-theme="dashing-bumblebee">
-            
             <body>
-            
                 <section>
                     <Suspense fallback={<Loading />}>
                         <NavRootProvider navRoot={context.navRoot}>
@@ -38,9 +36,11 @@ export default async function RootLayout({ children }: { children: React.ReactNo
                         </NavRootProvider>
                     </Suspense>
                 </section>
-                <ContentRootProvider contentRoot={context.contentRoot}>
-                    <main className="w-screen overflow-hidden my-4">{children}</main>
-                </ContentRootProvider>
+                <main>
+                    <Suspense fallback={<Loading />}>
+                        <ContentRootProvider contentRoot={context.contentRoot}>{children}</ContentRootProvider>
+                    </Suspense>
+                </main>
             </body>
         </html>
     );

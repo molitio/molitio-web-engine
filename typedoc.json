@@ -6,7 +6,7 @@
     "includeVersion": true,
     "logLevel": "Verbose",
     "excludeNotDocumented": true,
-    "exclude": [".yarn/**/*", "packages-ui/ui-core-test/src/**/*"],
+    "exclude": [".yarn/**/*", "packages-ui/mwe-ui-core-test/src/**/*"],
     "out": "./artifacts/docs",
     "compilerOptions": {
         "jsx": "react-jsx"

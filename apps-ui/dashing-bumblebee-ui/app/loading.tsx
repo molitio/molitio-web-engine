@@ -1,4 +1,4 @@
-import { NavBarLoading } from '@molitio/ui-core';
+import { NavBarLoading } from '@molitio/mwe-ui-core';
 
 export default function Loading() {
     return <NavBarLoading />;

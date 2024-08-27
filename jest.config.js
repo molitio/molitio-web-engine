@@ -5,7 +5,7 @@ module.exports = {
     rootDir: './',
     projects: [
         {
-            displayName: 'ui-core',
+            displayName: 'mwe-ui-core',
             preset: 'ts-jest',
             testEnvironment: 'jsdom',
             moduleFileExtensions: ['ts', 'js', 'tsx', 'scss'],

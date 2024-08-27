@@ -1,12 +1,9 @@
 .navbar {
     @apply flex justify-center w-full text-[white];
-    
-   
 }
 
 .nav-menu {
-    @apply flex items-center gap-4 ;
-    
+    @apply flex items-center gap-4;
 }
 .nav-item {
     @apply flex items-center  transition-[background-color] duration-[5s] ease-[ease] rounded-lg  border-[#ddd] hover:bg-[#eabebe] hover:text-[white] hover:text-[bold] p-2;
@@ -15,12 +12,11 @@
     @apply bg-[#F5F5BC] text-[white];
 }
 .icon-container {
-    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2 ;
+    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2;
     @apply bg-[#66b353] text-[white];
 }
 .icon {
-    @apply w-full h-auto ;
-    
+    @apply w-full h-auto;
 }
 .label {
     @apply text-base font-[bold];

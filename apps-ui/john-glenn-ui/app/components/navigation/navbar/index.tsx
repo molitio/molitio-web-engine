@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
-import { Button, ButtonType } from '@molitio/ui-core';
+import { Button, ButtonType } from '@molitio/mwe-ui-core';
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
     return (

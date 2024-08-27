@@ -1,6 +1,6 @@
 {
-    "name": "@molitio/ui-core",
-    "version": "0.1.2",
+    "name": "@molitio/mwe-ui-core",
+    "version": "0.1.4",
     "author": "Peter Koller",
     "description": "Re-usable React UI Components",
     "license": "MIT",
@@ -9,7 +9,7 @@
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [
         "molitio",
-        "ui-core"
+        "mwe-ui-core"
     ],
     "bugs": {
         "url": "https://github.com/molitio/molitio-web-engine/issues",
@@ -24,10 +24,10 @@
         "build": "rm -rf ./dist && yarn package:builder && yarn rollup -c",
         "build:watch": "yarn rollup -c -w",
         "package:builder": "node ./package-builder/package-builder.js",
-        "publish-ui-core": "cd dist && npm publish --access=public --auth-type=legacy && cd ..",
+        "publish-mwe-ui-core": "yarn build && cd dist && npm publish --access=public --auth-type=legacy && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
-        "create-artifacts": "mkdir -p ../../.artifacts/ui-core/ && npm pack --pack-destination ../../.artifacts/ui-core/"
+        "create-artifacts": "mkdir -p ../../.artifacts/mwe-ui-core/ && npm pack --pack-destination ../../.artifacts/mwe-ui-core/"
     },
     "peerDependencies": {
         "@reduxjs/toolkit": "2.2.5",
@@ -89,5 +89,5 @@
         "tslib": "2.4.1",
         "typescript": "5.2.2"
     },
-    "stableVersion": "0.1.1"
+    "stableVersion": "0.1.3"
 }

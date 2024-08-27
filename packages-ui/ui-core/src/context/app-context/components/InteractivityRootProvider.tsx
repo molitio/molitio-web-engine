@@ -11,7 +11,7 @@ export type InteractivityRootProviderProps = React.PropsWithChildren & {
 const InteractivityRootProvider: React.FC<InteractivityRootProviderProps> = (props) => {
     const { children, contentRoot } = props;
 
-    const store = useMemo(() => initContentRootStore(contentRoot ?? {}), [ contentRoot]);
+    const store = useMemo(() => initContentRootStore(contentRoot ?? {}), [contentRoot]);
 
     return <Provider store={store}>{children}</Provider>;
 };

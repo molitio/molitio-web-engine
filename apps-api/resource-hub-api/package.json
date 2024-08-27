@@ -1,6 +1,6 @@
 {
-    "name": "@molitio/resource-hub-api",
-    "version": "0.1.1",
+    "name": "@molitio/mwe-resource-hub-api",
+    "version": "0.1.4",
     "description": "Resource Distribution Engine",
     "author": "Peter Koller",
     "license": "MIT",
@@ -14,7 +14,7 @@
     "homepage": "https://github.com/molitio/molitio-web-engine#readme",
     "keywords": [
         "molitio",
-        "ui-core"
+        "mwe-ui-core"
     ],
     "scripts": {
         "nest:cli": "nest --",

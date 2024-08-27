@@ -1,83 +1,38 @@
 'use client';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ApplicationContextRoot } from '../context';
+
 import {
     InfoPanelContainer,
     CardData,
-    ImageSectionData,
-    ImageCardData,
-    ImageSectionContainer,
     CardContainer,
     CardTheTwoContainer,
     ImageCardContainer,
-    HeroTheTwoContainer,
     HeroTheOneContainer,
+    HeroTheTwoContainer,
     contentRootAtomRW,
-    AssetUrl,
-} from '@molitio/ui-core';
+} from '@molitio/mwe-ui-core';
 import { useAtom } from 'jotai';
-
-
 
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
+    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
+    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
+    const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
+    const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
 
-    const contentRootLeafs = contentRoot['home'].leafs ?? {};
-
-    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo'].textContentCollection ?? [];
-    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne'].textContentCollection ?? [];
-    const cardData: CardData[] = contentRootLeafs['coverCards'].textContentCollection ?? [];
-    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary'].textContentCollection ?? [];
-    const infoPanelData: CardData[] = contentRootLeafs['infoPanels'].textContentCollection ?? [];
-    const imageCardData: CardData[] = contentRootLeafs['imageCards'].textContentCollection ?? [];
-    const ImageSectionOneData: ImageSectionData[] = contentRootLeafs['imageSectionOne'].textContentCollection ?? [];
-    const ImageSectionTwoData: ImageSectionData[] = contentRootLeafs['imageSectionTwo'].textContentCollection ?? [];
-    const ImageSectionThreeData: ImageSectionData[] = contentRootLeafs['imageSectionThree'].textContentCollection ?? [];
-
-    // Példa parallax tényezőkre
-    const imageSectionOneParallaxFactors = [0.2, 0.2]; // Állítsd be az egyes képeknél
-    const imageSectionTwoParallaxFactors = [0.2, 0.1];
-    const imageSectionThreeParallaxFactors = [0.2, 0.5];
-    const imageSectionOneHeights = ['100px', '100px'];
-    const imageSectionTwoHeights = ['2000px', '2000px'];
-    const imageSectionThreeHeights = ['4000px', '4000px'];
-
-    
-    /* 
-    TODO: Fix single asset retrieval.
-    const backgroundImageUrl: AssetUrl =
-        contentRootLeafs['cover']?.assetUrls[
-            'backgroundImage'
-        ]; /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
+    /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm overflow-hidden">
-            <div className="hero-content flex-col ">
-                <div className='position-relative'>
-                    <ImageSectionContainer imageSection={ImageSectionOneData} parallaxFactors={imageSectionOneParallaxFactors} initialHeights={imageSectionOneHeights}/>
-                </div>
+        <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm ">
+            { /* JSON.stringify(contentRoot) */} 
+            <div className="hero-content container flex  flex-col">
+                <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
-                <div className='position-relative'>
-                    <ImageSectionContainer imageSection={ImageSectionTwoData} parallaxFactors={imageSectionTwoParallaxFactors} initialHeights={imageSectionTwoHeights}/>
-                </div>
-                <div className='container'>
-                    <h2 className='text-white font-bold text-5xl text-center'>Miben segítünk Önnek a spedíció során?</h2>
-                </div>
                 <CardContainer cards={cardData} />
-                <ImageSectionContainer imageSection={ImageSectionThreeData} initialHeights={imageSectionThreeHeights} parallaxFactors={imageSectionThreeParallaxFactors}/>
-                <div className='container'>
-                    <h2 className='font-bold text-white text-5xl text-center'>SZOLGÁLTATÁSAINK:</h2>
-                </div>
                 <InfoPanelContainer cards={infoPanelData} />
-                
-                <div className='container'>
-                    <h2 className='text-white font-bold text-5xl text-center'>Vélemények:</h2>
-                </div>
                 <CardTheTwoContainer cards={cardTheTwoData} />
                 <ImageCardContainer cards={imageCardData} />
-     
-                
-
                 {/* 
                 
                     

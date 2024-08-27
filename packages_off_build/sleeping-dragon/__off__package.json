@@ -8,7 +8,7 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@molitio/ui-core": "workspace:*",
+        "@molitio/mwe-ui-core": "workspace:*",
         "next": "12.2.5",
         "@next/font": "14.1.4",
         "react": "18.2.0",

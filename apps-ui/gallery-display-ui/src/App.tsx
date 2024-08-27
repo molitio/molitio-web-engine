@@ -1,6 +1,6 @@
 import React from 'react';
-import { ResourceGalleryRoot, ShowcaseContainer, initResourceGalleryStore } from '@molitio/ui-core';
-import { NavBar, NavRootProvider } from '@molitio/ui-core';
+import { ResourceGalleryRoot, ShowcaseContainer, initResourceGalleryStore } from '@molitio/mwe-ui-core';
+import { NavBar, NavRootProvider } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
 import './App.css';
 import { Provider } from 'jotai';
@@ -13,7 +13,7 @@ const App: React.FC = () => {
     return (
         <div className="App bg-black text-white">
             <NavRootProvider navRoot={ApplicationContextRoot.navRoot}>
-                <NavBar/>
+                <NavBar />
             </NavRootProvider>
             <Provider store={store}>
                 <ShowcaseContainer />

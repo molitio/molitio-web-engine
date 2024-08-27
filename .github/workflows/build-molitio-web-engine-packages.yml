@@ -25,8 +25,8 @@
 #     - name: Upload UI Core 
 #       uses: actions/upload-artifact@v3
 #       with: 
-#         name: ui-core
-#         path: packages/ui-core/dist
+#         name: mwe-ui-core
+#         path: packages/mwe-ui-core/dist
 #     - name: Upload John-Glenn
 #       uses: actions/upload-artifact@v3
 #       with: 

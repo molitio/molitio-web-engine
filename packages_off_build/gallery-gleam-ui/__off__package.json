@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "npm run install-local-packages && next dev",
-        "install-local-packages": "npm run clear-cache && npm i ../../molitio-core/ui-core/.artifact/molitio-ui-core-0.12.3-alpha.0.tgz",
+        "install-local-packages": "npm run clear-cache && npm i ../../molitio-core/mwe-ui-core/.artifact/molitio-mwe-ui-core-0.12.3-alpha.0.tgz",
         "build": "npm run clear-cache && next build",
         "start": "next start",
         "lint": "next lint"
