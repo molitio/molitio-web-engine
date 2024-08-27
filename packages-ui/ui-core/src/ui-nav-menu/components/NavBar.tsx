@@ -14,7 +14,7 @@ export type NavBarProps = {
 
 const NavBar: React.FC<NavBarProps> = (props) => {
     return (
-        <div className="navbar bg-neutral fixed top-0 w-full z-5 ">
+        <div className="navbar fixed top-0 w-full z-5 ">
             <NavMenu />
         </div>
     );

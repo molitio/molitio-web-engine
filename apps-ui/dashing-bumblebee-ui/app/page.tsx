@@ -24,9 +24,9 @@ export default function Page() {
 
     /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
-        <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm ">
+        <section className="hero bg-gray-800">
             { /* JSON.stringify(contentRoot) */} 
-            <div className="hero-content container flex  flex-col">
+            <div className="hero-content flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />

@@ -12,17 +12,10 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
-    const { cards } = props;
-
+    
     return (
         <div
-            className={`
-        bg-primary
-        center
-        align-items-center
-        sm:grid-cols-3
-        flex 
-        `}
+            className={"bg-primary center align-items-center sm:grid-cols-12 flex"}
         >
             {cardData.map((card, i) => (
                 <Card

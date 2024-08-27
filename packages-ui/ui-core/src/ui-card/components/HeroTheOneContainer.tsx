@@ -12,7 +12,7 @@ const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
-    const { cards } = props;
+    
 
     return (
         <div>

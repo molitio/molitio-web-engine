@@ -15,14 +15,7 @@ const ImageCardContainer: React.FC<ImageCardContainerProps> = (props) => {
 
     return (
         <div
-            className={`
-        bg-primary
-        flex
-        mb-4
-        pl-10
-        sm:grid-cols-7
-        rounded-box 
-        `}
+            className={"bg-primary flex mb-4 pl-10 sm:grid-cols-7 rounded-box "}
         >
             {imageCardData.map((card, i) => (
                 <ImageCard key={i} imageUrl={card.imageUrl} imageAlt={card.imageAlt} />
