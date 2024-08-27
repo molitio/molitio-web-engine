@@ -11,7 +11,7 @@ export type CardTheTwoContainerProps = {
 const CardTheTwoContainer: React.FC<CardTheTwoContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
-    const cardTheTwoData: CardData[] = contentRootLeafs['cardTheTwo']?.textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
     const { cards } = props;
 
     return (

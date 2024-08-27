@@ -12,7 +12,7 @@ export type InfoPanelContainerProps = {
 const InfoPanelContainer: React.FC<InfoPanelContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
-    const infoPanelData: CardData[] = contentRootLeafs['infoPanel']?.textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
     const { cards } = props;
 
     return (

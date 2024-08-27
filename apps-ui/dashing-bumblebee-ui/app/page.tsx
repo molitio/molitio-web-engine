@@ -20,18 +20,19 @@ export default function Page() {
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
     const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
+    const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
 
     /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
         <section className="hero bg-background bg-gradient-to-r from-green-100 backdrop-blur-sm ">
-            {JSON.stringify(contentRoot)}
+            { /* JSON.stringify(contentRoot) */} 
             <div className="hero-content container flex  flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />
                 <InfoPanelContainer cards={infoPanelData} />
                 <CardTheTwoContainer cards={cardTheTwoData} />
-
+                <ImageCardContainer cards={imageCardData} />
                 {/* 
                 
                     
