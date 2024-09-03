@@ -19,7 +19,7 @@ const CardTheTwoContainer: React.FC<CardTheTwoContainerProps> = (props) => {
             className="bg-primary sm:grid-cols-3 gap-4 sm:gap-6 flex rounded-box "
         >
             {cardTheTwoData.map((card, i) => (
-                <CardTheTwo key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} />
+                <CardTheTwo key={i} title={card.title} description={card.description} imageUrl={card.imageUrl} imageAlt={card.imageAlt}  />
             ))}
         </div>
     );
