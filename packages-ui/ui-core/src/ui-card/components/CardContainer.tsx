@@ -8,14 +8,13 @@ export type CardContainerProps = {
     cards: CardData[];
 };
 
-const CardContainer: React.FC<CardContainerProps> = (props) => {
+const CardContainer: React.FC<CardContainerProps> = ( ) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
-    
     return (
         <div
-            className={"bg-primary center align-items-center sm:grid-cols-12 flex"}
+            className={"text-white bg-primary flex mb-4 sm:grid-cols-1 rounded-box "}
         >
             {cardData.map((card, i) => (
                 <Card

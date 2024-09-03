@@ -5,10 +5,10 @@
 }
 
 .nav-menu {
-    @apply flex items-center gap-4;
+    @apply flex items-center gap-4 ;
 }
 .nav-item {
-    @apply flex items-center  transition-[background-color] duration-[5s] ease-[ease] rounded-lg  border-[#ddd] hover:bg-[#eabebe] hover:text-[white] hover:text-[bold] p-2;
+    @apply   flex items-center transition-[background-color] duration-[5s] ease-[ease] border-[#ddd] hover:bg-[#eabebe] hover:text-[white] hover:text-[bold] p-2;
 }
 .nav-item.selected {
     @apply bg-[#F5F5BC] text-[white];
@@ -18,11 +18,17 @@
     @apply bg-[#66b353] text-[white];
 }
 .icon {
-    @apply w-full h-auto;
+    @apply w-full h-auto ;
+
 }
 .label {
     @apply text-base font-[bold];
+    @apply hidden !important;
+     /* Hide on medium screens and below with higher specificity */
 }
+
+
+
 .selected {
     @apply bg-[#F5F5BC] text-[white];
 }

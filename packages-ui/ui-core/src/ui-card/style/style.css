@@ -6,8 +6,15 @@
 @tailwind components;
 @tailwind utilities;
 
+.card {
+    padding: 20px;
+    align-items: center;
+    margin: 10px;
+}
 
-
-.font-press-start {
-    padding: 10px;
+.image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%; 
 }
