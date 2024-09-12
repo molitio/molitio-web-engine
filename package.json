@@ -2,7 +2,7 @@
     "name": "@molitio/web-engine",
     "private": true,
     "packageManager": "yarn@4.1.1",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {
@@ -63,7 +63,7 @@
         "@typescript-eslint/parser": "6.5.0",
         "babel-jest": "29.7.0",
         "core-js": "3.30.2",
-        "eslint": "8.28.0",
+        "eslint": "^8.56.0",
         "eslint-config-prettier": "9.0.0",
         "eslint-config-react-app": "7.0.1",
         "eslint-plugin-react": "7.33.2",
@@ -85,7 +85,7 @@
         "typescript": "5.2.2"
     },
     "resolutions": {
-        "@molitio/mwe-ui-core": "workspace:0.1.4"
+        "@molitio/mwe-ui-core": "workspace:0.1.5"
     },
     "dependenciesMeta": {
         "postcss@8.4.36": {
