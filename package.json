@@ -87,7 +87,6 @@
     "resolutions": {
         "@molitio/mwe-ui-core": "workspace:0.1.4"
     },
-    "stableVersion": "0.1.3",
     "dependenciesMeta": {
         "postcss@8.4.36": {
             "unplugged": true
