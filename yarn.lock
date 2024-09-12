@@ -5515,7 +5515,6 @@ __metadata:
     typescript: "npm:^4.7.4"
     uuid: "npm:^9.0.0"
     webpack: "npm:^5.76.0"
-    workspaces: "npm:^0.1.0"
     yup: "npm:^0.32.11"
   languageName: unknown
   linkType: soft
@@ -23422,15 +23421,6 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10/1ec6f6089f205f83037be10d0c4b34c9183b0b63fca0834a5b3cee55dd321429d73d40bb44c8fc8471b5203d6e8f8275717f49a8ff4b2b0ab41d7e1b563e0854
-  languageName: node
-  linkType: hard
-
-"workspaces@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "workspaces@npm:0.1.0"
-  bin:
-    workspaces: bin/workspaces
-  checksum: 10/79a00c0425c68d4adedfa62ee7f93b8700a55661b640ac06746a33ca9d176eca4c149a5fe08d260c07139745f264eda8e11dd5e038f9c401fbdafb0afcdafe86
   languageName: node
   linkType: hard
 

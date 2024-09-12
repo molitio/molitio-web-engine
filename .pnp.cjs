@@ -10710,7 +10710,6 @@ const RAW_RUNTIME_STATE =
           ["typescript", "patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587"],\
           ["uuid", "npm:9.0.1"],\
           ["webpack", "virtual:8179ddd31fdb78a6f033847a5951f5d88de3e245a10ccf6da72c4652b64971fcc36036a859cb1096ec107ea677ff48252445575d0ee874bcf37d5d56a03bba56#npm:5.94.0"],\
-          ["workspaces", "npm:0.1.0"],\
           ["yup", "npm:0.32.11"]\
         ],\
         "linkType": "SOFT"\
@@ -33533,15 +33532,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/word-wrap-npm-1.2.5-42d00c4b09-1ec6f6089f.zip/node_modules/word-wrap/",\
         "packageDependencies": [\
           ["word-wrap", "npm:1.2.5"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["workspaces", [\
-      ["npm:0.1.0", {\
-        "packageLocation": "./.yarn/cache/workspaces-npm-0.1.0-01ffad2e37-79a00c0425.zip/node_modules/workspaces/",\
-        "packageDependencies": [\
-          ["workspaces", "npm:0.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
