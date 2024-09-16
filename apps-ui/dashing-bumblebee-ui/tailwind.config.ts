@@ -5,10 +5,10 @@ module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/mwe-ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         screens: {
-          sm: '640px',  // Small
-          md: '768px',  // Medium
-          lg: '1024px', // Large
-          xl: '1280px', // Extra Large
+            sm: '640px', // Small
+            md: '768px', // Medium
+            lg: '1024px', // Large
+            xl: '1280px', // Extra Large
         },
         extend: {
             zIndex: {
@@ -19,9 +19,8 @@ module.exports = {
                 '4': '4',
                 '5': '5',
             },
-            
             backgroundImage: {
-                'gradient-to-r': 'linear-gradient(to right, #628A1D, #2085A1)', // Példa gradient
+                'gradient-45': 'linear-gradient(45deg, var(--tw-gradient-stops))',
             },
         },
     },
@@ -29,10 +28,11 @@ module.exports = {
         themes: [
             {
                 'dashing-bumblebee': {
-                    /* primary: "#6C9AC3" */
-
+                    /* primary: "#6C9AC3" 
+                    primary: '#2085A1',*/
+                    primary: '#1F2937',
+                    accent: '#3f3f41',
                     neutral: '#2E2E2E',
-                    primary: '#2085A1',
                     secondary: '#EFEFEF',
                     background: '#FAFAFA',
                 },

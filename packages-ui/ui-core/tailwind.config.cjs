@@ -4,7 +4,11 @@
 module.exports = {
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                'gradient-45': 'linear-gradient(45deg, var(--tw-gradient-stops))',
+            },
+        },
     },
     daisyui: {
         themes: {

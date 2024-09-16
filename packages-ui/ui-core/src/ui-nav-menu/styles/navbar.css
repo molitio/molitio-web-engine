@@ -1,4 +1,4 @@
-.navbar {
+._off_navbar {
     @apply flex justify-center w-full text-[white];
     background: linear-gradient(45deg, #306825, #3f3f41);
     background: rgb(75, 72, 72);

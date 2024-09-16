@@ -2,7 +2,8 @@
 
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
-import { ContentRoot, initContentRootStore } from '..';
+import { initContentRootStore } from '../ContentRootStore';
+import { ContentRoot } from '../types';
 
 export type InteractivityRootProviderProps = React.PropsWithChildren & {
     contentRoot?: ContentRoot;
