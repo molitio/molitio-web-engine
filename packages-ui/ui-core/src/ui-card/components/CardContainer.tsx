@@ -8,13 +8,14 @@ export type CardContainerProps = {
     cards: CardData[];
 };
 
-const CardContainer: React.FC<CardContainerProps> = ( ) => {
+const CardContainer: React.FC<CardContainerProps> = () => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
+
     return (
         <div
-            className={"text-white bg-primary flex mb-4 sm:grid-cols-1 rounded-box "}
+            className="flex flex-wrap justify-center mt-10"
         >
             {cardData.map((card, i) => (
                 <Card

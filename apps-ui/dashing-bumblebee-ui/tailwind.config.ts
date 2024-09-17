@@ -8,7 +8,8 @@ module.exports = {
           sm: '640px',  // Small
           md: '768px',  // Medium
           lg: '1024px', // Large
-          xl: '1280px', // Extra Large
+          xl: '1536px',
+          
         },
         extend: {
             zIndex: {

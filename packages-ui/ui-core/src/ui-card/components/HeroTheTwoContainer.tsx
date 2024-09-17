@@ -15,8 +15,8 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
     
 
     return (
-        <div>
-            <div className="bg-primary rounded-box text-white">
+        
+            <div className="bg-primary rounded-box text-white ">
                 {heroTheTwoData.map((card, i) => (
                     <HeroTheTwo
                         key={i}
@@ -27,7 +27,7 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
                     />
                 ))}
             </div>
-        </div>
+        
     );
 };
 

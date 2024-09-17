@@ -130,7 +130,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                             title: 'Roadistics Kft.',
                             description: 'A sikerhez vezető út, nálunk kezdődik!',
-                            imageUrl: '/background_combined.png',
+                            imageUrl: '/logo_v1.svg',
                             imageAlt: 'Unique system',
                         },
                     ],
