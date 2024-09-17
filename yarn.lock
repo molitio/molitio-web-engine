@@ -2860,24 +2860,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/eslintrc@npm:^1.3.0, @eslint/eslintrc@npm:^1.3.3":
-  version: 1.4.1
-  resolution: "@eslint/eslintrc@npm:1.4.1"
-  dependencies:
-    ajv: "npm:^6.12.4"
-    debug: "npm:^4.3.2"
-    espree: "npm:^9.4.0"
-    globals: "npm:^13.19.0"
-    ignore: "npm:^5.2.0"
-    import-fresh: "npm:^3.2.1"
-    js-yaml: "npm:^4.1.0"
-    minimatch: "npm:^3.1.2"
-    strip-json-comments: "npm:^3.1.1"
-  checksum: 10/e587923ba913d90865eae73308e77750da8b85de941f8df990e0efeec3cc188d2f66c0c5085fdb50748b2e43d11bf7c0cae9f2e743369b3d3a36e14a7704a2b1
-  languageName: node
-  linkType: hard
-
-"@eslint/eslintrc@npm:^2.1.2, @eslint/eslintrc@npm:^2.1.4":
+"@eslint/eslintrc@npm:^2.1.4":
   version: 2.1.4
   resolution: "@eslint/eslintrc@npm:2.1.4"
   dependencies:
@@ -2891,13 +2874,6 @@ __metadata:
     minimatch: "npm:^3.1.2"
     strip-json-comments: "npm:^3.1.1"
   checksum: 10/7a3b14f4b40fc1a22624c3f84d9f467a3d9ea1ca6e9a372116cb92507e485260359465b58e25bcb6c9981b155416b98c9973ad9b796053fd7b3f776a6946bce8
-  languageName: node
-  linkType: hard
-
-"@eslint/js@npm:8.50.0":
-  version: 8.50.0
-  resolution: "@eslint/js@npm:8.50.0"
-  checksum: 10/1600a84ea1635cb46ae9f9cbc7c4cb054e54b8032707531b3b812d6096e46c54c449e8ecec7eb99725c3aa6da1ebbd4a60ca4fda925200395d5839ded09a0da8
   languageName: node
   linkType: hard
 
@@ -4995,18 +4971,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.10.4":
-  version: 0.10.7
-  resolution: "@humanwhocodes/config-array@npm:0.10.7"
-  dependencies:
-    "@humanwhocodes/object-schema": "npm:^1.2.1"
-    debug: "npm:^4.1.1"
-    minimatch: "npm:^3.0.4"
-  checksum: 10/3f1e3ff818eb5d1d8ab841a8204f555cb65e19e8efeadd7f816eec7d05b6b176b139f6d4a9144f231e391fd0d4e615a8956c13812a0893a3c93839e823f35a03
-  languageName: node
-  linkType: hard
-
-"@humanwhocodes/config-array@npm:^0.11.11, @humanwhocodes/config-array@npm:^0.11.14, @humanwhocodes/config-array@npm:^0.11.6":
+"@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
   dependencies:
@@ -5017,24 +4982,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/gitignore-to-minimatch@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "@humanwhocodes/gitignore-to-minimatch@npm:1.0.2"
-  checksum: 10/012feb4bb622633fff044e378c47e5779feea7cbf28b2d026ea17ed47f40107032bfab39e7f66ffd8e94800a685d52c285515bc40c68b63e48d4a9678f188508
-  languageName: node
-  linkType: hard
-
 "@humanwhocodes/module-importer@npm:^1.0.1":
   version: 1.0.1
   resolution: "@humanwhocodes/module-importer@npm:1.0.1"
   checksum: 10/e993950e346331e5a32eefb27948ecdee2a2c4ab3f072b8f566cd213ef485dd50a3ca497050608db91006f5479e43f91a439aef68d2a313bd3ded06909c7c5b3
-  languageName: node
-  linkType: hard
-
-"@humanwhocodes/object-schema@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@humanwhocodes/object-schema@npm:1.2.1"
-  checksum: 10/b48a8f87fcd5fdc4ac60a31a8bf710d19cc64556050575e6a35a4a48a8543cf8cde1598a65640ff2cdfbfd165b38f9db4fa3782bea7848eb585cc3db824002e6
   languageName: node
   linkType: hard
 
@@ -5490,20 +5441,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.4"
+    "@molitio/mwe-ui-core": "workspace:0.1.5"
     "@types/node": "npm:18.11.10"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
     "@vercel/build-utils": "npm:7.2.2"
     autoprefixer: "npm:10.4.15"
-    eslint: "npm:8.29.0"
+    eslint: "npm:^8.56.0"
     eslint-config-next: "npm:13.0.6"
     jotai: "npm:2.8.3"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
-    react: "npm:18.2.0"
+    react: "npm:18.3.1"
     react-cookie-consent: "npm:9.0.0"
-    react-dom: "npm:18.2.0"
+    react-dom: "npm:18.3.1"
     react-is: "npm:18.2.0"
     tailwindcss: "npm:3.4.1"
     tslib: "npm:2.6.2"
@@ -5541,7 +5492,7 @@ __metadata:
     "@vercel/analytics": "npm:^1.0.2"
     device-detector-js: "npm:^3.0.3"
     dotenv: "npm:^16.0.3"
-    eslint: "npm:8.22.0"
+    eslint: "npm:^8.56.0"
     eslint-config-next: "npm:latest"
     firebase: "npm:^9.16.0"
     formik: "npm:^2.2.9"
@@ -5551,8 +5502,8 @@ __metadata:
     next: "npm:latest"
     next-fonts: "npm:^1.5.1"
     next-videos: "npm:1.5.0"
-    react: "npm:latest"
-    react-dom: "npm:latest"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     react-icons: "npm:^4.7.1"
     react-is: "npm:^18.2.0"
     react-redux: "npm:^8.1.2"
@@ -5564,7 +5515,6 @@ __metadata:
     typescript: "npm:^4.7.4"
     uuid: "npm:^9.0.0"
     webpack: "npm:^5.76.0"
-    workspaces: "npm:^0.1.0"
     yup: "npm:^0.32.11"
   languageName: unknown
   linkType: soft
@@ -5573,20 +5523,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-dashing-bumblebee-ui@workspace:apps-ui/dashing-bumblebee-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.4"
+    "@molitio/mwe-ui-core": "workspace:0.1.5"
     "@types/node": "npm:20.6.3"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
     autoprefixer: "npm:10.4.15"
     daisyui: "npm:4.11.1"
-    eslint: "npm:8.50.0"
+    eslint: "npm:^8.56.0"
     eslint-config-next: "npm:13.5.2"
     formik: "npm:2.4.6"
     jotai: "npm:2.8.3"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     tailwindcss: "npm:3.4.1"
     tslib: "npm:^2.6.2"
     typescript: "npm:5.2.2"
@@ -5598,20 +5548,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-gallery-display-ui@workspace:apps-ui/gallery-display-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.4"
+    "@molitio/mwe-ui-core": "workspace:0.1.5"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
     "@typescript-eslint/parser": "npm:^7.2.0"
     "@vitejs/plugin-react-swc": "npm:^3.5.0"
     autoprefixer: "npm:10.4.15"
-    eslint: "npm:^8.57.0"
+    eslint: "npm:^8.56.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.6"
     jotai: "npm:2.8.3"
     postcss: "npm:8.4.36"
-    react: "npm:^18.2.0"
-    react-dom: "npm:^18.2.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     tailwindcss: "npm:3.4.1"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
@@ -5642,7 +5592,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^6.0.0"
     chokidar: "npm:3.6.0"
     class-validator: "npm:0.14.1"
-    eslint: "npm:^8.42.0"
+    eslint: "npm:^8.56.0"
     eslint-config-prettier: "npm:^9.0.0"
     eslint-plugin-prettier: "npm:^5.0.0"
     fastify: "npm:4.27.0"
@@ -5682,13 +5632,13 @@ __metadata:
     "@types/react-dom": "npm:18.2.7"
     debug: "npm:4.3.4"
     identity-obj-proxy: "npm:3.0.0"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     tslib: "npm:2.6.2"
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core@workspace:0.1.4, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
+"@molitio/mwe-ui-core@workspace:0.1.5, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-ui-core@workspace:packages-ui/ui-core"
   dependencies:
@@ -5719,15 +5669,15 @@ __metadata:
     "@types/react-dom": "npm:18.2.7"
     autoprefixer: "npm:10.4.19"
     daisyui: "npm:4.11.1"
-    eslint: "npm:8.28.0"
+    eslint: "npm:^8.56.0"
     fast-glob: "npm:3.3.2"
     formik: "npm:2.4.6"
     jotai: "npm:2.8.3"
     next: "npm:14.1.3"
     postcss: "npm:8.4.36"
     postcss-import: "npm:16.1.0"
-    react: "npm:18.2.0"
-    react-dom: "npm:18.2.0"
+    react: "npm:18.3.1"
+    react-dom: "npm:18.3.1"
     react-is: "npm:18.2.0"
     rollup: "npm:4.0.2"
     rollup-plugin-peer-deps-external: "npm:2.2.4"
@@ -5746,8 +5696,8 @@ __metadata:
     next: 14.1.3
     postcss: 8.4.36
     postcss-import: 16.1.0
-    react: 18.2.0
-    react-dom: 18.2.0
+    react: 18.3.1
+    react-dom: 18.3.1
     tailwindcss: 3.4.1
   languageName: unknown
   linkType: soft
@@ -5786,7 +5736,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:6.5.0"
     babel-jest: "npm:29.7.0"
     core-js: "npm:3.30.2"
-    eslint: "npm:8.28.0"
+    eslint: "npm:^8.56.0"
     eslint-config-prettier: "npm:9.0.0"
     eslint-config-react-app: "npm:7.0.1"
     eslint-plugin-react: "npm:7.33.2"
@@ -9626,7 +9576,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ajv@npm:^6.0.0, ajv@npm:^6.10.0, ajv@npm:^6.12.4, ajv@npm:^6.12.5, ajv@npm:~6.12.6":
+"ajv@npm:^6.0.0, ajv@npm:^6.12.4, ajv@npm:^6.12.5, ajv@npm:~6.12.6":
   version: 6.12.6
   resolution: "ajv@npm:6.12.6"
   dependencies:
@@ -13303,18 +13253,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-utils@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "eslint-utils@npm:3.0.0"
-  dependencies:
-    eslint-visitor-keys: "npm:^2.0.0"
-  peerDependencies:
-    eslint: ">=5"
-  checksum: 10/7675260a6b220c70f13e4cdbf077e93cad0dfb388429a27d6c0b584b2b20dca24594508e8bdb00a460a5764bd364a5018e20c2b8b1d70f82bcc3fdc30692a4d2
-  languageName: node
-  linkType: hard
-
-"eslint-visitor-keys@npm:^2.0.0, eslint-visitor-keys@npm:^2.1.0":
+"eslint-visitor-keys@npm:^2.1.0":
   version: 2.1.0
   resolution: "eslint-visitor-keys@npm:2.1.0"
   checksum: 10/db4547eef5039122d518fa307e938ceb8589da5f6e8f5222efaf14dd62f748ce82e2d2becd3ff9412a50350b726bda95dbea8515a471074547daefa58aee8735
@@ -13328,201 +13267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.22.0":
-  version: 8.22.0
-  resolution: "eslint@npm:8.22.0"
-  dependencies:
-    "@eslint/eslintrc": "npm:^1.3.0"
-    "@humanwhocodes/config-array": "npm:^0.10.4"
-    "@humanwhocodes/gitignore-to-minimatch": "npm:^1.0.2"
-    ajv: "npm:^6.10.0"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.1.1"
-    eslint-utils: "npm:^3.0.0"
-    eslint-visitor-keys: "npm:^3.3.0"
-    espree: "npm:^9.3.3"
-    esquery: "npm:^1.4.0"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    functional-red-black-tree: "npm:^1.0.1"
-    glob-parent: "npm:^6.0.1"
-    globals: "npm:^13.15.0"
-    globby: "npm:^11.1.0"
-    grapheme-splitter: "npm:^1.0.4"
-    ignore: "npm:^5.2.0"
-    import-fresh: "npm:^3.0.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.1"
-    regexpp: "npm:^3.2.0"
-    strip-ansi: "npm:^6.0.1"
-    strip-json-comments: "npm:^3.1.0"
-    text-table: "npm:^0.2.0"
-    v8-compile-cache: "npm:^2.0.3"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10/67bf1fb5cb54521910b939264f2832af7f2478b039af4cb2176ade3783cc3a1cee7d33928c29f56aae1420703f879ddb1281b4c23b92335d4d4a0daf5c1b1b35
-  languageName: node
-  linkType: hard
-
-"eslint@npm:8.28.0":
-  version: 8.28.0
-  resolution: "eslint@npm:8.28.0"
-  dependencies:
-    "@eslint/eslintrc": "npm:^1.3.3"
-    "@humanwhocodes/config-array": "npm:^0.11.6"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@nodelib/fs.walk": "npm:^1.2.8"
-    ajv: "npm:^6.10.0"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.1.1"
-    eslint-utils: "npm:^3.0.0"
-    eslint-visitor-keys: "npm:^3.3.0"
-    espree: "npm:^9.4.0"
-    esquery: "npm:^1.4.0"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    globals: "npm:^13.15.0"
-    grapheme-splitter: "npm:^1.0.4"
-    ignore: "npm:^5.2.0"
-    import-fresh: "npm:^3.0.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    is-path-inside: "npm:^3.0.3"
-    js-sdsl: "npm:^4.1.4"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.1"
-    regexpp: "npm:^3.2.0"
-    strip-ansi: "npm:^6.0.1"
-    strip-json-comments: "npm:^3.1.0"
-    text-table: "npm:^0.2.0"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10/2bd368fe09e3206030e5c9b5bb4e131a900348fde94b576cb2519ea2607da1a1267d3346f72c7f4d19b3a2584fa3b260ca22d3849f932132816f3878351751de
-  languageName: node
-  linkType: hard
-
-"eslint@npm:8.29.0":
-  version: 8.29.0
-  resolution: "eslint@npm:8.29.0"
-  dependencies:
-    "@eslint/eslintrc": "npm:^1.3.3"
-    "@humanwhocodes/config-array": "npm:^0.11.6"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@nodelib/fs.walk": "npm:^1.2.8"
-    ajv: "npm:^6.10.0"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.1.1"
-    eslint-utils: "npm:^3.0.0"
-    eslint-visitor-keys: "npm:^3.3.0"
-    espree: "npm:^9.4.0"
-    esquery: "npm:^1.4.0"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    globals: "npm:^13.15.0"
-    grapheme-splitter: "npm:^1.0.4"
-    ignore: "npm:^5.2.0"
-    import-fresh: "npm:^3.0.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    is-path-inside: "npm:^3.0.3"
-    js-sdsl: "npm:^4.1.4"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.1"
-    regexpp: "npm:^3.2.0"
-    strip-ansi: "npm:^6.0.1"
-    strip-json-comments: "npm:^3.1.0"
-    text-table: "npm:^0.2.0"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10/2196414bf53cbcb970e6ab417a39c6689b1df86d89bb1adc9904745f14eb3e8b17bec35adb22b80aafc1986b55b0aa6fae469556f150180b9547691abdb1db4c
-  languageName: node
-  linkType: hard
-
-"eslint@npm:8.50.0":
-  version: 8.50.0
-  resolution: "eslint@npm:8.50.0"
-  dependencies:
-    "@eslint-community/eslint-utils": "npm:^4.2.0"
-    "@eslint-community/regexpp": "npm:^4.6.1"
-    "@eslint/eslintrc": "npm:^2.1.2"
-    "@eslint/js": "npm:8.50.0"
-    "@humanwhocodes/config-array": "npm:^0.11.11"
-    "@humanwhocodes/module-importer": "npm:^1.0.1"
-    "@nodelib/fs.walk": "npm:^1.2.8"
-    ajv: "npm:^6.12.4"
-    chalk: "npm:^4.0.0"
-    cross-spawn: "npm:^7.0.2"
-    debug: "npm:^4.3.2"
-    doctrine: "npm:^3.0.0"
-    escape-string-regexp: "npm:^4.0.0"
-    eslint-scope: "npm:^7.2.2"
-    eslint-visitor-keys: "npm:^3.4.3"
-    espree: "npm:^9.6.1"
-    esquery: "npm:^1.4.2"
-    esutils: "npm:^2.0.2"
-    fast-deep-equal: "npm:^3.1.3"
-    file-entry-cache: "npm:^6.0.1"
-    find-up: "npm:^5.0.0"
-    glob-parent: "npm:^6.0.2"
-    globals: "npm:^13.19.0"
-    graphemer: "npm:^1.4.0"
-    ignore: "npm:^5.2.0"
-    imurmurhash: "npm:^0.1.4"
-    is-glob: "npm:^4.0.0"
-    is-path-inside: "npm:^3.0.3"
-    js-yaml: "npm:^4.1.0"
-    json-stable-stringify-without-jsonify: "npm:^1.0.1"
-    levn: "npm:^0.4.1"
-    lodash.merge: "npm:^4.6.2"
-    minimatch: "npm:^3.1.2"
-    natural-compare: "npm:^1.4.0"
-    optionator: "npm:^0.9.3"
-    strip-ansi: "npm:^6.0.1"
-    text-table: "npm:^0.2.0"
-  bin:
-    eslint: bin/eslint.js
-  checksum: 10/181f26677a80f21431e68a469470485467a5c847d14d8822c1041efc52905772816546ca4e3fc87b963b7b267d8faf960322df16a30a57044161a32199b0dcfa
-  languageName: node
-  linkType: hard
-
-"eslint@npm:^8.42.0, eslint@npm:^8.57.0, eslint@npm:^8.7.0":
+"eslint@npm:^8.56.0, eslint@npm:^8.7.0":
   version: 8.57.0
   resolution: "eslint@npm:8.57.0"
   dependencies:
@@ -13570,7 +13315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"espree@npm:^9.0.0, espree@npm:^9.3.1, espree@npm:^9.3.3, espree@npm:^9.4.0, espree@npm:^9.6.0, espree@npm:^9.6.1":
+"espree@npm:^9.0.0, espree@npm:^9.3.1, espree@npm:^9.6.0, espree@npm:^9.6.1":
   version: 9.6.1
   resolution: "espree@npm:9.6.1"
   dependencies:
@@ -14537,13 +14282,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"functional-red-black-tree@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "functional-red-black-tree@npm:1.0.1"
-  checksum: 10/debe73e92204341d1fa5f89614e44284d3add26dee660722978d8c50829170f87d1c74768f68c251d215ae461c11db7bac13101c77f4146ff051da75466f7a12
-  languageName: node
-  linkType: hard
-
 "functions-have-names@npm:^1.2.3":
   version: 1.2.3
   resolution: "functions-have-names@npm:1.2.3"
@@ -14685,7 +14423,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob-parent@npm:^6.0.1, glob-parent@npm:^6.0.2":
+"glob-parent@npm:^6.0.2":
   version: 6.0.2
   resolution: "glob-parent@npm:6.0.2"
   dependencies:
@@ -14792,7 +14530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"globals@npm:^13.15.0, globals@npm:^13.19.0":
+"globals@npm:^13.19.0":
   version: 13.24.0
   resolution: "globals@npm:13.24.0"
   dependencies:
@@ -14911,13 +14649,6 @@ __metadata:
   version: 4.2.11
   resolution: "graceful-fs@npm:4.2.11"
   checksum: 10/bf152d0ed1dc159239db1ba1f74fdbc40cb02f626770dcd5815c427ce0688c2635a06ed69af364396da4636d0408fcf7d4afdf7881724c3307e46aff30ca49e2
-  languageName: node
-  linkType: hard
-
-"grapheme-splitter@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "grapheme-splitter@npm:1.0.4"
-  checksum: 10/fdb2f51fd430ce881e18e44c4934ad30e59736e46213f7ad35ea5970a9ebdf7d0fe56150d15cc98230d55d2fd48c73dc6781494c38d8cf2405718366c36adb88
   languageName: node
   linkType: hard
 
@@ -15358,7 +15089,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"import-fresh@npm:^3.0.0, import-fresh@npm:^3.2.1, import-fresh@npm:^3.3.0":
+"import-fresh@npm:^3.2.1, import-fresh@npm:^3.3.0":
   version: 3.3.0
   resolution: "import-fresh@npm:3.3.0"
   dependencies:
@@ -16639,13 +16370,6 @@ __metadata:
   version: 1.1.6
   resolution: "js-levenshtein@npm:1.1.6"
   checksum: 10/bb034043fdebab606122fe5b5c0316036f1bb0ea352038af8b0ba4cda4b016303b24f64efb59d9918f66e3680eea97ff421396ff3c153cb00a6f982908f61f8a
-  languageName: node
-  linkType: hard
-
-"js-sdsl@npm:^4.1.4":
-  version: 4.4.2
-  resolution: "js-sdsl@npm:4.4.2"
-  checksum: 10/806ab7aea38c15c323c6993b65abfad559d35de7d41ad1e2bf21498f1d4961ef863ac14cecbe667be3ada565dafe7a701096a6f49a275c5190eb1a1732430226
   languageName: node
   linkType: hard
 
@@ -18613,7 +18337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"optionator@npm:^0.9.1, optionator@npm:^0.9.3":
+"optionator@npm:^0.9.3":
   version: 0.9.4
   resolution: "optionator@npm:0.9.4"
   dependencies:
@@ -20058,19 +19782,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react-dom@npm:18.2.0"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-    scheduler: "npm:^0.23.0"
-  peerDependencies:
-    react: ^18.2.0
-  checksum: 10/ca5e7762ec8c17a472a3605b6f111895c9f87ac7d43a610ab7024f68cd833d08eda0625ce02ec7178cc1f3c957cf0b9273cdc17aa2cd02da87544331c43b1d21
-  languageName: node
-  linkType: hard
-
-"react-dom@npm:^18.2.0, react-dom@npm:latest":
+"react-dom@npm:18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -20182,16 +19894,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0":
-  version: 18.2.0
-  resolution: "react@npm:18.2.0"
-  dependencies:
-    loose-envify: "npm:^1.1.0"
-  checksum: 10/b9214a9bd79e99d08de55f8bef2b7fc8c39630be97c4e29d7be173d14a9a10670b5325e94485f74cd8bff4966ef3c78ee53c79a7b0b9b70cba20aa8973acc694
-  languageName: node
-  linkType: hard
-
-"react@npm:^18.2.0, react@npm:latest":
+"react@npm:18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -20381,13 +20084,6 @@ __metadata:
     es-errors: "npm:^1.3.0"
     set-function-name: "npm:^2.0.1"
   checksum: 10/9fffc01da9c4e12670ff95bc5204364615fcc12d86fc30642765af908675678ebb0780883c874b2dbd184505fb52fa603d80073ecf69f461ce7f56b15d10be9c
-  languageName: node
-  linkType: hard
-
-"regexpp@npm:^3.2.0":
-  version: 3.2.0
-  resolution: "regexpp@npm:3.2.0"
-  checksum: 10/3310010895a906873262f4b494fc99bcef1e71ef6720a0532c5999ca586498cbd4a284c8e3c2423f9d1d37512fd08d6064b7564e0e59508cf938f76dd15ace84
   languageName: node
   linkType: hard
 
@@ -21029,7 +20725,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:^0.23.0, scheduler@npm:^0.23.2":
+"scheduler@npm:^0.23.2":
   version: 0.23.2
   resolution: "scheduler@npm:0.23.2"
   dependencies:
@@ -23221,13 +22917,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"v8-compile-cache@npm:^2.0.3":
-  version: 2.4.0
-  resolution: "v8-compile-cache@npm:2.4.0"
-  checksum: 10/49e726d7b2825ef7bc92187ecd57c59525957badbddb18fa529b0458b9280c59a1607ad3da4abe7808e9f9a00ec99b0fc07e485ffb7358cd5c11b2ef68d2145f
-  languageName: node
-  linkType: hard
-
 "v8-to-istanbul@npm:^9.0.1":
   version: 9.3.0
   resolution: "v8-to-istanbul@npm:9.3.0"
@@ -23732,15 +23421,6 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10/1ec6f6089f205f83037be10d0c4b34c9183b0b63fca0834a5b3cee55dd321429d73d40bb44c8fc8471b5203d6e8f8275717f49a8ff4b2b0ab41d7e1b563e0854
-  languageName: node
-  linkType: hard
-
-"workspaces@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "workspaces@npm:0.1.0"
-  bin:
-    workspaces: bin/workspaces
-  checksum: 10/79a00c0425c68d4adedfa62ee7f93b8700a55661b640ac06746a33ca9d176eca4c149a5fe08d260c07139745f264eda8e11dd5e038f9c401fbdafb0afcdafe86
   languageName: node
   linkType: hard
 

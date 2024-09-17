@@ -3,4 +3,5 @@ export type CardData = {
     description?: string;
     imageUrl?: string;
     imageAlt?: string;
+    subtitle?: string;
 };
