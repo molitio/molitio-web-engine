@@ -5,7 +5,7 @@ import '../style/style.css';
 const Card: React.FC<CardData> = (props) => {
     const { title, imageUrl, imageAlt, description } = props;
     return (              
-        <div className='flex flex-col items-center m-4 p-4 text-white bg-secondary '>
+        <div className='flex flex-col items-center m-4 p-4 text-white '>
             <img src={imageUrl} alt={imageAlt} className='image' />
             <h2 className='text-4xl font-bold py-4 text-start'>{title}</h2>
             <div >
