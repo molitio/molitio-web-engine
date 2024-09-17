@@ -5,18 +5,11 @@ module.exports = {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/mwe-ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         screens: {
-<<<<<<< HEAD
           sm: '640px',  // Small
           md: '768px',  // Medium
           lg: '1024px', // Large
-          xl: '1536px',
+          xl: '1280px',
           
-=======
-            sm: '640px', // Small
-            md: '768px', // Medium
-            lg: '1024px', // Large
-            xl: '1280px', // Extra Large
->>>>>>> 56b81fdc9ac5347a2ce5eca92d95e960ff209bb7
         },
         extend: {
             zIndex: {

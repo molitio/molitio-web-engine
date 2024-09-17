@@ -3,7 +3,7 @@ import type { CardData } from '../types';
 import Card from './Card';
 import { contentRootAtomRW } from '../../context';
 import { useAtom } from 'jotai';
-
+import '../style/style.css';
 export type CardContainerProps = {
     cards: CardData[];
 };

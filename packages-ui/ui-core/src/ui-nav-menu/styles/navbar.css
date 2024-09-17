@@ -1,5 +1,5 @@
-._off_navbar {
-    @apply flex justify-center w-full text-[white];
+.navbar {
+    @apply flex justify-center w-full;
     background: linear-gradient(45deg, #306825, #3f3f41);
     background: rgb(75, 72, 72);
 }
@@ -14,7 +14,7 @@
     @apply bg-[#F5F5BC] text-[white];
 }
 .icon-container {
-    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px]  rounded-full p-1;
+    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px]  rounded-full ;
     @apply bg-[#a5baa0] text-[white];
 }
 .icon {

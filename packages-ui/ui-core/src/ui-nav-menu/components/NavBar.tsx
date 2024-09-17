@@ -14,7 +14,7 @@ export type NavBarProps = {
 
 const NavBar: React.FC<NavBarProps> = (props) => {
     return (
-        <section className="fixed top-0 w-full z-5 bg-gradient-45 from-green-300 to-gray-400">
+        <section className="navbar fixed top-0 w-full z-5 bg-gradient-45 from-green-300 to-gray-400">
             <NavMenu />
         </section>
     );

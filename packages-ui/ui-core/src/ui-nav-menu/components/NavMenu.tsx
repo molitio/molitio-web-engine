@@ -14,9 +14,9 @@ const NavMenu: React.FC = () => {
     };
 
     return (
-        /*    <nav className="flex justify-center w-full text-[white] bg-gradient-45 from, #306825, #3f3f41)"> */
-        <nav className="flex justify-center w-full">
-            {/*JSON.stringify(navRoot) */}
+    
+        <nav>
+          
 
             <div className="nav-menu flex">
                 {Object.keys(navRoot).map((navBranch) => (
