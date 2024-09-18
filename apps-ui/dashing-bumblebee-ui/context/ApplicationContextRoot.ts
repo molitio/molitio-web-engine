@@ -139,19 +139,19 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Vámkezelés',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/service.jpg',
                             imageAlt: 'Gyors',
                             description:'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
                             title: 'Szállítmányozás',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/export.png',
                             imageAlt: 'Tematikus',
                             description:'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Raktározás',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/trade.jpg',
                             imageAlt: 'Dinamikus',
                             description:'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
                         },

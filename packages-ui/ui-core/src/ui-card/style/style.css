@@ -13,8 +13,10 @@
 }
 
 .image {
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 400px;
+    
     object-fit: cover;
-    border-radius: 50%; 
+    border-radius: 10%; 
+   
 }
