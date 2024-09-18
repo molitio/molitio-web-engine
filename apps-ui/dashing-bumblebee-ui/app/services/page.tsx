@@ -19,12 +19,10 @@ export default function Page() {
                         Miben segítünk Önnek szállítmányozó cégként?
                     </h2>
                 </div>
-                <div className="w-full mb-4 py-2 rounded-box">
+                <div className="w-full mb-4 text-3xl py-2 rounded-box">
                     <VerticalCardContainer cards={serviceTheOneData} />
                 </div>
-                <div className="container">
-                    <h2 className="text-white font-bold text-4xl align-items-center">Kérjen Ajánlatot Még Ma</h2>
-                </div>
+               
             </div>
         </section>
     );

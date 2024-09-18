@@ -107,9 +107,9 @@ export const ApplicationContextRoot: AppContext = {
                 aboutTheOne: {
                     textContentCollection: [
                         {
-                            title: '',
-                            description: '',
-                            imageUrl: '',
+                            title: 'Személyre szabott közvetítés a szállítási igények és a megfelelő szállítmányozók között.',
+                            description: '25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                            imageUrl: '/imageSectionTwo.png',
                             imageAlt: '',
                         },
                     ],
