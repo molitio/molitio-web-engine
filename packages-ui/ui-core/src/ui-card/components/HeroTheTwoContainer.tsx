@@ -12,11 +12,11 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
-    const { cards } = props;
+    
 
     return (
-        <div>
-            <div className="container">
+        
+            <div className="bg-primary rounded-box text-white ">
                 {heroTheTwoData.map((card, i) => (
                     <HeroTheTwo
                         key={i}
@@ -27,7 +27,7 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
                     />
                 ))}
             </div>
-        </div>
+        
     );
 };
 

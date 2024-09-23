@@ -14,9 +14,7 @@ const NavMenu: React.FC = () => {
     };
 
     return (
-        <nav className="navbar">
-            {JSON.stringify(navRoot)}
-
+        <nav>
             <div className="nav-menu flex">
                 {Object.keys(navRoot).map((navBranch) => (
                     <a key={navBranch} href={`${navRoot[navBranch].path}`}>
@@ -28,7 +26,7 @@ const NavMenu: React.FC = () => {
                             <figure className="icon-container flex justify-center">
                                 <img src={navRoot[navBranch].iconUrl} className="icon" />
                             </figure>
-                            <span className="label hidden md:inline-block">{navRoot[navBranch].label}</span>
+                            <span className="label ">{navRoot[navBranch].label}</span>
                         </div>
                     </a>
                 ))}

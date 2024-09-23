@@ -1,17 +1,19 @@
 name: mwe
 services:
     resource-hub-db:
-        image: mongo:5.0.26
         container_name: resource-hub-db
         restart: always
         env_file:
             - .env
+        build:
+            context: .
+            dockerfile: ResourceHubDB.Dockerfile
         expose:
             - '27017'
         ports:
             - 27017:27017
         volumes:
-            - '/resource-hub-db-volume:/resource-hub-db-volume/db'
+            - 'resource-hub-db-volume:/Users/vycos-zen/data/resource-hub-db-volume'
         environment:
             MONGO_INITDB_DATABASE: ${MONGO_DB}
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}

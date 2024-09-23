@@ -7,10 +7,10 @@ export const ApplicationContextRoot: AppContext = {
     navRoot: {
         home: {
             label: 'Főoldal',
-            iconUrl: '/lamp.svg',
+            iconUrl: '/home_icon_svg_v1.svg',
             path: '/',
         },
-        services: {
+        /*         services: {
             label: 'Szolgáltatásaink',
             iconUrl: '/settings.svg',
             path: '/services',
@@ -19,11 +19,11 @@ export const ApplicationContextRoot: AppContext = {
             label: 'Rólunk',
             iconUrl: '/request.svg',
             path: '/about',
-        },
+        },*/
         contact: {
             label: 'Kapcsolat',
-            iconUrl: '/document.svg',
-            path: '/contact',
+            iconUrl: '/contact_icon_svg_v1.svg',
+            path: '#contact',
         },
     },
     contentRoot: {
@@ -107,9 +107,10 @@ export const ApplicationContextRoot: AppContext = {
                 aboutTheOne: {
                     textContentCollection: [
                         {
-                            title: '',
-                            description: '',
-                            imageUrl: '',
+                            title: 'Személyre szabott közvetítés a szállítási igények és a megfelelő szállítmányozók között.',
+                            description:
+                                '25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                            imageUrl: '/imageSectionTwo.png',
                             imageAlt: '',
                         },
                     ],
@@ -130,7 +131,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                             title: 'Roadistics Kft.',
                             description: 'A sikerhez vezető út, nálunk kezdődik!',
-                            imageUrl: '/background_combined.png',
+                            imageUrl: '/logo_v1.svg',
                             imageAlt: 'Unique system',
                         },
                     ],
@@ -139,46 +140,40 @@ export const ApplicationContextRoot: AppContext = {
                     textContentCollection: [
                         {
                             title: 'Vámkezelés',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/service.jpg',
                             imageAlt: 'Gyors',
                             description:
                                 'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
                         },
                         {
                             title: 'Szállítmányozás',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/export.png',
                             imageAlt: 'Tematikus',
                             description:
                                 'Cégünk minden szállítmányozási igényt kielégít, legyen az belföldi vagy nemzetközi fuvarozás. Modern flottánkkal biztosítjuk, hogy rakománya időben megérkezzen.',
                         },
                         {
                             title: 'Raktározás',
-                            imageUrl: '/ware.svg',
+                            imageUrl: '/trade.jpg',
                             imageAlt: 'Dinamikus',
                             description:
                                 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
                         },
                     ],
                 },
-                coverCardsSecondary: {
+                contactCardCover: {
                     textContentCollection: [
                         {
-                            title: '„A megrendelt fuvar gyorsan és pontosan érkezett, a csapat pedig mindig készségesen válaszolt a kérdéseinkre. Különösen értékelem a gyors reakcióidőt és a rugalmasságot, ami tapasztalataim alapján ritka ezen a területen.”',
-                            imageUrl: '/fast.svg',
+                            title: 'E mail:',
+                            imageUrl: '',
                             imageAlt: '',
-                            description: ' - Kovács István',
+                            description: 'infoconnect@roadistics.com',
                         },
                         {
-                            title: '„A csapat munkája jelentősen megkönnyítette az export-import folyamatainkat. A vámkezelés gyors és gördülékeny volt, minden dokumentumot időben elkészítettek és benyújtottak. A szakértelmük maximálisan meggyőző volt, így biztos vagyok benne, hogy a jövőben is rájuk bízzuk ezt a feladatot.”',
-                            imageUrl: '/fast.svg',
+                            title: 'Telefon:',
+                            imageUrl: '',
                             imageAlt: '',
-                            description: ' - Vincze Áron ',
-                        },
-                        {
-                            title: '„A Road-istics raktározási megoldásai minden szempontból meghaladták az elvárásainkat. A raktár biztonságos és jól karbantartott, az áruk kezelése pedig precíz és szakszerű. Különösen tetszett, hogy lehetővé tették a valós idejű nyomon követést.”',
-                            imageUrl: '/fast.svg',
-                            imageAlt: '',
-                            description: ' - Nagy Károly',
+                            description: '+36 20 324 8489',
                         },
                     ],
                 },

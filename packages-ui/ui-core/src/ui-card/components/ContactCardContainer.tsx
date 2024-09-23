@@ -1,24 +1,22 @@
 import React from 'react';
 import type { CardData } from '../types';
-import Card from './Card';
-import { contentRootAtomRW } from '../../context';
+import ContactCard from './ContactCard';
 import { useAtom } from 'jotai';
-import '../style/style.css';
-export type CardContainerProps = {
+import { contentRootAtomRW } from '../../context';
+
+export type ContactCardContainerProps = {
     cards: CardData[];
 };
 
-const CardContainer: React.FC<CardContainerProps> = () => {
+const ContactCardContainer: React.FC<ContactCardContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
-    const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['contactCardCover']?.textContentCollection ?? [];
 
     return (
-        <div
-            className="flex flex-wrap justify-center mt-10"
-        >
-            {cardData.map((card, i) => (
-                <Card
+        <div id="contact" className="gap-bottom flex:col gap-4 sm:gap-6 bg-primary">
+            {cardTheTwoData.map((card, i) => (
+                <ContactCard
                     key={i}
                     title={card.title}
                     description={card.description}
@@ -29,5 +27,4 @@ const CardContainer: React.FC<CardContainerProps> = () => {
         </div>
     );
 };
-
-export default CardContainer;
+export default ContactCardContainer;

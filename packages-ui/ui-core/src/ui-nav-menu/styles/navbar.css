@@ -1,26 +1,30 @@
 .navbar {
-    @apply flex justify-center w-full text-[white];
+    @apply flex justify-center w-full;
+    background: linear-gradient(170deg, #03011edc 20%, #1f2937 80%);
 }
 
 .nav-menu {
     @apply flex items-center gap-4;
 }
 .nav-item {
-    @apply flex items-center  transition-[background-color] duration-[5s] ease-[ease] rounded-lg  border-[#ddd] hover:bg-[#eabebe] hover:text-[white] hover:text-[bold] p-2;
+    @apply flex items-center transition-[background-color] duration-[5s] ease-[ease] border-[#ddd] hover:bg-[#eabebe] rounded-full hover:text-[white] hover:text-[bold] p-2;
 }
 .nav-item.selected {
-    @apply bg-[#F5F5BC] text-[white];
+    @apply bg-[transparent] text-[white];
 }
 .icon-container {
-    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px] mr-2;
-    @apply bg-[#66b353] text-[white];
+    @apply flex justify-center items-center min-w-[20px] max-w-[40px] max-h-10 min-h-[20px];
+    @apply bg-transparent;
 }
 .icon {
     @apply w-full h-auto;
 }
 .label {
     @apply text-base font-[bold];
+    @apply hidden !important;
+    /* Hide on medium screens and below with higher specificity */
 }
+
 .selected {
-    @apply bg-[#F5F5BC] text-[white];
+    @apply bg-[transparent] text-[white];
 }
