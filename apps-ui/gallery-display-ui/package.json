@@ -1,7 +1,7 @@
 {
     "name": "@molitio/mwe-gallery-display-ui",
     "private": true,
-    "version": "0.1.5",
+    "version": "0.1.6",
     "type": "module",
     "scripts": {
         "dev": "vite",
@@ -16,7 +16,7 @@
         "react-dom": "18.3.1"
     },
     "devDependencies": {
-        "@molitio/mwe-ui-core": "workspace:0.1.5",
+        "@molitio/mwe-ui-core": "workspace:0.1.6",
         "@types/react": "^18.2.66",
         "@types/react-dom": "^18.2.22",
         "@typescript-eslint/eslint-plugin": "^7.2.0",

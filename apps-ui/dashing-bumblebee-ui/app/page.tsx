@@ -4,8 +4,7 @@ import {
     InfoPanelContainer,
     CardData,
     CardContainer,
-    CardTheTwoContainer,
-    ImageCardContainer,
+    ContactCardContainer,
     HeroTheOneContainer,
     HeroTheTwoContainer,
     contentRootAtomRW,
@@ -18,30 +17,30 @@ export default function Page() {
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
-    const cardTheTwoData: CardData[] = contentRootLeafs['coverCardsSecondary']?.textContentCollection ?? [];
+    const cardTheTwoData: CardData[] = contentRootLeafs['contactCardCover']?.textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
-    const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? [];
+    /* const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? []; */
 
     /* .assetUrls['backgroundImage'] ??    .assetUrls['backgroundImage'] ?? '' */
     return (
         <section className="hero bg-gray-800">
-            { /* JSON.stringify(contentRoot) */} 
+            {/* JSON.stringify(contentRoot) */}
             <div className="hero-content flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />
                 <InfoPanelContainer cards={infoPanelData} />
-                <ImageCardContainer cards={imageCardData} />
-                
+                {/* <ImageCardContainer cards={imageCardData} /> */}
+                <div className="space py-10" />
+                <ContactCardContainer cards={cardTheTwoData} />
+
                 {/* 
                 
                     
                
+               
                 <div className="w-full mb-4 ">
-                    <CardTheTwoContainer cards={cardTheTwoData} />
-                </div>
-                <div className="w-full mb-4 ">
-                    <VerticalCardContainer cards={verticalCardData} />
+                    
                 </div>
                 */}
 

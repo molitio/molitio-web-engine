@@ -1,7 +1,6 @@
-/* eslint-env node */
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+const config: Config = {
     content: ['./src/**/*.{js,ts,jsx,tsx}'],
     theme: {
         screens: {
@@ -9,9 +8,11 @@ module.exports = {
             md: '768px', // Medium
             lg: '1024px', // Large
             xl: '1280px',
-            
         },
         extend: {
+            padding: {
+                '16': '4rem',
+            },
             backgroundImage: {
                 'gradient-45': 'linear-gradient(45deg, var(--tw-gradient-stops))',
             },

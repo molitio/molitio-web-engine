@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-champagne-swan-ui",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "scripts": {
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "dev": "next dev",

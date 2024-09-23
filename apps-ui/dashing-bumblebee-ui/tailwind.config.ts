@@ -1,16 +1,13 @@
-/* eslint-env node */
-/** @type {import('tailwindcss').Config} */
+import type { Config } from 'tailwindcss';
 
-module.exports = {
+const config: Config = {
     content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', '../../packages-ui/mwe-ui-core/src/**/*.{js,ts,jsx,tsx,mdx}'],
     theme: {
         screens: {
-          sm: '640px',  // Small
-          md: '768px',  // Medium
-          lg: '1024px', // Large
-          xl: '1280px',
-         
-          
+            sm: '640px', // Small
+            md: '768px', // Medium
+            lg: '1024px', // Large
+            xl: '1280px',
         },
         extend: {
             zIndex: {
@@ -21,8 +18,11 @@ module.exports = {
                 '4': '4',
                 '5': '5',
             },
+            padding: {
+                '16': '4rem',
+            },
             backgroundImage: {
-                'gradient-45': 'linear-gradient(45deg, var(--tw-gradient-stops))',
+                'gradient-45': 'linear-gradient(45deg, green, red)',
             },
         },
     },
@@ -43,3 +43,5 @@ module.exports = {
     },
     plugins: [require('daisyui')],
 };
+
+export default config;
