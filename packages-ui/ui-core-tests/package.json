@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-ui-core-tests",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "type": "module",
     "dependencies": {
         "@jest/expect": "29.6.4",

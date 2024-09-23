@@ -5441,7 +5441,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/john-glenn-ui@workspace:apps-ui/john-glenn-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.5"
+    "@molitio/mwe-ui-core": "workspace:0.1.6"
     "@types/node": "npm:18.11.10"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
@@ -5523,7 +5523,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-dashing-bumblebee-ui@workspace:apps-ui/dashing-bumblebee-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.5"
+    "@molitio/mwe-ui-core": "workspace:0.1.6"
     "@types/node": "npm:20.6.3"
     "@types/react": "npm:18.2.64"
     "@types/react-dom": "npm:18.2.7"
@@ -5548,7 +5548,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-gallery-display-ui@workspace:apps-ui/gallery-display-ui"
   dependencies:
-    "@molitio/mwe-ui-core": "workspace:0.1.5"
+    "@molitio/mwe-ui-core": "workspace:0.1.6"
     "@types/react": "npm:^18.2.66"
     "@types/react-dom": "npm:^18.2.22"
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
@@ -5638,7 +5638,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core@workspace:0.1.5, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
+"@molitio/mwe-ui-core@workspace:0.1.6, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-ui-core@workspace:packages-ui/ui-core"
   dependencies:
