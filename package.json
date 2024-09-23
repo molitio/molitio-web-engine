@@ -2,19 +2,18 @@
     "name": "@molitio/web-engine",
     "private": true,
     "packageManager": "yarn@4.1.1",
-    "version": "0.1.1",
+    "version": "0.1.6",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {
-        "i": "yarn workspaces foreach --all --parallel --interlaced --topological install",
         "ci": "yarn install --immutable --immutable-cache --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
-        "build-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build",
+        "build-mwe-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build",
         "build-resource-hub": "yarn workspace @molitio/resource-hub-api build",
-        "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/john-glenn-ui build",
-        "build-dashing-bumblebee-ui": "yarn artifacts:cleanup && yarn workspace @molitio/ui-core build && yarn workspace @molitio/dashing-bumblebee-ui build",
+        "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/john-glenn-ui build",
+        "build-dashing-bumblebee-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/dashing-bumblebee-ui build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
-        "dev": "yarn workspaces foreach --all --parallel run dev",
+        "dev": "yarn workspaces foreach --all --parallel --interlaced run dev",
         "lint": "yarn prettier . --write",
         "test": "yarn jest",
         "test:watch": "yarn jest --watch",
@@ -25,7 +24,8 @@
         "docgen": "yarn run typedoc --options typedoc.json",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
-        "publish-ui-core": "yarn workspace @molitio/ui-core publish-ui-core"
+        "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
+        "codegen": "graphql-codegen --config codegen.ts"
     },
     "workspaces": [
         "apps-ui/*",
@@ -41,28 +41,39 @@
     },
     "size-limit": [
         {
-            "path": "./packages/ui-core/index.js",
+            "path": "./packages/mwe-ui-core/index.js",
             "limit": "500 KB"
         }
     ],
     "devDependencies": {
         "@babel/core": "7.24.3",
         "@babel/eslint-parser": "7.18.9",
+        "@graphql-codegen/cli": "5.0.2",
+        "@graphql-codegen/client-preset": "4.2.6",
+        "@graphql-codegen/introspection": "4.0.3",
+        "@graphql-codegen/typescript": "4.0.7",
+        "@graphql-codegen/typescript-operations": "4.2.1",
+        "@graphql-codegen/typescript-react-apollo": "4.3.0",
+        "@graphql-codegen/typescript-react-query": "6.1.0",
+        "@parcel/watcher": "2.4.1",
         "@types/jest": "29.5.4",
-        "@types/node": "18.11.9",
+        "@types/node": "20.12.7",
         "@types/ws": "8.5.10",
         "@typescript-eslint/eslint-plugin": "6.5.0",
         "@typescript-eslint/parser": "6.5.0",
         "babel-jest": "29.7.0",
         "core-js": "3.30.2",
-        "eslint": "8.28.0",
+        "eslint": "^8.56.0",
         "eslint-config-prettier": "9.0.0",
         "eslint-config-react-app": "7.0.1",
         "eslint-plugin-react": "7.33.2",
         "eslint-plugin-react-hooks": "4.6.0",
         "eslint-plugin-tsdoc": "0.2.17",
+        "graphql": "16.8.1",
+        "graphql-tag": "2.12.6",
         "jest": "29.6.4",
         "jest-environment-jsdom": "29.6.4",
+        "postcss": "8.4.36",
         "prettier": "3.0.3",
         "prettier-eslint": "16.3.0",
         "rimraf": "5.0.5",
@@ -73,8 +84,13 @@
         "typedoc": "0.25.0",
         "typescript": "5.2.2"
     },
-    "stableVersion": "0.1.1",
+    "resolutions": {
+        "@molitio/mwe-ui-core": "workspace:0.1.6"
+    },
     "dependenciesMeta": {
+        "postcss@8.4.36": {
+            "unplugged": true
+        },
         "ts-node@10.9.2": {
             "unplugged": true
         }

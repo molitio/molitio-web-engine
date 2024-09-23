@@ -1,6 +1,6 @@
-# @molitio/ui-core by molitio - In service of humanity for every human being.
+# @molitio/mwe-ui-core by molitio - In service of humanity for every human being.
 
--   [@molitio/ui-core by molitio - In service of humanity, for every human being.](#-molitio-ui-core-by-molitio---in-service-of-humanity--for-every-human-being)
+-   [@molitio/mwe-ui-core by molitio - In service of humanity, for every human being.](#-molitio-mwe-ui-core-by-molitio---in-service-of-humanity--for-every-human-being)
     -   [universal component library to serve as building block for any web application](#universal-component-library-to-serve-as-building-block-for-any-web-application)
     -   [Contributors](#contributors)
 

@@ -14,8 +14,8 @@ import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
 
 const moduleDefinitions = {
-    'ui-core': {
-        name: '@molitio/ui-core',
+    'mwe-ui-core': {
+        name: '@molitio/mwe-ui-core',
         basePath: './src',
         inputPath: 'index.ts',
         outDir: './dist',
@@ -147,11 +147,11 @@ export default [...modules];
 
 /* IIFE for future implementation
   /*   {
-        input: 'packages/ui-core/src/ui-page/radio-page/components/RadioPage.tsx',
+        input: 'packages/mwe-ui-core/src/ui-page/radio-page/components/RadioPage.tsx',
         plugins: [
             peerDepsExternal(),
             typescript({
-                tsconfig: 'packages/ui-core/tsconfig.base.json',
+                tsconfig: 'packages/mwe-ui-core/tsconfig.base.json',
                 compilerOptions: {
                     module: 'esnext',
                 },
@@ -160,7 +160,7 @@ export default [...modules];
             json(),
             commonjs(),
             babel({
-                include: ['packages/ui-core/src'],
+                include: ['packages/mwe-ui-core/src'],
                 babelHelpers: 'bundled',
                 exclude: [...exclusions],
                 extensions: [...extensions],

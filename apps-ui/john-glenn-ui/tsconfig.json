@@ -28,7 +28,8 @@
         ".next/types/**/*.ts",
         "../../.artifacts/john-glenn/types/**/*.ts",
         "../../.artifacts/john-glenn/.next/types/**/*.ts",
-        "../../.artifacts/john-glenn//types/**/*.ts"
+        "../../.artifacts/john-glenn//types/**/*.ts",
+        "app/components/consent/CookieConsentPopup.js"
     ],
     "exclude": ["node_modules"]
 }

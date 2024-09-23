@@ -1,5 +1,5 @@
-import { MenuPageData } from '@molitio/ui-core';
-import { MenuPageDataCollection } from '@molitio/ui-core';
+import { MenuPageData } from '@molitio/mwe-ui-core';
+import { MenuPageDataCollection } from '@molitio/mwe-ui-core';
 import greenHand from '../images/greenHand.jpg';
 import pagesData from '../data/pagesData.json';
 

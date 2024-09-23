@@ -1,14 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import Logo from './Logo';
-import { Button, ButtonType } from '@molitio/ui-core';
+import { Button, ButtonType } from '@molitio/mwe-ui-core';
 
 const Navbar = ({ toggle }: { toggle: () => void }) => {
     return (
         <>
-            <div className="h-20 bg-emerald-800 sticky top-0">
+            <div className="h-20 bg-black sticky top-0">
                 <div className="bg-cover mx-auto px-4 h-full">
                     <div className="flex justify-between items-center h-full">
+                        {/*
                         <Logo />
                         <button type="button" className="inline-flex items-center md:hidden" onClick={toggle}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
@@ -36,7 +37,7 @@ const Navbar = ({ toggle }: { toggle: () => void }) => {
                         </ul>
                         <div className="hidden md:block">
                             <Button type={ButtonType.Secondary} />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
