@@ -10,20 +10,20 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: '/home_icon_svg_v1.svg',
             path: '/',
         },
-        /*         services: {
+        services: {
             label: 'Szolgáltatásaink',
-            iconUrl: '/settings.svg',
+            iconUrl: '/settings_v2.svg',
             path: '/services',
         },
-        about: {
-            label: 'Rólunk',
-            iconUrl: '/request.svg',
-            path: '/about',
-        },*/
+        /* about: {
+            label: 'Ajánlat kérés',
+            iconUrl: '/request_v2.svg',
+            path: '/request',
+        }, */
         contact: {
             label: 'Kapcsolat',
             iconUrl: '/contact_icon_svg_v1.svg',
-            path: '#contact',
+            path: '/contact',
         },
     },
     contentRoot: {
@@ -115,17 +115,6 @@ export const ApplicationContextRoot: AppContext = {
                         },
                     ],
                 },
-                heroTheTwo: {
-                    textContentCollection: [
-                        {
-                            title: '25 éve az Ön szolgálatában!',
-                            description:
-                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                            imageUrl: '/background_combined.png',
-                            imageAlt: 'Tematikus',
-                        },
-                    ],
-                },
                 heroTheOne: {
                     textContentCollection: [
                         {
@@ -136,6 +125,18 @@ export const ApplicationContextRoot: AppContext = {
                         },
                     ],
                 },
+                heroTheTwo: {
+                    textContentCollection: [
+                        {
+                            title: '25 éve az Ön szolgálatában!',
+                            description:
+                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                            imageUrl: '/background_v2.png',
+                            imageAlt: 'Tematikus',
+                        },
+                    ],
+                },
+
                 coverCards: {
                     textContentCollection: [
                         {
