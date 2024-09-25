@@ -15,16 +15,17 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: '/settings_v2.svg',
             path: '/services',
         },
-        /* about: {
+         about: {
             label: 'Ajánlat kérés',
             iconUrl: '/request_v2.svg',
             path: '/request',
-        }, */
+        },
+        /*  
         contact: {
             label: 'Kapcsolat',
             iconUrl: '/contact_icon_svg_v1.svg',
             path: '/contact',
-        },
+        }, */
     },
     contentRoot: {
         common: {
