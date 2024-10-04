@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             spacing: {
-                'section-bottom-margin': '1rem',
+                'gutter-bottom': '5rem',
             },
             backgroundImage: {
                 'gradient-to-172': 'linear-gradient(172deg, #03011edc 20%, #1f2937 80%)',

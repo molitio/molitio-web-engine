@@ -13,9 +13,9 @@ const CardContainer: React.FC<CardContainerProps> = () => {
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
 
     return (
-        <ul className="flex flex-col md:flex-row mb-4">
+        <ul className="max-w-screen-lg flex flex-col xl:flex-row xl:mx-auto mb-gutter-bottom px-4">
             {cardData.map((cardData, i) => (
-                <li key={i} className="items-center mb-section-bottom-margin p-4">
+                <li key={i} className="mb-gutter">
                     <Card data={cardData} />
                 </li>
             ))}
