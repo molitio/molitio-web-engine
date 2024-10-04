@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-tailwindcss-config",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "author": "Peter Koller",
     "description": "Molitio Web Engine Style Configuration for TailwindCSS",
     "license": "MIT",

@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-resource-hub-api",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "Resource Distribution Engine",
     "author": "Peter Koller",
     "license": "MIT",

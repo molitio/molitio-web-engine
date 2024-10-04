@@ -2,7 +2,7 @@
     "name": "@molitio/web-engine",
     "private": true,
     "packageManager": "yarn@4.1.1",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {

@@ -1,6 +1,6 @@
 {
     "name": "@molitio/john-glenn-ui",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "moduleFileExtensions": [
         "js",
         "json",
@@ -15,7 +15,7 @@
         "artifact": "mkdir -p ../../.artifacts/john-glenn && cp -r ./.next/* ../../.artifacts/john-glenn"
     },
     "dependencies": {
-        "@molitio/mwe-ui-core": "0.1.5",
+        "@molitio/mwe-ui-core": "0.2.0",
         "jotai": "2.8.3",
         "next": "14.2.14",
         "react": "18.3.1",
@@ -24,7 +24,7 @@
         "react-is": "18.2.0"
     },
     "devDependencies": {
-        "@molitio/mwe-ui-core": "workspace:0.1.6",
+        "@molitio/mwe-ui-core": "workspace:0.2.0",
         "@types/node": "18.11.10",
         "@types/react": "18.3.0",
         "@types/react-dom": "18.3.0",
