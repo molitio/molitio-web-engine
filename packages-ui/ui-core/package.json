@@ -22,7 +22,7 @@
     "scripts": {
         "dev": "yarn build:watch",
         "build": "rm -rf ./dist && yarn package:builder && yarn rollup -c",
-        "build:watch": "yarn rollup -c -w",
+        "build:watch": "rm -rf ./dist && yarn package:builder && yarn rollup -c -w",
         "package:builder": "node ./package-builder/package-builder.js",
         "publish-mwe-ui-core": "yarn build && cd dist && npm publish --access=public --auth-type=legacy && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",

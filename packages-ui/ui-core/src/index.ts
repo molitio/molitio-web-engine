@@ -1,10 +1,8 @@
 /**
- * tailwind config
+ * tailwind global
  *
  */
-/* import './style-system/global.css'; */
-
-/* export { default as MWETailwindConfig } from '../MWETailwindConfig.js'; */
+import './style-system/global.css';
 
 /**
  * core
