@@ -1,4 +1,12 @@
 /**
+ * tailwind config
+ *
+ */
+/* import './style-system/global.css'; */
+
+/* export { default as MWETailwindConfig } from '../MWETailwindConfig.js'; */
+
+/**
  * core
  *
  * Core resuable functionality and components
@@ -60,4 +68,8 @@ export * from './context';
  */
 export * from './ui-form';
 
+/**
+ * Image Section
+ *
+ */
 export * from './ui-image-section';

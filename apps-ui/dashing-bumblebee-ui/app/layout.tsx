@@ -1,8 +1,9 @@
 import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
+
 import { NavBar, NavRootProvider, AppContext, ContentRootProvider, MWERootLayout } from '@molitio/mwe-ui-core';
 import { ApplicationContextRoot } from '../context';
-/* import './styles/globals.css'; */
+import './styles/globals.css';
 
 //TODO: when coming from conig DB it will be depricated
 const MOCK_APPLICATION_CONTEXT = async () => {

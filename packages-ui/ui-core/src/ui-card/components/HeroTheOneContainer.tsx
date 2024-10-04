@@ -3,7 +3,7 @@ import { CardData } from '../types';
 import HeroTheOne from './HeroTheOne';
 import { useAtom } from 'jotai';
 import { contentRootAtomRW } from '../../context';
-import '../style/style.css';
+
 export type HeroTheOneContainerProps = {
     cards: CardData[];
 };
@@ -14,7 +14,7 @@ const HeroTheOneContainer: React.FC<HeroTheOneContainerProps> = (props) => {
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
 
     return (
-        <div className="border-4 border-purple-500">
+        <div className="">
             <div className="bg-primary rounded-box py-5">
                 {heroTheOneData.map((card, i) => (
                     <HeroTheOne

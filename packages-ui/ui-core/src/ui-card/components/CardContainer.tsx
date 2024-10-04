@@ -3,7 +3,6 @@ import type { CardData } from '../types';
 import Card from './Card';
 import { contentRootAtomRW } from '../../context';
 import { useAtom } from 'jotai';
-import '../style/style.css';
 export type CardContainerProps = {
     cards: CardData[];
 };
@@ -16,7 +15,7 @@ const CardContainer: React.FC<CardContainerProps> = () => {
     return (
         <ul className="flex flex-col md:flex-row mb-4">
             {cardData.map((cardData, i) => (
-                <li key={i} className="items-center mb-5 p-4">
+                <li key={i} className="items-center mb-section-bottom-margin p-4">
                     <Card data={cardData} />
                 </li>
             ))}

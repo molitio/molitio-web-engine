@@ -1,6 +1,5 @@
 import React from 'react';
 import { CardData } from '../types';
-import '../style/style.css';
 
 export type CardProps = {
     data: CardData;

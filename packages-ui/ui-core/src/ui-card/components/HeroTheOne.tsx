@@ -1,6 +1,5 @@
 import React from 'react';
 import { CardData } from '../types';
-import '../style/style.css';
 
 const HeroTheOne: React.FC<CardData> = (props) => {
     const { description, imageUrl, imageAlt } = props;

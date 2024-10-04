@@ -1,10 +1,11 @@
-import type { Config } from 'tailwindcss';
+/** @type {import('tailwindcss').Config} */
 
-const config: Config = {
-    content: ['./src/**/*.{js,ts,jsx,tsx,css}'],
+module.exports = {
     theme: {
-        screens: {},
         extend: {
+            spacing: {
+                'section-bottom-margin': '1rem',
+            },
             backgroundImage: {
                 'gradient-to-172': 'linear-gradient(172deg, #03011edc 20%, #1f2937 80%)',
             },

@@ -34,6 +34,10 @@ const RAW_RUNTIME_STATE =
       "reference": "workspace:apps-ui/john-glenn-ui"\
     },\
     {\
+      "name": "@molitio/mwe-tailwindcss-config",\
+      "reference": "workspace:packages-ui/mwe-tailwindcss-config"\
+    },\
+    {\
       "name": "@molitio/mwe-ui-core",\
       "reference": "workspace:packages-ui/ui-core"\
     },\
@@ -50,6 +54,7 @@ const RAW_RUNTIME_STATE =
     ["@molitio/mwe-gallery-display-ui", ["workspace:apps-ui/gallery-display-ui"]],\
     ["@molitio/mwe-resource-hub-api", ["workspace:apps-api/resource-hub-api"]],\
     ["@molitio/mwe-resource-hub-gateway", ["workspace:apps-api/resource-hub-gateway"]],\
+    ["@molitio/mwe-tailwindcss-config", ["workspace:packages-ui/mwe-tailwindcss-config"]],\
     ["@molitio/mwe-ui-core", ["virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#workspace:packages-ui/ui-core", "virtual:a5d799928a0036bd2258022c983dd5685df9f6c4842c9ad3dc65402243f5fd503bac21c99943727c3213af306bb1397cca482e7af9bafba300c659b154232ffa#workspace:packages-ui/ui-core", "virtual:d109921afaaa7d2c3d2e803f90f3cab029b964d1fa3aec05981c9a613cb75f41ee09aa4e0a4e4b899a8f0049c85f36112db836782fc82c87b8f152b21d2779ef#workspace:packages-ui/ui-core", "workspace:packages-ui/ui-core"]],\
     ["@molitio/mwe-ui-core-tests", ["workspace:packages-ui/ui-core-tests"]],\
     ["@molitio/web-engine", ["workspace:."]]\
@@ -8313,8 +8318,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./apps-ui/dashing-bumblebee-ui/",\
         "packageDependencies": [\
           ["@molitio/mwe-dashing-bumblebee-ui", "workspace:apps-ui/dashing-bumblebee-ui"],\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@molitio/mwe-ui-core", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#workspace:packages-ui/ui-core"],\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/node", "npm:20.6.3"],\
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -8325,6 +8331,7 @@ const RAW_RUNTIME_STATE =
           ["jotai", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:2.8.3"],\
           ["next", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:14.2.14"],\
           ["postcss", "npm:8.4.36"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:18.3.1"],\
           ["tailwindcss", "npm:3.4.1"],\
@@ -8418,6 +8425,17 @@ const RAW_RUNTIME_STATE =
         "linkType": "SOFT"\
       }]\
     ]],\
+    ["@molitio/mwe-tailwindcss-config", [\
+      ["workspace:packages-ui/mwe-tailwindcss-config", {\
+        "packageLocation": "./packages-ui/mwe-tailwindcss-config/",\
+        "packageDependencies": [\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
+          ["tailwindcss", "npm:3.4.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }]\
+    ]],\
     ["@molitio/mwe-ui-core", [\
       ["virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#workspace:packages-ui/ui-core", {\
         "packageLocation": "./.yarn/__virtual__/@molitio-mwe-ui-core-virtual-240f5c9a7d/1/packages-ui/ui-core/",\
@@ -8435,6 +8453,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@reduxjs/toolkit", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.2.5"],\
           ["@rollup/plugin-babel", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:6.0.4"],\
           ["@rollup/plugin-commonjs", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:25.0.5"],\
@@ -8444,7 +8463,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-replace", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.0.3"],\
           ["@rollup/plugin-terser", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:11.1.5"],\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
           ["@types/jotai", null],\
@@ -8460,7 +8479,7 @@ const RAW_RUNTIME_STATE =
           ["jotai", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:2.8.3"],\
           ["next", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:14.2.14"],\
           ["postcss", "npm:8.4.36"],\
-          ["postcss-import", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:18.3.1"],\
           ["react-is", "npm:18.2.0"],\
@@ -8470,6 +8489,7 @@ const RAW_RUNTIME_STATE =
           ["rollup-plugin-postcss", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:4.0.2"],\
           ["rollup-plugin-size", "npm:0.2.2"],\
           ["rollup-plugin-visualizer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.12.0"],\
+          ["rollup-preserve-directives", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
@@ -8507,6 +8527,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@reduxjs/toolkit", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.2.5"],\
           ["@rollup/plugin-babel", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:6.0.4"],\
           ["@rollup/plugin-commonjs", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:25.0.5"],\
@@ -8516,7 +8537,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-replace", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.0.3"],\
           ["@rollup/plugin-terser", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:11.1.5"],\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
           ["@types/jotai", null],\
@@ -8532,7 +8553,7 @@ const RAW_RUNTIME_STATE =
           ["jotai", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:2.8.3"],\
           ["next", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:14.2.14"],\
           ["postcss", "npm:8.4.36"],\
-          ["postcss-import", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:18.3.1"],\
           ["react-is", "npm:18.2.0"],\
@@ -8542,6 +8563,7 @@ const RAW_RUNTIME_STATE =
           ["rollup-plugin-postcss", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:4.0.2"],\
           ["rollup-plugin-size", "npm:0.2.2"],\
           ["rollup-plugin-visualizer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.12.0"],\
+          ["rollup-preserve-directives", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
@@ -8577,6 +8599,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@reduxjs/toolkit", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.2.5"],\
           ["@rollup/plugin-babel", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:6.0.4"],\
           ["@rollup/plugin-commonjs", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:25.0.5"],\
@@ -8586,7 +8609,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-replace", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.0.3"],\
           ["@rollup/plugin-terser", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:11.1.5"],\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
           ["@types/jotai", null],\
@@ -8602,7 +8625,7 @@ const RAW_RUNTIME_STATE =
           ["jotai", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:2.8.3"],\
           ["next", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:14.2.14"],\
           ["postcss", "npm:8.4.36"],\
-          ["postcss-import", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:18.3.1"],\
           ["react-is", "npm:18.2.0"],\
@@ -8612,6 +8635,7 @@ const RAW_RUNTIME_STATE =
           ["rollup-plugin-postcss", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:4.0.2"],\
           ["rollup-plugin-size", "npm:0.2.2"],\
           ["rollup-plugin-visualizer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.12.0"],\
+          ["rollup-preserve-directives", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
@@ -8648,6 +8672,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
+          ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@reduxjs/toolkit", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.2.5"],\
           ["@rollup/plugin-babel", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:6.0.4"],\
           ["@rollup/plugin-commonjs", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:25.0.5"],\
@@ -8657,7 +8682,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-replace", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.0.3"],\
           ["@rollup/plugin-terser", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:11.1.5"],\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/node", "npm:18.11.9"],\
           ["@types/react", "npm:18.3.0"],\
@@ -8669,7 +8694,7 @@ const RAW_RUNTIME_STATE =
           ["jotai", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:2.8.3"],\
           ["next", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:14.2.14"],\
           ["postcss", "npm:8.4.36"],\
-          ["postcss-import", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:18.3.1"],\
           ["react-is", "npm:18.2.0"],\
@@ -8679,6 +8704,7 @@ const RAW_RUNTIME_STATE =
           ["rollup-plugin-postcss", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:4.0.2"],\
           ["rollup-plugin-size", "npm:0.2.2"],\
           ["rollup-plugin-visualizer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:5.12.0"],\
+          ["rollup-preserve-directives", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1"],\
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
@@ -10556,10 +10582,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15", {\
-        "packageLocation": "./.yarn/__virtual__/@tailwindcss-typography-virtual-e595be3d76/0/cache/@tailwindcss-typography-npm-0.5.15-9a4acf8b32-8c677e4de2.zip/node_modules/@tailwindcss/typography/",\
+      ["virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15", {\
+        "packageLocation": "./.yarn/__virtual__/@tailwindcss-typography-virtual-b802e40ca4/0/cache/@tailwindcss-typography-npm-0.5.15-9a4acf8b32-8c677e4de2.zip/node_modules/@tailwindcss/typography/",\
         "packageDependencies": [\
-          ["@tailwindcss/typography", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:0.5.15"],\
+          ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/tailwindcss", null],\
           ["lodash.castarray", "npm:4.4.0"],\
           ["lodash.isplainobject", "npm:4.0.6"],\
@@ -21531,6 +21557,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
+      ["npm:0.30.11", {\
+        "packageLocation": "./.yarn/cache/magic-string-npm-0.30.11-4e76dc2f30-b784d22402.zip/node_modules/magic-string/",\
+        "packageDependencies": [\
+          ["magic-string", "npm:0.30.11"],\
+          ["@jridgewell/sourcemap-codec", "npm:1.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
       ["npm:0.30.5", {\
         "packageLocation": "./.yarn/cache/magic-string-npm-0.30.5-dffb7e6a73-c8a6b25f81.zip/node_modules/magic-string/",\
         "packageDependencies": [\
@@ -23501,10 +23535,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/postcss-import-virtual-f5a2560861/0/cache/postcss-import-npm-16.1.0-97f2f09176-a087724497.zip/node_modules/postcss-import/",\
+      ["virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0", {\
+        "packageLocation": "./.yarn/__virtual__/postcss-import-virtual-c09035322c/0/cache/postcss-import-npm-16.1.0-97f2f09176-a087724497.zip/node_modules/postcss-import/",\
         "packageDependencies": [\
-          ["postcss-import", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:16.1.0"],\
+          ["postcss-import", "virtual:28786816499e0da035e6a6e84271be908c35af2f80764919a8ac8b3c9c7a0a9d15197afdac39af793de6e7b649d24c6d4f7ca3df2821667b8d0c7c9a086fd842#npm:16.1.0"],\
           ["@types/postcss", null],\
           ["postcss", "npm:8.4.36"],\
           ["postcss-value-parser", "npm:4.2.0"],\
@@ -25431,6 +25465,29 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["rollup-pluginutils", "npm:2.8.2"],\
           ["estree-walker", "npm:0.6.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["rollup-preserve-directives", [\
+      ["npm:1.1.1", {\
+        "packageLocation": "./.yarn/cache/rollup-preserve-directives-npm-1.1.1-cd8ccf8c00-33e0381282.zip/node_modules/rollup-preserve-directives/",\
+        "packageDependencies": [\
+          ["rollup-preserve-directives", "npm:1.1.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/rollup-preserve-directives-virtual-c0cb325ad8/0/cache/rollup-preserve-directives-npm-1.1.1-cd8ccf8c00-33e0381282.zip/node_modules/rollup-preserve-directives/",\
+        "packageDependencies": [\
+          ["rollup-preserve-directives", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.1.1"],\
+          ["@types/rollup", null],\
+          ["magic-string", "npm:0.30.11"],\
+          ["rollup", "npm:4.0.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/rollup",\
+          "rollup"\
         ],\
         "linkType": "HARD"\
       }]\

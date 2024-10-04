@@ -1,8 +1,7 @@
 import React from 'react';
-import { NavBarLoading } from '@molitio/mwe-ui-core';
 
 const Loading: React.FC = () => {
-    return <NavBarLoading />;
+    return <div className="w-16 bg-purple-500">Loading...</div>;
 };
 
 export default Loading;

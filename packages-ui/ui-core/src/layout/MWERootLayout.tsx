@@ -1,5 +1,4 @@
 import React, { Suspense } from 'react';
-import '../style-system/global.css';
 import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
 import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';

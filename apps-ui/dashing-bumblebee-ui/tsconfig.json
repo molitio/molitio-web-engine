@@ -26,10 +26,6 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "../../.artifacts/john-glenn/types/**/*.ts",
-        "../../.artifacts/john-glenn/.next/types/**/*.ts",
-        "../../.artifacts/john-glenn//types/**/*.ts",
-        "../../packages-ui/mwe-ui-core/src/ui-nav-menu/NavBar.tsx",
         "tailwind.config.js",
         "postcss.config.js"
     ],

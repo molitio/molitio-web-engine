@@ -1,7 +1,6 @@
 import React from 'react';
 import NavMenu from './NavMenu';
 
-import '../styles/navbar.css';
 import { UseClientComponent } from '../../core';
 
 export type NavBarProps = {
@@ -17,7 +16,7 @@ export type NavBarProps = {
 const NavBar: React.FC<NavBarProps> = (props) => {
     return (
         <UseClientComponent>
-            <section className="fixed top-0 w-full z-5 bg-gradient-to-172">
+            <section className="sticky top-0 w-full z-5 bg-gradient-to-172">
                 <NavMenu />
             </section>
         </UseClientComponent>

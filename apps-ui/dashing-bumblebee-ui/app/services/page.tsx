@@ -3,7 +3,7 @@
 import React from 'react';
 import { ApplicationContextRoot } from '../../context';
 import { InfoPanelContainer, CardData, contentRootAtomRW, VerticalCardContainer } from '@molitio/mwe-ui-core';
-import '../styles/globals.css';
+
 import { useAtom } from 'jotai';
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);

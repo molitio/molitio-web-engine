@@ -1,7 +1,6 @@
 import React from 'react';
 import type { CardData } from '../types';
 import InfoPanel from './InfoPanel';
-import '../style/style.css';
 import { useAtom } from 'jotai';
 import { contentRootAtomRW } from '../../context';
 
