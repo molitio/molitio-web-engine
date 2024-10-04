@@ -15,19 +15,15 @@ const App: React.FC = () => {
             <NavRootProvider navRoot={ApplicationContextRoot.navRoot}>
                 <NavBar />
             </NavRootProvider>
-            <Provider store={store}>
-                <ShowcaseContainer />
-            </Provider>
+            <Provider store={store}>{/*       <ShowcaseContainer /> */}</Provider>
         </div>
     );
 };
 
 export default App;
 
-{
-    /*<NavRootProvider navRoot={navRoot}>
+/*<NavRootProvider navRoot={navRoot}>
                     <div className="flex items-center">
                         <span className="text-xl text-black">{appName}</span>
                     </div>         
                 </NavRootProvider> */
-}

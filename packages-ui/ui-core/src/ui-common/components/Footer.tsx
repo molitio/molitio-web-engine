@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/footer.css';
+
 export interface FooterProps {
     licenceText?: string;
 }

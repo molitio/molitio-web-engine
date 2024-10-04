@@ -5,7 +5,7 @@
 
 ## Getting started
  
- The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. After coloning the repository a few steps need to be performed in order to run the poject.
+ The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. Ubuntu distro need to be running and the repository should be cloned in the configured ubuntu users designated git folder. After coloning the repository a few steps need to be performed in order to run the poject.
 
  :rocket: Install the Molitio Web Engine by running the following commands
   * ``` corepack enable ``` to enable corepack.  1 time / dev environment, to be integrated in a development container in future versions

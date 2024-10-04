@@ -1,4 +1,10 @@
 /**
+ * tailwind global
+ *
+ */
+import './style-system/global.css';
+
+/**
  * core
  *
  * Core resuable functionality and components
@@ -60,4 +66,8 @@ export * from './context';
  */
 export * from './ui-form';
 
+/**
+ * Image Section
+ *
+ */
 export * from './ui-image-section';

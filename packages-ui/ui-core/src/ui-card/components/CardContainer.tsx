@@ -3,7 +3,6 @@ import type { CardData } from '../types';
 import Card from './Card';
 import { contentRootAtomRW } from '../../context';
 import { useAtom } from 'jotai';
-import '../style/style.css';
 export type CardContainerProps = {
     cards: CardData[];
 };
@@ -14,19 +13,13 @@ const CardContainer: React.FC<CardContainerProps> = () => {
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
 
     return (
-        <div
-            className="flex flex-wrap justify-center mt-10"
-        >
-            {cardData.map((card, i) => (
-                <Card
-                    key={i}
-                    title={card.title}
-                    description={card.description}
-                    imageUrl={card.imageUrl}
-                    imageAlt={card.imageAlt}
-                />
+        <ul className="max-w-screen-lg flex flex-col xl:flex-row xl:mx-auto mb-gutter-bottom px-4">
+            {cardData.map((cardData, i) => (
+                <li key={i} className="mb-gutter">
+                    <Card data={cardData} />
+                </li>
             ))}
-        </div>
+        </ul>
     );
 };
 

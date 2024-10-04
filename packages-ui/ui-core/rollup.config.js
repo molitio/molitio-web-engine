@@ -12,6 +12,12 @@ import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import preserveDirectives from 'rollup-preserve-directives';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
+const styleSystemConfig = require('./tailwind.config.cjs');
 
 const moduleDefinitions = {
     'mwe-ui-core': {
@@ -38,7 +44,8 @@ const globals = {
 };
 
 Object.keys(moduleDefinitions).map((moduleName) =>
-    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}`),
+    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}
+Tailwind config: ${JSON.stringify({ ...styleSystemConfig }, null, 2)}`),
 );
 
 const modules = Array.from(
@@ -61,9 +68,8 @@ const modules = Array.from(
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
-                postcss({
-                    plugins: [tailwindcss(), autoprefixer()],
-                }),
+                ,
+                preserveDirectives(),
                 resolve(),
                 commonjs(),
                 {
@@ -89,7 +95,17 @@ const modules = Array.from(
                     exclude: [...exclusions],
                     extensions: [...extensions],
                 }),
-
+                postcss({
+                    config: {
+                        path: './postcss.config.cjs',
+                    },
+                    extensions: ['.css'],
+                    minimize: true,
+                    inject: {
+                        insertAt: 'top',
+                    },
+                    plugins: [tailwindcss(styleSystemConfig), autoprefixer()],
+                }),
                 json(),
                 terser(),
                 size({ details: true }),

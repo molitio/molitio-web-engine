@@ -1,6 +1,6 @@
 {
     "name": "@molitio/mwe-resource-hub-api",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "Resource Distribution Engine",
     "author": "Peter Koller",
     "license": "MIT",
@@ -21,7 +21,7 @@
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "nest start",
-        "dev": "nest start --watch",
+        "dev": "__OFF__nest start --watch",
         "dev:debug": "ts-node src/main --debug --watch",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
         "test": "jest",
