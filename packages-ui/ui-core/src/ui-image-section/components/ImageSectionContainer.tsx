@@ -8,7 +8,7 @@ export type ImageSectionContainerProps = {
 
 const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({ imageSection = [] }) => {
     return (
-        <div className="">
+        <div>
             {imageSection.map((section, i) => (
                 <ImageSection key={i} imageUrl={section.imageUrl} imageAlt={section.imageAlt} />
             ))}

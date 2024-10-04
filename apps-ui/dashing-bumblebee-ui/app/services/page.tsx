@@ -22,7 +22,6 @@ export default function Page() {
                 <div className="w-full mb-4 text-3xl py-2 rounded-box">
                     <VerticalCardContainer cards={serviceTheOneData} />
                 </div>
-               
             </div>
         </section>
     );

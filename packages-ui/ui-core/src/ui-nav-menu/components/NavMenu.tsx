@@ -14,7 +14,7 @@ const NavMenu: React.FC = () => {
 
     return (
         <nav>
-            <div className="nav-menu flex">
+            <div className="flex items-center gap-3 justify-center">
                 {Object.keys(navRoot).map((navBranch) => (
                     <a key={navBranch} href={`${navRoot[navBranch].path}`}>
                         <div

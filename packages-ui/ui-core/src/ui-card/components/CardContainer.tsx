@@ -14,19 +14,13 @@ const CardContainer: React.FC<CardContainerProps> = () => {
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
 
     return (
-        <div
-            className="flex flex-wrap justify-center mt-10"
-        >
-            {cardData.map((card, i) => (
-                <Card
-                    key={i}
-                    title={card.title}
-                    description={card.description}
-                    imageUrl={card.imageUrl}
-                    imageAlt={card.imageAlt}
-                />
+        <ul className="flex flex-col md:flex-row mb-4">
+            {cardData.map((cardData, i) => (
+                <li key={i} className="items-center mb-5 p-4">
+                    <Card data={cardData} />
+                </li>
             ))}
-        </div>
+        </ul>
     );
 };
 

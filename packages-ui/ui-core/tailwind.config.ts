@@ -1,31 +1,14 @@
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
-    content: ['./src/**/*.{js,ts,jsx,tsx}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx,css}'],
     theme: {
-        screens: {
-            sm: '640px', // Small
-            md: '768px', // Medium
-            lg: '1024px', // Large
-            xl: '1280px',
-        },
+        screens: {},
         extend: {
-            padding: {
-                '16': '4rem',
-            },
             backgroundImage: {
-                'gradient-45': 'linear-gradient(45deg, var(--tw-gradient-stops))',
+                'gradient-to-172': 'linear-gradient(172deg, #03011edc 20%, #1f2937 80%)',
             },
         },
     },
-    daisyui: {
-        themes: {
-            dashing: {
-                /* primary: "#6C9AC3" */
-                primary: 'green',
-                secondary: '#1f2937',
-            },
-        },
-    },
-    plugins: [require('daisyui')],
+    plugins: [require('@tailwindcss/typography')],
 };

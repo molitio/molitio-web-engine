@@ -19,8 +19,8 @@ export default function Page() {
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
 
     return (
-        <section className="hero bg-gray-800">
-            <div className="hero-content flex-col">
+        <section className=" bg-gray-800">
+            <div className=" flex-col">
                 <HeroTheOneContainer cards={heroTheOneData} />
                 <HeroTheTwoContainer cards={heroTheTwoData} />
                 <CardContainer cards={cardData} />

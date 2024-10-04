@@ -12,22 +12,19 @@ const HeroTheTwoContainer: React.FC<HeroTheTwoContainerProps> = (props) => {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
-    
 
     return (
-        
-            <div className="bg-primary rounded-box text-white ">
-                {heroTheTwoData.map((card, i) => (
-                    <HeroTheTwo
-                        key={i}
-                        title={card.title}
-                        description={card.description}
-                        imageUrl={card.imageUrl}
-                        imageAlt={card.imageAlt}
-                    />
-                ))}
-            </div>
-        
+        <div className="bg-primary rounded-box text-white mb-5">
+            {heroTheTwoData.map((card, i) => (
+                <HeroTheTwo
+                    key={i}
+                    title={card.title}
+                    description={card.description}
+                    imageUrl={card.imageUrl}
+                    imageAlt={card.imageAlt}
+                />
+            ))}
+        </div>
     );
 };
 

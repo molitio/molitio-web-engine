@@ -16,7 +16,7 @@ const NavRootProvider: React.FC<NavRootProviderProps> = (props) => {
 
     return (
         <UseClientComponent>
-            <Provider store={store}>{children}</Provider>;
+            <Provider store={store}>{children}</Provider>
         </UseClientComponent>
     );
 };
