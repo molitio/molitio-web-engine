@@ -17,7 +17,6 @@ export default function Page() {
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
-    const cardTheTwoData: CardData[] = contentRootLeafs['contactCardCover']?.textContentCollection ?? [];
     const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
     /* const imageCardData: CardData[] = contentRootLeafs['imageCards']?.textContentCollection ?? []; */
 
@@ -32,8 +31,6 @@ export default function Page() {
                 <InfoPanelContainer cards={infoPanelData} />
                 {/* <ImageCardContainer cards={imageCardData} /> */}
                 <div className="space py-10" />
-                <ContactCardContainer cards={cardTheTwoData} />
-
                 {/* 
                 
                     
