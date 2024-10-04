@@ -4,22 +4,13 @@ import ImageSection from './ImageSection';
 
 export type ImageSectionContainerProps = {
     imageSection: ImageSectionData[];
-    initialHeights?: string[]; // Opciósan beállítható kezdő magasságok
 };
 
-const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({
-    imageSection,
-    initialHeights = [],
-}) => {
+const ImageSectionContainer: React.FC<ImageSectionContainerProps> = ({ imageSection = [] }) => {
     return (
         <div className="">
             {imageSection.map((section, i) => (
-                <ImageSection
-                    key={i}
-                    imageUrl={section.imageUrl}
-                    imageAlt={section.imageAlt}
-                    initialHeight={initialHeights[i]} // Beállítjuk a kezdő magasságot
-                />
+                <ImageSection key={i} imageUrl={section.imageUrl} imageAlt={section.imageAlt} />
             ))}
         </div>
     );
