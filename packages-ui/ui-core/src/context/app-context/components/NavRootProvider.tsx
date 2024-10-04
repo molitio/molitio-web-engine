@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
 import { NavRoot } from '../types';

@@ -1,5 +1,3 @@
-'use client';
-
 import React, { useState } from 'react';
 import { navMenuAtomRW } from '../../context';
 import '../styles/navbar.css';
