@@ -1,2 +1,3 @@
-export { default as CommonLayout } from './CommonLayout';
-export * from './CommonLayout';
+export { default as MWERootLayout } from './MWERootLayout';
+
+export * from './MWERootLayout';

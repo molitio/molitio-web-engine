@@ -3,7 +3,7 @@
 import React from 'react';
 import { ApplicationContextRoot } from '../../context';
 import { InfoPanelContainer, CardData, contentRootAtomRW, VerticalCardContainer } from '@molitio/mwe-ui-core';
-import '../styles/globals.css';
+
 import { useAtom } from 'jotai';
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
@@ -22,7 +22,6 @@ export default function Page() {
                 <div className="w-full mb-4 text-3xl py-2 rounded-box">
                     <VerticalCardContainer cards={serviceTheOneData} />
                 </div>
-               
             </div>
         </section>
     );

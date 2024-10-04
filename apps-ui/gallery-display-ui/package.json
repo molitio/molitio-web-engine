@@ -1,24 +1,26 @@
 {
     "name": "@molitio/mwe-gallery-display-ui",
     "private": true,
-    "version": "0.1.6",
+    "version": "0.2.0",
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "tsc && vite build",
+        "build": "vite build",
         "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
         "preview": "vite preview"
     },
     "dependencies": {
-        "@molitio/mwe-ui-core": "0.1.5",
+        "@molitio/mwe-ui-core": "0.2.0",
         "jotai": "2.8.3",
         "react": "18.3.1",
-        "react-dom": "18.3.1"
+        "react-dom": "18.3.1",
+        "react-router-dom": "6.26.2"
     },
     "devDependencies": {
-        "@molitio/mwe-ui-core": "workspace:0.1.6",
-        "@types/react": "^18.2.66",
-        "@types/react-dom": "^18.2.22",
+        "@molitio/mwe-ui-core": "workspace:0.2.0",
+        "@types/node": "20.12.7",
+        "@types/react": "18.3.0",
+        "@types/react-dom": "18.3.0",
         "@typescript-eslint/eslint-plugin": "^7.2.0",
         "@typescript-eslint/parser": "^7.2.0",
         "@vitejs/plugin-react-swc": "^3.5.0",
@@ -28,7 +30,8 @@
         "eslint-plugin-react-refresh": "^0.4.6",
         "postcss": "8.4.36",
         "tailwindcss": "3.4.1",
-        "typescript": "^5.2.2",
-        "vite": "^5.2.0"
+        "typescript": "5.2.2",
+        "vite": "^5.2.0",
+        "vite-tsconfig-paths": "5.0.1"
     }
 }
