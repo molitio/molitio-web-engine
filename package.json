@@ -85,7 +85,7 @@
         "typescript": "5.2.2"
     },
     "resolutions": {
-        "@molitio/mwe-ui-core": "workspace:0.1.6"
+        "@molitio/mwe-ui-core": "workspace:0.2.0"
     },
     "dependenciesMeta": {
         "postcss@8.4.36": {
