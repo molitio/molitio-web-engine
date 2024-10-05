@@ -4,6 +4,7 @@ import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';
 import Head from 'next/head';
 import { EmailClient } from '../connectivity-integration';
+import Script from 'next/script';
 
 export type RootLayoutProps = {
     appContext: AppContext;
@@ -21,9 +22,6 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
             data-theme="dashing-bumblebee"
             className="box-border w-screen m-0 p-0 leading-6 text-white text-base"
         >
-            <Head>
-                <EmailClient />
-            </Head>
             <body>
                 <Suspense fallback={<Loading />}>
                     <NavRootProvider navRoot={appContext.navRoot}>
@@ -33,6 +31,7 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
                         <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
                     </main>
                 </Suspense>
+                <EmailClient />
             </body>
         </html>
     );

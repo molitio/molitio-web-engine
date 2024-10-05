@@ -1,23 +1,26 @@
+'use client';
+
 import React from 'react';
 import emailjs from '@emailjs/browser';
+import Script from 'next/script';
 
 const EmailClient: React.FC = () => {
     return (
-        <section data-testid="emailClient">
-            <script
-                async
+        <>
+            <Script
+                data-testid="emailClient"
+                /* async
                 /* nonce={nonce} */
-                /* strategy="beforeInteractive" */
                 src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
             />
-            <script
+            <Script
+                data-testid="emailClient"
                 /* nonce={nonce} */
                 id="emailClient"
-                /*       strategy="beforeInteractive" */
                 async
                 onLoad={() => emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_API_KEY ?? '')}
             />
-        </section>
+        </>
     );
 };
 
