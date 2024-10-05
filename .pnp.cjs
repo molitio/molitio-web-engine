@@ -5848,6 +5848,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@emailjs/browser", [\
+      ["npm:4.4.1", {\
+        "packageLocation": "./.yarn/cache/@emailjs-browser-npm-4.4.1-64a2cb04f8-e5c81028a3.zip/node_modules/@emailjs/browser/",\
+        "packageDependencies": [\
+          ["@emailjs/browser", "npm:4.4.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@esbuild/aix-ppc64", [\
       ["npm:0.21.5", {\
         "packageLocation": "./.yarn/unplugged/@esbuild-aix-ppc64-npm-0.21.5-ebeb42da03/node_modules/@esbuild/aix-ppc64/",\
@@ -8451,6 +8460,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-env", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.10"],\
           ["@babel/preset-react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
@@ -8525,6 +8535,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-env", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.10"],\
           ["@babel/preset-react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
@@ -8597,6 +8608,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-env", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.10"],\
           ["@babel/preset-react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
@@ -8670,6 +8682,7 @@ const RAW_RUNTIME_STATE =
           ["@babel/preset-env", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.10"],\
           ["@babel/preset-react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
           ["@babel/preset-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:7.18.6"],\
+          ["@emailjs/browser", "npm:4.4.1"],\
           ["@headlessui/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:1.7.18"],\
           ["@heroicons/react", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:2.1.3"],\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
