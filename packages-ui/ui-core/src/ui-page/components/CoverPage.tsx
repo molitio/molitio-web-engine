@@ -1,63 +1,47 @@
+'use client';
+
 import React from 'react';
-/* import { CoverPageProps } from '../types';
-import {
-    StyleCoverPageContentCta,
-    StyleCoverPageContentText,
-    StyledCoverContent,
-    StyledCoverPage,
-    StyledCoverPageBackground,
-    StyledCoverPageTitle,
-} from '../styles';
-import { Button, ButtonType } from '../../ui-interactive';
-import { ThemeColorVariant } from '../../system-theme';
- */
+import { useAtom } from 'jotai';
+import { CardData } from '../../ui-card';
+import { contentRootAtomRW } from '../../context';
+import CardContainer from './CardContainer';
+import CoverHeroContainer from './CoverHeroContainer';
+import InfoPanelContainer from './InfoPanelContainer';
+import CoverDetailsContainer from './CoverDetailsContainer';
+
+const PAGE_SECTION = 'home';
+
 /**
- * CoverPage is a customizable landing page for web applications.
- * @type {React.FC<CoverPageProps>}
- * @param {string} coverContentTitle - The header text of the CoverPage.
- * @param {string} coverContentText - The content text of the CoverPage.
- * @param {React.ReactNode} background - The background of the CoverPage.
- * @returns {React.FC<CoverPageProps>}
+ * Cover Page
+ * 
+ * @type {React.FC}
+
+ * @returns {React.FC}
  *
  * @example
  *  <CoverPage background={<Image src='example' alt='example alt text'/>}>
  *
  * @example
- * <CoverPage>
- *    <h1>My Cover Page</h1>
- * <ExampleBacgroundImageComponent />
- * </CoverPage>
+ * <CoverPage/>
  */
 
-/* const CoverPage: React.FC<CoverPageProps> = (props) => { */
 const CoverPage: React.FC = () => {
-    /*     const { coverContentTitle, coverContentText, background } = props;
-    const pageBg: ThemeColorVariant = ThemeColorVariant.Default; */
-    return (
-        <div>
-            <h1>My Cover Page</h1>
-        </div>
-        /*         <StyledCoverPage>
-            <StyledCoverPageBackground>{background}</StyledCoverPageBackground>
-            <StyledCoverContent>
-                <StyledCoverPageTitle $colorvariant={ThemeColorVariant.Main} data-testid={'cover_page_title'}>
-                    {coverContentTitle ?? ''}
-                </StyledCoverPageTitle>
-                <StyleCoverPageContentText $colorvariant={ThemeColorVariant.Main} data-testid={'cover_page_text'}>
-                    {coverContentText ?? ''}
-                </StyleCoverPageContentText>
+    const [contentRoot] = useAtom(contentRootAtomRW);
+    const contentRootLeafs = contentRoot[PAGE_SECTION]?.leafs ?? {};
+    const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
+    const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
+    const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];
+    const infoPanelData: CardData[] = contentRootLeafs['infoPanels']?.textContentCollection ?? [];
 
-                <StyleCoverPageContentCta data-testid={'cover_page_cta'}>
-                    <Button data-testid={'cover_page_primary_cta'} type={ButtonType.Primary}>
-                        Call
-                    </Button>
-                    <Button data-testid={'cover_page_secondary_cta'} type={ButtonType.Secondary}>
-                        Email
-                    </Button>
-                </StyleCoverPageContentCta>
-            </StyledCoverContent>{' '}
-            *
-        </StyledCoverPage> */
+    return (
+        <section data-testid="cover-page" className="mb-gutter-bottom">
+            <div className="flex flex-col">
+                <CoverHeroContainer cards={heroTheOneData} />
+                <CoverDetailsContainer cards={heroTheTwoData} />
+                <CardContainer cards={cardData} />
+                <InfoPanelContainer cards={infoPanelData} />
+            </div>
+        </section>
     );
 };
 

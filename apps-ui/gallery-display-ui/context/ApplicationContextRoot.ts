@@ -1,8 +1,6 @@
-{
-    /* import { AppContext } from "@molitio/mwe-ui-core"; */
-}
+import { AppContext, ResourceGalleryRoot } from '@molitio/mwe-ui-core';
 
-export const ApplicationContextRoot = {
+export const ApplicationContextRoot: AppContext = {
     appName: 'Gallery Display',
     navRoot: {
         home: {
@@ -35,7 +33,10 @@ export const ApplicationContextRoot = {
                         appDescription: 'Mozdítsa meg a világot velünk!',
                     },
                     assetUrls: {
-                        logoSvg: '/logo_v1.svg',
+                        logo: {
+                            src: '/logo_v1.svg',
+                            alt: 'Logo',
+                        },
                     },
                 },
                 footer: {
@@ -59,13 +60,13 @@ export const ApplicationContextRoot = {
                         infoEmail: 'infoconnect@roadistics.com',
                     },
                     assetUrls: {
-                        infoEmailHref: 'mailto:infoconnect@roadistics.com',
-                        phoneNumberHref: 'tel:+36204131238',
-                        backgroundImage: '/background_combined.png',
+                        infoEmailHref: { src: 'mailto:infoconnect@roadistics.com' },
+                        phoneNumberHref: { src: 'tel:+36204131238' },
+                        backgroundImage: { src: '/background_combined.png' },
                     },
                 },
                 showcaseCards: {
-                    cardContent: [
+                    textContentCollection: [
                         {
                             title: 'Tematikus',
                             subTitle: 'lorem ipsum dolor sit amet',
@@ -91,14 +92,10 @@ export const ApplicationContextRoot = {
                 dirll1: {
                     title: 'dirll1 title',
                     subTitle: 'lorem ipsum dolor sit amet',
-                    imageUrl: '',
-                    imageAlt: '',
                 },
                 drill2: {
                     title: 'drill2 title',
                     subTitle: 'lorem ipsum dolor sit amet',
-                    imageUrl: '',
-                    imageAlt: '',
                 },
             },
             branches: {
@@ -108,14 +105,10 @@ export const ApplicationContextRoot = {
                         dirll3: {
                             title: 'dirll3 title',
                             subTitle: 'lorem ipsum dolor sit amet',
-                            imageUrl: '',
-                            imageAlt: '',
                         },
                         dirll4: {
                             title: 'dirll4 title',
                             subTitle: 'lorem ipsum dolor sit amet',
-                            imageUrl: '',
-                            imageAlt: '',
                         },
                     },
                     branches: {
@@ -125,14 +118,10 @@ export const ApplicationContextRoot = {
                                 bateryDrill1: {
                                     title: 'bateryDrill1 title',
                                     subTitle: 'lorem ipsum dolor sit amet',
-                                    imageUrl: '',
-                                    imageAlt: '',
                                 },
                                 bateryDrill2: {
                                     title: 'bateryDrill1 title',
                                     subTitle: 'lorem ipsum dolor sit amet',
-                                    imageUrl: '',
-                                    imageAlt: '',
                                 },
                             },
                         },

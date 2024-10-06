@@ -15,7 +15,7 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: '/settings_v2.svg',
             path: '/services',
         },
-         about: {
+        about: {
             label: 'Ajánlat kérés',
             iconUrl: '/request_v2.svg',
             path: '/request',
@@ -74,6 +74,9 @@ export const ApplicationContextRoot: AppContext = {
                     },
                 },
                 serviceTheOne: {
+                    textContent: {
+                        title: 'Miben segítünk Önnek szállítmányozó cégként?',
+                    },
                     textContentCollection: [
                         {
                             title: 'Teljes körű szállítmányozás',
@@ -132,7 +135,7 @@ export const ApplicationContextRoot: AppContext = {
                             title: '25 éve az Ön szolgálatában!',
                             description:
                                 'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
-                            imageUrl: '/background_v2.png',
+                            imageUrl: '/background_v3.jpg',
                             imageAlt: 'Tematikus',
                         },
                     ],

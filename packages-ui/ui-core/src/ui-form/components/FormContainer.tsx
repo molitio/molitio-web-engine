@@ -1,10 +1,10 @@
 import React from 'react';
+import { PageSection } from '../../ui-page';
 
 const FormContainer: React.FC<React.PropsWithChildren> = (props) => {
     const { children } = props;
 
-    //TODO: fix styling of the container
-    return <div className="contact-form">{children}</div>;
+    return <PageSection>{children}</PageSection>;
 };
 
 export default FormContainer;

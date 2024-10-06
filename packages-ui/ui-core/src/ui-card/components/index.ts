@@ -1,17 +1,8 @@
-export { default as HeroTheOne } from './HeroTheOne';
-export { default as HeroTheOneContainer } from './HeroTheOneContainer';
-export { default as HeroTheTwo } from './HeroTheTwo';
-export { default as HeroTheTwoContainer } from './HeroTheTwoContainer';
 export { default as Card } from './Card';
-export { default as CardContainer } from './CardContainer';
 export { default as ContactCard } from './ContactCard';
 export { default as ContactCardContainer } from './ContactCardContainer';
 export { default as ImageCard } from './ImageCard';
 export { default as ImageCardContainer } from './ImageCardContainer';
-export { default as VerticalCard } from './VerticalCard';
-export { default as VerticalCardContainer } from './VerticalCardContainer';
-export { default as InfoPanel } from './InfoPanel';
-export { default as InfoPanelContainer } from './InfoPanelContainer';
 export { default as ShowcaseItem } from './ShowcaseItem';
 export { default as ShowcaseContainer } from './ShowcaseContainer';
 export { default as ShowcaseBranch } from './ShowcaseBranch';
