@@ -8529,6 +8529,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/tailwindcss", null],\
+          ["@types/yup", null],\
           ["autoprefixer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.4.19"],\
           ["eslint", "npm:8.57.0"],\
           ["fast-glob", "npm:3.3.2"],\
@@ -8550,7 +8551,8 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
           "@emailjs/browser",\
@@ -8561,12 +8563,14 @@ const RAW_RUNTIME_STATE =
           "@types/react-dom",\
           "@types/react",\
           "@types/tailwindcss",\
+          "@types/yup",\
           "formik",\
           "jotai",\
           "next",\
           "react-dom",\
           "react",\
-          "tailwindcss"\
+          "tailwindcss",\
+          "yup"\
         ],\
         "linkType": "SOFT"\
       }],\
@@ -8607,6 +8611,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/tailwindcss", null],\
+          ["@types/yup", null],\
           ["autoprefixer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.4.19"],\
           ["eslint", "npm:8.57.0"],\
           ["fast-glob", "npm:3.3.2"],\
@@ -8628,7 +8633,8 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
           "@types/emailjs__browser",\
@@ -8638,6 +8644,7 @@ const RAW_RUNTIME_STATE =
           "@types/react-dom",\
           "@types/react",\
           "@types/tailwindcss",\
+          "@types/yup",\
           "jotai",\
           "react-dom",\
           "react",\
@@ -8682,6 +8689,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
           ["@types/tailwindcss", null],\
+          ["@types/yup", null],\
           ["autoprefixer", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.4.19"],\
           ["eslint", "npm:8.57.0"],\
           ["fast-glob", "npm:3.3.2"],\
@@ -8703,7 +8711,8 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
           "@types/emailjs__browser",\
@@ -8713,6 +8722,7 @@ const RAW_RUNTIME_STATE =
           "@types/react-dom",\
           "@types/react",\
           "@types/tailwindcss",\
+          "@types/yup",\
           "jotai",\
           "next",\
           "react-dom",\
@@ -8774,7 +8784,8 @@ const RAW_RUNTIME_STATE =
           ["tailwindcss", "npm:3.4.1"],\
           ["ts-node", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:10.9.2"],\
           ["tslib", "npm:2.4.1"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
+          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"],\
+          ["yup", "npm:1.4.0"]\
         ],\
         "linkType": "SOFT"\
       }]\

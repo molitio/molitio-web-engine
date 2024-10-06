@@ -1,4 +1,4 @@
-import { NavRoot, ContentRoot } from '../..';
+import { NavRoot, ContentRoot, ResourceGalleryRoot } from '../..';
 
 export type AppContext = {
     appName: string;
@@ -6,4 +6,5 @@ export type AppContext = {
     appLogoAlt?: string;
     navRoot?: NavRoot;
     contentRoot?: ContentRoot;
+    resourceGalleryRoot?: ResourceGalleryRoot;
 };

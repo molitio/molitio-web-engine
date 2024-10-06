@@ -4414,6 +4414,7 @@ __metadata:
     ts-node: "npm:10.9.2"
     tslib: "npm:2.4.1"
     typescript: "npm:5.2.2"
+    yup: "npm:1.4.0"
   peerDependencies:
     "@emailjs/browser": 4.4.1
     formik: 2.4.6
@@ -4422,6 +4423,7 @@ __metadata:
     react: 18.3.1
     react-dom: 18.3.1
     tailwindcss: 3.4.1
+    yup: "*"
   languageName: unknown
   linkType: soft
 
