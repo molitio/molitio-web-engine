@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 /* 
 export const config = {
     api: {
@@ -24,12 +25,10 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
         },
     };
 
-    console.log('email data', emailData);
-
     if (!emailData) {
-        response.status(400).json({ error: 'Email data not found' });
+        NextResponse.json({ error: 'Email data not found' }, { status: 400 });
     } else {
-        /*         const result = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        const result = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
             method: 'POST',
             body: JSON.stringify(emailData),
             headers: {
@@ -37,9 +36,8 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
             },
         });
 
-        response.status(200).json({ result }); */
+        NextResponse.json({ result });
     }
 
-    return Response.json({ message: 'Email sent successfully' });
-    /*   return response; */
+    return NextResponse.json({ message: 'Email sent successfully' });
 }

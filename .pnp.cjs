@@ -96,6 +96,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.4.36"],\
           ["prettier", "npm:3.0.3"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
+          ["protobufjs", "npm:7.4.0"],\
           ["rimraf", "npm:5.0.5"],\
           ["ts-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.1.1"],\
           ["ts-morph", "npm:22.0.0"],\
@@ -8523,6 +8524,7 @@ const RAW_RUNTIME_STATE =
           ["@types/emailjs__browser", null],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
+          ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/jotai", null],\
           ["@types/next", null],\
           ["@types/node", "npm:18.11.9"],\
@@ -8605,6 +8607,7 @@ const RAW_RUNTIME_STATE =
           ["@types/emailjs__browser", null],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
+          ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/jotai", null],\
           ["@types/next", null],\
           ["@types/node", "npm:18.11.9"],\
@@ -8683,6 +8686,7 @@ const RAW_RUNTIME_STATE =
           ["@types/emailjs__browser", null],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/formik", null],\
+          ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/jotai", null],\
           ["@types/next", null],\
           ["@types/node", "npm:18.11.9"],\
@@ -8760,6 +8764,7 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-typescript", "virtual:240f5c9a7d3c26f7e4985cc352345fc92f1794ef71f0897b3420e211d6003d399b31f4110b1461dacdbccaff5015eee03fa3523d527957b327ebf3ba99e18762#npm:11.1.5"],\
           ["@tailwindcss/typography", "virtual:209f69dec964597a7afa01320463ce370f278b00e8cf7d9e1314469127adfd20ad618793ec61e4c813db8771ac4da837926405cdb9a83a250bbd19519f48b805#npm:0.5.15"],\
           ["@types/eslint", "npm:8.56.11"],\
+          ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/node", "npm:18.11.9"],\
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -8848,6 +8853,7 @@ const RAW_RUNTIME_STATE =
           ["postcss", "npm:8.4.36"],\
           ["prettier", "npm:3.0.3"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
+          ["protobufjs", "npm:7.4.0"],\
           ["rimraf", "npm:5.0.5"],\
           ["ts-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.1.1"],\
           ["ts-morph", "npm:22.0.0"],\
@@ -11086,6 +11092,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@types/graceful-fs", "npm:4.1.9"],\
           ["@types/node", "npm:22.5.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/grecaptcha", [\
+      ["npm:3.0.9", {\
+        "packageLocation": "./.yarn/cache/@types-grecaptcha-npm-3.0.9-fb978c823d-e1c9d61f3c.zip/node_modules/@types/grecaptcha/",\
+        "packageDependencies": [\
+          ["@types/grecaptcha", "npm:3.0.9"]\
         ],\
         "linkType": "HARD"\
       }]\

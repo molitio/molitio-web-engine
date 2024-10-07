@@ -20,6 +20,16 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: '/request_v2.svg',
             path: '/request',
         },
+        api: {
+            label: 'API',
+            path: '/api',
+            leafs: {
+                email: {
+                    label: 'Email API',
+                    path: '/api/email',
+                },
+            },
+        },
         /*  
         contact: {
             label: 'Kapcsolat',
@@ -269,6 +279,7 @@ export const ApplicationContextRoot: AppContext = {
             leafs: {
                 contactForm: {
                     textContent: {
+                        recaptchaTag: 'CONTACT_FORM',
                         title: 'Kapcsolat',
                     },
                 },

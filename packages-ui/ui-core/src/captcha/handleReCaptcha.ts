@@ -1,4 +1,4 @@
-export const handleRecaptcha = async (action: string, key: string) => {
+const handleRecaptcha = async (action: string, key: string) => {
     try {
         const token = await grecaptcha.enterprise?.execute(key, {
             action: action,
@@ -24,3 +24,5 @@ export const handleRecaptcha = async (action: string, key: string) => {
         return false;
     }
 };
+
+export default handleRecaptcha;

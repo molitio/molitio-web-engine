@@ -94,5 +94,8 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "protobufjs": "7.4.0"
     }
 }

@@ -31,7 +31,9 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
                         <NavBar />
                     </NavRootProvider>
                     <main className="">
-                        <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
+                        <NavRootProvider navRoot={appContext.navRoot}>
+                            <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
+                        </NavRootProvider>
                     </main>
                 </Suspense>
                 <EmailClient />
