@@ -20,6 +20,10 @@ const EmailClient: React.FC = () => {
                 async
                 onLoad={() => emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_API_KEY ?? '')}
             />
+            <Script
+                strategy="lazyOnload"
+                src={`https://www.google.com/recaptcha/enterprise.js?render=${process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}`}
+            />
         </>
     );
 };

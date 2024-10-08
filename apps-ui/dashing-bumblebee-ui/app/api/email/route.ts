@@ -11,7 +11,6 @@ export const config = {
 
 export async function POST(req: NextRequest, res: NextResponse) {
     const { from_name, from_email, message } = (await req.json()) ?? '';
-    let response = res;
 
     const emailData = {
         service_id: process.env.EMAILJS_SERVICE_ID ?? '',
