@@ -5,6 +5,13 @@
 import './style-system/global.css';
 
 /**
+ * captcha
+ *
+ * Captcha functionality and components
+ */
+export * from './captcha';
+
+/**
  * core
  *
  * Core resuable functionality and components

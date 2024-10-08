@@ -4,9 +4,26 @@ import React from 'react';
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { handleRecaptcha } from '../../captcha';
 import QuoteRequestFormField from './QuoteRequestFromField';
+import { useAtom } from 'jotai';
+import { contentRootAtomRW, navMenuAtomRW } from '../../context';
 
-const QuoteRequestFormSchema = Yup.object().shape({
+type QuoteRequestFormSchema = {
+    companyName: string;
+    email: string;
+    contactPerson: string;
+    phoneNumber: string;
+    pickupLocation: string;
+    pickupTime: Date;
+    deliveryLocation: string;
+    deliveryTime: Date;
+    deliveryType: string;
+    deliveryWeight: number;
+    comment: string;
+};
+
+const QuoteRequestFormSchemaValidation = Yup.object().shape({
     companyName: Yup.string()
         .min(2, 'A cégnév legalább 2 karakter hosszú kell, hogy legyen!')
         .max(50, 'A cégnév legfeljebb 50 karakter hosszú lehet!')
@@ -49,6 +66,76 @@ const QuoteRequestFormSchema = Yup.object().shape({
 });
 
 const QuoteRequestForm: React.FC = () => {
+    //TODO: fix NavRoot access from component, /api/email
+    const [navRoot] = useAtom(navMenuAtomRW);
+    const [contentRoot] = useAtom(contentRootAtomRW);
+    const contentRootLeafs = contentRoot['contact']?.leafs ?? {};
+    const contactFormLeaf = contentRootLeafs['contactForm'] ?? {};
+    const emailApiPath = navRoot?.['api']?.leafs?.['email']?.path ?? '';
+
+    const handleSubmit = async (values: QuoteRequestFormSchema, actions: any) => {
+        try {
+            const isRecaptchaPass = await handleRecaptcha(
+                contactFormLeaf?.textContent?.recaptchaTag ?? 'CONTACT_FORM',
+                process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? '',
+            );
+
+            if (!isRecaptchaPass) {
+                return;
+            } else {
+                const {
+                    companyName,
+                    email,
+                    contactPerson,
+                    phoneNumber,
+                    pickupLocation,
+                    pickupTime,
+                    deliveryLocation,
+                    deliveryTime,
+                    deliveryType,
+                    deliveryWeight,
+                    comment,
+                } = values;
+
+                const message = `
+Cég név: ${companyName}
+E-mail cím: ${email}
+Kapcsolattartó személy neve: ${contactPerson}
+Telefonszám: ${phoneNumber}
+Szállítás felvétel helye: ${pickupLocation}
+Szállítás felvétel időpontja: ${pickupTime}
+Szállítás leadás helye: ${deliveryLocation};
+Szállítás leadás időpontja: ${deliveryTime}
+Szállítmány típusa: ${deliveryType}
+Szállítmány súlya: ${deliveryWeight}
+Megjegyzés: ${comment}
+`;
+                console.log('emailApiPath', navRoot);
+                //if (emailApiPath) {
+                //const response = await fetch(emailApiPath ?? '', {
+                const response = await fetch('/api/email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        from_name: companyName,
+                        from_email: email,
+                        message: message,
+                    }),
+                });
+
+                console.log('email response', response.json());
+                //}
+            }
+        } catch (error: any) {
+            console.error(error.message);
+        }
+
+        actions.setSubmitting(false);
+        actions.resetForm();
+    };
+
     return (
         <div className="flex flex-col xl:flex-row-reverse items-center py-[120px]">
             <div className="">
@@ -63,124 +150,99 @@ const QuoteRequestForm: React.FC = () => {
                         contactPerson: '',
                         phoneNumber: '',
                         pickupLocation: '',
-                        pickupTime: '',
+                        pickupTime: new Date(),
                         deliveryLocation: '',
-                        deliveryTime: '',
+                        deliveryTime: new Date(),
                         deliveryType: '',
                         deliveryWeight: 0,
                         comment: '',
                     }}
-                    validationSchema={QuoteRequestFormSchema}
-                    onSubmit={(values, { setSubmitting }) => {
-                        console.log(values);
+                    validationSchema={QuoteRequestFormSchemaValidation}
+                    onSubmit={(values, { setSubmitting, resetForm }) => {
+                        handleSubmit(values, { setSubmitting, resetForm });
                         setSubmitting(false);
                     }}
                 >
                     <Form className="">
                         <div className="mx-auto w-full sm:max-w-md md:max-w-lg flex flex-col gap-4">
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="companyName"
-                                    placeholder="Cég név"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="companyName" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="email"
-                                    placeholder="E mail cím"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="email" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="contactPerson"
-                                    placeholder="Kapcsolattartó személy neve:"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="contactPerson" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="phoneNumber"
-                                    placeholder="Telefonszám:"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="phoneNumber" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
+                            <label>Cég név</label>
+                            <Field
+                                type="text"
+                                name="companyName"
+                                placeholder="Cég név"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="companyName" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="text"
+                                name="email"
+                                placeholder="E-mail cím"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="email" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="text"
+                                name="contactPerson"
+                                placeholder="Kapcsolattartó személy neve"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="contactPerson" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="text"
+                                name="phoneNumber"
+                                placeholder="Telefonszám"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="phoneNumber" component="div" className="text-red-400 text-md" />
 
                             <h2 className="text-primary">Munka feladat:</h2>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="pickupLocation"
-                                    placeholder="Felrakó hely:"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="pickupLocation" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="date"
-                                    name="pickupTime"
-                                    placeholder="Lerakás időpont:"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="pickupTime" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="deliveryLocation"
-                                    placeholder="Lerakó hely:"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage
-                                    name="deliveryLocation"
-                                    component="div"
-                                    className="text-red-400 text-md"
-                                />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="date"
-                                    name="deliveryTime"
-                                    placeholder="Lerakási dátum"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <ErrorMessage name="deliveryTime" component="div" className="text-red-400 text-md" />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="deliveryType"
-                                    placeholder="Áru megnevezése"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="number"
-                                    name="deliveryWeight"
-                                    placeholder="Áru súly"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                                <span>Kg</span>
-                            </QuoteRequestFormField>
-                            <QuoteRequestFormField>
-                                <Field
-                                    type="text"
-                                    name="comment"
-                                    placeholder="Megjegyzés"
-                                    className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
-                                />
-                            </QuoteRequestFormField>
+                            <Field
+                                type="text"
+                                name="pickupLocation"
+                                placeholder="Szállítás felvétel helye"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="pickupLocation" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="date"
+                                name="pickupTime"
+                                placeholder="Szállítás felvétel időpontja"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="pickupTime" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="text"
+                                name="deliveryLocation"
+                                placeholder="Szállítás leadás helye"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="deliveryLocation" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="date"
+                                name="deliveryTime"
+                                placeholder="Szállítás leadás időpontja"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <ErrorMessage name="deliveryTime" component="div" className="text-red-400 text-md" />
+                            <Field
+                                type="text"
+                                name="deliveryType"
+                                placeholder="Szállítmány típusa"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <Field
+                                type="number"
+                                name="deliveryWeight"
+                                placeholder="Áru súly"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
+                            <span>Kg</span>
+                            <Field
+                                type="text"
+                                name="comment"
+                                placeholder="Megjegyzés"
+                                className="input input-bordered input-primary w-full font-semibold text-form-field placeholder:text-placeholder px-4 py-2 rounded-lg mb-1"
+                            />
                             <div className="flex items-center gap-1.5  justify-start pl-2">
                                 <div className="form-control">
                                     <label className="label cursor-pointer">
@@ -189,7 +251,10 @@ const QuoteRequestForm: React.FC = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col items-center">
-                                <button className="text-1xl xl:text-2xl text-primary border-4 border-primary p-4 rounded-xl hover:bg-gradient-to-172 hover:border-0">
+                                <button
+                                    type="submit"
+                                    className="text-1xl xl:text-2xl text-primary border-4 border-primary p-4 rounded-xl hover:bg-gradient-to-172 hover:border-0"
+                                >
                                     Szállítmányozás igénylése
                                 </button>
                             </div>

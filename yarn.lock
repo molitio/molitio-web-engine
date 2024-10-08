@@ -4389,6 +4389,7 @@ __metadata:
     "@rollup/plugin-typescript": "npm:11.1.5"
     "@tailwindcss/typography": "npm:0.5.15"
     "@types/eslint": "npm:^8"
+    "@types/grecaptcha": "npm:3.0.9"
     "@types/node": "npm:18.11.9"
     "@types/react": "npm:18.3.0"
     "@types/react-dom": "npm:18.3.0"
@@ -4461,6 +4462,7 @@ __metadata:
     postcss: "npm:8.4.36"
     prettier: "npm:3.0.3"
     prettier-eslint: "npm:16.3.0"
+    protobufjs: "npm:7.4.0"
     rimraf: "npm:5.0.5"
     ts-jest: "npm:29.1.1"
     ts-morph: "npm:22.0.0"
@@ -6240,6 +6242,13 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/79d746a8f053954bba36bd3d94a90c78de995d126289d656fb3271dd9f1229d33f678da04d10bce6be440494a5a73438e2e363e92802d16b8315b051036c5256
+  languageName: node
+  linkType: hard
+
+"@types/grecaptcha@npm:3.0.9":
+  version: 3.0.9
+  resolution: "@types/grecaptcha@npm:3.0.9"
+  checksum: 10/e1c9d61f3cc8cbc41fd5eaeece761a90010d50eacd58208cb96d0adb1f89cc08b5060d903e592a33312e39c00735879400556b583bd18b41fee83aec5271d574
   languageName: node
   linkType: hard
 
@@ -17168,7 +17177,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:^7.2.5, protobufjs@npm:^7.3.2":
+"protobufjs@npm:7.4.0, protobufjs@npm:^7.2.5, protobufjs@npm:^7.3.2":
   version: 7.4.0
   resolution: "protobufjs@npm:7.4.0"
   dependencies:
