@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             spacing: {
-                'gutter-bottom': '5rem',
+                'gutter-bottom': '2rem',
             },
             colors: {
                 primary: '#72bcf9',
