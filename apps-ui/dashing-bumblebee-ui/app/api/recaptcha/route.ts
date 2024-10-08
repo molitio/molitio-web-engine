@@ -1,8 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { RecaptchaEnterpriseServiceClient } from '@google-cloud/recaptcha-enterprise';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
     const client = new RecaptchaEnterpriseServiceClient({
         credentials: {
             client_id: process?.env?.GOOGLE_RECAPTCHA_CLIENT_ID,
@@ -11,15 +10,11 @@ export async function POST(req: NextApiRequest, res: NextApiResponse) {
         },
     });
 
-    async function streamToString(stream: any) {
-        const chunks = [];
-        for await (const chunk of stream) {
-            chunks.push(chunk);
-        }
-        return Buffer.concat(chunks).toString('utf8');
-    }
+    const body = await req.json();
 
-    const body = JSON.parse(await streamToString(req.body));
+    if (!body?.token) {
+        NextResponse.json({ message: 'No token provided' }, { status: 400 });
+    }
 
     const request = {
         parent: `projects/${process?.env?.GOOGLE_RECAPTCHA_PROJECT_ID}`,
