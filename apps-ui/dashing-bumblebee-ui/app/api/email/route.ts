@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 /* 
 export const config = {
     api: {
@@ -10,8 +10,8 @@ export const config = {
     maxDuration: 5,
 }; */
 
-export async function POST(req: NextApiRequest, res: NextApiResponse) {
-    const { from_name, from_email, message } = req?.body ?? '';
+export async function POST(req: NextRequest, res: NextResponse) {
+    const { from_name, from_email, message } = (await req.json()) ?? '';
     let response = res;
 
     const emailData = {
