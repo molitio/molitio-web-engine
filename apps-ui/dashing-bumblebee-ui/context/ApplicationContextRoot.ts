@@ -20,6 +20,11 @@ export const ApplicationContextRoot: AppContext = {
             iconUrl: '/request_v2.svg',
             path: '/request',
         },
+        contact: {
+            label: 'Kapcsolat',
+            iconUrl: '/contact_icon_svg_v1.svg',
+            path: '/contact',
+        }, 
         api: {
             label: 'API',
             path: '/api',
@@ -29,13 +34,7 @@ export const ApplicationContextRoot: AppContext = {
                     path: '/api/email',
                 },
             },
-        },
-        /*  
-        contact: {
-            label: 'Kapcsolat',
-            iconUrl: '/contact_icon_svg_v1.svg',
-            path: '/contact',
-        }, */
+        },     
     },
     contentRoot: {
         common: {
@@ -89,30 +88,58 @@ export const ApplicationContextRoot: AppContext = {
                     },
                     textContentCollection: [
                         {
-                            title: 'Teljes körű szállítmányozás',
+                            title: 'Belföldi és nemzetközi fuvarozás',
                             description:
-                                'Szállítmányozó cégként minden logisztikai igényét kielégítjük, legyen szó belföldi vagy nemzetközi fuvarozásról. Rugalmasan és gyorsan reagálunk a megkeresésekre,- egyedi fuvarokat és expressz szállításokat is vállalunk, akár 24 órán belüli kiérkezéssel is. Célunk, hogy a mögöttünk álló technológia gyorsan és hatékonyan kiszolgálja a változó üzleti igényeket, biztosítva a maximális hatékonyságot az Ön sikere érdekében.',
+                                'Megszervezzük a rakomány szállítását belföldön és Európa-szerte, optimalizálva az útvonalakat és csökkentve az üresjáratokat.',
                             imageUrl: '',
                             imageAlt: '',
                         },
                         {
-                            title: 'Raktározás',
+                            title: 'Saját flotta:',
                             description:
-                                'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
+                                'Road-istics Trans kft: saját flottánk 30 teherautóból áll, 1-33 palettás kapacitással, mely garantálja a kiváló minőséget és pontosságot. Express és speciális fuvarozás is vállalunk. Emellett marketing - és reklámanyagokat is szállítunk és kihelyezünk az ügyfél kérése alapján.',
                             imageUrl: '',
                             imageAlt: '',
                         },
                         {
-                            title: 'Egyedi megoldások',
+                            title: 'Rugalmasság',
                             description:
-                                'Különleges fuvarokat is vállalunk, akár express szállítással, 24 órán belüli kiérkezéssel. Rugalmas ügyfélszolgálatunk segítségével hétfőtől péntekig minden egyedi igényt teljesítünk.',
+                                'Rugalmasan alkalmazkodunk az Ön igényeihez, -legyen szó sürgős szállításokról vagy speciális fuvarfeladatokról, mindig megtaláljuk a legoptimálisabb megoldást.',
                             imageUrl: '',
                             imageAlt: '',
                         },
                         {
-                            title: 'Gyors reakcióidő',
+                            title: 'Magas szakmai színvonal',
                             description:
-                                'Számunkra a gyors reakció elengedhetetlen. Ha hétköznap délig leadja ajánlatkérését, másnap délig válaszolunk, biztosítva a gyors szállítást.',
+                                'Minden helyzetre fel vagyunk készülve. Tapasztalt csapatunk garantálja a magas színvonalú szolgáltatásokat, így Önt nem érheti váratlan meglepetés.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Egy ügyintézővel',
+                            description:
+                                'Egy ügyintézővel intézheti az egész projektet az elejétől a végéig, így jelentősen csökkentjük a hibázási lehetőséget és növeljük a hatékonyságot.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Folyamatos tájékoztatás',
+                            description:
+                                'Mindig időben tájékoztatjuk Önt arról, hogy hol tart a rakománya, biztosítva ezzel a teljes átláthatóságot.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Versenyképes árak',
+                            description:
+                                'Költséghatékony megoldásokat kínálunk, amelyek segítenek minimalizálni a szállítási költségeket, miközben maximális értéket nyújtunk ügyfeleinknek.',
+                            imageUrl: '',
+                            imageAlt: '',
+                        },
+                        {
+                            title: 'Ügyfélközpontúság',
+                            description:
+                                'Függetlenül attól, hogy egyetlen megbízása van, vagy havonta több száz, mindenkit ugyanolyan figyelemmel és prioritással kezelünk.',
                             imageUrl: '',
                             imageAlt: '',
                         },
@@ -144,7 +171,7 @@ export const ApplicationContextRoot: AppContext = {
                         {
                             title: '25 éve az Ön szolgálatában!',
                             description:
-                                'Üdvözöljük a Road-istics Connect Kft. weboldalán, ahol 25 év szakértelmével és elkötelezettségével állunk rendelkezésére a logisztika és a szállítmányozás területén. Célunk, hogy ügyfeleink számára mindig a legoptimálisabb megoldásokat nyújtsuk, legyen szó belföldi vagy nemzetközi fuvarozásról, raktározásról, vagy vámkezelésről. Fedezze fel szolgáltatásainkat, és válassza a megbízhatóságot!',
+                                'A Road-istics Connect Kft. mögött egy elhivatott, nagy tapasztalattal rendelkező csapat áll. Családi vállalkozásként több mint 25 éve nyújtunk megbízható fuvarozási és logisztikai szolgáltatásokat. Munkatársainkat a megbízhatóság és a szakértelem jellemzi, így ügyfeleinknek a legmagasabb színvonalú szolgáltatásokat biztosítjuk.',
                             imageUrl: '/background_v3.jpg',
                             imageAlt: 'Tematikus',
                         },
@@ -153,13 +180,6 @@ export const ApplicationContextRoot: AppContext = {
 
                 coverCards: {
                     textContentCollection: [
-                        {
-                            title: 'Vámkezelés',
-                            imageUrl: '/service.jpg',
-                            imageAlt: 'Gyors',
-                            description:
-                                'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
-                        },
                         {
                             title: 'Szállítmányozás',
                             imageUrl: '/export.png',
@@ -174,21 +194,34 @@ export const ApplicationContextRoot: AppContext = {
                             description:
                                 'Innovatív raktározási megoldásokat kínálunk, melyek lehetővé teszik rakománya megfelelő tárolását és kezelését, biztosítva annak megőrzését és elérhetőségét.',
                         },
+                        {
+                            title: 'Vámkezelés',
+                            imageUrl: '/service.jpg',
+                            imageAlt: 'Gyors',
+                            description:
+                                'Gyors és megbízható vámkezelési szolgáltatásainkkal segítjük az import és export folyamatokat, hogy rakománya zökkenőmentesen átjusson a határokon.',
+                        },
                     ],
                 },
                 contactCardCover: {
                     textContentCollection: [
                         {
-                            title: 'E mail:',
+                            title: 'Road-istics Connect Kft',
                             imageUrl: '',
                             imageAlt: '',
-                            description: 'infoconnect@roadistics.com',
+                            description: 'Ügyvezető:  Bucsics Zoltán ',
                         },
                         {
                             title: 'Telefon:',
                             imageUrl: '',
                             imageAlt: '',
                             description: '+36 20 324 8489',
+                        },
+                        {
+                            title: 'E-mail:',
+                            imageUrl: '',
+                            imageAlt: '',
+                            description: 'zbucsics@roadistics.com',
                         },
                     ],
                 },
