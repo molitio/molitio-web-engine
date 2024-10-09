@@ -3,8 +3,8 @@ export type ContentRoot = {
 };
 
 export type ContentBranch = {
-    branchContent?: ContentLeaf | CardLeaf;
-    leafs?: Record<string, ContentLeaf>;
+    branchContent?: ContentLeaf;
+    leafs?: Record<string, ContentLeaf | CardLeaf>;
 };
 
 export type CardLeaf = {
