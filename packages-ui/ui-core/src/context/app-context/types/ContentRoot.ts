@@ -8,7 +8,14 @@ export type ContentBranch = {
 };
 
 export type CardLeaf = {
-    cardTitle?: string;
+    title?: string; // "Shipping"
+    cardDesription?: string; // shipping control
+    detailItems?: Record<string, CardDetail>;
+};
+
+export type CardDetail = {
+    detailType: string; // "phoneNumber"
+    value: string; // +36 111111111
 };
 
 export type ContentImage = {
