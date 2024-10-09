@@ -1,9 +1,14 @@
 export type ContentRoot = {
     [key: string]: ContentBranch;
 };
+
 export type ContentBranch = {
-    branchContent?: ContentLeaf;
+    branchContent?: ContentLeaf | CardLeaf;
     leafs?: Record<string, ContentLeaf>;
+};
+
+export type CardLeaf = {
+    cardTitle?: string;
 };
 
 export type ContentImage = {
