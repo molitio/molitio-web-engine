@@ -206,23 +206,29 @@ export const ApplicationContextRoot: AppContext = {
                 contactCardCover: {
                     textContentCollection: [
                         {
-                            title: 'Road-istics Connect Kft',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: 'Ügyvezető:  Bucsics Zoltán ',
+                            companyName: 'Road-istics Connect Kft',
+                            managingDirector: 'Bucsics Zoltán ',
+                            phoneNumber: 'Telefonszám: +36 20 413 1238',
+                            email: 'Email: zbucsics@roadistics.com',
+                            transportationManager: 'Szállítmányozási vezető: Pintér Gabriella',
+                            tmPhoneNumber: 'Telefonszám: +36 20 324 8489',
+                            tmEmail: 'Email: pgconnect@roadistics.com',
+                            freightForwarder: 'Fuvarszervező: Gősi Melinda',
+                            ffPhoneNumber: 'Telefonszám: +36 20 380 8236',
+                            ffEmail: 'Email: gmconnect@roadistics.com',
+                            invoicing: 'info@roadistics.com',
                         },
                         {
-                            title: 'Telefon:',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: '+36 20 324 8489',
-                        },
-                        {
-                            title: 'E-mail:',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: 'zbucsics@roadistics.com',
-                        },
+                            companyName: 'Road-istics Trans Kft',
+                            managingDirector: 'Bucsics Zoltán ',
+                            phoneNumber: '+36 20 413 1238',
+                            email: 'zbucsics@roadistics.com',
+                            transportationManager: 'Flotta iránytó: Hoványiné Tóth Zsuzsanna',
+                            tmPhoneNumber: 'Telefonszám: +36 20 242 4698',
+                            tmEmail: 'Email: htzsconnect@roadistics.com',
+                            invoicing: 'info@roadistics.com',
+                        }
+                        
                     ],
                 },
                 imageCards: {
