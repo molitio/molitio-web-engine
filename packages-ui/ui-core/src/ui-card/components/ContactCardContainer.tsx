@@ -1,5 +1,5 @@
 import React from 'react';
-import type { CardData, ContactCardData } from '../types';
+import type { ContactCardData } from '../types';
 import ContactCard from './ContactCard';
 import { useAtom } from 'jotai';
 import { contentRootAtomRW } from '../../context';
@@ -29,7 +29,6 @@ const ContactCardContainer: React.FC<ContactCardContainerProps> = (props) => {
                     ffPhoneNumber={card.ffPhoneNumber}
                     ffEmail={card.ffEmail}
                     invoicing={card.invoicing}
-                    
                 />
             ))}
         </div>
