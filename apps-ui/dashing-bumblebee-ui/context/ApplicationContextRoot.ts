@@ -217,32 +217,85 @@ export const ApplicationContextRoot: AppContext = {
                                     dataSegments: {
                                         telefon: {
                                             segmentKey: 'Telefonszám:',
-                                            segmentValue: '+36204131238',
+                                            segmentValue: '+36 20 413 12 38',
                                         },
                                         email: {
-                                            segmentKey: 'email:',
-                                            segmentValue: '+36204131238',
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'zbucsics@roadistics.com',
                                         },
                                     },
                                 },
-                                szalVe: {
+                                szallitmanyozasiVezeto: {
+                                    segmentKey: 'Szállítmányozási vezető:',
+                                    segmentValue: 'Pintér Gabriella',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 324 84 89',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'pgconnect@roadistics.com',
+                                        },
+                                    },
+                                },
+                                fuvarozasiVezeto: {
+                                    segmentKey: 'Fuvarszervező:',
+                                    segmentValue: 'Gősi Melinda',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 380 82 36',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'gmconnect@roadistics.com',
+                                        },
+                                    },
+                                    
+                                },
+                                szamlazas: {
+                                    segmentKey: 'Számlázás:',
+                                    segmentValue: 'info@roadistics.com'
+                                }
+                            },
+                        },
+                        {
+                            title: 'Road-istics Trans Kft',
+                            segments: {
+                                ugyvezeto: {
                                     segmentKey: 'Ügyvezető:',
                                     segmentValue: 'Bucsics Zoltán',
                                     dataSegments: {
                                         telefon: {
                                             segmentKey: 'Telefonszám:',
-                                            segmentValue: '+36204131238',
+                                            segmentValue: '+36 20 413 12 38',
                                         },
                                         email: {
-                                            segmentKey: 'email:',
-                                            segmentValue: '+36204131238',
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'zbucsics@roadistics.com',
                                         },
                                     },
                                 },
+                                szallitmanyozasiVezeto: {
+                                    segmentKey: 'Flotta iránytó:',
+                                    segmentValue: 'Hoványiné Tóth Zsuzsanna',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 242 46 98',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'htzsconnect@roadistics.com',
+                                        },
+                                    },
+                                },
+                                szamlazas: {
+                                    segmentKey: 'Számlázás:',
+                                    segmentValue: 'info@roadistics.com'
+                                }
                             },
-                        },
-                        {
-                            title: 'Road-istics Trans Kft',
                         },
                         /*                   {
                             companyName: 'Road-istics Connect Kft',

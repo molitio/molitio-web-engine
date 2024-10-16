@@ -1,8 +1,9 @@
 import React from 'react';
-import type { ContactCardData } from '../types';
-import ContactCard from './ContactCard';
+import type { ContactCardData } from '../../ui-card/types';
+import ContactCard from '../../ui-card/components/ContactCard';
 import { useAtom } from 'jotai';
 import { contentRootAtomRW } from '../../context';
+import PageSection from '../../ui-page/components/PageSection';
 
 const ContactCardContainer: React.FC = () => {
     const [contentRoot] = useAtom(contentRootAtomRW);
@@ -11,11 +12,15 @@ const ContactCardContainer: React.FC = () => {
         (contentRootLeafs['contactCardCover']?.textContentCollection as ContactCardData[]) ?? [];
 
     return (
-        <div id="contact" className="gap-bottom flex:col gap-4 sm:gap-6 bg-primary">
+        <PageSection>
+        <ul className="flex flex-col gap-12">
             {cardTheTwoData.map((card, i) => (
+                <li key={i} className='mb-gutter-bottom'>
                 <ContactCard key={i} data={card} />
+                </li>
             ))}
-        </div>
+        </ul>
+        </PageSection>
     );
 };
 export default ContactCardContainer;

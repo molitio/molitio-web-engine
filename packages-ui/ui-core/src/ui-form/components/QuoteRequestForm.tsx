@@ -138,10 +138,10 @@ Megjegyzés: ${comment}
 
     return (
         <div className="flex flex-col xl:flex-row-reverse items-center py-[120px]">
-            <div className="">
+            <div className="w-full xl:w-1/2">
                 <img src="export.png" alt="login" className="w-full" />
             </div>
-            <div className="">
+            <div className="w-full xl:w-1/2">
                 <h1 className="text-center text-2xl sm:text-3xl font-semibold mb-gutter-bottom">Árajánlat kérés</h1>
                 <Formik
                     initialValues={{
@@ -255,7 +255,7 @@ Megjegyzés: ${comment}
                                     type="submit"
                                     className="text-1xl xl:text-2xl text-primary border-4 border-primary p-4 rounded-xl hover:bg-gradient-to-172 hover:border-0"
                                 >
-                                    Szállítmányozás igénylése
+                                    Küldés
                                 </button>
                             </div>
                         </div>
