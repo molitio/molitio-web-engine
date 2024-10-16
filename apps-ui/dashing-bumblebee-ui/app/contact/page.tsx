@@ -1,8 +1,10 @@
 'use client';
 
 import React from 'react';
-import { ContactCardContainer, CardData, contentRootAtomRW, ContactCardData } from '@molitio/mwe-ui-core';
+import { ContactCardContainer ,  contentRootAtomRW } from '@molitio/mwe-ui-core';
 import { useAtom } from 'jotai';
+import type {  ContactCardData } from '@molitio/mwe-ui-core';
+
 
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
