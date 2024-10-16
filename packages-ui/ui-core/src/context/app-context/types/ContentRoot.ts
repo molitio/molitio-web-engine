@@ -1,3 +1,5 @@
+import { CardData, ContactCardData, ImageCardData } from '../../../ui-card';
+
 export type ContentRoot = {
     [key: string]: ContentBranch;
 };
@@ -5,17 +7,6 @@ export type ContentRoot = {
 export type ContentBranch = {
     branchContent?: ContentLeaf;
     leafs?: Record<string, ContentLeaf /* | CardLeaf*/>;
-};
-
-export type CardLeaf = {
-    title?: string; // "Shipping"
-    cardDesription?: string; // shipping control
-    detailItems?: Record<string, CardDetail>;
-};
-
-export type CardDetail = {
-    detailType: string; // "phoneNumber"
-    value: string; // +36 111111111
 };
 
 export type ContentImage = {
@@ -28,7 +19,7 @@ export type ContentLeaf = {
     imageAssetUrls?: Record<string, ContentImage>;
     refLinkUrls?: Record<string, RefLinkUrl>;
     textContent?: TextContent;
-    textContentCollection?: TextContent[];
+    textContentCollection?: TextContent[] | CardData[] | ContactCardData[] | ImageCardData[];
     assetUrls?: AsserUrlCollection;
 };
 

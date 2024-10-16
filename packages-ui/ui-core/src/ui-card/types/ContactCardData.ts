@@ -1,13 +1,15 @@
 export type ContactCardData = {
-    companyName?: string;
-    managingDirector?: string;
-    phoneNumber?: string;
-    email?: 'string';
-    transportationManager?: 'string';
-    tmPhoneNumber?:'string';
-    tmEmail?:'string';
-    freightForwarder?: 'string';
-    ffPhoneNumber?: 'string';
-    ffEmail?: 'string';
-    invoicing?: 'string';
-}
+    title?: string;
+    segments?: Record<string, ContactSegment>;
+};
+
+export type ContactSegment = {
+    segmentKey: string;
+    segmentValue?: string;
+    dataSegments?: Record<string, ContactCardSegment>;
+};
+
+export type ContactCardSegment = {
+    segmentKey?: string;
+    segmentValue?: ContactCardData;
+};
