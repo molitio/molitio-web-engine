@@ -29,7 +29,6 @@ const ContactCardContainer: React.FC<ContactCardContainerProps> = (props) => {
                     ffPhoneNumber={card.ffPhoneNumber}
                     ffEmail={card.ffEmail}
                     invoicing={card.invoicing}
-                    
                 />
             ))}
         </div>
