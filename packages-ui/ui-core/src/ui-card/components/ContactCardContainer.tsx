@@ -13,12 +13,7 @@ const ContactCardContainer: React.FC = () => {
     return (
         <div id="contact" className="gap-bottom flex:col gap-4 sm:gap-6 bg-primary">
             {cardTheTwoData.map((card, i) => (
-                <ContactCard
-                    key={i}
-                    data={{
-                        ...card,
-                    }}
-                />
+                <ContactCard key={i} data={card} />
             ))}
         </div>
     );

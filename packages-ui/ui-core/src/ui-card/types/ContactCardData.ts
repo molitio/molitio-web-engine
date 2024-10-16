@@ -6,10 +6,10 @@ export type ContactCardData = {
 export type ContactSegment = {
     segmentKey: string;
     segmentValue?: string;
-    dataSegments?: Record<string, ContactCardSegment>;
+    dataSegments?: Record<string, ContactCardDataSegment>;
 };
 
-export type ContactCardSegment = {
+export type ContactCardDataSegment = {
     segmentKey?: string;
-    segmentValue?: ContactCardData;
+    segmentValue?: string;
 };

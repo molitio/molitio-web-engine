@@ -24,7 +24,7 @@ export const ApplicationContextRoot: AppContext = {
             label: 'Kapcsolat',
             iconUrl: '/contact_icon_svg_v1.svg',
             path: '/contact',
-        }, 
+        },
         api: {
             label: 'API',
             path: '/api',
@@ -34,7 +34,7 @@ export const ApplicationContextRoot: AppContext = {
                     path: '/api/email',
                 },
             },
-        },     
+        },
     },
     contentRoot: {
         common: {
@@ -204,8 +204,47 @@ export const ApplicationContextRoot: AppContext = {
                     ],
                 },
                 contactCardCover: {
+                    textContent: {
+                        title: 'Elérhetőségeink',
+                    },
                     textContentCollection: [
                         {
+                            title: 'Road-istics Connect Kft',
+                            segments: {
+                                ugyvezeto: {
+                                    segmentKey: 'Ügyvezető:',
+                                    segmentValue: 'Bucsics Zoltán',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36204131238',
+                                        },
+                                        email: {
+                                            segmentKey: 'email:',
+                                            segmentValue: '+36204131238',
+                                        },
+                                    },
+                                },
+                                szalVe: {
+                                    segmentKey: 'Ügyvezető:',
+                                    segmentValue: 'Bucsics Zoltán',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36204131238',
+                                        },
+                                        email: {
+                                            segmentKey: 'email:',
+                                            segmentValue: '+36204131238',
+                                        },
+                                    },
+                                },
+                            },
+                        },
+                        {
+                            title: 'Road-istics Trans Kft',
+                        },
+                        /*                   {
                             companyName: 'Road-istics Connect Kft',
                             managingDirector: 'Bucsics Zoltán ',
                             phoneNumber: '+36204131238',
@@ -227,8 +266,7 @@ export const ApplicationContextRoot: AppContext = {
                             tmPhoneNumber: 'Telefonszám: +3620 242 4698',
                             tmEmail: 'Email: htzsconnect@roadistics.com',
                             invoicing: 'info@roadistics.com',
-                        }
-                        
+                        } */
                     ],
                 },
                 imageCards: {
