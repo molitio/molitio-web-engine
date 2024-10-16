@@ -18,17 +18,9 @@ const ContactCardContainer: React.FC<ContactCardContainerProps> = (props) => {
             {cardTheTwoData.map((card, i) => (
                 <ContactCard
                     key={i}
-                    companyName={card.companyName}
-                    managingDirector={card.managingDirector}
-                    phoneNumber={card.phoneNumber}
-                    email={card.email}
-                    transportationManager={card.transportationManager}
-                    tmPhoneNumber={card.tmPhoneNumber}
-                    tmEmail={card.tmEmail}
-                    freightForwarder={card.freightForwarder}
-                    ffPhoneNumber={card.ffPhoneNumber}
-                    ffEmail={card.ffEmail}
-                    invoicing={card.invoicing}
+                    data={{
+                        ...card,
+                    }}
                 />
             ))}
         </div>
