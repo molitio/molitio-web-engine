@@ -1,14 +1,16 @@
 'use client';
 
 import React from 'react';
-import { ContactCardContainer , CardData, contentRootAtomRW } from '@molitio/mwe-ui-core';
+import { ContactCardContainer ,  contentRootAtomRW } from '@molitio/mwe-ui-core';
 import { useAtom } from 'jotai';
+import type {  ContactCardData } from '@molitio/mwe-ui-core';
+
 
 
 export default function Page() {
     const [contentRoot] = useAtom(contentRootAtomRW);
     const contentRootLeafs = contentRoot['home']?.leafs ?? {};
-    const cardTheTwoData: CardData[] = contentRootLeafs['contactCardCover']?.textContentCollection ?? [];
+    const cardTheTwoData: ContactCardData[] = contentRootLeafs['contactCardCover']?.textContentCollection ?? [];
 
     return (
         <section className="hero min-h-screen bg-gray-800 items-start">
