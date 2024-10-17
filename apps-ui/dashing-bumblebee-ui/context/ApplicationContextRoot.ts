@@ -24,7 +24,7 @@ export const ApplicationContextRoot: AppContext = {
             label: 'Kapcsolat',
             iconUrl: '/contact_icon_svg_v1.svg',
             path: '/contact',
-        }, 
+        },
         api: {
             label: 'API',
             path: '/api',
@@ -34,7 +34,7 @@ export const ApplicationContextRoot: AppContext = {
                     path: '/api/email',
                 },
             },
-        },     
+        },
     },
     contentRoot: {
         common: {
@@ -204,25 +204,122 @@ export const ApplicationContextRoot: AppContext = {
                     ],
                 },
                 contactCardCover: {
+                    textContent: {
+                        title: 'Elérhetőségeink',
+                    },
                     textContentCollection: [
                         {
                             title: 'Road-istics Connect Kft',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: 'Ügyvezető:  Bucsics Zoltán ',
+                            segments: {
+                                ugyvezeto: {
+                                    segmentKey: 'Ügyvezető:',
+                                    segmentValue: 'Bucsics Zoltán',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 413 12 38',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'zbucsics@roadistics.com',
+                                        },
+                                    },
+                                },
+                                szallitmanyozasiVezeto: {
+                                    segmentKey: 'Szállítmányozási vezető:',
+                                    segmentValue: 'Pintér Gabriella',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 324 84 89',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'pgconnect@roadistics.com',
+                                        },
+                                    },
+                                },
+                                fuvarozasiVezeto: {
+                                    segmentKey: 'Fuvarszervező:',
+                                    segmentValue: 'Gősi Melinda',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 380 82 36',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'gmconnect@roadistics.com',
+                                        },
+                                    },
+                                    
+                                },
+                                szamlazas: {
+                                    segmentKey: 'Számlázás:',
+                                    segmentValue: 'info@roadistics.com'
+                                }
+                            },
                         },
                         {
-                            title: 'Telefon:',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: '+36 20 324 8489',
+                            title: 'Road-istics Trans Kft',
+                            segments: {
+                                ugyvezeto: {
+                                    segmentKey: 'Ügyvezető:',
+                                    segmentValue: 'Bucsics Zoltán',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 413 12 38',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'zbucsics@roadistics.com',
+                                        },
+                                    },
+                                },
+                                szallitmanyozasiVezeto: {
+                                    segmentKey: 'Flotta iránytó:',
+                                    segmentValue: 'Hoványiné Tóth Zsuzsanna',
+                                    dataSegments: {
+                                        telefon: {
+                                            segmentKey: 'Telefonszám:',
+                                            segmentValue: '+36 20 242 46 98',
+                                        },
+                                        email: {
+                                            segmentKey: 'Email:',
+                                            segmentValue: 'htzsconnect@roadistics.com',
+                                        },
+                                    },
+                                },
+                                szamlazas: {
+                                    segmentKey: 'Számlázás:',
+                                    segmentValue: 'info@roadistics.com'
+                                }
+                            },
+                        },
+                        /*                   {
+                            companyName: 'Road-istics Connect Kft',
+                            managingDirector: 'Bucsics Zoltán ',
+                            phoneNumber: '+36204131238',
+                            email: 'zbucsics@roadistics.com',
+                            transportationManager: 'Szállítmányozási vezető: Pintér Gabriella',
+                            tmPhoneNumber: '+3620 324 8489',
+                            tmEmail: 'pgconnect@roadistics.com',
+                            freightForwarder: 'Fuvarszervező: Gősi Melinda',
+                            ffPhoneNumber: 'Telefonszám: +3620 380 8236',
+                            ffEmail: 'Email: gmconnect@roadistics.com',
+                            invoicing: 'info@roadistics.com',
                         },
                         {
-                            title: 'E-mail:',
-                            imageUrl: '',
-                            imageAlt: '',
-                            description: 'zbucsics@roadistics.com',
-                        },
+                            companyName: 'Road-istics Trans Kft',
+                            managingDirector: 'Bucsics Zoltán ',
+                            phoneNumber: '+3620 413 1238',
+                            email: 'zbucsics@roadistics.com',
+                            transportationManager: 'Flotta iránytó: Hoványiné Tóth Zsuzsanna',
+                            tmPhoneNumber: 'Telefonszám: +3620 242 4698',
+                            tmEmail: 'Email: htzsconnect@roadistics.com',
+                            invoicing: 'info@roadistics.com',
+                        } */
                     ],
                 },
                 imageCards: {
