@@ -21,7 +21,6 @@
         "@vercel/analytics": "^1.0.2",
         "device-detector-js": "^3.0.3",
         "dotenv": "^16.0.3",
-        "firebase": "11.0.1",
         "formik": "^2.2.9",
         "graphql": "^16.8.1",
         "graphql-tag": "^2.12.6",
@@ -41,7 +40,6 @@
         "yup": "^0.32.11"
     },
     "devDependencies": {
-        "@types/firebase": "^3.2.1",
         "@types/grecaptcha": "^3.0.4",
         "@types/material-ui": "^0.21.12",
         "@types/nanoid": "^3.0.0",
