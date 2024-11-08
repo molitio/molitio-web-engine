@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import styled, { css } from 'styled-components';
 import { resolveThemeBreakPointValues } from '../../utils';
 
@@ -43,7 +41,7 @@ export const StyledNavBarLogo = styled.div`
     flex: 40%;
 `;
 
-export const StyledNavBarLogoImage = styled(Image)`
+export const StyledNavBarLogoImage = styled.img`
     @media (max-width: ${(props) => resolveThemeBreakPointValues(props?.theme, 'md')}) {
         width: 184px;
         height: 152px;
@@ -74,7 +72,7 @@ export const StyledNavLinksContainer = styled.div<StyledNavLinksContainerProps>`
               `}
 `;
 
-export const StyledNavLink = styled(Link)`
+export const StyledNavLink = styled.a`
     font-family: 'Fahkwang', sans-serif;
     font-weight: 300;
     font-size: 1.5em;

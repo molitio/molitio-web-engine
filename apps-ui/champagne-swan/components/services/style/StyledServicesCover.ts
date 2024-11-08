@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
-import Link from 'next/link';
 
 export const StyledServicesCover = styled.div`
     position: relative;
@@ -32,7 +30,7 @@ export const StyledServicesCoverMainTitle = styled.h1`
     }
 `;
 
-export const StyledServicesCoverImage = styled(Image)`
+export const StyledServicesCoverImage = styled.img`
     object-fit: cover;
 `;
 
@@ -74,7 +72,7 @@ export const StyledServicesCoverButtonContainer = styled.div`
     height: min-content;
 `;
 
-export const StyledServicesCoverContactLink = styled(Link)`
+export const StyledServicesCoverContactLink = styled.a`
     position: relative;
     padding: 0.5em 1em;
     font-size: 1.5em;

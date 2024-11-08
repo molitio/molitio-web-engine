@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 
 export const StyledAboutContent = styled.section`
@@ -61,7 +60,7 @@ export const StyledAboutContentPanelImageAndEffect = styled.div`
     }
 `;
 
-export const StyledAboutContentPanelImage = styled(Image)`
+export const StyledAboutContentPanelImage = styled.img`
     object-fit: cover;
     border-radius: 1em;
     box-shadow: ${(props) => props?.theme?.palette?.visual['brandMessageImageShadow']?.boxShadow ?? ''};

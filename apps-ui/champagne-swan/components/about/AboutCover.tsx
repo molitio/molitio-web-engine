@@ -15,7 +15,7 @@ import {
     StyledWaterSplash,
     StyledButtonWaterSplashContainer,
 } from '../common';
-import { resolveThemeBreakPointValues, useLineBreakParser } from '../utils';
+import { useLineBreakParser } from '../utils';
 
 const AboutCover: React.FC = () => {
     const systemContext = React.useContext(SystemContext);
@@ -31,9 +31,9 @@ const AboutCover: React.FC = () => {
             <StyledBoutCoverImage
                 src={aboutCoverAssetUrls?.cleaners ?? ''}
                 alt={'cleaner-working'}
-                fill={true}
+                /*       fill={true}
                 sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
             />
             <StyledLinearGradient
                 direction="bottom"
@@ -59,9 +59,9 @@ const AboutCover: React.FC = () => {
                         <StyledWaterSplash
                             src={commonAssetUrls?.waterSplash ?? ''}
                             alt={'water-splash'}
-                            fill={true}
+                            /*                   fill={true}
                             sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-              33vw`}
+              33vw`} */
                         />
                     </StyledButtonWaterSplashContainer>
                     <StyledAppCoverContactLink key={navTree?.contact?.path ?? ''} href={navTree?.contact?.path ?? ''}>

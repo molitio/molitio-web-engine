@@ -33,7 +33,7 @@ export const StyledNavigationRoute = styled.li`
   }
 `;
 
-export const StyledNavigationLink = styled(Link)`
+export const StyledNavigationLink = styled.a`
   text-decoration: none;
   color: inherit;
   white-space: nowrap;

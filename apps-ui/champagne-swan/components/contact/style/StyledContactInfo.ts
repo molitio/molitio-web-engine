@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 
 export const StyledContactInfoLogoContainer = styled.div`
     position: relative;
@@ -8,6 +7,6 @@ export const StyledContactInfoLogoContainer = styled.div`
     margin: auto;
 `;
 
-export const StyledContactInfoLogoImage = styled(Image)`
+export const StyledContactInfoLogoImage = styled.img`
     object-fit: cover;
 `;

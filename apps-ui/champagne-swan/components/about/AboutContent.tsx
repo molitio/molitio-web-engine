@@ -14,7 +14,7 @@ import {
     StyledAboutContentPanelTitle,
     StyledAboutContentImagePanel,
 } from './style';
-import { resolveThemeBreakPointValues, useLineBreakParser } from '../utils';
+import { useLineBreakParser } from '../utils';
 
 const AboutContent: React.FC = () => {
     const systemContext = React.useContext(SystemContext);
@@ -51,18 +51,18 @@ const AboutContent: React.FC = () => {
                         <StyledAboutContentPanelImage
                             src={brandMessageAssetUrls?.mop ?? ''}
                             alt={'cleaner-moping'}
-                            fill={true}
+                            /*             fill={true}
                             sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
                         />
                     </StyledAboutContentPanelImageAndEffect>
                     <StyledAboutContentPanelImageAndEffect>
                         <StyledAboutContentPanelImage
                             src={brandMessageAssetUrls?.colleague ?? ''}
                             alt={'cleaner-with-a-vacum'}
-                            fill={true}
+                            /*                     fill={true}
                             sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
                         />
                     </StyledAboutContentPanelImageAndEffect>
                     <StyledAboutContentPanelImageAndEffect>
@@ -75,9 +75,9 @@ const AboutContent: React.FC = () => {
                         <StyledAboutContentPanelImage
                             src={brandMessageAssetUrls?.machine ?? ''}
                             alt={'cleaning-machine'}
-                            fill={true}
+                            /*                 fill={true}
                             sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
                         />
                     </StyledAboutContentPanelImageAndEffect>
                 </StyledAboutContentImagePanel>

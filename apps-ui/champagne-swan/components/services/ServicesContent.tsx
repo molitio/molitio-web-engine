@@ -56,7 +56,7 @@ const ServicesContent: React.FC = () => {
               33vw`}
                             src={assetUrls?.officeCleaners ?? ''}
                             alt={'office-cleaners'}
-                            fill={true}
+                            /*  fill={true} */
                         />
                     </StyledServicesContentPanelImageAndEffect>
                 </StyledServicesContentPanelImageContainer>
@@ -93,7 +93,7 @@ const ServicesContent: React.FC = () => {
                 33vw`}
                             src={assetUrls?.flatRoom ?? ''}
                             alt={'flat-room'}
-                            fill={true}
+                            /*  fill={true} */
                         />
                     </StyledServicesContentPanelImageAndEffect>
                 </StyledServicesContentPanelImageContainer>
@@ -128,7 +128,7 @@ const ServicesContent: React.FC = () => {
                 33vw`}
                             src={assetUrls?.industrial ?? ''}
                             alt={'industry-complex'}
-                            fill={true}
+                            /*   fill={true} */
                         />
                     </StyledServicesContentPanelImageAndEffect>
                 </StyledServicesContentPanelImageContainer>

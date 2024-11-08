@@ -1,5 +1,3 @@
-import Image from 'next/image';
-import Link from 'next/link';
 import styled from 'styled-components';
 import { resolveThemeBreakPointValues } from '../../utils';
 
@@ -84,7 +82,7 @@ export const StyledBrandMessageImageAndEffect = styled.div`
     }
 `;
 
-export const StyledBrandMessageOfficeCleanerImage = styled(Image)`
+export const StyledBrandMessageOfficeCleanerImage = styled.img`
     object-fit: cover;
     object-position: center;
     border-radius: 1em;
@@ -162,7 +160,7 @@ export const StyledBrandMessagePanelText = styled.p`
     }
 `;
 
-export const StyledBrandMessagePanelContactLink = styled(Link)`
+export const StyledBrandMessagePanelContactLink = styled.a`
     position: relative;
     padding: 0.6em 1.2em;
     font-size: 1.5em;

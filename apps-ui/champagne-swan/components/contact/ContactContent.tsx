@@ -10,7 +10,6 @@ import {
     StyledContactContentLogoContainer,
 } from './style';
 import { StyledLinearGradient, ContactForm, StyledAnchor } from '../common';
-import { resolveThemeBreakPointValues } from '../utils';
 
 const ContactContent: React.FC = () => {
     const systemContext = React.useContext(SystemContext);
@@ -69,9 +68,9 @@ const ContactContent: React.FC = () => {
                 <StyledContactContentLogoImage
                     src={commonAssetUrls?.logo ?? ''}
                     alt={'logo'}
-                    fill={true}
+                    /*   fill={true}
                     sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
                 />
             </StyledContactContentLogoContainer>
         </StyledContactContent>

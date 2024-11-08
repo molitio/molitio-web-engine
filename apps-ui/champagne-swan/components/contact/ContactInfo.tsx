@@ -68,9 +68,9 @@ const ContactInfo: React.FC = () => {
                     alt={'logo'}
                     width={192}
                     height={192}
-                    /*    fill={true} */
+                    /*    fill={true} 
                     placeholder={'empty'}
-                    /*           sizes={`(max-width: ${resolveThemeBreakPointValues(
+                            sizes={`(max-width: ${resolveThemeBreakPointValues(
             systemContext?.theme,
             "xl"
           )}) 50vw,

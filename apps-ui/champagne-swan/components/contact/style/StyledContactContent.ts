@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 
 export const StyledContactContent = styled.section`
@@ -99,6 +98,6 @@ export const StyledContactContentLogoContainer = styled.div`
     margin: auto;
 `;
 
-export const StyledContactContentLogoImage = styled(Image)`
+export const StyledContactContentLogoImage = styled.img`
     object-fit: cover;
 `;
