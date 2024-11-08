@@ -1,7 +1,7 @@
 import React from 'react';
 import { SystemContext } from '@molitio/ui-core';
 import { IconGroup, StyledLinearGradient, StyledCoverContent } from '../common';
-import { resolveThemeBreakPointValues, useLineBreakParser } from '../utils';
+import { useLineBreakParser } from '../utils';
 import {
     StyledAppCoverContactLink,
     StyledAppCoverButtonContainer,
@@ -29,9 +29,9 @@ const AppCover: React.FC = () => {
             <StyledAppCoverImage
                 src={assetUrls?.heroBackground ?? ''}
                 alt={'cover-image'}
-                fill={true}
+                /*     fill={true}
                 sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-            33vw`}
+            33vw`} */
             />
             <StyledLinearGradient
                 direction="bottom"
@@ -57,9 +57,9 @@ const AppCover: React.FC = () => {
                         <StyledWaterSplash
                             src={commonAssetUrls?.waterSplash ?? ''}
                             alt={'water-splash'}
-                            fill={true}
+                            /*         fill={true}
                             sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-              33vw`}
+              33vw`} */
                         />
                     </StyledButtonWaterSplashContainer>
 

@@ -62,14 +62,14 @@ export const ApplicationContextRoot = {
                         title: 'KAPCSOLAT',
                         formText:
                             'Írjon Nekünk az alábbi kapcsolati űrlapon keresztül vagy vegye fel velünk a kapcsolatot az alábbi elérhetőségek egyikén!',
-                        email: 'info@jelizaclean.com',
+                        email: 'info@jelizaservices.com',
                         phoneMain: '+36 20 416 0391',
                         address1: '1134 Budapest',
                         address2: 'Lehel utca 11.',
                     },
                     assetUrls: {
-                        emailHref: 'mailto:info@jelizaclean.com',
-                        webSiteHref: 'https://jelizaclean.com',
+                        emailHref: 'mailto:info@jelizaservices.com',
+                        webSiteHref: 'https://jelizaservices.com',
                         addressHref: 'https://goo.gl/maps/FK9mXYG25HLPXEvR6',
                         phoneMainHref: 'tel:+36204160391',
                         logoImage: '/web_content/logo/jeliza_logo_horizontal_jeliza_logo_horizontal.svg',
@@ -84,7 +84,7 @@ export const ApplicationContextRoot = {
                         email: {
                             title: 'E-mail',
                             url: '/web_content/icons/icons_jeliza_phone.svg',
-                            hrefUrl: 'mailto:info@jelizaclean.com',
+                            hrefUrl: 'mailto:info@jelizaservices.com',
                         },
                         address: {
                             title: 'Cím',

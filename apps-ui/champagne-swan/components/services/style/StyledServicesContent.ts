@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 import { StyledWaterSplash } from '../../common';
 
@@ -49,7 +48,7 @@ export const StyledServicesContentPanel = styled.div`
     }
 `;
 
-export const StyledServicesLandingPanelImage = styled(Image)`
+export const StyledServicesLandingPanelImage = styled.img`
     position: absolute;
     object-fit: cover;
     object-position: center;

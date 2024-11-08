@@ -21,22 +21,25 @@ const Partners: React.FC = () => {
             <StyledPartnersPanel>
                 <StyledPartnersPanelItem>
                     <StyledPartnersImageContainer>
-                        <StyledPartnersImage src={assetUrls?.mLogo ?? ''} alt={'m-logo'} fill={true} />
+                        <StyledPartnersImage src={assetUrls?.mLogo ?? ''} alt={'m-logo'} /*  fill={true}  */ />
                     </StyledPartnersImageContainer>
                 </StyledPartnersPanelItem>
                 <StyledPartnersPanelItem>
                     <StyledPartnersImageContainer>
-                        <StyledPartnersImage src={assetUrls?.houseLogo ?? ''} alt={'house-logo'} fill={true} />
+                        <StyledPartnersImage src={assetUrls?.houseLogo ?? ''} alt={'house-logo'} /*  fill={true} */ />
                     </StyledPartnersImageContainer>
                 </StyledPartnersPanelItem>
                 <StyledPartnersPanelItem>
                     <StyledPartnersImageContainer>
-                        <StyledPartnersImage src={assetUrls?.brandLogo ?? ''} alt={'brand-logo'} fill={true} />
+                        <StyledPartnersImage src={assetUrls?.brandLogo ?? ''} alt={'brand-logo'} /* fill={true}  */ />
                     </StyledPartnersImageContainer>
                 </StyledPartnersPanelItem>
                 <StyledPartnersPanelItem>
                     <StyledPartnersImageContainer>
-                        <StyledPartnersImage src={assetUrls?.officeLogo ?? ''} alt={'office-logo'} fill={true} />
+                        <StyledPartnersImage
+                            src={assetUrls?.officeLogo ?? ''}
+                            alt={'office-logo'} /*  fill={true}  */
+                        />
                     </StyledPartnersImageContainer>
                 </StyledPartnersPanelItem>
             </StyledPartnersPanel>

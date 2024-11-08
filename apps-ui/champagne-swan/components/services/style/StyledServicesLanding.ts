@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Link from 'next/link';
 import { resolveThemeBreakPointValues } from '../../utils';
 
 export const StyledServicesLanding = styled.section`
@@ -83,7 +82,7 @@ export const StyledServicesLandingPanelImageContainer = styled.div`
     }
 `;
 
-export const StyledContactLink = styled(Link)`
+export const StyledContactLink = styled.a`
     font-size: 20px;
     color: ${(props) => props?.theme?.palette?.text?.interactive ?? ''};
     text-decoration: underline;

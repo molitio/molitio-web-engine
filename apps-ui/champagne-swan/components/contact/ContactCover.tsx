@@ -7,7 +7,6 @@ import {
     StyledCOntactCoverDescription,
     StyledAboutContentCoverImage,
 } from './style';
-import { resolveThemeBreakPointValues } from '../utils';
 
 const ContactCover: React.FC = () => {
     const systemContext = React.useContext(SystemContext);
@@ -20,9 +19,9 @@ const ContactCover: React.FC = () => {
             <StyledAboutContentCoverImage
                 src={assetUrls?.skyScraper ?? ''}
                 alt={'sky-scraper'}
-                fill={true}
+                /*   fill={true}
                 sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
             />
             <StyledLinearGradient
                 direction="bottom"

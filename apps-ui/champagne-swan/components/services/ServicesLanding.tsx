@@ -73,7 +73,7 @@ const ServicesLanding: React.FC = () => {
                 33vw`}
                             src={assetUrls?.morning ?? ''}
                             alt={'morning-sunshine'}
-                            fill={true}
+                            /*    fill={true} */
                         />
                     </StyledServicesLandingPanelImageAndEffect>
                 </StyledServicesLandingPanelImageContainer>
@@ -105,7 +105,7 @@ const ServicesLanding: React.FC = () => {
                 33vw`}
                             src={assetUrls?.flatRoom ?? ''}
                             alt={'flat-room'}
-                            fill={true}
+                            /*  fill={true} */
                         />
                     </StyledServicesLandingPanelImageAndEffect>
                 </StyledServicesLandingPanelImageContainer>
@@ -136,7 +136,7 @@ const ServicesLanding: React.FC = () => {
                 33vw`}
                             src={assetUrls?.industry ?? ''}
                             alt={'industry-park'}
-                            fill={true}
+                            /*  fill={true} */
                         />
                     </StyledServicesLandingPanelImageAndEffect>
                 </StyledServicesLandingPanelImageContainer>

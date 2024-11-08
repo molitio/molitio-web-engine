@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 
 export const StyledOpinions = styled.section`
@@ -47,7 +46,7 @@ export const StyledOpinionsPanel = styled.div`
     }
 `;
 
-export const StyledOpinionsAvatarImage = styled(Image)`
+export const StyledOpinionsAvatarImage = styled.img`
     object-fit: cover;
     border-radius: 50%;
 `;
@@ -104,6 +103,6 @@ export const StyledOpinionsLogoContainer = styled.div`
     margin: auto;
 `;
 
-export const StyledOpinionsLogoImage = styled(Image)`
+export const StyledOpinionsLogoImage = styled.img`
     object-fit: cover;
 `;

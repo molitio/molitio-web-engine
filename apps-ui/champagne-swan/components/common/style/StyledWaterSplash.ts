@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 
-export const StyledWaterSplash = styled(Image)`
+export const StyledWaterSplash = styled.img`
     position: absolute;
     right: 0;
     bottom: 0;

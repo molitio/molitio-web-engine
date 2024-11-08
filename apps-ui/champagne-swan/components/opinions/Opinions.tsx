@@ -53,7 +53,7 @@ const Opinions: React.FC = () => {
             </StyledOpinionsPanel>
 
             <StyledOpinionsLogoContainer>
-                <StyledOpinionsLogoImage src={commonAssetUrls?.logo ?? ''} alt={'logo'} fill={true} />
+                <StyledOpinionsLogoImage src={commonAssetUrls?.logo ?? ''} alt={'logo'} /*  fill={true}  */ />
             </StyledOpinionsLogoContainer>
         </StyledOpinions>
     );

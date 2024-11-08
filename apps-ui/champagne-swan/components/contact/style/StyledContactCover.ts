@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import Image from 'next/image';
 import { resolveThemeBreakPointValues } from '../../utils';
 
 export const StyledContact = styled.section`
@@ -8,7 +7,7 @@ export const StyledContact = styled.section`
     height: 80vh;
 `;
 
-export const StyledAboutContentCoverImage = styled(Image)`
+export const StyledAboutContentCoverImage = styled.img`
     object-fit: cover;
 `;
 

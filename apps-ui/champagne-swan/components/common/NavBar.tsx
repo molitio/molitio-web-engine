@@ -12,7 +12,6 @@ import {
 } from './style';
 
 import { SystemContext } from '@molitio/ui-core';
-import { resolveThemeBreakPointValues } from '../utils';
 
 const NavBar: React.FC = () => {
     const champagneSwanContext = React.useContext(AppContext);
@@ -30,12 +29,12 @@ const NavBar: React.FC = () => {
                 <StyledNavBarLogoImageContainer>
                     <StyledNavBarLogoImage
                         src={commonAssetUrls?.horizontalLogo ?? ''}
-                        placeholder={'empty'}
                         alt={'logo'}
                         width={224}
                         height={192}
+                        /*            placeholder={'empty'}
                         sizes={`(max-width: ${resolveThemeBreakPointValues(systemContext?.theme, 'xl')}) 50vw,
-                33vw`}
+                33vw`} */
                     />
                 </StyledNavBarLogoImageContainer>
             </StyledNavBarLogo>

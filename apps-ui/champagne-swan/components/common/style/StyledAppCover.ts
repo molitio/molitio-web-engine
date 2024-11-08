@@ -1,5 +1,3 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import styled from 'styled-components';
 import { resolveThemeBreakPointValues } from '../../utils';
 
@@ -32,11 +30,11 @@ export const StyledAppCoverMainTitle = styled.h1`
     }
 `;
 
-export const StyledAppCoverImage = styled(Image)`
+export const StyledAppCoverImage = styled.img`
     object-fit: cover;
 `;
 
-export const StyledAppCoverContactLink = styled(Link)`
+export const StyledAppCoverContactLink = styled.a`
     position: relative;
     padding: 0.5em 1em;
     font-size: 1.5em;

@@ -5,7 +5,6 @@ import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import { handleRecaptcha } from '../../captcha';
-import QuoteRequestFormField from './QuoteRequestFromField';
 import { useAtom } from 'jotai';
 import { contentRootAtomRW, navMenuAtomRW } from '../../context';
 
@@ -79,25 +78,25 @@ const QuoteRequestForm: React.FC = () => {
                 contactFormLeaf?.textContent?.recaptchaTag ?? 'CONTACT_FORM',
                 process?.env?.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY ?? '',
             );
-
+            /* 
             if (!isRecaptchaPass) {
                 return;
-            } else {
-                const {
-                    companyName,
-                    email,
-                    contactPerson,
-                    phoneNumber,
-                    pickupLocation,
-                    pickupTime,
-                    deliveryLocation,
-                    deliveryTime,
-                    deliveryType,
-                    deliveryWeight,
-                    comment,
-                } = values;
+            } else { */
+            const {
+                companyName,
+                email,
+                contactPerson,
+                phoneNumber,
+                pickupLocation,
+                pickupTime,
+                deliveryLocation,
+                deliveryTime,
+                deliveryType,
+                deliveryWeight,
+                comment,
+            } = values;
 
-                const message = `
+            const message = `
 Cég név: ${companyName}
 E-mail cím: ${email}
 Kapcsolattartó személy neve: ${contactPerson}
@@ -110,24 +109,24 @@ Szállítmány típusa: ${deliveryType}
 Szállítmány súlya: ${deliveryWeight}
 Megjegyzés: ${comment}
 `;
-                console.log('emailApiPath', navRoot);
-                //if (emailApiPath) {
-                //const response = await fetch(emailApiPath ?? '', {
-                const response = await fetch('/api/email', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        from_name: companyName,
-                        from_email: email,
-                        message: message,
-                    }),
-                });
+            console.log('emailApiPath', navRoot);
+            //if (emailApiPath) {
+            //const response = await fetch(emailApiPath ?? '', {
+            const response = await fetch('/api/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    from_name: companyName,
+                    from_email: email,
+                    message: message,
+                }),
+            });
 
-                console.log('email response', response.json());
-                //}
-            }
+            console.log('email response', response.json());
+            //}
+            //}
         } catch (error: any) {
             console.error(error.message);
         }
