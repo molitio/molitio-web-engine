@@ -1,6 +1,6 @@
 import React from 'react';
 import { SystemContext } from '@molitio/ui-core';
-import { IconGroup, StyledLinearGradient, StyledCoverContent } from '../common';
+import { IconGroup, StyledLinearGradient, StyledCoverContent } from '.';
 import { useLineBreakParser } from '../utils';
 import {
     StyledAppCoverContactLink,

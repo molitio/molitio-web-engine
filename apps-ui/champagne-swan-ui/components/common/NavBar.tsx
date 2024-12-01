@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppContext } from '../context';
-import { CloseIcon, MenuIcon } from '../common';
+import { CloseIcon, MenuIcon } from '.';
 import {
     StyledNavBar,
     StyledNavLink,
