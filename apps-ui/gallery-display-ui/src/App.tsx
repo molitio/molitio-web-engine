@@ -5,8 +5,8 @@ import { ApplicationContextRoot } from '../context';
 import './App.css';
 import { Provider } from 'jotai';
 
-const App: React.FC = () => {
-    const resourceGalleryData: ResourceGalleryRoot = ApplicationContextRoot.resourceGalleryRoot;
+const App: React.FC<React.PropsWithChildren> = (props) => {
+    const resourceGalleryData: ResourceGalleryRoot = ApplicationContextRoot.resourceGalleryRoot ?? {};
 
     const store = initResourceGalleryStore(resourceGalleryData);
 
@@ -15,7 +15,7 @@ const App: React.FC = () => {
             <NavRootProvider navRoot={ApplicationContextRoot.navRoot}>
                 <NavBar />
             </NavRootProvider>
-            <Provider store={store}>{/*       <ShowcaseContainer /> */}</Provider>
+            <Provider store={store}>{props.children}</Provider>
         </div>
     );
 };

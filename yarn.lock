@@ -4551,9 +4551,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-champagne-swan-ui@workspace:apps-ui/champagne-swan":
+"@molitio/mwe-champagne-swan-ui@workspace:apps-ui/champagne-swan-ui":
   version: 0.0.0-use.local
-  resolution: "@molitio/mwe-champagne-swan-ui@workspace:apps-ui/champagne-swan"
+  resolution: "@molitio/mwe-champagne-swan-ui@workspace:apps-ui/champagne-swan-ui"
   dependencies:
     "@emailjs/browser": "npm:^3.10.0"
     "@emotion/react": "npm:^11.10.0"
@@ -4680,6 +4680,7 @@ __metadata:
     "@nestjs/testing": "npm:10.0.0"
     "@swc/cli": "npm:0.3.12"
     "@swc/core": "npm:1.4.12"
+    "@types/ajv": "npm:1.0.4"
     "@types/jest": "npm:^29.5.2"
     "@types/node": "npm:^20.3.1"
     "@types/supertest": "npm:^6.0.0"
@@ -6680,6 +6681,15 @@ __metadata:
   version: 1.0.4
   resolution: "@tsconfig/node16@npm:1.0.4"
   checksum: 10/202319785901f942a6e1e476b872d421baec20cf09f4b266a1854060efbf78cde16a4d256e8bc949d31e6cd9a90f1e8ef8fb06af96a65e98338a2b6b0de0a0ff
+  languageName: node
+  linkType: hard
+
+"@types/ajv@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@types/ajv@npm:1.0.4"
+  dependencies:
+    ajv: "npm:*"
+  checksum: 10/3bd116313b6337ab4006dce6350bee51f4e4715cb52c6d48c9f43f0f49c26193d6c6f10a9f3ef8797d1dac237e75ea9ed8e6b671a18cb6c087e1083742c9bcd2
   languageName: node
   linkType: hard
 
@@ -8698,6 +8708,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ajv@npm:*, ajv@npm:^8.0.0, ajv@npm:^8.10.0, ajv@npm:^8.11.0":
+  version: 8.17.1
+  resolution: "ajv@npm:8.17.1"
+  dependencies:
+    fast-deep-equal: "npm:^3.1.3"
+    fast-uri: "npm:^3.0.1"
+    json-schema-traverse: "npm:^1.0.0"
+    require-from-string: "npm:^2.0.2"
+  checksum: 10/ee3c62162c953e91986c838f004132b6a253d700f1e51253b99791e2dbfdb39161bc950ebdc2f156f8568035bb5ed8be7bd78289cd9ecbf3381fe8f5b82e3f33
+  languageName: node
+  linkType: hard
+
 "ajv@npm:8.12.0":
   version: 8.12.0
   resolution: "ajv@npm:8.12.0"
@@ -8731,18 +8753,6 @@ __metadata:
     json-schema-traverse: "npm:^0.4.1"
     uri-js: "npm:^4.2.2"
   checksum: 10/48d6ad21138d12eb4d16d878d630079a2bda25a04e745c07846a4ad768319533031e28872a9b3c5790fa1ec41aabdf2abed30a56e5a03ebc2cf92184b8ee306c
-  languageName: node
-  linkType: hard
-
-"ajv@npm:^8.0.0, ajv@npm:^8.10.0, ajv@npm:^8.11.0":
-  version: 8.17.1
-  resolution: "ajv@npm:8.17.1"
-  dependencies:
-    fast-deep-equal: "npm:^3.1.3"
-    fast-uri: "npm:^3.0.1"
-    json-schema-traverse: "npm:^1.0.0"
-    require-from-string: "npm:^2.0.2"
-  checksum: 10/ee3c62162c953e91986c838f004132b6a253d700f1e51253b99791e2dbfdb39161bc950ebdc2f156f8568035bb5ed8be7bd78289cd9ecbf3381fe8f5b82e3f33
   languageName: node
   linkType: hard
 

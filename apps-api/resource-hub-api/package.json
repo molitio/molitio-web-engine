@@ -54,6 +54,7 @@
         "@nestjs/testing": "10.0.0",
         "@swc/cli": "0.3.12",
         "@swc/core": "1.4.12",
+        "@types/ajv": "1.0.4",
         "@types/jest": "^29.5.2",
         "@types/node": "^20.3.1",
         "@types/supertest": "^6.0.0",
