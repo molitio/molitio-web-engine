@@ -1,2 +1,0 @@
-# champagne-swan
-Demo UI
