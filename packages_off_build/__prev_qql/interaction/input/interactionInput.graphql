@@ -1,5 +1,0 @@
-input InteractionInput {
-    responseEmail: String!
-    message: String!
-    interactionType: InteractionType!
-}
