@@ -8906,6 +8906,7 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/eslint-plugin", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:6.21.0"],\
           ["@typescript-eslint/parser", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:6.21.0"],\
           ["chokidar", "npm:3.6.0"],\
+          ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-prettier", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:9.1.0"],\
@@ -9742,7 +9743,7 @@ const RAW_RUNTIME_STATE =
           ["@types/class-validator", null],\
           ["@types/reflect-metadata", null],\
           ["@types/rxjs", null],\
-          ["class-transformer", null],\
+          ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["iterare", "npm:1.2.1"],\
           ["reflect-metadata", "npm:0.2.1"],\
@@ -9839,7 +9840,7 @@ const RAW_RUNTIME_STATE =
           ["@types/reflect-metadata", null],\
           ["@types/ts-morph", null],\
           ["chokidar", "npm:3.6.0"],\
-          ["class-transformer", null],\
+          ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["graphql", "npm:16.8.1"],\
@@ -9892,7 +9893,7 @@ const RAW_RUNTIME_STATE =
           ["@types/class-validator", null],\
           ["@types/nestjs__common", null],\
           ["@types/reflect-metadata", null],\
-          ["class-transformer", null],\
+          ["class-transformer", "npm:0.5.1"],\
           ["class-validator", "npm:0.14.1"],\
           ["reflect-metadata", "npm:0.2.1"]\
         ],\
@@ -16233,6 +16234,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/cjs-module-lexer-npm-1.3.1-6a27eff8d1-6629188d5c.zip/node_modules/cjs-module-lexer/",\
         "packageDependencies": [\
           ["cjs-module-lexer", "npm:1.3.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["class-transformer", [\
+      ["npm:0.5.1", {\
+        "packageLocation": "./.yarn/cache/class-transformer-npm-0.5.1-96b5161e6c-750327e3e9.zip/node_modules/class-transformer/",\
+        "packageDependencies": [\
+          ["class-transformer", "npm:0.5.1"]\
         ],\
         "linkType": "HARD"\
       }]\

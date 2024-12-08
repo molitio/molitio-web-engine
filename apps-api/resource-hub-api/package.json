@@ -43,6 +43,7 @@
         "@nestjs/mongoose": "10.0.6",
         "@nestjs/platform-fastify": "10.3.8",
         "chokidar": "3.6.0",
+        "class-transformer": "0.5.1",
         "class-validator": "0.14.1",
         "fastify": "4.27.0",
         "graphql": "16.8.1",
