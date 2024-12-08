@@ -1,16 +1,15 @@
 {
-    "name": "@molitio/ui-core",
-    "version": "0.1.1",
+    "name": "@molitio/mwe-ui-core",
+    "version": "0.2.0",
     "author": "Peter Koller",
     "description": "Re-usable React UI Components",
     "license": "MIT",
     "type": "module",
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "src/index.ts",
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [
         "molitio",
-        "ui-core"
+        "mwe-ui-core"
     ],
     "bugs": {
         "url": "https://github.com/molitio/molitio-web-engine/issues",
@@ -22,19 +21,22 @@
     },
     "scripts": {
         "dev": "yarn build:watch",
-        "build": "rm -rf ./dist && yarn rollup -c",
-        "build:watch": "yarn rollup -c -w",
-        "packageBuilder": "node --loader esm packageBuilder",
-        "publish-ui-core": "cd dist && npm publish --access=public --auth-type=legacy && cd ..",
+        "build": "rm -rf ./dist && yarn package:builder && yarn rollup -c",
+        "build:watch": "rm -rf ./dist && yarn package:builder && yarn rollup -c -w",
+        "package:builder": "node ./package-builder/package-builder.js",
+        "publish-mwe-ui-core": "yarn build && cd dist && npm publish --access=public --auth-type=legacy && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
-        "create-artifacts": "mkdir -p ../../.artifacts/ui-core/ && npm pack --pack-destination ../../.artifacts/ui-core/"
+        "create-artifacts": "mkdir -p ../../.artifacts/mwe-ui-core/ && npm pack --pack-destination ../../.artifacts/mwe-ui-core/"
     },
     "peerDependencies": {
-        "next": "14.1.3",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-is": "18.2.0"
+        "formik": "^2.4.6",
+        "jotai": "^2.8.3",
+        "next": "^15.0.4",
+        "react": "^19.0.0-rc.1",
+        "react-dom": "^19.0.0-rc.1",
+        "tailwindcss": "^3.4.13",
+        "yup": "^1.5.0"
     },
     "devDependencies": {
         "@babel/cli": "7.18.10",
@@ -47,8 +49,7 @@
         "@babel/preset-env": "7.18.10",
         "@babel/preset-react": "7.18.6",
         "@babel/preset-typescript": "7.18.6",
-        "@headlessui/react": "1.7.18",
-        "@heroicons/react": "2.1.3",
+        "@molitio/mwe-tailwindcss-config": "workspace:0.2.0",
         "@rollup/plugin-babel": "6.0.4",
         "@rollup/plugin-commonjs": "25.0.5",
         "@rollup/plugin-image": "3.0.3",
@@ -57,29 +58,35 @@
         "@rollup/plugin-replace": "5.0.3",
         "@rollup/plugin-terser": "0.4.4",
         "@rollup/plugin-typescript": "11.1.5",
+        "@tailwindcss/typography": "0.5.15",
         "@types/eslint": "^8",
+        "@types/grecaptcha": "3.0.9",
         "@types/node": "18.11.9",
-        "@types/react": "18.2.64",
-        "@types/react-dom": "18.2.7",
+        "@types/react": "18.3.0",
+        "@types/react-dom": "18.3.0",
         "autoprefixer": "10.4.19",
-        "eslint": "8.57.0",
+        "eslint": "^8.56.0",
         "fast-glob": "3.3.2",
-        "next": "14.1.3",
+        "formik": "2.4.6",
+        "grecaptcha": "1.0.3",
+        "jotai": "2.8.3",
+        "next": "15.0.4",
         "postcss": "8.4.36",
         "postcss-import": "16.1.0",
-        "react": "18.2.0",
-        "react-dom": "18.2.0",
-        "react-is": "18.2.0",
+        "react": "19.0.0-rc.1",
+        "react-dom": "19.0.0-rc.1",
+        "react-is": "19.0.0-rc.1",
         "rollup": "4.0.2",
         "rollup-plugin-peer-deps-external": "2.2.4",
         "rollup-plugin-pnp-resolve": "2.0.0",
         "rollup-plugin-postcss": "4.0.2",
         "rollup-plugin-size": "0.2.2",
         "rollup-plugin-visualizer": "5.12.0",
+        "rollup-preserve-directives": "1.1.1",
         "tailwindcss": "3.4.1",
         "ts-node": "10.9.2",
         "tslib": "2.4.1",
-        "typescript": "5.2.2"
-    },
-    "stableVersion": "0.1.1"
+        "typescript": "5.2.2",
+        "yup": "1.4.0"
+    }
 }

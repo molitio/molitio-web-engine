@@ -1,22 +1,24 @@
 {
     "compilerOptions": {
-        "outDir": "./dist",
-        "baseUrl": "./",
         "module": "commonjs",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
         "declaration": true,
         "removeComments": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "target": "ES2022",
+        "esModuleInterop": true,
+        "target": "ES2019",
         "sourceMap": true,
-        "incremental": true,
-        "skipLibCheck": false,
-        "strictNullChecks": false,
-        "noImplicitAny": true,
-        "strictBindCallApply": false,
-        "forceConsistentCasingInFileNames": false,
-        "noFallthroughCasesInSwitch": false
+        "outDir": "./dist",
+        "baseUrl": ".",
+        "paths": {
+            "@molitio/resource-hub-modules": ["../../packages-api/resource-hub-modules/*"]
+        }
     },
-    "exclude": ["**/.yarn", "**/node_modules", "dist"]
+
+    "exclude": ["./dist"]
 }

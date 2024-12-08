@@ -1,7 +1,0 @@
-type Interaction {
-    id: ID!
-    app: App!
-    interactionType: InteractionType!
-    responseEmail: String!
-    message: String!
-}

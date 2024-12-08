@@ -2,6 +2,7 @@
     "include": ["**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "packages_off_build"],
     "compilerOptions": {
+        "jsx": "react",
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
         "moduleResolution": "Node16",

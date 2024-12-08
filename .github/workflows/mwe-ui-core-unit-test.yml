@@ -1,0 +1,21 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  run-unit-tests:
+    name: UI Core Unit Tests
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 20
+        cache: yarn
+    - name: Download UI Core
+      uses: actions/download-artifact@v3
+      with:
+        name: mwe-ui-core
+        path: packages-ui/ui-core/dist
+    - run: yarn test

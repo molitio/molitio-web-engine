@@ -1,0 +1,35 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type UserPublic {
+    """
+    Example field (placeholder)
+    """
+    exampleField: Int!
+}
+
+type Query {
+    userPublic(id: Int!): UserPublic!
+}
+
+type Mutation {
+    createUserPublic(createUserPublicInput: CreateUserPublicInput!): UserPublic!
+    updateUserPublic(updateUserPublicInput: UpdateUserPublicInput!): UserPublic!
+    removeUserPublic(id: Int!): UserPublic!
+}
+
+input CreateUserPublicInput {
+    """
+    Example field (placeholder)
+    """
+    exampleField: Int!
+}
+
+input UpdateUserPublicInput {
+    """
+    Example field (placeholder)
+    """
+    exampleField: Int
+    id: Int!
+}

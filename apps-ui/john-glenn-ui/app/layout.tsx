@@ -1,20 +1,21 @@
-import Navigation from './components/navigation';
+import React from 'react';
 import './globals.css';
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-    title: 'Fashion and spa',
+    title: 'John Glenn',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
+    const { children } = props;
+
     return (
         <html lang="en">
-            <body className={inter.className}>
-                <Navigation />
+            <body>
+                <h1 className="text-blue-600">John Glenn</h1>
                 {children}
             </body>
         </html>
     );
-}
+};
+
+export default RootLayout;

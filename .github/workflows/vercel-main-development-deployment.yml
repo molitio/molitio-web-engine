@@ -10,13 +10,13 @@ env:
   NODE_ENV: production
 
 jobs:  
-  build-ui-core:
+  build-mwe-ui-core:
     name: Build
     uses: ./.github/workflows/build-molitio-web-engine-packages.yml
   run-unit-tests:
     name: Test
-    needs: build-ui-core
-    uses: ./.github/workflows/ui-core-unit-test.yml
+    needs: build-mwe-ui-core
+    uses: ./.github/workflows/mwe-ui-core-unit-test.yml
   deploy-main-to-vercel:
     name: Deploy
     needs: run-unit-tests

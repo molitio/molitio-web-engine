@@ -17,8 +17,8 @@ jobs:
       - name: Download UI Core
         uses: actions/download-artifact@v3
         with:
-          name: ui-core
-          path: packages/ui-core/dist
+          name: mwe-ui-core
+          path: packages-ui/ui-core/dist
       - run: |
           yarn workspace @molitio/john-glenn unplug next
           yarn workspace @molitio/john-glenn vercel pull --yes --environment=development --token=${{ secrets.VERCEL_TOKEN }}

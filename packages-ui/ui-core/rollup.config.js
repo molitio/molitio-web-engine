@@ -12,10 +12,16 @@ import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
+import preserveDirectives from 'rollup-preserve-directives';
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
+
+const styleSystemConfig = require('./tailwind.config.cjs');
 
 const moduleDefinitions = {
-    'ui-core': {
-        name: '@molitio/ui-core',
+    'mwe-ui-core': {
+        name: '@molitio/mwe-ui-core',
         basePath: './src',
         inputPath: 'index.ts',
         outDir: './dist',
@@ -38,7 +44,8 @@ const globals = {
 };
 
 Object.keys(moduleDefinitions).map((moduleName) =>
-    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}`),
+    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}
+Tailwind config: ${JSON.stringify({ ...styleSystemConfig }, null, 2)}`),
 );
 
 const modules = Array.from(
@@ -61,9 +68,8 @@ const modules = Array.from(
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
-                postcss({
-                    plugins: [tailwindcss(), autoprefixer()],
-                }),
+                ,
+                preserveDirectives(),
                 resolve(),
                 commonjs(),
                 {
@@ -89,7 +95,17 @@ const modules = Array.from(
                     exclude: [...exclusions],
                     extensions: [...extensions],
                 }),
-
+                postcss({
+                    config: {
+                        path: './postcss.config.cjs',
+                    },
+                    extensions: ['.css'],
+                    minimize: true,
+                    inject: {
+                        insertAt: 'top',
+                    },
+                    plugins: [tailwindcss(styleSystemConfig), autoprefixer()],
+                }),
                 json(),
                 terser(),
                 size({ details: true }),
@@ -113,7 +129,7 @@ const modules = Array.from(
                     assetFileNames: '[name]-[hash][extname]',
                     //   file: `${module.basePath}/${module.module}`,
                     format: 'esm',
-                    sourcemap: true,
+                    sourcemap: false,
                     esModule: true,
                     globals,
                     strict: true,
@@ -147,11 +163,11 @@ export default [...modules];
 
 /* IIFE for future implementation
   /*   {
-        input: 'packages/ui-core/src/ui-page/radio-page/components/RadioPage.tsx',
+        input: 'packages/mwe-ui-core/src/ui-page/radio-page/components/RadioPage.tsx',
         plugins: [
             peerDepsExternal(),
             typescript({
-                tsconfig: 'packages/ui-core/tsconfig.base.json',
+                tsconfig: 'packages/mwe-ui-core/tsconfig.base.json',
                 compilerOptions: {
                     module: 'esnext',
                 },
@@ -160,7 +176,7 @@ export default [...modules];
             json(),
             commonjs(),
             babel({
-                include: ['packages/ui-core/src'],
+                include: ['packages/mwe-ui-core/src'],
                 babelHelpers: 'bundled',
                 exclude: [...exclusions],
                 extensions: [...extensions],
