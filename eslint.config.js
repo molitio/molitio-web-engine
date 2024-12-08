@@ -12,20 +12,9 @@ module.exports = [
         ignorePatterns: ['.next', 'dist'],
     },
     {
-        files: ['apps-ui/dashing-bumblebee-ui/**/*.ts', 'apps-ui/dashing-bumblebee-ui/**/*.tsx}'],
+        files: ['apps-ui/sleeping-dragon-ui/**/*.ts', 'apps-ui/sleeping-dragon-ui/**/*.tsx}'],
         extends: 'next/core-web-vitals',
         ignorePatterns: ['.next', 'dist'],
-    },
-    {
-        files: ['apps-ui/gallery-display-ui/**/*.ts', 'apps-ui/gallery-display-ui/**/*.tsx}'],
-        env: { browser: true, es2020: true },
-        extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended'],
-        ignorePatterns: ['dist', '.eslintrc.cjs'],
-        parser: '@typescript-eslint/parser',
-        plugins: ['react-refresh'],
-        rules: {
-            'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
-        },
     },
     {
         files: ['apps-api/resource-hub-api/**/*.ts'],

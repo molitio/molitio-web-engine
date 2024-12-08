@@ -1,0 +1,52 @@
+{
+    "name": "@molitio/mwe-dashing-bumblebee-ui",
+    "version": "0.2.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev -p 3001",
+        "build": "next build",
+        "start": "next start -p 3001",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@emailjs/browser": "4.4.1",
+        "@google-cloud/recaptcha-enterprise": "5.11.0",
+        "@molitio/mwe-ui-core": "0.2.0",
+        "@vercel/analytics": "1.3.1",
+        "formik": "2.4.6",
+        "jotai": "2.8.3",
+        "next": "14.2.14",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "yup": "1.4.0"
+    },
+    "devDependencies": {
+        "@molitio/mwe-tailwindcss-config": "workspace:0.2.0",
+        "@molitio/mwe-ui-core": "workspace:0.2.0",
+        "@tailwindcss/typography": "0.5.15",
+        "@types/grecaptcha": "3.0.9",
+        "@types/node": "20.6.3",
+        "@types/react": "18.3.0",
+        "@types/react-dom": "18.3.0",
+        "autoprefixer": "10.4.15",
+        "eslint": "^8.56.0",
+        "eslint-config-next": "13.5.2",
+        "postcss": "8.4.36",
+        "postcss-import": "16.1.0",
+        "tailwindcss": "3.4.1",
+        "tslib": "^2.6.2",
+        "typescript": "5.2.2"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}
