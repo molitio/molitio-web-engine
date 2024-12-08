@@ -27,3 +27,5 @@ Contributions from the community are warmly welcomed. Whether you are improving 
 For any inquiries, feedback, or just to say hello, please feel free to reach out to us.
 
 peter.koller@molitio.com
+
+vecel build 01
