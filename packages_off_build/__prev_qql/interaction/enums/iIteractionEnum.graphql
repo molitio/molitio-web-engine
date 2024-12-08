@@ -1,6 +1,0 @@
-enum InteractionTypes {
-    EMAIL
-    PHONE
-    TEXT
-    IN_APP_MESSAGE
-}

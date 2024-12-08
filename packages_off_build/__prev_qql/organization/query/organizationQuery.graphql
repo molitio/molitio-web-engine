@@ -1,8 +1,0 @@
-query getOrganizations {
-    getOrganizations {
-        id
-        name
-        description
-        organizationUrl
-    }
-}
