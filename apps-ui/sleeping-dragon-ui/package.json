@@ -1,22 +1,14 @@
 {
-    "name": "@molitio/mwe-john-glenn-ui",
+    "name": "@molitio/mwe-sleeping-dragon-ui",
     "version": "0.2.0",
-    "moduleFileExtensions": [
-        "js",
-        "json",
-        "scss"
-    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint",
-        "test": "npx jest",
-        "artifact": "mkdir -p ../../.artifacts/mwe-john-glenn-ui && cp -r ./.next/* ../../.artifacts/mwe-john-glenn-ui"
+        "lint": "next lint"
     },
     "dependencies": {
         "@molitio/mwe-ui-core": "0.2.0",
-        "jotai": "2.8.3",
         "next": "15.0.4",
         "react": "19.0.0-rc.1",
         "react-dom": "19.0.0-rc.1",
@@ -31,7 +23,6 @@
         "autoprefixer": "10.4.15",
         "postcss": "8.4.36",
         "tailwindcss": "3.4.13",
-        "tslib": "2.6.2",
         "typescript": "5.2.2",
         "vercel": "32.2.2"
     }
