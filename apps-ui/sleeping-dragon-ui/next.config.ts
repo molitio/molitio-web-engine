@@ -3,7 +3,7 @@ import { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
-    images: {
+    /*     images: {
         remotePatterns: [
             {
                 protocol: 'https',
@@ -11,8 +11,7 @@ const nextConfig: NextConfig = {
                 pathname: '/filestore.molitio.org/green-brick/web-content/**',
             },
         ],
-    },
-    compiler: {},
+    }, */
     async headers() {
         return [
             {
@@ -72,7 +71,6 @@ const nextConfig: NextConfig = {
             },
         ];
     },
-    experimental: {},
 };
 
 export default nextConfig;
