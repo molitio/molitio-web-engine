@@ -1,3 +1,8 @@
+/*
+ * Monorepo wide eslint config, UI Apps in folder apps-ui have individual
+ * eslint configs for clean isolated nextjs app builds
+ */
+
 module.exports = [
     {
         files: ['**/*.js'],
@@ -5,16 +10,6 @@ module.exports = [
         parserOptions: {
             sourceType: 'module',
         },
-    },
-    {
-        files: ['apps-ui/john-glenn-ui/**/*.ts', 'apps-ui/john-glenn-ui/**/*.tsx}'],
-        extends: 'next/core-web-vitals',
-        ignorePatterns: ['.next', 'dist'],
-    },
-    {
-        files: ['apps-ui/sleeping-dragon-ui/**/*.ts', 'apps-ui/sleeping-dragon-ui/**/*.tsx}'],
-        extends: 'next/core-web-vitals',
-        ignorePatterns: ['.next', 'dist'],
     },
     {
         files: ['apps-api/resource-hub-api/**/*.ts'],

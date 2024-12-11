@@ -5,9 +5,7 @@ export const metadata = {
     title: 'John Glenn',
 };
 
-const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
-    const { children } = props;
-
+export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
             <body>
@@ -16,6 +14,4 @@ const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
             </body>
         </html>
     );
-};
-
-export default RootLayout;
+}
