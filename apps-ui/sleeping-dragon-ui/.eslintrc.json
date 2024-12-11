@@ -1,0 +1,20 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
+    },
+    "extends": [
+        "prettier",
+        "eslint:recommended",
+        "next/core-web-vitals",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/eslint-recommended"
+    ],
+    "plugins": ["@typescript-eslint"],
+    "ignorePatterns": [".next", "dist"]
+}
