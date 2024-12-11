@@ -1,0 +1,31 @@
+{
+    "name": "@molitio/mwe-prettier-config",
+    "version": "0.2.0",
+    "author": "Peter Koller",
+    "description": "Molitio Web Engine Prettier Configuration",
+    "license": "MIT",
+    "main": "src/index.js",
+    "repository": "git+https://github.com/molitio/molitio-web-engine.git",
+    "keywords": [
+        "molitio",
+        "mwe-ui-core",
+        "MWEPrettierConfig"
+    ],
+    "bugs": {
+        "url": "https://github.com/molitio/molitio-web-engine/issues",
+        "email": "info@molitio.com"
+    },
+    "homepage": "https://github.com/molitio/molitio-web-engine#readme",
+    "engines": {
+        "node": ">=20"
+    },
+    "scripts": {
+        "dev": "yarn build:watch",
+        "build": "",
+        "build:watch": ""
+    },
+    "devDependencies": {
+        "@tailwindcss/typography": "0.5.15",
+        "tailwindcss": "3.4.1"
+    }
+}
