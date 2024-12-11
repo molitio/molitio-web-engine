@@ -1,7 +1,6 @@
 'use client';
 
 import React from 'react';
-import emailjs from '@emailjs/browser';
 import Script from 'next/script';
 
 const CaptchaClient: React.FC = () => {
