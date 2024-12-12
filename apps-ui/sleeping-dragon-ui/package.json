@@ -10,9 +10,9 @@
     "dependencies": {
         "@molitio/mwe-ui-core": "0.2.0",
         "next": "15.0.4",
-        "react": "19.0.0-rc.1",
-        "react-dom": "19.0.0-rc.1",
-        "react-is": "19.0.0-rc.1"
+        "react": "19.0.0",
+        "react-dom": "19.0.0",
+        "react-is": "19.0.0"
     },
     "devDependencies": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",

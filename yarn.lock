@@ -3824,9 +3824,9 @@ __metadata:
     next: "npm:15.0.4"
     postcss: "npm:8.4.36"
     prettier: "npm:3.4.2"
-    react: "npm:19.0.0-rc.1"
-    react-dom: "npm:19.0.0-rc.1"
-    react-is: "npm:19.0.0-rc.1"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-is: "npm:19.0.0"
     tailwindcss: "npm:3.4.13"
     tslib: "npm:2.6.2"
     typescript: "npm:5.2.2"
@@ -3917,9 +3917,9 @@ __metadata:
     next: "npm:15.0.4"
     postcss: "npm:8.4.36"
     prettier: "npm:3.4.2"
-    react: "npm:19.0.0-rc.1"
-    react-dom: "npm:19.0.0-rc.1"
-    react-is: "npm:19.0.0-rc.1"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-is: "npm:19.0.0"
     tailwindcss: "npm:3.4.13"
     typescript: "npm:5.2.2"
     vercel: "npm:32.2.2"
@@ -4000,9 +4000,9 @@ __metadata:
     postcss: "npm:8.4.36"
     postcss-import: "npm:16.1.0"
     prettier: "npm:3.4.2"
-    react: "npm:19.0.0-rc.1"
-    react-dom: "npm:19.0.0-rc.1"
-    react-is: "npm:19.0.0-rc.1"
+    react: "npm:19.0.0"
+    react-dom: "npm:19.0.0"
+    react-is: "npm:19.0.0"
     rollup: "npm:4.0.2"
     rollup-plugin-peer-deps-external: "npm:2.2.4"
     rollup-plugin-pnp-resolve: "npm:2.0.0"
@@ -4019,8 +4019,8 @@ __metadata:
     formik: ^2.4.6
     jotai: ^2.8.3
     next: ^15.0.4
-    react: ^19.0.0-rc.1
-    react-dom: ^19.0.0-rc.1
+    react: ^19.0.0
+    react-dom: ^19.0.0
     tailwindcss: ^3.4.13
     yup: ^1.5.0
   languageName: unknown
@@ -16125,14 +16125,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:19.0.0-rc.1":
-  version: 19.0.0-rc.1
-  resolution: "react-dom@npm:19.0.0-rc.1"
+"react-dom@npm:19.0.0":
+  version: 19.0.0
+  resolution: "react-dom@npm:19.0.0"
   dependencies:
-    scheduler: "npm:0.25.0-rc.1"
+    scheduler: "npm:^0.25.0"
   peerDependencies:
-    react: 19.0.0-rc.1
-  checksum: 10/9c3f79fe8f8fd10e8a86476df1670d3920f1c1083e56285b5c31d96ca18d223e9d1e78b6b5534ce7ab90a57e2d47ca96d2b3ced3a08a993c937c7f49561b337d
+    react: ^19.0.0
+  checksum: 10/aa64a2f1991042f516260e8b0eca0ae777b6c8f1aa2b5ae096e80bbb6ac9b005aef2bca697969841d34f7e1819556263476bdfea36c35092e8d9aefde3de2d9a
   languageName: node
   linkType: hard
 
@@ -16143,10 +16143,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-is@npm:19.0.0-rc.1":
-  version: 19.0.0-rc.1
-  resolution: "react-is@npm:19.0.0-rc.1"
-  checksum: 10/9e425eb6d94e99b24cb24bd2f60cde56080ed2f827d7e3a796e049b9cf4100b66bbcd39d132902f4da94d4fee4e3f795f8dbf45d9313ccb47f2859bcff5a1d06
+"react-is@npm:19.0.0":
+  version: 19.0.0
+  resolution: "react-is@npm:19.0.0"
+  checksum: 10/6cd3695c462ec3f0d4db98583f0c1b9a439248d60214f6c42c2b0e2951a1066339d0eefa74707f03484042e043fca87750282a35b652492c035f5f3da0d6498a
   languageName: node
   linkType: hard
 
@@ -16180,10 +16180,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:19.0.0-rc.1":
-  version: 19.0.0-rc.1
-  resolution: "react@npm:19.0.0-rc.1"
-  checksum: 10/4da93b26f6d8ca24a4657551fe9e6db92b42e6d8cb54821e3c2c8c5af2098094e5d997b261314a2b5723ad1e0a444a63312b7645f72394f21660da38ea4554f1
+"react@npm:19.0.0":
+  version: 19.0.0
+  resolution: "react@npm:19.0.0"
+  checksum: 10/2490969c503f644703c88990d20e4011fa6119ddeca451e9de48f6d7ab058d670d2852a5fcd3aa3cd90a923ab2815d532637bd4a814add402ae5c0d4f129ee71
   languageName: node
   linkType: hard
 
@@ -16889,19 +16889,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"scheduler@npm:0.25.0-rc.1":
-  version: 0.25.0-rc.1
-  resolution: "scheduler@npm:0.25.0-rc.1"
-  checksum: 10/b9dbc9e406ab4af245c3c7cfd1d39e983aa6184ab941cfd7ee5dc1695854280a5dee556f7f81d9e0f392dbe4f2f85966f2b6988beed39f1d5f5e844b1db02c60
-  languageName: node
-  linkType: hard
-
 "scheduler@npm:^0.23.2":
   version: 0.23.2
   resolution: "scheduler@npm:0.23.2"
   dependencies:
     loose-envify: "npm:^1.1.0"
   checksum: 10/e8d68b89d18d5b028223edf090092846868a765a591944760942b77ea1f69b17235f7e956696efbb62c8130ab90af7e0949bfb8eba7896335507317236966bc9
+  languageName: node
+  linkType: hard
+
+"scheduler@npm:^0.25.0":
+  version: 0.25.0
+  resolution: "scheduler@npm:0.25.0"
+  checksum: 10/e661e38503ab29a153429a99203fefa764f28b35c079719eb5efdd2c1c1086522f6653d8ffce388209682c23891a6d1d32fa6badf53c35fb5b9cd0c55ace42de
   languageName: node
   linkType: hard
 
