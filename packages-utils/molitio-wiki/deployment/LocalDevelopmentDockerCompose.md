@@ -7,7 +7,7 @@ This document describes how to set up and run the Resource Hub API and its depen
 Docker Compose allows us to define and run multi-container Docker applications. Our local development environment will consist of the following services:
 
 - **Resource Hub API**: The main NestJS application.
-- **Resource Hub Database**: A PostgreSQL database instance for the API.
+- **Resource Hub Database**: A MongoDB database instance for the API.
 - **Resource Hub Gateway**: An Nginx instance acting as a reverse proxy for the API.
 
 ## Prerequisites
@@ -27,7 +27,7 @@ Docker Compose allows us to define and run multi-container Docker applications. 
     The `--build` flag ensures that images are rebuilt if their Dockerfiles have changed.
 4.  **Accessing Services:**
     *   The Resource Hub API will typically be accessible via the Resource Hub Gateway, e.g., `http://localhost:8080/api` (the exact port will be defined in `docker-compose.yml` and `nginx.conf`).
-    *   The PostgreSQL database will be accessible to the API service on its internal Docker network name and port (e.g., `resource-hub-db:5432`).
+    *   The MongoDB database will be accessible to the API service on its internal Docker network name and port (e.g., `resource-hub-db:27017`).
 
 ## Dockerfiles
 

@@ -2,7 +2,7 @@
 
 [Molitio Web Engine](../README.md)
 
-[Wiki Home](packages-utils/molitio-wiki/Home.md)
+[Wiki Home](../Home.md)
 
 ## Executive Summary
 
