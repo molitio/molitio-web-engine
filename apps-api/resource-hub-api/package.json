@@ -32,7 +32,7 @@
         "docs": "__off__ currently vecel buld fails on compodoc npx @compodoc/compodoc -p tsconfig.json -s"
     },
     "dependencies": {
-        "@apollo/gateway": "2.7.7",
+        "@apollo/gateway": "^2.10.1",
         "@apollo/server": "4.10.4",
         "@as-integrations/fastify": "2.1.1",
         "@nestjs/apollo": "12.1.0",
@@ -48,7 +48,7 @@
         "class-validator": "0.14.1",
         "fastify": "4.27.0",
         "graphql": "16.8.1",
-        "mongoose": "8.8.3",
+        "mongoose": "8.15.1",
         "reflect-metadata": "0.2.1",
         "rxjs": "^7.8.1"
     },

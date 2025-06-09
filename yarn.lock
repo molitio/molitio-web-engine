@@ -118,21 +118,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/composition@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/composition@npm:2.7.7"
+"@apollo/composition@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@apollo/composition@npm:2.11.0"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-graphs": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.11.0"
+    "@apollo/query-graphs": "npm:2.11.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/19c27c857ccf18d037bc3257c4425c04c00ccd67dc04e976364fe0a93f4235453b2058f40998f4b01b96b7a5be45d42aff78caf5d3f147dd991b51144235a77a
+  checksum: 10/00e5f0c8613f282c79aad334d4ee8b6e948d28941c8c9b7b747fe6cde96f885cea78a35d4164ac647c70d86f12783fe0fe746ed6b0abfe3e04e943063e151e60
   languageName: node
   linkType: hard
 
-"@apollo/federation-internals@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/federation-internals@npm:2.7.7"
+"@apollo/federation-internals@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@apollo/federation-internals@npm:2.11.0"
   dependencies:
     "@types/uuid": "npm:^9.0.0"
     chalk: "npm:^4.1.0"
@@ -140,17 +140,17 @@ __metadata:
     uuid: "npm:^9.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/b86390685747ad3f4d19022083e4cd95c26bcb2248fa63ab55fc98bd6312a02e5d966c2ee00adbb0113dce9a907ca8475c3df4604847f79a2aff0e1e8316940a
+  checksum: 10/56e2ba3515959d3ad222c5ee3d391c84f9845571d830605474aa4651b846b3fb0d6bbf2ec56e93c5d5d7da1a5b757dae13b0caccfa7e8575ca48ed1cdd8f3e49
   languageName: node
   linkType: hard
 
-"@apollo/gateway@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/gateway@npm:2.7.7"
+"@apollo/gateway@npm:^2.10.1":
+  version: 2.11.0
+  resolution: "@apollo/gateway@npm:2.11.0"
   dependencies:
-    "@apollo/composition": "npm:2.7.7"
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-planner": "npm:2.7.7"
+    "@apollo/composition": "npm:2.11.0"
+    "@apollo/federation-internals": "npm:2.11.0"
+    "@apollo/query-planner": "npm:2.11.0"
     "@apollo/server-gateway-interface": "npm:^1.1.0"
     "@apollo/usage-reporting-protobuf": "npm:^4.1.0"
     "@apollo/utils.createhash": "npm:^2.0.0"
@@ -168,7 +168,7 @@ __metadata:
     node-fetch: "npm:^2.6.7"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/c180113fa718e03070e883ff3acaddb149c73c7e11a1d61c302095d3329e6ede7165ddb503e1aa5ca30e3390b5415432a3fff9df34af5c4707c715c28b27bc48
+  checksum: 10/7396c0ded4f18a8f3ab13feb75f81e7f70902b9806e7fe4e30c28094f74f88300af1434456021a51447d298ee9a539307e70a56ebf8924249617a8102f43d44a
   languageName: node
   linkType: hard
 
@@ -195,33 +195,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/query-graphs@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/query-graphs@npm:2.7.7"
+"@apollo/query-graphs@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@apollo/query-graphs@npm:2.11.0"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.11.0"
     deep-equal: "npm:^2.0.5"
     ts-graphviz: "npm:^1.5.4"
     uuid: "npm:^9.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/85a3d7fae221e65247829be27fb9af1b50497553c6ce9cf01dc3b965558dced959ea182728d31865f81826d7eba779b0ec7f65621c6ffae0733a3f9666f999d0
+  checksum: 10/0e0dad208006043d295a2ae0c85ef0ac98a063e626fcf04074672355858cd5cedd654ba198db44aab2a9aa0ce25d48bea881298def1c755520bd6cfe89c304f0
   languageName: node
   linkType: hard
 
-"@apollo/query-planner@npm:2.7.7":
-  version: 2.7.7
-  resolution: "@apollo/query-planner@npm:2.7.7"
+"@apollo/query-planner@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@apollo/query-planner@npm:2.11.0"
   dependencies:
-    "@apollo/federation-internals": "npm:2.7.7"
-    "@apollo/query-graphs": "npm:2.7.7"
+    "@apollo/federation-internals": "npm:2.11.0"
+    "@apollo/query-graphs": "npm:2.11.0"
     "@apollo/utils.keyvaluecache": "npm:^2.1.0"
     chalk: "npm:^4.1.0"
     deep-equal: "npm:^2.0.5"
     pretty-format: "npm:^29.0.0"
   peerDependencies:
     graphql: ^16.5.0
-  checksum: 10/26ff81a34654301cf5122b0f43da90ab0c0678888d1545a54d5029003675122a3aee192bef852d3ad094396cdb044fd00e53ce8d5e2718f738011658599b0aa9
+  checksum: 10/7f9771328deb0112f9494e131dda8670607c97453c49f55c024332e14ad5c802443b41258b5b421b190595ded5b9842f9c7ad739e159bd2e851cb9e76e3a620b
   languageName: node
   linkType: hard
 
@@ -3854,7 +3854,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-resource-hub-api@workspace:apps-api/resource-hub-api"
   dependencies:
-    "@apollo/gateway": "npm:2.7.7"
+    "@apollo/gateway": "npm:^2.10.1"
     "@apollo/server": "npm:4.10.4"
     "@as-integrations/fastify": "npm:2.1.1"
     "@nestjs/apollo": "npm:12.1.0"
@@ -3883,7 +3883,7 @@ __metadata:
     fastify: "npm:4.27.0"
     graphql: "npm:16.8.1"
     jest: "npm:^29.5.0"
-    mongoose: "npm:8.8.3"
+    mongoose: "npm:8.15.1"
     prettier: "npm:^3.0.0"
     reflect-metadata: "npm:0.2.1"
     rxjs: "npm:^7.8.1"
@@ -4082,12 +4082,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mongodb-js/saslprep@npm:^1.1.5":
-  version: 1.1.8
-  resolution: "@mongodb-js/saslprep@npm:1.1.8"
+"@mongodb-js/saslprep@npm:^1.1.9":
+  version: 1.2.2
+  resolution: "@mongodb-js/saslprep@npm:1.2.2"
   dependencies:
     sparse-bitfield: "npm:^3.0.3"
-  checksum: 10/ff3ed794370aab2d941b6d28bd5fb523782221e2e996db56604278b13829ee10d0b6875b1d6e02023277121c71ca53aabdee8f72cf23cf50741cd7ec694a4868
+  checksum: 10/f62b2ffc072c0df0fe7d60c8159fb67dcb8ce8d8ad5ba72a09dac432acaf548c8d978a20fc2ec15cff06920029eb75ed3ad368f699e65b83f929fb4dd9b9b2f8
   languageName: node
   linkType: hard
 
@@ -7334,12 +7334,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.19.0":
-  version: 0.19.2
-  resolution: "axios@npm:0.19.2"
+"axios@npm:^1.7.0":
+  version: 1.9.0
+  resolution: "axios@npm:1.9.0"
   dependencies:
-    follow-redirects: "npm:1.5.10"
-  checksum: 10/364f5e698ec47c66fbba9db98ac4af4ed91aab802ab095a7905781ee5bcc7fafb9cf05be8d05167f615bda3af3eb6b403556ab23fdfda3adaabd61a3295076be
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10/a2f90bba56820883879f32a237e2b9ff25c250365dcafd41cec41b3406a3df334a148f90010182dfdadb4b41dc59f6f0b3e8898ff41b666d1157b5f3f4523497
   languageName: node
   linkType: hard
 
@@ -7684,10 +7686,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^6.7.0":
-  version: 6.8.0
-  resolution: "bson@npm:6.8.0"
-  checksum: 10/e73784ae891a30388e69e6f7a5b5962c34c180e0c1dc570c1e13815cdb1076d2253362f6e20e24a419bd1aa2aaf9f388a51049a1fcd19e8b947faec90edd2979
+"bson@npm:^6.10.3":
+  version: 6.10.4
+  resolution: "bson@npm:6.10.4"
+  checksum: 10/8a79a452219a13898358a5abc93e32bc3805236334f962661da121ce15bd5cade27718ba3310ee2a143ff508489b08467eed172ecb2a658cb8d2e94fdb76b215
   languageName: node
   linkType: hard
 
@@ -8856,15 +8858,6 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10/0073c3bcbd9cb7d71dd5f6b55be8701af42df3e56e911186dfa46fac3a5b9eb7ce7f377dd1d3be6db8977221f8eb333d945216f645cf56f6b688cd484837d255
-  languageName: node
-  linkType: hard
-
-"debug@npm:=3.1.0":
-  version: 3.1.0
-  resolution: "debug@npm:3.1.0"
-  dependencies:
-    ms: "npm:2.0.0"
-  checksum: 10/f5fd4b1390dd3b03a78aa30133a4b4db62acc3e6cd86af49f114bf7f7bd57c41a5c5c2eced2ad2c8190d70c60309f2dd5782feeaa0704dbaa5697890e3c5ad07
   languageName: node
   linkType: hard
 
@@ -10900,12 +10893,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.5.10":
-  version: 1.5.10
-  resolution: "follow-redirects@npm:1.5.10"
-  dependencies:
-    debug: "npm:=3.1.0"
-  checksum: 10/7cf3bb10dbffabce317d1de3e3f85ea8c47fea388c4bc3da1052fd6bbb7b036772f48eed2f154d63ac39c49ab5fe4df0dda94b8e0c54eda8ca2edb001b2550b7
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.9
+  resolution: "follow-redirects@npm:1.15.9"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10/e3ab42d1097e90d28b913903841e6779eb969b62a64706a3eb983e894a5db000fbd89296f45f08885a0e54cd558ef62e81be1165da9be25a6c44920da10f424c
   languageName: node
   linkType: hard
 
@@ -14146,16 +14140,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb@npm:~6.10.0":
-  version: 6.10.0
-  resolution: "mongodb@npm:6.10.0"
+"mongodb@npm:~6.16.0":
+  version: 6.16.0
+  resolution: "mongodb@npm:6.16.0"
   dependencies:
-    "@mongodb-js/saslprep": "npm:^1.1.5"
-    bson: "npm:^6.7.0"
+    "@mongodb-js/saslprep": "npm:^1.1.9"
+    bson: "npm:^6.10.3"
     mongodb-connection-string-url: "npm:^3.0.0"
   peerDependencies:
     "@aws-sdk/credential-providers": ^3.188.0
-    "@mongodb-js/zstd": ^1.1.0
+    "@mongodb-js/zstd": ^1.1.0 || ^2.0.0
     gcp-metadata: ^5.2.0
     kerberos: ^2.0.1
     mongodb-client-encryption: ">=6.0.0 <7"
@@ -14176,22 +14170,22 @@ __metadata:
       optional: true
     socks:
       optional: true
-  checksum: 10/cab3b9171de69078a69a969d9c17b78b14fd346ad7579e8e88369d0494cd9bfb3a58e78d312d8480b94c601907aa57b5fa89fe44531de94839a04b79ea856ae0
+  checksum: 10/eb47da9ef00331aca1804426424a8630f9e42c48bf6021786ebb1766b1d53bda62c64498b41627b5fe5c01260ec5ca2e8cbc2468e394df5d5b874cee646e9c06
   languageName: node
   linkType: hard
 
-"mongoose@npm:8.8.3":
-  version: 8.8.3
-  resolution: "mongoose@npm:8.8.3"
+"mongoose@npm:8.15.1":
+  version: 8.15.1
+  resolution: "mongoose@npm:8.15.1"
   dependencies:
-    bson: "npm:^6.7.0"
+    bson: "npm:^6.10.3"
     kareem: "npm:2.6.3"
-    mongodb: "npm:~6.10.0"
+    mongodb: "npm:~6.16.0"
     mpath: "npm:0.9.0"
     mquery: "npm:5.0.0"
     ms: "npm:2.1.3"
     sift: "npm:17.1.3"
-  checksum: 10/978d1160de2ee6882cfcf0d39ce271b5613f771c5497c0a6053bc7692a4d9e911acf71a7cd5e7f0bd09d58bd15789547021f786d86ac4cd18aaa566507a3f54e
+  checksum: 10/4ed60966f545fa3df391cd22593a350614318f2b552fc66a3fba02fb42325120a6f38d0e9026856b6ed2e69ad6089e440cb09119934a2c891803734afc58bf03
   languageName: node
   linkType: hard
 
@@ -15991,6 +15985,13 @@ __metadata:
     forwarded: "npm:0.2.0"
     ipaddr.js: "npm:1.9.1"
   checksum: 10/f24a0c80af0e75d31e3451398670d73406ec642914da11a2965b80b1898ca6f66a0e3e091a11a4327079b2b268795f6fa06691923fef91887215c3d0e8ea3f68
+  languageName: node
+  linkType: hard
+
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: 10/f0bb4a87cfd18f77bc2fba23ae49c3b378fb35143af16cc478171c623eebe181678f09439707ad80081d340d1593cd54a33a0113f3ccb3f4bc9451488780ee23
   languageName: node
   linkType: hard
 

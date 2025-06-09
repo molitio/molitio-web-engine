@@ -274,19 +274,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/composition", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/cache/@apollo-composition-npm-2.7.7-484ef852c6-19c27c857c.zip/node_modules/@apollo/composition/",\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-composition-npm-2.11.0-813071a651-00e5f0c861.zip/node_modules/@apollo/composition/",\
         "packageDependencies": [\
-          ["@apollo/composition", "npm:2.7.7"]\
+          ["@apollo/composition", "npm:2.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-composition-virtual-e909902817/0/cache/@apollo-composition-npm-2.7.7-484ef852c6-19c27c857c.zip/node_modules/@apollo/composition/",\
+      ["virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-composition-virtual-3ba8f73110/0/cache/@apollo-composition-npm-2.11.0-813071a651-00e5f0c861.zip/node_modules/@apollo/composition/",\
         "packageDependencies": [\
-          ["@apollo/composition", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/federation-internals", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/query-graphs", "virtual:e90990281754c0f98b55c0afb2d855d8f2e20e1d3d311d44687fc5a42e8b2c27f46566a499272b3a92123756c6b8b8b4b75becccb0168f8f8c3eaed1afbddf67#npm:2.7.7"],\
+          ["@apollo/composition", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/federation-internals", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/query-graphs", "virtual:3ba8f731100ed0d7804dfdbab802fd7fb93975f7f3e18080767ce0bc91b91527c967eb1ddeb0672d857d3ddf16078a82d2c37c579cad159a87f825bd448bbc02#npm:2.11.0"],\
           ["@types/graphql", null],\
           ["graphql", "npm:16.8.1"]\
         ],\
@@ -298,17 +298,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/federation-internals", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/cache/@apollo-federation-internals-npm-2.7.7-f6089c99f0-b863906857.zip/node_modules/@apollo/federation-internals/",\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-federation-internals-npm-2.11.0-59cd99b6a4-56e2ba3515.zip/node_modules/@apollo/federation-internals/",\
         "packageDependencies": [\
-          ["@apollo/federation-internals", "npm:2.7.7"]\
+          ["@apollo/federation-internals", "npm:2.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-federation-internals-virtual-c12697bf58/0/cache/@apollo-federation-internals-npm-2.7.7-f6089c99f0-b863906857.zip/node_modules/@apollo/federation-internals/",\
+      ["virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-federation-internals-virtual-b01ce6028b/0/cache/@apollo-federation-internals-npm-2.11.0-59cd99b6a4-56e2ba3515.zip/node_modules/@apollo/federation-internals/",\
         "packageDependencies": [\
-          ["@apollo/federation-internals", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
+          ["@apollo/federation-internals", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
           ["@types/graphql", null],\
           ["@types/uuid", "npm:9.0.8"],\
           ["chalk", "npm:4.1.2"],\
@@ -324,21 +324,21 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/gateway", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/cache/@apollo-gateway-npm-2.7.7-eb573294b2-c180113fa7.zip/node_modules/@apollo/gateway/",\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-gateway-npm-2.11.0-0578531f6f-7396c0ded4.zip/node_modules/@apollo/gateway/",\
         "packageDependencies": [\
-          ["@apollo/gateway", "npm:2.7.7"]\
+          ["@apollo/gateway", "npm:2.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.7.7", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-gateway-virtual-17f9e97d3b/0/cache/@apollo-gateway-npm-2.7.7-eb573294b2-c180113fa7.zip/node_modules/@apollo/gateway/",\
+      ["virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-gateway-virtual-dbdc6822bf/0/cache/@apollo-gateway-npm-2.11.0-0578531f6f-7396c0ded4.zip/node_modules/@apollo/gateway/",\
         "packageDependencies": [\
-          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.7.7"],\
-          ["@apollo/composition", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/federation-internals", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/query-planner", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/server-gateway-interface", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:1.1.1"],\
+          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.11.0"],\
+          ["@apollo/composition", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/federation-internals", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/query-planner", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/server-gateway-interface", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:1.1.1"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
           ["@apollo/utils.createhash", "npm:2.0.1"],\
           ["@apollo/utils.fetcher", "npm:2.0.1"],\
@@ -385,18 +385,18 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/query-graphs", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/cache/@apollo-query-graphs-npm-2.7.7-7b3bdb7d0b-85a3d7fae2.zip/node_modules/@apollo/query-graphs/",\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-query-graphs-npm-2.11.0-db96538790-0e0dad2080.zip/node_modules/@apollo/query-graphs/",\
         "packageDependencies": [\
-          ["@apollo/query-graphs", "npm:2.7.7"]\
+          ["@apollo/query-graphs", "npm:2.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e90990281754c0f98b55c0afb2d855d8f2e20e1d3d311d44687fc5a42e8b2c27f46566a499272b3a92123756c6b8b8b4b75becccb0168f8f8c3eaed1afbddf67#npm:2.7.7", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-query-graphs-virtual-32b1ddcde7/0/cache/@apollo-query-graphs-npm-2.7.7-7b3bdb7d0b-85a3d7fae2.zip/node_modules/@apollo/query-graphs/",\
+      ["virtual:3ba8f731100ed0d7804dfdbab802fd7fb93975f7f3e18080767ce0bc91b91527c967eb1ddeb0672d857d3ddf16078a82d2c37c579cad159a87f825bd448bbc02#npm:2.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-query-graphs-virtual-4ef33d7c1f/0/cache/@apollo-query-graphs-npm-2.11.0-db96538790-0e0dad2080.zip/node_modules/@apollo/query-graphs/",\
         "packageDependencies": [\
-          ["@apollo/query-graphs", "virtual:e90990281754c0f98b55c0afb2d855d8f2e20e1d3d311d44687fc5a42e8b2c27f46566a499272b3a92123756c6b8b8b4b75becccb0168f8f8c3eaed1afbddf67#npm:2.7.7"],\
-          ["@apollo/federation-internals", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
+          ["@apollo/query-graphs", "virtual:3ba8f731100ed0d7804dfdbab802fd7fb93975f7f3e18080767ce0bc91b91527c967eb1ddeb0672d857d3ddf16078a82d2c37c579cad159a87f825bd448bbc02#npm:2.11.0"],\
+          ["@apollo/federation-internals", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
           ["@types/graphql", null],\
           ["deep-equal", "npm:2.2.3"],\
           ["graphql", "npm:16.8.1"],\
@@ -411,19 +411,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@apollo/query-planner", [\
-      ["npm:2.7.7", {\
-        "packageLocation": "./.yarn/cache/@apollo-query-planner-npm-2.7.7-b6a53e34c0-26ff81a346.zip/node_modules/@apollo/query-planner/",\
+      ["npm:2.11.0", {\
+        "packageLocation": "./.yarn/cache/@apollo-query-planner-npm-2.11.0-27437a3de3-7f9771328d.zip/node_modules/@apollo/query-planner/",\
         "packageDependencies": [\
-          ["@apollo/query-planner", "npm:2.7.7"]\
+          ["@apollo/query-planner", "npm:2.11.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-query-planner-virtual-b7c97bfd5f/0/cache/@apollo-query-planner-npm-2.7.7-b6a53e34c0-26ff81a346.zip/node_modules/@apollo/query-planner/",\
+      ["virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-query-planner-virtual-d3438ab267/0/cache/@apollo-query-planner-npm-2.11.0-27437a3de3-7f9771328d.zip/node_modules/@apollo/query-planner/",\
         "packageDependencies": [\
-          ["@apollo/query-planner", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/federation-internals", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:2.7.7"],\
-          ["@apollo/query-graphs", "virtual:e90990281754c0f98b55c0afb2d855d8f2e20e1d3d311d44687fc5a42e8b2c27f46566a499272b3a92123756c6b8b8b4b75becccb0168f8f8c3eaed1afbddf67#npm:2.7.7"],\
+          ["@apollo/query-planner", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/federation-internals", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:2.11.0"],\
+          ["@apollo/query-graphs", "virtual:3ba8f731100ed0d7804dfdbab802fd7fb93975f7f3e18080767ce0bc91b91527c967eb1ddeb0672d857d3ddf16078a82d2c37c579cad159a87f825bd448bbc02#npm:2.11.0"],\
           ["@apollo/utils.keyvaluecache", "npm:2.1.1"],\
           ["@types/graphql", null],\
           ["chalk", "npm:4.1.2"],\
@@ -451,7 +451,7 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["@apollo/server", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:4.10.4"],\
           ["@apollo/cache-control-types", "virtual:1b67742bf3fd566020d5a12097272c277e0dbdb131151bdf60f2b5ac164be12a9ba2f0b4c300522ee99092c03e81cbac639ee8ad2f9dee38f243ff8663bc18e8#npm:1.0.3"],\
-          ["@apollo/server-gateway-interface", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:1.1.1"],\
+          ["@apollo/server-gateway-interface", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:1.1.1"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
           ["@apollo/utils.createhash", "npm:2.0.1"],\
           ["@apollo/utils.fetcher", "npm:2.0.1"],\
@@ -493,10 +493,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:1.1.1", {\
-        "packageLocation": "./.yarn/__virtual__/@apollo-server-gateway-interface-virtual-1d8bccaf9a/0/cache/@apollo-server-gateway-interface-npm-1.1.1-a9440657b6-af0e953992.zip/node_modules/@apollo/server-gateway-interface/",\
+      ["virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:1.1.1", {\
+        "packageLocation": "./.yarn/__virtual__/@apollo-server-gateway-interface-virtual-4af7d50a22/0/cache/@apollo-server-gateway-interface-npm-1.1.1-a9440657b6-af0e953992.zip/node_modules/@apollo/server-gateway-interface/",\
         "packageDependencies": [\
-          ["@apollo/server-gateway-interface", "virtual:17f9e97d3b622d6a341f78ec8b53326a1fada543d6bf7cd81f5443b6b155137a8cf8cb08332e4b1b4771b4d119817da5db2721445924ce79e842650ce1d93823#npm:1.1.1"],\
+          ["@apollo/server-gateway-interface", "virtual:dbdc6822bfa9939734edd1ec971f7f1cc86e25a7d5b575b1ff2ea69544321fcee0f7e0cce027dde68b86cbaa6813ce7771ab420fabd398edfbf2bf8a7994fee8#npm:1.1.1"],\
           ["@apollo/usage-reporting-protobuf", "npm:4.1.1"],\
           ["@apollo/utils.fetcher", "npm:2.0.1"],\
           ["@apollo/utils.keyvaluecache", "npm:2.1.1"],\
@@ -7155,7 +7155,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./apps-api/resource-hub-api/",\
         "packageDependencies": [\
           ["@molitio/mwe-resource-hub-api", "workspace:apps-api/resource-hub-api"],\
-          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.7.7"],\
+          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.11.0"],\
           ["@apollo/server", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:4.10.4"],\
           ["@as-integrations/fastify", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.1.1"],\
           ["@nestjs/apollo", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:12.1.0"],\
@@ -7184,7 +7184,7 @@ const RAW_RUNTIME_STATE =
           ["fastify", "npm:4.27.0"],\
           ["graphql", "npm:16.8.1"],\
           ["jest", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:29.7.0"],\
-          ["mongoose", "npm:8.8.3"],\
+          ["mongoose", "npm:8.15.1"],\
           ["prettier", "npm:3.3.3"],\
           ["reflect-metadata", "npm:0.2.1"],\
           ["rxjs", "npm:7.8.1"],\
@@ -7546,10 +7546,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["@mongodb-js/saslprep", [\
-      ["npm:1.1.8", {\
-        "packageLocation": "./.yarn/cache/@mongodb-js-saslprep-npm-1.1.8-d183957f9d-ff3ed79437.zip/node_modules/@mongodb-js/saslprep/",\
+      ["npm:1.2.2", {\
+        "packageLocation": "./.yarn/cache/@mongodb-js-saslprep-npm-1.2.2-00217276b7-f62b2ffc07.zip/node_modules/@mongodb-js/saslprep/",\
         "packageDependencies": [\
-          ["@mongodb-js/saslprep", "npm:1.1.8"],\
+          ["@mongodb-js/saslprep", "npm:1.2.2"],\
           ["sparse-bitfield", "npm:3.0.3"]\
         ],\
         "linkType": "HARD"\
@@ -7567,7 +7567,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@nestjs-apollo-virtual-8160358981/0/cache/@nestjs-apollo-npm-12.1.0-82e738590e-839141c56e.zip/node_modules/@nestjs/apollo/",\
         "packageDependencies": [\
           ["@nestjs/apollo", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:12.1.0"],\
-          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.7.7"],\
+          ["@apollo/gateway", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:2.11.0"],\
           ["@apollo/server", "virtual:b3026741b6479f18191c815dee9f3fc20d3ba31e0e352894c61ae4832edfa7fc609df559f9daea4cda153ef037e100901755623786dde962ea2f2c34e562c309#npm:4.10.4"],\
           ["@apollo/server-plugin-landing-page-graphql-playground", "virtual:81603589816428c0c50a5505e8bbeb0711395b43ba0b6b467cf2ef6b45e3a045271564992ae4d67afde46ce6df4f20163f3eac55f7c3ddae447d24edaa1092fa#npm:4.0.0"],\
           ["@apollo/subgraph", null],\
@@ -7858,7 +7858,7 @@ const RAW_RUNTIME_STATE =
           ["@types/nestjs__common", null],\
           ["@types/nestjs__core", null],\
           ["@types/rxjs", null],\
-          ["mongoose", "npm:8.8.3"],\
+          ["mongoose", "npm:8.15.1"],\
           ["rxjs", "npm:7.8.1"]\
         ],\
         "packagePeers": [\
@@ -11802,11 +11802,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["axios", [\
-      ["npm:0.19.2", {\
-        "packageLocation": "./.yarn/cache/axios-npm-0.19.2-e4e8599895-364f5e698e.zip/node_modules/axios/",\
+      ["npm:1.9.0", {\
+        "packageLocation": "./.yarn/cache/axios-npm-1.9.0-007b36cf56-a2f90bba56.zip/node_modules/axios/",\
         "packageDependencies": [\
-          ["axios", "npm:0.19.2"],\
-          ["follow-redirects", "npm:1.5.10"]\
+          ["axios", "npm:1.9.0"],\
+          ["follow-redirects", "virtual:007b36cf567c5c0b0b89b54b5fd89ec08f3a2a884d74d5c6d450b18bf5cf65f53734a0c801662b1c2259c9afe08585fed46b3182771fef81b1aa08fab6405199#npm:1.15.9"],\
+          ["form-data", "npm:4.0.0"],\
+          ["proxy-from-env", "npm:1.1.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -12349,10 +12351,10 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["bson", [\
-      ["npm:6.8.0", {\
-        "packageLocation": "./.yarn/cache/bson-npm-6.8.0-62b8cfe2a5-e73784ae89.zip/node_modules/bson/",\
+      ["npm:6.10.4", {\
+        "packageLocation": "./.yarn/cache/bson-npm-6.10.4-954d1ea0b0-8a79a45221.zip/node_modules/bson/",\
         "packageDependencies": [\
-          ["bson", "npm:6.8.0"]\
+          ["bson", "npm:6.10.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -13704,13 +13706,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["npm:3.1.0", {\
-        "packageLocation": "./.yarn/cache/debug-npm-3.1.0-9f0accb99b-f5fd4b1390.zip/node_modules/debug/",\
-        "packageDependencies": [\
-          ["debug", "npm:3.1.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
       ["npm:3.2.7", {\
         "packageLocation": "./.yarn/cache/debug-npm-3.2.7-754e818c7a-d86fd7be2b.zip/node_modules/debug/",\
         "packageDependencies": [\
@@ -13787,20 +13782,6 @@ const RAW_RUNTIME_STATE =
           ["debug", "virtual:b56d98f8a764a1c9a4e68059969ebdee448a5a38dc1325214106e5ce27beb6ff7b4d21a66cd65cffe1d1ffc48412c2b4987c411c3b9e2ad9a371cba43c3a85f7#npm:4.4.0"],\
           ["@types/supports-color", null],\
           ["ms", "npm:2.1.3"],\
-          ["supports-color", null]\
-        ],\
-        "packagePeers": [\
-          "@types/supports-color",\
-          "supports-color"\
-        ],\
-        "linkType": "HARD"\
-      }],\
-      ["virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/debug-virtual-f2284580f9/0/cache/debug-npm-3.1.0-9f0accb99b-f5fd4b1390.zip/node_modules/debug/",\
-        "packageDependencies": [\
-          ["debug", "virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0"],\
-          ["@types/supports-color", null],\
-          ["ms", "npm:2.0.0"],\
           ["supports-color", null]\
         ],\
         "packagePeers": [\
@@ -16415,11 +16396,23 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["follow-redirects", [\
-      ["npm:1.5.10", {\
-        "packageLocation": "./.yarn/cache/follow-redirects-npm-1.5.10-bde6f43576-7cf3bb10db.zip/node_modules/follow-redirects/",\
+      ["npm:1.15.9", {\
+        "packageLocation": "./.yarn/cache/follow-redirects-npm-1.15.9-539785d34c-e3ab42d109.zip/node_modules/follow-redirects/",\
         "packageDependencies": [\
-          ["follow-redirects", "npm:1.5.10"],\
-          ["debug", "virtual:bde6f435769d1a96c3f371d2e8a88314847816fb841f758b3628da60329c36f988ca42f6984dc53bb31dd306522878e1e5d568caeca7af42e4f19b238d6261b3#npm:3.1.0"]\
+          ["follow-redirects", "npm:1.15.9"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:007b36cf567c5c0b0b89b54b5fd89ec08f3a2a884d74d5c6d450b18bf5cf65f53734a0c801662b1c2259c9afe08585fed46b3182771fef81b1aa08fab6405199#npm:1.15.9", {\
+        "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-a2918e5d77/0/cache/follow-redirects-npm-1.15.9-539785d34c-e3ab42d109.zip/node_modules/follow-redirects/",\
+        "packageDependencies": [\
+          ["follow-redirects", "virtual:007b36cf567c5c0b0b89b54b5fd89ec08f3a2a884d74d5c6d450b18bf5cf65f53734a0c801662b1c2259c9afe08585fed46b3182771fef81b1aa08fab6405199#npm:1.15.9"],\
+          ["@types/debug", null],\
+          ["debug", null]\
+        ],\
+        "packagePeers": [\
+          "@types/debug",\
+          "debug"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -20153,19 +20146,19 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mongodb", [\
-      ["npm:6.10.0", {\
-        "packageLocation": "./.yarn/cache/mongodb-npm-6.10.0-b914157c35-cab3b9171d.zip/node_modules/mongodb/",\
+      ["npm:6.16.0", {\
+        "packageLocation": "./.yarn/cache/mongodb-npm-6.16.0-b54f37ad32-eb47da9ef0.zip/node_modules/mongodb/",\
         "packageDependencies": [\
-          ["mongodb", "npm:6.10.0"]\
+          ["mongodb", "npm:6.16.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:4816f3fd7b5f1b42a484d177e536bf186c3f58bcb6e7e76ef9e598522dc7b6812a1776d33d61637d2e7c5d5983fbe3354be9ff48eb39f7218c06dd360293193e#npm:6.10.0", {\
-        "packageLocation": "./.yarn/__virtual__/mongodb-virtual-e5b674de7b/0/cache/mongodb-npm-6.10.0-b914157c35-cab3b9171d.zip/node_modules/mongodb/",\
+      ["virtual:b9a024ebf614fae5e69b8c5959d0b995b2cc3303a0de5a5465e40ed7791c9038b7ca7b46709736634afde9e675a9d575900729a18599557f0abefda4cbec9a00#npm:6.16.0", {\
+        "packageLocation": "./.yarn/__virtual__/mongodb-virtual-b84f1523a2/0/cache/mongodb-npm-6.16.0-b54f37ad32-eb47da9ef0.zip/node_modules/mongodb/",\
         "packageDependencies": [\
-          ["mongodb", "virtual:4816f3fd7b5f1b42a484d177e536bf186c3f58bcb6e7e76ef9e598522dc7b6812a1776d33d61637d2e7c5d5983fbe3354be9ff48eb39f7218c06dd360293193e#npm:6.10.0"],\
+          ["mongodb", "virtual:b9a024ebf614fae5e69b8c5959d0b995b2cc3303a0de5a5465e40ed7791c9038b7ca7b46709736634afde9e675a9d575900729a18599557f0abefda4cbec9a00#npm:6.16.0"],\
           ["@aws-sdk/credential-providers", null],\
-          ["@mongodb-js/saslprep", "npm:1.1.8"],\
+          ["@mongodb-js/saslprep", "npm:1.2.2"],\
           ["@mongodb-js/zstd", null],\
           ["@types/aws-sdk__credential-providers", null],\
           ["@types/gcp-metadata", null],\
@@ -20174,7 +20167,7 @@ const RAW_RUNTIME_STATE =
           ["@types/mongodb-js__zstd", null],\
           ["@types/snappy", null],\
           ["@types/socks", null],\
-          ["bson", "npm:6.8.0"],\
+          ["bson", "npm:6.10.4"],\
           ["gcp-metadata", null],\
           ["kerberos", null],\
           ["mongodb-client-encryption", null],\
@@ -20213,13 +20206,13 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["mongoose", [\
-      ["npm:8.8.3", {\
-        "packageLocation": "./.yarn/cache/mongoose-npm-8.8.3-4816f3fd7b-978d1160de.zip/node_modules/mongoose/",\
+      ["npm:8.15.1", {\
+        "packageLocation": "./.yarn/cache/mongoose-npm-8.15.1-b9a024ebf6-4ed60966f5.zip/node_modules/mongoose/",\
         "packageDependencies": [\
-          ["mongoose", "npm:8.8.3"],\
-          ["bson", "npm:6.8.0"],\
+          ["mongoose", "npm:8.15.1"],\
+          ["bson", "npm:6.10.4"],\
           ["kareem", "npm:2.6.3"],\
-          ["mongodb", "virtual:4816f3fd7b5f1b42a484d177e536bf186c3f58bcb6e7e76ef9e598522dc7b6812a1776d33d61637d2e7c5d5983fbe3354be9ff48eb39f7218c06dd360293193e#npm:6.10.0"],\
+          ["mongodb", "virtual:b9a024ebf614fae5e69b8c5959d0b995b2cc3303a0de5a5465e40ed7791c9038b7ca7b46709736634afde9e675a9d575900729a18599557f0abefda4cbec9a00#npm:6.16.0"],\
           ["mpath", "npm:0.9.0"],\
           ["mquery", "npm:5.0.0"],\
           ["ms", "npm:2.1.3"],\
@@ -22632,6 +22625,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["proxy-from-env", [\
+      ["npm:1.1.0", {\
+        "packageLocation": "./.yarn/cache/proxy-from-env-npm-1.1.0-c13d07f26b-f0bb4a87cf.zip/node_modules/proxy-from-env/",\
+        "packageDependencies": [\
+          ["proxy-from-env", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["pseudomap", [\
       ["npm:1.0.2", {\
         "packageLocation": "./.yarn/cache/pseudomap-npm-1.0.2-0d0e40fee0-856c0aae0f.zip/node_modules/pseudomap/",\
@@ -24052,7 +24054,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/size-plugin-store-npm-0.0.5-91e62df159-82e08b9eac.zip/node_modules/size-plugin-store/",\
         "packageDependencies": [\
           ["size-plugin-store", "npm:0.0.5"],\
-          ["axios", "npm:0.19.2"],\
+          ["axios", "npm:1.9.0"],\
           ["ci-env", "npm:1.17.0"]\
         ],\
         "linkType": "HARD"\
