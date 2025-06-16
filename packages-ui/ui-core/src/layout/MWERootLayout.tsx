@@ -3,7 +3,6 @@ import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
 import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';
 import { EmailClient } from '../connectivity-integration';
-import Script from 'next/script';
 
 export type RootLayoutProps = {
     appContext: AppContext;
