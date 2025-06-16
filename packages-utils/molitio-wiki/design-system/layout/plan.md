@@ -1,4 +1,6 @@
-# Plan: Layout Component
+# Plan: Layout Component (Deprecated)
+
+This plan is deprecated. Please refer to `ui-layout/plan.md` for the current layout component documentation.
 
 ## Overview
 The layout component defines the overall structure of the web application, including header, main content, and footer. It ensures consistency and responsiveness across all pages.

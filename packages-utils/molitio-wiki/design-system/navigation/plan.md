@@ -1,4 +1,6 @@
-# Plan: Navigation Component
+# Plan: Navigation Component (Deprecated)
+
+This plan is deprecated. Please refer to `ui-nav-bar/plan.md` for the current navigation component documentation.
 
 ## Overview
 A navigation component provides users with access to the main sections of the application. It must be accessible, responsive, and easy to extend as the site grows.

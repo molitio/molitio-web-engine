@@ -1,4 +1,6 @@
-# Plan: Interaction Components
+# Plan: Interaction Component (Deprecated)
+
+This plan is deprecated. Please refer to `ui-interactive/plan.md` for the current interaction component documentation.
 
 ## Overview
 Interaction components handle user input and feedback, such as buttons, forms, and modals. They are essential for building engaging and accessible web applications.
