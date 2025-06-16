@@ -14,6 +14,8 @@ Welcome to the Molitio open-source project! This guide outlines the core methodo
 6. [Documentation Standards](#documentation-standards)
 7. [Community Standards](#community-standards)
 8. [Branching Strategy and Naming Conventions](#branching-strategy-and-naming-conventions)
+9. [Test-Driven Development (TDD) and the Red-Green-Refactor Cycle](#test-driven-development-tdd-and-the-red-green-refactor-cycle)
+10. [Persisting and Evolving the Workflow](#persisting-and-evolving-the-workflow)
 
 ---
 
@@ -103,4 +105,32 @@ Add this to your workflow:
 3. Open a pull request to `main` when your work is ready for review.
 
 ---
-For questions, refer to this file or ask the AI assistant for guidance.
+
+## Test-Driven Development (TDD) and the Red-Green-Refactor Cycle
+
+We require all contributors to follow a strict TDD workflow, guided by the "Red-Green-Refactor" cycle:
+
+1. **Red:** Start every new feature or change by writing a small, failing test. Do not write implementation code before a failing test exists.
+2. **Green:** Write the simplest code necessary to make the test pass. Avoid adding extra logic or features not covered by a test.
+3. **Refactor:** Once the test passes, improve the code for readability, maintainability, and quality—while ensuring all tests remain green.
+4. **Repeat:** Continue this cycle for every feature and bugfix, working in small, testable increments.
+
+**AI Pair Programming:**
+- When using Copilot or other AI assistants, always begin with a test suggestion.
+- Use the AI to help you maintain the TDD rhythm and to proactively suggest refactoring opportunities.
+
+---
+
+## Persisting and Evolving the Workflow
+
+- All core workflows, including TDD and branching, must be documented in `CONTRIBUTING.md` and in the wiki under `packages-utils/molitio-wiki/design-system/`.
+- The wiki serves as the living, persisted documentation layer for all development processes, feature plans, and best practices.
+- Contributors and AI assistants must always consult the wiki and `CONTRIBUTING.md` as the source of truth for workflow and standards.
+- When workflows or standards evolve, update both the wiki and `CONTRIBUTING.md` to ensure continuity and clarity for all contributors and AI tools.
+
+---
+
+For AI-assisted development to be effective, always:
+- Keep the wiki up to date with the latest process and feature documentation.
+- Reference the wiki and `CONTRIBUTING.md` in all onboarding, code reviews, and planning sessions.
+- Treat these documents as the canonical, persisted configuration for the Molitio web development workflow.
