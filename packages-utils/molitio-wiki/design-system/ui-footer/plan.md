@@ -4,7 +4,7 @@
 The `Footer` component displays site-wide footer content, such as license or copyright information.
 
 ## API
-- `FooterProps`: `{ licenceText?: string }`
+- `FooterProps`: `{ licenseText?: string }`
 
 ## Usage
 - Use for displaying a footer at the bottom of the page.
