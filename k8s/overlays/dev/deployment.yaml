@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: resource-hub-ui
+    namespace: dev
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: resource-hub-ui
+    template:
+        metadata:
+            labels:
+                app: resource-hub-ui
+        spec:
+            containers:
+                - name: resource-hub-ui
+                  image: resourcehubui:dev
+                  ports:
+                      - containerPort: 3000
+                  envFrom:
+                      - configMapRef:
+                            name: resource-hub-ui-config
+                  resources:
+                      requests:
+                          cpu: '100m'
+                          memory: '256Mi'
+                      limits:
+                          cpu: '500m'
+                          memory: '512Mi'
