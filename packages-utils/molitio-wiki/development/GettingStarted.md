@@ -1,27 +1,66 @@
+# Getting Started with Molitio Web Engine
 
-[Molitio Web Engine](../../../README.md)
+Welcome to the Molitio Web Engine! This guide will help you set up your local development environment and understand the core concepts for contributing and deploying.
 
-[Wiki Home](../Home.md)
+## Prerequisites
+- **Linux/macOS recommended.** On Windows, use WSL 2 with Ubuntu.
+- **Minikube** (for local Kubernetes development)
+- **Yarn (v4+)** and **corepack**
 
-## Getting started
- 
- The project is best to run in a linux environment. On Windows it is reccomended to use WSL 2. Ubuntu distro need to be running and the repository should be cloned in the configured ubuntu users designated git folder. After coloning the repository a few steps need to be performed in order to run the poject.
+## Repository Setup
+1. **Clone the repository** into your development directory.
+2. Enable corepack (one-time):
+   ```sh
+   corepack enable
+   ```
+3. Set Yarn version (one-time):
+   ```sh
+   yarn set version 4.1.1
+   ```
+4. Bootstrap the monorepo:
+   ```sh
+   yarn bootstrap
+   ```
+5. Install dependencies:
+   ```sh
+   yarn ci:install
+   ```
+6. Build the project:
+   ```sh
+   yarn build
+   ```
+7. Start the development server (with HMR):
+   ```sh
+   yarn dev
+   ```
 
- :rocket: Install the Molitio Web Engine by running the following commands
-  * ``` corepack enable ``` to enable corepack.  1 time / dev environment, to be integrated in a development container in future versions
-  * ``` yarn set version 4.1.1 ``` to set the version of yarn /  1 time / dev environment, to be integrated in a development container in future versions
-  * ``` yarn bootstrap ``` that runs initialization of the yarn SDKs
-  * ``` yarn ci:install ```  to install all dependencies for development and build process
-  * ``` yarn build ``` to build the project
-  * ``` yarn dev ``` to run the development server with hot module replacement (HMR)
+## Local Kubernetes (Minikube)
+- To run services in a local Kubernetes cluster:
+  1. Start Minikube:
+     ```sh
+     minikube start
+     ```
+  2. Deploy services. See [`/deployment/minikube/README.md`](../deployment/minikube/README.md) for full instructions.
+  3. Use `kubectl` to manage and inspect pods/services.
 
-  * ``` yarn i ``` to install dependencies when dependancy tree changed. This will over write the yarn.lock file.
+## Useful Commands
+- Install dependencies after changes:
+  ```sh
+  yarn i
+  ```
+- Run tests in watch mode:
+  ```sh
+  yarn test:watch
+  ```
 
-  * ``` yarn test:watch ``` to run the tests in watch mode
+## Documentation References
+- **Development workflow:** See [`development-workflow.md`](development-workflow.md)
+- **Component plans:** See [`../design-system/`](../design-system/) for up-to-date component documentation.
+- **Deployment:** See [`../deployment/`](../deployment/) for cloud and local deployment guides (Minikube for local, Kubernetes for staging/production).
+- **Contribution guidelines:** See [`../../../CONTRIBUTING.md`](../../../CONTRIBUTING.md)
 
 ## Developer Certificate of Origin
-
-In a future it is planed to introduce commit sign off, to ensure that the code is not being contributed by a third party.
+Commit sign-off may be required in the future to ensure code provenance.
 
 [Developer Certificate of Origin](DeveloperCertificateOfOrigin.md)
 
