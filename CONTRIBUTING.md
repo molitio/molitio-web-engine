@@ -1,6 +1,6 @@
 # Contributing to Molitio Web Engine
 
-Welcome to the Molitio open-source project! This guide outlines the core methodologies, workflows, and standards that all contributors must follow to ensure a robust, scalable, and maintainable ecosystem.
+Welcome to the Molitio open-source project! This document is the work contract for all contributors and AI agents. It defines the core methodologies, workflows, and standards that must be followed to ensure a robust, scalable, and maintainable ecosystem.
 
 ## Table of Contents
 1. [Core Methodologies](#core-methodologies)
@@ -70,8 +70,9 @@ All UI components must be tested against these pillars:
 - Use established test patterns and tools.
 
 ## Documentation Standards
-- All features/components must have a `plan.md`.
+- All features/components must have a `plan.md` in the design system wiki.
 - Update documentation as features evolve.
+- **Component plan docs must only describe the component's functionality and usage. Architectural principles are defined here.**
 
 ## Community Standards
 - Be respectful and collaborative.
@@ -99,13 +100,6 @@ We use a structured git branching strategy to ensure clarity and traceability:
 - Keep branch names concise but descriptive.
 - Start all new work from the latest `main` branch.
 
-Add this to your workflow:
-1. Pull the latest `main` branch before starting new work.
-2. Create a branch using the conventions above.
-3. Open a pull request to `main` when your work is ready for review.
-
----
-
 ## Test-Driven Development (TDD) and the Red-Green-Refactor Cycle
 
 We require all contributors to follow a strict TDD workflow, guided by the "Red-Green-Refactor" cycle:
@@ -118,8 +112,6 @@ We require all contributors to follow a strict TDD workflow, guided by the "Red-
 **AI Pair Programming:**
 - When using Copilot or other AI assistants, always begin with a test suggestion.
 - Use the AI to help you maintain the TDD rhythm and to proactively suggest refactoring opportunities.
-
----
 
 ## Persisting and Evolving the Workflow
 

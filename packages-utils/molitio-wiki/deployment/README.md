@@ -1,10 +1,18 @@
 # Deployment Strategy
 
-This section outlines the deployment strategies for the Molitio Web Engine components, focusing on orchestrating a local development environment via Docker Compose, while concurrently conceptualizing a Kubernetes deployment strategy. The Kubernetes strategy will include two environments: **staging-sandbox** and **production**. While much of the infrastructure is not implemented yet, this documentation provides the conceptual framework for these environments.
+This section outlines the deployment strategies for the Molitio Web Engine, focusing on a Kubernetes-first approach for all environments. Docker Compose is deprecated and no longer supported.
+
+## Environments
+- **Local Development:** Use [Minikube](https://minikube.sigs.k8s.io/docs/) to run a local Kubernetes cluster for all containerized apps and services. See [Local Development with Minikube](./LocalDevelopmentMinikube.md) for setup instructions.
+- **Staging & Production:** Deploy to managed Kubernetes clusters (e.g., AWS EKS) using the same manifests and container images as local development.
 
 ## Documentation Structure
+- **[Local Development with Minikube](./LocalDevelopmentMinikube.md):** Step-by-step guide for running all services locally in Kubernetes.
+- **[Production Deployment on AWS EKS](./ProductionAWSEKS.md):** Overview and instructions for deploying to AWS Elastic Kubernetes Service.
 
-- **[Local Development with Docker Compose](./LocalDevelopmentDockerCompose.md)**: Detailed guide on setting up and running the services locally using Docker Compose.
-- **[Production Deployment on AWS EKS](./ProductionAWSEKS.md)**: Overview of the strategy for deploying to a Kubernetes cluster on AWS Elastic Kubernetes Service (EKS).
+## Key Points
+- All apps (including `apps-ui` Next.js apps) are containerized and deployed via Kubernetes manifests.
+- The same manifests and images are used for local, staging, and production environments, ensuring parity and reliability.
+- For onboarding and setup, see [GettingStarted.md](../development/GettingStarted.md).
 
-This documentation serves as a baseline and will be updated as our infrastructure evolves.
+This documentation is the canonical source for deployment strategy and will be updated as infrastructure evolves.
