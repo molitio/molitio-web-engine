@@ -41,8 +41,6 @@ WORKDIR $APP_DIR
 COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock process.yml ./
 COPY --from=builder $WORK_DIR/.yarn ./.yarn
 COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
-# Copy the full Yarn cache for PnP support
-#COPY --from=builder $WORK_DIR/.yarn/cache ./.yarn/cache
 
 # Set Yarn cache folder
 ENV YARN_CACHE_FOLDER=/.yarn/cache

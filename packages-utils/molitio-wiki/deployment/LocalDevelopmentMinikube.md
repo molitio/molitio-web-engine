@@ -20,11 +20,12 @@ Minikube provides a local Kubernetes cluster for running all Molitio services, i
 For Apple Silicon or Intel Mac, to limit resource usage and avoid Docker Desktop:
 
 ```sh
-minikube start --container-runtime=containerd --driver=qemu --disk-size=10g --memory=4096
+minikube start --container-runtime=containerd --driver=qemu --disk-size=12g --memory=4096 --namespace=dev
 ```
-- `--disk-size=10g` sets the VM disk to 10GB
+- `--disk-size=12g` sets the VM disk to 12GB
 - `--memory=4096` sets the VM RAM to 4GB
 - `--driver=qemu` avoids Docker Desktop and uses a lightweight VM
+- `--namespace=dev` sets the default namespace to dev
 
 ## Setup Steps
 
@@ -39,10 +40,14 @@ minikube start --container-runtime=containerd --driver=qemu --disk-size=10g --me
      # This command works with Minikube using the QEMU driver and containerd runtime.
      # The image will be available directly to your Minikube cluster.
 3. **Apply Kubernetes manifests:**
-   - Navigate to the deployment manifests (see `/k8s/`).
-   - Apply all manifests:
+
+   - Create the dev namespace if it doesn't exist:
      ```sh
-     kubectl apply -f k8s/resource-hub-ui-deployment.yaml
+     kubectl create namespace dev
+     ```
+   - Apply all manifests:
+     ```sh    
+     kubectl apply -k k8s/overlays/dev
      # or for all manifests in a directory
      kubectl apply -f deployment/k8s/
      ```

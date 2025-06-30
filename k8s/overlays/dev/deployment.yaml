@@ -28,3 +28,9 @@ spec:
                       limits:
                           cpu: '500m'
                           memory: '512Mi'
+                  volumeMounts:
+                      - name: yarn-cache
+                        mountPath: /.yarn/cache
+            volumes:
+                - name: yarn-cache
+                  emptyDir: {}
