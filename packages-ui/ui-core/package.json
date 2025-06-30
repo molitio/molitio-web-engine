@@ -29,6 +29,9 @@
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
         "create-artifacts": "mkdir -p ../../.artifacts/mwe-ui-core/ && npm pack --pack-destination ../../.artifacts/mwe-ui-core/"
     },
+    "dependencies": {
+        "autoprefixer": "10.4.19"
+    },
     "peerDependencies": {
         "formik": "^2.4.6",
         "jotai": "^2.8.3",
@@ -66,7 +69,6 @@
         "@types/react-dom": "18.3.0",
         "@typescript-eslint/eslint-plugin": "8.17.0",
         "@typescript-eslint/parser": "8.17.0",
-        "autoprefixer": "10.4.19",
         "eslint": "^8.56.0",
         "eslint-config-next": "15.0.4",
         "eslint-config-prettier": "9.1.0",

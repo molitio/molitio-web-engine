@@ -10,6 +10,10 @@ The purpose of our organization is to provide public pro bono utilities that can
 
 ## Molitio Web Engine - Open Soures Web Platform
 
+### Default UI: Sleeping Dragon
+
+The default UI for the Resource Hub is now [Sleeping Dragon UI](apps-ui/sleeping-dragon-ui/README.md). Please use this as the main entry point for all Resource Hub user interfaces.
+
 ### Getting started
 
 [Install @molitio/web-engine Development Environment](packages/molitio-wiki/development/GettingStarted.md)

@@ -1,0 +1,4 @@
+resources:
+    - deployment.yaml
+    - service-prod.yaml
+    - configmap-prod.yaml
