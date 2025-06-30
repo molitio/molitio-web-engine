@@ -14,18 +14,14 @@
         "prettier.prettierPath": ".yarn/sdks/prettier/index.js",
         "testing.alwaysRevealTestOnStateChange": true,
         "testing.automaticallyOpenPeekViewDuringAutoRun": true,
-        "testing.openTesting": "neverOpen",
         "testing.showAllMessages": true,
         "editor.inlineSuggest.enabled": true,
-        "jest.runMode": "on-save",
         "eslint.nodePath": ".yarn/sdks",
         "typescript.tsdk": ".yarn/sdks/typescript/lib",
         "typescript.enablePromptUseWorkspaceTsdk": true,
         "[dockerfile]": {
-            "editor.defaultFormatter": "ms-azuretools.vscode-docker"
+            "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
-        "codeium.indexingRetentionPeriod": 360,
-        "codeium.enableSearch": true,
         "[typescript]": {
             "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
