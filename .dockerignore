@@ -11,6 +11,9 @@
 
 !apps-api/**/*
 !packages-api/**/*
+!apps-ui/**/*
+!packages-ui/ui-core/**/*
+!packages-ui/mwe-tailwindcss-config/**/*
 
 .yarn/*
 !.yarn/cache
