@@ -1,7 +1,7 @@
 import React from 'react';
-import Card from '../../ui-card/components/Card';
-import type { CardData } from '../../ui-card/types';
-import PageSection from './PageSection';
+import Card from './Card';
+import type { CardData } from '../types';
+import PageSection from '../../ui-page/components/PageSection';
 export type CardContainerProps = {
     cards: CardData[];
 };

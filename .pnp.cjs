@@ -7216,6 +7216,7 @@ const RAW_RUNTIME_STATE =
           ["@molitio/mwe-sleeping-dragon-ui", "workspace:apps-ui/sleeping-dragon-ui"],\
           ["@molitio/mwe-ui-core", "virtual:6227a6ce7d718a11bde8a08401308f872e0159ca208e8ee75b6156c41f45a32b7560fe43e428ecc3b7818260bb801851cd145f215847b09b21a6a9a36a6f7d91#workspace:packages-ui/ui-core"],\
           ["@next/eslint-plugin-next", "npm:15.0.4"],\
+          ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/node", "npm:20.12.7"],\
           ["@types/react", "npm:18.3.0"],\
           ["@types/react-dom", "npm:18.3.0"],\
