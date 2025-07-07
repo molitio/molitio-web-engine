@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
 import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';
-import { EmailClient } from '../connectivity-integration';
 
 export type RootLayoutProps = {
     appContext: AppContext;
