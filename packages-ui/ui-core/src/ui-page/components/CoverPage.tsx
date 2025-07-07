@@ -4,7 +4,7 @@ import React from 'react';
 import { useAtom } from 'jotai';
 import { CardData } from '../../ui-card';
 import { contentRootAtomRW } from '../../context';
-import CardContainer from './CardContainer';
+import CardContainer from '../../ui-card/components/CardContainer';
 import CoverHeroContainer from './CoverHeroContainer';
 import InfoPanelContainer from './InfoPanelContainer';
 import CoverDetailsContainer from './CoverDetailsContainer';

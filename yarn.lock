@@ -3822,7 +3822,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:8.17.0"
     "@typescript-eslint/parser": "npm:8.17.0"
     "@vercel/build-utils": "npm:7.2.2"
-    autoprefixer: "npm:10.4.15"
+    autoprefixer: "npm:10.4.19"
     eslint: "npm:9.16.0"
     eslint-config-next: "npm:15.0.4"
     eslint-config-prettier: "npm:9.1.0"
@@ -3883,7 +3883,7 @@ __metadata:
     fastify: "npm:4.27.0"
     graphql: "npm:16.8.1"
     jest: "npm:^29.5.0"
-    mongoose: "npm:8.9.5"
+    mongoose: "npm:8.15.1"
     prettier: "npm:^3.0.0"
     reflect-metadata: "npm:0.2.1"
     rxjs: "npm:^7.8.1"
@@ -3908,13 +3908,14 @@ __metadata:
   dependencies:
     "@molitio/mwe-ui-core": "workspace:0.2.0"
     "@next/eslint-plugin-next": "npm:15.0.4"
+    "@types/grecaptcha": "npm:3.0.9"
     "@types/node": "npm:20.12.7"
     "@types/react": "npm:18.3.0"
     "@types/react-dom": "npm:18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:8.17.0"
     "@typescript-eslint/parser": "npm:8.17.0"
     "@vercel/build-utils": "npm:7.2.2"
-    autoprefixer: "npm:10.4.15"
+    autoprefixer: "npm:10.4.19"
     eslint: "npm:9.16.0"
     eslint-config-next: "npm:15.0.4"
     eslint-config-prettier: "npm:9.1.0"
@@ -7303,24 +7304,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.15":
-  version: 10.4.15
-  resolution: "autoprefixer@npm:10.4.15"
-  dependencies:
-    browserslist: "npm:^4.21.10"
-    caniuse-lite: "npm:^1.0.30001520"
-    fraction.js: "npm:^4.2.0"
-    normalize-range: "npm:^0.1.2"
-    picocolors: "npm:^1.0.0"
-    postcss-value-parser: "npm:^4.2.0"
-  peerDependencies:
-    postcss: ^8.1.0
-  bin:
-    autoprefixer: bin/autoprefixer
-  checksum: 10/99ab82461d33bb79318dbf26c76d207eab8bf98680d8981aeddf7af4208fd57579b4c68dcf576b1d1baba8bd5410665b9406eac468f8119bd42e11b9ff0074b7
-  languageName: node
-  linkType: hard
-
 "autoprefixer@npm:10.4.19":
   version: 10.4.19
   resolution: "autoprefixer@npm:10.4.19"
@@ -7365,12 +7348,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.19.0":
-  version: 0.19.2
-  resolution: "axios@npm:0.19.2"
+"axios@npm:^1.7.0":
+  version: 1.9.0
+  resolution: "axios@npm:1.9.0"
   dependencies:
-    follow-redirects: "npm:1.5.10"
-  checksum: 10/364f5e698ec47c66fbba9db98ac4af4ed91aab802ab095a7905781ee5bcc7fafb9cf05be8d05167f615bda3af3eb6b403556ab23fdfda3adaabd61a3295076be
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10/a2f90bba56820883879f32a237e2b9ff25c250365dcafd41cec41b3406a3df334a148f90010182dfdadb4b41dc59f6f0b3e8898ff41b666d1157b5f3f4523497
   languageName: node
   linkType: hard
 
@@ -7729,7 +7714,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^6.10.1":
+"bson@npm:^6.10.3":
   version: 6.10.4
   resolution: "bson@npm:6.10.4"
   checksum: 10/8a79a452219a13898358a5abc93e32bc3805236334f962661da121ce15bd5cade27718ba3310ee2a143ff508489b08467eed172ecb2a658cb8d2e94fdb76b215
@@ -7911,7 +7896,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001520, caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001646":
+"caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001579, caniuse-lite@npm:^1.0.30001599, caniuse-lite@npm:^1.0.30001646":
   version: 1.0.30001651
   resolution: "caniuse-lite@npm:1.0.30001651"
   checksum: 10/fe4857b2a91a9cb77993eec9622de68bea0df17c31cb9584ca5c562f64bb3b8fda316d898aa3b1ee3ee9f7d80f6bf13c42acb09d9a56a1a6c64afaf7381472fa
@@ -8915,15 +8900,6 @@ __metadata:
     supports-color:
       optional: true
   checksum: 10/0073c3bcbd9cb7d71dd5f6b55be8701af42df3e56e911186dfa46fac3a5b9eb7ce7f377dd1d3be6db8977221f8eb333d945216f645cf56f6b688cd484837d255
-  languageName: node
-  linkType: hard
-
-"debug@npm:=3.1.0":
-  version: 3.1.0
-  resolution: "debug@npm:3.1.0"
-  dependencies:
-    ms: "npm:2.0.0"
-  checksum: 10/f5fd4b1390dd3b03a78aa30133a4b4db62acc3e6cd86af49f114bf7f7bd57c41a5c5c2eced2ad2c8190d70c60309f2dd5782feeaa0704dbaa5697890e3c5ad07
   languageName: node
   linkType: hard
 
@@ -10990,12 +10966,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:1.5.10":
-  version: 1.5.10
-  resolution: "follow-redirects@npm:1.5.10"
-  dependencies:
-    debug: "npm:=3.1.0"
-  checksum: 10/7cf3bb10dbffabce317d1de3e3f85ea8c47fea388c4bc3da1052fd6bbb7b036772f48eed2f154d63ac39c49ab5fe4df0dda94b8e0c54eda8ca2edb001b2550b7
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.9
+  resolution: "follow-redirects@npm:1.15.9"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10/e3ab42d1097e90d28b913903841e6779eb969b62a64706a3eb983e894a5db000fbd89296f45f08885a0e54cd558ef62e81be1165da9be25a6c44920da10f424c
   languageName: node
   linkType: hard
 
@@ -11077,7 +11054,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fraction.js@npm:^4.2.0, fraction.js@npm:^4.3.7":
+"fraction.js@npm:^4.3.7":
   version: 4.3.7
   resolution: "fraction.js@npm:4.3.7"
   checksum: 10/bb5ebcdeeffcdc37b68ead3bdfc244e68de188e0c64e9702197333c72963b95cc798883ad16adc21588088b942bca5b6a6ff4aeb1362d19f6f3b629035dc15f5
@@ -14236,12 +14213,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongodb@npm:~6.12.0":
-  version: 6.12.0
-  resolution: "mongodb@npm:6.12.0"
+"mongodb@npm:~6.16.0":
+  version: 6.16.0
+  resolution: "mongodb@npm:6.16.0"
   dependencies:
     "@mongodb-js/saslprep": "npm:^1.1.9"
-    bson: "npm:^6.10.1"
+    bson: "npm:^6.10.3"
     mongodb-connection-string-url: "npm:^3.0.0"
   peerDependencies:
     "@aws-sdk/credential-providers": ^3.188.0
@@ -14266,22 +14243,22 @@ __metadata:
       optional: true
     socks:
       optional: true
-  checksum: 10/482c00f12ddc87a48a6e0d1e0f0d7cda7b4e3e95b016dea06e052cfe0cdbca0064ff78646440f6312f8030eb193d114dc4470ebe89ba1864638e322a003d65e3
+  checksum: 10/eb47da9ef00331aca1804426424a8630f9e42c48bf6021786ebb1766b1d53bda62c64498b41627b5fe5c01260ec5ca2e8cbc2468e394df5d5b874cee646e9c06
   languageName: node
   linkType: hard
 
-"mongoose@npm:8.9.5":
-  version: 8.9.5
-  resolution: "mongoose@npm:8.9.5"
+"mongoose@npm:8.15.1":
+  version: 8.15.1
+  resolution: "mongoose@npm:8.15.1"
   dependencies:
-    bson: "npm:^6.10.1"
+    bson: "npm:^6.10.3"
     kareem: "npm:2.6.3"
-    mongodb: "npm:~6.12.0"
+    mongodb: "npm:~6.16.0"
     mpath: "npm:0.9.0"
     mquery: "npm:5.0.0"
     ms: "npm:2.1.3"
     sift: "npm:17.1.3"
-  checksum: 10/74f38844ef18bc6d8d68c702871cb11eafc349a356786a3277dd9160ba020dfef791ef760fe3f6228f037aed584a9ac1ad694153c8595c7e877204aea5cc537e
+  checksum: 10/4ed60966f545fa3df391cd22593a350614318f2b552fc66a3fba02fb42325120a6f38d0e9026856b6ed2e69ad6089e440cb09119934a2c891803734afc58bf03
   languageName: node
   linkType: hard
 
@@ -16095,6 +16072,13 @@ __metadata:
     forwarded: "npm:0.2.0"
     ipaddr.js: "npm:1.9.1"
   checksum: 10/f24a0c80af0e75d31e3451398670d73406ec642914da11a2965b80b1898ca6f66a0e3e091a11a4327079b2b268795f6fa06691923fef91887215c3d0e8ea3f68
+  languageName: node
+  linkType: hard
+
+"proxy-from-env@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "proxy-from-env@npm:1.1.0"
+  checksum: 10/f0bb4a87cfd18f77bc2fba23ae49c3b378fb35143af16cc478171c623eebe181678f09439707ad80081d340d1593cd54a33a0113f3ccb3f4bc9451488780ee23
   languageName: node
   linkType: hard
 

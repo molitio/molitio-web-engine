@@ -3,12 +3,14 @@
     "version": "0.2.0",
     "scripts": {
         "dev": "next dev",
+        "start:dev": "next dev -H 0.0.0.0",
         "build": "next build",
-        "start": "next start",
+        "start": "node apps-ui/sleeping-dragon-ui/.next/standalone/apps-ui/sleeping-dragon-ui/server.js",
         "lint": "next lint"
     },
     "dependencies": {
         "@molitio/mwe-ui-core": "0.2.0",
+        "autoprefixer": "10.4.19",
         "next": "15.3.1",
         "react": "19.0.0",
         "react-dom": "19.0.0",
@@ -17,13 +19,13 @@
     "devDependencies": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",
         "@next/eslint-plugin-next": "15.0.4",
+        "@types/grecaptcha": "3.0.9",
         "@types/node": "20.12.7",
         "@types/react": "18.3.0",
         "@types/react-dom": "18.3.0",
         "@typescript-eslint/eslint-plugin": "8.17.0",
         "@typescript-eslint/parser": "8.17.0",
         "@vercel/build-utils": "7.2.2",
-        "autoprefixer": "10.4.15",
         "eslint": "9.16.0",
         "eslint-config-next": "15.0.4",
         "eslint-config-prettier": "9.1.0",

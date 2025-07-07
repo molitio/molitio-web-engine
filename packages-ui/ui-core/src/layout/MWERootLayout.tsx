@@ -17,7 +17,7 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
     return (
         <html
             lang="en"
-            data-theme="dashing-bumblebee"
+            data-theme="sleeping-dragon"
             className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-primary overflow-x-auto overflow-y-auto list-none"
         >
             <body>
@@ -31,7 +31,6 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
                         </NavRootProvider>
                     </main>
                 </Suspense>
-                <EmailClient />
             </body>
         </html>
     );

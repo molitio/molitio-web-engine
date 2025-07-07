@@ -10,7 +10,7 @@ const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
     return (
         <html lang="en">
             <body>
-                <h1 className="text-blue-600"> SleepingDragon</h1>
+                <h1 className="text-blue-600">Sleeping Dragon</h1>
                 {children}
             </body>
         </html>
