@@ -1,5 +1,7 @@
 import React from 'react';
 import './globals.css';
+import { MWERootLayout } from '@molitio/mwe-ui-core';
+import { Context } from '@/context/AppContext';
 
 export const metadata = {
     title: 'Sleeping Dragon',
@@ -7,14 +9,7 @@ export const metadata = {
 
 const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
     const { children } = props;
-    return (
-        <html lang="en">
-            <body>
-                <h1 className="text-blue-600">Sleeping Dragon</h1>
-                {children}
-            </body>
-        </html>
-    );
+    return <MWERootLayout appContext={{ ...Context }}>{children}</MWERootLayout>;
 };
 
 export default RootLayout;
