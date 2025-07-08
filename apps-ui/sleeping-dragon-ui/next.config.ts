@@ -3,7 +3,7 @@ import { NextConfig } from 'next';
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
-    output: 'export',
+    /*     output: 'export', */
     transpilePackages: ['@molitio/mwe-ui-core'],
     images: {
         unoptimized: true,
