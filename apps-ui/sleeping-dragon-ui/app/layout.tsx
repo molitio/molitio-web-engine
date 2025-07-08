@@ -9,7 +9,7 @@ export const metadata = {
 
 const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
     const { children } = props;
-    return <MWERootLayout appContext={{ ...Context }}>{children}</MWERootLayout>;
+    return <MWERootLayout appContext={{ ...Context }}>{children}hi1</MWERootLayout>;
 };
 
 export default RootLayout;

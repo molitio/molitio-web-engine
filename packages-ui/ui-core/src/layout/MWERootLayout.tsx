@@ -25,6 +25,7 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
                         <NavBar />
                     </NavRootProvider>
                     <main className="">
+                        hi2
                         <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
                     </main>
                 </Suspense>
