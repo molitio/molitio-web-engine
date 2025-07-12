@@ -1,29 +1,54 @@
 import { AppContext } from './app-context';
 
 export const DefaultApplicationContextRoot: AppContext = {
-    appName: 'MWE',
+    appName: 'Default App',
     navRoot: {
         home: {
             label: 'Home',
             path: '/',
         },
+        about: {
+            label: 'About',
+            path: '/about',
+        },
     },
     contentRoot: {
-        landing: {
+        section1: {
             branchContent: {
-                contentTitle: 'Molitio Resource Hub',
+                contentTitle: 'Page Section 1',
                 textContent: {
-                    subtitle: 'The first open-source engine for public resource distribution.',
-                    description:
-                        'Molitio is dedicated to building digital tools that serve humanity. Our Resource Hub connects needs and contributions, helping communities share and optimize resources for a better world. Join us in shaping a more sustainable, connected future.',
+                    subtitle: 'Branch Context 1',
+                    description: 'This is a default description for Section 1. Replace with your content.',
                 },
             },
             leafs: {
-                about: {
-                    contentTitle: 'About Our Mission',
+                leaf1: {
+                    contentTitle: 'Leaf 1',
                     textContent: {
-                        description:
-                            'Molitio is an open-source initiative focused on building digital solutions for resource distribution, sustainability, and community empowerment. We believe in transparency, collaboration, and creating tools that benefit everyone.',
+                        description: 'This is a default description for Leaf 1.',
+                    },
+                },
+                leaf2: {
+                    contentTitle: 'Leaf 2',
+                    textContent: {
+                        description: 'This is a default description for Leaf 2.',
+                    },
+                },
+            },
+        },
+        section2: {
+            branchContent: {
+                contentTitle: 'Page Section 2',
+                textContent: {
+                    subtitle: 'Branch Context 2',
+                    description: 'This is a default description for Section 2. Replace with your content.',
+                },
+            },
+            leafs: {
+                leaf3: {
+                    contentTitle: 'Leaf 3',
+                    textContent: {
+                        description: 'This is a default description for Leaf 3.',
                     },
                 },
             },
