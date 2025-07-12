@@ -11,8 +11,8 @@ export type ContextNode = {
   resourceId: string;
   type: ContextNodeType;
   navigation?: NavigationSegment;
-  content?: ContentSegment;
-  resource?: ResourceSegment;
+  textContent?: TextContentSegment;
+  mediaResource?: MediaResourceSegment;
   children?: ContextNode[];
 }
 
@@ -26,15 +26,11 @@ export interface AppContext {
 - All context-related data is accessed via the `nodeTree` property on `AppContext`.
 - Each branch of the tree is a navigational entity and can contain content and resource nodes as children.
 - The structure is recursive, supporting deep nesting and flexible application modeling.
+- An xSegment is a section within a ContextNode that uses strongly typed keys to organize data in a hierarchical key-value structure. This approach ensures type safety and provides a flexible way to store and access web application data within the context tree.
+- content in a context node refers to text 
 
 ---
 
-## Implementation Steps
 
-1. Implement the `ContextNode` type and update `AppContext`.
-2. Refactor the following files to use the new structure:
-   - `AppContext.ts`
-   - `NavRoot.ts`, `ContentRoot.ts`, `ResourceGalleryRoot.ts`
-   - `DefaultApplicationContextRoot.ts`
-3. Update all context consumers and utilities.
-4. Test thoroughly to ensure data integrity and correct application behavior.
+## Navigation Segment
+- **Purpose**: Context node tree branches and node are also represent navigation paths in the application, if the given node has a `navigation` property, it indicates that this node is part of the application's navigation structure.  
