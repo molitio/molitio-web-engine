@@ -1,1 +1,1 @@
-export { default as EmailClient } from './EmailClient';
+export { default as CaptchaClient } from './CaptchaClient';

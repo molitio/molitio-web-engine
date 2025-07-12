@@ -2,7 +2,6 @@ import React, { Suspense } from 'react';
 import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
 import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';
-import { EmailClient } from '../connectivity-integration';
 
 export type RootLayoutProps = {
     appContext: AppContext;
@@ -26,9 +25,8 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
                         <NavBar />
                     </NavRootProvider>
                     <main className="">
-                        <NavRootProvider navRoot={appContext.navRoot}>
-                            <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
-                        </NavRootProvider>
+                        hi3
+                        <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
                     </main>
                 </Suspense>
             </body>

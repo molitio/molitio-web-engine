@@ -1,10 +1,10 @@
-import { NavRoot, ContentRoot, ResourceGalleryRoot } from '../..';
+import { ContextNode } from './ContextNode';
 
 export type AppContext = {
     appName: string;
+    appId: string;
+    appVersion?: string;
     appLogoUrl?: string;
     appLogoAlt?: string;
-    navRoot?: NavRoot;
-    contentRoot?: ContentRoot;
-    resourceGalleryRoot?: ResourceGalleryRoot;
+    nodeTree?: Record<string, ContextNode>;
 };
