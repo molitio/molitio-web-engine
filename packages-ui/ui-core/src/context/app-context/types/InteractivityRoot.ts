@@ -1,4 +1,4 @@
-export type InteractivityRoot = {
+/* export type InteractivityRoot = {
     [key: string]: InteractivityBranch;
 };
 
@@ -9,3 +9,4 @@ export type InteractivityBranch = {
 export type InteractivityLeaf = {
     expanded?: boolean;
 };
+ */

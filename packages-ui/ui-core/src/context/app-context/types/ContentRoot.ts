@@ -1,4 +1,4 @@
-import { CardData, ContactCardData, ImageCardData } from '../../../ui-card';
+/* import { CardData, ContactCardData, ImageCardData } from '../../../ui-card';
 
 export type ContentRoot = {
     [key: string]: ContentBranch;
@@ -6,7 +6,7 @@ export type ContentRoot = {
 
 export type ContentBranch = {
     branchContent?: ContentLeaf;
-    leafs?: Record<string, ContentLeaf /* | CardLeaf*/>;
+    leafs?: Record<string, ContentLeaf>;
 };
 
 export type ContentImage = {
@@ -40,3 +40,4 @@ export type AssetUrl = {
     src?: string;
     alt?: string;
 };
+ */

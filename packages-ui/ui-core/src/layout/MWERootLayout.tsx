@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
+import { AppContext } from '../context';
 import { NavBar } from '../ui-nav-menu';
 import { Loading } from '../ui-common';
 
@@ -21,12 +21,12 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
         >
             <body>
                 <Suspense fallback={<Loading />}>
-                    <NavRootProvider navRoot={appContext.navRoot}>
+                    {/*                  <NavRootProvider navRoot={appContext.navRoot}>
                         <NavBar />
-                    </NavRootProvider>
+                    </NavRootProvider> */}
                     <main className="">
-                        hi3
-                        <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
+                        {/*                         hi3
+                        <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider> */}
                     </main>
                 </Suspense>
             </body>

@@ -1,4 +1,4 @@
-'use client';
+/* 'use client';
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
 import { ContentRoot } from '../types';
@@ -17,3 +17,4 @@ const ContentRootProvider: React.FC<ContentRootProviderProps> = (props) => {
 };
 
 export default ContentRootProvider;
+ */
