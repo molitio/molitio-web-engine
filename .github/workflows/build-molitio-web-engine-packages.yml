@@ -1,34 +1,43 @@
-# name: Build
+name: Build
 
-# on:
-#   workflow_call:
+on:
+  workflow_call:
 
-# env:
-#   NODE_ENV: production
-
-# jobs:
-#   install-dependencies:
-#     name: Molitio Web Engine
-#     runs-on: ubuntu-latest
-#     steps:
-#     - uses: actions/checkout@v4
-#     - name: Enable Corepack
-#       run: corepack enable
-#     - name: Install Dependencies
-#       uses: actions/setup-node@v4
-#       with:
-#         node-version: 20
-#         cache: yarn
-#     - run: |
-#         yarn install --immutable
-#         yarn build
-#     - name: Upload UI Core 
-#       uses: actions/upload-artifact@v3
-#       with: 
-#         name: mwe-ui-core
-#         path: packages/mwe-ui-core/dist
-#     - name: Upload John-Glenn
-#       uses: actions/upload-artifact@v3
-#       with: 
-#         name: john-glenn
-#         path: packages-ui/john-glenn-ui/.next
+jobs:
+  build-project:
+    name: Build Molitio Web Engine Monorepo
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: corepack enable
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+          cache-dependency-path: |
+            yarn.lock
+            **/yarn.lock
+      - name: Install Dependencies (Yarn Monorepo)
+        run: yarn install --immutable --check-cache
+      - name: Build All Packages
+        run: |
+          yarn workspaces foreach -v --topological-dev --no-private --parallel run build || yarn build
+      - name: Upload UI Core
+        uses: actions/upload-artifact@v3
+        with:
+          name: mwe-ui-core
+          path: packages-ui/ui-core/dist
+      - name: Upload John-Glenn
+        uses: actions/upload-artifact@v3
+        with:
+          name: john-glenn
+          path: apps-ui/john-glenn-ui/.next
+      - name: Upload Sleeping-Dragon
+        uses: actions/upload-artifact@v3
+        with:
+          name: sleeping-dragon
+          path: apps-ui/sleeping-dragon-ui/.next
