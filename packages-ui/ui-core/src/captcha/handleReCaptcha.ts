@@ -16,6 +16,7 @@ const handleRecaptcha = async (action: string, key: string) => {
 
         return responseData?.score > 0.6;
     } catch (error) {
+        console.error('Error in handleRecaptcha:', error);
         return false;
     }
 };
