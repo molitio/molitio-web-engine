@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+/* import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
 import { initContentRootStore } from '../ContentRootStore';
 import { ContentRoot } from '../types';
@@ -16,3 +16,4 @@ const InteractivityRootProvider: React.FC<InteractivityRootProviderProps> = (pro
 };
 
 export default InteractivityRootProvider;
+ */

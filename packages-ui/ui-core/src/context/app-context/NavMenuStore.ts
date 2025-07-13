@@ -1,4 +1,4 @@
-import { atom, createStore } from 'jotai';
+/* import { atom, createStore } from 'jotai';
 import { NavRoot } from './types';
 
 export const navMenuAtom = atom<NavRoot>({});
@@ -17,3 +17,4 @@ export function initNavMenuStore(navRoot: NavRoot) {
     //TODO: extend validation to navRoot type
     return navMenuStore;
 }
+ */

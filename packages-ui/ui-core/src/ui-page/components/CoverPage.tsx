@@ -3,7 +3,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 import { CardData } from '../../ui-card';
-import { contentRootAtomRW } from '../../context';
+/* import { contentRootAtomRW } from '../../context'; */
 import CardContainer from '../../ui-card/components/CardContainer';
 import CoverHeroContainer from './CoverHeroContainer';
 import InfoPanelContainer from './InfoPanelContainer';
@@ -26,8 +26,10 @@ const PAGE_SECTION = 'home';
  */
 
 const CoverPage: React.FC = () => {
-    const [contentRoot] = useAtom(contentRootAtomRW);
-    const contentRootLeafs = contentRoot[PAGE_SECTION]?.leafs ?? {};
+    /*   const [contentRoot] = useAtom(contentRootAtomRW); 
+    TODO: fix with context refactor MWE-205
+    */
+    const contentRootLeafs = /* contentRoot[PAGE_SECTION]?.leafs ?? */ {} as Record<string, any>;
     const heroTheTwoData: CardData[] = contentRootLeafs['heroTheTwo']?.textContentCollection ?? [];
     const heroTheOneData: CardData[] = contentRootLeafs['heroTheOne']?.textContentCollection ?? [];
     const cardData: CardData[] = contentRootLeafs['coverCards']?.textContentCollection ?? [];

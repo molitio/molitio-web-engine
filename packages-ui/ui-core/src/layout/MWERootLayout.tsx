@@ -1,11 +1,25 @@
+'use client';
 import React, { Suspense } from 'react';
-import { AppContext, ContentRootProvider, NavRootProvider } from '../context';
-import { NavBar } from '../ui-nav-menu';
+
+import { AppContextRootProvider, AppContextRootAtoms } from '../context/app-context/components/AppContextRootProvider';
+import { useContext } from 'react';
+import { useAtomValue } from 'jotai';
 import { Loading } from '../ui-common';
-import { EmailClient } from '../connectivity-integration';
+import { AppContext } from '../context';
 
 export type RootLayoutProps = {
     appContext: AppContext;
+};
+
+// Example component to display nav segment keys
+const NavSegmentKeys: React.FC = () => {
+    const { navSegmentsAtom } = useContext(AppContextRootAtoms);
+    const navSegments = useAtomValue(navSegmentsAtom);
+    return (
+        <div style={{ padding: 8, background: '#f0f0f0', marginBottom: 8 }}>
+            <strong>Nav Segments:</strong> {Object.keys(navSegments).join(', ')}
+        </div>
+    );
 };
 
 const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (props) => {
@@ -22,14 +36,10 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
         >
             <body>
                 <Suspense fallback={<Loading />}>
-                    <NavRootProvider navRoot={appContext.navRoot}>
-                        <NavBar />
-                    </NavRootProvider>
-                    <main className="">
-                        <NavRootProvider navRoot={appContext.navRoot}>
-                            <ContentRootProvider contentRoot={appContext.contentRoot}>{children}</ContentRootProvider>
-                        </NavRootProvider>
-                    </main>
+                    <AppContextRootProvider appContext={appContext}>
+                        <NavSegmentKeys />
+                        <main className="">{children}</main>
+                    </AppContextRootProvider>
                 </Suspense>
             </body>
         </html>

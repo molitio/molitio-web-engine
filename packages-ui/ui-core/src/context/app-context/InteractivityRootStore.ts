@@ -1,4 +1,4 @@
-import { atom, createStore } from 'jotai';
+/* import { atom, createStore } from 'jotai';
 import { InteractivityRoot } from './types';
 
 export const interactivityRootAtom = atom<InteractivityRoot>({});
@@ -17,3 +17,4 @@ export function initInteractivityRootStore(interactivityRoot: InteractivityRoot)
     //TODO: extend validation to navRoot type
     return navMenuStore;
 }
+ */
