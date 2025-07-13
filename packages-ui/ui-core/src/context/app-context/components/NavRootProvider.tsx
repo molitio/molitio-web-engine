@@ -1,15 +1,14 @@
 /* 'use client';
 import React, { useMemo } from 'react';
 import { Provider } from 'jotai';
-import { NavRoot } from '../types';
-import { initNavMenuStore } from '../NavMenuStore';
+import { ContextNode } from '../types/ContextNode';
 
 export type NavRootProviderProps = React.PropsWithChildren & {
-    navRoot?: NavRoot;
+    nodeTree?: Record<string, ContextNode>;
 };
 
 const NavRootProvider: React.FC<NavRootProviderProps> = (props) => {
-    const { children, navRoot } = props;
+    const { children, nodeTree: navRoot } = props;
 
     const store = useMemo(() => initNavMenuStore(navRoot ?? {}), [navRoot]);
 

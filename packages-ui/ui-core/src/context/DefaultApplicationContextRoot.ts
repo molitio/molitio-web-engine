@@ -20,6 +20,18 @@ export const DefaultApplicationContextRoot: AppContext = {
                         label: 'About',
                     },
                 },
+                welcome: {
+                    resourceId: 'welcome',
+                    type: 'text',
+                    textContent: {
+                        main: {
+                            contentTitle: 'Welcome to Molitio web engine default application.',
+                            textContent: {
+                                description: 'This is a demonstration of the text content node concept.',
+                            },
+                        },
+                    },
+                },
             },
         },
     },
