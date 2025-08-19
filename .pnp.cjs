@@ -89,6 +89,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.5.10"],\
           ["@typescript-eslint/eslint-plugin", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
+          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
           ["babel-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.7.0"],\
           ["core-js", "npm:3.30.2"],\
           ["eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:9.16.0"],\
@@ -105,6 +106,7 @@ const RAW_RUNTIME_STATE =
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
           ["protobufjs", "npm:7.4.0"],\
           ["rimraf", "npm:5.0.5"],\
+          ["tailwindcss", "npm:3.4.17"],\
           ["ts-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.1.1"],\
           ["ts-morph", "npm:22.0.0"],\
           ["ts-node", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.9.2"],\
@@ -12268,6 +12270,7 @@ const RAW_RUNTIME_STATE =
           ["@types/ws", "npm:8.5.10"],\
           ["@typescript-eslint/eslint-plugin", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
+          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
           ["babel-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.7.0"],\
           ["core-js", "npm:3.30.2"],\
           ["eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:9.16.0"],\
@@ -12284,6 +12287,7 @@ const RAW_RUNTIME_STATE =
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.3.0"],\
           ["protobufjs", "npm:7.4.0"],\
           ["rimraf", "npm:5.0.5"],\
+          ["tailwindcss", "npm:3.4.17"],\
           ["ts-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:29.1.1"],\
           ["ts-morph", "npm:22.0.0"],\
           ["ts-node", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.9.2"],\
@@ -17592,6 +17596,25 @@ const RAW_RUNTIME_STATE =
           ["autoprefixer", "npm:10.4.21"]\
         ],\
         "linkType": "SOFT"\
+      }],\
+      ["virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21", {\
+        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-6ffbdd2bbe/0/cache/autoprefixer-npm-10.4.21-0dd6f0f60c-5d7aeee78e.zip/node_modules/autoprefixer/",\
+        "packageDependencies": [\
+          ["@types/postcss", null],\
+          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
+          ["browserslist", "npm:4.25.3"],\
+          ["caniuse-lite", "npm:1.0.30001735"],\
+          ["fraction.js", "npm:4.3.7"],\
+          ["normalize-range", "npm:0.1.2"],\
+          ["picocolors", "npm:1.1.1"],\
+          ["postcss", "npm:8.4.36"],\
+          ["postcss-value-parser", "npm:4.2.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/postcss",\
+          "postcss"\
+        ],\
+        "linkType": "HARD"\
       }],\
       ["virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:10.4.19", {\
         "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-3e1e85342a/0/cache/autoprefixer-npm-10.4.19-7c86a73b2f-98378eae37.zip/node_modules/autoprefixer/",\

@@ -1,9 +1,9 @@
 module.exports = {
     title: 'Molitio Wiki',
     tagline: 'Documentation for Molitio Web Engine',
-    url: 'https://your-site.com',
-    baseUrl: '/',
-    onBrokenLinks: 'throw',
+    url: 'https://molitio.com',
+    baseUrl: '/mwe-docs/',
+    onBrokenLinks: 'warn',
     onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'molitio',
@@ -17,7 +17,7 @@ module.exports = {
             'classic',
             {
                 docs: {
-                    path: '../design-system',
+                    path: './src/design-system',
                     routeBasePath: 'design-system',
                     sidebarPath: require.resolve('./sidebars.js'),
                 },

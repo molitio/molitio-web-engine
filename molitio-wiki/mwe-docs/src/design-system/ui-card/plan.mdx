@@ -1,0 +1,48 @@
+# Plan: UI Card Component
+
+## Overview
+
+The `Card` component is a reusable UI element for displaying an image, title, and description. It is designed to be simple, accessible, and easily styled.
+
+## API
+
+-   `CardProps`: `{ data: CardData }`
+-   `CardData`: `{ title, imageUrl, imageAlt, description }`
+
+## Usage Example
+
+```tsx
+import Card from '@molitio/ui-core/src/ui-card/components/Card';
+
+const cardData = {
+    title: 'Sample Card',
+    imageUrl: '<example html url>',
+    imageAlt: 'Sample Image',
+    description: 'This is a sample card description.',
+};
+
+<Card data={cardData} />;
+```
+
+## Source Code
+
+-   [View Card.tsx](../../../../packages-ui/ui-core/src/ui-card/components/Card.tsx)
+
+## Accessibility (A11y)
+
+-   `alt` text is required for images.
+-   Semantic HTML structure.
+
+## Molitio Contract
+
+-   All instances must include a `data-molitio-id="ui-card"` attribute (to be added in future iterations).
+
+## Future Directions
+
+-   Add support for actions (buttons, links).
+-   Add theming and style variants.
+-   Integrate with design tokens.
+
+---
+
+_Last updated: 19 August 2025_
