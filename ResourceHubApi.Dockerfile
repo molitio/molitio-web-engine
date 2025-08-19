@@ -4,7 +4,7 @@ ARG WORKSPACE="apps-api/resource-hub-api"
 ARG APP_MODULES="packages-api/resource-hub-modules"
 
 
-FROM node:current-alpine3.19 AS builder
+FROM node:24-alpine3.19 AS builder
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE
@@ -18,7 +18,7 @@ RUN yarn install
 RUN yarn add global @nestjs/cli
 RUN yarn build-resource-hub
 
-FROM node:current-alpine3.19
+FROM node:24-alpine3.19
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE
