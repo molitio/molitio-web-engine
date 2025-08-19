@@ -14,13 +14,9 @@ const handleRecaptcha = async (action: string, key: string) => {
 
         const responseData = await response.json();
 
-        if (responseData?.score > 0.6) {
-            return true;
-        } else {
-            return false;
-        }
+        return responseData?.score > 0.6;
     } catch (error) {
-        console.error('error', error);
+        console.error('Error in handleRecaptcha:', error);
         return false;
     }
 };

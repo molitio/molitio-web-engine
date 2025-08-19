@@ -7,7 +7,7 @@ ARG PACKAGE_WORKSPACE="@molitio/mwe-sleeping-dragon-ui"
 ARG APP_MODULES="packages-ui"
 
 # --- Build Stage ---
-FROM node:20-alpine AS builder
+FROM node:24-alpine AS builder
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE
@@ -30,7 +30,7 @@ RUN yarn install
 RUN yarn build-sleeping-dragon-ui
 
 # --- Production Stage ---
-FROM node:20-alpine
+FROM node:24-alpine
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE

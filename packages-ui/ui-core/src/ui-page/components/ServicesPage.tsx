@@ -3,7 +3,7 @@
 import React from 'react';
 import { useAtom } from 'jotai';
 import { CardData } from '../../ui-card';
-import { contentRootAtomRW } from '../../context';
+/* import { contentRootAtomRW } from '../../context'; */
 import PageSection from './PageSection';
 
 const PAGE_SECTION = 'services';
@@ -20,8 +20,10 @@ const PAGE_SECTION = 'services';
  */
 
 const ServicesPage: React.FC = () => {
-    const [contentRoot] = useAtom(contentRootAtomRW);
-    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    /*     const [contentRoot] = useAtom(contentRootAtomRW); 
+    TODO: fix with context refactor MWE-205
+    */
+    const contentRootLeafs = /* contentRoot['home']?.leafs ?? */ {} as Record<string, any>;
 
     const serviceTheOneData: CardData[] = contentRootLeafs['serviceTheOne']?.textContentCollection ?? [];
     const serviceTheOneTextContent = contentRootLeafs['serviceTheOne']?.textContent ?? {};

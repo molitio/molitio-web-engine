@@ -1,4 +1,4 @@
-import { atom, createStore } from 'jotai';
+/* import { atom, createStore } from 'jotai';
 import { ContentRoot } from './types';
 
 export const contentRootAtom = atom<ContentRoot>({});
@@ -16,3 +16,4 @@ export function initContentRootStore(contentRoot: ContentRoot) {
     contentRootStore.set(contentRootAtomRW, { ...contentRoot });
     return contentRootStore;
 }
+ */

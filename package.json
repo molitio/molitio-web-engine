@@ -7,13 +7,13 @@
     "description": "Molitio Core Libraries",
     "scripts": {
         "ci": "yarn install --immutable --immutable-cache --check-cache",
-        "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological run build",
+        "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological-dev run build",
         "build-mwe-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build",
         "build-resource-hub": "yarn workspace @molitio/mwe-resource-hub-api build",
         "build-john-glenn-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/mwe-john-glenn-ui build",
         "build-sleeping-dragon-ui": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build && yarn workspace @molitio/mwe-sleeping-dragon-ui build",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
-        "dev": "yarn workspaces foreach --all --parallel --interlaced run dev",
+        "dev": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev & WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev",
         "lint": "yarn prettier . --write",
         "test": "yarn jest",
         "test:watch": "yarn jest --watch",
@@ -81,7 +81,8 @@
         "ts-node": "10.9.2",
         "tslib": "2.6.2",
         "typedoc": "0.25.0",
-        "typescript": "5.2.2"
+        "typescript": "5.2.2",
+        "protobufjs": "7.4.0"
     },
     "resolutions": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",
@@ -94,8 +95,5 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
-    },
-    "dependencies": {
-        "protobufjs": "7.4.0"
     }
 }

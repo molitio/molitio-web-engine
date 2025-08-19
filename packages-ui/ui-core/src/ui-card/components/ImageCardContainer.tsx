@@ -2,11 +2,13 @@ import React from 'react';
 import type { ImageCardData } from '../types';
 import ImageCard from './ImageCard';
 import { useAtom } from 'jotai';
-import { contentRootAtomRW } from '../../context';
+/* import { contentRootAtomRW } from '../../context'; */
 
 const ImageCardContainer: React.FC = () => {
-    const [contentRoot] = useAtom(contentRootAtomRW);
-    const contentRootLeafs = contentRoot['home']?.leafs ?? {};
+    /*    const [contentRoot] = useAtom(contentRootAtomRW);
+ TODO: fix with context refactor MWE-205
+ */
+    const contentRootLeafs = /*  contentRoot['home']?.leafs ?? */ {} as Record<string, any>;
     const imageCardData: ImageCardData[] =
         (contentRootLeafs['imageCards']?.textContentCollection as ImageCardData[]) ?? [];
 

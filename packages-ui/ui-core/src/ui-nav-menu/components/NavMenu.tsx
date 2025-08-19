@@ -1,11 +1,11 @@
 'use client';
 
 import React, { useState } from 'react';
-import { navMenuAtomRW } from '../../context';
+/* import { navMenuAtomRW } from '../../context'; */
 import { useAtom } from 'jotai';
 
 const NavMenu: React.FC = () => {
-    const [navRoot] = useAtom(navMenuAtomRW);
+    /*     const [navRoot] = useAtom(navMenuAtomRW); */
     const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null);
 
     const handleNavItemClick = (navBranch: string) => {
@@ -15,7 +15,7 @@ const NavMenu: React.FC = () => {
     return (
         <nav>
             <div className="flex items-center gap-3 justify-center">
-                {Object.keys(navRoot).map((navBranch) => (
+                {/*                 {Object.keys(navRoot).map((navBranch) => (
                     <a key={navBranch} href={`${navRoot[navBranch].path}`}>
                         <div
                             key={navBranch}
@@ -25,10 +25,10 @@ const NavMenu: React.FC = () => {
                             <figure className="icon-container flex justify-center">
                                 <img src={navRoot[navBranch].iconUrl} className="icon" />
                             </figure>
-                            <span className="label ">{navRoot[navBranch].label}</span>
+                            <span className="label ">{navRoot[navBranch].label}</span> 
                         </div>
                     </a>
-                ))}
+                ))}*/}
             </div>
         </nav>
     );
