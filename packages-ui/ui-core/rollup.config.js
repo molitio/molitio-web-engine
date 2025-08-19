@@ -8,7 +8,6 @@ import fg from 'fast-glob';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
-import packageJson from './package.json' assert { type: 'json' };
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from 'tailwindcss';
 import autoprefixer from 'autoprefixer';
@@ -18,6 +17,8 @@ import { createRequire } from 'module';
 const require = createRequire(import.meta.url);
 
 const styleSystemConfig = require('./tailwind.config.cjs');
+
+const packageJson = require('./package.json');
 
 const moduleDefinitions = {
     'mwe-ui-core': {
