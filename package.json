@@ -32,7 +32,7 @@
         "apps-api/*",
         "packages-ui/*",
         "packages-api/*",
-        "packages-utils/*"
+        "molitio-wiki/*"
     ],
     "husky": {
         "hooks": {
