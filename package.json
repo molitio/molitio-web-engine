@@ -20,8 +20,8 @@
         "test:generate-output": "yarn jest --json --outputFile=.artifacts/test-results/jest-test-results.json",
         "installPeerDeps": "yarn check-peer-dependencies --install",
         "ts": "tsc --traceResolution --listFilesOnly",
-        "docgen-show-config": "yarn typedoc --showConfig",
-        "docgen": "yarn run typedoc --options typedoc.json",
+        "docs:build": "yarn workspace @molitio/mwe-docs build",
+        "docs:serve": "yarn workspace @molitio/mwe-docs start",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
@@ -75,14 +75,14 @@
         "postcss": "8.4.36",
         "prettier": "3.0.3",
         "prettier-eslint": "16.3.0",
+        "protobufjs": "7.4.0",
         "rimraf": "5.0.5",
         "ts-jest": "29.1.1",
         "ts-morph": "22.0.0",
         "ts-node": "10.9.2",
         "tslib": "2.6.2",
         "typedoc": "0.25.0",
-        "typescript": "5.2.2",
-        "protobufjs": "7.4.0"
+        "typescript": "5.2.2"
     },
     "resolutions": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",
