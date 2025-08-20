@@ -1,14 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { DatabaseConnectionService } from './database-connection.service';
 
 @Injectable()
 export class AppService {
-    constructor(private readonly dbService: DatabaseConnectionService) {}
+    constructor() {}
 
-    healthCheck(): { status: string; dbConnected: boolean } {
+    healthCheck(): { status: string } {
         return {
             status: 'ok',
-            dbConnected: this.dbService.getConnectionStatus(),
         };
     }
 }

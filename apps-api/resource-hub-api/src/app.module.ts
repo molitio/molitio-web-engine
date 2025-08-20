@@ -8,7 +8,6 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 import { ResourceModule, UserPublicModule, UserPrivateModule, SpecificationLabelModule } from './modules';
 import { defaultConfig } from './configuration';
 import { Connection } from 'mongoose';
-import { DatabaseConnectionService } from './database-connection.service';
 
 @Module({
     imports: [
@@ -34,7 +33,7 @@ import { DatabaseConnectionService } from './database-connection.service';
         SpecificationLabelModule,
     ],
     controllers: [AppController],
-    providers: [AppService, DatabaseConnectionService],
+    providers: [AppService],
 })
 export class AppModule {
     @InjectConnection('resource') private resourceConnection: Connection;
@@ -45,6 +44,9 @@ export class AppModule {
     onModuleInit() {
         this.resourceConnection.on('connected', () => {
             console.log('MongoDB Connected: resource');
+        });
+        this.resourceConnection.on('error', (err) => {
+            console.error('MongoDB Error: resource', err);
         });
         this.userPrivateConnection.on('connected', () => {
             console.log('MongoDB Connected: user-private');
