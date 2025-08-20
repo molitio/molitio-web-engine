@@ -7,7 +7,7 @@ module.exports = {
                 {
                     type: 'doc',
                     id: 'ui-card/plan',
-                    label: 'UI Card (Prototype)',
+                    label: 'Card',
                 },
             ],
         },
