@@ -26,7 +26,8 @@
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
         "codegen": "graphql-codegen --config codegen.ts",
-        "container-compose": "docker-compose -f docker-compose.yml up -d --build"
+        "container-compose": "docker compose -f docker-compose.yml up -d --build",
+        "container-rebuild": "docker compose -f docker-compose.yml up -d --build --force-recreate"
     },
     "workspaces": [
         "apps-ui/*",

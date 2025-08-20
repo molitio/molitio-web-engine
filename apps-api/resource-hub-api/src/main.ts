@@ -9,7 +9,7 @@ export class MWEApp {
     async start() {
         try {
             this.app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
-            await this.app.listen(this.port);
+            await this.app.listen(this.port, '0.0.0.0');
             console.log(`Resource Hub API started on port ${this.port}`);
         } catch (error) {
             console.error(error, 'at MWEApp.start()');
