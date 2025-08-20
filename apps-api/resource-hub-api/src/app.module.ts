@@ -8,6 +8,7 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 import { ResourceModule, UserPublicModule, UserPrivateModule, SpecificationLabelModule } from './modules';
 import { defaultConfig } from './configuration';
 import { Connection } from 'mongoose';
+import { DatabaseConnectionService } from './database-connection.service';
 
 @Module({
     imports: [
@@ -33,7 +34,7 @@ import { Connection } from 'mongoose';
         SpecificationLabelModule,
     ],
     controllers: [AppController],
-    providers: [AppService],
+    providers: [AppService, DatabaseConnectionService],
 })
 export class AppModule {
     @InjectConnection('resource') private resourceConnection: Connection;

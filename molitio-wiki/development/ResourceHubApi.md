@@ -64,7 +64,7 @@ Key aspects of the configuration:
         *   Copies necessary files from the host (e.g., `.pnp.cjs`, `package.json`, `tsconfig.json`).
         *   Copies the built application artifacts and `.yarn` directory from the `builder` stage.
         *   Sets the `YARN_CACHE_FOLDER` environment variable.
-        *   The `CMD` instruction starts the API using `yarn workspace @molitio/resource-hub-api start`.
+        *   The `CMD` instruction starts the API using `yarn workspace @molitio/mwe-resource-hub-api start`.
 
 *   **`SleepingDragonUI.Dockerfile` (planned):**
     *   This will be a multi-stage Dockerfile for the NextJS application.
