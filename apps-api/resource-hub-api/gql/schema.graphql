@@ -3,88 +3,79 @@
 # ------------------------------------------------------
 
 type LabelValue {
-    _id: String!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
-    unitOfMesure: String!
-    value: String!
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  unitOfMesure: String!
+  value: String!
 }
 
 type SpecificationLabel {
-    _id: String!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
-    name: String!
-    description: String
-    labelValue: [LabelValue!]!
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  name: String!
+  description: String
+  labelValueClolection: [LabelValue!]!
 }
 
 type Resource {
-    _id: String!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
-    name: String!
-    description: String
-    specificationLabels: [SpecificationLabel!]!
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
+  name: String!
+  description: String
+  specificationLabels: [SpecificationLabel!]!
 }
 
 type UserPublic {
-    _id: String!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
-    usernamePublic: String!
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String
+  updatedBy: String
+  usernamePublic: String!
 }
 
 type UserPrivate {
-    _id: String!
-    createdAt: String!
-    updatedAt: String
-    createdBy: String!
-    updatedBy: String
+  _id: String!
+  createdAt: String!
+  updatedAt: String
+  createdBy: String!
+  updatedBy: String
 }
 
 type Query {
-    userPublic(id: String!): UserPublic!
-    userPublicCollection: [UserPublic!]!
-    resource(id: String!): Resource!
-    resourceCollection: [Resource!]!
-    specificationLabel(_id: String!): SpecificationLabel!
-    specificationLabelCollection: [SpecificationLabel!]!
+  userPublic(_id: String!): UserPublic!
+  userPublicCollection: [UserPublic!]!
+  resource(id: String!): Resource!
+  resourceCollection: [Resource!]!
+  specificationLabel(_id: String!): SpecificationLabel!
+  specificationLabelCollection: [SpecificationLabel!]!
 }
 
 type Mutation {
-    createUserPublic(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
-    updateUserPublic(
-        id: String!
-        usernamePublic: String
-        resourceCollectionId: String
-        userPersistedConfigId: String
-    ): UserPublic!
-    deleteUserPublic(id: String!): UserPublic!
-    createUserPrivate(
-        usernamePublic: String!
-        resourceCollectionId: String
-        userPersistedConfigId: String
-    ): UserPrivate!
-    updateUserPrivate(
-        id: String!
-        usernamePublic: String
-        resourceCollectionId: String
-        userPersistedConfigId: String
-    ): UserPrivate!
-    deleteUserPrivate(id: String!): UserPrivate!
-    createResource(name: String!, description: String!): Resource!
-    updateResource(_id: String!, name: String!, description: String): Resource!
-    deleteResource(id: String!): Resource!
-    createSpecificationLabel(name: String!, description: String, labelValue: [String!]!): SpecificationLabel!
-    updateSpecificationLabel(_id: String!, name: String!, description: String): SpecificationLabel!
-    deleteSpecificationLabel(id: String!): SpecificationLabel!
+  createUserPublic(input: CreateUserPublicInput!): UserPublic!
+  updateUserPublic(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
+  deleteUserPublic(id: String!): UserPublic!
+  createUserPrivate(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
+  updateUserPrivate(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
+  deleteUserPrivate(id: String!): UserPrivate!
+  createResource(name: String!, description: String!): Resource!
+  updateResource(_id: String!, name: String!, description: String): Resource!
+  deleteResource(id: String!): Resource!
+  createSpecificationLabel(name: String!, description: String, labelValueIdCollection: [String!]!): SpecificationLabel!
+  updateSpecificationLabel(_id: String!, name: String!, description: String): SpecificationLabel!
+  deleteSpecificationLabel(id: String!): SpecificationLabel!
+  deleteLabelValue(_id: String!): LabelValue!
+}
+
+input CreateUserPublicInput {
+  usernamePublic: String!
 }

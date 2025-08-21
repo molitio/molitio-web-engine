@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserPublicDto, UserPublic } from './user-public.schema';
-import { Model, Schema as MongooseSchema } from 'mongoose';
+import { UserPublic } from './user-public.schema';
+import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { UserPublicRoles } from './user-public.types';
+import { CreateUserPublicInput } from './user-public.input';
 
 @Injectable()
 export class UserPublicService {
@@ -12,8 +13,13 @@ export class UserPublicService {
         return true;
     };
 
-    async create(userPublic: CreateUserPublicDto): Promise<UserPublic> {
-        const createdUserPublic = new this.userPublic(userPublic);
+    async create(userPublic: CreateUserPublicInput): Promise<UserPublic> {
+        const now = new Date().toISOString();
+        const createdUserPublic = new this.userPublic({
+            ...userPublic,
+            createdAt: now,
+            updatedAt: now,
+        });
         return await createdUserPublic.save();
     }
 
