@@ -20,19 +20,21 @@
         "test:generate-output": "yarn jest --json --outputFile=.artifacts/test-results/jest-test-results.json",
         "installPeerDeps": "yarn check-peer-dependencies --install",
         "ts": "tsc --traceResolution --listFilesOnly",
-        "docgen-show-config": "yarn typedoc --showConfig",
-        "docgen": "yarn run typedoc --options typedoc.json",
+        "docs:build": "yarn workspace @molitio/mwe-docs build && yarn workspace @molitio/mwe-resource-hub-api docs",
+        "docs:serve": "yarn workspace @molitio/mwe-docs start",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
-        "codegen": "graphql-codegen --config codegen.ts"
+        "codegen": "graphql-codegen --config codegen.ts",
+        "container-compose": "docker compose -f docker-compose.yml up -d --build",
+        "container-rebuild": "docker compose -f docker-compose.yml up -d --build --force-recreate"
     },
     "workspaces": [
         "apps-ui/*",
         "apps-api/*",
         "packages-ui/*",
         "packages-api/*",
-        "packages-utils/*"
+        "molitio-wiki/*"
     ],
     "husky": {
         "hooks": {
@@ -48,6 +50,7 @@
     "devDependencies": {
         "@babel/core": "7.24.3",
         "@babel/eslint-parser": "7.25.9",
+        "@compodoc/compodoc": "1.1.26",
         "@graphql-codegen/cli": "5.0.2",
         "@graphql-codegen/client-preset": "4.2.6",
         "@graphql-codegen/introspection": "4.0.3",
@@ -61,6 +64,7 @@
         "@types/ws": "8.5.10",
         "@typescript-eslint/eslint-plugin": "8.17.0",
         "@typescript-eslint/parser": "8.17.0",
+        "autoprefixer": "^10.4.16",
         "babel-jest": "29.7.0",
         "core-js": "3.30.2",
         "eslint": "9.16.0",
@@ -75,21 +79,28 @@
         "postcss": "8.4.36",
         "prettier": "3.0.3",
         "prettier-eslint": "16.3.0",
+        "protobufjs": "7.4.0",
         "rimraf": "5.0.5",
+        "tailwindcss": "^3.4.3",
         "ts-jest": "29.1.1",
         "ts-morph": "22.0.0",
         "ts-node": "10.9.2",
         "tslib": "2.6.2",
         "typedoc": "0.25.0",
-        "typescript": "5.2.2",
-        "protobufjs": "7.4.0"
+        "typescript": "5.2.2"
     },
     "resolutions": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",
         "axios": "^1.7.0"
     },
     "dependenciesMeta": {
+        "autoprefixer@10.4.16": {
+            "unplugged": true
+        },
         "postcss@8.4.36": {
+            "unplugged": true
+        },
+        "tailwindcss@3.4.3": {
             "unplugged": true
         },
         "ts-node@10.9.2": {

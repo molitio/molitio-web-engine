@@ -4,7 +4,7 @@ ARG WORKSPACE="apps-api/resource-hub-api"
 ARG APP_MODULES="packages-api/resource-hub-modules"
 
 
-FROM node:24-alpine3.19 AS builder
+FROM node:24-alpine AS builder
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE
@@ -18,18 +18,18 @@ RUN yarn install
 RUN yarn add global @nestjs/cli
 RUN yarn build-resource-hub
 
-FROM node:24-alpine3.19
+FROM node:24-alpine
 ARG WORK_DIR
 ARG APP_DIR
 ARG WORKSPACE
 
 WORKDIR $APP_DIR
 
-COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock process.yml ./
+COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock ./
 
 COPY --from=builder $WORK_DIR/.yarn ./.yarn
 COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
 
 ENV  YARN_CACHE_FOLDER=/.yarn/cache
 
-CMD ["yarn", "workspace", "@molitio/resource-hub-api", "start"]
+CMD ["yarn", "workspace", "@molitio/mwe-resource-hub-api", "start"]

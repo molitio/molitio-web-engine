@@ -1,6 +1,6 @@
 import { GraphQLModule } from '@nestjs/graphql';
 import { InjectConnection, MongooseModule } from '@nestjs/mongoose';
-import { MiddlewareConsumer, Module } from '@nestjs/common';
+import { MiddlewareConsumer, Module, Logger } from '@nestjs/common';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { AppService } from './app.service';
 import { AppController } from './app.controller';
@@ -16,15 +16,19 @@ import { Connection } from 'mongoose';
             autoSchemaFile: './gql/schema.graphql',
         }),
         MongooseModule.forRoot(defaultConfig.resourceDatabaseUrl, {
+            authSource: 'resource-hub-db',
             connectionName: 'resource',
         }),
         MongooseModule.forRoot(defaultConfig.userPrivateDatabaseUrl, {
+            authSource: 'resource-hub-db',
             connectionName: 'user-private',
         }),
         MongooseModule.forRoot(defaultConfig.userPublicDatabaseUrl, {
+            authSource: 'resource-hub-db',
             connectionName: 'user-public',
         }),
         MongooseModule.forRoot(defaultConfig.specificationLabelDatabaseUrl, {
+            authSource: 'resource-hub-db',
             connectionName: 'specification-label',
         }),
         UserPublicModule,
@@ -36,23 +40,39 @@ import { Connection } from 'mongoose';
     providers: [AppService],
 })
 export class AppModule {
+    private readonly logger = new Logger('MongoDB');
+
     @InjectConnection('resource') private resourceConnection: Connection;
     @InjectConnection('user-private') private userPrivateConnection: Connection;
     @InjectConnection('user-public') private userPublicConnection: Connection;
     @InjectConnection('specification-label') private specificationLabelConnection: Connection;
 
     onModuleInit() {
-        this.resourceConnection.on('connected', () => {
-            console.log('MongoDB Connected: resource');
-        });
-        this.userPrivateConnection.on('connected', () => {
-            console.log('MongoDB Connected: user-private');
-        });
-        this.userPublicConnection.on('connected', () => {
-            console.log('MongoDB Connected: user-public');
-        });
-        this.specificationLabelConnection.on('connected', () => {
-            console.log('MongoDB Connected: specification-label');
+        this.logger.log('MongoDB connections initialized');
+        [
+            { name: 'resource', conn: this.resourceConnection },
+            { name: 'user-private', conn: this.userPrivateConnection },
+            { name: 'user-public', conn: this.userPublicConnection },
+            { name: 'specification-label', conn: this.specificationLabelConnection },
+        ].forEach(({ name, conn }) => {
+            conn.on('connecting', () => {
+                this.logger.log(`[${name}] Connecting...`);
+            });
+            conn.on('connected', () => {
+                this.logger.log(`[${name}] Connected`);
+            });
+            conn.on('disconnected', () => {
+                this.logger.warn(`[${name}] Disconnected`);
+            });
+            conn.on('reconnected', () => {
+                this.logger.log(`[${name}] Reconnected`);
+            });
+            conn.on('close', () => {
+                this.logger.warn(`[${name}] Connection closed`);
+            });
+            conn.on('error', (err) => {
+                this.logger.error(`[${name}] Error: ${err?.message}`, err?.stack);
+            });
         });
     }
 

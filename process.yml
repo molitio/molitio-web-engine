@@ -1,7 +1,0 @@
-apps:
-    - name: 'resource-hub-api'
-      cwd: '/usr/src/app/apps/resource-hub-api/'
-      script: 'dist/main.js'
-      args: ''
-      exec_mode: 'cluster'
-      instances: 2

@@ -1,18 +1,9 @@
-import { NestFactory } from '@nestjs/core';
-import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
-import { AppModule } from './app.module';
+import { activePort } from './configuration';
+import { MWEApp } from './MWEApp';
 
-async function main() {
-    try {
-        const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
-        app.listen(4000);
-    } catch (error) {
-        console.error(error, 'at main()');
-    }
-}
-main();
+const appInstance = new MWEApp(activePort);
+appInstance.start();
 
-process.on('SIGINT', function () {
-    console.log('Resource Hub API is shutting down...');
-    process.exit();
+process.on('SIGINT', () => {
+    appInstance.shutdown();
 });

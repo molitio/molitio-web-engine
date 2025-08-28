@@ -19,9 +19,9 @@ export class UserPublic {
     @Prop()
     updatedAt?: string;
 
-    @Field()
+    @Field({ nullable: true })
     @Prop()
-    createdBy: string;
+    createdBy?: string;
 
     @Field({ nullable: true })
     @Prop()
@@ -40,7 +40,5 @@ export class UserPublic {
     @Field(() => String, { nullable: true })
     userPersistedConfigId?: MongooseSchema.Types.ObjectId; */
 }
-
-export interface CreateUserPublicDto extends Omit<UserPublic, '_id' | 'createdAt' | 'createdBy'> {}
 
 export const UserPublicSchema = SchemaFactory.createForClass(UserPublic);

@@ -21,7 +21,7 @@
         "build": "nest build",
         "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
         "start": "nest start",
-        "devOFF": "__OFF__nest start --watch",
+        "dev": "nest start --watch",
         "dev:debug": "ts-node src/main --debug --watch",
         "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
         "test": "jest",
@@ -29,7 +29,7 @@
         "test:cov": "jest --coverage",
         "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
         "test:e2e": "jest --config ./test/jest-e2e.json",
-        "docs": "__off__ currently vecel buld fails on compodoc npx @compodoc/compodoc -p tsconfig.json -s"
+        "docs": "yarn compodoc -p tsconfig.json -s"
     },
     "dependencies": {
         "@apollo/gateway": "2.10.1",
