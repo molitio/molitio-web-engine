@@ -1,73 +1,71 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Resource Hub API
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+**Work in Progress – API and documentation are actively evolving.**
 
-## Description
+## Overview
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Resource Hub API is a backend service for the Molitio Web Engine, built with [NestJS](https://nestjs.com/) and TypeScript. It provides business logic and data operations for the platform, exposing endpoints for data management and retrieval. The API communicates with a MongoDB database and is designed for scalable, containerized deployment.
 
-## Installation
+## Features
 
-```bash
-$ yarn install
-```
+- RESTful and gRPC endpoints for resource management
+- MongoDB integration for data persistence
+- Modular, scalable architecture
+- Containerized for local development and production
+- Designed for Kubernetes deployment on AWS (EKS)
 
-## Running the app
+## Project Status
+
+This service is under active development. Features, endpoints, and deployment strategies may change. See [ResourceHubApi.md](../../molitio-wiki/development/ResourceHubApi.md) for the latest architecture and deployment details.
+
+## Local Development
+
+Local development uses Docker Compose to orchestrate the API, database, and (planned) UI services. See the root [`docker-compose.yml`](../../docker-compose.yml) for configuration.
+
+### Prerequisites
+
+- [Docker Desktop](https://www.docker.com/products/docker-desktop)
+- `.env` file in the project root with required environment variables:
+  - `MONGO_DB`, `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, etc.
+
+### Start Services
 
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+docker-compose up -d --build
 ```
 
-## Test
+API: [http://localhost:4000](http://localhost:4000)
+MongoDB: `localhost:27017`
+
+## Production Deployment
+
+Production deployment targets AWS EKS (Kubernetes). Key components:
+
+- **Amazon EKS**: Managed Kubernetes cluster
+- **Amazon DocumentDB** or **MongoDB Atlas**: Managed database
+- **Amazon ECR**: Container registry for Docker images
+- **AWS Load Balancer Controller**: Ingress and SSL termination
+- **ConfigMaps/Secrets**: Configuration and sensitive data management
+- **CloudWatch, Prometheus, Grafana**: Logging and monitoring
+- **CI/CD Pipeline**: Automated build, test, and deployment
+
+See [ResourceHubApi.md](../../molitio-wiki/development/ResourceHubApi.md) for a detailed deployment strategy.
+
+## Testing
+
+Run unit and e2e tests:
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+yarn test
+yarn test:e2e
+yarn test:cov
 ```
 
-## Support
+## Contributing
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+Contributions are welcome! See [`CONTRIBUTING.md`](../../CONTRIBUTING.md) for guidelines.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is [MIT licensed](../../LICENSE).

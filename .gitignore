@@ -12,6 +12,7 @@ data-core_bundle-map.html
 # Docs
 docs
 .docusaurus
+documentation
 
 # AWS file folder
 file:*

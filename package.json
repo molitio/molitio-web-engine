@@ -20,7 +20,7 @@
         "test:generate-output": "yarn jest --json --outputFile=.artifacts/test-results/jest-test-results.json",
         "installPeerDeps": "yarn check-peer-dependencies --install",
         "ts": "tsc --traceResolution --listFilesOnly",
-        "docs:build": "yarn workspace @molitio/mwe-docs build",
+        "docs:build": "yarn workspace @molitio/mwe-docs build && yarn workspace @molitio/mwe-resource-hub-api docs",
         "docs:serve": "yarn workspace @molitio/mwe-docs start",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
@@ -50,6 +50,7 @@
     "devDependencies": {
         "@babel/core": "7.24.3",
         "@babel/eslint-parser": "7.25.9",
+        "@compodoc/compodoc": "1.1.26",
         "@graphql-codegen/cli": "5.0.2",
         "@graphql-codegen/client-preset": "4.2.6",
         "@graphql-codegen/introspection": "4.0.3",
@@ -86,8 +87,7 @@
         "ts-node": "10.9.2",
         "tslib": "2.6.2",
         "typedoc": "0.25.0",
-        "typescript": "5.2.2",
-        "protobufjs": "7.4.0"
+        "typescript": "5.2.2"
     },
     "resolutions": {
         "@molitio/mwe-ui-core": "workspace:0.2.0",
