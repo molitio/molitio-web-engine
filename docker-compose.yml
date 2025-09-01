@@ -38,6 +38,36 @@ services:
             timeout: 5s
             retries: 5
 
+    mwe-sleeping-dragon-ui:
+        container_name: mwe-sleeping-dragon-ui
+        build:
+            context: .
+            dockerfile: ResourceHubUI.Dockerfile
+        depends_on:
+            - resource-hub-api
+        expose:
+            - '3000'
+        ports:
+            - 3000:3000
+        environment:
+            NODE_ENV: development
+
+    resource-hub-gateway:
+        container_name: resource-hub-gateway
+        env_file:
+            - .env
+        depends_on:
+            - mwe-sleeping-dragon-ui
+            - resource-hub-api
+        build:
+            context: .
+            dockerfile: ResourceHubGateway.Dockerfile
+        expose:
+            - '${NGINX_PORT}'
+        ports:
+            - ${NGINX_PORT}:${NGINX_PORT}
+            - ${NGINX_PORT}:443/udp
+
 volumes:
     resource-hub-db-volume:
         driver: local

@@ -18,7 +18,7 @@ WORKDIR $WORK_DIR
 COPY . ./
 
 # Copy all monorepo workspaces and root files
-COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE process.yml ./
+COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE./
 COPY apps-ui/sleeping-dragon-ui ./apps-ui/sleeping-dragon-ui
 COPY packages-ui/ui-core ./packages-ui/ui-core
 COPY packages-ui/mwe-tailwindcss-config ./packages-ui/mwe-tailwindcss-config
@@ -38,7 +38,7 @@ ARG WORKSPACE
 WORKDIR $APP_DIR
 
 # Copy necessary files for production
-COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock process.yml ./
+COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock ./
 COPY --from=builder $WORK_DIR/.yarn ./.yarn
 COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
 
@@ -48,5 +48,8 @@ ENV YARN_CACHE_FOLDER=/.yarn/cache
 # Expose Next.js default port
 EXPOSE 3000
 
-# Start the Next.js standalone server
-CMD ["yarn", "node", "apps-ui/sleeping-dragon-ui/.next/standalone/apps-ui/sleeping-dragon-ui/server.js"]
+# Install production dependencies for the workspace
+RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
+
+# Start the Next.js production server using yarn workspace
+CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start"]

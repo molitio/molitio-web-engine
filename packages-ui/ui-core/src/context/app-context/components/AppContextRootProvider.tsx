@@ -1,18 +1,23 @@
 'use client';
 import { AppContext, ContextNode } from '../types';
 import { NavigationSegment } from '../types/NavigationSegment';
-import { TextContentSegment } from '../types/TextContentSegment';
 import React, { createContext, useMemo } from 'react';
 import { Provider as JotaiProvider, atom as jotaiAtom, useAtomValue } from 'jotai';
+import { TextContentNode } from '../types/TextContentSegment';
 
 function collectSegments(nodeTree: Record<string, ContextNode> | undefined) {
     const navSegments: Record<string, NavigationSegment> = {};
-    const textSegments: Record<string, TextContentSegment> = {};
+    const textSegments: Record<string, TextContentNode> = {};
     if (!nodeTree) return { navSegments, textSegments };
     for (const key in nodeTree) {
         const node = nodeTree[key];
         if (node.navigation) navSegments[key] = node.navigation;
-        if (node.textContent) textSegments[key] = node.textContent;
+        if (node.textContent) {
+            // node.textContent is Record<string, TextContentNode>
+            for (const segmentKey in node.textContent) {
+                textSegments[segmentKey] = node.textContent[segmentKey];
+            }
+        }
         if (node.nodeTree) {
             const child = collectSegments(node.nodeTree);
             Object.assign(navSegments, child.navSegments);
@@ -26,7 +31,7 @@ function collectSegments(nodeTree: Record<string, ContextNode> | undefined) {
 
 type AppContextRootValues = {
     navSegments: Record<string, NavigationSegment>;
-    textSegments: Record<string, TextContentSegment>;
+    textSegments: Record<string, TextContentNode>;
 };
 
 export const AppContextRootContext = createContext<AppContextRootValues | undefined>(undefined);
@@ -38,7 +43,7 @@ export const AppContextRootProvider: React.FC<{ appContext: AppContext; children
     const { navSegments, textSegments } = useMemo(() => collectSegments(appContext.nodeTree), [appContext.nodeTree]);
 
     const navAtom = useMemo(() => jotaiAtom<Record<string, NavigationSegment>>(navSegments), [navSegments]);
-    const textAtom = useMemo(() => jotaiAtom<Record<string, TextContentSegment>>(textSegments), [textSegments]);
+    const textAtom = useMemo(() => jotaiAtom<Record<string, TextContentNode>>(textSegments), [textSegments]);
 
     const navSegmentsValue = useAtomValue(navAtom);
     const textSegmentsValue = useAtomValue(textAtom);

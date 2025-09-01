@@ -13,6 +13,7 @@
         "@molitio/mwe-ui-core": "0.2.0",
         "autoprefixer": "10.4.19",
         "next": "15.3.1",
+        "postcss": "8.4.36",
         "react": "19.0.0",
         "react-dom": "19.0.0",
         "react-is": "19.0.0"
