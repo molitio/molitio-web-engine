@@ -1,6 +1,6 @@
 {
     "exclude": ["node_modules", "dist"],
-    "include": ["**/*.ts", "**/*.tsx", "MWETailwindConfig.js", "tailwind.config.cjs"],
+    "include": ["**/*.ts", "**/*.tsx", "tailwind.config.ts"],
     "compilerOptions": {
         "jsx": "react",
         "outDir": "./dist",
