@@ -9,6 +9,7 @@
         "lint": "next lint"
     },
     "dependencies": {
+        "@molitio/mwe-tailwindcss-config": "workspace:0.2.0",
         "@molitio/mwe-ui-core": "0.2.0",
         "autoprefixer": "10.4.19",
         "next": "15.3.1",
