@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "paths": {
-            "@/*": ["./*"],
+            "@/*": ["./src/*"],
             "@molitio/mwe-tailwind-config": ["../../packages-ui/mwe-tailwind-config/*"]
         }
     },

@@ -32,6 +32,12 @@ services:
             - '4000'
         ports:
             - 4000:4000
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://resource-hub-api:4000/health']
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
 volumes:
     resource-hub-db-volume:
         driver: local

@@ -10,12 +10,14 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@molitio/mwe-ui-core": "0.2.0",
         "react": "^19.1.1",
         "react-dom": "^19.1.1"
     },
     "devDependencies": {
         "@eslint/js": "^9.33.0",
         "@molitio/mwe-tailwindcss-config": "workspace:0.2.0",
+        "@molitio/mwe-ui-core": "workspace:0.2.0",
         "@types/react": "^19.1.10",
         "@types/react-dom": "^19.1.7",
         "@vitejs/plugin-react": "^5.0.0",
