@@ -62,6 +62,7 @@ services:
         build:
             context: .
             dockerfile: ResourceHubGateway.Dockerfile
+        platform: linux/amd64
         expose:
             - '${NGINX_PORT}'
         ports:
