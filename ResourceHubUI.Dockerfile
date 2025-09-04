@@ -1,43 +1,44 @@
 # syntax=docker/dockerfile:1
 
-ARG WORK_DIR="/usr/src/base"
-ARG APP_DIR="/usr/src/app"
-ARG WORKSPACE="apps-ui/sleeping-dragon-ui"
-ARG PACKAGE_WORKSPACE="@molitio/mwe-sleeping-dragon-ui"
-ARG PACKAGE_UI_CORE="packages-ui/ui-core"
-ARG PACKAGE_TAILWIND_CONFIG="packages-ui/mwe-tailwindcss-config"
+ARG MONOREPO_ROOT=/usr/src/app
 
 FROM node:24-alpine AS builder
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
-
-WORKDIR $WORK_DIR
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
+ENV YARN_ENABLE_IMMUTABLE_INSTALLS=true
 
 COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
-COPY $WORKSPACE ./$WORKSPACE
-COPY $PACKAGE_UI_CORE ./$PACKAGE_UI_CORE
-COPY $PACKAGE_TAILWIND_CONFIG ./$PACKAGE_TAILWIND_CONFIG
+COPY .yarn .yarn
+COPY apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
+COPY packages-ui/ui-core packages-ui/ui-core
+COPY packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
-RUN yarn install
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
+RUN yarn install --immutable
 RUN yarn build-sleeping-dragon-ui
 
-FROM node:24-alpine
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+FROM node:24-alpine AS production
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
 
-WORKDIR $APP_DIR
-
-COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock ./
-
-COPY --from=builder $WORK_DIR/.yarn ./.yarn
-COPY --from=builder $WORK_DIR/$WORKSPACE $WORK_DIR/$WORKSPACE
-COPY --from=builder $WORK_DIR/$PACKAGE_TAILWIND_CONFIG $WORK_DIR/$PACKAGE_TAILWIND_CONFIG
-COPY --from=builder $WORK_DIR/$PACKAGE_UI_CORE $WORK_DIR/$PACKAGE_UI_CORE
+COPY --from=builder $MONOREPO_ROOT/package.json ./
+COPY --from=builder $MONOREPO_ROOT/yarn.lock ./
+COPY --from=builder $MONOREPO_ROOT/.yarnrc.yml ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.cjs ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.loader.mjs ./
+COPY --from=builder $MONOREPO_ROOT/tsconfig.json ./
+COPY --from=builder $MONOREPO_ROOT/README.md ./
+COPY --from=builder $MONOREPO_ROOT/LICENSE ./
+COPY --from=builder $MONOREPO_ROOT/.yarn ./.yarn
+COPY --from=builder $MONOREPO_ROOT/apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
+COPY --from=builder $MONOREPO_ROOT/packages-ui/ui-core packages-ui/ui-core
+COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
 ENV YARN_CACHE_FOLDER=/.yarn/cache
 
 EXPOSE 3000
+
+RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
 CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start"]
