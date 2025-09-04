@@ -5,7 +5,6 @@ ARG MONOREPO_ROOT=/usr/src/app
 FROM node:24-alpine AS builder
 ARG MONOREPO_ROOT
 WORKDIR $MONOREPO_ROOT
-ENV YARN_ENABLE_IMMUTABLE_INSTALLS=true
 
 COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
 COPY .yarn .yarn
@@ -15,7 +14,7 @@ COPY packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
 RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
-RUN yarn install --immutable
+RUN yarn install
 RUN yarn build-sleeping-dragon-ui
 
 FROM node:24-alpine AS production
@@ -39,6 +38,8 @@ ENV YARN_CACHE_FOLDER=/.yarn/cache
 
 EXPOSE 3000
 
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
 RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
 CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start"]
