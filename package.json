@@ -27,7 +27,7 @@
         "publish-mwe-ui-core": "yarn workspace @molitio/mwe-ui-core publish-mwe-ui-core",
         "codegen": "graphql-codegen --config codegen.ts",
         "container-compose": "docker compose -f docker-compose.yml up -d --build",
-    "container-rebuild": "docker compose down --remove-orphans && docker system prune -af && docker compose -f docker-compose.yml up -d --build --force-recreate"
+        "container-rebuild": "docker compose down --remove-orphans && docker system prune -af && docker compose -f docker-compose.yml up -d --build --force-recreate"
     },
     "workspaces": [
         "apps-ui/*",
@@ -106,5 +106,8 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "@yarnpkg/sdks": "3.2.3"
     }
 }
