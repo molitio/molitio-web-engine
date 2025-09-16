@@ -7,7 +7,7 @@ const Task = () => {
             Task
             <br />
             <TaskContainer />
-            <span className="text-purple-600">Practice Task App</span>
+            <span className="text-purple-600 font-bold text-lg">Practice Task App</span>
         </div>
     );
 };
