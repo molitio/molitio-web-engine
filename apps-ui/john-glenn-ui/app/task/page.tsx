@@ -1,12 +1,9 @@
 import React from 'react';
-import TaskContainer from '@/components/TaskContainer';
 
 const Task = () => {
     return (
         <div>
-            Task
-            <br />
-            <TaskContainer />
+            <h1>Simple Task Management Web App</h1>
             <span className="text-purple-600 font-bold text-lg">Practice Task App</span>
         </div>
     );
