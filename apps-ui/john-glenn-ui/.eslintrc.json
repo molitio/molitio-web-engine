@@ -16,5 +16,8 @@
         "plugin:@typescript-eslint/eslint-recommended"
     ],
     "plugins": ["@typescript-eslint"],
-    "ignorePatterns": [".next", "dist"]
+    "ignorePatterns": [".next", "dist"],
+    "rules": {
+	"react/react-in-jsx-scope": "off"
+  }
 }
