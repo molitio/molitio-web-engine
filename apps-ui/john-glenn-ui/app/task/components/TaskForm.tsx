@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TaskForm.css';
 
 interface TaskFormProps {
     onAdd: (name: string) => void;
@@ -16,16 +17,22 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
     };
 
     return (
-        <form className="task-form" onSubmit={handleSubmit}>
+        <form className="input-group" onSubmit={handleSubmit}>
+            <label className="label" htmlFor="taskInput">
+                Task name
+            </label>
             <input
+                autoComplete="off"
+                name="taskInput"
+                id="taskInput"
+                className="input"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Enter task name..."
-                className="task-input"
             />
             <button type="submit" className="add-btn">
-                +
+                Add
             </button>
         </form>
     );
