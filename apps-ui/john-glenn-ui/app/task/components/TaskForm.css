@@ -11,6 +11,13 @@
         border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
         color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
         background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+    color: #ffffff;
+}
+
+.input::placeholder {
+    color: #000000;
+    font-style: italic;
+    opacity: 0.5;
 }
 
 .label {
@@ -18,27 +25,25 @@
     margin-bottom: 0.3rem;
     font-size: 0.9rem;
     font-weight: bold;
-    color: #05060f99;
+    color: #50009b99;
     transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
 }
 
 .input-group {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 15px;
     margin: 20px 0 24px 0;
     justify-content: center;
 }
 
 .input:hover,
-.input:focus,
-.input-group:hover .input {
+input:focus {
     outline: none;
     border-color: #05060f;
 }
 
-.input-group:hover .label,
-.input:focus {
+.label:hover {
     color: #05060fc2;
 }
 
@@ -53,11 +58,14 @@
     font-weight: bold;
     cursor: pointer;
     transition:
-        background 0.2s,
-        transform 0.2s;
+        background 0.8s,
+        transform 0.8s;
 }
 
 .add-btn:hover {
     background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
     transform: translateY(-2px) scale(1.04);
+    transition:
+        background 0.8s,
+        transform 1s;
 }
