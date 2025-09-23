@@ -15,8 +15,8 @@
 }
 
 .input::placeholder {
-    color: #000000;
-    font-style: italic;
+    color: #000000af;
+    font-weight: bold;
     opacity: 0.5;
 }
 
@@ -45,27 +45,4 @@ input:focus {
 
 .label:hover {
     color: #05060fc2;
-}
-
-.add-btn {
-    height: 44px;
-    padding: 0 1rem;
-    border-radius: 1rem;
-    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%);
-    color: #fff;
-    border: none;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition:
-        background 0.8s,
-        transform 0.8s;
-}
-
-.add-btn:hover {
-    background: linear-gradient(90deg, #0072ff 0%, #00c6ff 100%);
-    transform: translateY(-2px) scale(1.04);
-    transition:
-        background 0.8s,
-        transform 1s;
 }

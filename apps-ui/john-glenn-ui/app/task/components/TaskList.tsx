@@ -11,7 +11,9 @@ interface TaskListProps {
 const TaskList: React.FC<TaskListProps> = ({ tasks, onToggle, onDelete }) => (
     <div className="task-list">
         {tasks.length === 0 ? (
-            <div style={{ textAlign: 'center', color: '#888' }}>No tasks yet.</div>
+            <div style={{ textAlign: 'center', color: '#ffffffff', fontSize: '22px', fontWeight: 'bold' }}>
+                No tasks yet.
+            </div>
         ) : (
             tasks.map((task) => <TaskItem key={task.id} task={task} onToggle={onToggle} onDelete={onDelete} />)
         )}

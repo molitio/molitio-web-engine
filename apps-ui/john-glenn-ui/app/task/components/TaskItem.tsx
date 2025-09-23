@@ -9,13 +9,13 @@ interface TaskItemProps {
 
 const TaskItem: React.FC<TaskItemProps> = ({ task, onToggle, onDelete }) => (
     <div className="task-item">
-        <span className="task-status">{task.completed ? '✅' : '⭕'}</span>
+        <span className="task-status">{task.completed ? '✅' : '❓'}</span>
         <span className="task-name" style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
             {task.name}
         </span>
         <div className="task-actions">
             <button onClick={() => onToggle(task.id)} title="Toggle Complete">
-                {task.completed ? 'Undo' : 'Done'}
+                {task.completed ? 'Undo' : 'Complete'}
             </button>
             <button className="delete-btn" onClick={() => onDelete(task.id)} title="Delete">
                 🗑️
