@@ -8,6 +8,7 @@ interface TaskFormProps {
 const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
     const [name, setName] = useState('');
     const [showMaxCharNoti, setShowMaxCharNoti] = useState(false);
+    const [showAddedNoti, setShowAddedNoti] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
@@ -19,7 +20,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
             setName(value);
             if (value.length === 10 && name.length < 10) {
                 setShowMaxCharNoti(true);
-                setTimeout(() => setShowMaxCharNoti(false), 2000);
+                setTimeout(() => setShowMaxCharNoti(false), 4000);
             }
         }
     };
@@ -29,6 +30,8 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
         if (name.trim()) {
             onAdd(name.trim());
             setName('');
+            setShowAddedNoti(true);
+            setTimeout(() => setShowAddedNoti(false), 3000);
         }
     };
 
@@ -62,6 +65,7 @@ const TaskForm: React.FC<TaskFormProps> = ({ onAdd }) => {
             </form>
 
             {showMaxCharNoti && <div className="max-char-noti">Maximum 10 characters allowed</div>}
+            {showAddedNoti && <div className="added-noti">Task added!</div>}
         </div>
     );
 };

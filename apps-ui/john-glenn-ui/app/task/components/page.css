@@ -1,5 +1,6 @@
 body {
     min-height: 100vh;
+    max-height: fit-content;
     background: linear-gradient(135deg, #ff00ff77 0%, #0044ff71 100%);
     /* Optional: add a subtle texture overlay */
     background-blend-mode: multiply;
@@ -15,6 +16,7 @@ h1 {
     font-size: 20pt;
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 50px;
 }
 
 .task-app-container {
@@ -33,12 +35,7 @@ h1 {
     justify-content: center;
 }
 
-.task-input {
-    background: transparent;
-}
-
 .task-list {
-    max-height: 400px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;

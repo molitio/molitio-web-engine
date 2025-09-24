@@ -49,25 +49,38 @@ input:focus {
 
 .max-char-noti {
     position: absolute;
-    top: -30px;
+    top: -35px;
     left: 50%;
     transform: translateX(-50%);
     background-color: #ff4d4f;
     color: white;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     font-size: 0.875rem;
-    animation: fadeOut 2s forwards;
+    animation: fadeInOut 4s forwards;
 }
 
-@keyframes fadeOut {
+.added-noti {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #1eff00 0%, #eeff00 100%);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
     0% {
+        opacity: 0;
+    }
+    15% {
         opacity: 1;
     }
-    10% {
-        opacity: 1;
-    }
-    80% {
+    70% {
         opacity: 1;
     }
     100% {
