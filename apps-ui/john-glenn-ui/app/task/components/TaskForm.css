@@ -61,10 +61,11 @@ input:focus {
 }
 
 .added-noti {
-    position: absolute;
-    top: -35px;
+    position: fixed;
     left: 50%;
+    bottom: 40px;
     transform: translateX(-50%);
+    z-index: 1000;
     background: linear-gradient(90deg, #1eff00 0%, #eeff00 100%);
     color: black;
     padding: 5px 10px;
