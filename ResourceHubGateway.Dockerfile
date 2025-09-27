@@ -1,27 +1,21 @@
+FROM nginx:stable AS builder
 
+ARG NGINX_PORT
+ARG MWE_HOST
+ENV NGINX_PORT=${NGINX_PORT}
+ENV MWE_HOST=${MWE_HOST}
 
+COPY apps-api/resource-hub-gateway/entrypoint.sh ./etc/nginx/entrypoint.sh
+RUN chmod 755 ./etc/nginx/entrypoint.sh
 
+COPY apps-api/resource-hub-gateway/nginx.conf.template ./etc/nginx/nginx.conf.template
+COPY apps-api/resource-hub-gateway/mime.types ./etc/nginx/mime.types
+COPY apps-api/resource-hub-gateway/security-headers.conf ./etc/nginx/security-headers.conf
 
-ARG MONOREPO_ROOT=/usr/src/app
-
-FROM node:24-alpine AS builder
-ARG MONOREPO_ROOT
-WORKDIR $MONOREPO_ROOT
-
-
-COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
-COPY .yarn .yarn
-COPY apps-api/resource-hub-gateway apps-api/resource-hub-gateway
-
-RUN corepack enable
-RUN corepack prepare yarn@4.9.2 --activate
-RUN yarn install
+RUN ./etc/nginx/entrypoint.sh
 
 FROM macbre/nginx-http3:latest AS production
-ARG MONOREPO_ROOT
-WORKDIR $MONOREPO_ROOT
 
-# Copy only necessary config files for production
-COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-gateway/nginx.conf /etc/nginx/nginx.conf
-COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-gateway/mime.types /etc/nginx/mime.types
-COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-gateway/security-headers.conf /etc/nginx/security-headers.conf
+COPY --from=builder /etc/nginx/nginx.conf ./etc/nginx/nginx.conf
+COPY --from=builder /etc/nginx/mime.types ./etc/nginx/mime.types
+COPY --from=builder /etc/nginx/security-headers.conf ./etc/nginx/security-headers.conf

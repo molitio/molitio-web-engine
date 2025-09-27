@@ -62,12 +62,17 @@ services:
         build:
             context: .
             dockerfile: ResourceHubGateway.Dockerfile
+            args:
+                NGINX_PORT: ${NGINX_PORT}
+                MWE_HOST: ${MWE_HOST}
         platform: linux/amd64
         expose:
             - '${NGINX_PORT}'
         ports:
             - ${NGINX_PORT}:${NGINX_PORT}
             - ${NGINX_PORT}:443/udp
+        volumes:
+            - ./apps-ui/mwe-friday-ui/dist:/base/static:ro
 
 volumes:
     resource-hub-db-volume:
