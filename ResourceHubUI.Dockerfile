@@ -21,6 +21,9 @@ FROM node:24-alpine AS production
 ARG MONOREPO_ROOT
 WORKDIR $MONOREPO_ROOT
 
+# Install curl for healthchecks and troubleshooting
+RUN apk add --no-cache curl
+
 COPY --from=builder $MONOREPO_ROOT/package.json ./
 COPY --from=builder $MONOREPO_ROOT/yarn.lock ./
 COPY --from=builder $MONOREPO_ROOT/.yarnrc.yml ./
