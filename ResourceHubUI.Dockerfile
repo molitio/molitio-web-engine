@@ -42,4 +42,4 @@ RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
 RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
-CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start"]
+CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start", "-H", "0.0.0.0"]

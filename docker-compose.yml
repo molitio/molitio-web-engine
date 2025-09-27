@@ -49,6 +49,11 @@ services:
             - '3000'
         ports:
             - 3000:3000
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://localhost:3000']
+            interval: 10s
+            timeout: 5s
+            retries: 5
         environment:
             NODE_ENV: production
 
@@ -57,8 +62,10 @@ services:
         env_file:
             - .env
         depends_on:
-            - mwe-sleeping-dragon-ui
-            - resource-hub-api
+            mwe-sleeping-dragon-ui:
+                condition: service_healthy
+            resource-hub-api:
+                condition: service_started
         build:
             context: .
             dockerfile: ResourceHubGateway.Dockerfile
