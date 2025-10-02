@@ -1,5 +1,6 @@
 import React from 'react';
 import './globals.css';
+import CookieConsent from '../../../packages-ui/ui-core/src/core/components/CookieConsent.tsx'
 
 export const metadata = {
     title: 'John Glenn',
@@ -11,6 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body>
                 <h1 className="text-blue-600">John Glenn</h1>
                 {children}
+                <CookieConsent />
             </body>
         </html>
     );
