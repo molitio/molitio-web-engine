@@ -87,6 +87,8 @@ const RAW_RUNTIME_STATE =
           ["@parcel/watcher", "npm:2.4.1"],\
           ["@types/jest", "npm:29.5.4"],\
           ["@types/node", "npm:20.12.7"],\
+          ["@types/react", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.0"],\
           ["@types/ws", "npm:8.5.10"],\
           ["@typescript-eslint/eslint-plugin", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
@@ -13551,6 +13553,8 @@ const RAW_RUNTIME_STATE =
           ["@parcel/watcher", "npm:2.4.1"],\
           ["@types/jest", "npm:29.5.4"],\
           ["@types/node", "npm:20.12.7"],\
+          ["@types/react", "npm:18.3.0"],\
+          ["@types/react-dom", "npm:18.3.0"],\
           ["@types/ws", "npm:8.5.10"],\
           ["@typescript-eslint/eslint-plugin", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.17.0"],\

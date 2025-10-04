@@ -61,6 +61,7 @@
         "@parcel/watcher": "2.4.1",
         "@types/jest": "29.5.4",
         "@types/node": "20.12.7",
+        "@types/react": "18.3.0",
         "@types/ws": "8.5.10",
         "@typescript-eslint/eslint-plugin": "8.17.0",
         "@typescript-eslint/parser": "8.17.0",
@@ -106,5 +107,8 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "@types/react-dom": "18.3.0"
     }
 }
