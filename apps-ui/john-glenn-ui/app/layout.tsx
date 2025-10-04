@@ -1,6 +1,6 @@
 import React from 'react';
 import './globals.css';
-import CookieConsent from '../../../packages-ui/ui-core/src/core/components/CookieConsent.tsx'
+import { CookieConsent } from '@molitio/mwe-ui-core';
 
 export const metadata = {
     title: 'John Glenn',
