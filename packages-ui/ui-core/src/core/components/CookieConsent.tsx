@@ -57,7 +57,10 @@ const CookieConsent: React.FC = () => {
                                 className={`rounded p-1 px-2 hover:bg-gray-500 ${
                                     cookieAcceptAllButtonState === 'yes' ? 'bg-gray-500' : ''
                                 }`}
-                                onClick={() => setCookieAcceptAllButtonState('yes')}
+                                onClick={() => {
+                                    setCookieAcceptAllButtonState('yes');
+                                    setCookieAcceptAdvertisementButtonState('yes');
+                                }}
                             >
                                 Yes
                             </button>
@@ -65,7 +68,10 @@ const CookieConsent: React.FC = () => {
                                 className={`rounded p-1 px-2 hover:bg-gray-500 ${
                                     cookieAcceptAllButtonState === 'no' ? 'bg-gray-500' : ''
                                 }`}
-                                onClick={() => setCookieAcceptAllButtonState('no')}
+                                onClick={() => {
+                                    setCookieAcceptAllButtonState('no');
+                                    setCookieAcceptAdvertisementButtonState('no');
+                                }}
                             >
                                 No
                             </button>
