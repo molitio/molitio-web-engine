@@ -1,15 +1,44 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
+import { CookieService } from './CookieService';
 
 const CookieConsent: React.FC = () => {
     const [cookieAcceptAllButtonState, setCookieAcceptAllButtonState] = useState<'yes' | 'no'>('no');
     const [cookieAcceptAdvertisementButtonState, setCookieAcceptAdvertisementButtonState] = useState<'yes' | 'no'>(
         'no',
     );
+    const [visible, setVisible] = useState<boolean>(true);
+
+    useEffect(() => {
+        const data = CookieService.get();
+        if (!data) {
+            setVisible(true);
+        } else {
+            setVisible(false);
+        }
+    }, []);
+
+    const handleAccept = () => {
+        CookieService.save({
+            acceptAll: cookieAcceptAllButtonState === 'yes',
+            acceptAdvertisement: cookieAcceptAdvertisementButtonState === 'yes',
+        });
+        setVisible(false);
+    };
+
+    const handleDecline = () => {
+        CookieService.save({
+            acceptAll: false,
+            acceptAdvertisement: false,
+        });
+        setVisible(false);
+    };
+
+    if (!visible) return null;
     return (
         <>
-            <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-blue-950 p-5 md:mx-auto md:h-auto md:w-2/3 lg:mx-auto lg:w-1/2">
+            <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-blue-950 p-5 md:mx-auto md:h-auto md:w-100 lg:mx-auto lg:w-1/2">
                 <div className="grid grid-cols-1">
                     <h3 className="text-left text-white">Cookie Concent</h3>
                 </div>
@@ -66,8 +95,22 @@ const CookieConsent: React.FC = () => {
                     </div>
 
                     <div className="flex justify-end space-x-3">
-                        <button className="rounded bg-gray-300 p-1 px-2 text-black">Accept</button>
-                        <button className="rounded bg-gray-300 p-1 px-2 text-black">Decline</button>
+                        <button
+                            className="rounded bg-gray-300 p-1 px-2 text-black"
+                            onClick={() => {
+                                handleAccept();
+                            }}
+                        >
+                            Accept
+                        </button>
+                        <button
+                            className="rounded bg-gray-300 p-1 px-2 text-black"
+                            onClick={() => {
+                                handleDecline();
+                            }}
+                        >
+                            Decline
+                        </button>
                     </div>
                 </div>
             </div>
