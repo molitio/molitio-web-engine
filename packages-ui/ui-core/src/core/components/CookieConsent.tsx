@@ -8,7 +8,7 @@ const CookieConsent: React.FC = () => {
     const [cookieAcceptAdvertisementButtonState, setCookieAcceptAdvertisementButtonState] = useState<'yes' | 'no'>(
         'no',
     );
-    const [visible, setVisible] = useState<boolean>(true);
+    const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
         const data = CookieService.get();
@@ -85,7 +85,10 @@ const CookieConsent: React.FC = () => {
                                 className={`rounded p-1 px-2 hover:bg-gray-500 ${
                                     cookieAcceptAdvertisementButtonState === 'yes' ? 'bg-gray-500' : ''
                                 }`}
-                                onClick={() => setCookieAcceptAdvertisementButtonState('yes')}
+                                onClick={() => {
+                                    setCookieAcceptAllButtonState('yes');
+                                    setCookieAcceptAdvertisementButtonState('yes');
+                                }}
                             >
                                 Yes
                             </button>
@@ -93,7 +96,10 @@ const CookieConsent: React.FC = () => {
                                 className={`rounded p-1 px-2 hover:bg-gray-500 ${
                                     cookieAcceptAdvertisementButtonState === 'no' ? 'bg-gray-500' : ''
                                 }`}
-                                onClick={() => setCookieAcceptAdvertisementButtonState('no')}
+                                onClick={() => {
+                                    setCookieAcceptAllButtonState('no');
+                                    setCookieAcceptAdvertisementButtonState('no');
+                                }}
                             >
                                 No
                             </button>
