@@ -8,9 +8,14 @@ export default function manifest(): MetadataRoute.Manifest {
             'Sleeping Dragon is the commercial front-end for Molitio.com, providing a powerful, intuitive, and user-friendly interface for commercial users.',
         start_url: '/',
         display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#ffffff',
+        background_color: '#fff',
+        theme_color: '#0a1a2f',
         icons: [
+            {
+                src: '/favicon.ico',
+                sizes: 'any',
+                type: 'image/x-icon',
+            },
             {
                 src: '/android-chrome-192x192.png',
                 sizes: '192x192',
