@@ -1,16 +1,17 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
+/* import React, { useState } from 'react'; */
 /* import { navMenuAtomRW } from '../../context'; */
-import { useAtom } from 'jotai';
+/* import { useAtom } from 'jotai'; */
 
 const NavMenu: React.FC = () => {
     /*     const [navRoot] = useAtom(navMenuAtomRW); */
-    const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null);
+    /*     const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null); */
 
-    const handleNavItemClick = (navBranch: string) => {
+    /*     const handleNavItemClick = (navBranch: string) => {
         setSelectedNavItem(navBranch);
-    };
+    }; */
 
     return (
         <nav>

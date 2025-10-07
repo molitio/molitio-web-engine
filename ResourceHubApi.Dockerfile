@@ -1,35 +1,41 @@
-ARG WORK_DIR="usr/src/base"
-ARG APP_DIR="usr/src/app"
-ARG WORKSPACE="apps-api/resource-hub-api"
-ARG APP_MODULES="packages-api/resource-hub-modules"
 
+ARG MONOREPO_ROOT=/usr/src/app
 
 FROM node:24-alpine AS builder
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
 
-WORKDIR $WORK_DIR
+COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
+COPY .yarn .yarn
+COPY apps-api/resource-hub-api apps-api/resource-hub-api
 
-COPY  . ./
-
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
 RUN yarn install
-
 RUN yarn add global @nestjs/cli
 RUN yarn build-resource-hub
 
-FROM node:24-alpine
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+FROM node:24-alpine AS production
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
 
-WORKDIR $APP_DIR
+COPY --from=builder $MONOREPO_ROOT/package.json ./
+COPY --from=builder $MONOREPO_ROOT/yarn.lock ./
+COPY --from=builder $MONOREPO_ROOT/.yarnrc.yml ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.cjs ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.loader.mjs ./
+COPY --from=builder $MONOREPO_ROOT/tsconfig.json ./
+COPY --from=builder $MONOREPO_ROOT/README.md ./
+COPY --from=builder $MONOREPO_ROOT/LICENSE ./
+COPY --from=builder $MONOREPO_ROOT/.yarn ./.yarn
+COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-api apps-api/resource-hub-api
 
-COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock ./
+ENV YARN_CACHE_FOLDER=/.yarn/cache
 
-COPY --from=builder $WORK_DIR/.yarn ./.yarn
-COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
+EXPOSE 3000
 
-ENV  YARN_CACHE_FOLDER=/.yarn/cache
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
+RUN yarn workspaces focus --production @molitio/mwe-resource-hub-api
 
 CMD ["yarn", "workspace", "@molitio/mwe-resource-hub-api", "start"]

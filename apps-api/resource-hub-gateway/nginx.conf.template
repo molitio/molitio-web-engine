@@ -1,0 +1,39 @@
+user nginx;
+worker_processes    1;
+worker_rlimit_nofile    8192;
+
+events {
+  worker_connections    1024;
+}
+
+http {
+    include /etc/nginx/mime.types;  
+    default_type  application/octet-stream;
+    server_names_hash_bucket_size   128;
+        
+    server {
+        listen ${NGINX_PORT};
+        server_name ${MWE_HOST};
+        server_tokens off;
+
+        # Route /v1/* to Next.js app
+        location ^~ /v1 {
+            proxy_pass http://mwe-sleeping-dragon-ui:3000;
+            proxy_http_version 1.1;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Connection 'upgrade';
+            proxy_set_header Host $host;
+            proxy_cache_bypass $http_upgrade;
+            # Set a per-request nonce using $request_id
+            add_header Content-Security-Policy "script-src 'self' 'nonce-$request_id'; object-src 'none';" always;
+            add_header X-Request-Nonce "$request_id" always;
+        }
+
+        # Route / to static HTML folder
+        location / {
+            root /base/static;
+            index index.html;
+            try_files $uri $uri/ =404;
+        }
+    }
+}

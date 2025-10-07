@@ -1,54 +1,76 @@
 'use client';
 import { AppContext, ContextNode } from '../types';
 import { NavigationSegment } from '../types/NavigationSegment';
-import { TextContentSegment } from '../types/TextContentSegment';
 import React, { createContext, useMemo } from 'react';
 import { Provider as JotaiProvider, atom as jotaiAtom, useAtomValue } from 'jotai';
+import { TextContentNode } from '../types/TextContentSegment';
 
-// Utility: Recursively collect navigation and textContent segments by key
 function collectSegments(nodeTree: Record<string, ContextNode> | undefined) {
     const navSegments: Record<string, NavigationSegment> = {};
-    const textSegments: Record<string, TextContentSegment> = {};
+    const textSegments: Record<string, TextContentNode> = {};
     if (!nodeTree) return { navSegments, textSegments };
     for (const key in nodeTree) {
         const node = nodeTree[key];
         if (node.navigation) navSegments[key] = node.navigation;
-        if (node.textContent) textSegments[key] = node.textContent;
+        if (node.textContent) {
+            // node.textContent is Record<string, TextContentNode>
+            for (const segmentKey in node.textContent) {
+                textSegments[segmentKey] = node.textContent[segmentKey];
+            }
+        }
         if (node.nodeTree) {
             const child = collectSegments(node.nodeTree);
             Object.assign(navSegments, child.navSegments);
             Object.assign(textSegments, child.textSegments);
         }
     }
+    console.log('Collected navSegments:', navSegments);
+    console.log('Collected textSegments:', textSegments);
     return { navSegments, textSegments };
 }
 
-// Atoms for navigation and text content segments
-const navSegmentsAtom = jotaiAtom<Record<string, NavigationSegment>>({});
-const textSegmentsAtom = jotaiAtom<Record<string, TextContentSegment>>({});
+type AppContextRootValues = {
+    navSegments: Record<string, NavigationSegment>;
+    textSegments: Record<string, TextContentNode>;
+};
 
-// Context for easy access (optional, for future expansion)
-export const AppContextRootAtoms = createContext({
-    navSegmentsAtom,
-    textSegmentsAtom,
-});
+export const AppContextRootContext = createContext<AppContextRootValues | undefined>(undefined);
 
-// Provider component
 export const AppContextRootProvider: React.FC<{ appContext: AppContext; children: React.ReactNode }> = ({
     appContext,
     children,
 }) => {
     const { navSegments, textSegments } = useMemo(() => collectSegments(appContext.nodeTree), [appContext.nodeTree]);
 
-    // Create atoms with initial values
     const navAtom = useMemo(() => jotaiAtom<Record<string, NavigationSegment>>(navSegments), [navSegments]);
-    const textAtom = useMemo(() => jotaiAtom<Record<string, TextContentSegment>>(textSegments), [textSegments]);
+    const textAtom = useMemo(() => jotaiAtom<Record<string, TextContentNode>>(textSegments), [textSegments]);
+
+    const navSegmentsValue = useAtomValue(navAtom);
+    const textSegmentsValue = useAtomValue(textAtom);
+
+    const contextValue = useMemo(
+        () => ({
+            navSegments: navSegmentsValue,
+            textSegments: textSegmentsValue,
+        }),
+        [navSegmentsValue, textSegmentsValue],
+    );
 
     return (
         <JotaiProvider>
-            <AppContextRootAtoms.Provider value={{ navSegmentsAtom: navAtom, textSegmentsAtom: textAtom }}>
-                {children}
-            </AppContextRootAtoms.Provider>
+            <AppContextRootContext.Provider value={contextValue}>{children}</AppContextRootContext.Provider>
         </JotaiProvider>
     );
 };
+
+export function useNavSegments() {
+    const ctx = React.useContext(AppContextRootContext);
+    if (!ctx) throw new Error('useNavSegments must be used within AppContextRootProvider');
+    return ctx.navSegments;
+}
+
+export function useTextSegments() {
+    const ctx = React.useContext(AppContextRootContext);
+    if (!ctx) throw new Error('useTextSegments must be used within AppContextRootProvider');
+    return ctx.textSegments;
+}

@@ -4,12 +4,9 @@ import { MWERootLayout } from '@molitio/mwe-ui-core';
 import { Context } from '@/context/AppContext';
 
 export const metadata = {
-    title: 'Sleeping Dragon',
+    title: Context.appDisplayTitle,
 };
 
-const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
-    const { children } = props;
+export default function RootLayout({ children }: React.PropsWithChildren) {
     return <MWERootLayout appContext={{ ...Context }}>{children}hi1</MWERootLayout>;
-};
-
-export default RootLayout;
+}
