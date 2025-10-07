@@ -9,11 +9,15 @@ export type NavBarProps = {
  * NavBar
  *
  * A wrapper for Nav to inject navRoot context as a provider
+ *
+ * TODO: stlye header text properly
  */
 
 const NavBar: React.FC<NavBarProps> = (props) => {
+    const { headerText } = props;
     return (
         <section className="sticky top-0 w-full z-5 bg-gradient-to-172">
+            <h3>{headerText}</h3>
             <NavMenu />
         </section>
     );

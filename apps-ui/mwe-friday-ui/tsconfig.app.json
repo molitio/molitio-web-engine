@@ -9,7 +9,7 @@
         "skipLibCheck": true,
         "moduleResolution": "bundler",
         "allowImportingTsExtensions": true,
-        "verbatimModuleSyntax": true,
+        /*  "verbatimModuleSyntax": true, */
         "moduleDetection": "force",
         "noEmit": true,
         "jsx": "react-jsx",

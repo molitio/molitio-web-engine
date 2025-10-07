@@ -9,9 +9,9 @@
         "deploy": "docusaurus deploy"
     },
     "dependencies": {
-        "@docusaurus/core": "3.8.1",
-        "@docusaurus/preset-classic": "3.8.1",
-        "@docusaurus/theme-classic": "3.8.1",
+        "@docusaurus/core": "3.9.1",
+        "@docusaurus/preset-classic": "3.9.1",
+        "@docusaurus/theme-classic": "3.9.1",
         "@mdx-js/react": "3.1.0",
         "@molitio/mwe-tailwindcss-config": "workspace:*",
         "@types/react": "18.3.0",
