@@ -1,7 +1,8 @@
 'use client';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
-import { CookieService } from './CookieService';
+import { CookieService } from '../services/CookieService';
+import Button from '../../ui-interactive/components/Button';
 
 const CookieConsent: React.FC = () => {
     const [cookieAcceptAllButtonState, setCookieAcceptAllButtonState] = useState<'yes' | 'no'>('no');
