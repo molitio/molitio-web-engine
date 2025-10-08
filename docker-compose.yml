@@ -32,6 +32,55 @@ services:
             - '4000'
         ports:
             - 4000:4000
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://resource-hub-api:4000/health']
+            interval: 10s
+            timeout: 5s
+            retries: 5
+
+    mwe-sleeping-dragon-ui:
+        container_name: mwe-sleeping-dragon-ui
+        build:
+            context: .
+            dockerfile: ResourceHubUI.Dockerfile
+        depends_on:
+            - resource-hub-api
+        expose:
+            - '3000'
+        ports:
+            - 3000:3000
+        healthcheck:
+            test: ['CMD', 'curl', '-f', 'http://localhost:3000']
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        environment:
+            NODE_ENV: production
+
+    resource-hub-gateway:
+        container_name: resource-hub-gateway
+        env_file:
+            - .env
+        depends_on:
+            mwe-sleeping-dragon-ui:
+                condition: service_healthy
+            resource-hub-api:
+                condition: service_started
+        build:
+            context: .
+            dockerfile: ResourceHubGateway.Dockerfile
+            args:
+                NGINX_PORT: ${NGINX_PORT}
+                MWE_HOST: ${MWE_HOST}
+        platform: linux/amd64
+        expose:
+            - '${NGINX_PORT}'
+        ports:
+            - ${NGINX_PORT}:${NGINX_PORT}
+            - ${NGINX_PORT}:443/udp
+        volumes:
+            - ./apps-ui/mwe-friday-ui/dist:/base/static:ro
+
 volumes:
     resource-hub-db-volume:
         driver: local

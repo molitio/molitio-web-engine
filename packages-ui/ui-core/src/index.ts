@@ -72,9 +72,3 @@ export * from './context';
  *
  */
 export * from './ui-form';
-
-/**
- * Image Section
- *
- */
-export * from './ui-image-section';

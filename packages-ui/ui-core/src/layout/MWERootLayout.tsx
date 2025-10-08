@@ -1,9 +1,7 @@
 'use client';
 import React, { Suspense } from 'react';
 
-import { AppContextRootProvider, AppContextRootAtoms } from '../context/app-context/components/AppContextRootProvider';
-import { useContext } from 'react';
-import { useAtomValue } from 'jotai';
+import { AppContextRootProvider, useNavSegments } from '../context/app-context/components/AppContextRootProvider';
 import { Loading } from '../ui-common';
 import { AppContext } from '../context';
 
@@ -11,10 +9,9 @@ export type RootLayoutProps = {
     appContext: AppContext;
 };
 
-// Example component to display nav segment keys
+// Example component to display nav segment keys using custom hook
 const NavSegmentKeys: React.FC = () => {
-    const { navSegmentsAtom } = useContext(AppContextRootAtoms);
-    const navSegments = useAtomValue(navSegmentsAtom);
+    const navSegments = useNavSegments();
     return (
         <div style={{ padding: 8, background: '#f0f0f0', marginBottom: 8 }}>
             <strong>Nav Segments:</strong> {Object.keys(navSegments).join(', ')}

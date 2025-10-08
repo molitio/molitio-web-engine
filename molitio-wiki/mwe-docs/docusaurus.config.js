@@ -4,10 +4,14 @@ module.exports = {
     url: 'https://molitio.com',
     baseUrl: '/mwe-docs/',
     onBrokenLinks: 'warn',
-    onBrokenMarkdownLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'molitio',
     projectName: 'molitio-web-engine',
+    markdown: {
+        hooks: {
+            onBrokenMarkdownLinks: 'warn',
+        },
+    },
     i18n: {
         defaultLocale: 'en',
         locales: ['en'],

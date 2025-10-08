@@ -25,10 +25,12 @@ export const DefaultApplicationContextRoot: AppContext = {
                     type: 'text',
                     textContent: {
                         main: {
-                            contentTitle: 'Welcome to Molitio web engine default application.',
-                            textContent: {
-                                description: 'This is a demonstration of the text content node concept.',
-                            },
+                            en: { textContent: 'Welcome to Molitio web engine default application.' },
+                            hu: { textContent: 'Üdvözlünk a Molitio web engine alapértelmezett alkalmazásában.' },
+                        },
+                        description: {
+                            en: { textContent: 'This is a demonstration of the text content node concept.' },
+                            hu: { textContent: 'Ez a szövegtartalom node koncepciójának bemutatása.' },
                         },
                     },
                 },
