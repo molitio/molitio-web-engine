@@ -2,13 +2,60 @@
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import { CookieService } from '../services/CookieService';
-import Button from '../../ui-interactive/components/Button';
+import { Button } from '../../ui-interactive';
+import { CheckBox } from '../../ui-interactive';
+import { Props } from 'next/script';
+
+type CookieOption = {
+    id: string;
+    description: string;
+    visible: boolean;
+};
+
+const Cookie_Options: CookieOption[] = [
+    {
+        id: 'acceptAll',
+        description: 'Accept All Cookies',
+        visible: true,
+    },
+    {
+        id: 'acceptAdvertisement',
+        description: 'Accept Advertisement Cookies',
+        visible: true,
+    }
+];
+
+const CookieOptionComponentsLoader = () => {
+    const [visible, setVisible] = useState(false);
+
+    const [cookieState, setCookieStates] = useState<Record<string, 'yes' | 'no'>>({});
+
+    useEffect(() => {
+        const data = CookieService.get();
+        if (!data) {
+            setVisible(true);
+        } else {
+            setVisible(false);
+        }
+    }, []);
+
+    const handleChange = (id: string) => {
+        
+    };
+
+    Cookie_Options.map(option => {
+        return (
+            <div key={option.id} className="grid grid-cols-[1fr_auto] justify-between text-white">
+                <span className="text-left">{option.description}</span>
+                <div className="flex space-x-5">
+
+                </div>
+            </div>
+        );
+    })
+};
 
 const CookieConsent: React.FC = () => {
-    const [cookieAcceptAllButtonState, setCookieAcceptAllButtonState] = useState<'yes' | 'no'>('no');
-    const [cookieAcceptAdvertisementButtonState, setCookieAcceptAdvertisementButtonState] = useState<'yes' | 'no'>(
-        'no',
-    );
     const [visible, setVisible] = useState<boolean>(false);
 
     useEffect(() => {
@@ -49,64 +96,7 @@ const CookieConsent: React.FC = () => {
                         our traffic. You can choose to accept all cookies or manage your preferences.
                     </h3>
                 </div>
-
-                <div className="space-y-7">
-                    <div className="grid grid-cols-[1fr_auto] justify-between text-white">
-                        <span className="text-left">Accept All Cookies</span>
-                        <div className="flex space-x-5">
-                            <button
-                                className={`rounded p-1 px-2 hover:bg-gray-500 ${
-                                    cookieAcceptAllButtonState === 'yes' ? 'bg-gray-500' : ''
-                                }`}
-                                onClick={() => {
-                                    setCookieAcceptAllButtonState('yes');
-                                    setCookieAcceptAdvertisementButtonState('yes');
-                                }}
-                            >
-                                Yes
-                            </button>
-                            <button
-                                className={`rounded p-1 px-2 hover:bg-gray-500 ${
-                                    cookieAcceptAllButtonState === 'no' ? 'bg-gray-500' : ''
-                                }`}
-                                onClick={() => {
-                                    setCookieAcceptAllButtonState('no');
-                                    setCookieAcceptAdvertisementButtonState('no');
-                                }}
-                            >
-                                No
-                            </button>
-                        </div>
-                    </div>
-
-                    <div className="grid grid-cols-[1fr_auto] justify-between text-white">
-                        <span className="text-left">Accept Advertisement Cookies</span>
-                        <div className="flex space-x-5">
-                            <button
-                                className={`rounded p-1 px-2 hover:bg-gray-500 ${
-                                    cookieAcceptAdvertisementButtonState === 'yes' ? 'bg-gray-500' : ''
-                                }`}
-                                onClick={() => {
-                                    setCookieAcceptAllButtonState('yes');
-                                    setCookieAcceptAdvertisementButtonState('yes');
-                                }}
-                            >
-                                Yes
-                            </button>
-                            <button
-                                className={`rounded p-1 px-2 hover:bg-gray-500 ${
-                                    cookieAcceptAdvertisementButtonState === 'no' ? 'bg-gray-500' : ''
-                                }`}
-                                onClick={() => {
-                                    setCookieAcceptAllButtonState('no');
-                                    setCookieAcceptAdvertisementButtonState('no');
-                                }}
-                            >
-                                No
-                            </button>
-                        </div>
-                    </div>
-
+                
                     <div className="flex justify-end space-x-3">
                         <button
                             className="rounded bg-gray-300 p-1 px-2 text-black"
