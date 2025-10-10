@@ -42,6 +42,8 @@
         "@nestjs/graphql": "12.1.1",
         "@nestjs/mongoose": "10.0.6",
         "@nestjs/platform-fastify": "10.3.8",
+        "@swc/cli": "0.3.12",
+        "@swc/core": "1.4.12",
         "ajv": "8.17.1",
         "chokidar": "3.6.0",
         "class-transformer": "0.5.1",
@@ -54,8 +56,6 @@
     },
     "devDependencies": {
         "@nestjs/testing": "10.0.0",
-        "@swc/cli": "0.3.12",
-        "@swc/core": "1.4.12",
         "@types/ajv": "1.0.4",
         "@types/jest": "29.5.2",
         "@types/node": "20.3.1",
