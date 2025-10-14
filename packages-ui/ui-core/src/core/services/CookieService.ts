@@ -1,7 +1,4 @@
-export interface CookieConsentData {
-    acceptAll: boolean;
-    acceptAdvertisement: boolean;
-}
+export type CookieConsentData = Record<string, boolean>;
 
 const cookie_key = 'cookie-consent';
 
@@ -22,4 +19,9 @@ export const CookieService = {
             return null;
         }
     },
+
+    isAccepted: (cookieId: string): boolean => {
+        const data = CookieService.get();
+        return data?.[cookieId] || false;
+    }
 };
