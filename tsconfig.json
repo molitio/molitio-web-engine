@@ -1,6 +1,6 @@
 {
     "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "packages_off_build"],
+    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "molitio-wiki/**"],
     "compilerOptions": {
         "jsx": "react",
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
@@ -9,7 +9,7 @@
         "target": "es2022",
         "module": "Node16",
         "paths": {
-            "@molitio/*": ["./packages/*"]
+            "@molitio/*": ["./packages-ui/*", "./apps-ui/*", "./apps-api/*"]
         },
         "isolatedModules": true,
         "importHelpers": true,
