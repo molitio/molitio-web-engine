@@ -6487,7 +6487,6 @@ __metadata:
     eslint-config-next: "npm:15.0.4"
     eslint-config-prettier: "npm:9.1.0"
     eslint-plugin-prettier: "npm:5.2.1"
-    grecaptcha: "npm:1.0.3"
     jotai: "npm:2.8.3"
     next: "npm:15.5.4"
     postcss: "npm:8.4.36"
@@ -12202,13 +12201,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"centra@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "centra@npm:1.0.1"
-  checksum: 10/e4a25f5effa73e7949d08504977a20607355d508e16f9ca2e72688c4770b2fdef854ac830d632db04b34379d4f07c8b3bc1ae5415da6220b53fe453fb3c26d7a
-  languageName: node
-  linkType: hard
-
 "chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.1, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
@@ -17088,15 +17080,6 @@ __metadata:
     section-matter: "npm:^1.0.0"
     strip-bom-string: "npm:^1.0.0"
   checksum: 10/9a8f146a7a918d2524d5d60e0b4d45729f5bca54aa41247f971d9e4bc984943fda58159435763d463ec2abc8a0e238e807bd9b05e3a48f4a613a325c9dd5ad0c
-  languageName: node
-  linkType: hard
-
-"grecaptcha@npm:1.0.3":
-  version: 1.0.3
-  resolution: "grecaptcha@npm:1.0.3"
-  dependencies:
-    centra: "npm:^1.0.1"
-  checksum: 10/eedb02c9425a5cd610cee5703ea00c9da98da4605f8828c9dfc601aa8447c01bbc6c8d3e700d40192556968066059f8b40f9294392d85af4591775e7cff3c80b
   languageName: node
   linkType: hard
 

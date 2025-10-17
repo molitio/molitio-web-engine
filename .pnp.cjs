@@ -13020,7 +13020,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-next", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:15.0.4"],\
           ["eslint-config-prettier", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:5.2.1"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["jotai", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:2.8.3"],\
           ["next", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:15.5.4"],\
           ["postcss", "npm:8.4.36"],\
@@ -20786,15 +20785,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["centra", [\
-      ["npm:1.0.1", {\
-        "packageLocation": "./.yarn/cache/centra-npm-1.0.1-9894efd752-e4a25f5eff.zip/node_modules/centra/",\
-        "packageDependencies": [\
-          ["centra", "npm:1.0.1"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["chalk", [\
       ["npm:1.1.3", {\
         "packageLocation": "./.yarn/cache/chalk-npm-1.1.3-59144c3a87-abcf10da02.zip/node_modules/chalk/",\
@@ -26831,16 +26821,6 @@ const RAW_RUNTIME_STATE =
           ["kind-of", "npm:6.0.3"],\
           ["section-matter", "npm:1.0.0"],\
           ["strip-bom-string", "npm:1.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["grecaptcha", [\
-      ["npm:1.0.3", {\
-        "packageLocation": "./.yarn/cache/grecaptcha-npm-1.0.3-3d101910a3-eedb02c942.zip/node_modules/grecaptcha/",\
-        "packageDependencies": [\
-          ["centra", "npm:1.0.1"],\
-          ["grecaptcha", "npm:1.0.3"]\
         ],\
         "linkType": "HARD"\
       }]\
