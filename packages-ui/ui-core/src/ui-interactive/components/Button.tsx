@@ -1,5 +1,10 @@
 import React from 'react';
-import { ButtonProps } from '../types';
+import { ButtonType } from '../types';
+
+export type ButtonProps = {
+    type: ButtonType;
+    onClick?: () => void;
+} & React.PropsWithChildren;
 
 export const Button: React.FC<ButtonProps> = (props) => {
     const { children } = props;

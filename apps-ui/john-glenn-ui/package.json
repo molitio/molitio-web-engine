@@ -27,6 +27,7 @@
         "@molitio/mwe-tailwindcss-config": "workspace:0.2.0",
         "@molitio/mwe-ui-core": "workspace:0.2.0",
         "@next/eslint-plugin-next": "15.0.4",
+        "@types/grecaptcha": "3.0.9",
         "@types/node": "20.12.7",
         "@types/react": "18.3.0",
         "@types/react-dom": "18.3.0",
