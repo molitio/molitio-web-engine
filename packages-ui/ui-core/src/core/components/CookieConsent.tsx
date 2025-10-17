@@ -55,7 +55,6 @@ const CookieConsent: React.FC = () => {
     useEffect(() => {
         const data = CookieService.get();
         if (!data) {
-            console.log('data:', data);
             setVisible(true);
             const initialStates: CookieConsentData = {};
             CookieOptions.forEach((opt) => {
