@@ -14,10 +14,7 @@
         "target": "ES2019",
         "sourceMap": true,
         "outDir": "./dist",
-        "baseUrl": ".",
-        "paths": {
-            "@molitio/resource-hub-modules": ["../../packages-api/resource-hub-modules/*"]
-        }
+        "baseUrl": "."
     },
 
     "exclude": ["./dist"]

@@ -5,20 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "yarn storybook",
+            "name": "yarn dev",
             "type": "node",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "yarn",
-            "runtimeArgs": ["run", "storybook"]
-        },
-        {
-            "name": "yarn launch",
-            "type": "node",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "runtimeExecutable": "yarn",
-            "runtimeArgs": ["run", "build"]
+            "runtimeArgs": ["dev"]
         }
     ]
 }
