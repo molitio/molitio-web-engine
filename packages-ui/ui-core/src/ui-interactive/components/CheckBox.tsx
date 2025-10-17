@@ -1,7 +1,7 @@
 import React from 'react';
 import { CheckBoxProps } from '../types';
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ id, name, checked = false, label, disabled, onChanged }) => {
+export const CheckBox: React.FC<CheckBoxProps> = ({ id, name, checked = false, disabled, onChanged }) => {
     return (
         <input
             type="checkbox"

@@ -1,8 +1,12 @@
+import path from 'path';
 import { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
+    transpilePackages: ['@molitio/mwe-ui-core'],
+    outputFileTracingRoot: path.resolve(__dirname, '../..'),
+    trailingSlash: false,
     async headers() {
         return [
             {
