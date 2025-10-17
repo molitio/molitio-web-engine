@@ -1,8 +1,9 @@
 import React from 'react';
 import './globals.css';
 import { CookieConsent } from '@molitio/mwe-ui-core';
+import { Metadata } from 'next';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: 'John Glenn',
 };
 

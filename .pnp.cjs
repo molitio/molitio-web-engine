@@ -12990,7 +12990,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react-hooks", "virtual:288a604bb101705857f69dc45ac2a453eeccf0fcd7c2cd07a30540500fd4e4613af29fa496639c4bb9816580fee64ae35fbcf99d9d9a7ae8d85079a15ba6daf4#npm:5.2.0"],\
           ["eslint-plugin-react-refresh", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:0.4.20"],\
           ["globals", "npm:16.3.0"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["postcss", "npm:8.4.36"],\
           ["react", "npm:19.2.0"],\
           ["react-dom", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:19.2.0"],\
@@ -13177,7 +13176,6 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:11.1.5"],\
           ["@tailwindcss/typography", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.5.15"],\
-          ["@types/autoprefixer", null],\
           ["@types/eslint", "npm:8.56.12"],\
           ["@types/formik", null],\
           ["@types/grecaptcha", "npm:3.0.9"],\
@@ -13197,7 +13195,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:5.2.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["formik", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:2.4.6"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["jotai", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:2.8.3"],\
           ["next", "virtual:6fb522040a599563521f5121434413d458edc6fac023073fae3a0fd5871683cd963a720c36ca5d0a883025453824cfd88e69fdb45e409939f1fb3783f2df84ff#npm:15.5.4"],\
           ["postcss", "npm:8.4.36"],\
@@ -13220,14 +13217,11 @@ const RAW_RUNTIME_STATE =
           ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
-          "@types/autoprefixer",\
           "@types/formik",\
           "@types/jotai",\
           "@types/next",\
           "@types/tailwindcss",\
           "@types/yup",\
-          "autoprefixer",\
-          "grecaptcha",\
           "react-dom",\
           "react",\
           "tailwindcss"\
@@ -13258,7 +13252,6 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:11.1.5"],\
           ["@tailwindcss/typography", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.5.15"],\
-          ["@types/autoprefixer", null],\
           ["@types/eslint", "npm:8.56.12"],\
           ["@types/formik", null],\
           ["@types/grecaptcha", "npm:3.0.9"],\
@@ -13278,7 +13271,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:5.2.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["formik", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:2.4.6"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["jotai", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:2.8.3"],\
           ["next", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:15.5.4"],\
           ["postcss", "npm:8.4.36"],\
@@ -13301,14 +13293,11 @@ const RAW_RUNTIME_STATE =
           ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
-          "@types/autoprefixer",\
           "@types/formik",\
           "@types/jotai",\
           "@types/next",\
           "@types/tailwindcss",\
           "@types/yup",\
-          "autoprefixer",\
-          "grecaptcha",\
           "jotai",\
           "next",\
           "react-dom",\
@@ -13341,7 +13330,6 @@ const RAW_RUNTIME_STATE =
           ["@rollup/plugin-terser", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.4.4"],\
           ["@rollup/plugin-typescript", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:11.1.5"],\
           ["@tailwindcss/typography", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:0.5.15"],\
-          ["@types/autoprefixer", null],\
           ["@types/eslint", "npm:8.56.12"],\
           ["@types/formik", null],\
           ["@types/grecaptcha", "npm:3.0.9"],\
@@ -13361,7 +13349,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:5.2.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["formik", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:2.4.6"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["jotai", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:2.8.3"],\
           ["next", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:15.5.4"],\
           ["postcss", "npm:8.4.36"],\
@@ -13384,13 +13371,11 @@ const RAW_RUNTIME_STATE =
           ["yup", "npm:1.4.0"]\
         ],\
         "packagePeers": [\
-          "@types/autoprefixer",\
           "@types/formik",\
           "@types/jotai",\
           "@types/next",\
           "@types/tailwindcss",\
           "@types/yup",\
-          "autoprefixer",\
           "next",\
           "react-dom",\
           "react",\
@@ -13436,7 +13421,6 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-prettier", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:5.2.1"],\
           ["fast-glob", "npm:3.3.2"],\
           ["formik", "virtual:9c7cdecbc336d6b7e9092921699fee18736ee4f3511c277860eb0fd12455b6394b64a28c82f74bb5b6c5e6018631acc876a5b085965f40dbcfc0f0591250d266#npm:2.4.6"],\
-          ["grecaptcha", "npm:1.0.3"],\
           ["jotai", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:2.8.3"],\
           ["next", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:15.5.4"],\
           ["postcss", "npm:8.4.36"],\

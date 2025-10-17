@@ -6458,7 +6458,6 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     eslint-plugin-react-refresh: "npm:0.4.20"
     globals: "npm:16.3.0"
-    grecaptcha: "npm:1.0.3"
     postcss: "npm:8.4.36"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
@@ -6665,7 +6664,6 @@ __metadata:
     eslint-plugin-prettier: "npm:5.2.1"
     fast-glob: "npm:3.3.2"
     formik: "npm:2.4.6"
-    grecaptcha: "npm:1.0.3"
     jotai: "npm:2.8.3"
     next: "npm:15.5.4"
     postcss: "npm:8.4.36"
@@ -6687,9 +6685,7 @@ __metadata:
     typescript: "npm:5.2.2"
     yup: "npm:1.4.0"
   peerDependencies:
-    autoprefixer: 10.4.19
     formik: 2.4.6
-    grecaptcha: 1.0.3
     jotai: 2.8.3
     next: 15.5.4
     react: 19.2.0

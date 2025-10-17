@@ -9,7 +9,7 @@ type CookieOption = {
     visible: boolean;
 };
 
-const Cookie_Options: CookieOption[] = [
+const CookieOptions: CookieOption[] = [
     {
         id: 'acceptAll',
         description: 'Accept All Cookies',
@@ -24,7 +24,7 @@ const Cookie_Options: CookieOption[] = [
         id: 'acceptTestCookies',
         description: 'Accept Test Cookies',
         visible: true,
-    }
+    },
 ];
 
 const CookieOptionComponent: React.FC<{
@@ -42,12 +42,7 @@ const CookieOptionComponent: React.FC<{
                 {option.description}
             </label>
             <div className="flex space-x-2 items-center">
-                <CheckBox
-                    id={option.id}
-                    name={option.id}
-                    checked={checked}
-                    onChanged={handleCheckboxChange}
-                />
+                <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
             </div>
         </div>
     );
@@ -60,16 +55,17 @@ const CookieConsent: React.FC = () => {
     useEffect(() => {
         const data = CookieService.get();
         if (!data) {
+            console.log('data:', data);
             setVisible(true);
             const initialStates: CookieConsentData = {};
-            Cookie_Options.forEach(opt => {
+            CookieOptions.forEach((opt) => {
                 initialStates[opt.id] = false;
             });
             setCookieStates(initialStates);
         } else {
             setVisible(false);
             const mergedStates: CookieConsentData = {};
-            Cookie_Options.forEach(opt => {
+            CookieOptions.forEach((opt) => {
                 mergedStates[opt.id] = data[opt.id] || false;
             });
             setCookieStates(mergedStates);
@@ -77,10 +73,10 @@ const CookieConsent: React.FC = () => {
     }, []);
 
     const handleOptionChange = (id: string, checked: boolean) => {
-        setCookieStates(prev => {
+        setCookieStates((prev) => {
             const newState = {
                 ...prev,
-                [id]: checked
+                [id]: checked,
             };
             return newState;
         });
@@ -93,7 +89,7 @@ const CookieConsent: React.FC = () => {
 
     const handleDecline = () => {
         const declineData: CookieConsentData = {};
-        Cookie_Options.forEach(opt => {
+        CookieOptions.forEach((opt) => {
             declineData[opt.id] = false;
         });
         CookieService.save(declineData);
@@ -102,7 +98,7 @@ const CookieConsent: React.FC = () => {
 
     const handleAcceptAll = () => {
         const acceptAllData: CookieConsentData = {};
-        Cookie_Options.forEach(opt => {
+        CookieOptions.forEach((opt) => {
             acceptAllData[opt.id] = true;
         });
         CookieService.save(acceptAllData);
@@ -118,36 +114,27 @@ const CookieConsent: React.FC = () => {
             </div>
             <div className="flex flex-wrap">
                 <p className="text-left text-white">
-                    We use cookies to improve your browsing experience, to show personalized content, and to analyze
-                    our traffic. You can choose to accept all cookies or manage your preferences.
+                    We use cookies to improve your browsing experience, to show personalized content, and to analyze our
+                    traffic. You can choose to accept all cookies or manage your preferences.
                 </p>
             </div>
 
             <div className="space-y-3">
-                {Cookie_Options
-                    .filter(opt => opt.visible)
-                    .map(option => (
-                        <CookieOptionComponent
-                            key={option.id}
-                            option={option}
-                            checked={cookieStates[option.id] || false}
-                            onChange={handleOptionChange}
-                        />
-                    ))
-                }
+                {CookieOptions.filter((opt) => opt.visible).map((option) => (
+                    <CookieOptionComponent
+                        key={option.id}
+                        option={option}
+                        checked={cookieStates[option.id] || false}
+                        onChange={handleOptionChange}
+                    />
+                ))}
             </div>
 
             <div className="flex justify-end space-x-3">
-                <button
-                    className="rounded bg-gray-600 p-2 px-4 text-white hover:bg-gray-700"
-                    onClick={handleDecline}
-                >
+                <button className="rounded bg-gray-600 p-2 px-4 text-white hover:bg-gray-700" onClick={handleDecline}>
                     Decline All
                 </button>
-                <button
-                    className="rounded bg-blue-600 p-2 px-4 text-white hover:bg-blue-700"
-                    onClick={handleAccept}
-                >
+                <button className="rounded bg-blue-600 p-2 px-4 text-white hover:bg-blue-700" onClick={handleAccept}>
                     Save Preferences
                 </button>
                 <button
