@@ -3,7 +3,7 @@ import React from 'react';
 const MWEApp: React.FC = () => {
     return (
         <div className="bg-primary">
-            <h1>FRIDAY client</h1>
+            <h1 className="text-pink-500">Szia Blanka</h1>
         </div>
     );
 };

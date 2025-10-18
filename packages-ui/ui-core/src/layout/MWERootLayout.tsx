@@ -13,7 +13,7 @@ export type RootLayoutProps = {
 const NavSegmentKeys: React.FC = () => {
     const navSegments = useNavSegments();
     return (
-        <div style={{ padding: 8, background: '#f0f0f0', marginBottom: 8 }}>
+        <div className="p-2 mb-2 bg-bf-secondary">
             <strong>Nav Segments:</strong> {Object.keys(navSegments).join(', ')}
         </div>
     );
