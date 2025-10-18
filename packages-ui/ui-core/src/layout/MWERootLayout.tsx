@@ -29,7 +29,7 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
         <html
             lang="en"
             data-theme="sleeping-dragon"
-            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-primary overflow-x-auto overflow-y-auto list-none"
+            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-secondary text-base bg-secondary overflow-x-auto overflow-y-auto list-none"
         >
             <body>
                 <Suspense fallback={<Loading />}>
