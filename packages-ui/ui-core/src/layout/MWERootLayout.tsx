@@ -13,7 +13,7 @@ export type RootLayoutProps = {
 const NavSegmentKeys: React.FC = () => {
     const navSegments = useNavSegments();
     return (
-        <div style={{ padding: 8, background: '#f0f0f0', marginBottom: 8 }}>
+        <div className="p-2 mb-2 bg-bf-secondary">
             <strong>Nav Segments:</strong> {Object.keys(navSegments).join(', ')}
         </div>
     );
@@ -29,7 +29,7 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
         <html
             lang="en"
             data-theme="sleeping-dragon"
-            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-primary overflow-x-auto overflow-y-auto list-none"
+            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-secondary overflow-x-auto overflow-y-auto list-none"
         >
             <body>
                 <Suspense fallback={<Loading />}>

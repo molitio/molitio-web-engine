@@ -118,7 +118,6 @@ const RAW_RUNTIME_STATE =
           ["ts-morph", "npm:22.0.0"],\
           ["ts-node", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.9.2"],\
           ["tslib", "npm:2.6.2"],\
-          ["typedoc", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.25.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -13510,7 +13509,6 @@ const RAW_RUNTIME_STATE =
           ["ts-morph", "npm:22.0.0"],\
           ["ts-node", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.9.2"],\
           ["tslib", "npm:2.6.2"],\
-          ["typedoc", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.25.0"],\
           ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
         ],\
         "linkType": "SOFT"\
@@ -19129,15 +19127,6 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/ansi-regex-npm-6.2.2-f2d6691eb1-9b17ce2c6d.zip/node_modules/ansi-regex/",\
         "packageDependencies": [\
           ["ansi-regex", "npm:6.2.2"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["ansi-sequence-parser", [\
-      ["npm:1.1.3", {\
-        "packageLocation": "./.yarn/cache/ansi-sequence-parser-npm-1.1.3-f11425c4a6-0f298aad5c.zip/node_modules/ansi-sequence-parser/",\
-        "packageDependencies": [\
-          ["ansi-sequence-parser", "npm:1.1.3"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -30440,13 +30429,6 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:4.3.0", {\
-        "packageLocation": "./.yarn/cache/marked-npm-4.3.0-e7ef9e874f-c830bb4cb3.zip/node_modules/marked/",\
-        "packageDependencies": [\
-          ["marked", "npm:4.3.0"]\
-        ],\
-        "linkType": "HARD"\
-      }],\
       ["npm:7.0.3", {\
         "packageLocation": "./.yarn/cache/marked-npm-7.0.3-10a406a93b-011ee4a783.zip/node_modules/marked/",\
         "packageDependencies": [\
@@ -38336,19 +38318,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["shiki", [\
-      ["npm:0.14.7", {\
-        "packageLocation": "./.yarn/cache/shiki-npm-0.14.7-a8806632f6-be3f2444c6.zip/node_modules/shiki/",\
-        "packageDependencies": [\
-          ["ansi-sequence-parser", "npm:1.1.3"],\
-          ["jsonc-parser", "npm:3.3.1"],\
-          ["shiki", "npm:0.14.7"],\
-          ["vscode-oniguruma", "npm:1.7.0"],\
-          ["vscode-textmate", "npm:8.0.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["side-channel", [\
       ["npm:1.1.0", {\
         "packageLocation": "./.yarn/cache/side-channel-npm-1.1.0-4993930974-7d53b9db29.zip/node_modules/side-channel/",\
@@ -40781,32 +40750,6 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
-    ["typedoc", [\
-      ["npm:0.25.0", {\
-        "packageLocation": "./.yarn/cache/typedoc-npm-0.25.0-15b82dad2e-4a3a318c02.zip/node_modules/typedoc/",\
-        "packageDependencies": [\
-          ["typedoc", "npm:0.25.0"]\
-        ],\
-        "linkType": "SOFT"\
-      }],\
-      ["virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.25.0", {\
-        "packageLocation": "./.yarn/__virtual__/typedoc-virtual-31c4165ee4/0/cache/typedoc-npm-0.25.0-15b82dad2e-4a3a318c02.zip/node_modules/typedoc/",\
-        "packageDependencies": [\
-          ["@types/typescript", null],\
-          ["lunr", "npm:2.3.9"],\
-          ["marked", "npm:4.3.0"],\
-          ["minimatch", "npm:9.0.5"],\
-          ["shiki", "npm:0.14.7"],\
-          ["typedoc", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.25.0"],\
-          ["typescript", "patch:typescript@npm%3A5.2.2#optional!builtin<compat/typescript>::version=5.2.2&hash=f3b441"]\
-        ],\
-        "packagePeers": [\
-          "@types/typescript",\
-          "typescript"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
     ["typescript", [\
       ["patch:typescript@npm%3A4.9.5#optional!builtin<compat/typescript>::version=4.9.5&hash=289587", {\
         "packageLocation": "./.yarn/cache/typescript-patch-32ada147aa-5659316360.zip/node_modules/typescript/",\
@@ -41595,24 +41538,6 @@ const RAW_RUNTIME_STATE =
           "terser",\
           "tsx",\
           "yaml"\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["vscode-oniguruma", [\
-      ["npm:1.7.0", {\
-        "packageLocation": "./.yarn/cache/vscode-oniguruma-npm-1.7.0-07cc55fbcc-7da9d21459.zip/node_modules/vscode-oniguruma/",\
-        "packageDependencies": [\
-          ["vscode-oniguruma", "npm:1.7.0"]\
-        ],\
-        "linkType": "HARD"\
-      }]\
-    ]],\
-    ["vscode-textmate", [\
-      ["npm:8.0.0", {\
-        "packageLocation": "./.yarn/cache/vscode-textmate-npm-8.0.0-2deb0cc7cf-9fa7d66d60.zip/node_modules/vscode-textmate/",\
-        "packageDependencies": [\
-          ["vscode-textmate", "npm:8.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\

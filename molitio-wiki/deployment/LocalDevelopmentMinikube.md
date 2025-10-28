@@ -1,4 +1,4 @@
-# Local Development with Minikube (Kubernetes)
+# Local Development with Minikube (Kubernetes) //NOT IMPLEMENTED YET
 
 This guide describes how to set up and run the Molitio Web Engine—including all containerized apps and services—locally using Minikube and Kubernetes. This is the canonical approach for local development and testing.
 

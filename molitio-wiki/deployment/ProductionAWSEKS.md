@@ -1,4 +1,4 @@
-# Production Deployment on AWS EKS
+# Production Deployment on AWS EKS //NOT IMPLEMENTED YET
 
 This document outlines the strategy for deploying the Resource Hub API and related services to a production environment on AWS Elastic Kubernetes Service (EKS).
 

@@ -1,4 +1,4 @@
-# Deployment Strategy
+# Deployment Strategy //NOT IMPLEMENTED YET
 
 This section outlines the deployment strategies for the Molitio Web Engine, focusing on a Kubernetes-first approach for all environments. Docker Compose is deprecated and no longer supported.
 
