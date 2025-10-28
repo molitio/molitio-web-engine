@@ -1,9 +1,10 @@
 import React from 'react';
-import './globals.css';
+import { Metadata } from 'next';
 import { MWERootLayout } from '@molitio/mwe-ui-core';
 import { Context } from '@/context/AppContext';
+import './globals.css';
 
-export const metadata = {
+export const metadata: Metadata = {
     title: Context.appDisplayTitle,
 };
 

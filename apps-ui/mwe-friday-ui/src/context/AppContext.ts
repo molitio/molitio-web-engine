@@ -1,8 +1,8 @@
 import type { AppContext } from '@molitio/mwe-ui-core';
 
 export const Context: AppContext = {
-    appId: 'sleeping-dragon-ui',
-    appName: '@molitio/mwe-sleeping-dragon-ui',
+    appId: 'friday-ui',
+    appName: '@molitio/mwe-friday-ui',
     appDisplayTitle: 'Molitio',
     nodeTree: {
         root: {

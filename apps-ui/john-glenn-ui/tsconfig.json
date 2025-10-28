@@ -11,8 +11,7 @@
             }
         ],
         "paths": {
-            "@/*": ["./*"],
-            "@molitio/mwe-tailwind-config": ["../../packages-ui/mwe-tailwind-config/*"]
+            "@/*": ["./*"]
         },
         "allowJs": true,
         "strict": true,

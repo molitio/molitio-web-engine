@@ -1,4 +1,10 @@
 /**
+ * ui-app
+ *
+ */
+export * from './ui-app';
+
+/**
  * tailwind global
  *
  */
