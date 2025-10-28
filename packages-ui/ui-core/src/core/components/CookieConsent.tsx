@@ -2,10 +2,13 @@
 import React, { useEffect, useState } from 'react';
 import { CookieService, CookieConsentData } from '../services/CookieService';
 import { CheckBox } from '../../ui-interactive';
+// @ts-ignore
+import tailwindConfig from '../../../../mwe-tailwindcss-config/src/index.js';
 
 type CookieOption = {
     id: string;
     description: string;
+    details: string;
     visible: boolean;
 };
 
@@ -13,16 +16,19 @@ const CookieOptions: CookieOption[] = [
     {
         id: 'acceptAll',
         description: 'Accept All Cookies',
+        details: 'Accept all cookies including analytics and advertisement cookies. This helps us provide you with the best possible experience.',
         visible: true,
     },
     {
         id: 'acceptAdvertisement',
         description: 'Accept Advertisement Cookies',
+        details: 'These cookies allow us to show you personalized advertisements based on your browsing behavior and interests.',
         visible: true,
     },
     {
         id: 'acceptTestCookies',
         description: 'Accept Test Cookies',
+        details: 'Test cookies are used for development and testing purposes. They help us ensure the website works correctly.',
         visible: true,
     },
 ];
@@ -32,18 +38,55 @@ const CookieOptionComponent: React.FC<{
     checked: boolean;
     onChange: (id: string, checked: boolean) => void;
 }> = ({ option, checked, onChange }) => {
+    const [isExpanded, setIsExpanded] = useState<boolean>(false);
+
     const handleCheckboxChange = () => {
         onChange(option.id, !checked);
     };
 
+    const toggleExpanded = () => {
+        setIsExpanded(!isExpanded);
+    };
+
     return (
-        <div className="grid grid-cols-[1fr_auto] items-center justify-between text-white">
+        /*<div className="grid grid-cols-[1fr_auto] items-center justify-between text-white">
             <label htmlFor={option.id} className="text-left cursor-pointer">
                 {option.description}
             </label>
             <div className="flex space-x-2 items-center">
                 <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
             </div>
+        </div>*/
+        <div className="rounded-lg border border-gray-700 bg-blue-900 p-3">
+            <div className="grid grid-cols-[1fr_auto_auto] items-center gap-3">
+                <button
+                    onClick={toggleExpanded}
+                    className="text-left text-white hover:text-gray-300 transition-colors"
+                >
+                    {option.description}
+                </button>
+
+                <button
+                    onClick={toggleExpanded}
+                    className="text-white hover:text-gray-300 transition-transform"
+                    style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
+                >
+                    ▼
+                </button>
+
+                <CheckBox
+                    id={option.id}
+                    name={option.id}
+                    checked={checked}
+                    onChange={handleCheckboxChange}
+                />
+            </div>
+
+            {isExpanded && (
+                <div className="mt-3 pt-3 border-t border-gray-700 text-sm text-gray-300">
+                    {option.details}
+                </div>
+            )}
         </div>
     );
 };

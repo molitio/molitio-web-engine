@@ -6709,6 +6709,7 @@ __metadata:
     "@graphql-codegen/typescript-react-apollo": "npm:4.3.0"
     "@graphql-codegen/typescript-react-query": "npm:6.1.0"
     "@parcel/watcher": "npm:2.4.1"
+    "@tailwindcss/typography": "npm:0.5.15"
     "@types/jest": "npm:29.5.4"
     "@types/node": "npm:20.12.7"
     "@types/ws": "npm:8.5.10"
