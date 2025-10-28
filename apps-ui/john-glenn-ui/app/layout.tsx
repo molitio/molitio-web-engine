@@ -1,6 +1,4 @@
 import React from 'react';
-import { CookieConsent } from '@molitio/mwe-ui-core';
-import { Metadata } from 'next';
 import './globals.css';
 import { CookieConsent } from '@molitio/mwe-ui-core';
 import { Metadata } from 'next';

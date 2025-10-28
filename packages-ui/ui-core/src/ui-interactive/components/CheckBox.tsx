@@ -19,7 +19,7 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ id, name, checked = false, l
             aria-label={label}
             disabled={disabled}
             onChange={onChange}
-            className="w-4 h-4"
+            className="w-4 h-4 bg-secondary"
         />
     );
 };

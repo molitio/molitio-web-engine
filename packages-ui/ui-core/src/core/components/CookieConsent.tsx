@@ -2,8 +2,6 @@
 import React, { useEffect, useState } from 'react';
 import { CookieService, CookieConsentData } from '../services/CookieService';
 import { CheckBox } from '../../ui-interactive';
-// @ts-ignore
-import tailwindConfig from '../../../../mwe-tailwindcss-config/src/index.js';
 
 type CookieOption = {
     id: string;
@@ -57,8 +55,8 @@ const CookieOptionComponent: React.FC<{
                 <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
             </div>
         </div>*/
-        <div className="rounded-lg border border-gray-700 bg-blue-900 p-3">
-            <div className="grid grid-cols-[1fr_auto_auto] items-center gap-3">
+        <div className="rounded-lg border border-tertiary bg-primary p-3">
+            <div className="flex items-center justify-between gap-3">
                 <button
                     onClick={toggleExpanded}
                     className="text-left text-white hover:text-gray-300 transition-colors"
@@ -68,25 +66,32 @@ const CookieOptionComponent: React.FC<{
 
                 <button
                     onClick={toggleExpanded}
-                    className="text-white hover:text-gray-300 transition-transform"
+                    className="text-white hover:text-gray-300 transition-transform ml-2"
                     style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
                 >
                     ▼
                 </button>
-
-                <CheckBox
-                    id={option.id}
-                    name={option.id}
-                    checked={checked}
-                    onChange={handleCheckboxChange}
-                />
             </div>
 
             {isExpanded && (
-                <div className="mt-3 pt-3 border-t border-gray-700 text-sm text-gray-300">
-                    {option.details}
-                </div>
+                <>
+                    <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">
+                        {option.details}
+                    </div>
+
+                    <div className="mt-3 flex justify-end">
+                        <CheckBox
+                            id={option.id}
+                            name={option.id}
+                            checked={checked}
+                            onChange={handleCheckboxChange}
+                        />
+                    </div>
+                </>
             )}
+
+            
+            
         </div>
     );
 };
@@ -151,7 +156,7 @@ const CookieConsent: React.FC = () => {
     if (!visible) return null;
 
     return (
-        <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-blue-950 p-5 md:mx-auto md:h-auto md:w-100 lg:mx-auto lg:w-1/2 z-50">
+        <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-primary p-5 md:mx-auto md:h-auto md:w-100 lg:mx-auto lg:w-1/2 z-50">
             <div className="grid grid-cols-1">
                 <h3 className="text-left text-white text-xl font-bold">Cookie Consent</h3>
             </div>
@@ -174,14 +179,14 @@ const CookieConsent: React.FC = () => {
             </div>
 
             <div className="flex justify-end space-x-3">
-                <button className="rounded bg-gray-600 p-2 px-4 text-white hover:bg-gray-700" onClick={handleDecline}>
+                <button className="rounded bg-gray-700 p-2 px-4 text-white hover:bg-gray-600" onClick={handleDecline}>
                     Decline All
                 </button>
-                <button className="rounded bg-blue-600 p-2 px-4 text-white hover:bg-blue-700" onClick={handleAccept}>
+                <button className="rounded bg-info p-2 px-4 text-white hover:bg-info" onClick={handleAccept}>
                     Save Preferences
                 </button>
                 <button
-                    className="rounded bg-green-600 p-2 px-4 text-white hover:bg-green-700"
+                    className="rounded bg-secondary p-2 px-4 text-white hover:bg-secondary"
                     onClick={handleAcceptAll}
                 >
                     Accept All
