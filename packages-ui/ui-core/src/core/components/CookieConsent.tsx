@@ -10,26 +10,26 @@ type CookieOption = {
     visible: boolean;
 };
 
-const CookieOptions: CookieOption[] = [
-    {
+const CookieOptions: Record<string, CookieOption> = {
+    acceptAll: {
         id: 'acceptAll',
         description: 'Accept All Cookies',
         details: 'Accept all cookies including analytics and advertisement cookies. This helps us provide you with the best possible experience.',
         visible: true,
     },
-    {
+    acceptAdvertisement: {
         id: 'acceptAdvertisement',
         description: 'Accept Advertisement Cookies',
         details: 'These cookies allow us to show you personalized advertisements based on your browsing behavior and interests.',
         visible: true,
     },
-    {
+    acceptTestCookies: {
         id: 'acceptTestCookies',
         description: 'Accept Test Cookies',
         details: 'Test cookies are used for development and testing purposes. They help us ensure the website works correctly.',
         visible: true,
     },
-];
+};
 
 const CookieOptionComponent: React.FC<{
     option: CookieOption;
@@ -47,14 +47,6 @@ const CookieOptionComponent: React.FC<{
     };
 
     return (
-        /*<div className="grid grid-cols-[1fr_auto] items-center justify-between text-white">
-            <label htmlFor={option.id} className="text-left cursor-pointer">
-                {option.description}
-            </label>
-            <div className="flex space-x-2 items-center">
-                <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
-            </div>
-        </div>*/
         <div className="rounded-lg border border-tertiary bg-primary p-3">
             <div className="flex items-center justify-between gap-3">
                 <button
@@ -88,10 +80,7 @@ const CookieOptionComponent: React.FC<{
                         />
                     </div>
                 </>
-            )}
-
-            
-            
+            )}  
         </div>
     );
 };
@@ -106,15 +95,15 @@ const CookieConsent: React.FC = () => {
             console.log('data:', data);
             setVisible(true);
             const initialStates: CookieConsentData = {};
-            CookieOptions.forEach((opt) => {
-                initialStates[opt.id] = false;
+            Object.keys(CookieOptions).forEach((key) => {
+                initialStates[CookieOptions[key].id] = false;
             });
             setCookieStates(initialStates);
         } else {
             setVisible(false);
             const mergedStates: CookieConsentData = {};
-            CookieOptions.forEach((opt) => {
-                mergedStates[opt.id] = data[opt.id] || false;
+            Object.keys(CookieOptions).forEach((key) => {
+                mergedStates[CookieOptions[key].id] = data[CookieOptions[key].id] || false;
             });
             setCookieStates(mergedStates);
         }
@@ -137,8 +126,8 @@ const CookieConsent: React.FC = () => {
 
     const handleDecline = () => {
         const declineData: CookieConsentData = {};
-        CookieOptions.forEach((opt) => {
-            declineData[opt.id] = false;
+        Object.keys(CookieOptions).forEach((key) => {
+            declineData[CookieOptions[key].id] = false;
         });
         CookieService.save(declineData);
         setVisible(false);
@@ -146,8 +135,8 @@ const CookieConsent: React.FC = () => {
 
     const handleAcceptAll = () => {
         const acceptAllData: CookieConsentData = {};
-        CookieOptions.forEach((opt) => {
-            acceptAllData[opt.id] = true;
+        Object.keys(CookieOptions).forEach((key) => {
+            acceptAllData[CookieOptions[key].id] = true;
         });
         CookieService.save(acceptAllData);
         setVisible(false);
@@ -168,7 +157,7 @@ const CookieConsent: React.FC = () => {
             </div>
 
             <div className="space-y-3">
-                {CookieOptions.filter((opt) => opt.visible).map((option) => (
+                {Object.values(CookieOptions).filter((opt) => opt.visible).map((option) => (
                     <CookieOptionComponent
                         key={option.id}
                         option={option}
