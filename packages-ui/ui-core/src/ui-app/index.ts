@@ -1,1 +1,1 @@
-export { default as MWEApp } from './MWEApp';
+export { default as MWEClientApp } from './MWEClientApp';

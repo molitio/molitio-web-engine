@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useState } from 'react';
 import { CookieService, CookieConsentData } from '../services/CookieService';
 import { CheckBox } from '../../ui-interactive';

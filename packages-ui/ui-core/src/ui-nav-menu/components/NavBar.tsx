@@ -1,5 +1,6 @@
 import React from 'react';
 import NavMenu from './NavMenu';
+import i18n from 'i18next';
 
 export type NavBarProps = {
     headerText?: string;
@@ -16,9 +17,19 @@ export type NavBarProps = {
 const NavBar: React.FC<NavBarProps> = (props) => {
     const { headerText } = props;
     return (
-        <section className="sticky top-0 w-full z-5 bg-gradient-to-172">
-            <h3>{headerText}</h3>
+        <section className="sticky top-0 w-full z-5">
+            <h3 className="text-primary">{headerText}</h3>
             <NavMenu />
+
+            <div className="mx-2">
+                <button className="text-primary" onClick={() => i18n.changeLanguage('en')}>
+                    English
+                </button>
+                {' | '}
+                <button className="text-primary" onClick={() => i18n.changeLanguage('hu')}>
+                    Hungarian
+                </button>
+            </div>
         </section>
     );
 };
