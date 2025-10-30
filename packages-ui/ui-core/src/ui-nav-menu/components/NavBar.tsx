@@ -22,13 +22,13 @@ const NavBar: React.FC<NavBarProps> = (props) => {
             <NavMenu />
 
             <div className="mx-2">
-                <button className="text-primary" onClick={() => i18n.changeLanguage('en')}>
+                {/*            <button className="text-primary" onClick={() => i18n.changeLanguage('en')}>
                     English
                 </button>
                 {' | '}
                 <button className="text-primary" onClick={() => i18n.changeLanguage('hu')}>
                     Hungarian
-                </button>
+                </button> */}
             </div>
         </section>
     );
