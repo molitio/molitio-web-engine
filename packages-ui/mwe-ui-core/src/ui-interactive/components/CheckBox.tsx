@@ -19,7 +19,7 @@ export function CheckBox({ id, name, checked = false, label, disabled, onChange 
             aria-label={label}
             disabled={disabled}
             onChange={onChange}
-            className="w-4 h-4"
+            className="w-4 h-4 bg-secondary"
         />
     );
 }

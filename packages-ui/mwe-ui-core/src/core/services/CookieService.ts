@@ -1,20 +1,7 @@
-export type CookieConsentData = Record<string, boolean>;
+import * as yup from 'yup';
+import { CookieConsentData } from '../types';
 
 const cookie_key = 'cookie-consent';
-
-const isLocalStorageAvailable = (): boolean => {
-    try {
-        const testKey = '__localStorage_test__';
-        localStorage.setItem(testKey, 'test');
-        localStorage.removeItem(testKey);
-        return true;
-    } catch {
-        return false;
-    }
-};
-
-import * as yup from 'yup';
-
 const cookieConsentSchema = yup
     .object()
     .test(
@@ -27,7 +14,19 @@ const isValidCookieConsentData = (data: any): data is CookieConsentData => {
     return cookieConsentSchema.isValidSync(data);
 };
 
-export const CookieService = {
+const isLocalStorageAvailable = (): boolean => {
+    try {
+        const testKey = '__localStorage_test__';
+        localStorage.setItem(testKey, 'test');
+        localStorage.removeItem(testKey);
+        return true;
+    } catch {
+        return false;
+    }
+};
+
+
+export const cookieService = {
     save: (data: CookieConsentData) => {
         if (!isLocalStorageAvailable()) return;
         try {
@@ -55,7 +54,7 @@ export const CookieService = {
     },
 
     isAccepted: (cookieId: string): boolean => {
-        const data = CookieService.get();
+        const data = cookieService.get();
         return !!data?.[cookieId];
     },
 };

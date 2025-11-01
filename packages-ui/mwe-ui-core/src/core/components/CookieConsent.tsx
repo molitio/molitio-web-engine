@@ -1,74 +1,29 @@
 import { useEffect, useState } from 'react';
-import { CookieService, CookieConsentData } from '../services/CookieService';
-import { CheckBox } from '../../ui-interactive';
+import { cookieService } from '../services';
+import { CookieConsentData } from '../types';
+import CookieOptionSegment from './CookieOptionSegment';
 
-type CookieOption = {
-    id: string;
-    description: string;
-    visible: boolean;
-};
-
-const CookieOptions: CookieOption[] = [
-    {
-        id: 'acceptAll',
-        description: 'Accept All Cookies',
-        visible: true,
-    },
-    {
-        id: 'acceptAdvertisement',
-        description: 'Accept Advertisement Cookies',
-        visible: true,
-    },
-    {
-        id: 'acceptTestCookies',
-        description: 'Accept Test Cookies',
-        visible: true,
-    },
-];
-
-function CookieOptionComponent({
-    option,
-    checked,
-    onChange,
-}: {
-    option: CookieOption;
-    checked: boolean;
-    onChange: (id: string, checked: boolean) => void;
-}) {
-    const handleCheckboxChange = () => {
-        onChange(option.id, !checked);
-    };
-
-    return (
-        <div className="grid grid-cols-[1fr_auto] items-center justify-between text-white">
-            <label htmlFor={option.id} className="text-left cursor-pointer">
-                {option.description}
-            </label>
-            <div className="flex space-x-2 items-center">
-                <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
-            </div>
-        </div>
-    );
-}
+//TODO: add cookie option to AppContext in future iteration
+import { CookieOptions } from '../CookieOptions';
 
 export default function CookieConsent() {
     const [visible, setVisible] = useState<boolean>(false);
     const [cookieStates, setCookieStates] = useState<CookieConsentData>({});
 
     useEffect(() => {
-        const data = CookieService.get();
+        const data = cookieService.get();
         if (!data) {
             setVisible(true);
             const initialStates: CookieConsentData = {};
-            CookieOptions.forEach((opt) => {
-                initialStates[opt.id] = false;
+            Object.keys(CookieOptions).forEach((key) => {
+                initialStates[CookieOptions[key].id] = false;
             });
             setCookieStates(initialStates);
         } else {
             setVisible(false);
             const mergedStates: CookieConsentData = {};
-            CookieOptions.forEach((opt) => {
-                mergedStates[opt.id] = data[opt.id] || false;
+            Object.keys(CookieOptions).forEach((key) => {
+                mergedStates[CookieOptions[key].id] = data[CookieOptions[key].id] || false;
             });
             setCookieStates(mergedStates);
         }
@@ -85,32 +40,32 @@ export default function CookieConsent() {
     };
 
     const handleAccept = () => {
-        CookieService.save(cookieStates);
+        cookieService.save(cookieStates);
         setVisible(false);
     };
 
     const handleDecline = () => {
         const declineData: CookieConsentData = {};
-        CookieOptions.forEach((opt) => {
-            declineData[opt.id] = false;
+        Object.keys(CookieOptions).forEach((key) => {
+            declineData[CookieOptions[key].id] = false;
         });
-        CookieService.save(declineData);
+        cookieService.save(declineData);
         setVisible(false);
     };
 
     const handleAcceptAll = () => {
         const acceptAllData: CookieConsentData = {};
-        CookieOptions.forEach((opt) => {
-            acceptAllData[opt.id] = true;
+        Object.keys(CookieOptions).forEach((key) => {
+            acceptAllData[CookieOptions[key].id] = true;
         });
-        CookieService.save(acceptAllData);
+        cookieService.save(acceptAllData);
         setVisible(false);
     };
 
     if (!visible) return null;
 
     return (
-        <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-blue-950 p-5 md:mx-auto md:h-auto md:w-100 lg:mx-auto lg:w-1/2 z-50">
+        <div className="fixed right-0 bottom-0 left-0 flex h-auto w-full max-w-2xl flex-col space-y-5 rounded-lg bg-primary p-5 md:mx-auto md:h-auto md:w-100 lg:mx-auto lg:w-1/2 z-50">
             <div className="grid grid-cols-1">
                 <h3 className="text-left text-white text-xl font-bold">Cookie Consent</h3>
             </div>
@@ -122,27 +77,26 @@ export default function CookieConsent() {
             </div>
 
             <div className="space-y-3">
-                {CookieOptions.filter((opt) => opt.visible).map((option) => (
-                    <CookieOptionComponent
-                        key={option.id}
-                        option={option}
-                        checked={cookieStates[option.id] || false}
-                        onChange={handleOptionChange}
-                    />
-                ))}
+                {Object.values(CookieOptions)
+                    .filter((opt) => opt.visible)
+                    .map((option) => (
+                        <CookieOptionSegment
+                            key={option.id}
+                            option={option}
+                            checked={cookieStates[option.id] || false}
+                            onChange={handleOptionChange}
+                        />
+                    ))}
             </div>
 
             <div className="flex justify-end space-x-3">
-                <button className="rounded bg-gray-600 p-2 px-4 text-white hover:bg-gray-700" onClick={handleDecline}>
+                <button className="rounded bg-primary p-2 px-4 text-white hover:bg-secondary" onClick={handleDecline}>
                     Decline All
                 </button>
-                <button className="rounded bg-blue-600 p-2 px-4 text-white hover:bg-blue-700" onClick={handleAccept}>
+                <button className="rounded bg-primary p-2 px-4 text-white hover:bg-secondary" onClick={handleAccept}>
                     Save Preferences
                 </button>
-                <button
-                    className="rounded bg-green-600 p-2 px-4 text-white hover:bg-green-700"
-                    onClick={handleAcceptAll}
-                >
+                <button className="rounded bg-secondary p-2 px-4 text-white hover:bg-accent" onClick={handleAcceptAll}>
                     Accept All
                 </button>
             </div>

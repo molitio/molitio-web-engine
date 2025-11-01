@@ -90,6 +90,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript-react-query", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:6.1.0"],\
           ["@molitio/web-engine", "workspace:."],\
           ["@parcel/watcher", "npm:2.4.1"],\
+          ["@tailwindcss/typography", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.5.15"],\
           ["@types/jest", "npm:29.5.4"],\
           ["@types/node", "npm:20.12.7"],\
           ["@types/ws", "npm:8.5.10"],\
@@ -13492,6 +13493,7 @@ const RAW_RUNTIME_STATE =
           ["@graphql-codegen/typescript-react-query", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:6.1.0"],\
           ["@molitio/web-engine", "workspace:."],\
           ["@parcel/watcher", "npm:2.4.1"],\
+          ["@tailwindcss/typography", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.5.15"],\
           ["@types/jest", "npm:29.5.4"],\
           ["@types/node", "npm:20.12.7"],\
           ["@types/ws", "npm:8.5.10"],\
