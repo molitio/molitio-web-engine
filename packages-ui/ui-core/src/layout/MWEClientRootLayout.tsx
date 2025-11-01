@@ -1,9 +1,9 @@
-'use client';
 import React, { Suspense } from 'react';
 
 import { AppContextRootProvider, useNavSegments } from '../context/app-context/components/AppContextRootProvider';
 import { Loading } from '../ui-common';
 import { AppContext } from '../context';
+import { NavBar } from '../ui-nav-menu';
 
 export type RootLayoutProps = {
     appContext: AppContext;
@@ -19,7 +19,7 @@ const NavSegmentKeys: React.FC = () => {
     );
 };
 
-const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (props) => {
+const MWEClientRootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (props) => {
     const { children, appContext } = props;
 
     if (!appContext) {
@@ -29,13 +29,14 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
         <html
             lang="en"
             data-theme="sleeping-dragon"
-            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-secondary overflow-x-auto overflow-y-auto list-none"
+            className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-gradient-to-172 overflow-x-auto overflow-y-auto list-none"
         >
             <body>
                 <Suspense fallback={<Loading />}>
                     <AppContextRootProvider appContext={appContext}>
+                        <NavBar headerText="Molito" />
                         <NavSegmentKeys />
-                        <main className="">{children}</main>
+                        <main>{children}</main>
                     </AppContextRootProvider>
                 </Suspense>
             </body>
@@ -43,4 +44,4 @@ const MWERootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> = (prop
     );
 };
 
-export default MWERootLayout;
+export default MWEClientRootLayout;

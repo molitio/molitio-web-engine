@@ -1,3 +1,1 @@
-export { default as MWERootLayout } from './MWERootLayout';
-
-export * from './MWERootLayout';
+export { default as MWEClientRootLayout } from './MWEClientRootLayout';

@@ -1,4 +1,3 @@
-'use client';
 import { AppContext, ContextNode } from '../types';
 import { NavigationSegment } from '../types/NavigationSegment';
 import React, { createContext, useMemo } from 'react';
