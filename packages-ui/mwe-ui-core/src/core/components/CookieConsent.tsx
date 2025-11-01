@@ -13,7 +13,6 @@ export default function CookieConsent() {
     useEffect(() => {
         const data = cookieService.get();
         if (!data) {
-            console.log('data:', data);
             setVisible(true);
             const initialStates: CookieConsentData = {};
             Object.keys(CookieOptions).forEach((key) => {
