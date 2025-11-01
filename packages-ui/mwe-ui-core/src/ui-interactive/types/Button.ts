@@ -1,4 +1,4 @@
-export enum ButtonType {
+export enum ButtonVariant {
     Primary,
     Secondary,
 }
