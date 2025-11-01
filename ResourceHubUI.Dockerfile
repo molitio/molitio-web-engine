@@ -9,7 +9,7 @@ WORKDIR $MONOREPO_ROOT
 COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
 COPY .yarn .yarn
 COPY apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
-COPY packages-ui/ui-core packages-ui/ui-core
+COPY packages-ui/mwe-ui-core packages-ui/mwe-ui-core
 COPY packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
 RUN corepack enable
@@ -34,7 +34,7 @@ COPY --from=builder $MONOREPO_ROOT/README.md ./
 COPY --from=builder $MONOREPO_ROOT/LICENSE ./
 COPY --from=builder $MONOREPO_ROOT/.yarn ./.yarn
 COPY --from=builder $MONOREPO_ROOT/apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
-COPY --from=builder $MONOREPO_ROOT/packages-ui/ui-core packages-ui/ui-core
+COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-ui-core packages-ui/mwe-ui-core
 COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
 ENV YARN_CACHE_FOLDER=/.yarn/cache

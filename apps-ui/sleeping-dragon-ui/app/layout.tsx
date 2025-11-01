@@ -1,7 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { MWERootLayout } from '@molitio/mwe-ui-core';
 import { Context } from '@/context/AppContext';
+import ClientRoot from './ClientRoot';
+/* import { NavBar } from '@molitio/mwe-ui-core/rsc'; */
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -9,5 +10,13 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
-    return <MWERootLayout appContext={{ ...Context }}>{children}hi1</MWERootLayout>;
+    return (
+        <html lang="en">
+            <body className="bg-secondary min-h-screen">
+                {/*       <NavBar headerText="Molito" /> */}
+                {children}
+                <ClientRoot />
+            </body>
+        </html>
+    );
 }

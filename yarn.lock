@@ -2807,7 +2807,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.9, @babel/runtime@npm:^7.26.10, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.9, @babel/runtime@npm:^7.26.10, @babel/runtime@npm:^7.27.6, @babel/runtime@npm:^7.9.2":
   version: 7.28.4
   resolution: "@babel/runtime@npm:7.28.4"
   checksum: 10/6c9a70452322ea80b3c9b2a412bcf60771819213a67576c8cec41e88a95bb7bf01fc983754cda35dc19603eef52df22203ccbf7777b9d6316932f9fb77c25163
@@ -6458,9 +6458,12 @@ __metadata:
     eslint-plugin-react-hooks: "npm:5.2.0"
     eslint-plugin-react-refresh: "npm:0.4.20"
     globals: "npm:16.3.0"
+    i18next: "npm:25.6.0"
+    i18next-browser-languagedetector: "npm:8.2.0"
     postcss: "npm:8.4.36"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
+    react-i18next: "npm:16.2.1"
     tailwindcss: "npm:3.4.13"
     typescript: "npm:~5.8.3"
     typescript-eslint: "npm:8.39.1"
@@ -6604,9 +6607,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core-tests@workspace:packages-ui/ui-core-tests":
+"@molitio/mwe-ui-core-tests@workspace:packages-ui/mwe-ui-core-tests":
   version: 0.0.0-use.local
-  resolution: "@molitio/mwe-ui-core-tests@workspace:packages-ui/ui-core-tests"
+  resolution: "@molitio/mwe-ui-core-tests@workspace:packages-ui/mwe-ui-core-tests"
   dependencies:
     "@jest/expect": "npm:29.6.4"
     "@jest/globals": "npm:29.6.4"
@@ -6625,9 +6628,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core@workspace:0.2.0, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
+"@molitio/mwe-ui-core@workspace:0.2.0, @molitio/mwe-ui-core@workspace:packages-ui/mwe-ui-core":
   version: 0.0.0-use.local
-  resolution: "@molitio/mwe-ui-core@workspace:packages-ui/ui-core"
+  resolution: "@molitio/mwe-ui-core@workspace:packages-ui/mwe-ui-core"
   dependencies:
     "@babel/cli": "npm:7.18.10"
     "@babel/core": "npm:7.22.17"
@@ -6663,6 +6666,7 @@ __metadata:
     eslint-plugin-prettier: "npm:5.2.1"
     fast-glob: "npm:3.3.2"
     formik: "npm:2.4.6"
+    i18next: "npm:25.6.0"
     jotai: "npm:2.8.3"
     next: "npm:15.5.4"
     postcss: "npm:8.4.36"
@@ -6670,6 +6674,7 @@ __metadata:
     prettier: "npm:3.4.2"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
+    react-i18next: "npm:16.2.1"
     react-is: "npm:19.0.0"
     rollup: "npm:4.22.4"
     rollup-plugin-peer-deps-external: "npm:2.2.4"
@@ -17459,6 +17464,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: "npm:3.1.0"
+  checksum: 10/8743b76cc50e46d1956c1ad879d18eb9613b0d2d81e24686d633f9f69bb26b84676f64a926973de793cca479997017a63219278476d617b6c42d68246d7c07fe
+  languageName: node
+  linkType: hard
+
 "html-tags@npm:^3.3.1":
   version: 3.3.1
   resolution: "html-tags@npm:3.3.1"
@@ -17700,6 +17714,29 @@ __metadata:
   version: 1.2.0
   resolution: "hyperdyperid@npm:1.2.0"
   checksum: 10/64abb5568ff17aa08ac0175ae55e46e22831c5552be98acdd1692081db0209f36fff58b31432017b4e1772c178962676a2cc3c54e4d5d7f020d7710cec7ad7a6
+  languageName: node
+  linkType: hard
+
+"i18next-browser-languagedetector@npm:8.2.0":
+  version: 8.2.0
+  resolution: "i18next-browser-languagedetector@npm:8.2.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.23.2"
+  checksum: 10/b2e78feb256e92b219cd378b38af00404b8f667473f886d64c53588df0592bce145ad29ad7d8238c75f78a9c79f02c84d400569dd5c0ab94c751ac62a4e1f8dd
+  languageName: node
+  linkType: hard
+
+"i18next@npm:25.6.0":
+  version: 25.6.0
+  resolution: "i18next@npm:25.6.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+  peerDependencies:
+    typescript: ^5
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10/3eaa354f7028ff6051e4294c09bf518183c6653c019cfeed73fc4504786b3a474c3b55ed6b9832e122ba2538167b3eb85ae71fdd6423fb9ec9ebe2156b061d66
   languageName: node
   linkType: hard
 
@@ -24691,6 +24728,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:16.2.1":
+  version: 16.2.1
+  resolution: "react-i18next@npm:16.2.1"
+  dependencies:
+    "@babel/runtime": "npm:^7.27.6"
+    html-parse-stringify: "npm:^3.0.1"
+    use-sync-external-store: "npm:^1.6.0"
+  peerDependencies:
+    i18next: ">= 25.5.2"
+    react: ">= 16.8.0"
+    typescript: ^5
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 10/98c55f3c6df6ca34703884a5f7389a33c1233190e90dbf75a88e17fbc93410a2ec8521116998c1ea533e684425afa8446f7e6dacf96a0041cc45f0276089fd8c
+  languageName: node
+  linkType: hard
+
 "react-is@npm:19.0.0":
   version: 19.0.0
   resolution: "react-is@npm:19.0.0"
@@ -28857,7 +28916,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.4.0":
+"use-sync-external-store@npm:^1.4.0, use-sync-external-store@npm:^1.6.0":
   version: 1.6.0
   resolution: "use-sync-external-store@npm:1.6.0"
   peerDependencies:
@@ -29083,6 +29142,13 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 10/942188896db181bd5f95c576303eb617cd08580eb129d0223bc87a8ed9b8dc0d60d8487c077fd9a01087c55600af132c5fc677e51b4b48a4a54a376056969edb
+  languageName: node
+  linkType: hard
+
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 10/0390f818107fa8fce55bb0a5c3f661056001c1d5a2a48c28d582d4d847347c2ab5b7f8272314cac58acf62345126b6b09bea623a185935f6b1c3bbce0dfd7f7f
   languageName: node
   linkType: hard
 

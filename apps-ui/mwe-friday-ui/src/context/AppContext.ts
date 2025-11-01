@@ -17,9 +17,20 @@ export const Context: AppContext = {
                     resourceId: 'coverTitle',
                     type: 'text',
                     textContent: {
-                        molitioCover: {
-                            en: { textContent: 'Molitio' },
-                            hu: { textContent: 'Molitio' },
+                        title: {
+                            textValue: 'cover.title',
+                        },
+                        greeting: {
+                            textValue: 'cover.greeting',
+                        },
+                    },
+                },
+                missionStatement: {
+                    resourceId: 'missionStatement',
+                    type: 'text',
+                    textContent: {
+                        statement: {
+                            textValue: 'cover.missionStatement',
                         },
                     },
                 },

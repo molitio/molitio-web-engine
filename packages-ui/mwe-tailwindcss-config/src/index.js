@@ -112,7 +112,7 @@ module.exports = {
             },
             // Gradients
             backgroundImage: {
-                'gradient-to-172': 'linear-gradient(172deg, #4D5BBC 20%, #1f2937 80%)',
+                'gradient-to-172': 'linear-gradient(172deg, #97BB84 20%, #4D5BBC 80%)',
             },
         },
     },
