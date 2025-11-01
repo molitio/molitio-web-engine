@@ -32,6 +32,17 @@ const moduleDefinitions = {
             umd: './dist/bundle/umd/index.js',
         },
     },
+    'mwe-ui-core/rsc': {
+        name: '@molitio/mwe-ui-core/rsc',
+        basePath: './src',
+        inputPath: 'rsc.ts',
+        outDir: './dist',
+        module: './dist/esm/rsc.js',
+        bundle: {
+            esm: './dist/bundle/esm/rsc.js',
+            umd: './dist/bundle/umd/rsc.js',
+        },
+    },
 };
 
 const isProd = process.env.NODE_ENV === 'production';

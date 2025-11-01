@@ -1,13 +1,11 @@
-import React from 'react';
 import NavMenu from './NavMenu';
-import i18n from 'i18next';
+/* import i18n from 'i18next'; */
 
 export type NavBarProps = {
     headerText?: string;
 };
 
-const NavBar: React.FC<NavBarProps> = (props) => {
-    const { headerText } = props;
+export default function NavBar({ headerText }: NavBarProps) {
     return (
         <section className="sticky top-0 w-full z-5">
             <h3 className="text-primary">{headerText}</h3>
@@ -24,6 +22,4 @@ const NavBar: React.FC<NavBarProps> = (props) => {
             </div>
         </section>
     );
-};
-
-export default NavBar;
+}

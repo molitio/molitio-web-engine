@@ -1,8 +1,6 @@
-import React from 'react';
-
 /* import { Formik, Form, Field } from 'formik';
  */
-const ContactForm: React.FC = () => {
+export default function ContactForm() {
     /*     const initialValues = {
         firstName: '',
     };
@@ -25,6 +23,4 @@ const ContactForm: React.FC = () => {
             </Formik> */}
         </div>
     );
-};
-
-export default ContactForm;
+}

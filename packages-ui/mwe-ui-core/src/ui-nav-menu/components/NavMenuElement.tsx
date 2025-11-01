@@ -4,9 +4,8 @@ export type NavElementProps = {
     /*    navSegmentLeaf: NavSegmentLeaf; */
 };
 
-const NavElement: React.FC<NavElementProps> = (props, key) => {
+export default function NavElement(props: NavElementProps, key?: React.Key) {
     /*     const { navSegmentLeaf: elementData } = props; */
-
     return (
         <div className="btn">
             <li key={key}>
@@ -19,6 +18,4 @@ const NavElement: React.FC<NavElementProps> = (props, key) => {
             </li>
         </div>
     );
-};
-
-export default NavElement;
+}

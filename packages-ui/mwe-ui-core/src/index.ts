@@ -19,6 +19,14 @@ export * from './ui-app';
 
 export * from './layout';
 
+/**
+ * core
+ *
+ * Core resuable functionality and components
+ */
+
+export * from './core';
+
 /* ------ */
 
 /**
@@ -26,14 +34,6 @@ export * from './layout';
  *
  */
 import './style-system/global.css';
-
-/**
- * core
- *
- * Core resuable functionality and components
- */
-
-/* export * from './core'; */
 
 /**
  * ui-page

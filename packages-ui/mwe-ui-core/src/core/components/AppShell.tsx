@@ -1,9 +1,5 @@
 import React from 'react';
 
-export const AppShell: React.FC<React.PropsWithChildren> = (props) => {
-    const { children } = props;
-
+export default function AppShell({ children }: React.PropsWithChildren) {
     return <div>{children}</div>;
-};
-
-export default AppShell;
+}

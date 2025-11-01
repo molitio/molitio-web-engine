@@ -29,6 +29,7 @@ const build = () => {
 
         sourceObj.main = sourceObj.main.replace('src/index.ts', 'index.js');
         sourceObj.types = 'index.d.ts';
+        sourceObj.types = 'rsc.d.ts';
 
         fs.writeFile('dist/package.json', Buffer.from(JSON.stringify(sourceObj, null, 2), 'utf-8'));
         fs.writeFile('dist/version.txt', Buffer.from(sourceObj.version, 'utf-8'));

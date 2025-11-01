@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from './Card';
 import type { CardData } from '../types';
 import PageSection from '../../ui-page/components/PageSection';
@@ -6,9 +5,7 @@ export type CardContainerProps = {
     cards: CardData[];
 };
 
-const CardContainer: React.FC<CardContainerProps> = (props) => {
-    const { cards } = props;
-
+export default function CardContainer({ cards }: CardContainerProps) {
     return (
         <PageSection>
             <ul className="flex flex-col xl:flex-row gap-12">
@@ -20,6 +17,4 @@ const CardContainer: React.FC<CardContainerProps> = (props) => {
             </ul>
         </PageSection>
     );
-};
-
-export default CardContainer;
+}

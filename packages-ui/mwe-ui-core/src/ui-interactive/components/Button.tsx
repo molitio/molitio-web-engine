@@ -6,7 +6,7 @@ export type ButtonProps = {
     onClick?: () => void;
 } & React.PropsWithChildren;
 
-export const Button: React.FC<ButtonProps> = (props) => {
+export function Button(props: ButtonProps) {
     const { children } = props;
     return (
         <button
@@ -16,4 +16,4 @@ export const Button: React.FC<ButtonProps> = (props) => {
             {children ?? ''}
         </button>
     );
-};
+}

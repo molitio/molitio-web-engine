@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CookieService, CookieConsentData } from '../services/CookieService';
 import { CheckBox } from '../../ui-interactive';
 
@@ -26,11 +26,15 @@ const CookieOptions: CookieOption[] = [
     },
 ];
 
-const CookieOptionComponent: React.FC<{
+function CookieOptionComponent({
+    option,
+    checked,
+    onChange,
+}: {
     option: CookieOption;
     checked: boolean;
     onChange: (id: string, checked: boolean) => void;
-}> = ({ option, checked, onChange }) => {
+}) {
     const handleCheckboxChange = () => {
         onChange(option.id, !checked);
     };
@@ -45,9 +49,9 @@ const CookieOptionComponent: React.FC<{
             </div>
         </div>
     );
-};
+}
 
-const CookieConsent: React.FC = () => {
+export default function CookieConsent() {
     const [visible, setVisible] = useState<boolean>(false);
     const [cookieStates, setCookieStates] = useState<CookieConsentData>({});
 
@@ -144,6 +148,4 @@ const CookieConsent: React.FC = () => {
             </div>
         </div>
     );
-};
-
-export default CookieConsent;
+}

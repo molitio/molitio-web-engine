@@ -9,7 +9,7 @@ export type CheckBoxProps = {
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-export const CheckBox: React.FC<CheckBoxProps> = ({ id, name, checked = false, label, disabled, onChange }) => {
+export function CheckBox({ id, name, checked = false, label, disabled, onChange }: CheckBoxProps) {
     return (
         <input
             type="checkbox"
@@ -22,4 +22,4 @@ export const CheckBox: React.FC<CheckBoxProps> = ({ id, name, checked = false, l
             className="w-4 h-4"
         />
     );
-};
+}

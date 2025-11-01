@@ -1,12 +1,8 @@
-import React from 'react';
-
 export type NavMenuControlProps = {
     onClick: () => void;
 };
 
-const NavMenuControl: React.FC<NavMenuControlProps> = (props) => {
-    const { onClick } = props;
-
+export default function NavMenuControl({ onClick }: NavMenuControlProps) {
     return (
         <button onClick={onClick} className="btn btn-ghost rounded-btn primary md:hidden">
             <svg
@@ -20,6 +16,4 @@ const NavMenuControl: React.FC<NavMenuControlProps> = (props) => {
             </svg>
         </button>
     );
-};
-
-export default NavMenuControl;
+}

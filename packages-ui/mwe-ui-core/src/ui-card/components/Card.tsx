@@ -1,12 +1,11 @@
-import React from 'react';
 import { CardData } from '../types';
 
 export type CardProps = {
     data: CardData;
 };
 
-const Card: React.FC<CardProps> = (props) => {
-    const { title, imageUrl, imageAlt, description } = props.data;
+export default function Card({ data }: CardProps) {
+    const { title, imageUrl, imageAlt, description } = data;
     return (
         <div className="flex flex-col items-center">
             <div className="min-w-80 min-h-80 max-w-96 max-h-96  mb-gutter-bottom">
@@ -18,6 +17,4 @@ const Card: React.FC<CardProps> = (props) => {
             </div>
         </div>
     );
-};
-
-export default Card;
+}

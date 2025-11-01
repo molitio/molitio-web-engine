@@ -1,9 +1,8 @@
-import React from 'react';
 /* import React, { useState } from 'react'; */
 /* import { navMenuAtomRW } from '../../context'; */
 /* import { useAtom } from 'jotai'; */
 
-const NavMenu: React.FC = () => {
+export default function NavMenu() {
     /*     const [navRoot] = useAtom(navMenuAtomRW); */
     /*     const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null); */
 
@@ -31,6 +30,4 @@ const NavMenu: React.FC = () => {
             </div>
         </nav>
     );
-};
-
-export default NavMenu;
+}

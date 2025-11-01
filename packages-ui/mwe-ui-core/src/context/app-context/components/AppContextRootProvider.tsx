@@ -37,10 +37,13 @@ type AppContextRootValues = {
 
 export const AppContextRootContext = createContext<AppContextRootValues | undefined>(undefined);
 
-export const AppContextRootProvider: React.FC<{ appContext: AppContext; children: React.ReactNode }> = ({
+export function AppContextRootProvider({
     appContext,
     children,
-}) => {
+}: {
+    appContext: AppContext;
+    children: React.ReactNode;
+}) {
     const { navSegments, textSegments } = useMemo(() => collectSegments(appContext.nodeTree), [appContext.nodeTree]);
 
     const navAtom = useMemo(() => jotaiAtom<Record<string, NavigationSegment>>(navSegments), [navSegments]);
@@ -58,12 +61,11 @@ export const AppContextRootProvider: React.FC<{ appContext: AppContext; children
     );
 
     return (
-        <JotaiProvider>
-            <AppContextRootContext.Provider value={contextValue}>{children}</AppContextRootContext.Provider>
-        </JotaiProvider>
+        <AppContextRootContext.Provider value={contextValue}>
+            <JotaiProvider>{children}</JotaiProvider>
+        </AppContextRootContext.Provider>
     );
-};
-
+}
 export function useNavSegments() {
     const ctx = React.useContext(AppContextRootContext);
     if (!ctx) throw new Error('useNavSegments must be used within AppContextRootProvider');
