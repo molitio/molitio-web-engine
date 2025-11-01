@@ -1,6 +1,8 @@
+'use client';
+
+import React, { createContext, useMemo } from 'react';
 import { AppContext, ContextNode } from '../types';
 import { NavigationSegment } from '../types/NavigationSegment';
-import React, { createContext, useMemo } from 'react';
 import { Provider as JotaiProvider, atom as jotaiAtom, useAtomValue } from 'jotai';
 import { TextContentNode } from '../types/TextContentSegment';
 

@@ -1,8 +1,25 @@
 /**
+ * captcha
+ *
+ * Captcha functionality and components
+ */
+export * from './connectivity-integration';
+
+/**
  * ui-app
  *
  */
-/* export * from './ui-app'; */
+export * from './ui-app';
+
+/**
+ * common
+ *
+ * Common components for the UI
+ */
+
+export * from './layout';
+
+/* ------ */
 
 /**
  * tailwind global
@@ -11,27 +28,12 @@
 import './style-system/global.css';
 
 /**
- * captcha
- *
- * Captcha functionality and components
- */
-export * from './captcha';
-
-/**
  * core
  *
  * Core resuable functionality and components
  */
 
 /* export * from './core'; */
-
-/**
- * common
- *
- * Common components for the UI
- */
-
-/* export * from './layout'; */
 
 /**
  * ui-page

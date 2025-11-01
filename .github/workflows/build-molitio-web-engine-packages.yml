@@ -20,7 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: 'yarn'
+          cache: "yarn"
           cache-dependency-path: |
             yarn.lock
             **/yarn.lock
@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: mwe-ui-core
-          path: packages-ui/ui-core/dist
+          path: packages-ui/mwe-ui-core/dist
       - name: Upload John-Glenn
         uses: actions/upload-artifact@v4
         with:

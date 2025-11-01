@@ -1,4 +1,4 @@
-const handleRecaptcha = async (action: string, key: string) => {
+export const handleRecaptcha = async (action: string, key: string) => {
     try {
         const token = await grecaptcha.enterprise?.execute(key, {
             action: action,
@@ -16,9 +16,8 @@ const handleRecaptcha = async (action: string, key: string) => {
 
         return responseData?.score > 0.6;
     } catch (error) {
+        //TODO: refactor console error to logging service
         console.error('Error in handleRecaptcha:', error);
         return false;
     }
 };
-
-export default handleRecaptcha;

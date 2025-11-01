@@ -1,7 +1,6 @@
-/* import type { AppContext } from '@molitio/mwe-ui-core'; */
+import type { AppContext } from '@molitio/mwe-ui-core';
 
-/* export const Context: AppContext = { */
-export const Context = {
+export const Context: AppContext = {
     appId: 'friday-ui',
     appName: '@molitio/mwe-friday-ui',
     appDisplayTitle: 'Molitio',
@@ -18,9 +17,20 @@ export const Context = {
                     resourceId: 'coverTitle',
                     type: 'text',
                     textContent: {
-                        molitioCover: {
-                            en: { textContent: 'Molitio' },
-                            hu: { textContent: 'Molitio' },
+                        title: {
+                            textValue: 'cover.title',
+                        },
+                        greeting: {
+                            textValue: 'cover.greeting',
+                        },
+                    },
+                },
+                missionStatement: {
+                    resourceId: 'missionStatement',
+                    type: 'text',
+                    textContent: {
+                        statement: {
+                            textValue: 'cover.missionStatement',
                         },
                     },
                 },

@@ -5,6 +5,11 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import enLanding from './en/landing.json';
 import huLanding from './hu/landing.json';
 
+type LandingNamespace = 'landing';
+type LandingKeys = keyof typeof enLanding;
+
+export type TranslationKey = `${LandingNamespace}:${LandingKeys}`;
+
 i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({

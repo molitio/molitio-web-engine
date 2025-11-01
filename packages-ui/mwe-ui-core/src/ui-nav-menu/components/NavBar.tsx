@@ -6,14 +6,6 @@ export type NavBarProps = {
     headerText?: string;
 };
 
-/**
- * NavBar
- *
- * A wrapper for Nav to inject navRoot context as a provider
- *
- * TODO: stlye header text properly
- */
-
 const NavBar: React.FC<NavBarProps> = (props) => {
     const { headerText } = props;
     return (

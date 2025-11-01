@@ -1,3 +1,5 @@
+'use client';
+
 import { atom, createStore } from 'jotai';
 
 export const contextRootAtom = <T>(initialValue: T) => atom<T>(initialValue);
