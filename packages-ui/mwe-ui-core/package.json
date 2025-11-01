@@ -97,5 +97,23 @@
     "dependencies": {
         "i18next": "25.6.0",
         "react-i18next": "16.2.1"
+    },
+    "exports": {
+        ".": {
+            "import": "./src/index.ts",
+            "require": "./src/index.ts",
+            "types": "./src/index.ts"
+        },
+        "./rsc": {
+            "import": "./src/rsc.ts",
+            "require": "./src/rsc.ts",
+            "types": "./src/rsc.ts"
+        }
+    },
+    "typesVersions": {
+        "*": {
+            "rsc": ["src/rsc.ts"],
+            "*": ["src/index.ts"]
+        }
     }
 }

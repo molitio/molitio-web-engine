@@ -27,9 +27,34 @@ const build = () => {
         delete sourceObj['scripts'];
         delete sourceObj['devDependencies'];
 
+
+        // Transform main/types as before
         sourceObj.main = sourceObj.main.replace('src/index.ts', 'index.js');
         sourceObj.types = 'index.d.ts';
-        sourceObj.types = 'rsc.d.ts';
+
+        // Transform exports and typesVersions for dist
+        if (sourceObj.exports) {
+            sourceObj.exports = {
+                ".": {
+                    "import": "./esm/index.js",
+                    "require": "./esm/index.js",
+                    "types": "./esm/index.d.ts"
+                },
+                "./rsc": {
+                    "import": "./esm/rsc.js",
+                    "require": "./esm/rsc.js",
+                    "types": "./rsc.d.ts"
+                }
+            };
+        }
+        if (sourceObj.typesVersions) {
+            sourceObj.typesVersions = {
+                "*": {
+                    "rsc": ["rsc.d.ts"],
+                    "*": ["esm/index.d.ts"]
+                }
+            };
+        }
 
         fs.writeFile('dist/package.json', Buffer.from(JSON.stringify(sourceObj, null, 2), 'utf-8'));
         fs.writeFile('dist/version.txt', Buffer.from(sourceObj.version, 'utf-8'));
