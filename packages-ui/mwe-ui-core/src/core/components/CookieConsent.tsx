@@ -77,14 +77,16 @@ export default function CookieConsent() {
             </div>
 
             <div className="space-y-3">
-                {Object.values(CookieOptions).filter((opt) => opt.visible).map((option) => (
-                    <CookieOptionSegment
-                        key={option.id}
-                        option={option}
-                        checked={cookieStates[option.id] || false}
-                        onChange={handleOptionChange}
-                    />
-                ))}
+                {Object.values(CookieOptions)
+                    .filter((opt) => opt.visible)
+                    .map((option) => (
+                        <CookieOptionSegment
+                            key={option.id}
+                            option={option}
+                            checked={cookieStates[option.id] || false}
+                            onChange={handleOptionChange}
+                        />
+                    ))}
             </div>
 
             <div className="flex justify-end space-x-3">
@@ -94,10 +96,7 @@ export default function CookieConsent() {
                 <button className="rounded bg-primary p-2 px-4 text-white hover:bg-secondary" onClick={handleAccept}>
                     Save Preferences
                 </button>
-                <button
-                    className="rounded bg-secondary p-2 px-4 text-white hover:bg-accent"
-                    onClick={handleAcceptAll}
-                >
+                <button className="rounded bg-secondary p-2 px-4 text-white hover:bg-accent" onClick={handleAcceptAll}>
                     Accept All
                 </button>
             </div>
