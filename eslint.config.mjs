@@ -4,6 +4,7 @@ import tsParser from '@typescript-eslint/parser';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import prettierPlugin from 'eslint-plugin-prettier';
+import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
 export default [
@@ -37,11 +38,14 @@ export default [
             'react-hooks': reactHooksPlugin,
             '@typescript-eslint': tsPlugin,
             prettier: prettierPlugin,
+            next: nextPlugin,
+            '@next/next': nextPlugin,
         },
         rules: {
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            ...(nextPlugin.configs?.recommended?.rules || {}),
             'prettier/prettier': 'error',
         },
     },
