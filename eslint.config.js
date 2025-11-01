@@ -4,6 +4,46 @@
  */
 
 module.exports = [
+    // Baseline Next.js config for john-glenn-ui and sleeping-dragon-ui only
+    {
+        files: [
+            'apps-ui/john-glenn-ui/app/**/*.ts',
+            'apps-ui/john-glenn-ui/app/**/*.tsx',
+            'apps-ui/john-glenn-ui/pages/**/*.ts',
+            'apps-ui/john-glenn-ui/pages/**/*.tsx',
+            'apps-ui/sleeping-dragon-ui/app/**/*.ts',
+            'apps-ui/sleeping-dragon-ui/app/**/*.tsx',
+            'apps-ui/sleeping-dragon-ui/pages/**/*.ts',
+            'apps-ui/sleeping-dragon-ui/pages/**/*.tsx',
+        ],
+        extends: [
+            'next/core-web-vitals',
+            'plugin:react/recommended',
+            'plugin:@typescript-eslint/recommended',
+            'plugin:prettier/recommended',
+        ],
+        parser: '@typescript-eslint/parser',
+        plugins: ['@typescript-eslint', 'react'],
+        parserOptions: {
+            ecmaFeatures: {
+                jsx: true,
+            },
+            ecmaVersion: 2020,
+            sourceType: 'module',
+        },
+        env: {
+            browser: true,
+            es2022: true,
+        },
+        settings: {
+            react: {
+                version: 'detect',
+            },
+        },
+        rules: {
+            // Add any Next.js/React/TS rules here if needed
+        },
+    },
     {
         files: ['**/*.js'],
         parser: '@babel/eslint-parser',

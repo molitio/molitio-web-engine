@@ -54,6 +54,19 @@ All UI components must be tested against these pillars:
 - **`packages/ui/components/`:** React UI components (reference for coding style).
 
 ## Contribution Workflow
+
+## Code Formatting and Linting Enforcement
+
+All code in this repository must conform to the formatting and linting rules defined in the monorepo root:
+
+- **Prettier**: The root `.prettierrc` and `.prettierignore` are the only valid Prettier configs. No project-level `.prettierrc` files are allowed. All formatting must match the root config.
+- **ESLint**: The root `eslint.config.js` is the single source of truth for linting. No project-level `.eslintrc*` or `eslint.config.js` files are allowed unless they only extend the root config.
+- **VSCode Extensions**: All contributors must install and enable the following extensions:
+  - `dbaeumer.vscode-eslint` (ESLint)
+  - `esbenp.prettier-vscode` (Prettier)
+These are listed in `.vscode/extensions.json` as recommendations. Code will not be accepted unless it passes lint and format checks.
+
+> **Note:** The CI and pre-commit hooks will enforce these rules. Manual or local overrides are not permitted.
 1. Fork the repository and create a feature branch.
 2. Write or update a `plan.md` for new features/components.
 3. Implement code and tests following the plan and standards.

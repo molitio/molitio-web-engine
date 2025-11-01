@@ -27,7 +27,6 @@ const build = () => {
         delete sourceObj['scripts'];
         delete sourceObj['devDependencies'];
 
-
         // Transform main/types as before
         sourceObj.main = sourceObj.main.replace('src/index.ts', 'index.js');
         sourceObj.types = 'index.d.ts';
@@ -35,24 +34,24 @@ const build = () => {
         // Transform exports and typesVersions for dist
         if (sourceObj.exports) {
             sourceObj.exports = {
-                ".": {
-                    "import": "./esm/index.js",
-                    "require": "./esm/index.js",
-                    "types": "./esm/index.d.ts"
+                '.': {
+                    import: './esm/index.js',
+                    require: './esm/index.js',
+                    types: './esm/index.d.ts',
                 },
-                "./rsc": {
-                    "import": "./esm/rsc.js",
-                    "require": "./esm/rsc.js",
-                    "types": "./rsc.d.ts"
-                }
+                './rsc': {
+                    import: './esm/rsc.js',
+                    require: './esm/rsc.js',
+                    types: './rsc.d.ts',
+                },
             };
         }
         if (sourceObj.typesVersions) {
             sourceObj.typesVersions = {
-                "*": {
-                    "rsc": ["rsc.d.ts"],
-                    "*": ["esm/index.d.ts"]
-                }
+                '*': {
+                    rsc: ['rsc.d.ts'],
+                    '*': ['esm/index.d.ts'],
+                },
             };
         }
 

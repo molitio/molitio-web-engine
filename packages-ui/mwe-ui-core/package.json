@@ -112,8 +112,12 @@
     },
     "typesVersions": {
         "*": {
-            "rsc": ["src/rsc.ts"],
-            "*": ["src/index.ts"]
+            "rsc": [
+                "src/rsc.ts"
+            ],
+            "*": [
+                "src/index.ts"
+            ]
         }
     }
 }
