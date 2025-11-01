@@ -1,4 +1,4 @@
-import { CookieOption} from './types'
+import { CookieOption} from './types';
 
 export const CookieOptions: Record<string, CookieOption> = {
     telemetry: {
