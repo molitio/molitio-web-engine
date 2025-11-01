@@ -1,99 +1,17 @@
 import { useEffect, useState } from 'react';
-import { CookieService, CookieConsentData } from '../services/CookieService';
-import { CheckBox } from '../../ui-interactive';
+import { cookieService } from '../services';
+import { CookieConsentData } from '../types';
+import CookieOptionSegment from './CookieOptionSegment';
 
-type CookieOption = {
-    id: string;
-    description: string;
-    details: string;
-    visible: boolean;
-};
-
-const CookieOptions: Record<string, CookieOption> = {
-    acceptAll: {
-        id: 'acceptAll',
-        description: 'Accept All Cookies',
-        details: 'Accept all cookies including analytics and advertisement cookies. This helps us provide you with the best possible experience.',
-        visible: true,
-    },
-    acceptAdvertisement: {
-        id: 'acceptAdvertisement',
-        description: 'Accept Advertisement Cookies',
-        details: 'These cookies allow us to show you personalized advertisements based on your browsing behavior and interests.',
-        visible: true,
-    },
-    acceptTestCookies: {
-        id: 'acceptTestCookies',
-        description: 'Accept Test Cookies',
-        details: 'Test cookies are used for development and testing purposes. They help us ensure the website works correctly.',
-        visible: true,
-    },
-};
-
-function CookieOptionComponent({
-    option,
-    checked,
-    onChange,
-}: {
-    option: CookieOption;
-    checked: boolean;
-    onChange: (id: string, checked: boolean) => void;
-}> = ({ option, checked, onChange }) => {
-    const [isExpanded, setIsExpanded] = useState<boolean>(false);
-
-    const handleCheckboxChange = () => {
-        onChange(option.id, !checked);
-    };
-
-    const toggleExpanded = () => {
-        setIsExpanded(!isExpanded);
-    };
-
-    return (
-        <div className="rounded-lg border border-tertiary bg-primary p-3">
-            <div className="flex items-center justify-between gap-3">
-                <button
-                    onClick={toggleExpanded}
-                    className="text-left text-white hover:text-gray-300 transition-colors"
-                >
-                    {option.description}
-                </button>
-
-                <button
-                    onClick={toggleExpanded}
-                    className="text-white hover:text-gray-300 transition-transform ml-2"
-                    style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)' }}
-                >
-                    ▼
-                </button>
-            </div>
-
-            {isExpanded && (
-                <>
-                    <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">
-                        {option.details}
-                    </div>
-
-                    <div className="mt-3 flex justify-end">
-                        <CheckBox
-                            id={option.id}
-                            name={option.id}
-                            checked={checked}
-                            onChange={handleCheckboxChange}
-                        />
-                    </div>
-                </>
-            )}  
-        </div>
-    );
-}
+//TODO: add cookie option to AppContext in future iteration
+import { CookieOptions } from '../CookieOptions';
 
 export default function CookieConsent() {
     const [visible, setVisible] = useState<boolean>(false);
     const [cookieStates, setCookieStates] = useState<CookieConsentData>({});
 
     useEffect(() => {
-        const data = CookieService.get();
+        const data = cookieService.get();
         if (!data) {
             console.log('data:', data);
             setVisible(true);
@@ -123,7 +41,7 @@ export default function CookieConsent() {
     };
 
     const handleAccept = () => {
-        CookieService.save(cookieStates);
+        cookieService.save(cookieStates);
         setVisible(false);
     };
 
@@ -132,7 +50,7 @@ export default function CookieConsent() {
         Object.keys(CookieOptions).forEach((key) => {
             declineData[CookieOptions[key].id] = false;
         });
-        CookieService.save(declineData);
+        cookieService.save(declineData);
         setVisible(false);
     };
 
@@ -141,7 +59,7 @@ export default function CookieConsent() {
         Object.keys(CookieOptions).forEach((key) => {
             acceptAllData[CookieOptions[key].id] = true;
         });
-        CookieService.save(acceptAllData);
+        cookieService.save(acceptAllData);
         setVisible(false);
     };
 
@@ -161,7 +79,7 @@ export default function CookieConsent() {
 
             <div className="space-y-3">
                 {Object.values(CookieOptions).filter((opt) => opt.visible).map((option) => (
-                    <CookieOptionComponent
+                    <CookieOptionSegment
                         key={option.id}
                         option={option}
                         checked={cookieStates[option.id] || false}
@@ -171,14 +89,14 @@ export default function CookieConsent() {
             </div>
 
             <div className="flex justify-end space-x-3">
-                <button className="rounded bg-gray-700 p-2 px-4 text-white hover:bg-gray-600" onClick={handleDecline}>
+                <button className="rounded bg-primary p-2 px-4 text-white hover:bg-secondary" onClick={handleDecline}>
                     Decline All
                 </button>
-                <button className="rounded bg-info p-2 px-4 text-white hover:bg-info" onClick={handleAccept}>
+                <button className="rounded bg-primary p-2 px-4 text-white hover:bg-secondary" onClick={handleAccept}>
                     Save Preferences
                 </button>
                 <button
-                    className="rounded bg-secondary p-2 px-4 text-white hover:bg-secondary"
+                    className="rounded bg-secondary p-2 px-4 text-white hover:bg-accent"
                     onClick={handleAcceptAll}
                 >
                     Accept All
