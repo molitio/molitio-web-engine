@@ -6607,9 +6607,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core-tests@workspace:packages-ui/ui-core-tests":
+"@molitio/mwe-ui-core-tests@workspace:packages-ui/mwe-ui-core-tests":
   version: 0.0.0-use.local
-  resolution: "@molitio/mwe-ui-core-tests@workspace:packages-ui/ui-core-tests"
+  resolution: "@molitio/mwe-ui-core-tests@workspace:packages-ui/mwe-ui-core-tests"
   dependencies:
     "@jest/expect": "npm:29.6.4"
     "@jest/globals": "npm:29.6.4"
@@ -6628,9 +6628,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@molitio/mwe-ui-core@workspace:0.2.0, @molitio/mwe-ui-core@workspace:packages-ui/ui-core":
+"@molitio/mwe-ui-core@workspace:0.2.0, @molitio/mwe-ui-core@workspace:packages-ui/mwe-ui-core":
   version: 0.0.0-use.local
-  resolution: "@molitio/mwe-ui-core@workspace:packages-ui/ui-core"
+  resolution: "@molitio/mwe-ui-core@workspace:packages-ui/mwe-ui-core"
   dependencies:
     "@babel/cli": "npm:7.18.10"
     "@babel/core": "npm:7.22.17"

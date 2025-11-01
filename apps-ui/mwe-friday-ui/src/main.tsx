@@ -1,14 +1,14 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-/* import { MWEClientApp, MWEClientRootLayout } from '@molitio/mwe-ui-core'; */
-/* import { Context } from './context'; */
+import { MWEClientApp, MWEClientRootLayout } from '@molitio/mwe-ui-core';
+import { Context } from './context';
 import './index.css';
 import './i18n';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        {/*         <MWEClientRootLayout appContext={{ ...Context }}>
+        <MWEClientRootLayout appContext={{ ...Context }}>
             <MWEClientApp />
-        </MWEClientRootLayout> */}
+        </MWEClientRootLayout>
     </StrictMode>,
 );
