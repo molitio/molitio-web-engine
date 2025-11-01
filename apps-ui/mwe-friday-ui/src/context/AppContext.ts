@@ -1,6 +1,7 @@
-import type { AppContext } from '@molitio/mwe-ui-core';
+/* import type { AppContext } from '@molitio/mwe-ui-core'; */
 
-export const Context: AppContext = {
+/* export const Context: AppContext = { */
+export const Context = {
     appId: 'friday-ui',
     appName: '@molitio/mwe-friday-ui',
     appDisplayTitle: 'Molitio',
