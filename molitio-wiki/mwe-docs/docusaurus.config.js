@@ -2,7 +2,7 @@ module.exports = {
     title: 'Molitio Wiki',
     tagline: 'Documentation for Molitio Web Engine',
     url: 'https://molitio.com',
-    baseUrl: '/mwe-docs/',
+    baseUrl: '/',
     onBrokenLinks: 'warn',
     favicon: 'img/favicon.ico',
     organizationName: 'molitio',
@@ -39,7 +39,10 @@ module.exports = {
                 alt: 'Molitio Logo',
                 src: 'img/logo.svg',
             },
-            items: [{ to: '/design-system/', label: 'Design System', position: 'left' }],
+            items: [
+                { to: '/design-system/', label: 'Design System', position: 'left' },
+                // No root (/) link to avoid broken links
+            ],
         },
         footer: {
             style: 'dark',
