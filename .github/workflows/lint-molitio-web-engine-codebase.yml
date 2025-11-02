@@ -1,0 +1,43 @@
+permissions:
+  contents: read
+name: Lint
+
+on:
+  workflow_call:
+  pull_request:
+
+jobs:
+  lint:
+    name: Run ESLint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: "yarn"
+          cache-dependency-path: |
+            yarn.lock
+            **/yarn.lock
+
+      - name: Enable corepack and Yarn
+        run: |
+          corepack enable
+          corepack prepare yarn@stable --activate
+
+      - name: Install dependencies
+        run: yarn install --immutable --immutable-cache --check-cache
+
+      - name: Run linter
+        # use ESLint GitHub formatter so issues show as PR annotations
+        run: |
+          # prefer built-in script if it exists; use yarn to pass through args cross-platform
+          if yarn -s run -T | grep -q "lint$"; then
+            yarn lint -- --format=github
+          else
+            npx eslint -f github .
+          fi
