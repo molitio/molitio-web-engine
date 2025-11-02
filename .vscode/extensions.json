@@ -8,5 +8,4 @@
         "naumovs.color-highlight"
     ],
     "unwantedRecommendations": []
-    // All developers must install and enable Prettier and ESLint extensions for code consistency.
 }
