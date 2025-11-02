@@ -38,16 +38,17 @@ export default [
             'react-hooks': reactHooksPlugin,
             '@typescript-eslint': tsPlugin,
             prettier: prettierPlugin,
-            next: nextPlugin,
+            '@next/next': nextPlugin,
         },
         rules: {
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            ...(nextPlugin.configs?.recommended?.rules || {}),
             'prettier/prettier': 'error',
         },
         // Explicitly include the Next.js recommended config for detection
-        extends: [nextPlugin.configs.recommended],
+        // extends: [nextPlugin.configs.recommended], // Removed invalid 'extends' for flat config
     },
 
     // Vite React app (mwe-friday-ui)

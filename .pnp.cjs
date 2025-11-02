@@ -11440,6 +11440,7 @@ const RAW_RUNTIME_STATE =
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@molitio/mwe-ui-core", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#workspace:packages-ui/mwe-ui-core"],\
           ["@tailwindcss/postcss", "npm:4.1.16"],\
+          ["@tailwindcss/vite", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:4.1.16"],\
           ["@types/grecaptcha", "npm:3.0.9"],\
           ["@types/react", "npm:19.2.2"],\
           ["@types/react-dom", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:19.2.2"],\
@@ -14538,6 +14539,31 @@ const RAW_RUNTIME_STATE =
         "packagePeers": [\
           "@types/tailwindcss",\
           "tailwindcss"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@tailwindcss/vite", [\
+      ["npm:4.1.16", {\
+        "packageLocation": "./.yarn/cache/@tailwindcss-vite-npm-4.1.16-60049e3188-e05eb19200.zip/node_modules/@tailwindcss/vite/",\
+        "packageDependencies": [\
+          ["@tailwindcss/vite", "npm:4.1.16"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:4.1.16", {\
+        "packageLocation": "./.yarn/__virtual__/@tailwindcss-vite-virtual-b6cd3783db/0/cache/@tailwindcss-vite-npm-4.1.16-60049e3188-e05eb19200.zip/node_modules/@tailwindcss/vite/",\
+        "packageDependencies": [\
+          ["@tailwindcss/node", "npm:4.1.16"],\
+          ["@tailwindcss/oxide", "npm:4.1.16"],\
+          ["@tailwindcss/vite", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:4.1.16"],\
+          ["@types/vite", null],\
+          ["tailwindcss", "npm:4.1.16"],\
+          ["vite", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:7.1.12"]\
+        ],\
+        "packagePeers": [\
+          "@types/vite",\
+          "vite"\
         ],\
         "linkType": "HARD"\
       }]\

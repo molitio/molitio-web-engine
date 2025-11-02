@@ -5,9 +5,10 @@
     "description": "Molitio Web Engine Style Configuration for TailwindCSS",
     "license": "MIT",
     "main": "src/index.cjs",
+    "types": "src/index.d.ts",
     "exports": {
         ".": "./src/index.cjs",
-        "./theme.css": "./src/theme.css"
+        "./theme": "./src/theme.css"
     },
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [

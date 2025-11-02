@@ -6372,6 +6372,7 @@ __metadata:
     "@molitio/mwe-tailwindcss-config": "workspace:0.2.0"
     "@molitio/mwe-ui-core": "workspace:0.2.0"
     "@tailwindcss/postcss": "npm:4.1.16"
+    "@tailwindcss/vite": "npm:4.1.16"
     "@types/grecaptcha": "npm:3.0.9"
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.2"
@@ -8627,6 +8628,19 @@ __metadata:
   peerDependencies:
     tailwindcss: "*"
   checksum: 10/f7fbbad3c863f07e7c2c2ededc1cb4efc540ad5a3b8d2d99185afad31074baba90d54cddc7e2c25b39e3f2a77cccd6fd8623477577ede53dadc0fff80802a2ca
+  languageName: node
+  linkType: hard
+
+"@tailwindcss/vite@npm:4.1.16":
+  version: 4.1.16
+  resolution: "@tailwindcss/vite@npm:4.1.16"
+  dependencies:
+    "@tailwindcss/node": "npm:4.1.16"
+    "@tailwindcss/oxide": "npm:4.1.16"
+    tailwindcss: "npm:4.1.16"
+  peerDependencies:
+    vite: ^5.2.0 || ^6 || ^7
+  checksum: 10/e05eb1920027daaa101cf673bbb3b20724a2e01e919cb6ff2ebe9921cadd836dbbdad570603eabc268d4026e2aecbbe9607bbbbb7356d6fd5d55c46809fd6387
   languageName: node
   linkType: hard
 
