@@ -23,7 +23,7 @@ module.exports = {
                 docs: {
                     path: './src/design-system',
                     routeBasePath: 'design-system',
-                    sidebarPath: require.resolve('./sidebars.js'),
+                    sidebarPath: require.resolve('./sidebars.cjs'),
                 },
                 blog: false,
                 theme: {
