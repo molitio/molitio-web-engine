@@ -10,7 +10,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
 import tailwindcss from '@tailwindcss/postcss';
-import autoprefixer from 'autoprefixer';
 import preserveDirectives from 'rollup-preserve-directives';
 import { createRequire } from 'module';
 
@@ -94,7 +93,6 @@ const modules = Array.from(
                         'next',
                         'tailwind',
                         'postcss',
-                        'autoprefixer',
                         'device-detector-js',
                         'crypto',
                     ],
@@ -118,7 +116,7 @@ const modules = Array.from(
                     inject: {
                         insertAt: 'top',
                     },
-                    plugins: [tailwindcss(styleSystemConfig), autoprefixer()],
+                    plugins: [tailwindcss(styleSystemConfig)],
                 }),
                 json(),
                 terser(),

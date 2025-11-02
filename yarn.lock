@@ -6358,7 +6358,6 @@ __metadata:
     "@molitio/mwe-tailwindcss-config": "workspace:*"
     "@tailwindcss/postcss": "npm:4.1.16"
     "@types/react": "npm:19.2.2"
-    autoprefixer: "npm:10.4.21"
     postcss: "npm:8.5.6"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
@@ -6623,7 +6622,6 @@ __metadata:
     "@typescript-eslint/parser": "npm:8.46.2"
     "@typescript-eslint/type-utils": "npm:8.46.2"
     "@yarnpkg/sdks": "npm:3.2.3"
-    autoprefixer: "npm:10.4.21"
     babel-jest: "npm:30.2.0"
     core-js: "npm:3.46.0"
     eslint: "npm:9.39.0"
@@ -6649,8 +6647,6 @@ __metadata:
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.46.2"
   dependenciesMeta:
-    autoprefixer@10.4.16:
-      unplugged: true
     postcss@8.4.36:
       unplugged: true
     tailwindcss@3.4.3:
@@ -11275,7 +11271,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.21, autoprefixer@npm:^10.4.19, autoprefixer@npm:^10.4.21":
+"autoprefixer@npm:^10.4.19, autoprefixer@npm:^10.4.21":
   version: 10.4.21
   resolution: "autoprefixer@npm:10.4.21"
   dependencies:

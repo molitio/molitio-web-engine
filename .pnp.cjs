@@ -100,7 +100,6 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.46.2"],\
           ["@typescript-eslint/type-utils", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.46.2"],\
           ["@yarnpkg/sdks", "npm:3.2.3"],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
           ["babel-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
           ["core-js", "npm:3.46.0"],\
           ["eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:9.39.0"],\
@@ -11425,7 +11424,6 @@ const RAW_RUNTIME_STATE =
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@tailwindcss/postcss", "npm:4.1.16"],\
           ["@types/react", "npm:19.2.2"],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
           ["postcss", "npm:8.5.6"],\
           ["react", "npm:19.2.0"],\
           ["react-dom", "virtual:3e4dd93aaad7af1339be212d236a7ccf4aeaf0b3b61cab2448e92f46200e76d5212ac7441b78a6482fbc4fffdaacea6cb11e3003fa4947517b6aefbb9d790ca6#npm:19.2.0"],\
@@ -11852,7 +11850,6 @@ const RAW_RUNTIME_STATE =
           ["@typescript-eslint/parser", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.46.2"],\
           ["@typescript-eslint/type-utils", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:8.46.2"],\
           ["@yarnpkg/sdks", "npm:3.2.3"],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
           ["babel-jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
           ["core-js", "npm:3.46.0"],\
           ["eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:9.39.0"],\
@@ -17890,11 +17887,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21", {\
-        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-6ffbdd2bbe/0/cache/autoprefixer-npm-10.4.21-0dd6f0f60c-5d7aeee78e.zip/node_modules/autoprefixer/",\
+      ["virtual:f1bb6e611359e930be10f20e12f2aa67ed0f18318049b188951ba0f2a916ca6a835ddf0595c56a5010968ddba5ce7064e7cc0fa4ba16cc1e4fd896ed6c88d340#npm:10.4.21", {\
+        "packageLocation": "./.yarn/__virtual__/autoprefixer-virtual-4e7ab689f1/0/cache/autoprefixer-npm-10.4.21-0dd6f0f60c-5d7aeee78e.zip/node_modules/autoprefixer/",\
         "packageDependencies": [\
           ["@types/postcss", null],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
+          ["autoprefixer", "virtual:f1bb6e611359e930be10f20e12f2aa67ed0f18318049b188951ba0f2a916ca6a835ddf0595c56a5010968ddba5ce7064e7cc0fa4ba16cc1e4fd896ed6c88d340#npm:10.4.21"],\
           ["browserslist", "npm:4.27.0"],\
           ["caniuse-lite", "npm:1.0.30001752"],\
           ["fraction.js", "npm:4.3.7"],\
@@ -20409,7 +20406,7 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/cssnano-preset-advanced-virtual-f1bb6e6113/0/cache/cssnano-preset-advanced-npm-6.1.2-4bd636a3e8-2cdc4cb44e.zip/node_modules/cssnano-preset-advanced/",\
         "packageDependencies": [\
           ["@types/postcss", null],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
+          ["autoprefixer", "virtual:f1bb6e611359e930be10f20e12f2aa67ed0f18318049b188951ba0f2a916ca6a835ddf0595c56a5010968ddba5ce7064e7cc0fa4ba16cc1e4fd896ed6c88d340#npm:10.4.21"],\
           ["browserslist", "npm:4.27.0"],\
           ["cssnano-preset-advanced", "virtual:d1b027c1c5eb19028c2f0f3fb328142ee4691a35a1c48c16db6cf2017336c0860deb498ad6fed7417ff2d7062a1635ca3ff0d9a0cad15e89edf1029c39d24dd0#npm:6.1.2"],\
           ["cssnano-preset-default", "virtual:f1bb6e611359e930be10f20e12f2aa67ed0f18318049b188951ba0f2a916ca6a835ddf0595c56a5010968ddba5ce7064e7cc0fa4ba16cc1e4fd896ed6c88d340#npm:6.1.2"],\
@@ -32988,7 +32985,7 @@ const RAW_RUNTIME_STATE =
           ["@csstools/postcss-trigonometric-functions", "virtual:4ccc30d4b685a8592a4a94b927aa06abae9be2d3bd738a945dc8c67762dbd7cd19e8af04deee5ee817820f2179c7369145998726e736e993a5d1fbb99b896a75#npm:4.0.9"],\
           ["@csstools/postcss-unset-value", "virtual:4ccc30d4b685a8592a4a94b927aa06abae9be2d3bd738a945dc8c67762dbd7cd19e8af04deee5ee817820f2179c7369145998726e736e993a5d1fbb99b896a75#npm:4.0.0"],\
           ["@types/postcss", null],\
-          ["autoprefixer", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:10.4.21"],\
+          ["autoprefixer", "virtual:f1bb6e611359e930be10f20e12f2aa67ed0f18318049b188951ba0f2a916ca6a835ddf0595c56a5010968ddba5ce7064e7cc0fa4ba16cc1e4fd896ed6c88d340#npm:10.4.21"],\
           ["browserslist", "npm:4.27.0"],\
           ["css-blank-pseudo", "virtual:4ccc30d4b685a8592a4a94b927aa06abae9be2d3bd738a945dc8c67762dbd7cd19e8af04deee5ee817820f2179c7369145998726e736e993a5d1fbb99b896a75#npm:7.0.1"],\
           ["css-has-pseudo", "virtual:4ccc30d4b685a8592a4a94b927aa06abae9be2d3bd738a945dc8c67762dbd7cd19e8af04deee5ee817820f2179c7369145998726e736e993a5d1fbb99b896a75#npm:7.0.3"],\
