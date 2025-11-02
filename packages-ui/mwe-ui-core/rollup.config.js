@@ -9,7 +9,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import tailwindcss from 'tailwindcss';
+import tailwindcss from '@tailwindcss/postcss';
 import autoprefixer from 'autoprefixer';
 import preserveDirectives from 'rollup-preserve-directives';
 import { createRequire } from 'module';
@@ -55,9 +55,11 @@ const globals = {
     'react-is': 'react-is',
 };
 
-Object.keys(moduleDefinitions).map((moduleName) =>
-    console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}
-Tailwind config: ${JSON.stringify({ ...styleSystemConfig }, null, 2)}`),
+Object.keys(moduleDefinitions).map(
+    (moduleName) =>
+        console.log(`Rollup creating: ${moduleDefinitions[moduleName].name} v${packageJson.version}
+`),
+    /* Add for debugging: Tailwind config: ${JSON.stringify({ ...styleSystemConfig }, null, 2)} */
 );
 
 const modules = Array.from(
