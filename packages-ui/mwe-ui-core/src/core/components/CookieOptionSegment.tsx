@@ -23,10 +23,7 @@ export default function CookieOptionSegment({
     return (
         <div className="rounded-lg border border-tertiary bg-primary p-3">
             <div className="flex items-center justify-between gap-3">
-                <button
-                    onClick={toggleExpanded}
-                    className="text-left text-white hover:text-gray-300 transition-colors"
-                >
+                <button onClick={toggleExpanded} className="text-left text-white hover:text-gray-300 transition-colors">
                     {option.description}
                 </button>
 
@@ -41,20 +38,13 @@ export default function CookieOptionSegment({
 
             {isExpanded && (
                 <>
-                    <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">
-                        {option.details}
-                    </div>
+                    <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">{option.details}</div>
 
                     <div className="mt-3 flex justify-end">
-                        <CheckBox
-                            id={option.id}
-                            name={option.id}
-                            checked={checked}
-                            onChange={handleCheckboxChange}
-                        />
+                        <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
                     </div>
                 </>
-            )}  
+            )}
         </div>
     );
 }
