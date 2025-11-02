@@ -118,6 +118,20 @@ export default [
         },
     },
 
+    // CommonJS config files (.cjs)
+    {
+        files: ['**/*.cjs'],
+        languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: 'script', // CommonJS
+            globals: { ...globals.node, ...globals.es2022 },
+        },
+        plugins: { prettier: prettierPlugin },
+        rules: {
+            'prettier/prettier': 'error',
+        },
+    },
+
     // Fallback for plain JS files (exclude all project folders handled above)
     {
         files: [

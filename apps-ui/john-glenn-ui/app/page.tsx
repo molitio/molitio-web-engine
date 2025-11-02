@@ -1,10 +1,11 @@
 'use client';
-import React from 'react';
-import { Button } from '../../../packages-ui/mwe-ui-core/src/ui-interactive/index';
+
+import { Button } from '@molitio/mwe-ui-core';
+import Image from 'next/image';
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-primary tertiary flex flex-col text-primary">
+        <div className="min-h-screen bg-secondary flex flex-col text-primary">
             {/* Navbar: Primary background, onPrimary text */}
             <nav className="bg-primary text-white px-6 py-4 flex items-center justify-between shadow-md">
                 {/* Logo and Brand */}
@@ -79,8 +80,13 @@ export default function Home() {
                         Secondary
                     </button>
                     {/* User Avatar */}
-                    <div className="w-9 h-9 rounded-full bg-muted flex items-center justify-center text-primary font-bold shadow border border-gray-300">
-                        N
+                    <div className="relative w-9 h-9 rounded-full bg-muted overflow-hidden shadow">
+                        <Image
+                            src="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
+                            alt="User avatar"
+                            fill
+                            style={{ objectFit: 'cover', objectPosition: 'center' }}
+                        />
                     </div>
                 </div>
                 {/* Mobile Menu Button */}
@@ -91,7 +97,7 @@ export default function Home() {
 
             <div className="flex flex-1">
                 {/* Sidebar: Secondary background, onSecondary text */}
-                <aside className="w-56 bg-secondary text-white flex flex-col p-4 space-y-2">
+                <aside className="w-56 bg-primary text-white flex flex-col p-4 space-y-2">
                     <div className="font-semibold mb-2 text-white">Sidebar</div>
                     <a href="#" className="hover:text-accent text-white">
                         Dashboard
@@ -203,12 +209,16 @@ export default function Home() {
                                 </button>
                             </div>
                             {/* Card with Image */}
-                            <div className="bg-white rounded-lg shadow-lg p-0 border border-gray-200 flex flex-col">
-                                <img
-                                    src="https://source.unsplash.com/random/400x200"
-                                    alt="Random"
-                                    className="rounded-t-lg object-cover h-32 w-full"
-                                />
+                            <div className="bg-white rounded-lg shadow-lg p-0 border border-gray-200 flex flex-col overflow-hidden">
+                                <div className="relative h-32 w-full overflow-hidden bg-gray-100">
+                                    <Image
+                                        src="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
+                                        alt="Random"
+                                        fill
+                                        style={{ objectFit: 'contain', objectPosition: 'center' }}
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
                                 <div className="p-6 flex-1 flex flex-col">
                                     <h3 className="font-semibold text-lg text-primary mb-2">Image Card</h3>
                                     <p className="text-secondary mb-4">Card with image header.</p>

@@ -7,6 +7,14 @@ const nextConfig: NextConfig = {
     transpilePackages: ['@molitio/mwe-ui-core'],
     outputFileTracingRoot: path.resolve(__dirname, '../..'),
     trailingSlash: false,
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'avatars.githubusercontent.com',
+            },
+        ],
+    },
     async headers() {
         return [
             {
