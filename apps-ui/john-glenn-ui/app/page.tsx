@@ -1,4 +1,6 @@
+'use client';
 import React from 'react';
+import { Button } from '../../../packages-ui/mwe-ui-core/src/ui-interactive/index';
 
 export default function Home() {
     return (
@@ -109,33 +111,64 @@ export default function Home() {
                         <h2 className="text-2xl font-bold text-primary mb-4">Button Showcase</h2>
                         <div className="flex flex-wrap gap-4 mb-6">
                             {/* Primary Button */}
-                            <button className="bg-primary text-white px-4 py-2 rounded shadow hover:bg-primary/80 transition">
+                            <Button variant="primary" rounded="sm" size="sm">
                                 Primary
-                            </button>
+                            </Button>
                             {/* Secondary Button */}
-                            <button className="bg-secondary text-white px-4 py-2 rounded shadow hover:bg-secondary/80 transition">
+                            <Button variant="secondary" rounded="sm" size="sm">
                                 Secondary
-                            </button>
-                            {/* Accent Button */}
-                            <button className="bg-accent text-white px-4 py-2 rounded shadow hover:bg-accent/80 transition">
-                                Accent
-                            </button>
-                            {/* Outline Button */}
-                            <button className="border border-primary text-primary px-4 py-2 rounded bg-white hover:bg-primary hover:text-white transition">
-                                Outline
-                            </button>
-                            {/* Disabled Button */}
-                            <button
-                                className="bg-primary text-white px-4 py-2 rounded opacity-50 cursor-not-allowed"
-                                disabled
+                            </Button>
+                            {/* Outlined Button */}
+                            <Button variant="outlined" rounded="sm" size="sm">
+                                Outlined
+                            </Button>
+                            {/* Text Button */}
+                            <Button variant="text" rounded="sm" size="sm">
+                                Text
+                            </Button>
+                            {/* Danger Button */}
+                            <Button variant="danger" rounded="sm" size="sm" disabled={true}>
+                                Danger
+                            </Button>
+                            {/* Icon start Button */}
+                            <Button
+                                startIcon={<span className="material-icons">star</span>}
+                                variant="primary"
+                                size="md"
+                                rounded="lg"
+                                fullWidth={false}
                             >
-                                Disabled
-                            </button>
-                            {/* Icon Button */}
-                            <button className="bg-primary text-white px-3 py-2 rounded-full flex items-center gap-2 shadow hover:bg-primary/80 transition">
-                                <span className="material-icons">star</span>
                                 Icon
-                            </button>
+                            </Button>
+                            {/* Icon end Button */}
+                            <Button
+                                endIcon={<span className="material-icons">star</span>}
+                                variant="primary"
+                                size="md"
+                                rounded="lg"
+                                fullWidth={false}
+                            >
+                                Icon
+                            </Button>
+                            {/* Disabled Button */}
+                            <Button variant="primary" size="md" rounded="lg" fullWidth={false} disabled={true}>
+                                Disabled
+                            </Button>
+                            {/* Loading Button */}
+                            <Button
+                                variant="primary"
+                                size="md"
+                                fullWidth={false}
+                                rounded={'lg'}
+                                loading={true}
+                                onClick={() => alert('Gombra kattintottál!')}
+                            >
+                                gomb
+                            </Button>
+                            {/* Full width Button */}
+                            <Button variant="primary" size="md" rounded="lg" fullWidth={true}>
+                                Full Width
+                            </Button>
                         </div>
                     </section>
 
