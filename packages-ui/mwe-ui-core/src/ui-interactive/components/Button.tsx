@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren, ReactNode } from 'react';
 import { ButtonVariant } from '../types';
 
 const variantClasses = {
@@ -15,18 +15,17 @@ const sizeClasses = {
     lg: 'py-4 px-8 text-lg',
 };
 
-export type ButtonProps = {
-    variant?: 'primary' | 'secondary' | 'outlined' | 'text' | 'danger';
+export type ButtonProps = PropsWithChildren & {
+    variant?: ButtonVariant;
     size?: 'sm' | 'md' | 'lg';
     fullWidth?: boolean;
     rounded?: 'sm' | 'md' | 'lg' | '';
     disabled?: boolean;
     loading?: boolean;
-    startIcon?: React.ReactNode;
-    endIcon?: React.ReactNode;
+    startIcon?: ReactNode;
+    endIcon?: ReactNode;
     type?: 'button' | 'submit' | 'reset';
     onClick?: () => void;
-    children?: React.ReactNode;
     className?: string;
 };
 

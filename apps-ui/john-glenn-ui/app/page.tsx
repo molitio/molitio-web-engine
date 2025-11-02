@@ -111,54 +111,64 @@ export default function Home() {
                         <h2 className="text-2xl font-bold text-primary mb-4">Button Showcase</h2>
                         <div className="flex flex-wrap gap-4 mb-6">
                             {/* Primary Button */}
-                            <Button children="Primary" variant="primary" rounded="sm" size="sm" />
+                            <Button variant="primary" rounded="sm" size="sm">
+                                Primary
+                            </Button>
                             {/* Secondary Button */}
-                            <Button children="Secondary" variant="secondary" rounded="sm" size="sm" />
+                            <Button variant="secondary" rounded="sm" size="sm">
+                                Secondary
+                            </Button>
                             {/* Outlined Button */}
-                            <Button children="Outlined" variant="outlined" rounded="sm" size="sm" />
+                            <Button variant="outlined" rounded="sm" size="sm">
+                                Outlined
+                            </Button>
                             {/* Text Button */}
-                            <Button children="Text" variant="text" rounded="sm" size="sm" />
+                            <Button variant="text" rounded="sm" size="sm">
+                                Text
+                            </Button>
                             {/* Danger Button */}
-                            <Button children="Danger" variant="danger" rounded="sm" size="sm" disabled={true} />
+                            <Button variant="danger" rounded="sm" size="sm" disabled={true}>
+                                Danger
+                            </Button>
                             {/* Icon start Button */}
                             <Button
                                 startIcon={<span className="material-icons">star</span>}
-                                children="Icon"
                                 variant="primary"
                                 size="md"
                                 rounded="lg"
                                 fullWidth={false}
-                            />
+                            >
+                                Icon
+                            </Button>
                             {/* Icon end Button */}
                             <Button
                                 endIcon={<span className="material-icons">star</span>}
-                                children="Icon"
                                 variant="primary"
                                 size="md"
                                 rounded="lg"
                                 fullWidth={false}
-                            />
+                            >
+                                Icon
+                            </Button>
                             {/* Disabled Button */}
-                            <Button
-                                children="Disabled"
-                                variant="primary"
-                                size="md"
-                                rounded="lg"
-                                fullWidth={false}
-                                disabled={true}
-                            />
+                            <Button variant="primary" size="md" rounded="lg" fullWidth={false} disabled={true}>
+                                Disabled
+                            </Button>
                             {/* Loading Button */}
                             <Button
-                                children="gomb"
                                 variant="primary"
                                 size="md"
                                 fullWidth={false}
                                 rounded={'lg'}
                                 loading={true}
                                 onClick={() => alert('Gombra kattintottál!')}
-                            />
+                            >
+                                gomb
+                            </Button>
                             {/* Full width Button */}
-                            <Button children="Full Width" variant="primary" size="md" rounded="lg" fullWidth={true} />
+                            <Button variant="primary" size="md" rounded="lg" fullWidth={true}>
+                                Full Width
+                            </Button>
                         </div>
                     </section>
 
