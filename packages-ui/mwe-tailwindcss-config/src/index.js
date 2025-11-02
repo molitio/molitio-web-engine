@@ -34,24 +34,24 @@ module.exports = {
                 info: '#38BDF8',
             },
             // Background color tokens (semantic)
-            /*         backgroundColor: {
-            primary: '#29345F', // Use for primary buttons, highlights
-            secondary: '#97BB84', // Use for secondary backgrounds
-            tertiary: '#cfd3e6', // Use for cards, surfaces
-        }, */
+            backgroundColor: {
+                primary: '#29345F', // Use for primary buttons, highlights
+                secondary: '#97BB84', // Use for secondary backgrounds
+                tertiary: '#cfd3e6', // Use for cards, surfaces
+            },
             // Text color tokens (semantic)
-            /*         textColor: {
-            primary: '#29345F',
-            secondary: '#4B7F52',
-            tertiary: '#cfd3e6',
-            accent: '#8300E0',
-            special: '#CC00CC',
-            disabled: '#9CA3AF',
-            placeholder: '#4B5563',
-            error: '#EF4444',
-            success: '#22C55E',
-            warning: '#F59E42',
-        }, */
+            textColor: {
+                primary: '#29345F',
+                secondary: '#4B7F52',
+                tertiary: '#cfd3e6',
+                accent: '#8300E0',
+                special: '#CC00CC',
+                disabled: '#9CA3AF',
+                placeholder: '#4B5563',
+                error: '#EF4444',
+                success: '#22C55E',
+                warning: '#F59E42',
+            },
             // Border radius tokens
             borderRadius: {
                 sm: '0.25rem',

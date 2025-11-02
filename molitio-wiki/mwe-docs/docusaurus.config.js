@@ -27,7 +27,7 @@ module.exports = {
                 },
                 blog: false,
                 theme: {
-                    customCss: require.resolve('./src/tailwind.css'),
+                    customCss: require.resolve('./src/globals.css'),
                 },
             },
         ],
