@@ -5,6 +5,7 @@ import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import prettierPlugin from 'eslint-plugin-prettier';
 import nextPlugin from '@next/eslint-plugin-next';
+import jsonPlugin from 'eslint-plugin-jsonc';
 import globals from 'globals';
 
 export default [
@@ -20,6 +21,8 @@ export default [
             '**/dist',
             '**/.artifacts',
             '**/.next',
+            '**/build/**',
+            '**/*.test.*',
         ],
     },
 
@@ -134,5 +137,13 @@ export default [
         rules: {
             ...(js.configs?.recommended?.rules || {}),
         },
+    },
+
+    // JSON files
+    {
+        files: ['**/*.json'],
+        languageOptions: { parser: jsonPlugin },
+        plugins: { jsonc: jsonPlugin },
+        rules: { 'jsonc/no-comments': 'error' },
     },
 ];

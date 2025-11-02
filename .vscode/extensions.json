@@ -1,5 +1,12 @@
 {
-    "recommendations": ["arcanis.vscode-zipfs", "dbaeumer.vscode-eslint", "esbenp.prettier-vscode"],
+    "recommendations": [
+        "arcanis.vscode-zipfs",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "rvest.vs-code-prettier-eslint",
+        "bradlc.vscode-tailwindcss",
+        "naumovs.color-highlight"
+    ],
     "unwantedRecommendations": []
     // All developers must install and enable Prettier and ESLint extensions for code consistency.
 }
