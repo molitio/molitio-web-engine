@@ -6,7 +6,7 @@ const variantClasses = {
     secondary: 'bg-secondary text-white hover:bg-secondary-dark',
     outlined: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-white',
     text: 'bg-transparent text-primary hover:underline',
-    danger: 'bg-danger text-white hover:bg-danger-dark',
+    danger: 'bg-error text-white hover:bg-error-dark',
 };
 
 const sizeClasses = {

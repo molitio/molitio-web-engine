@@ -11,6 +11,8 @@
         "strict": true,
         "noEmit": false,
         "declaration": true,
+        "declarationDir": "./dist/esm",
+        "emitDeclarationOnly": true,
         "declarationMap": false,
         "resolveJsonModule": true,
         "allowSyntheticDefaultImports": true

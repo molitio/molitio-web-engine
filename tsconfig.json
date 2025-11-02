@@ -1,8 +1,14 @@
 {
-    "include": ["**/*.ts", "**/*.tsx"],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "apps-ui/john-glenn-ui/tailwind.config.cjs",
+        "apps-ui/sleeping-dragon-ui/tailwind.config.cjs",
+        "apps-ui/mwe-friday-ui/tailwind.config.cjs"
+    ],
     "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "molitio-wiki/**"],
     "compilerOptions": {
-        "jsx": "react",
+        "jsx": "react-jsx",
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
         "moduleResolution": "Node16",

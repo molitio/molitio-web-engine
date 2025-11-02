@@ -1,9 +1,3 @@
 .github
 .yarn
-docs
 node_modules
-wiki
-*.md
-packages_off_build
-
-apps-api/resource-hub-api/documentation
