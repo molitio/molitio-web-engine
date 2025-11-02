@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Home() {
     return (
-        <div className="min-h-screen bg-tertiary flex flex-col text-primary">
+        <div className="min-h-screen bg-purple-500 tertiary flex flex-col text-primary">
             {/* Navbar: Primary background, onPrimary text */}
             <nav className="bg-primary text-white px-6 py-4 flex items-center justify-between shadow-md">
                 {/* Logo and Brand */}

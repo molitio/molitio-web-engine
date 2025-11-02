@@ -6403,7 +6403,6 @@ __metadata:
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.2"
     "@vercel/build-utils": "npm:12.2.3"
-    autoprefixer: "npm:10.4.21"
     eslint: "npm:9.39.0"
     next: "npm:15.3.4"
     postcss: "npm:8.5.6"
