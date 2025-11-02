@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: Enable Corepack
+        run: corepack enable
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
@@ -22,12 +24,6 @@ jobs:
           cache-dependency-path: |
             yarn.lock
             **/yarn.lock
-
-      - name: Enable Corepack and prepare Yarn
-        run: |
-          corepack enable
-          corepack prepare yarn@4.9.2 --activate
-
       - name: Install dependencies
         run: yarn install --immutable --immutable-cache --check-cache
 
