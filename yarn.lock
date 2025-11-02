@@ -6504,7 +6504,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-tailwindcss-config@workspace:packages-ui/mwe-tailwindcss-config"
   dependencies:
+    "@tailwindcss/postcss": "npm:4.1.16"
     "@tailwindcss/typography": "npm:0.5.19"
+    postcss: "npm:8.5.6"
     tailwindcss: "npm:4.1.16"
   languageName: unknown
   linkType: soft

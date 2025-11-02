@@ -11585,7 +11585,9 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./packages-ui/mwe-tailwindcss-config/",\
         "packageDependencies": [\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
+          ["@tailwindcss/postcss", "npm:4.1.16"],\
           ["@tailwindcss/typography", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:0.5.19"],\
+          ["postcss", "npm:8.5.6"],\
           ["tailwindcss", "npm:4.1.16"]\
         ],\
         "linkType": "SOFT"\

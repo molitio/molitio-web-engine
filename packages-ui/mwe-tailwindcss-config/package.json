@@ -4,7 +4,11 @@
     "author": "Peter Koller",
     "description": "Molitio Web Engine Style Configuration for TailwindCSS",
     "license": "MIT",
-    "main": "src/index.js",
+    "main": "src/index.cjs",
+    "exports": {
+        ".": "./src/index.cjs",
+        "./theme.css": "./src/theme.css"
+    },
     "repository": "git+https://github.com/molitio/molitio-web-engine.git",
     "keywords": [
         "molitio",
@@ -25,7 +29,9 @@
         "build:watch": ""
     },
     "devDependencies": {
+        "@tailwindcss/postcss": "4.1.16",
         "@tailwindcss/typography": "0.5.19",
+        "postcss": "8.5.6",
         "tailwindcss": "4.1.16"
     }
 }

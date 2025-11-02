@@ -1,14 +1,3 @@
-/** @type {import('tailwindcss').Config} */
-
-// Tailwind Design System Theme for MVP
-// ------------------------------------
-// - Use semantic color tokens for clarity and scalability
-// - Includes primary, secondary, tertiary, accent, neutral, state, and grayscale colors
-// - Provides spacing, border, radius, shadow, and z-index tokens
-// - See comments for usage guidance
-console.log('Loading MWE Tailwind CSS Config');
-module.exports = {
-    css: `
 @theme {
   --spacing-gutter-bottom: 2rem;
   --spacing-gutter-x: 1.5rem;
@@ -82,8 +71,3 @@ module.exports = {
 
   --background-image-gradient-to-172: linear-gradient(172deg, #97BB84 20%, #4D5BBC 80%);
 }
-`,
-    config: {
-        plugins: [require('@tailwindcss/typography')],
-    },
-};
