@@ -111,33 +111,28 @@ export default function Home() {
                         <h2 className="text-2xl font-bold text-primary mb-4">Button Showcase</h2>
                         <div className="flex flex-wrap gap-4 mb-6">
                             {/* Primary Button */}
-                            <button className="bg-primary text-white px-4 py-2 rounded shadow hover:bg-primary/80 transition">
-                                Primary
-                            </button>
+                            <Button children="Primary" variant='primary' rounded='sm' size='sm'/>
                             {/* Secondary Button */}
-                            <button className="bg-secondary text-white px-4 py-2 rounded shadow hover:bg-secondary/80 transition">
-                                Secondary
-                            </button>
-                            {/* Accent Button */}
-                            <button className="bg-accent text-white px-4 py-2 rounded shadow hover:bg-accent/80 transition">
-                                Accent
-                            </button>
-                            {/* Outline Button */}
-                            <button className="border border-primary text-primary px-4 py-2 rounded bg-white hover:bg-primary hover:text-white transition">
-                                Outline
-                            </button>
+                            <Button children="Secondary" variant='secondary' rounded='sm' size='sm'/>
+                            {/* Outlined Button */}
+                            <Button children="Outlined" variant='outlined' rounded='sm' size='sm'/>
+                            {/* Text Button */}
+                            <Button children="Text" variant='text' rounded='sm' size='sm'/>
+                            {/* Danger Button */}
+                            <Button
+                                children="Danger"
+                                variant="danger"
+                                rounded="sm"
+                                size="sm"
+                                disabled={true}
+                            />
+                            {/* Icon start Button */}
+                            <Button startIcon={<span className="material-icons">star</span>} children="Icon" variant='primary' size='md' rounded='lg' fullWidth={false} />
+                            {/* Icon end Button */}
+                            <Button endIcon={<span className="material-icons">star</span>} children="Icon" variant='primary' size='md' rounded='lg' fullWidth={false} />
                             {/* Disabled Button */}
-                            <button
-                                className="bg-primary text-white px-4 py-2 rounded opacity-50 cursor-not-allowed"
-                                disabled
-                            >
-                                Disabled
-                            </button>
-                            {/* Icon Button */}
-                            <button className="bg-primary text-white px-3 py-2 rounded-full flex items-center gap-2 shadow hover:bg-primary/80 transition">
-                                <span className="material-icons">star</span>
-                                Icon
-                            </button>
+                            <Button children="Disabled" variant='primary' size='md' rounded='lg' fullWidth={false} disabled={true} />
+                            {/* Loading Button */}
                             <Button
                                 children="gomb"
                                 variant='primary'
@@ -147,6 +142,8 @@ export default function Home() {
                                 loading={true}
                                 onClick={() => alert('Gombra kattintottál!')}
                             />
+                            {/* Full width Button */}
+                            <Button children="Full Width" variant="primary" size="md" rounded="lg" fullWidth={true} />
                         </div>
                     </section>
 

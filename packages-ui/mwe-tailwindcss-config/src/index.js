@@ -23,6 +23,7 @@ module.exports = {
                 primary: '#29345F', // Main brand color (buttons, links, highlights)
                 secondary: '#97BB84', // Secondary brand color (backgrounds, accents)
                 tertiary: '#cfd3e6', // Tertiary/neutral (body backgrounds, cards)
+                danger: '#EF4444', // Danger color (errors, destructive actions)
                 accent: '#8300E0', // Accent color (CTAs, highlights, deeper purple)
                 special: '#CC00CC', // Special color (CTAs, highlights)
                 white: '#e6ebf2',
