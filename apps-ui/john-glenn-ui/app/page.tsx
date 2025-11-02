@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import { Button } from '../../../packages-ui/mwe-ui-core/src/ui-interactive/index';
 
 export default function Home() {
     return (
@@ -136,6 +138,15 @@ export default function Home() {
                                 <span className="material-icons">star</span>
                                 Icon
                             </button>
+                            <Button
+                                children="gomb"
+                                variant='primary'
+                                size='md' 
+                                fullWidth={false}
+                                rounded={'lg'}
+                                loading={true}
+                                onClick={() => alert('Gombra kattintottál!')}
+                            />
                         </div>
                     </section>
 
