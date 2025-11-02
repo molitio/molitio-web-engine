@@ -25,7 +25,7 @@ jobs:
             yarn.lock
             **/yarn.lock
       - name: Install dependencies
-        run: yarn install --immutable --immutable-cache --check-cache
+        run: yarn install --immutable --check-cache
 
       - name: Run linter
         # use ESLint GitHub formatter so issues show as PR annotations
