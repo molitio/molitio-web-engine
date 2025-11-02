@@ -25,7 +25,6 @@ const isLocalStorageAvailable = (): boolean => {
     }
 };
 
-
 export const cookieService = {
     save: (data: CookieConsentData) => {
         if (!isLocalStorageAvailable()) return;

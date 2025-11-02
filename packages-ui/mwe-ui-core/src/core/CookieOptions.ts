@@ -1,4 +1,4 @@
-import { CookieOption} from './types';
+import { CookieOption } from './types';
 
 export const CookieOptions: Record<string, CookieOption> = {
     telemetry: {
@@ -10,13 +10,15 @@ export const CookieOptions: Record<string, CookieOption> = {
     acceptAdvertisement: {
         id: 'acceptAdvertisement',
         description: 'Accept Advertisement Cookies',
-        details: 'These cookies allow us to show you personalized advertisements based on your browsing behavior and interests.',
+        details:
+            'These cookies allow us to show you personalized advertisements based on your browsing behavior and interests.',
         visible: true,
     },
     acceptTestCookies: {
         id: 'acceptTestCookies',
         description: 'Accept Test Cookies',
-        details: 'Test cookies are used for development and testing purposes. They help us ensure the website works correctly.',
+        details:
+            'Test cookies are used for development and testing purposes. They help us ensure the website works correctly.',
         visible: true,
     },
 };

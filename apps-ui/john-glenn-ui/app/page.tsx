@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { Button } from '../../../packages-ui/mwe-ui-core/src/ui-interactive/index';
 
@@ -111,32 +111,47 @@ export default function Home() {
                         <h2 className="text-2xl font-bold text-primary mb-4">Button Showcase</h2>
                         <div className="flex flex-wrap gap-4 mb-6">
                             {/* Primary Button */}
-                            <Button children="Primary" variant='primary' rounded='sm' size='sm'/>
+                            <Button children="Primary" variant="primary" rounded="sm" size="sm" />
                             {/* Secondary Button */}
-                            <Button children="Secondary" variant='secondary' rounded='sm' size='sm'/>
+                            <Button children="Secondary" variant="secondary" rounded="sm" size="sm" />
                             {/* Outlined Button */}
-                            <Button children="Outlined" variant='outlined' rounded='sm' size='sm'/>
+                            <Button children="Outlined" variant="outlined" rounded="sm" size="sm" />
                             {/* Text Button */}
-                            <Button children="Text" variant='text' rounded='sm' size='sm'/>
+                            <Button children="Text" variant="text" rounded="sm" size="sm" />
                             {/* Danger Button */}
+                            <Button children="Danger" variant="danger" rounded="sm" size="sm" disabled={true} />
+                            {/* Icon start Button */}
                             <Button
-                                children="Danger"
-                                variant="danger"
-                                rounded="sm"
-                                size="sm"
+                                startIcon={<span className="material-icons">star</span>}
+                                children="Icon"
+                                variant="primary"
+                                size="md"
+                                rounded="lg"
+                                fullWidth={false}
+                            />
+                            {/* Icon end Button */}
+                            <Button
+                                endIcon={<span className="material-icons">star</span>}
+                                children="Icon"
+                                variant="primary"
+                                size="md"
+                                rounded="lg"
+                                fullWidth={false}
+                            />
+                            {/* Disabled Button */}
+                            <Button
+                                children="Disabled"
+                                variant="primary"
+                                size="md"
+                                rounded="lg"
+                                fullWidth={false}
                                 disabled={true}
                             />
-                            {/* Icon start Button */}
-                            <Button startIcon={<span className="material-icons">star</span>} children="Icon" variant='primary' size='md' rounded='lg' fullWidth={false} />
-                            {/* Icon end Button */}
-                            <Button endIcon={<span className="material-icons">star</span>} children="Icon" variant='primary' size='md' rounded='lg' fullWidth={false} />
-                            {/* Disabled Button */}
-                            <Button children="Disabled" variant='primary' size='md' rounded='lg' fullWidth={false} disabled={true} />
                             {/* Loading Button */}
                             <Button
                                 children="gomb"
-                                variant='primary'
-                                size='md' 
+                                variant="primary"
+                                size="md"
                                 fullWidth={false}
                                 rounded={'lg'}
                                 loading={true}

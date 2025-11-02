@@ -2,17 +2,17 @@ import { PropsWithChildren } from 'react';
 import { ButtonVariant } from '../types';
 
 const variantClasses = {
-    primary: "bg-primary text-white hover:bg-primary-dark",
-    secondary: "bg-secondary text-white hover:bg-secondary-dark",
-    outlined: "bg-transparent border border-primary text-primary hover:bg-primary hover:text-white",
-    text: "bg-transparent text-primary hover:underline",
-    danger: "bg-danger text-white hover:bg-danger-dark",
+    primary: 'bg-primary text-white hover:bg-primary-dark',
+    secondary: 'bg-secondary text-white hover:bg-secondary-dark',
+    outlined: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-white',
+    text: 'bg-transparent text-primary hover:underline',
+    danger: 'bg-danger text-white hover:bg-danger-dark',
 };
 
 const sizeClasses = {
-    sm: "py-2 px-4 text-sm",
-    md: "py-3 px-6 text-base",
-    lg: "py-4 px-8 text-lg",
+    sm: 'py-2 px-4 text-sm',
+    md: 'py-3 px-6 text-base',
+    lg: 'py-4 px-8 text-lg',
 };
 
 export type ButtonProps = {
@@ -52,7 +52,9 @@ export function Button({
         rounded ? `rounded-${rounded}` : '',
         disabled || loading ? 'opacity-50 cursor-not-allowed' : '',
         className,
-    ].filter(Boolean).join(' ');
+    ]
+        .filter(Boolean)
+        .join(' ');
     return (
         <button
             type={type}
