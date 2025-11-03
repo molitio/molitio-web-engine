@@ -42,9 +42,9 @@ Our core philosopies and guiding principle. Our Nort Star Objective.
 
 We welcome collaborations and contributions from all. If you're passionate about making a difference, have a knack for problem-solving, or are skilled in software development, consider joining our mission. Feel free to reach out to us with your ideas, contributions, or even just to say hello!
 
-[Discord](https://discord.gg/F9U97V9d8X)
+[Discord]
 
-> Main should always have a permalink to the discord server
+Please message for invite link
 
 ## Contact Us
 
