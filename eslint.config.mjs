@@ -120,10 +120,24 @@ export default [
 
     // CommonJS config files (.cjs)
     {
-        files: ['**/*.cjs'],
+        files: ['**/*.cjs', '!pnp.cjs'],
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'script', // CommonJS
+            globals: { ...globals.node, ...globals.es2022 },
+        },
+        plugins: { prettier: prettierPlugin },
+        rules: {
+            'prettier/prettier': 'error',
+        },
+    },
+
+    // ESM config files (.mjs)
+    {
+        files: ['**/*.mjs', '!pnp.loader.mjs'],
+        languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: 'module', // ESM
             globals: { ...globals.node, ...globals.es2022 },
         },
         plugins: { prettier: prettierPlugin },
