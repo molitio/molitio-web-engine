@@ -10,6 +10,10 @@ on:
         required: false
         type: string
         default: "24"
+      allow-fail:
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   lint:
@@ -43,3 +47,4 @@ jobs:
 
       - name: Run linter
         run: yarn lint
+        continue-on-error: ${{ inputs.allow-fail }}

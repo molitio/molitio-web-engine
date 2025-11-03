@@ -4,7 +4,9 @@ import { Field, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { SpecificationLabel } from '../specification-label';
 
-export type ResourceDocument = HydratedDocument<Resource>;
+export type ResourceDocument = HydratedDocument<Resource> & {
+    _id: MongooseSchema.Types.ObjectId;
+};
 
 @ObjectType()
 @Schema()

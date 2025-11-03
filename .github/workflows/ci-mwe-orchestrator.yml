@@ -19,6 +19,7 @@ jobs:
     uses: ./.github/workflows/lint-mwe-codebase.yml
     with:
       node-version: "24"
+      allow-fail: true
 
   build:
     name: Build

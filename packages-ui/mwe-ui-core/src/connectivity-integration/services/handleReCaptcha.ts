@@ -1,6 +1,5 @@
 export const handleRecaptcha = async (action: string, key: string) => {
     try {
-        // eslint-disable-next-line no-undef
         const token = await grecaptcha.enterprise?.execute(key, {
             action: action,
         });

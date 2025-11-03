@@ -58,7 +58,7 @@ const build = () => {
         fs.writeFile('dist/package.json', Buffer.from(JSON.stringify(sourceObj, null, 2), 'utf-8'));
         fs.writeFile('dist/version.txt', Buffer.from(sourceObj.version, 'utf-8'));
     } catch (error) {
-        console.error(console.error);
+        console.error('Error occurred while building package:', error);
     }
 };
 
@@ -68,7 +68,7 @@ const isDirectoryExists = (path) => {
             return true;
         }
     } catch (error) {
-        console.error('Directory not found');
+        console.error('Directory not found', error);
         return false;
     }
 };
@@ -77,7 +77,7 @@ const fsCopyFile = (source, destination) => {
     try {
         fs.copyFileSync(source, destination);
     } catch (error) {
-        console.error(error);
+        console.error('Error occurred while copying file:', error);
     }
 };
 

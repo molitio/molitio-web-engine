@@ -15,6 +15,7 @@
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev & WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev & WATCHPACK_POLLING=true yarn workspace @molitio/mwe-friday-ui dev",
         "lint": "eslint . --ext .js,.ts,.tsx,.json",
+        "lint:fix": "eslint . --ext .js,.ts,.tsx,.json --fix",
         "lint:css": "stylelint \"**/*.css\"",
         "format": "prettier . --write",
         "test": "yarn jest",

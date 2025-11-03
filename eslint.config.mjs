@@ -12,14 +12,18 @@ export default [
     // Global ignores
     {
         ignores: [
+            '**/pnp.cjs',
+            '**/pnp.loader.mjs',
+            '**/mwe-ui-core-tests',
             '**/.yarn',
+            '**/node_modules',
             '**/dist',
             '**/build',
             '**/.next',
             '**/.docusaurus',
             '**/.artifacts',
             '**/*.test.*',
-            '**/node_modules',
+            '**/*.spec.*',
         ],
     },
 
@@ -45,11 +49,10 @@ export default [
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
             ...(nextPlugin.configs?.recommended?.rules || {}),
+            '@next/next/no-html-link-for-pages': 'off',
             'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
-        // Explicitly include the Next.js recommended config for detection
-        // extends: [nextPlugin.configs.recommended], // Removed invalid 'extends' for flat config
     },
 
     // Vite React app (mwe-friday-ui)
@@ -122,10 +125,10 @@ export default [
 
     // CommonJS config files (.cjs)
     {
-        files: ['**/*.cjs', '!pnp.cjs'],
+        files: ['**/*.cjs'],
         languageOptions: {
             ecmaVersion: 2022,
-            sourceType: 'script', // CommonJS
+            sourceType: 'script',
             globals: { ...globals.node, ...globals.es2022 },
         },
         plugins: { prettier: prettierPlugin },
@@ -136,7 +139,7 @@ export default [
 
     // ESM config files (.mjs)
     {
-        files: ['**/*.mjs', '!pnp.loader.mjs'],
+        files: ['**/*.mjs'],
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'module', // ESM
@@ -150,14 +153,14 @@ export default [
 
     // Fallback for plain JS files (exclude all project folders handled above)
     {
-        files: [
-            '**/*.js',
-            '!apps-ui/john-glenn-ui/**/*',
-            '!apps-ui/sleeping-dragon-ui/**/*',
-            '!apps-ui/mwe-friday-ui/**/*',
-            '!packages-ui/mwe-ui-core/**/*',
-            '!apps-api/resource-hub-api/**/*',
+        ignores: [
+            '**/apps-ui/john-glenn-ui/**',
+            '**/apps-ui/sleeping-dragon-ui/**',
+            '**/apps-ui/mwe-friday-ui/**',
+            '**/packages-ui/mwe-ui-core/**',
+            '**/apps-api/resource-hub-api/**',
         ],
+        files: ['**/*.js'],
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'module',

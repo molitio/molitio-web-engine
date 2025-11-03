@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { cookieService } from '../services';
 import { CookieConsentData } from '../types';
 import CookieOptionSegment from './CookieOptionSegment';

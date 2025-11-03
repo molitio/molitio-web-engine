@@ -8,11 +8,7 @@ export type CookieOptionSegmentProps = {
     onChange: (id: string, checked: boolean) => void;
 };
 
-export default function CookieOptionSegment({
-    onChange,
-    option,
-    checked,
-}: CookieOptionSegmentProps) {
+export default function CookieOptionSegment({ onChange, option, checked }: CookieOptionSegmentProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
 
     const toggleExpanded = () => {
@@ -40,7 +36,12 @@ export default function CookieOptionSegment({
                     <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">{option.details}</div>
 
                     <div className="mt-3 flex justify-end">
-                        <CheckBox id={option.id} name={option.id} checked={checked} onChange={() => onChange(option.id, !checked)} />
+                        <CheckBox
+                            id={option.id}
+                            name={option.id}
+                            checked={checked}
+                            onChange={() => onChange(option.id, !checked)}
+                        />
                     </div>
                 </>
             )}
