@@ -10,7 +10,8 @@ jobs:
   lint:
     name: Run ESLint
     runs-on: ubuntu-latest
-
+    env:
+      NODE_ENV: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
