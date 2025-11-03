@@ -1,6 +1,4 @@
-permissions:
-  contents: read
-name: Lint
+name: Setup Molitio Web Engine
 
 on:
   workflow_call:
@@ -11,11 +9,9 @@ on:
         default: "24"
 
 jobs:
-  lint:
-    name: Run ESLint
+  setup:
+    name: Prepare environment and populate Yarn cache
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -28,7 +24,7 @@ jobs:
         with:
           node-version: ${{ inputs.node-version }}
 
-      - name: Restore Yarn cache
+      - name: Cache Yarn cache
         uses: actions/cache@v4
         with:
           path: |
@@ -38,15 +34,5 @@ jobs:
           restore-keys: |
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
-      - name: Install dependencies
+      - name: Install dependencies (populate cache)
         run: yarn install --immutable --check-cache
-
-      - name: Run linter
-        # use ESLint GitHub formatter so issues show as PR annotations
-        run: |
-          # prefer built-in script if it exists; use yarn to pass through args cross-platform
-          if yarn -s run -T | grep -q "lint$"; then
-            yarn lint -- --format=github
-          else
-            npx eslint -f github .
-          fi

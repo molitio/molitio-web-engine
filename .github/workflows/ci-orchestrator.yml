@@ -1,0 +1,25 @@
+name: CI Orchestrator
+
+on:
+  pull_request:
+
+jobs:
+  setup:
+    name: Setup
+    uses: ./.github/workflows/setup-molitio-web-engine.yml
+    with:
+      node-version: "24"
+
+  lint:
+    name: Lint
+    needs: setup
+    uses: ./.github/workflows/lint-molitio-web-engine-codebase.yml
+    with:
+      node-version: "24"
+
+  build:
+    name: Build
+    needs: lint
+    uses: ./.github/workflows/build-molitio-web-engine-packages.yml
+    with:
+      node-version: "24"
