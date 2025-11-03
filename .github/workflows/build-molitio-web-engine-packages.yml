@@ -1,6 +1,6 @@
 permissions:
   contents: read
-name: Build
+name: Build MWE Workspaces
 
 on:
   workflow_call:
@@ -32,7 +32,8 @@ jobs:
         with:
           path: |
             .yarn/cache
-            ~/.cache/yarn
+            .pnp.cjs
+            .yarn/install-state.gz
           key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-

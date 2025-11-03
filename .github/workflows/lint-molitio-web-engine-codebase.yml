@@ -1,6 +1,6 @@
 permissions:
   contents: read
-name: Lint
+name: Lint MWE Workspaces
 
 on:
   workflow_call:
@@ -14,8 +14,6 @@ jobs:
   lint:
     name: Run ESLint
     runs-on: ubuntu-latest
-    env:
-      NODE_ENV: production
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -33,7 +31,8 @@ jobs:
         with:
           path: |
             .yarn/cache
-            ~/.cache/yarn
+            .pnp.cjs
+            .yarn/install-state.gz
           key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
