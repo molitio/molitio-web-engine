@@ -6,7 +6,7 @@ export type CheckBoxProps = {
     checked?: boolean;
     label?: string;
     disabled?: boolean;
-    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: () => void;
 };
 
 export function CheckBox({ id, name, checked = false, label, disabled, onChange }: CheckBoxProps) {

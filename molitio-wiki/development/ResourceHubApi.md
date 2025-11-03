@@ -1,4 +1,3 @@
-
 # Molitio Web Engine - MVP Containerization and Deployment
 
 ## Overview
@@ -51,27 +50,24 @@ Key aspects of the configuration:
 ## Environment Setup and Running
 
 1. **Prerequisites:**
-     - Docker and Docker Compose installed.
-     - `.env` file in the project root with required variables (see `docker-compose.yml`).
+    - Docker and Docker Compose installed.
+    - `.env` file in the project root with required variables (see `docker-compose.yml`).
 
-2. **Build and Start Services:**
-         - From the project root, you can use the provided npm scripts for convenience:
-                 - **Incremental build and start:**
-                     ```sh
-                     yarn container-compose
-                     ```
-                     This will build only what has changed and start the containers in detached mode.
-                 - **Full rebuild (clean and force recreate):**
-                     ```sh
-                     yarn container-rebuild
-                     ```
-                     This will stop and remove all containers, prune unused Docker resources, and fully rebuild and restart all services.
+2. **Build and Start Services:** - From the project root, you can use the provided npm scripts for convenience: - **Incremental build and start:**
+   `sh
+                 yarn container-compose
+                 `
+   This will build only what has changed and start the containers in detached mode. - **Full rebuild (clean and force recreate):**
+   `sh
+                 yarn container-rebuild
+                 `
+   This will stop and remove all containers, prune unused Docker resources, and fully rebuild and restart all services.
 
 3. **Accessing Services:**
-     - **API:** http://localhost:4000
-     - **Sleeping Dragon UI:** http://localhost:3000
-     - **Friday UI (static):** Served via the NGINX gateway on the configured port.
-     - **Gateway:** http://localhost:${NGINX_PORT}
+    - **API:** http://localhost:4000
+    - **Sleeping Dragon UI:** http://localhost:3000
+    - **Friday UI (static):** Served via the NGINX gateway on the configured port.
+    - **Gateway:** http://localhost:${NGINX_PORT}
 
 ## CI/CD and Deployment
 

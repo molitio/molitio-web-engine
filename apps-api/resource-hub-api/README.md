@@ -1,4 +1,3 @@
-
 # Resource Hub API
 
 **Work in Progress – API and documentation are actively evolving.**
@@ -27,7 +26,7 @@ Local development uses Docker Compose to orchestrate the API, database, and (pla
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop)
 - `.env` file in the project root with required environment variables:
-  - `MONGO_DB`, `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, etc.
+    - `MONGO_DB`, `MONGO_INITDB_ROOT_USERNAME`, `MONGO_INITDB_ROOT_PASSWORD`, etc.
 
 ### Start Services
 

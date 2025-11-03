@@ -12,17 +12,14 @@ export default [
     // Global ignores
     {
         ignores: [
-            'dist',
-            '.next',
-            '.artifacts',
-            'node_modules',
-            '**/node_modules',
             '**/.yarn',
             '**/dist',
-            '**/.artifacts',
+            '**/build',
             '**/.next',
-            '**/build/**',
+            '**/.docusaurus',
+            '**/.artifacts',
             '**/*.test.*',
+            '**/node_modules',
         ],
     },
 
@@ -35,12 +32,12 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
+            prettier: prettierPlugin,
             'react-hooks': reactHooksPlugin,
             '@typescript-eslint': tsPlugin,
-            prettier: prettierPlugin,
             '@next/next': nextPlugin,
         },
         rules: {
@@ -48,6 +45,7 @@ export default [
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
             ...(nextPlugin.configs?.recommended?.rules || {}),
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
         // Explicitly include the Next.js recommended config for detection
@@ -63,7 +61,7 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
             'react-hooks': reactHooksPlugin,
@@ -74,6 +72,7 @@ export default [
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
     },
@@ -87,7 +86,8 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        // use the automatic JSX runtime so React doesn't need to be in scope
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
             'react-hooks': reactHooksPlugin,
@@ -98,6 +98,8 @@ export default [
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            // New JSX transform doesn't require React in scope
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
     },

@@ -1,13 +1,13 @@
 {
     "folders": [
         {
-            "path": "."
-        }
+            "path": ".",
+        },
     ],
     "settings": {
         "search.exclude": {
             "**/.yarn": true,
-            "**/.pnp.*": true
+            "**/.pnp.*": true,
         },
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.formatOnSave": true,
@@ -20,17 +20,17 @@
         "typescript.tsdk": ".yarn/sdks/typescript/lib",
         "typescript.enablePromptUseWorkspaceTsdk": true,
         "[dockerfile]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
         "[typescript]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
         "[typescriptreact]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
         "[javascript]": {
-            "editor.defaultFormatter": "esbenp.prettier-vscode"
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
         },
-        "testing.automaticallyOpenTestResults": "neverOpen"
-    }
+        "testing.automaticallyOpenTestResults": "neverOpen",
+    },
 }

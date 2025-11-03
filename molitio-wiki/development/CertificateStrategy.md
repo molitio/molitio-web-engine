@@ -7,11 +7,13 @@ This document outlines how to enable secure communication (HTTPS and mutual TLS)
 ### 1. Certificate Strategy
 
 #### Development
+
 - Use self-signed certificates.
 - Generate a local CA, then sign server/client certs with it.
 - Store certs in a local directory, mount into containers via volumes.
 
 #### Production
+
 - Use certificates from a trusted CA (e.g., Let's Encrypt for public endpoints, or your org’s internal CA for internal services).
 - Store certs securely (e.g., secrets manager, or Docker secrets).
 - Automate renewal (e.g., certbot for Let's Encrypt).
@@ -41,9 +43,11 @@ openssl x509 -req -in client.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out c
 ```
 
 You may also use the secp384r1 (P-384) curve for even stronger security:
+
 ```bash
 openssl ecparam -name secp384r1 -genkey -noout -out ca.key
 ```
+
 and repeat the above steps for server and client keys.
 
 ---
@@ -59,33 +63,33 @@ and repeat the above steps for server and client keys.
 ### 4. Container Configuration
 
 #### NGINX
-- Configure for HTTPS and mTLS:
-		- `ssl_certificate`, `ssl_certificate_key`
-		- `ssl_client_certificate` (for mTLS)
-		- `ssl_verify_client on;`
+
+- Configure for HTTPS and mTLS: - `ssl_certificate`, `ssl_certificate_key` - `ssl_client_certificate` (for mTLS) - `ssl_verify_client on;`
 - Example volume mount:
-		```yaml
-		volumes:
-			- ./certs/nginx:/etc/nginx/certs:ro
-		```
+  `yaml
+	volumes:
+		- ./certs/nginx:/etc/nginx/certs:ro
+	`
 
 #### NestJS & Next.js
+
 - Use HTTPS server (pass cert/key).
 - For mTLS, verify client certs (optional, usually handled by NGINX).
 - Example (NestJS):
-		```typescript
-		// ...existing code...
-		httpsOptions: {
-			key: fs.readFileSync('/path/to/server.key'),
-			cert: fs.readFileSync('/path/to/server.crt'),
-			ca: fs.readFileSync('/path/to/ca.crt'), // for mTLS
-			requestCert: true,
-			rejectUnauthorized: true,
-		}
-		// ...existing code...
-		```
+  `typescript
+	// ...existing code...
+	httpsOptions: {
+		key: fs.readFileSync('/path/to/server.key'),
+		cert: fs.readFileSync('/path/to/server.crt'),
+		ca: fs.readFileSync('/path/to/ca.crt'), // for mTLS
+		requestCert: true,
+		rejectUnauthorized: true,
+	}
+	// ...existing code...
+	`
 
 #### MongoDB
+
 - Enable TLS in config.
 - Use `--tlsMode`, `--tlsCertificateKeyFile`, `--tlsCAFile`.
 - For mTLS, require client certs.
@@ -115,4 +119,3 @@ and repeat the above steps for server and client keys.
 
 **Summary:**  
 Generate a CA, sign certs for each service, configure containers to use them, automate and secure cert handling. For production, use trusted CA and secure storage. NGINX can terminate TLS and enforce mTLS for all backend services.
-
