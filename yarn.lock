@@ -6709,9 +6709,9 @@ __metadata:
     typescript: "npm:5.9.3"
     typescript-eslint: "npm:8.46.2"
   dependenciesMeta:
-    postcss@8.4.36:
+    postcss@8.5.6:
       unplugged: true
-    tailwindcss@3.4.3:
+    tailwindcss@4.1.16:
       unplugged: true
     ts-node@10.9.2:
       unplugged: true
