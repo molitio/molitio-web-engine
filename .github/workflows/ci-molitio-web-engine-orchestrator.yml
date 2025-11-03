@@ -1,6 +1,7 @@
+name: Orchestrate MWE CI
+
 permissions:
   contents: read
-name: Orchestrate MWE CI
 
 on:
   pull_request:

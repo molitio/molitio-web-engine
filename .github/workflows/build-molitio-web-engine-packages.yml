@@ -1,6 +1,7 @@
+name: Build MWE Workspaces
+
 permissions:
   contents: read
-name: Build MWE Workspaces
 
 on:
   workflow_call:

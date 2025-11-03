@@ -1,6 +1,7 @@
+name: Lint MWE Workspaces
+
 permissions:
   contents: read
-name: Lint MWE Workspaces
 
 on:
   workflow_call:
