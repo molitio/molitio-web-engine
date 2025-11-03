@@ -10,7 +10,7 @@ const cookieConsentSchema = yup
         (value) => value && typeof value === 'object' && Object.values(value).every((v) => typeof v === 'boolean'),
     );
 
-const isValidCookieConsentData = (data: any): data is CookieConsentData => {
+const isValidCookieConsentData = (data: CookieConsentData | unknown): data is CookieConsentData => {
     return cookieConsentSchema.isValidSync(data);
 };
 

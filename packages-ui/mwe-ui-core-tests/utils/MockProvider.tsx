@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MockProvider: React.FC<React.PropsWithChildren> = (props) => {
+const MockProvider: React.FC<React.PropsWithChildren<{}>> = (props) => {
     return <>{props.children}</>;
 };
 

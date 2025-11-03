@@ -13,6 +13,7 @@ export default function CookieConsent() {
     useEffect(() => {
         const data = cookieService.get();
         if (!data) {
+            
             setVisible(true);
             const initialStates: CookieConsentData = {};
             Object.keys(CookieOptions).forEach((key) => {
@@ -84,7 +85,7 @@ export default function CookieConsent() {
                             key={option.id}
                             option={option}
                             checked={cookieStates[option.id] || false}
-                            onChange={handleOptionChange}
+                            onChange={() => handleOptionChange(option.id, !cookieStates[option.id])}
                         />
                     ))}
             </div>
