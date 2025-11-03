@@ -6,7 +6,7 @@
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {
-        "ci": "yarn install --immutable --immutable-cache --check-cache",
+        "ci": "yarn install --immutable --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological-dev run build",
         "build-mwe-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build",
         "build-resource-hub": "yarn workspace @molitio/mwe-resource-hub-api build",
@@ -15,6 +15,8 @@
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
         "dev": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev & WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev & WATCHPACK_POLLING=true yarn workspace @molitio/mwe-friday-ui dev",
         "lint": "eslint . --ext .js,.ts,.tsx,.json",
+        "lint:fix": "eslint . --ext .js,.ts,.tsx,.json --fix",
+        "lint:css": "stylelint \"**/*.css\"",
         "format": "prettier . --write",
         "test": "yarn jest",
         "test:watch": "yarn jest --watch",
@@ -87,6 +89,9 @@
         "prettier-eslint": "16.4.2",
         "protobufjs": "7.5.4",
         "rimraf": "6.1.0",
+        "stylelint": "16.25.0",
+        "stylelint-config-standard": "39.0.1",
+        "stylelint-order": "7.0.0",
         "tailwindcss": "4.1.16",
         "ts-jest": "29.4.5",
         "ts-morph": "27.0.2",
@@ -99,10 +104,10 @@
         "@molitio/mwe-ui-core": "workspace:0.2.0"
     },
     "dependenciesMeta": {
-        "postcss@8.4.36": {
+        "postcss@8.5.6": {
             "unplugged": true
         },
-        "tailwindcss@3.4.3": {
+        "tailwindcss@4.1.16": {
             "unplugged": true
         },
         "ts-node@10.9.2": {

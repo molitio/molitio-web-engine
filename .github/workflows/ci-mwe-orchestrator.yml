@@ -1,0 +1,29 @@
+name: Orchestrate MWE CI
+
+permissions:
+  contents: read
+
+on:
+  pull_request:
+
+jobs:
+  setup:
+    name: Setup
+    uses: ./.github/workflows/setup-mwe.yml
+    with:
+      node-version: "24"
+
+  lint:
+    name: Lint
+    needs: setup
+    uses: ./.github/workflows/lint-mwe-codebase.yml
+    with:
+      node-version: "24"
+      allow-fail: true
+
+  build:
+    name: Build
+    needs: lint
+    uses: ./.github/workflows/build-mwe-packages.yml
+    with:
+      node-version: "24"

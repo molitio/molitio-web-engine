@@ -44,7 +44,6 @@ const moduleDefinitions = {
     },
 };
 
-const isProd = process.env.NODE_ENV === 'production';
 const extensions = ['.ts', '.tsx'];
 const exclusions = ['**/dist', '**/.yarn', 'tsconfig.tsbuildinfo'];
 const globals = {
@@ -81,7 +80,6 @@ const modules = Array.from(
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
-                ,
                 preserveDirectives(),
                 resolve(),
                 commonjs(),

@@ -1,10 +1,15 @@
+name: Build MWE Workspaces
+
 permissions:
   contents: read
-name: Build
 
 on:
   workflow_call:
-  pull_request:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        default: "24"
 
 jobs:
   build-project:
@@ -14,31 +19,45 @@ jobs:
       NODE_ENV: production
     steps:
       - uses: actions/checkout@v4
+
       - name: Enable Corepack
         run: corepack enable
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
-          cache: "yarn"
-          cache-dependency-path: |
-            yarn.lock
-            **/yarn.lock
+          node-version: ${{ inputs.node-version }}
+
+      - name: Restore Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .pnp.cjs
+            .yarn/install-state.gz
+          key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
+
       - name: Install Dependencies (Yarn Monorepo)
         run: yarn install --immutable --check-cache
+
       - name: Build All Packages
         run: |
           yarn build
+
       - name: Upload UI Core
         uses: actions/upload-artifact@v4
         with:
           name: mwe-ui-core
           path: packages-ui/mwe-ui-core/dist
+
       - name: Upload John-Glenn
         uses: actions/upload-artifact@v4
         with:
           name: john-glenn
           path: apps-ui/john-glenn-ui/.next
+
       - name: Upload Sleeping-Dragon
         uses: actions/upload-artifact@v4
         with:

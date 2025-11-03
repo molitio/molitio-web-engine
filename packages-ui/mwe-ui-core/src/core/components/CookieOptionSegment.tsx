@@ -2,19 +2,14 @@ import { useState } from 'react';
 import { CookieOption } from '../types';
 import { CheckBox } from '../../ui-interactive';
 
-export default function CookieOptionSegment({
-    option,
-    checked,
-    onChange,
-}: {
-    option: CookieOption;
+export type CookieOptionSegmentProps = {
     checked: boolean;
+    option: CookieOption;
     onChange: (id: string, checked: boolean) => void;
-}) {
+};
+
+export default function CookieOptionSegment({ onChange, option, checked }: CookieOptionSegmentProps) {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
-    const handleCheckboxChange = () => {
-        onChange(option.id, !checked);
-    };
 
     const toggleExpanded = () => {
         setIsExpanded(!isExpanded);
@@ -41,7 +36,12 @@ export default function CookieOptionSegment({
                     <div className="mt-3 pt-3 border-t border-white text-sm text-gray-300">{option.details}</div>
 
                     <div className="mt-3 flex justify-end">
-                        <CheckBox id={option.id} name={option.id} checked={checked} onChange={handleCheckboxChange} />
+                        <CheckBox
+                            id={option.id}
+                            name={option.id}
+                            checked={checked}
+                            onChange={() => onChange(option.id, !checked)}
+                        />
                     </div>
                 </>
             )}

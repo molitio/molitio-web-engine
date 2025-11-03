@@ -12,17 +12,18 @@ export default [
     // Global ignores
     {
         ignores: [
-            'dist',
-            '.next',
-            '.artifacts',
-            'node_modules',
-            '**/node_modules',
+            '**/.pnp.cjs',
+            '**/.pnp.loader.mjs',
+            '**/mwe-ui-core-tests',
             '**/.yarn',
+            '**/node_modules',
             '**/dist',
-            '**/.artifacts',
+            '**/build',
             '**/.next',
-            '**/build/**',
+            '**/.docusaurus',
+            '**/.artifacts',
             '**/*.test.*',
+            '**/*.spec.*',
         ],
     },
 
@@ -35,12 +36,12 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
+            prettier: prettierPlugin,
             'react-hooks': reactHooksPlugin,
             '@typescript-eslint': tsPlugin,
-            prettier: prettierPlugin,
             '@next/next': nextPlugin,
         },
         rules: {
@@ -48,10 +49,10 @@ export default [
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
             ...(nextPlugin.configs?.recommended?.rules || {}),
+            '@next/next/no-html-link-for-pages': 'off',
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
-        // Explicitly include the Next.js recommended config for detection
-        // extends: [nextPlugin.configs.recommended], // Removed invalid 'extends' for flat config
     },
 
     // Vite React app (mwe-friday-ui)
@@ -63,7 +64,7 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
             'react-hooks': reactHooksPlugin,
@@ -74,6 +75,7 @@ export default [
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
     },
@@ -87,7 +89,8 @@ export default [
             sourceType: 'module',
             globals: { ...globals.browser, ...globals.es2022 },
         },
-        settings: { react: { version: 'detect' } },
+        // use the automatic JSX runtime so React doesn't need to be in scope
+        settings: { react: { version: 'detect', runtime: 'automatic' } },
         plugins: {
             react: reactPlugin,
             'react-hooks': reactHooksPlugin,
@@ -98,6 +101,8 @@ export default [
             ...(reactPlugin.configs?.recommended?.rules || {}),
             ...(reactHooksPlugin.configs?.recommended?.rules || reactHooksPlugin.rules || {}),
             ...(tsPlugin.configs?.recommended?.rules || {}),
+            // New JSX transform doesn't require React in scope
+            'react/react-in-jsx-scope': 'off',
             'prettier/prettier': 'error',
         },
     },
@@ -123,7 +128,21 @@ export default [
         files: ['**/*.cjs'],
         languageOptions: {
             ecmaVersion: 2022,
-            sourceType: 'script', // CommonJS
+            sourceType: 'script',
+            globals: { ...globals.node, ...globals.es2022 },
+        },
+        plugins: { prettier: prettierPlugin },
+        rules: {
+            'prettier/prettier': 'error',
+        },
+    },
+
+    // ESM config files (.mjs)
+    {
+        files: ['**/*.mjs'],
+        languageOptions: {
+            ecmaVersion: 2022,
+            sourceType: 'module', // ESM
             globals: { ...globals.node, ...globals.es2022 },
         },
         plugins: { prettier: prettierPlugin },
@@ -134,14 +153,14 @@ export default [
 
     // Fallback for plain JS files (exclude all project folders handled above)
     {
-        files: [
-            '**/*.js',
-            '!apps-ui/john-glenn-ui/**/*',
-            '!apps-ui/sleeping-dragon-ui/**/*',
-            '!apps-ui/mwe-friday-ui/**/*',
-            '!packages-ui/mwe-ui-core/**/*',
-            '!apps-api/resource-hub-api/**/*',
+        ignores: [
+            '**/apps-ui/john-glenn-ui/**',
+            '**/apps-ui/sleeping-dragon-ui/**',
+            '**/apps-ui/mwe-friday-ui/**',
+            '**/packages-ui/mwe-ui-core/**',
+            '**/apps-api/resource-hub-api/**',
         ],
+        files: ['**/*.js'],
         languageOptions: {
             ecmaVersion: 2022,
             sourceType: 'module',

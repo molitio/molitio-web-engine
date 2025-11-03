@@ -3,6 +3,7 @@
 Welcome to the Molitio open-source project! This document is the work contract for all contributors and AI agents. It defines the core methodologies, workflows, and standards that must be followed to ensure a robust, scalable, and maintainable ecosystem.
 
 ## Table of Contents
+
 1. [Core Methodologies](#core-methodologies)
     - [The 12-Factor App](#the-12-factor-app)
     - [The Four Pillars of Component Testing](#the-four-pillars-of-component-testing)
@@ -22,7 +23,9 @@ Welcome to the Molitio open-source project! This document is the work contract f
 ## Core Methodologies
 
 ### The 12-Factor App
+
 We strictly adhere to the [12-Factor App methodology](https://12factor.net/):
+
 1. **Codebase:** One codebase tracked in version control, many deploys.
 2. **Dependencies:** Explicitly declare and isolate dependencies.
 3. **Config:** Store config in the environment, never in code.
@@ -37,18 +40,22 @@ We strictly adhere to the [12-Factor App methodology](https://12factor.net/):
 12. **Admin Processes:** Run admin/management tasks as one-off processes.
 
 ### The Four Pillars of Component Testing
+
 All UI components must be tested against these pillars:
+
 1. **Rendering:** Components must render correctly with various props.
 2. **Interaction:** Components must respond correctly to user events.
 3. **Accessibility (A11y):** Components must be usable by everyone.
 4. **Molitio Contract:** Components must follow project-specific rules (e.g., `data-molitio-id`).
 
 ### The "Define -> Implement -> Collaborate" Workflow
+
 1. **Define:** Plan features/components in structured markdown (`plan.md`) in `packages-utils/molitio-wiki/design-system/`.
 2. **Implement:** Write code and tests based on the plan.
 3. **Collaborate:** Use the AI assistant to review and ensure adherence to standards.
 
 ## Repository Structure
+
 - **`CONTRIBUTING.md`:** This file. The highest authority on development practices.
 - **`packages-utils/molitio-wiki/design-system/`:** Feature/component plans (`plan.md`).
 - **`packages/ui/components/`:** React UI components (reference for coding style).
@@ -62,11 +69,12 @@ All code in this repository must conform to the formatting and linting rules def
 - **Prettier**: The root `.prettierrc` and `.prettierignore` are the only valid Prettier configs. No project-level `.prettierrc` files are allowed. All formatting must match the root config.
 - **ESLint**: The root `eslint.config.js` is the single source of truth for linting. No project-level `.eslintrc*` or `eslint.config.js` files are allowed unless they only extend the root config.
 - **VSCode Extensions**: All contributors must install and enable the following extensions:
-  - `dbaeumer.vscode-eslint` (ESLint)
-  - `esbenp.prettier-vscode` (Prettier)
-These are listed in `.vscode/extensions.json` as recommendations. Code will not be accepted unless it passes lint and format checks.
+    - `dbaeumer.vscode-eslint` (ESLint)
+    - `esbenp.prettier-vscode` (Prettier)
+      These are listed in `.vscode/extensions.json` as recommendations. Code will not be accepted unless it passes lint and format checks.
 
 > **Note:** The CI and pre-commit hooks will enforce these rules. Manual or local overrides are not permitted.
+
 1. Fork the repository and create a feature branch.
 2. Write or update a `plan.md` for new features/components.
 3. Implement code and tests following the plan and standards.
@@ -74,20 +82,24 @@ These are listed in `.vscode/extensions.json` as recommendations. Code will not 
 5. Submit a pull request for review.
 
 ## Coding Standards
+
 - Follow patterns in `packages/ui/components/`.
 - Use environment variables for all configuration (see Factor III).
 - Keep code modular, stateless, and maintainable.
 
 ## Testing Standards
+
 - All components must be tested for rendering, interaction, accessibility, and Molitio contract.
 - Use established test patterns and tools.
 
 ## Documentation Standards
+
 - All features/components must have a `plan.md` in the design system wiki.
 - Update documentation as features evolve.
 - **Component plan docs must only describe the component's functionality and usage. Architectural principles are defined here.**
 
 ## Community Standards
+
 - Be respectful and collaborative.
 - Review and provide constructive feedback.
 
@@ -96,18 +108,19 @@ These are listed in `.vscode/extensions.json` as recommendations. Code will not 
 We use a structured git branching strategy to ensure clarity and traceability:
 
 - **Feature branches:** `feature/<TICKET-ID>_<description>` or `feature/<TICKET-ID>-<description>`
-  - Example: `feature/MWE-191_NextJS_UI_containerization`
+    - Example: `feature/MWE-191_NextJS_UI_containerization`
 - **Fix branches:** `fix/<TICKET-ID>-<description>`
-  - Example: `fix/MWE-240-Nonce-breaking-apps-on-production-site`
+    - Example: `fix/MWE-240-Nonce-breaking-apps-on-production-site`
 - **Chore branches:** `chore/<TICKET-ID>_<description>`
-  - Example: `chore/MWE-181_monorepo_refactor`
+    - Example: `chore/MWE-181_monorepo_refactor`
 - **Release branches:** `releases/<package-name>` or `release`
-  - Example: `releases/mwe-john-glenn-ui`
+    - Example: `releases/mwe-john-glenn-ui`
 - **Documentation branches:** `documentation/<TICKET-ID>_<description>`
-  - Example: `documentation/MWE-241_ResourceHub-containerization-planning`
+    - Example: `documentation/MWE-241_ResourceHub-containerization-planning`
 - **Automation/Dependabot:** `dependabot/<...>`
 
 **General rules:**
+
 - Always use a relevant ticket/issue ID if available (e.g., `MWE-191`).
 - Use lowercase and hyphens/underscores for readability.
 - Keep branch names concise but descriptive.
@@ -123,6 +136,7 @@ We require all contributors to follow a strict TDD workflow, guided by the "Red-
 4. **Repeat:** Continue this cycle for every feature and bugfix, working in small, testable increments.
 
 **AI Pair Programming:**
+
 - When using Copilot or other AI assistants, always begin with a test suggestion.
 - Use the AI to help you maintain the TDD rhythm and to proactively suggest refactoring opportunities.
 
@@ -136,6 +150,7 @@ We require all contributors to follow a strict TDD workflow, guided by the "Red-
 ---
 
 For AI-assisted development to be effective, always:
+
 - Keep the wiki up to date with the latest process and feature documentation.
 - Reference the wiki and `CONTRIBUTING.md` in all onboarding, code reviews, and planning sessions.
 - Treat these documents as the canonical, persisted configuration for the Molitio web development workflow.

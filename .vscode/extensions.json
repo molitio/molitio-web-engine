@@ -5,7 +5,8 @@
         "esbenp.prettier-vscode",
         "rvest.vs-code-prettier-eslint",
         "bradlc.vscode-tailwindcss",
-        "naumovs.color-highlight"
+        "naumovs.color-highlight",
+        "stylelint.vscode-stylelint"
     ],
     "unwantedRecommendations": []
 }

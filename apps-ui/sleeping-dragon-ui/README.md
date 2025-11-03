@@ -9,7 +9,6 @@ Developed under the Molitio Foundation, Sleeping Dragon provides a powerful, int
 ## Key Features
 
 - **User-Friendly Design**: Sleeping Dragon focuses on creating an engaging and intuitive user experience, streamlining the access to and utilization of commercial resources.
-  
 - **Advanced Navigation**: With a well-structured layout, Sleeping Dragon ensures that users can easily locate and manage the resources relevant to their business needs.
 
 - **Responsive and Scalable**: Sleeping Dragon is built to ensure consistent and smooth performance across all devices and scales seamlessly to accommodate businesses of all sizes.
