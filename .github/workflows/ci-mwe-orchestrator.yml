@@ -9,20 +9,20 @@ on:
 jobs:
   setup:
     name: Setup
-    uses: ./.github/workflows/setup-molitio-web-engine.yml
+    uses: ./.github/workflows/setup-mwe.yml
     with:
       node-version: "24"
 
   lint:
     name: Lint
     needs: setup
-    uses: ./.github/workflows/lint-molitio-web-engine-codebase.yml
+    uses: ./.github/workflows/lint-mwe-codebase.yml
     with:
       node-version: "24"
 
   build:
     name: Build
     needs: lint
-    uses: ./.github/workflows/build-molitio-web-engine-packages.yml
+    uses: ./.github/workflows/build-mwe-packages.yml
     with:
       node-version: "24"

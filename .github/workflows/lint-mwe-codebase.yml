@@ -42,4 +42,4 @@ jobs:
         run: yarn install --immutable --check-cache
 
       - name: Run linter
-        run: yarn lint -- --format=github
+        run: yarn lint
