@@ -10,25 +10,22 @@ export default function CookieConsent() {
     const [visible, setVisible] = useState<boolean>(false);
     const [cookieStates, setCookieStates] = useState<CookieConsentData>({});
 
-    useEffect(() => {
-        const data = cookieService.get();
-        if (!data) {
-            
-            setVisible(true);
-            const initialStates: CookieConsentData = {};
-            Object.keys(CookieOptions).forEach((key) => {
-                initialStates[CookieOptions[key].id] = false;
-            });
-            setCookieStates(initialStates);
-        } else {
-            setVisible(false);
-            const mergedStates: CookieConsentData = {};
-            Object.keys(CookieOptions).forEach((key) => {
-                mergedStates[CookieOptions[key].id] = data[CookieOptions[key].id] || false;
-            });
-            setCookieStates(mergedStates);
-        }
-    }, []);
+    const data = cookieService.get();
+    if (!data) {
+        setVisible(true);
+        const initialStates: CookieConsentData = {};
+        Object.keys(CookieOptions).forEach((key) => {
+            initialStates[CookieOptions[key].id] = false;
+        });
+        setCookieStates(initialStates);
+    } else {
+        setVisible(false);
+        const mergedStates: CookieConsentData = {};
+        Object.keys(CookieOptions).forEach((key) => {
+            mergedStates[CookieOptions[key].id] = data[CookieOptions[key].id] || false;
+        });
+        setCookieStates(mergedStates);
+    }
 
     const handleOptionChange = (id: string, checked: boolean) => {
         setCookieStates((prev) => {

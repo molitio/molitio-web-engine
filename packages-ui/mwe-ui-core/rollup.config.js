@@ -80,7 +80,6 @@ const modules = Array.from(
                 peerDepsExternal({
                     includeDependencies: false,
                 }),
-                ,
                 preserveDirectives(),
                 resolve(),
                 commonjs(),
