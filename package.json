@@ -6,7 +6,7 @@
     "authors": "Peter Koller",
     "description": "Molitio Core Libraries",
     "scripts": {
-        "ci": "yarn install --immutable --immutable-cache --check-cache",
+        "ci": "yarn install --immutable --check-cache",
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological-dev run build",
         "build-mwe-ui-core": "yarn artifacts:cleanup && yarn workspace @molitio/mwe-ui-core build",
         "build-resource-hub": "yarn workspace @molitio/mwe-resource-hub-api build",
@@ -103,10 +103,10 @@
         "@molitio/mwe-ui-core": "workspace:0.2.0"
     },
     "dependenciesMeta": {
-        "postcss@8.4.36": {
+        "postcss@8.5.6": {
             "unplugged": true
         },
-        "tailwindcss@3.4.3": {
+        "tailwindcss@4.1.16": {
             "unplugged": true
         },
         "ts-node@10.9.2": {

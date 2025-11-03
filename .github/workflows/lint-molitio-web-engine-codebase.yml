@@ -42,11 +42,4 @@ jobs:
         run: yarn install --immutable --check-cache
 
       - name: Run linter
-        # use ESLint GitHub formatter so issues show as PR annotations
-        run: |
-          # prefer built-in script if it exists; use yarn to pass through args cross-platform
-          if yarn -s run -T | grep -q "lint$"; then
-            yarn lint -- --format=github
-          else
-            npx eslint -f github .
-          fi
+        run: yarn lint -- --format=github
