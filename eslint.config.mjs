@@ -12,8 +12,8 @@ export default [
     // Global ignores
     {
         ignores: [
-            '**/pnp.cjs',
-            '**/pnp.loader.mjs',
+            '**/.pnp.cjs',
+            '**/.pnp.loader.mjs',
             '**/mwe-ui-core-tests',
             '**/.yarn',
             '**/node_modules',
