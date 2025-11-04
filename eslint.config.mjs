@@ -125,6 +125,7 @@ export default [
 
     // CommonJS config files (.cjs)
     {
+        ignores: ['**/.pnp.cjs'],
         files: ['**/*.cjs'],
         languageOptions: {
             ecmaVersion: 2022,
@@ -139,6 +140,7 @@ export default [
 
     // ESM config files (.mjs)
     {
+        ignores: ['**/.pnp.loader.mjs'],
         files: ['**/*.mjs'],
         languageOptions: {
             ecmaVersion: 2022,
