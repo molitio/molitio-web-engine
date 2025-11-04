@@ -55,12 +55,12 @@ Key aspects of the configuration:
 
 2. **Build and Start Services:** - From the project root, you can use the provided npm scripts for convenience: - **Incremental build and start:**
    `sh
-                 yarn container-compose
-                 `
+              yarn container-compose
+              `
    This will build only what has changed and start the containers in detached mode. - **Full rebuild (clean and force recreate):**
    `sh
-                 yarn container-rebuild
-                 `
+              yarn container-rebuild
+              `
    This will stop and remove all containers, prune unused Docker resources, and fully rebuild and restart all services.
 
 3. **Accessing Services:**

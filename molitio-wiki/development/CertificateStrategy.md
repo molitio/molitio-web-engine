@@ -67,9 +67,9 @@ and repeat the above steps for server and client keys.
 - Configure for HTTPS and mTLS: - `ssl_certificate`, `ssl_certificate_key` - `ssl_client_certificate` (for mTLS) - `ssl_verify_client on;`
 - Example volume mount:
   `yaml
-	volumes:
-		- ./certs/nginx:/etc/nginx/certs:ro
-	`
+volumes:
+	- ./certs/nginx:/etc/nginx/certs:ro
+`
 
 #### NestJS & Next.js
 
@@ -77,16 +77,16 @@ and repeat the above steps for server and client keys.
 - For mTLS, verify client certs (optional, usually handled by NGINX).
 - Example (NestJS):
   `typescript
-	// ...existing code...
-	httpsOptions: {
-		key: fs.readFileSync('/path/to/server.key'),
-		cert: fs.readFileSync('/path/to/server.crt'),
-		ca: fs.readFileSync('/path/to/ca.crt'), // for mTLS
-		requestCert: true,
-		rejectUnauthorized: true,
-	}
-	// ...existing code...
-	`
+// ...existing code...
+httpsOptions: {
+	key: fs.readFileSync('/path/to/server.key'),
+	cert: fs.readFileSync('/path/to/server.crt'),
+	ca: fs.readFileSync('/path/to/ca.crt'), // for mTLS
+	requestCert: true,
+	rejectUnauthorized: true,
+}
+// ...existing code...
+`
 
 #### MongoDB
 
