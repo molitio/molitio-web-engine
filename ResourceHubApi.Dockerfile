@@ -13,7 +13,7 @@ RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
 RUN yarn install
 RUN yarn add global @nestjs/cli
-RUN yarn build-resource-hub
+RUN yarn yarn workspaces focus --production @molitio/mwe-resource-hub-api
 
 FROM node:24-alpine AS production
 ARG MONOREPO_ROOT

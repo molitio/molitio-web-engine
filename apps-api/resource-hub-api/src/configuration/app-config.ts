@@ -6,6 +6,9 @@ enum Host {
     localhost = 'localhost',
 }
 
+/*
+ * To switch between local development and containerized environment, change the activeHost value.
+ */
 const activeHost = Host.container;
 export const activePort = 4000;
 

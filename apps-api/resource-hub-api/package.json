@@ -2,7 +2,7 @@
     "name": "@molitio/mwe-resource-hub-api",
     "version": "0.2.0",
     "description": "Resource Distribution Engine",
-    "author": "Peter Koller",
+    "author": "Peter Koller, Molitio LLC",
     "license": "MIT",
     "repository": {
         "type": "git",

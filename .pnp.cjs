@@ -111,8 +111,10 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.5.0"],\
           ["graphql", "npm:16.12.0"],\
           ["graphql-tag", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:2.12.6"],\
+          ["husky", "npm:9.1.7"],\
           ["jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
           ["jest-environment-jsdom", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
+          ["knip", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:5.67.1"],\
           ["postcss", "npm:8.5.6"],\
           ["prettier", "npm:3.6.2"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.4.2"],\
@@ -11942,8 +11944,10 @@ const RAW_RUNTIME_STATE =
           ["globals", "npm:16.5.0"],\
           ["graphql", "npm:16.12.0"],\
           ["graphql-tag", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:2.12.6"],\
+          ["husky", "npm:9.1.7"],\
           ["jest", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
           ["jest-environment-jsdom", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:30.2.0"],\
+          ["knip", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:5.67.1"],\
           ["postcss", "npm:8.5.6"],\
           ["prettier", "npm:3.6.2"],\
           ["prettier-eslint", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:16.4.2"],\
@@ -12814,6 +12818,178 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@oxc-project-types-npm-0.82.3-af71d57703-08574e6fa4.zip/node_modules/@oxc-project/types/",\
         "packageDependencies": [\
           ["@oxc-project/types", "npm:0.82.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-android-arm-eabi", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-android-arm-eabi-npm-11.13.0-d5541f6fd6/node_modules/@oxc-resolver/binding-android-arm-eabi/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-android-arm-eabi", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-android-arm64", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-android-arm64-npm-11.13.0-cd49ca941d/node_modules/@oxc-resolver/binding-android-arm64/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-android-arm64", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-darwin-arm64", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-darwin-arm64-npm-11.13.0-4aa414f056/node_modules/@oxc-resolver/binding-darwin-arm64/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-darwin-arm64", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-darwin-x64", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-darwin-x64-npm-11.13.0-e0c8398d15/node_modules/@oxc-resolver/binding-darwin-x64/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-darwin-x64", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-freebsd-x64", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-freebsd-x64-npm-11.13.0-78358d2dbe/node_modules/@oxc-resolver/binding-freebsd-x64/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-freebsd-x64", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-arm-gnueabihf", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-arm-gnueabihf-npm-11.13.0-4b1d3e3de6/node_modules/@oxc-resolver/binding-linux-arm-gnueabihf/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-arm-gnueabihf", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-arm-musleabihf", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-arm-musleabihf-npm-11.13.0-06c56e4356/node_modules/@oxc-resolver/binding-linux-arm-musleabihf/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-arm-musleabihf", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-arm64-gnu", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-arm64-gnu-npm-11.13.0-0f4c049f7e/node_modules/@oxc-resolver/binding-linux-arm64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-arm64-gnu", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-arm64-musl", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-arm64-musl-npm-11.13.0-33b47f4ad3/node_modules/@oxc-resolver/binding-linux-arm64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-arm64-musl", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-ppc64-gnu", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-ppc64-gnu-npm-11.13.0-b81d936a68/node_modules/@oxc-resolver/binding-linux-ppc64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-ppc64-gnu", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-riscv64-gnu", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-riscv64-gnu-npm-11.13.0-4131080da4/node_modules/@oxc-resolver/binding-linux-riscv64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-riscv64-gnu", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-riscv64-musl", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-riscv64-musl-npm-11.13.0-d3ce57fde2/node_modules/@oxc-resolver/binding-linux-riscv64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-riscv64-musl", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-s390x-gnu", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-s390x-gnu-npm-11.13.0-26db51b2b0/node_modules/@oxc-resolver/binding-linux-s390x-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-s390x-gnu", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-x64-gnu", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-x64-gnu-npm-11.13.0-14768a9aa2/node_modules/@oxc-resolver/binding-linux-x64-gnu/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-x64-gnu", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-linux-x64-musl", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-linux-x64-musl-npm-11.13.0-e1b0698376/node_modules/@oxc-resolver/binding-linux-x64-musl/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-linux-x64-musl", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-wasm32-wasi", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-wasm32-wasi-npm-11.13.0-15a1e5df27/node_modules/@oxc-resolver/binding-wasm32-wasi/",\
+        "packageDependencies": [\
+          ["@napi-rs/wasm-runtime", "npm:1.0.7"],\
+          ["@oxc-resolver/binding-wasm32-wasi", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-win32-arm64-msvc", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-win32-arm64-msvc-npm-11.13.0-bae400e686/node_modules/@oxc-resolver/binding-win32-arm64-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-win32-arm64-msvc", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-win32-ia32-msvc", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-win32-ia32-msvc-npm-11.13.0-5cd81a4096/node_modules/@oxc-resolver/binding-win32-ia32-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-win32-ia32-msvc", "npm:11.13.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@oxc-resolver/binding-win32-x64-msvc", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/unplugged/@oxc-resolver-binding-win32-x64-msvc-npm-11.13.0-ff08e94113/node_modules/@oxc-resolver/binding-win32-x64-msvc/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-win32-x64-msvc", "npm:11.13.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -23630,6 +23806,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["fd-package-json", [\
+      ["npm:2.0.0", {\
+        "packageLocation": "./.yarn/cache/fd-package-json-npm-2.0.0-33d49af282-e595a1a23f.zip/node_modules/fd-package-json/",\
+        "packageDependencies": [\
+          ["fd-package-json", "npm:2.0.0"],\
+          ["walk-up-path", "npm:4.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["fd-slicer", [\
       ["npm:1.1.0", {\
         "packageLocation": "./.yarn/cache/fd-slicer-npm-1.1.0-3cade0050a-db3e34fa48.zip/node_modules/fd-slicer/",\
@@ -24077,6 +24263,16 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/format-npm-0.2.2-679f3acc64-5f878b8fc1.zip/node_modules/format/",\
         "packageDependencies": [\
           ["format", "npm:0.2.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["formatly", [\
+      ["npm:0.3.0", {\
+        "packageLocation": "./.yarn/cache/formatly-npm-0.3.0-409b612b1d-0e5a9cbb82.zip/node_modules/formatly/",\
+        "packageDependencies": [\
+          ["fd-package-json", "npm:2.0.0"],\
+          ["formatly", "npm:0.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -25606,6 +25802,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["humanize-ms", "npm:1.2.1"],\
           ["ms", "npm:2.1.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["husky", [\
+      ["npm:9.1.7", {\
+        "packageLocation": "./.yarn/cache/husky-npm-9.1.7-5b02eaabc4-c2412753f1.zip/node_modules/husky/",\
+        "packageDependencies": [\
+          ["husky", "npm:9.1.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -27832,6 +28037,42 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/kleur-npm-3.0.3-f6f53649a4-0c0ecaf00a.zip/node_modules/kleur/",\
         "packageDependencies": [\
           ["kleur", "npm:3.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["knip", [\
+      ["npm:5.67.1", {\
+        "packageLocation": "./.yarn/cache/knip-npm-5.67.1-b23e6e5ad5-c8c1889779.zip/node_modules/knip/",\
+        "packageDependencies": [\
+          ["knip", "npm:5.67.1"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:5.67.1", {\
+        "packageLocation": "./.yarn/__virtual__/knip-virtual-e7cb87353b/0/cache/knip-npm-5.67.1-b23e6e5ad5-c8c1889779.zip/node_modules/knip/",\
+        "packageDependencies": [\
+          ["@nodelib/fs.walk", "npm:1.2.8"],\
+          ["@types/node", "npm:24.9.2"],\
+          ["@types/typescript", null],\
+          ["fast-glob", "npm:3.3.3"],\
+          ["formatly", "npm:0.3.0"],\
+          ["jiti", "npm:2.6.1"],\
+          ["js-yaml", "npm:4.1.0"],\
+          ["knip", "virtual:29c6370ad245650c0f5fa87161a75d060e622448ad21858b6a408ab5227f40ff97554acf6ca00f838ee24523955c3700504fb1b17e414e7c5d86ebc6744c5912#npm:5.67.1"],\
+          ["minimist", "npm:1.2.8"],\
+          ["oxc-resolver", "npm:11.13.0"],\
+          ["picocolors", "npm:1.1.1"],\
+          ["picomatch", "npm:4.0.3"],\
+          ["smol-toml", "npm:1.4.2"],\
+          ["strip-json-comments", "npm:5.0.2"],\
+          ["typescript", "patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"],\
+          ["zod", "npm:4.1.12"]\
+        ],\
+        "packagePeers": [\
+          "@types/node",\
+          "@types/typescript",\
+          "typescript"\
         ],\
         "linkType": "HARD"\
       }]\
@@ -30852,6 +31093,34 @@ const RAW_RUNTIME_STATE =
           ["object-keys", "npm:1.1.1"],\
           ["own-keys", "npm:1.0.1"],\
           ["safe-push-apply", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["oxc-resolver", [\
+      ["npm:11.13.0", {\
+        "packageLocation": "./.yarn/cache/oxc-resolver-npm-11.13.0-27ff09a259-e9e747d807.zip/node_modules/oxc-resolver/",\
+        "packageDependencies": [\
+          ["@oxc-resolver/binding-android-arm-eabi", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-android-arm64", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-darwin-arm64", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-darwin-x64", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-freebsd-x64", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-arm-gnueabihf", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-arm-musleabihf", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-arm64-gnu", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-arm64-musl", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-ppc64-gnu", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-riscv64-gnu", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-riscv64-musl", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-s390x-gnu", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-x64-gnu", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-linux-x64-musl", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-wasm32-wasi", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-win32-arm64-msvc", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-win32-ia32-msvc", "npm:11.13.0"],\
+          ["@oxc-resolver/binding-win32-x64-msvc", "npm:11.13.0"],\
+          ["oxc-resolver", "npm:11.13.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -36364,6 +36633,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["smol-toml", [\
+      ["npm:1.4.2", {\
+        "packageLocation": "./.yarn/cache/smol-toml-npm-1.4.2-e50c6ddbc6-00c3c45859.zip/node_modules/smol-toml/",\
+        "packageDependencies": [\
+          ["smol-toml", "npm:1.4.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["snake-case", [\
       ["npm:3.0.4", {\
         "packageLocation": "./.yarn/cache/snake-case-npm-3.0.4-67f447c30d-0a7a79900b.zip/node_modules/snake-case/",\
@@ -37058,6 +37336,13 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/strip-json-comments-npm-3.1.1-dcb2324823-492f73e272.zip/node_modules/strip-json-comments/",\
         "packageDependencies": [\
           ["strip-json-comments", "npm:3.1.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:5.0.2", {\
+        "packageLocation": "./.yarn/cache/strip-json-comments-npm-5.0.2-430187d559-986064b738.zip/node_modules/strip-json-comments/",\
+        "packageDependencies": [\
+          ["strip-json-comments", "npm:5.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -39510,6 +39795,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["w3c-xmlserializer", "npm:5.0.0"],\
           ["xml-name-validator", "npm:5.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["walk-up-path", [\
+      ["npm:4.0.0", {\
+        "packageLocation": "./.yarn/cache/walk-up-path-npm-4.0.0-d7e927f7ee-6a230b20e5.zip/node_modules/walk-up-path/",\
+        "packageDependencies": [\
+          ["walk-up-path", "npm:4.0.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -47157,7 +47451,7 @@ function arg(
 		}
 
 		if (wholeArg.length > 1 && wholeArg[0] === '-') {
-			 
+			/* eslint-disable operator-linebreak */
 			const separatedArguments =
 				wholeArg[1] === '-' || wholeArg.length === 2
 					? [wholeArg]
@@ -47208,7 +47502,7 @@ function arg(
 							!(
 								argv[i + 1].match(/^-?\d*(\.(?=\d))?\d*$/) &&
 								(type === Number ||
-									 
+									// eslint-disable-next-line no-undef
 									(typeof BigInt !== 'undefined' && type === BigInt))
 							))
 					) {

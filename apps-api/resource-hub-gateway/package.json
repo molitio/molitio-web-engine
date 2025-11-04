@@ -3,6 +3,6 @@
     "version": "0.2.0",
     "description": "Nginx API Gateway",
     "main": "index.js",
-    "author": "Peter Koller",
+    "author": "Peter Koller, Molitio LLC",
     "license": "MIT"
 }
