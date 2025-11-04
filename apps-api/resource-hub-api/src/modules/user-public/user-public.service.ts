@@ -10,6 +10,7 @@ export class UserPublicService {
     constructor(@InjectModel(UserPublic.name, 'user-public') private userPublic: Model<UserPublic>) {}
 
     public isAuthenticated = async (): Promise<boolean> => {
+        // TODO: implement real authentication check for MVP release
         return true;
     };
 

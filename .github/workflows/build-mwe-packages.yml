@@ -40,7 +40,7 @@ jobs:
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
       - name: Install Dependencies (Yarn Monorepo)
-        run: yarn install --immutable --check-cache
+        run: yarn install --immutable
 
       - name: Build All Packages
         run: |
