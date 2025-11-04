@@ -2,7 +2,7 @@ import { Args, Mutation, Resolver } from '@nestjs/graphql';
 import { UserPrivate } from './user-private.schema';
 import { UserPrivateService } from './user-private.service';
 
-@Resolver((of: any) => UserPrivate)
+@Resolver(() => UserPrivate)
 export class UserPrivateMutation {
     constructor(private readonly userPrivateService: UserPrivateService) {}
 
@@ -12,6 +12,13 @@ export class UserPrivateMutation {
         @Args('resourceCollectionId', { nullable: true }) resourceCollectionId?: string,
         @Args('userPersistedConfigId', { nullable: true }) userPersistedConfigId?: string,
     ): Promise<UserPrivate> {
+        console.log(
+            'implement createUserPrivate',
+            this.userPrivateService,
+            usernamePublic,
+            resourceCollectionId,
+            userPersistedConfigId,
+        );
         return;
         // Implementation to create a new UserPrivate
         // Return the newly created UserPrivate instance
@@ -24,6 +31,7 @@ export class UserPrivateMutation {
         @Args('resourceCollectionId', { nullable: true }) resourceCollectionId?: string,
         @Args('userPersistedConfigId', { nullable: true }) userPersistedConfigId?: string,
     ): Promise<UserPrivate> {
+        console.log('implement updateUserPrivate', id, usernamePublic, resourceCollectionId, userPersistedConfigId);
         return;
 
         // Implementation to update an existing UserPrivate
@@ -32,6 +40,7 @@ export class UserPrivateMutation {
 
     @Mutation(() => UserPrivate)
     async deleteUserPrivate(@Args('id') id: string): Promise<UserPrivate> {
+        console.log('implement deleteUserPrivate', id);
         return;
 
         // Implementation to delete a UserPrivate

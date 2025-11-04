@@ -4,6 +4,7 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { UserPublicRoles } from './user-public.types';
 import { CreateUserPublicInput } from './user-public.input';
+import { newTimestamp } from 'src/utils/dateTime';
 
 @Injectable()
 export class UserPublicService {
@@ -15,11 +16,10 @@ export class UserPublicService {
     };
 
     async create(userPublic: CreateUserPublicInput): Promise<UserPublic> {
-        const now = new Date().toISOString();
+        const now = newTimestamp();
         const createdUserPublic = new this.userPublic({
             ...userPublic,
             createdAt: now,
-            updatedAt: now,
         });
         return await createdUserPublic.save();
     }

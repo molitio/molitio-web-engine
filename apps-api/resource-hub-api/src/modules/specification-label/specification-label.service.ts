@@ -3,6 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { CreateSpecificationLabelDto, SpecificationLabel } from './specification-label.schema';
 import { LabelValue } from './label-value.schema';
+import { newTimestamp } from 'src/utils/dateTime';
 
 @Injectable()
 export class SpecificationLabelService {
@@ -15,13 +16,13 @@ export class SpecificationLabelService {
     async create(createSpecificationLabelDto: CreateSpecificationLabelDto): Promise<SpecificationLabel> {
         const createdSpecificationLabel = new this.SpecificationLabel(createSpecificationLabelDto);
 
-        if (createSpecificationLabelDto.labelValueIdCollection) {
-            createdSpecificationLabel.labelValueClolection = await this.SpecificationLabel.findOne({
-                _id: { $in: [...createSpecificationLabelDto.labelValueIdCollection] },
+        if (createSpecificationLabelDto.labelValueCollection) {
+            createdSpecificationLabel.labelValueCollection = await this.SpecificationLabel.findOne({
+                _id: { $in: [...createSpecificationLabelDto.labelValueCollection] },
             });
         }
 
-        createdSpecificationLabel.createdAt = new Date().getTime().toString();
+        createdSpecificationLabel.createdAt = newTimestamp();
         createdSpecificationLabel.createdBy = 'System';
         return await createdSpecificationLabel.save();
     }
