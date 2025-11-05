@@ -52,6 +52,8 @@
         }
     ],
     "devDependencies": {
+        "@apollo/client": "4.0.9",
+        "@apollo/client-integration-nextjs": "0.14.1",
         "@babel/core": "7.28.5",
         "@babel/eslint-parser": "7.28.5",
         "@compodoc/compodoc": "1.1.32",
@@ -61,8 +63,6 @@
         "@graphql-codegen/introspection": "5.0.0",
         "@graphql-codegen/typescript": "5.0.2",
         "@graphql-codegen/typescript-operations": "5.0.2",
-        "@graphql-codegen/typescript-react-apollo": "4.3.3",
-        "@graphql-codegen/typescript-react-query": "6.1.1",
         "@next/eslint-plugin-next": "16.0.1",
         "@parcel/watcher": "2.5.1",
         "@tailwindcss/typography": "0.5.19",
@@ -116,8 +116,5 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
-    },
-    "dependencies": {
-        "@yarnpkg/sdks": "3.2.3"
     }
 }
