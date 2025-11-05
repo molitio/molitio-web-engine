@@ -1,3 +1,4 @@
+import { useQuery, UseQueryOptions } from '@tanstack/react-query';
 export type Maybe<T> = T | null;
 export type InputMaybe<T> = Maybe<T>;
 export type Exact<T extends { [key: string]: unknown }> = { [K in keyof T]: T[K] };
@@ -5,6 +6,26 @@ export type MakeOptional<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]?: 
 export type MakeMaybe<T, K extends keyof T> = Omit<T, K> & { [SubKey in K]: Maybe<T[SubKey]> };
 export type MakeEmpty<T extends { [key: string]: unknown }, K extends keyof T> = { [_ in K]?: never };
 export type Incremental<T> = T | { [P in keyof T]?: P extends ' $fragmentName' | '__typename' ? T[P] : never };
+
+function fetcher<TData, TVariables>(endpoint: string, requestInit: RequestInit, query: string, variables?: TVariables) {
+    return async (): Promise<TData> => {
+        const res = await fetch(endpoint, {
+            method: 'POST',
+            ...requestInit,
+            body: JSON.stringify({ query, variables }),
+        });
+
+        const json = await res.json();
+
+        if (json.errors) {
+            const { message } = json.errors[0];
+
+            throw new Error(message);
+        }
+
+        return json.data;
+    };
+}
 /** All built-in and custom scalars, mapped to their actual values */
 export type Scalars = {
     ID: { input: string; output: string };
@@ -175,4 +196,38 @@ export type UserPublic = {
     updatedAt?: Maybe<Scalars['String']['output']>;
     updatedBy?: Maybe<Scalars['String']['output']>;
     usernamePublic: Scalars['String']['output'];
+};
+
+export type GetResourceCollectionQueryVariables = Exact<{ [key: string]: never }>;
+
+export type GetResourceCollectionQuery = {
+    __typename?: 'Query';
+    resourceCollection: Array<{ __typename?: 'Resource'; _id: string; name: string; description?: string | null }>;
+};
+
+export const GetResourceCollectionDocument = `
+    query GetResourceCollection {
+  resourceCollection {
+    _id
+    name
+    description
+  }
+}
+    `;
+
+export const useGetResourceCollectionQuery = <TData = GetResourceCollectionQuery, TError = unknown>(
+    dataSource: { endpoint: string; fetchParams?: RequestInit },
+    variables?: GetResourceCollectionQueryVariables,
+    options?: UseQueryOptions<GetResourceCollectionQuery, TError, TData>,
+) => {
+    return useQuery<GetResourceCollectionQuery, TError, TData>(
+        variables === undefined ? ['GetResourceCollection'] : ['GetResourceCollection', variables],
+        fetcher<GetResourceCollectionQuery, GetResourceCollectionQueryVariables>(
+            dataSource.endpoint,
+            dataSource.fetchParams || {},
+            GetResourceCollectionDocument,
+            variables,
+        ),
+        options,
+    );
 };

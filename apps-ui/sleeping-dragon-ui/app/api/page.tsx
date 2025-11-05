@@ -1,26 +1,18 @@
-import { Resource } from '../_resource-api-client/index';
+import { GetResourceCollectionQuery, GetResourceCollectionDocument } from '../_resource-api-client/index';
 
 export default async function Page() {
-    const query = `
-        query {
-            resourceCollection {
-                _id
-                name
-                description
-            }
-        }
-    `;
-
     const response = await fetch('http://localhost:4000/graphql', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query }),
+        body: JSON.stringify({ query: GetResourceCollectionDocument }),
+        cache: 'force-cache',
     });
 
-    const data = await response.json();
-    const resources: Resource[] = data.data?.resourceCollection || [];
+    const result = await response.json();
+    const data: GetResourceCollectionQuery = result.data;
+    const resources = data.resourceCollection;
 
     return (
         <div>

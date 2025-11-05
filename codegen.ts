@@ -5,7 +5,8 @@ const config: CodegenConfig = {
     generates: {
         'apps-ui/sleeping-dragon-ui/app/_resource-api-client/index.ts': {
             schema: 'apps-api/resource-hub-api/gql/schema.graphql',
-            plugins: ['typescript', 'typescript-operations', 'typescript-react-query'],
+            documents: 'apps-ui/sleeping-dragon-ui/app/_resource-api-client/*.graphql',
+            plugins: ['typescript', 'typescript-operations', 'typescript-apollo-client'],
             config: { withHooks: true },
         },
     },
