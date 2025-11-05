@@ -43,7 +43,7 @@ jobs:
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: yarn install --immutable --immutable-cache
 
       - name: Run linter
         run: yarn lint

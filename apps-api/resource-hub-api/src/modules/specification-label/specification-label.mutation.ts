@@ -1,7 +1,7 @@
 import { Args, ArgsType, Field, Mutation, Resolver } from '@nestjs/graphql';
 import { SpecificationLabelService } from './specification-label.service';
 import { SpecificationLabel } from './specification-label.schema';
-import { CreateLabelValueDto, LabelValue, LabelValueSchema } from './label-value.schema';
+import { LabelValue } from './label-value.schema';
 
 @ArgsType()
 class CreateSpecificationLabelArgs {
@@ -9,21 +9,23 @@ class CreateSpecificationLabelArgs {
     name: string;
     @Field({ nullable: true })
     description?: string;
-    @Field(() => [String], {})
-    labelValueIdCollection?: string[];
+    /*     @Field(() => [String], {})
+    labelValueIdCollection?: string[]; */
 }
 
-@Resolver((of: any) => SpecificationLabel)
+@Resolver(() => SpecificationLabel)
 export class SpecificationLabelMutation {
     constructor(private readonly resouceService: SpecificationLabelService) {}
 
     @Mutation(() => SpecificationLabel)
     async createSpecificationLabel(@Args() args: CreateSpecificationLabelArgs): Promise<SpecificationLabel> {
-        const { name, description, labelValueIdCollection } = args;
+        const { name, description } = args;
+        //TODO: implement label value collection creation
+        const labelValueCollection: LabelValue[] = [];
         return this.resouceService.create({
             name,
             description,
-            labelValueIdCollection,
+            labelValueCollection,
         });
     }
 
@@ -33,6 +35,7 @@ export class SpecificationLabelMutation {
         @Args('name') name?: string,
         @Args('description', { nullable: true }) description?: string,
     ): Promise<SpecificationLabel> {
+        console.log('implement updateSpecificationLabel', id, name, description);
         return;
 
         // Implementation to update an existing SpecificationLabel
@@ -41,6 +44,7 @@ export class SpecificationLabelMutation {
 
     @Mutation(() => SpecificationLabel)
     async deleteSpecificationLabel(@Args('id') id: string): Promise<void> {
+        console.log('implement deleteSpecificationLabel', id);
         return;
 
         // Implementation to delete a SpecificationLabel

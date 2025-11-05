@@ -1,4 +1,4 @@
 declare module '@molitio/mwe-tailwindcss-config' {
-    const config: any;
+    const config: unknown;
     export default config;
 }

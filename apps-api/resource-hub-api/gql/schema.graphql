@@ -14,19 +14,19 @@ type LabelValue {
 
 type SpecificationLabel {
     _id: String!
-    createdAt: String!
-    updatedAt: String
+    createdAt: Float!
+    updatedAt: Float
     createdBy: String!
     updatedBy: String
     name: String!
     description: String
-    labelValueClolection: [LabelValue!]!
+    labelValueCollection: [LabelValue!]!
 }
 
 type Resource {
     _id: String!
-    createdAt: String!
-    updatedAt: String
+    createdAt: Float!
+    updatedAt: Float
     createdBy: String!
     updatedBy: String
     name: String!
@@ -84,11 +84,7 @@ type Mutation {
     createResource(name: String!, description: String!): Resource!
     updateResource(_id: String!, name: String!, description: String): Resource!
     deleteResource(id: String!): Resource!
-    createSpecificationLabel(
-        name: String!
-        description: String
-        labelValueIdCollection: [String!]!
-    ): SpecificationLabel!
+    createSpecificationLabel(name: String!, description: String): SpecificationLabel!
     updateSpecificationLabel(_id: String!, name: String!, description: String): SpecificationLabel!
     deleteSpecificationLabel(id: String!): SpecificationLabel!
     deleteLabelValue(_id: String!): LabelValue!

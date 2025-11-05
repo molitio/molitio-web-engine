@@ -1,5 +1,5 @@
 import { Field, ObjectType } from '@nestjs/graphql';
-import { Prop, Schema, SchemaFactory, raw } from '@nestjs/mongoose';
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
 import { LabelValue } from './label-value.schema';
 
@@ -13,27 +13,27 @@ export class SpecificationLabel {
     @Field(() => String)
     _id: MongooseSchema.Types.ObjectId;
 
-    @Field()
+    @Field(() => Number)
     @Prop()
-    createdAt: string;
+    createdAt: number;
 
-    @Field({ nullable: true })
+    @Field(() => Number, { nullable: true })
     @Prop()
-    updatedAt?: string;
+    updatedAt?: number;
 
-    @Field()
+    @Field(() => String)
     @Prop()
     createdBy: string;
 
-    @Field({ nullable: true })
+    @Field(() => String, { nullable: true })
     @Prop()
     updatedBy?: string;
 
-    @Field()
+    @Field(() => String)
     @Prop()
     name: string;
 
-    @Field({ nullable: true })
+    @Field(() => String, { nullable: true })
     @Prop()
     description?: string;
 
@@ -43,12 +43,9 @@ export class SpecificationLabel {
 
     @Field(() => [LabelValue])
     @Prop({ type: [{ type: MongooseSchema.Types.ObjectId, ref: 'LabelValue' }] })
-    labelValueClolection: LabelValue[];
+    labelValueCollection: LabelValue[];
 }
 
-export interface CreateSpecificationLabelDto
-    extends Omit<SpecificationLabel, '_id' | 'createdAt' | 'createdBy' | 'labelValueClolection'> {
-    labelValueIdCollection: string[];
-}
+export type CreateSpecificationLabelDto = Omit<SpecificationLabel, '_id' | 'createdAt' | 'createdBy'>;
 
 export const SpecificationLabelSchema = SchemaFactory.createForClass(SpecificationLabel);

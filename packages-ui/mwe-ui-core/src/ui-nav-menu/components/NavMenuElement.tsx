@@ -1,11 +1,11 @@
 export type NavElementProps = {
-    key: React.Key;
+    label: string;
 };
 
-export default function NavElement({ key }: NavElementProps) {
+export default function NavElement({ label }: NavElementProps) {
     return (
         <div className="btn">
-            <li key={key}></li>
+            <li>{label}</li>
         </div>
     );
 }

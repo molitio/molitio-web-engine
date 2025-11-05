@@ -35,6 +35,6 @@ export class LabelValue {
     value: string;
 }
 
-export interface CreateLabelValueDto extends Omit<LabelValue, '_id' | 'createdAt' | 'createdBy'> {}
+export type CreateLabelValueDto = Omit<LabelValue, '_id' | 'createdAt' | 'createdBy'>;
 
 export const LabelValueSchema = SchemaFactory.createForClass(LabelValue);

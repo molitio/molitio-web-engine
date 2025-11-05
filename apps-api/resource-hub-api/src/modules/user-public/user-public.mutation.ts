@@ -4,7 +4,7 @@ import { UserPublic } from './user-public.schema';
 import { UserPublicService } from './user-public.service';
 import { CreateUserPublicInput } from './user-public.input';
 
-@Resolver((of: any) => UserPublic)
+@Resolver(() => UserPublic)
 export class UserPublicMutation {
     private readonly logger = new Logger(UserPublicMutation.name);
     constructor(private readonly userPublicService: UserPublicService) {}
@@ -43,6 +43,7 @@ export class UserPublicMutation {
         @Args('resourceCollectionId', { nullable: true }) resourceCollectionId?: string,
         @Args('userPersistedConfigId', { nullable: true }) userPersistedConfigId?: string,
     ): Promise<UserPublic> {
+        console.log('implement updateUserPublic', id, usernamePublic, resourceCollectionId, userPersistedConfigId);
         return;
 
         // Implementation to update an existing UserPublic
@@ -51,6 +52,7 @@ export class UserPublicMutation {
 
     @Mutation(() => UserPublic)
     async deleteUserPublic(@Args('id') id: string): Promise<UserPublic> {
+        console.log('implement deleteUserPublic', id);
         return;
 
         // Implementation to delete a UserPublic

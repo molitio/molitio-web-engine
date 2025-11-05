@@ -1,7 +1,7 @@
 {
     "name": "@molitio/mwe-prettier-config",
     "version": "0.2.0",
-    "author": "Peter Koller",
+    "author": "Peter Koller, Molitio LLC",
     "description": "Molitio Web Engine Prettier Configuration",
     "license": "MIT",
     "main": "src/index.js",

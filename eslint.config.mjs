@@ -123,8 +123,25 @@ export default [
         },
     },
 
+    // Root-level TypeScript config files
+    {
+        files: ['*.ts', '**/*.d.ts', 'codegen.ts'],
+        languageOptions: {
+            parser: tsParser,
+            ecmaVersion: 2022,
+            sourceType: 'module',
+            globals: { ...globals.node, ...globals.es2022 },
+        },
+        plugins: { '@typescript-eslint': tsPlugin, prettier: prettierPlugin },
+        rules: {
+            ...(tsPlugin.configs?.recommended?.rules || {}),
+            'prettier/prettier': 'error',
+        },
+    },
+
     // CommonJS config files (.cjs)
     {
+        ignores: ['**/.pnp.cjs'],
         files: ['**/*.cjs'],
         languageOptions: {
             ecmaVersion: 2022,
@@ -139,6 +156,7 @@ export default [
 
     // ESM config files (.mjs)
     {
+        ignores: ['**/.pnp.loader.mjs'],
         files: ['**/*.mjs'],
         languageOptions: {
             ecmaVersion: 2022,
