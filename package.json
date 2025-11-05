@@ -7,8 +7,8 @@
     "description": "Molitio Core Libraries",
     "scripts": {
         "ci": "yarn install --immutable --check-cache",
-        "dev": "yarn dev:mwe-sleeping-dragon-ui & yarn dev:mwe-john-glenn-ui & yarn dev:mwe-friday-ui",
-        "dev:api": "yarn build:db &&yarn dev:mwe-resource-hub-api",
+        "dev": "yarn dev:api & yarn dev:mwe-sleeping-dragon-ui & yarn dev:mwe-john-glenn-ui & yarn dev:mwe-friday-ui",
+        "dev:api": "yarn build:db && yarn dev:mwe-resource-hub-api",
         "dev:mwe-resource-hub-api": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-resource-hub-api dev",
         "dev:mwe-sleeping-dragon-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev",
         "dev:mwe-john-glenn-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev",
