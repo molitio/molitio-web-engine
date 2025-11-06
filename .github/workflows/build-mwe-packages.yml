@@ -9,6 +9,7 @@ on:
       node-version:
         required: false
         type: string
+        description: Node.js Version
         default: "24"
 
 jobs:
