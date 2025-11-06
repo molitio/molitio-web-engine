@@ -17,3 +17,5 @@ COPY apps-api/resource-hub-gateway/mime.types /etc/nginx/mime.types
 COPY apps-api/resource-hub-gateway/security-headers.conf /etc/nginx/security-headers.conf
 COPY --from=builder /etc/nginx/nginx.conf /etc/nginx/nginx.conf
 
+USER nginx
+

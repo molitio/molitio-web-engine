@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { getClient } from '../_resource-api-client';
 import { GetResourceCollectionDocument } from '../_resource-api-client';
 import type { GetResourceCollectionQuery, GetResourceCollectionQueryVariables } from '../_resource-api-client/';
@@ -8,7 +10,7 @@ export default async function Page() {
         query: GetResourceCollectionDocument,
     });
 
-    const resources = (data?.resourceCollection ?? []) as GetResourceCollectionQuery['resourceCollection'];
+    const resources = data?.resourceCollection ?? [];
 
     return (
         <div>
