@@ -9,7 +9,7 @@ const config: CodegenConfig = {
         'apps-ui/sleeping-dragon-ui/app/_resource-api-client/generatedTypes.ts': {
             plugins: ['typescript'],
         },
-        'apps-ui/sleeping-dragon-ui/app/_resource-api-client/operations.ts': {
+        'apps-ui/sleeping-dragon-ui/app/_resource-api-client/generatedOperations.ts': {
             preset: 'import-types',
             presetConfig: {
                 typesPath: './generatedTypes',
