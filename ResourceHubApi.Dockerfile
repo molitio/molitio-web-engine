@@ -5,12 +5,17 @@ FROM node:24-alpine AS builder
 ARG MONOREPO_ROOT
 WORKDIR $MONOREPO_ROOT
 
-COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
 COPY .yarn .yarn
+COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE ./
 COPY apps-api/resource-hub-api apps-api/resource-hub-api
+
+RUN chown -R node:node $MONOREPO_ROOT
 
 RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
+
+USER node
+
 RUN yarn install
 RUN yarn add global @nestjs/cli
 RUN yarn workspaces focus --production @molitio/mwe-resource-hub-api
@@ -32,10 +37,14 @@ COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-api apps-api/resource-h
 
 ENV YARN_CACHE_FOLDER=$MONOREPO_ROOT/.yarn/cache
 
+RUN chown -R node:node $MONOREPO_ROOT
+
 RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
-RUN yarn workspaces focus --production @molitio/mwe-resource-hub-api
 
 USER node
+
+RUN yarn workspaces focus --production @molitio/mwe-resource-hub-api
+
 
 CMD ["yarn", "workspace", "@molitio/mwe-resource-hub-api", "start"]

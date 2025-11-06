@@ -12,8 +12,13 @@ COPY apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
 COPY packages-ui/mwe-ui-core packages-ui/mwe-ui-core
 COPY packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
+RUN chown -R node:node $MONOREPO_ROOT
+
 RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
+
+USER node
+
 RUN yarn install
 RUN yarn workspace @molitio/mwe-sleeping-dragon-ui build
 
@@ -21,7 +26,6 @@ FROM node:24-alpine AS production
 ARG MONOREPO_ROOT
 WORKDIR $MONOREPO_ROOT
 
-# Install curl for healthchecks and troubleshooting
 RUN apk add --no-cache curl
 
 COPY --from=builder $MONOREPO_ROOT/package.json ./
@@ -39,10 +43,13 @@ COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-tailwindcss-config packages-u
 
 ENV YARN_CACHE_FOLDER=$MONOREPO_ROOT/.yarn/cache
 
+RUN chown -R node:node $MONOREPO_ROOT
+
 RUN corepack enable
 RUN corepack prepare yarn@4.9.2 --activate
-RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
 USER node
+
+RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
 CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start", "-H", "0.0.0.0"]
