@@ -1,4 +1,4 @@
-name: Publish MWE Containers
+name: MWE Container Publish
 
 permissions:
   contents: read

@@ -1,4 +1,4 @@
-name: Build MWE Workspaces
+name: MWE Build
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ on:
 
 jobs:
   build-project:
-    name: Build Molitio Web Engine Monorepo
+    name: Build MWE Packages
     runs-on: ubuntu-latest
     env:
       NODE_ENV: production
@@ -40,7 +40,7 @@ jobs:
           restore-keys: |
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
-      - name: Install Dependencies (Yarn Monorepo)
+      - name: Install Dependencies
         run: yarn install --immutable --immutable-cache
 
       - name: Build All Packages

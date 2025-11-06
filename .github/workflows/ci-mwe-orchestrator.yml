@@ -1,4 +1,4 @@
-name: Orchestrate MWE CI
+name: MWE CI Orchestrator
 
 permissions:
   contents: read

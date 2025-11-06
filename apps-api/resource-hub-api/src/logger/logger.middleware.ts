@@ -11,7 +11,7 @@ export class LoggerMiddleware implements NestMiddleware {
 
         this.logger.log(`Request: ${method} ${url} - ${req.ip}`);
 
-        (res as any).on('finish', () => {
+        (res as FastifyReply).raw?.on('finish', () => {
             const { statusCode } = res;
             const duration = Date.now() - start;
             this.logger.log(`Response: ${method} ${url} - ${statusCode} - ${duration}ms`);

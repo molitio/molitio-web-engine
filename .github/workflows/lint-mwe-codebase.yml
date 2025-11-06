@@ -1,4 +1,4 @@
-name: Lint MWE Workspaces
+name: MWE Lint
 
 permissions:
   contents: read
