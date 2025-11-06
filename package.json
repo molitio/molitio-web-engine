@@ -52,8 +52,6 @@
         }
     ],
     "devDependencies": {
-        "@apollo/client": "4.0.9",
-        "@apollo/client-integration-nextjs": "0.14.1",
         "@babel/core": "7.28.5",
         "@babel/eslint-parser": "7.28.5",
         "@compodoc/compodoc": "1.1.32",

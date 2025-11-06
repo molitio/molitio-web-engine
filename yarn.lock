@@ -422,7 +422,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apollo/client@npm:4.0.9, @apollo/client@npm:^4.0.9":
+"@apollo/client@npm:4.0.9":
   version: 4.0.9
   resolution: "@apollo/client@npm:4.0.9"
   dependencies:
@@ -6427,7 +6427,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/mwe-sleeping-dragon-ui@workspace:apps-ui/sleeping-dragon-ui"
   dependencies:
-    "@apollo/client": "npm:^4.0.9"
+    "@apollo/client": "npm:4.0.9"
+    "@apollo/client-integration-nextjs": "npm:0.14.1"
     "@molitio/mwe-tailwindcss-config": "workspace:0.2.0"
     "@molitio/mwe-ui-core": "workspace:0.2.0"
     "@next/eslint-plugin-next": "npm:16.0.1"
@@ -6438,13 +6439,13 @@ __metadata:
     "@types/react-dom": "npm:19.2.2"
     "@vercel/build-utils": "npm:12.2.3"
     eslint: "npm:9.39.0"
-    graphql: "npm:^16.12.0"
+    graphql: "npm:16.12.0"
     next: "npm:15.4.7"
     postcss: "npm:8.5.6"
     react: "npm:19.2.0"
     react-dom: "npm:19.2.0"
     react-is: "npm:19.2.0"
-    rxjs: "npm:^7.8.1"
+    rxjs: "npm:7.8.1"
     tailwindcss: "npm:4.1.16"
     typescript: "npm:5.9.3"
     vercel: "npm:48.8.0"
@@ -6554,8 +6555,6 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@molitio/web-engine@workspace:."
   dependencies:
-    "@apollo/client": "npm:4.0.9"
-    "@apollo/client-integration-nextjs": "npm:0.14.1"
     "@babel/core": "npm:7.28.5"
     "@babel/eslint-parser": "npm:7.28.5"
     "@compodoc/compodoc": "npm:1.1.32"
@@ -16760,7 +16759,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.12.0, graphql@npm:^16.12.0":
+"graphql@npm:16.12.0":
   version: 16.12.0
   resolution: "graphql@npm:16.12.0"
   checksum: 10/e299bc97cca178e549c8c1ed4cb164f631f07be987d3657f76cdf18c0250040cc0d456d4b6d41c87b855cac97b15a62ed345557527efcb0546492895a893bb87
@@ -25464,7 +25463,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rxjs@npm:7.8.2, rxjs@npm:^7.8.1":
+"rxjs@npm:7.8.2":
   version: 7.8.2
   resolution: "rxjs@npm:7.8.2"
   dependencies:
