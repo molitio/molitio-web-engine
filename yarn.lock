@@ -4698,6 +4698,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@graphql-codegen/plugin-helpers@npm:^4.0.0":
+  version: 4.2.0
+  resolution: "@graphql-codegen/plugin-helpers@npm:4.2.0"
+  dependencies:
+    "@graphql-tools/utils": "npm:^9.0.0"
+    change-case-all: "npm:1.0.15"
+    common-tags: "npm:1.8.2"
+    import-from: "npm:4.0.0"
+    lodash: "npm:~4.17.0"
+    tslib: "npm:~2.5.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 10/2d237b2ee8b9a4d859a2c5205b2938cb3f63e60d6a71733a1a0e2b1984ed139271811e040e7435a5c3d46df9b69fc78efb0d15c8108d5fc6f602d7be1058f5bb
+  languageName: node
+  linkType: hard
+
 "@graphql-codegen/plugin-helpers@npm:^6.0.0":
   version: 6.0.0
   resolution: "@graphql-codegen/plugin-helpers@npm:6.0.0"
@@ -4724,6 +4740,21 @@ __metadata:
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: 10/fc821bbd5b2728211f02e173e1c540a95210657835424d15deb4f77dc6d0223c69c25c9a7fbebbcbd32d6a39452ceec20713f2c064933a881e27385eaaf5e44d
+  languageName: node
+  linkType: hard
+
+"@graphql-codegen/typed-document-node@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@graphql-codegen/typed-document-node@npm:3.0.0"
+  dependencies:
+    "@graphql-codegen/plugin-helpers": "npm:^4.0.0"
+    "@graphql-codegen/visitor-plugin-common": "npm:3.0.0"
+    auto-bind: "npm:~4.0.0"
+    change-case-all: "npm:1.0.15"
+    tslib: "npm:~2.4.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 10/6acd107b06654dce2a730f71eb25436901bb034fa0fae6f819ae8f48cabec7bea3db1daeff005b09da67607b98d7457a2083fae65a0d287a7858435cff6de2b1
   languageName: node
   linkType: hard
 
@@ -4793,6 +4824,26 @@ __metadata:
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: 10/fc51ea02a2ae1f9bdfd6e3fd649613e7751f695d6c88677bc2d251c721ec83f76afacaca60f3f78bb38e7863d3e57f68592ff88cf9722fa2b613980b2ef6970b
+  languageName: node
+  linkType: hard
+
+"@graphql-codegen/visitor-plugin-common@npm:3.0.0":
+  version: 3.0.0
+  resolution: "@graphql-codegen/visitor-plugin-common@npm:3.0.0"
+  dependencies:
+    "@graphql-codegen/plugin-helpers": "npm:^4.0.0"
+    "@graphql-tools/optimize": "npm:^1.3.0"
+    "@graphql-tools/relay-operation-optimizer": "npm:^6.5.0"
+    "@graphql-tools/utils": "npm:^9.0.0"
+    auto-bind: "npm:~4.0.0"
+    change-case-all: "npm:1.0.15"
+    dependency-graph: "npm:^0.11.0"
+    graphql-tag: "npm:^2.11.0"
+    parse-filepath: "npm:^1.0.2"
+    tslib: "npm:~2.4.0"
+  peerDependencies:
+    graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 10/5252099998ca665cba3e7aa033fe5510c0224fc262ba733d216f94fe6c43e2e3cf180c307cb4db796194cbe797b0a4ec371bbf4a7201fcc4bec9250aeb24ad6a
   languageName: node
   linkType: hard
 
@@ -6579,6 +6630,7 @@ __metadata:
   dependencies:
     "@apollo/client": "npm:4.0.9"
     "@apollo/client-integration-nextjs": "npm:0.14.1"
+    "@graphql-typed-document-node/core": "npm:3.2.0"
     "@molitio/mwe-tailwindcss-config": "workspace:0.2.0"
     "@molitio/mwe-ui-core": "workspace:0.2.0"
     "@next/eslint-plugin-next": "npm:16.0.1"
@@ -6713,6 +6765,7 @@ __metadata:
     "@graphql-codegen/client-preset": "npm:5.1.1"
     "@graphql-codegen/import-types-preset": "npm:3.0.1"
     "@graphql-codegen/introspection": "npm:5.0.0"
+    "@graphql-codegen/typed-document-node": "npm:3.0.0"
     "@graphql-codegen/typescript": "npm:5.0.2"
     "@graphql-codegen/typescript-operations": "npm:5.0.2"
     "@next/eslint-plugin-next": "npm:16.0.1"
@@ -28057,6 +28110,13 @@ __metadata:
   version: 2.4.1
   resolution: "tslib@npm:2.4.1"
   checksum: 10/e14311d5392ec0e3519feb9afdb54483d7f3aa2d3def6f1a1a30bd3deca5dfeadd106e80bee9ba880bce86a2e50854c9fe5958572cd188d7ac6f8625101a6a8f
+  languageName: node
+  linkType: hard
+
+"tslib@npm:~2.5.0":
+  version: 2.5.3
+  resolution: "tslib@npm:2.5.3"
+  checksum: 10/d507e60ebe2480af4efc1655dfdb2762bb6ca57d76c4ba680375af801493648c2e97808bbd7e54691eb40e33a7e2e793cdef9c24ce6a8539b03cac8b26e09a61
   languageName: node
   linkType: hard
 

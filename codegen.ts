@@ -14,7 +14,7 @@ const config: CodegenConfig = {
             presetConfig: {
                 typesPath: './generatedTypes',
             },
-            plugins: ['typescript-operations'],
+            plugins: ['typescript-operations', 'typed-document-node'],
             documents: 'apps-ui/sleeping-dragon-ui/app/**/*.graphql',
         },
     },
