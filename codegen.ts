@@ -21,31 +21,3 @@ const config: CodegenConfig = {
 };
 
 export default config;
-
-/* 
-
-Example for type importing: 
-
-overwrite: true
-schema:
-    - 'https://myschema/graphql'
-documents: */
-//    - 'src/**/*.graphql'
-/* generates:
-    src/@types/codegen/graphql.tsx:
-        plugins:
-            - 'typescript'
-            - 'typescript-operations'
-            - 'typescript-react-apollo'
-    src/@types/codegen/page.tsx:
-        config:
-            documentMode: external
-            importDocumentNodeExternallyFrom: ./graphql
-        preset: import-types
-        presetConfig:
-            typesPath: ./graphql
-        plugins:
-            - ./build/src/index.js
-hooks:
-    afterAllFileWrite:
-        - prettier --write */

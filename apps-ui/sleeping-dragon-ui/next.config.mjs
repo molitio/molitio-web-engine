@@ -1,12 +1,17 @@
 import path from 'path';
-import { NextConfig } from 'next';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
-const nextConfig: NextConfig = {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const nextConfig = {
     reactStrictMode: true,
     poweredByHeader: false,
     transpilePackages: ['@molitio/mwe-ui-core'],
     outputFileTracingRoot: path.resolve(__dirname, '../..'),
     trailingSlash: false,
+    basePath: '/v1',
     images: {
         unoptimized: true,
         /*         remotePatterns: [
