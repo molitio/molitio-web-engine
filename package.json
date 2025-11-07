@@ -7,8 +7,8 @@
     "description": "Molitio Core Libraries",
     "scripts": {
         "ci": "yarn install --immutable --check-cache",
-        "dev": "yarn dev:mwe-sleeping-dragon-ui & yarn dev:mwe-john-glenn-ui & yarn dev:mwe-friday-ui",
-        "dev:api": "yarn build:db &&yarn dev:mwe-resource-hub-api",
+        "dev": "yarn dev:api & yarn dev:mwe-sleeping-dragon-ui & yarn dev:mwe-john-glenn-ui & yarn dev:mwe-friday-ui",
+        "dev:api": "yarn build:db && yarn dev:mwe-resource-hub-api",
         "dev:mwe-resource-hub-api": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-resource-hub-api dev",
         "dev:mwe-sleeping-dragon-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev",
         "dev:mwe-john-glenn-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev",
@@ -58,11 +58,11 @@
         "@eslint/js": "9.39.0",
         "@graphql-codegen/cli": "6.0.1",
         "@graphql-codegen/client-preset": "5.1.1",
+        "@graphql-codegen/import-types-preset": "3.0.1",
         "@graphql-codegen/introspection": "5.0.0",
+        "@graphql-codegen/typed-document-node": "3.0.0",
         "@graphql-codegen/typescript": "5.0.2",
         "@graphql-codegen/typescript-operations": "5.0.2",
-        "@graphql-codegen/typescript-react-apollo": "4.3.3",
-        "@graphql-codegen/typescript-react-query": "6.1.1",
         "@next/eslint-plugin-next": "16.0.1",
         "@parcel/watcher": "2.5.1",
         "@tailwindcss/typography": "0.5.19",
@@ -116,8 +116,5 @@
         "ts-node@10.9.2": {
             "unplugged": true
         }
-    },
-    "dependencies": {
-        "@yarnpkg/sdks": "3.2.3"
     }
 }

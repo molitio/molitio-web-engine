@@ -1,4 +1,4 @@
-name: Lint MWE Workspaces
+name: MWE Lint
 
 permissions:
   contents: read
@@ -8,11 +8,13 @@ on:
     inputs:
       node-version:
         required: false
+        description: Node.js Version
         type: string
         default: "24"
       allow-fail:
         required: false
         type: boolean
+        description: Allow workflow to fail
         default: false
 
 jobs:

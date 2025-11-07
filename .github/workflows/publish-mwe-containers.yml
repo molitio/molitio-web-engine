@@ -1,0 +1,101 @@
+name: MWE Container Publish
+
+permissions:
+  contents: read
+  packages: write
+
+on:
+  pull_request:
+    branches:
+      - releases/*
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        description: Node.js Version
+        default: "24"
+      allow-fail:
+        required: false
+        type: boolean
+        description: Allow workflow to fail
+        default: false
+      nginx-port:
+        required: false
+        type: string
+        description: Nginx Port
+        default: "80"
+      mwe-host:
+        required: false
+        type: string
+        description: MWE Host
+        default: "localhost"
+
+jobs:
+  publish-containers:
+    name: Publish MWE Containers
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Restore Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .pnp.cjs
+            .yarn/install-state.gz
+          key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.MWE_CONTAINER_REGISTRY_RW }}
+
+      - name: Build and Push Resource Hub DB Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./ResourceHubDB.Dockerfile
+          push: true
+          tags: ghcr.io/molitio/molitio-web-engine/resource-hub-db:${{ github.sha }},ghcr.io/molitio/molitio-web-engine/resource-hub-db:latest
+          platforms: linux/amd64,linux/arm64
+
+      - name: Build and Push Resource Hub API Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./ResourceHubApi.Dockerfile
+          push: true
+          tags: ghcr.io/molitio/molitio-web-engine/resource-hub-api:${{ github.sha }},ghcr.io/molitio/molitio-web-engine/resource-hub-api:latest
+          platforms: linux/amd64,linux/arm64
+
+      - name: Build and Push MWE Sleeping Dragon UI Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./ResourceHubUI.Dockerfile
+          push: true
+          tags: ghcr.io/molitio/molitio-web-engine/mwe-sleeping-dragon-ui:${{ github.sha }},ghcr.io/molitio/molitio-web-engine/mwe-sleeping-dragon-ui:latest
+          platforms: linux/amd64,linux/arm64
+
+      - name: Build and Push Resource Hub Gateway Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./ResourceHubGateway.Dockerfile
+          push: true
+          tags: ghcr.io/molitio/molitio-web-engine/resource-hub-gateway:${{ github.sha }},ghcr.io/molitio/molitio-web-engine/resource-hub-gateway:latest
+          platforms: linux/amd64,linux/arm64
+          build-args: |
+            NGINX_PORT=${{ inputs.nginx-port }}
+            MWE_HOST=${{ inputs.mwe-host }}

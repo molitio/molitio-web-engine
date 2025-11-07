@@ -1,10 +1,11 @@
-name: Orchestrate MWE CI
+name: MWE CI Orchestrator
 
 permissions:
   contents: read
 
 on:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   setup:

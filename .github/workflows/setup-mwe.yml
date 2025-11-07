@@ -1,4 +1,4 @@
-name: Setup MWE Workspaces
+name: MWE Setup
 
 permissions:
   contents: read
@@ -9,11 +9,12 @@ on:
       node-version:
         required: false
         type: string
+        description: Node.js Version
         default: "24"
 
 jobs:
   setup:
-    name: Setup and Yarn Cache
+    name: Setup Yarn Cache
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -38,5 +39,5 @@ jobs:
           restore-keys: |
             node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
-      - name: Install dependencies (populate cache)
+      - name: Install dependencies
         run: yarn install --immutable --check-cache
