@@ -115,6 +115,9 @@
         },
         "ts-node@10.9.2": {
             "unplugged": true
+        },
+        "vite@7.1.12": {
+            "unplugged": true
         }
     }
 }

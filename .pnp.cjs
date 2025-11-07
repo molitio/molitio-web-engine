@@ -39550,14 +39550,14 @@ const RAW_RUNTIME_STATE =
     ]],\
     ["vite", [\
       ["npm:7.1.12", {\
-        "packageLocation": "./.yarn/cache/vite-npm-7.1.12-4c5705516c-827a18e736.zip/node_modules/vite/",\
+        "packageLocation": "./.yarn/unplugged/vite-virtual-4ec3c93a15/node_modules/vite/",\
         "packageDependencies": [\
           ["vite", "npm:7.1.12"]\
         ],\
         "linkType": "SOFT"\
       }],\
       ["virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:7.1.12", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-4ec3c93a15/0/cache/vite-npm-7.1.12-4c5705516c-827a18e736.zip/node_modules/vite/",\
+        "packageLocation": "./.yarn/unplugged/vite-virtual-4ec3c93a15/node_modules/vite/",\
         "packageDependencies": [\
           ["@types/jiti", null],\
           ["@types/less", null],\

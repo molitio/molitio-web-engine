@@ -50,8 +50,8 @@ http {
     gzip_types text/plain text/css text/xml text/javascript application/javascript application/xml+rss application/json;
 
     # Upstream for Next.js app
-    upstream nextjs_app {
-        server mwe-sleeping-dragon-ui:3000;
+    upstream mwe-rh-ui {
+        server mwe-sleeping-dragon-ui:3301;
         keepalive 32;
     }
 
@@ -75,7 +75,7 @@ http {
         location ^~ /v1 {
             limit_req zone=api burst=20 nodelay;
 
-            proxy_pass http://nextjs_app;
+            proxy_pass http://mwe-rh-ui;
             proxy_http_version 1.1;
             proxy_set_header Upgrade $http_upgrade;
             proxy_set_header Connection 'upgrade';

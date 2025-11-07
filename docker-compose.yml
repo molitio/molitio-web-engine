@@ -46,11 +46,11 @@ services:
         depends_on:
             - resource-hub-api
         expose:
-            - '3000'
+            - '3301'
         ports:
-            - 3000:3000
+            - 3301:3301
         healthcheck:
-            test: ['CMD', 'curl', '-f', 'http://localhost:3000/v1']
+            test: ['CMD', 'curl', '-f', 'http://localhost:3301/v1']
             interval: 10s
             timeout: 5s
             retries: 5
@@ -82,5 +82,7 @@ services:
             - ./apps-ui/mwe-friday-ui/dist:/base/static:ro
 
 volumes:
+    mwe-friday-ui-volume:
+        driver: local
     resource-hub-db-volume:
         driver: local
