@@ -6,7 +6,7 @@ const MWEClientApp: React.FC = () => {
 
     return (
         <div>
-            <h1 className="text-primary">{t('landing.greeting')}</h1>
+            <h1 className="text-primary">{t('landing:cover.greeting')}</h1>
         </div>
     );
 };
