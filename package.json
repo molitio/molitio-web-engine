@@ -30,14 +30,17 @@
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "ts": "tsc --traceResolution --listFilesOnly  --skipLibCheck",
         "installPeerDeps": "yarn check-peer-dependencies --install",
-        "container-compose": "docker compose -f docker-compose.yml up -d --build",
-        "container-rebuild": "docker compose down --remove-orphans && docker system prune -af && docker compose -f docker-compose.yml up -d --build --force-recreate"
+        "container-compose": "yarn container-compose:build && yarn container-compose:start",
+        "container-compose:build": "docker compose -f docker-compose.yml build resource-hub-builder && docker compose -f docker-compose.yml build",
+        "container-compose:start": "docker compose -f docker-compose.yml up -d resource-hub-db resource-hub-api mwe-sleeping-dragon-ui resource-hub-gateway",
+        "container-compose:recreate": "docker compose -f docker-compose.yml up -d resource-hub-db resource-hub-api mwe-sleeping-dragon-ui resource-hub-gateway --force-recreate",
+        "container-compose:prune": "docker compose down --remove-orphans && docker system prune -af",
+        "container-rebuild": "yarn container-compose:prune && yarn container-compose:build && yarn container-compose:recreate"
     },
     "workspaces": [
         "apps-ui/*",
         "apps-api/*",
         "packages-ui/*",
-        "packages-api/*",
         "molitio-wiki/*"
     ],
     "husky": {

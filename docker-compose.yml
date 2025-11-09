@@ -13,7 +13,7 @@ services:
         ports:
             - 27017:27017
         volumes:
-            - 'resource-hub-db-volume:/Users/vycos-zen/data/resource-hub-db-volume'
+            - 'resource-hub-db-volume:/home/node/db/resource-hub-db-volume'
         environment:
             MONGO_INITDB_DATABASE: ${MONGO_DB}
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
@@ -72,17 +72,19 @@ services:
             args:
                 NGINX_PORT: ${NGINX_PORT}
                 MWE_HOST: ${MWE_HOST}
-        platform: linux/amd64
+        #        platform: linux/amd64
         expose:
             - '${NGINX_PORT}'
         ports:
             - ${NGINX_PORT}:${NGINX_PORT}
             - ${NGINX_PORT}:443/udp
-        volumes:
-            - ./apps-ui/mwe-friday-ui/dist:/base/static:ro
+
+    resource-hub-builder:
+        build:
+            context: .
+            dockerfile: ResourceHubBuilder.Dockerfile
+            target: resource-hub-builder # Stops at builder stage if needed for debugging
 
 volumes:
-    mwe-friday-ui-volume:
-        driver: local
     resource-hub-db-volume:
         driver: local
