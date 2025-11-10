@@ -1,0 +1,45 @@
+checksumBehavior: throw
+
+compressionLevel: mixed
+
+defaultSemverRangePrefix: ''
+
+deferredVersionFolder: ./.yarn/versions
+
+enableConstraintsChecks: true
+
+enableGlobalCache: false
+
+enableImmutableInstalls: false
+
+enableInlineHunks: true
+
+enableOfflineMode: false
+
+enableTelemetry: true
+
+enableTransparentWorkspaces: false
+
+injectEnvironmentFiles:
+    - .env?
+
+logFilters:
+    - level: error
+
+nmHoistingLimits: none
+
+nodeLinker: pnp
+
+pnpEnableEsmLoader: true
+
+pnpEnableInlining: true
+
+pnpMode: strict
+
+preferInteractive: true
+
+preferReuse: true
+
+progressBarStyle: patrick
+
+telemetryUserId: '@molitio/web-engine'

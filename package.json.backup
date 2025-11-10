@@ -1,0 +1,123 @@
+{
+    "name": "@molitio/web-engine",
+    "private": true,
+    "packageManager": "yarn@4.9.2",
+    "version": "0.2.0",
+    "authors": "Peter Koller",
+    "description": "Molitio Core Libraries",
+    "scripts": {
+        "ci": "yarn install --immutable --check-cache",
+        "dev": "yarn dev:mwe-sleeping-dragon-ui & yarn dev:mwe-john-glenn-ui & yarn dev:mwe-friday-ui",
+        "dev:api": "yarn build:db &&yarn dev:mwe-resource-hub-api",
+        "dev:mwe-resource-hub-api": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-resource-hub-api dev",
+        "dev:mwe-sleeping-dragon-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-sleeping-dragon-ui dev",
+        "dev:mwe-john-glenn-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-john-glenn-ui dev",
+        "dev:mwe-friday-ui": "WATCHPACK_POLLING=true yarn workspace @molitio/mwe-friday-ui dev",
+        "lint": "eslint . --ext .js,.ts,.tsx,.json && yarn lint:css",
+        "lint:fix": "eslint . --ext .js,.ts,.tsx,.json --fix",
+        "lint:css": "stylelint \"**/*.css\"",
+        "format": "prettier . --write && yarn lint:fix",
+        "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological-dev run build",
+        "build:db": "docker compose up -d --build resource-hub-db",
+        "codegen": "graphql-codegen --config codegen.ts && yarn format",
+        "docs:build": "yarn workspace @molitio/mwe-docs build",
+        "docs:serve": "yarn workspace @molitio/mwe-docs start",
+        "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
+        "test": "yarn jest",
+        "test:watch": "yarn jest --watch",
+        "test:generate-output": "yarn jest --json --outputFile=.artifacts/test-results/jest-test-results.json",
+        "yarn:config": "yarn config",
+        "bootstrap": "yarn dlx @yarnpkg/sdks",
+        "ts": "tsc --traceResolution --listFilesOnly  --skipLibCheck",
+        "installPeerDeps": "yarn check-peer-dependencies --install",
+        "container-compose": "docker compose -f docker-compose.yml up -d --build",
+        "container-rebuild": "docker compose down --remove-orphans && docker system prune -af && docker compose -f docker-compose.yml up -d --build --force-recreate"
+    },
+    "workspaces": [
+        "apps-ui/*",
+        "apps-api/*",
+        "packages-ui/*",
+        "packages-api/*",
+        "molitio-wiki/*"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "eslint '*/**/*.{js,ts,tsx, css, scss}' --quiet --fix"
+        }
+    },
+    "size-limit": [
+        {
+            "path": "./packages/mwe-ui-core/index.js",
+            "limit": "500 KB"
+        }
+    ],
+    "devDependencies": {
+        "@babel/core": "7.28.5",
+        "@babel/eslint-parser": "7.28.5",
+        "@compodoc/compodoc": "1.1.32",
+        "@eslint/js": "9.39.0",
+        "@graphql-codegen/cli": "6.0.1",
+        "@graphql-codegen/client-preset": "5.1.1",
+        "@graphql-codegen/introspection": "5.0.0",
+        "@graphql-codegen/typescript": "5.0.2",
+        "@graphql-codegen/typescript-operations": "5.0.2",
+        "@graphql-codegen/typescript-react-apollo": "4.3.3",
+        "@graphql-codegen/typescript-react-query": "6.1.1",
+        "@next/eslint-plugin-next": "16.0.1",
+        "@parcel/watcher": "2.5.1",
+        "@tailwindcss/typography": "0.5.19",
+        "@types/jest": "30.0.0",
+        "@types/node": "24.9.2",
+        "@types/ws": "8.18.1",
+        "@typescript-eslint/eslint-plugin": "8.46.2",
+        "@typescript-eslint/parser": "8.46.2",
+        "@typescript-eslint/type-utils": "8.46.2",
+        "babel-jest": "30.2.0",
+        "core-js": "3.46.0",
+        "eslint": "9.39.0",
+        "eslint-config-prettier": "10.1.8",
+        "eslint-plugin-jsonc": "2.21.0",
+        "eslint-plugin-prettier": "5.5.4",
+        "eslint-plugin-react": "7.37.5",
+        "eslint-plugin-react-hooks": "7.0.1",
+        "globals": "16.5.0",
+        "graphql": "16.12.0",
+        "graphql-tag": "2.12.6",
+        "husky": "9.1.7",
+        "jest": "30.2.0",
+        "jest-environment-jsdom": "30.2.0",
+        "knip": "5.67.1",
+        "postcss": "8.5.6",
+        "prettier": "3.6.2",
+        "prettier-eslint": "16.4.2",
+        "protobufjs": "7.5.4",
+        "rimraf": "6.1.0",
+        "stylelint": "16.25.0",
+        "stylelint-config-standard": "39.0.1",
+        "stylelint-order": "7.0.0",
+        "tailwindcss": "4.1.16",
+        "ts-jest": "29.4.5",
+        "ts-morph": "27.0.2",
+        "ts-node": "10.9.2",
+        "tslib": "2.8.1",
+        "typescript": "5.9.3",
+        "typescript-eslint": "8.46.2"
+    },
+    "resolutions": {
+        "@molitio/mwe-ui-core": "workspace:0.2.0"
+    },
+    "dependenciesMeta": {
+        "postcss@8.5.6": {
+            "unplugged": true
+        },
+        "tailwindcss@4.1.16": {
+            "unplugged": true
+        },
+        "ts-node@10.9.2": {
+            "unplugged": true
+        }
+    },
+    "dependencies": {
+        "@yarnpkg/sdks": "3.2.3"
+    }
+}
