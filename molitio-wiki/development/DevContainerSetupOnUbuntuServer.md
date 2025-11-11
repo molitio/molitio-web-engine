@@ -72,7 +72,7 @@ sudo apt install code
 ## 5. Connect from VS Code Using Remote - Containers
 
 1. On your local machine, install these VS Code extensions:
-    - Current not supported by the repository
+    - Currently not supported by the repository
     - Remote - SSH (ms-vscode-remote.remote-ssh)
     - Dev Containers (ms-vscode-remote.remote-containers)
 2. Use the Command Palette (`Cmd+Shift+P` or `Ctrl+Shift+P`) and select `Remote-SSH: Connect to Host...`.

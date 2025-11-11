@@ -51,7 +51,7 @@ http {
 
     # Upstream for Next.js app
     upstream mwe-rh-ui {
-        server mwe-sleeping-dragon-ui:3301;
+        server mwe-sleeping-dragon-ui:${MWE_RH_UI_PORT};
         keepalive 32;
     }
 

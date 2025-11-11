@@ -34,4 +34,4 @@ ENV PORT=3301
 
 RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
-CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start", "-H", "0.0.0.0"]
+CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start", "-H", "0.0.0.0", "-p", "3301"]
