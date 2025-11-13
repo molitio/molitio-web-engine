@@ -22,15 +22,30 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: lts/*
-      - name: Install dependencies
-        run: npm install -g yarn && yarn
+          node-version: ${{ inputs.node-version }}
+
+      - name: Restore Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .pnp.cjs
+            .yarn/install-state.gz
+          key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
 
       - name: Install Playwright Browsers
-        run: yarn playwright install --with-deps
+        run: yarn workspace @molitio/mwe-ui-core-tests playwright install
 
       - name: Run Playwright tests
         run: yarn test:e2e
