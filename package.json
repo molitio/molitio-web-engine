@@ -23,9 +23,8 @@
         "docs:build": "yarn workspace @molitio/mwe-docs build",
         "docs:serve": "yarn workspace @molitio/mwe-docs start",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
-        "test": "yarn jest",
-        "test:watch": "yarn jest --watch",
-        "test:generate-output": "yarn jest --json --outputFile=.artifacts/test-results/jest-test-results.json",
+        "test": "yarn test:e2e",
+        "test:e2e": "yarn workspace @molitio/mwe-ui-core-tests test",
         "yarn:config": "yarn config",
         "bootstrap": "yarn dlx @yarnpkg/sdks",
         "ts": "tsc --traceResolution --listFilesOnly  --skipLibCheck",
@@ -68,14 +67,13 @@
         "@graphql-codegen/typescript-operations": "5.0.2",
         "@next/eslint-plugin-next": "16.0.1",
         "@parcel/watcher": "2.5.1",
+        "@playwright/test": "1.56.1",
         "@tailwindcss/typography": "0.5.19",
-        "@types/jest": "30.0.0",
         "@types/node": "24.9.2",
         "@types/ws": "8.18.1",
         "@typescript-eslint/eslint-plugin": "8.46.2",
         "@typescript-eslint/parser": "8.46.2",
         "@typescript-eslint/type-utils": "8.46.2",
-        "babel-jest": "30.2.0",
         "core-js": "3.46.0",
         "eslint": "9.39.0",
         "eslint-config-prettier": "10.1.8",
@@ -87,8 +85,6 @@
         "graphql": "16.12.0",
         "graphql-tag": "2.12.6",
         "husky": "9.1.7",
-        "jest": "30.2.0",
-        "jest-environment-jsdom": "30.2.0",
         "knip": "5.67.1",
         "postcss": "8.5.6",
         "prettier": "3.6.2",
@@ -99,7 +95,6 @@
         "stylelint-config-standard": "39.0.1",
         "stylelint-order": "7.0.0",
         "tailwindcss": "4.1.16",
-        "ts-jest": "29.4.5",
         "ts-morph": "27.0.2",
         "ts-node": "10.9.2",
         "tslib": "2.8.1",
@@ -110,6 +105,9 @@
         "@molitio/mwe-ui-core": "workspace:0.2.0"
     },
     "dependenciesMeta": {
+        "@playwright/test@1.56.1": {
+            "unplugged": true
+        },
         "postcss@8.5.6": {
             "unplugged": true
         },

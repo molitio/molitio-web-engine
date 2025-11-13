@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "baseUrl": "./",
+        "baseUrl": ".",
         "jsx": "react-jsx",
         "target": "es2022",
         "module": "Node16",
