@@ -1,22 +1,37 @@
 import { MWEClientApp, MWEClientRootLayout } from '@molitio/mwe-ui-core';
-import { Link, Outlet, createRootRoute } from '@tanstack/react-router';
+import { Link, Outlet, createRootRoute, createRootRouteWithContext } from '@tanstack/react-router';
+import { client, MWEClientAppRouterContext } from '../main';
 import { Context } from '../context';
 
-export const Route = createRootRoute({
+/* export const Route = createRootRoute({
     component: RootComponent,
 });
+ */
 
-{
-    /*    
-        </RouterProvider> */
-}
+export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
+    component: RootComponent,
+    notFoundComponent: () => <div>Not Found</div>,
+});
 
-function RootComponent() {
+/* const data = await client.fetch(`*[_type == "landingPage"]{ title }`);
+const title = data.length > 0 ? data[0].title : 'No Title Found';
+
+console.log('Title from CMS: ', title); */
+//const title = 'No Title Found';
+
+export function RootComponent() {
     return (
         <>
             <MWEClientRootLayout appContext={{ ...Context }}>
                 <span>
-                    link to about:{' '}
+                    <Link
+                        to="/"
+                        activeProps={{
+                            className: 'font-bold',
+                        }}
+                    >
+                        Home
+                    </Link>
                     <Link
                         to="/about"
                         activeProps={{
@@ -26,7 +41,7 @@ function RootComponent() {
                         About
                     </Link>
                 </span>
-                <div>Hello "__root"!</div>
+                {/* <div>{`${title}`}</div> */}
                 <MWEClientApp />
                 <Outlet />
             </MWEClientRootLayout>

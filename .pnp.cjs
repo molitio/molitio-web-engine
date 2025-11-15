@@ -11647,6 +11647,7 @@ const RAW_RUNTIME_STATE =
           ["@molitio/mwe-friday-ui", "workspace:apps-ui/mwe-friday-ui"],\
           ["@molitio/mwe-tailwindcss-config", "workspace:packages-ui/mwe-tailwindcss-config"],\
           ["@molitio/mwe-ui-core", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#workspace:packages-ui/mwe-ui-core"],\
+          ["@sanity/client", "npm:7.12.1"],\
           ["@tailwindcss/postcss", "npm:4.1.16"],\
           ["@tailwindcss/vite", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:4.1.16"],\
           ["@tanstack/react-router", "virtual:220e55b63e6f358e6b84b019a986fd8069ce4fce9c4edaed34006cd2efc7b9c83f02e50e915fb11400702057052e464787e01d30b1950564f62de7fbedfc887e#npm:1.136.4"],\
@@ -14056,6 +14057,32 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@sanity/client", [\
+      ["npm:7.12.1", {\
+        "packageLocation": "./.yarn/cache/@sanity-client-npm-7.12.1-a7f8870ae4-9d348464db.zip/node_modules/@sanity/client/",\
+        "packageDependencies": [\
+          ["@sanity/client", "npm:7.12.1"],\
+          ["@sanity/eventsource", "npm:5.0.2"],\
+          ["get-it", "npm:8.6.10"],\
+          ["nanoid", "npm:3.3.11"],\
+          ["rxjs", "npm:7.8.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@sanity/eventsource", [\
+      ["npm:5.0.2", {\
+        "packageLocation": "./.yarn/cache/@sanity-eventsource-npm-5.0.2-3c0a81c714-a877f6175f.zip/node_modules/@sanity/eventsource/",\
+        "packageDependencies": [\
+          ["@sanity/eventsource", "npm:5.0.2"],\
+          ["@types/event-source-polyfill", "npm:1.0.5"],\
+          ["@types/eventsource", "npm:1.1.15"],\
+          ["event-source-polyfill", "npm:1.0.31"],\
+          ["eventsource", "npm:2.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@sideway/address", [\
       ["npm:4.1.5", {\
         "packageLocation": "./.yarn/cache/@sideway-address-npm-4.1.5-a3852745c8-c4c73ac033.zip/node_modules/@sideway/address/",\
@@ -15514,6 +15541,24 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["@types/event-source-polyfill", [\
+      ["npm:1.0.5", {\
+        "packageLocation": "./.yarn/cache/@types-event-source-polyfill-npm-1.0.5-68d6820698-f506b68710.zip/node_modules/@types/event-source-polyfill/",\
+        "packageDependencies": [\
+          ["@types/event-source-polyfill", "npm:1.0.5"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/eventsource", [\
+      ["npm:1.1.15", {\
+        "packageLocation": "./.yarn/cache/@types-eventsource-npm-1.1.15-5ec4a6b02b-52e024f5ae.zip/node_modules/@types/eventsource/",\
+        "packageDependencies": [\
+          ["@types/eventsource", "npm:1.1.15"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["@types/express", [\
       ["npm:4.17.25", {\
         "packageLocation": "./.yarn/cache/@types-express-npm-4.17.25-3e4c367cc7-c309fdb79f.zip/node_modules/@types/express/",\
@@ -15557,6 +15602,16 @@ const RAW_RUNTIME_STATE =
           ["@types/qs", "npm:6.14.0"],\
           ["@types/range-parser", "npm:1.2.7"],\
           ["@types/send", "npm:1.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/follow-redirects", [\
+      ["npm:1.14.4", {\
+        "packageLocation": "./.yarn/cache/@types-follow-redirects-npm-1.14.4-78980d22e3-bbf8396117.zip/node_modules/@types/follow-redirects/",\
+        "packageDependencies": [\
+          ["@types/follow-redirects", "npm:1.14.4"],\
+          ["@types/node", "npm:24.9.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -21213,6 +21268,14 @@ const RAW_RUNTIME_STATE =
           ["mimic-response", "npm:3.1.0"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:7.0.0", {\
+        "packageLocation": "./.yarn/cache/decompress-response-npm-7.0.0-2a21518b90-dfd216a4b2.zip/node_modules/decompress-response/",\
+        "packageDependencies": [\
+          ["decompress-response", "npm:7.0.0"],\
+          ["mimic-response", "npm:3.1.0"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["dedent", [\
@@ -23363,6 +23426,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["event-source-polyfill", [\
+      ["npm:1.0.31", {\
+        "packageLocation": "./.yarn/cache/event-source-polyfill-npm-1.0.31-25a5668f35-901628a2fa.zip/node_modules/event-source-polyfill/",\
+        "packageDependencies": [\
+          ["event-source-polyfill", "npm:1.0.31"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["event-stream", [\
       ["npm:4.0.1", {\
         "packageLocation": "./.yarn/cache/event-stream-npm-4.0.1-093642aae1-9ca6be1ed2.zip/node_modules/event-stream/",\
@@ -23426,6 +23498,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["bare-events", "virtual:389961744a59cbc556bbc8745f3031a53db1a52440f4266b3f98525d21ed1393464f4fdcb75e6c08c0717bd0fde3f64b08478707bc817c1e34fda25f57d0ac21#npm:2.8.1"],\
           ["events-universal", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["eventsource", [\
+      ["npm:2.0.2", {\
+        "packageLocation": "./.yarn/cache/eventsource-npm-2.0.2-e94c48aca3-e1c4c3664c.zip/node_modules/eventsource/",\
+        "packageDependencies": [\
+          ["eventsource", "npm:2.0.2"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -24598,6 +24679,21 @@ const RAW_RUNTIME_STATE =
           ["has-symbols", "npm:1.1.0"],\
           ["hasown", "npm:2.0.2"],\
           ["math-intrinsics", "npm:1.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["get-it", [\
+      ["npm:8.6.10", {\
+        "packageLocation": "./.yarn/cache/get-it-npm-8.6.10-921221cccf-1931b5a066.zip/node_modules/get-it/",\
+        "packageDependencies": [\
+          ["@types/follow-redirects", "npm:1.14.4"],\
+          ["decompress-response", "npm:7.0.0"],\
+          ["follow-redirects", "virtual:a265dd84e89783ba9b2fcab36543b3cb88316a635296ac360d00152cffbb1248d407877ac324c3ae17b2165989603961d91a6245863f6eacced09cb6a2064c91#npm:1.15.11"],\
+          ["get-it", "npm:8.6.10"],\
+          ["is-retry-allowed", "npm:2.2.0"],\
+          ["through2", "npm:4.0.2"],\
+          ["tunnel-agent", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -26675,6 +26771,15 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["is-relative", "npm:1.0.0"],\
           ["is-unc-path", "npm:1.0.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["is-retry-allowed", [\
+      ["npm:2.2.0", {\
+        "packageLocation": "./.yarn/cache/is-retry-allowed-npm-2.2.0-b4b58fc581-6d86855308.zip/node_modules/is-retry-allowed/",\
+        "packageDependencies": [\
+          ["is-retry-allowed", "npm:2.2.0"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -37916,6 +38021,16 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["through2", [\
+      ["npm:4.0.2", {\
+        "packageLocation": "./.yarn/cache/through2-npm-4.0.2-da7b2da443-72c246233d.zip/node_modules/through2/",\
+        "packageDependencies": [\
+          ["readable-stream", "npm:3.6.2"],\
+          ["through2", "npm:4.0.2"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["thunky", [\
       ["npm:1.1.0", {\
         "packageLocation": "./.yarn/cache/thunky-npm-1.1.0-2d25531f44-825e3bd07a.zip/node_modules/thunky/",\
@@ -38559,6 +38674,16 @@ const RAW_RUNTIME_STATE =
           ["fsevents", "patch:fsevents@npm%3A2.3.3#optional!builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"],\
           ["get-tsconfig", "npm:4.13.0"],\
           ["tsx", "npm:4.20.6"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["tunnel-agent", [\
+      ["npm:0.6.0", {\
+        "packageLocation": "./.yarn/cache/tunnel-agent-npm-0.6.0-64345ab7eb-7f0d9ed5c2.zip/node_modules/tunnel-agent/",\
+        "packageDependencies": [\
+          ["safe-buffer", "npm:5.2.1"],\
+          ["tunnel-agent", "npm:0.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
