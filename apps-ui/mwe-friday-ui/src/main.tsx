@@ -1,14 +1,24 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { MWEClientApp, MWEClientRootLayout } from '@molitio/mwe-ui-core';
-import { Context } from './context';
+import { createRouter, RouterProvider } from '@tanstack/react-router';
+import { routeTree } from './routeTree.gen';
 import './globals.css';
 import './i18n';
 
+const router = createRouter({
+    routeTree,
+    defaultPreload: 'intent',
+    scrollRestoration: true,
+});
+
+declare module '@tanstack/react-router' {
+    interface Register {
+        router: typeof router;
+    }
+}
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <MWEClientRootLayout appContext={{ ...Context }}>
-            <MWEClientApp />
-        </MWEClientRootLayout>
+        <RouterProvider router={router} />
     </StrictMode>,
 );
