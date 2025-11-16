@@ -17,7 +17,7 @@
     },
     "homepage": "https://github.com/molitio/molitio-web-engine#readme",
     "engines": {
-        "node": ">=20"
+        "node": ">=24"
     },
     "scripts": {
         "dev": "yarn build:watch",
@@ -63,6 +63,7 @@
         "@tailwindcss/postcss": "4.1.16",
         "@tailwindcss/typography": "0.5.19",
         "@tanstack/react-router": "1.136.4",
+        "@tanstack/router-cli": "1.136.6",
         "@types/eslint": "9.6.1",
         "@types/grecaptcha": "3.0.9",
         "@types/node": "24.9.2",

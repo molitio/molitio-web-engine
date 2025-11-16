@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { SanityClient } from '@sanity/client';
 import { MWEClientRootLayout } from '../layout';
 import { AppContext } from '../context';
