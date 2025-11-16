@@ -1,11 +1,10 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createRootRouteWithContext, createRouter, RouterProvider } from '@tanstack/react-router';
+import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { routeTree } from './routeTree.gen';
 import './globals.css';
 import './i18n';
 import { ClientConfig, createClient, SanityClient } from '@sanity/client';
-import { MWEClientApp } from '@molitio/mwe-ui-core';
 
 export type MWEClientAppRouterContext = {
     client: SanityClient;

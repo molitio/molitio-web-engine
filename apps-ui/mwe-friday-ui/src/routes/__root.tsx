@@ -1,6 +1,6 @@
 import { MWEClientApp, MWEClientRootLayout } from '@molitio/mwe-ui-core';
-import { Link, Outlet, createRootRoute, createRootRouteWithContext } from '@tanstack/react-router';
-import { client, MWEClientAppRouterContext } from '../main';
+import { Link, Outlet, createRootRouteWithContext } from '@tanstack/react-router';
+import { MWEClientAppRouterContext } from '../main';
 import { Context } from '../context';
 
 /* export const Route = createRootRoute({
@@ -9,6 +9,10 @@ import { Context } from '../context';
  */
 
 export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
+    /*     loader: ({ context }) => {
+        const { client } = context;
+        return client.fetch(`*[_type == "landingPage"]{ title }`);
+    }, */
     component: RootComponent,
     notFoundComponent: () => <div>Not Found</div>,
 });
@@ -20,6 +24,10 @@ console.log('Title from CMS: ', title); */
 //const title = 'No Title Found';
 
 export function RootComponent() {
+    const client = Route.useLoaderData();
+
+    console.log('Loader Data in Root Route: ', client);
+    /*     const title = client[0]?.title || 'No Title Found'; */
     return (
         <>
             <MWEClientRootLayout appContext={{ ...Context }}>
@@ -40,8 +48,16 @@ export function RootComponent() {
                     >
                         About
                     </Link>
+                    <Link
+                        to="/contact"
+                        activeProps={{
+                            className: 'font-bold',
+                        }}
+                    >
+                        Contact
+                    </Link>
                 </span>
-                {/* <div>{`${title}`}</div> */}
+                {/*    {<div>{`Root: ${title}`}</div>} */}
                 <MWEClientApp />
                 <Outlet />
             </MWEClientRootLayout>
