@@ -1,17 +1,13 @@
-import { createFileRoute } from '@tanstack/react-router';
+import { createFileRoute, redirect } from '@tanstack/react-router';
+import { SupportedLocale, supportedLocales } from '../main';
+import i18n from '../i18n';
 
 export const Route = createFileRoute('/')({
-    loader: ({ context }) => {
-        const { client } = context;
-        return client.fetch(`*[_type == "landingPage"]{ title }`);
+    beforeLoad: () => {
+        const supportedLocalesArray: SupportedLocale[] = Object.keys(supportedLocales) as SupportedLocale[];
+        const detectedLang = i18n.language?.split('-')[0];
+        const defaultLocale =
+            detectedLang && supportedLocalesArray.includes(detectedLang as SupportedLocale) ? detectedLang : 'en';
+        throw redirect({ to: `/${defaultLocale}`, replace: true });
     },
-    component: RouteComponent,
 });
-
-function RouteComponent() {
-    const client = Route.useLoaderData()[0];
-
-    const title = client.title || 'No Title Found';
-
-    return <div>{`Hello "/"! Title: ${title}`}</div>;
-}

@@ -1,9 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/contact')({
-    loader: ({ context }) => {
+export const Route = createFileRoute('/$locale/_layout/contact')({
+    loader: ({ context, params }) => {
         const { client } = context;
-        return client.fetch(`*[_type == "aboutPage"]{ title }`);
+        const { locale } = params;
+        return client.fetch(`*[_type == "contactPage" && language == "${locale}"]{ title }`);
     },
     component: RouteComponent,
 });
