@@ -24,7 +24,7 @@
         "build": "rm -rf ./dist && yarn package:builder && yarn rollup -c",
         "build:watch": "rm -rf ./dist && yarn package:builder && yarn rollup -c -w",
         "package:builder": "node ./package-builder/package-builder.js",
-        "codegen:ui-routes": "yarn dlx @tanstack/router-cli generate",
+        "codegen:ui-routes": "tsr generate --config ./tanstack.config.cjs",
         "publish-mwe-ui-core": "yarn build && cd dist && npm publish --access=public --auth-type=legacy && cd ..",
         "lint": "eslint 'src/**/*.{js,ts,tsx}'",
         "lint-fix": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",

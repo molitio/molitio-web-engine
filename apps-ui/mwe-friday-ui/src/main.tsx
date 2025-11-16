@@ -1,15 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { createRouter, RouterProvider } from '@tanstack/react-router';
-import { routeTree } from './routeTree.gen';
-import './globals.css';
-import { ClientConfig, createClient, SanityClient } from '@sanity/client';
-import { i18n, MWEClientApp } from '@molitio/mwe-ui-core';
 
-export type MWEClientAppRouterContext = {
-    client: SanityClient;
-    locale: SupportedLocale;
-};
+import './globals.css';
+import { ClientConfig, createClient } from '@sanity/client';
+import { i18n, MWEClientAppProvider, SupportedLocale } from '@molitio/mwe-ui-core';
 
 const config: ClientConfig = {
     projectId: 'm95inqn3',
@@ -23,6 +17,7 @@ const locale = (i18n.language as SupportedLocale) || 'en';
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <MWEClientApp client={client} initialLocale={locale} />
+        <MWEClientAppProvider client={client} locale={locale} />
+        {/*  <MWEClientApp client={client} locale={locale} /> */}
     </StrictMode>,
 );

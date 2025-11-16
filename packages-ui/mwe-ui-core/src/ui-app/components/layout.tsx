@@ -22,10 +22,7 @@ export default function LocaleLayout({ locale }: LocaleLayoutProps) {
                 </Link>
             </span>
             {<div>{`Root (${locale})`}</div>}
-            <h1>Client app</h1>
-            <MWEClientApp ctx={{ appId: 'example-app', appName: 'Example App' }}>
-                <Outlet />
-            </MWEClientApp>
+            <Outlet />
         </section>
     );
 }

@@ -1,6 +1,6 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
 import { LocaleLayout } from '../components';
-import { SupportedLocale, supportedLocales } from '../main';
+import { SupportedLocale, supportedLocales } from '../types';
 
 export const Route = createFileRoute('/$locale')({
     beforeLoad: ({ params }) => {

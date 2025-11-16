@@ -1,5 +1,5 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
-import i18n from '../../../../packages-ui/mwe-ui-core/src/i18n';
+import i18n from '../../i18n';
 
 export const Route = createFileRoute('/')({
     beforeLoad: () => {

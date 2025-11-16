@@ -1,5 +1,5 @@
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
-import { MWEClientAppRouterContext } from '../main';
+import { MWEClientAppRouterContext } from '../types';
 
 export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
     component: RootComponent,
