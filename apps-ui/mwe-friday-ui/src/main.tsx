@@ -3,20 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { createRouter, RouterProvider } from '@tanstack/react-router';
 import { routeTree } from './routeTree.gen';
 import './globals.css';
-import './i18n';
 import { ClientConfig, createClient, SanityClient } from '@sanity/client';
-import i18n from './i18n';
-
-export const supportedLocales = {
-    hu: { locale: 'hu', languageTitle: 'Hungarian' },
-    en: {
-        locale: 'en',
-        languageTitle: 'English',
-    },
-    de: { locale: 'de', languageTitle: 'German' },
-} as const;
-
-export type SupportedLocale = keyof typeof supportedLocales;
+import { i18n, MWEClientApp } from '@molitio/mwe-ui-core';
 
 export type MWEClientAppRouterContext = {
     client: SanityClient;
@@ -33,21 +21,8 @@ export const client = createClient(config);
 
 const locale = (i18n.language as SupportedLocale) || 'en';
 
-const router = createRouter({
-    routeTree,
-    context: { client, locale },
-    defaultPreload: 'intent',
-    scrollRestoration: true,
-});
-
-declare module '@tanstack/react-router' {
-    interface Register {
-        router: typeof router;
-    }
-}
-
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <RouterProvider router={router} />
+        <MWEClientApp client={client} initialLocale={locale} />
     </StrictMode>,
 );

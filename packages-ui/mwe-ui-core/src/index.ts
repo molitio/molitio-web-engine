@@ -27,6 +27,7 @@ export * from './layout';
 
 export * from './core';
 
+import i18n from './i18n';
 /* ------ */
 
 /**
@@ -80,3 +81,9 @@ export * from './context';
  *
  */
 export * from './ui-form';
+
+/**
+ * u18n
+ *
+ */
+export { default as i18n } from './i18n';

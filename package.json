@@ -21,7 +21,7 @@
         "build": "yarn artifacts:cleanup && yarn workspaces foreach --all --topological-dev run build",
         "build:db": "docker compose up -d --build resource-hub-db",
         "codegen": "graphql-codegen --config codegen.ts && yarn format",
-        "codegen:ui-routes": "yarn workspace @molitio/mwe-friday-ui  dlx @tanstack/router-cli generate",
+        "codegen:ui-routes": "yarn workspace @molitio/mwe-friday-ui codegen:ui-routes",
         "docs:build": "yarn workspace @molitio/mwe-docs build",
         "docs:serve": "yarn workspace @molitio/mwe-docs start",
         "artifacts:cleanup": "rimraf .artifacts && mkdir .artifacts",
