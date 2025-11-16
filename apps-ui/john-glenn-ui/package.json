@@ -10,7 +10,6 @@
         "dev": "next dev -p 3303",
         "build": "next build",
         "start": "next start",
-        "test": "npx jest",
         "artifact": "mkdir -p ../../.artifacts/mwe-john-glenn-ui && cp -r ./.next/* ../../.artifacts/mwe-john-glenn-ui"
     },
     "dependencies": {

@@ -28,3 +28,11 @@ jobs:
     uses: ./.github/workflows/build-mwe-packages.yml
     with:
       node-version: "24"
+
+  test-e2e-web:
+    name: E2E Web
+    needs: build
+    uses: ./.github/workflows/test-mwe-e2e-web.yml
+    with:
+      node-version: "24"
+      allow-fail: true

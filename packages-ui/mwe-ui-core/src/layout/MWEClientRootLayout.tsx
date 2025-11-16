@@ -26,21 +26,21 @@ const MWEClientRootLayout: React.FC<RootLayoutProps & React.PropsWithChildren> =
         return <>Context Error</>;
     }
     return (
-        <html
+        /*       <html
             lang="en"
             data-theme="sleeping-dragon"
             className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-gradient-to-172 overflow-x-auto overflow-y-auto list-none"
-        >
-            <body>
-                <Suspense fallback={<Loading />}>
-                    <AppContextRootProvider appContext={appContext}>
-                        <NavBar headerText="Molito" />
-                        <NavSegmentKeys />
-                        <main>{children}</main>
-                    </AppContextRootProvider>
-                </Suspense>
-            </body>
-        </html>
+        > 
+            <body>*/
+        <Suspense fallback={<Loading />}>
+            <AppContextRootProvider appContext={appContext}>
+                <NavBar headerText="Molito" />
+                <NavSegmentKeys />
+                <main>{children}</main>
+            </AppContextRootProvider>
+        </Suspense>
+        /*        </body>
+        </html> */
     );
 };
 
