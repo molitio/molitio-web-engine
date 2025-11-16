@@ -1,10 +1,12 @@
-import { createRouter, RouterProvider } from '@tanstack/react-router';
-import { AppContext } from '../context';
+import { createRouter } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
 import { routeTree } from './generatedRoutes';
-import { SupportedLocale } from './types';
+import { SupportedLocale } from './constants';
+import MWEClientApp from './MWEClientApp';
 
-export function createAppRouter({ client, locale = 'en' }: MWEClientAppProviderProps) {
+export type AppRouter = ReturnType<typeof createMWEAppRouter>;
+
+export function createMWEAppRouter({ client, locale = 'en' }: MWEClientAppProviderProps) {
     return createRouter({
         routeTree,
         context: { client, locale },
@@ -13,13 +15,19 @@ export function createAppRouter({ client, locale = 'en' }: MWEClientAppProviderP
     });
 }
 
-export type MWEClientAppProviderProps = {
-    ctx?: AppContext;
-    client: SanityClient; // Passed from consumer
-    locale?: SupportedLocale;
-} & { children?: React.ReactNode };
+declare module '@tanstack/react-router' {
+    interface Register {
+        router: ReturnType<typeof createMWEAppRouter>;
+    }
+}
+
+type MWEClientAppProviderProps = {
+    client: SanityClient;
+    locale: SupportedLocale;
+};
 
 export default function MWEClientAppProvider({ client, locale }: MWEClientAppProviderProps) {
-    const router = createAppRouter({ client, locale });
-    return <RouterProvider router={router} />;
+    const router = createMWEAppRouter({ client, locale });
+
+    return <MWEClientApp router={router} />;
 }

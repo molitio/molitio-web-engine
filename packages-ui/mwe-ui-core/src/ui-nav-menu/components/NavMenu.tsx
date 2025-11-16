@@ -1,33 +1,31 @@
-/* import React, { useState } from 'react'; */
-/* import { navMenuAtomRW } from '../../context'; */
-/* import { useAtom } from 'jotai'; */
+import { Link } from '@tanstack/react-router';
+import { SupportedLocale } from '../../ui-app/constants';
 
-export default function NavMenu() {
-    /*     const [navRoot] = useAtom(navMenuAtomRW); */
-    /*     const [selectedNavItem, setSelectedNavItem] = useState<string | null>(null); */
+export type NavMenuProps = {
+    locale: SupportedLocale;
+} & { children?: React.ReactNode };
 
-    /*     const handleNavItemClick = (navBranch: string) => {
-        setSelectedNavItem(navBranch);
-    }; */
-
+export default function NavMenu({ locale, children }: NavMenuProps) {
     return (
-        <nav>
-            <div className="flex items-center gap-3 justify-center">
-                {/*                 {Object.keys(navRoot).map((navBranch) => (
-                    <a key={navBranch} href={`${navRoot[navBranch].path}`}>
-                        <div
-                            key={navBranch}
-                            className={` nav-item flex align-center ${selectedNavItem === navBranch ? 'selected' : ''}`}
-                            onClick={() => handleNavItemClick(navBranch)}
-                        >
-                            <figure className="icon-container flex justify-center">
-                                <img src={navRoot[navBranch].iconUrl} className="icon" />
-                            </figure>
-                            <span className="label ">{navRoot[navBranch].label}</span> 
-                        </div>
-                    </a>
-                ))}*/}
-            </div>
-        </nav>
+        <section className="flex-1 flex items-center gap-3 justify-start">
+            <ul className="flex direction-row justify-start gap-2">
+                <li>
+                    <Link to="/$locale" params={{ locale }} activeProps={{ className: 'font-bold' }}>
+                        Home
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/$locale/about" params={{ locale }} activeProps={{ className: 'font-bold' }}>
+                        About
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/$locale/contact" params={{ locale }} activeProps={{ className: 'font-bold' }}>
+                        Contact
+                    </Link>
+                </li>
+            </ul>
+            <div className="justify-end text-end flex-1 border border-accent">{children}</div>
+        </section>
     );
 }

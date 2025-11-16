@@ -1,9 +1,9 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
-import './globals.css';
 import { ClientConfig, createClient } from '@sanity/client';
 import { i18n, MWEClientAppProvider, SupportedLocale } from '@molitio/mwe-ui-core';
+import './globals.css';
 
 const config: ClientConfig = {
     projectId: 'm95inqn3',
@@ -18,6 +18,5 @@ const locale = (i18n.language as SupportedLocale) || 'en';
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
         <MWEClientAppProvider client={client} locale={locale} />
-        {/*  <MWEClientApp client={client} locale={locale} /> */}
     </StrictMode>,
 );

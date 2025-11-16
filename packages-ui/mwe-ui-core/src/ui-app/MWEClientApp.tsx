@@ -1,19 +1,10 @@
-import { MWEClientRootLayout } from '../layout';
+import { RouterProvider } from '@tanstack/react-router';
+import { AppRouter } from './MWEClientAppProvider';
 
-import { Outlet } from '@tanstack/react-router';
-import { createAppRouter, MWEClientAppProviderProps } from './MWEClientAppProvider';
-import { DefaultApplicationContextRoot } from '../context';
+export type MWEClientAppProps = {
+    router: AppRouter;
+};
 
-export default function MWEClientApp({ ctx, client, locale, children }: MWEClientAppProviderProps) {
-    /*    if (!ctx) {
-        return <>Context Error</>;
-    }
- */
-    return (
-        <MWEClientRootLayout ctx={DefaultApplicationContextRoot}>
-            <h1 className="text-primary">{'GET TITLE'}</h1>
-            {/*       {children} */}
-            <Outlet />
-        </MWEClientRootLayout>
-    );
+export default function MWEClientApp({ router }: MWEClientAppProps) {
+    return <RouterProvider router={router} />;
 }

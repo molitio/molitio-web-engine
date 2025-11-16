@@ -1,5 +1,11 @@
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
-import { MWEClientAppRouterContext } from '../types';
+import { SanityClient } from '@sanity/client';
+import { SupportedLocale } from '../constants';
+
+type MWEClientAppRouterContext = {
+    client: SanityClient;
+    locale: SupportedLocale;
+};
 
 export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
     component: RootComponent,
@@ -8,7 +14,7 @@ export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
 
 export function RootComponent() {
     return (
-        <main>
+        <main className="h-screen box-border mx-auto m-0 p-0 leading-6 text-primary text-base bg-gradient-to-172 overflow-x-auto overflow-y-auto list-none">
             <Outlet />
         </main>
     );

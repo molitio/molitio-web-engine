@@ -1,13 +1,14 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
 import { LocaleLayout } from '../components';
-import { SupportedLocale, supportedLocales } from '../types';
+import { DEFAULT_LOCALE, isSupportedLocale, supportedLocaleOrDefault } from '../constants';
 
 export const Route = createFileRoute('/$locale')({
     beforeLoad: ({ params }) => {
         const { locale } = params;
-        const supportedLocalesArray: SupportedLocale[] = Object.keys(supportedLocales) as SupportedLocale[];
-        if (!supportedLocalesArray.includes(locale as SupportedLocale)) {
-            throw redirect({ to: '/$locale', params: { locale: 'en' }, replace: true });
+        console.log('Requested locale:', locale);
+
+        if (!isSupportedLocale(locale)) {
+            throw redirect({ to: '/$locale', params: { locale: DEFAULT_LOCALE }, replace: true });
         }
     },
     component: RouteComponent,
@@ -15,5 +16,7 @@ export const Route = createFileRoute('/$locale')({
 
 function RouteComponent() {
     const { locale } = Route.useParams();
-    return <LocaleLayout locale={locale} />;
+    const selectedLocale = supportedLocaleOrDefault(locale);
+
+    return <LocaleLayout locale={selectedLocale} />;
 }

@@ -12,7 +12,7 @@ export const Route = createFileRoute('/$locale/')({
 function RouteComponent() {
     const ctx = Route.useLoaderData()[0];
 
-    const title = ctx.title || 'No Title Found';
+    const title = ctx?.title || 'No Title Found';
 
-    return <div>{`Hello "/${ctx.language}"! Title: ${title}`}</div>;
+    return <div>{`Hello "/${ctx?.language}"! Title: ${title}`}</div>;
 }
