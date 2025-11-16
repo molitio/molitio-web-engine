@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/$locale/_layout/contact')({
+export const Route = createFileRoute('/$locale/contact')({
     loader: ({ context, params }) => {
         const { client } = context;
         const { locale } = params;
@@ -12,6 +12,7 @@ export const Route = createFileRoute('/$locale/_layout/contact')({
 function RouteComponent() {
     const client = Route.useLoaderData();
 
-    const title = client[0].title || 'No Title Found';
+    console.log('Contact page data:', client);
+    const title = client[0]?.title || 'No Title Found';
     return <div>{`Contact ${title}`}</div>;
 }

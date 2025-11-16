@@ -8,11 +8,12 @@ import { ClientConfig, createClient, SanityClient } from '@sanity/client';
 import i18n from './i18n';
 
 export const supportedLocales = {
+    hu: { locale: 'hu', languageTitle: 'Hungarian' },
     en: {
         locale: 'en',
         languageTitle: 'English',
     },
-    hu: { locale: 'hu', languageTitle: 'Hungarian' },
+    de: { locale: 'de', languageTitle: 'German' },
 } as const;
 
 export type SupportedLocale = keyof typeof supportedLocales;

@@ -8,16 +8,12 @@
 // You should NOT make any changes in this file as it will be overwritten.
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
-import { createFileRoute } from '@tanstack/react-router'
-./routes/$locale/_layout
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as LocaleRouteImport } from './routes/$locale'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as LocaleLayoutRouteImport } from './routes/$locale/_layout'
-import { Route as LocaleLayoutIndexRouteImport } from './routes/$locale/_layout.index'
-import { Route as LocaleLayoutContactRouteImport } from './routes/$locale/_layout.contact'
-import { Route as LocaleLayoutAboutRouteImport } from './routes/$locale/_layout.about'
-
-const LocaleRouteImport = createFileRoute('/$locale')()
+import { Route as LocaleIndexRouteImport } from './routes/$locale/index'
+import { Route as LocaleContactRouteImport } from './routes/$locale/contact'
+import { Route as LocaleAboutRouteImport } from './routes/$locale/about'
 
 const LocaleRoute = LocaleRouteImport.update({
   id: '/$locale',
@@ -29,47 +25,42 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LocaleLayoutRoute = LocaleLayoutRouteImport.update({
-  id: '/_layout',
-  getParentRoute: () => LocaleRoute,
-} as any)
-const LocaleLayoutIndexRoute = LocaleLayoutIndexRouteImport.update({
+const LocaleIndexRoute = LocaleIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => LocaleLayoutRoute,
+  getParentRoute: () => LocaleRoute,
 } as any)
-const LocaleLayoutContactRoute = LocaleLayoutContactRouteImport.update({
+const LocaleContactRoute = LocaleContactRouteImport.update({
   id: '/contact',
   path: '/contact',
-  getParentRoute: () => LocaleLayoutRoute,
+  getParentRoute: () => LocaleRoute,
 } as any)
-const LocaleLayoutAboutRoute = LocaleLayoutAboutRouteImport.update({
+const LocaleAboutRoute = LocaleAboutRouteImport.update({
   id: '/about',
   path: '/about',
-  getParentRoute: () => LocaleLayoutRoute,
+  getParentRoute: () => LocaleRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/$locale': typeof LocaleLayoutRouteWithChildren
-  '/$locale/about': typeof LocaleLayoutAboutRoute
-  '/$locale/contact': typeof LocaleLayoutContactRoute
-  '/$locale/': typeof LocaleLayoutIndexRoute
+  '/$locale': typeof LocaleRouteWithChildren
+  '/$locale/about': typeof LocaleAboutRoute
+  '/$locale/contact': typeof LocaleContactRoute
+  '/$locale/': typeof LocaleIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/$locale': typeof LocaleLayoutIndexRoute
-  '/$locale/about': typeof LocaleLayoutAboutRoute
-  '/$locale/contact': typeof LocaleLayoutContactRoute
+  '/$locale/about': typeof LocaleAboutRoute
+  '/$locale/contact': typeof LocaleContactRoute
+  '/$locale': typeof LocaleIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$locale': typeof LocaleRouteWithChildren
-  '/$locale/_layout': typeof LocaleLayoutRouteWithChildren
-  '/$locale/_layout/about': typeof LocaleLayoutAboutRoute
-  '/$locale/_layout/contact': typeof LocaleLayoutContactRoute
-  '/$locale/_layout/': typeof LocaleLayoutIndexRoute
+  '/$locale/about': typeof LocaleAboutRoute
+  '/$locale/contact': typeof LocaleContactRoute
+  '/$locale/': typeof LocaleIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -80,15 +71,14 @@ export interface FileRouteTypes {
     | '/$locale/contact'
     | '/$locale/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$locale' | '/$locale/about' | '/$locale/contact'
+  to: '/' | '/$locale/about' | '/$locale/contact' | '/$locale'
   id:
     | '__root__'
     | '/'
     | '/$locale'
-    | '/$locale/_layout'
-    | '/$locale/_layout/about'
-    | '/$locale/_layout/contact'
-    | '/$locale/_layout/'
+    | '/$locale/about'
+    | '/$locale/contact'
+    | '/$locale/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -112,59 +102,40 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/$locale/_layout': {
-      id: '/$locale/_layout'
-      path: '/$locale'
-      fullPath: '/$locale'
-      preLoaderRoute: typeof LocaleLayoutRouteImport
-      parentRoute: typeof LocaleRoute
-    }
-    '/$locale/_layout/': {
-      id: '/$locale/_layout/'
+    '/$locale/': {
+      id: '/$locale/'
       path: '/'
       fullPath: '/$locale/'
-      preLoaderRoute: typeof LocaleLayoutIndexRouteImport
-      parentRoute: typeof LocaleLayoutRoute
+      preLoaderRoute: typeof LocaleIndexRouteImport
+      parentRoute: typeof LocaleRoute
     }
-    '/$locale/_layout/contact': {
-      id: '/$locale/_layout/contact'
+    '/$locale/contact': {
+      id: '/$locale/contact'
       path: '/contact'
       fullPath: '/$locale/contact'
-      preLoaderRoute: typeof LocaleLayoutContactRouteImport
-      parentRoute: typeof LocaleLayoutRoute
+      preLoaderRoute: typeof LocaleContactRouteImport
+      parentRoute: typeof LocaleRoute
     }
-    '/$locale/_layout/about': {
-      id: '/$locale/_layout/about'
+    '/$locale/about': {
+      id: '/$locale/about'
       path: '/about'
       fullPath: '/$locale/about'
-      preLoaderRoute: typeof LocaleLayoutAboutRouteImport
-      parentRoute: typeof LocaleLayoutRoute
+      preLoaderRoute: typeof LocaleAboutRouteImport
+      parentRoute: typeof LocaleRoute
     }
   }
 }
 
-interface LocaleLayoutRouteChildren {
-  LocaleLayoutAboutRoute: typeof LocaleLayoutAboutRoute
-  LocaleLayoutContactRoute: typeof LocaleLayoutContactRoute
-  LocaleLayoutIndexRoute: typeof LocaleLayoutIndexRoute
-}
-
-const LocaleLayoutRouteChildren: LocaleLayoutRouteChildren = {
-  LocaleLayoutAboutRoute: LocaleLayoutAboutRoute,
-  LocaleLayoutContactRoute: LocaleLayoutContactRoute,
-  LocaleLayoutIndexRoute: LocaleLayoutIndexRoute,
-}
-
-const LocaleLayoutRouteWithChildren = LocaleLayoutRoute._addFileChildren(
-  LocaleLayoutRouteChildren,
-)
-
 interface LocaleRouteChildren {
-  LocaleLayoutRoute: typeof LocaleLayoutRouteWithChildren
+  LocaleAboutRoute: typeof LocaleAboutRoute
+  LocaleContactRoute: typeof LocaleContactRoute
+  LocaleIndexRoute: typeof LocaleIndexRoute
 }
 
 const LocaleRouteChildren: LocaleRouteChildren = {
-  LocaleLayoutRoute: LocaleLayoutRouteWithChildren,
+  LocaleAboutRoute: LocaleAboutRoute,
+  LocaleContactRoute: LocaleContactRoute,
+  LocaleIndexRoute: LocaleIndexRoute,
 }
 
 const LocaleRouteWithChildren =

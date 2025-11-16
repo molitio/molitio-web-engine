@@ -1,10 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router';
 
-export const Route = createFileRoute('/$locale/_layout/')({
+export const Route = createFileRoute('/$locale/')({
     loader: ({ context, params }) => {
         const { client } = context;
         const { locale } = params;
-        return client.fetch(`*[_type == "landingPage" && language == "${locale}"]{ title }`);
+        return client.fetch(`*[_type == "landingPage" && language == "${locale}"]{ title, language }`);
     },
     component: RouteComponent,
 });
