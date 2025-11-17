@@ -1,15 +1,13 @@
 'use client';
 import React from 'react';
+import './components/page.css';
+import TaskContainer from './components/TaskContainer';
 
 const Task = () => {
-    const headerString = 'HTML HERE <--';
     return (
         <div>
-            Task
-            <br />
-            <span className="text-purple-600">Practice Task App</span>
-            <br />
-            <span className="text-purple-600">{`${headerString}`}</span>
+            <h1>Simple Task Management Web App</h1>
+            <TaskContainer />
         </div>
     );
 };

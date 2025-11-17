@@ -126,5 +126,8 @@
         "vite@7.1.12": {
             "unplugged": true
         }
+    },
+    "dependencies": {
+        "styled-components": "6.1.19"
     }
 }
