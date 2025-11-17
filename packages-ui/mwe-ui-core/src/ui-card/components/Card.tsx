@@ -71,13 +71,32 @@ export default function Card({
 
 	return (
 		<div className={classes.container}>
-			<h3 className={classes.title}>{title}</h3>
+			{imageSrc && variant === 'image' && (
+				<div className="relative h-32 w-full overflow-hidden bg-gray-100">
+					<img
+						src={imageSrc}
+						alt={title}
+						className="w-full h-full object-contain"
+					/>
+				</div>
+			)}
+
+			<div className={variant === 'image' ? 'p-6 flex-1 flex flex-col' : ''}>
+				{icon && variant === 'icon' && (
+					<span className="material-icons text-accent text-3xl mb-2">{icon}</span>
+				)}
+
+				<h3 className={classes.title}>{title}</h3>
 				<p className={classes.description}>
 					{description}
 				</p>
-				<button className={classes.button}>
-					{buttonText}
-				</button>
+				
+				{buttonText && (
+					<button onClick={buttonAction} className={classes.button}>
+						{buttonText}
+					</button>
+				)}
+			</div>
 		</div>
 	);
 }
