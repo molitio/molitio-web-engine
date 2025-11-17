@@ -1,7 +1,7 @@
 declare namespace TailwindConfig {
     interface Config {
-        theme?: any;
-        plugins?: any[];
+        theme?: unknown;
+        plugins?: unknown[];
     }
 }
 

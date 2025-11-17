@@ -1,5 +1,3 @@
-import { NavMenuProps } from './NavMenu';
-
 export type NavBarProps = {
     headerText?: string;
     navMenu: React.ReactNode;

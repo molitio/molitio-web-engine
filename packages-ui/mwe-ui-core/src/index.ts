@@ -12,23 +12,12 @@ export * from './connectivity-integration';
 export * from './ui-app';
 
 /**
- * common
- *
- * Common components for the UI
- */
-
-export * from './layout';
-
-/**
  * core
  *
  * Core resuable functionality and components
  */
 
 export * from './core';
-
-import i18n from './i18n';
-/* ------ */
 
 /**
  * tailwind global
