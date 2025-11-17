@@ -4,6 +4,7 @@
     "type": "module",
     "scripts": {
         "test": "yarn playwright test --trace on-first-retry",
+        "web:ui": "yarn workspace @molitio/web-engine dev:mwe-friday-ui",
         "web:server": "yarn workspace @molitio/web-engine container-compose:start",
         "web:buildServer": "yarn workspace @molitio/web-engine container-compose"
     },
