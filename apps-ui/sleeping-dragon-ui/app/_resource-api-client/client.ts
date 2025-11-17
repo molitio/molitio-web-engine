@@ -12,7 +12,7 @@ enum Host {
 /*
  * To switch between local development and containerized environment, change the activeApi value.
  */
-const activeApi = Host.container;
+const activeApi = Host.localhost;
 export const activePort = 4000;
 
 // TODO: abstract to shared library that will be used by multiple apps

@@ -1,0 +1,11 @@
+{
+    "routesDirectory": "./src/ui-app/routes",
+    "generatedRouteTree": "./src/ui-app/generatedRoutes.tsx",
+    "disableLogging": false,
+    "quoteStyle": "single",
+    "semicolons": true,
+    "autoCodeSplitting": true,
+    "routeFileExtensions": [".tsx", ".ts"],
+    "routeFileIgnorePattern": "-",
+    "target": "react"
+}

@@ -13,7 +13,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
     return (
         <html lang="en">
             <body className="bg-secondary min-h-screen">
-                <NavBar headerText="Molito" />
+                <NavBar headerText="Molito" navMenu={<div>Menu</div>} />
                 {children}
                 <ClientRoot />
             </body>

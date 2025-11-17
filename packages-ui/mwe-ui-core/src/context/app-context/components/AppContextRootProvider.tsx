@@ -1,79 +1,22 @@
 'use client';
 
-import React, { createContext, useMemo } from 'react';
-import { AppContext, ContextNode } from '../types';
-import { NavigationSegment } from '../types/NavigationSegment';
-import { Provider as JotaiProvider, atom as jotaiAtom, useAtomValue } from 'jotai';
-import { TextContentNode } from '../types/TextContentSegment';
-
-function collectSegments(nodeTree: Record<string, ContextNode> | undefined) {
-    const navSegments: Record<string, NavigationSegment> = {};
-    const textSegments: Record<string, TextContentNode> = {};
-    if (!nodeTree) return { navSegments, textSegments };
-    for (const key in nodeTree) {
-        const node = nodeTree[key];
-        if (node.navigation) navSegments[key] = node.navigation;
-        if (node.textContent) {
-            // node.textContent is Record<string, TextContentNode>
-            for (const segmentKey in node.textContent) {
-                textSegments[segmentKey] = node.textContent[segmentKey];
-            }
-        }
-        if (node.nodeTree) {
-            const child = collectSegments(node.nodeTree);
-            Object.assign(navSegments, child.navSegments);
-            Object.assign(textSegments, child.textSegments);
-        }
-    }
-    console.log('Collected navSegments:', navSegments);
-    console.log('Collected textSegments:', textSegments);
-    return { navSegments, textSegments };
-}
+import { ReactNode, createContext } from 'react';
+import { AppContext } from '../types';
 
 type AppContextRootValues = {
-    navSegments: Record<string, NavigationSegment>;
-    textSegments: Record<string, TextContentNode>;
+    ctx: AppContext;
 };
 
-export const AppContextRootContext = createContext<AppContextRootValues | undefined>(undefined);
+type AppContextRootProviderProps = AppContextRootValues & { children?: ReactNode };
 
-export function AppContextRootProvider({
-    appContext,
-    children,
-}: {
-    appContext: AppContext;
-    children: React.ReactNode;
-}) {
-    const { navSegments, textSegments } = useMemo(() => collectSegments(appContext.nodeTree), [appContext.nodeTree]);
+export const AppContextRootContext = createContext<AppContext | undefined>(undefined);
 
-    const navAtom = useMemo(() => jotaiAtom<Record<string, NavigationSegment>>(navSegments), [navSegments]);
-    const textAtom = useMemo(() => jotaiAtom<Record<string, TextContentNode>>(textSegments), [textSegments]);
-
-    const navSegmentsValue = useAtomValue(navAtom);
-    const textSegmentsValue = useAtomValue(textAtom);
-
-    const contextValue = useMemo(
-        () => ({
-            navSegments: navSegmentsValue,
-            textSegments: textSegmentsValue,
-        }),
-        [navSegmentsValue, textSegmentsValue],
-    );
-
-    return (
-        <AppContextRootContext.Provider value={contextValue}>
-            <JotaiProvider>{children}</JotaiProvider>
-        </AppContextRootContext.Provider>
-    );
-}
-export function useNavSegments() {
-    const ctx = React.useContext(AppContextRootContext);
-    if (!ctx) throw new Error('useNavSegments must be used within AppContextRootProvider');
-    return ctx.navSegments;
-}
-
-export function useTextSegments() {
-    const ctx = React.useContext(AppContextRootContext);
-    if (!ctx) throw new Error('useTextSegments must be used within AppContextRootProvider');
-    return ctx.textSegments;
+export default function AppContextRootProvider({ ctx, children }: AppContextRootProviderProps) {
+    const defaultAppContext: AppContext = {
+        ...ctx,
+        appId: ctx?.appId || 'default-app-id',
+        appName: ctx?.appName || 'Default App',
+    };
+    const aggregatedAppContext = { ...defaultAppContext };
+    return <AppContextRootContext.Provider value={aggregatedAppContext}>{children}</AppContextRootContext.Provider>;
 }
