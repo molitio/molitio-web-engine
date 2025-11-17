@@ -1,14 +1,10 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { RouterProvider } from '@tanstack/react-router';
+import { AppRouter } from './MWEClientAppProvider';
 
-const MWEClientApp: React.FC = () => {
-    const { t } = useTranslation();
-
-    return (
-        <div>
-            <h1 className="text-primary">{t('landing:cover.greeting')}</h1>
-        </div>
-    );
+export type MWEClientAppProps = {
+    router: AppRouter;
 };
 
-export default MWEClientApp;
+export default function MWEClientApp({ router }: MWEClientAppProps) {
+    return <RouterProvider router={router} />;
+}

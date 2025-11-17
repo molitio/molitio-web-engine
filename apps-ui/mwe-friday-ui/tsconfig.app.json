@@ -17,5 +17,9 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true
     },
-    "include": ["src"]
+    "include": [
+        "src",
+        "../../packages-ui/mwe-ui-core/src/i18n/index.ts",
+        "../../packages-ui/mwe-ui-core/src/ui-app/components"
+    ]
 }
