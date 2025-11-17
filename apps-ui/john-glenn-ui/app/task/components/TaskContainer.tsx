@@ -13,7 +13,10 @@ const TaskContainer: React.FC = () => {
     const [showDeletedNoti, setShowDeletedNoti] = useState(false);
 
     useEffect(() => {
-        setTasks(loadTasks());
+        function effect() {
+            setTasks(loadTasks());
+        }
+        effect();
     }, []);
 
     useEffect(() => {
