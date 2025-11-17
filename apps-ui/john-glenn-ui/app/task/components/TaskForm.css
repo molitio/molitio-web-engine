@@ -1,0 +1,90 @@
+/* From Uiverse.io by alexruix */
+.input {
+    max-width: 190px;
+    height: 44px;
+    background-color: #05060f0a;
+    border-radius: 0.7rem;
+    padding: 0 1rem;
+    border: 2px solid transparent;
+    font-size: 1rem;
+    transition:
+        border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+        color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+        background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+    color: #ffffff;
+}
+
+.input::placeholder {
+    color: #000000af;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #50009b99;
+    transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px 0 24px 0;
+    justify-content: center;
+}
+
+.input:hover,
+input:focus {
+    outline: none;
+    border-color: #05060f;
+}
+
+.label:hover {
+    color: #05060fc2;
+}
+
+.max-char-noti {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4d4f;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    animation: fadeInOut 4s forwards;
+}
+
+.added-noti {
+    position: fixed;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: linear-gradient(90deg, #1eff00 0%, #eeff00 100%);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    15% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
