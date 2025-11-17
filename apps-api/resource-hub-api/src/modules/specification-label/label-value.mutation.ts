@@ -1,5 +1,5 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql';
-import { CreateLabelValueDto, LabelValue } from './label-value.schema';
+import { LabelValue } from './label-value.schema';
 import { LabelValueService } from './label-value.service';
 
 @Resolver()

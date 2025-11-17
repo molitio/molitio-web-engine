@@ -1,0 +1,73 @@
+@theme {
+    --spacing-gutter-bottom: 2rem;
+    --spacing-gutter-x: 1.5rem;
+    --spacing-section: 3rem;
+    --spacing-container: 1.25rem;
+
+    --color-primary: #29345f;
+    --color-secondary: #97bb84;
+    --color-tertiary: #cfd3e6;
+    --color-accent: #8300e0;
+    --color-special: #cc00cc;
+    --color-white: #e6ebf2;
+    --color-black: #03011e;
+    --color-success: #22c55e;
+    --color-warning: #facc15;
+    --color-error: #ef4444;
+    --color-info: #38bdf8;
+
+    --color-bg-primary: #29345f;
+    --color-bg-secondary: #97bb84;
+    --color-bg-tertiary: #cfd3e6;
+
+    --color-text-primary: #29345f;
+    --color-text-secondary: #4b7f52;
+    --color-text-tertiary: #cfd3e6;
+    --color-text-accent: #8300e0;
+    --color-text-special: #cc00cc;
+    --color-text-disabled: #9ca3af;
+    --color-text-placeholder: #4b5563;
+    --color-text-error: #ef4444;
+    --color-text-success: #22c55e;
+    --color-text-warning: #f59e42;
+
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 1rem;
+    --radius-xl: 1.5rem;
+    --radius-full: 9999px;
+
+    --border-width: 1px;
+    --border-width-0: 0;
+    --border-width-2: 2px;
+    --border-width-4: 4px;
+    --border-width-8: 8px;
+
+    --shadow-sm: 0 1px 2px 0 rgba(17, 24, 39, 0.05);
+    --shadow: 0 1px 3px 0 rgba(17, 24, 39, 0.1), 0 1px 2px 0 rgba(17, 24, 39, 0.06);
+    --shadow-md: 0 4px 6px -1px rgba(17, 24, 39, 0.1), 0 2px 4px -1px rgba(17, 24, 39, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(17, 24, 39, 0.1), 0 4px 6px -2px rgba(17, 24, 39, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(17, 24, 39, 0.1), 0 10px 10px -5px rgba(17, 24, 39, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(17, 24, 39, 0.25);
+    --shadow-inner: inset 0 2px 4px 0 rgba(17, 24, 39, 0.06);
+    --shadow-none: none;
+
+    --shadow-color-primary: #4d5bbc;
+    --shadow-color-secondary: #97bb84;
+    --shadow-color-accent: #8300e0;
+    --shadow-color-special: #cc00cc;
+    --shadow-color-black: #111827;
+
+    --z-index-auto: auto;
+    --z-index-0: 0;
+    --z-index-10: 10;
+    --z-index-20: 20;
+    --z-index-30: 30;
+    --z-index-40: 40;
+    --z-index-50: 50;
+    --z-index-modal: 1000;
+    --z-index-popover: 1100;
+    --z-index-tooltip: 1200;
+
+    --background-image-gradient-to-172: linear-gradient(172deg, #97bb84 20%, #4d5bbc 80%);
+}

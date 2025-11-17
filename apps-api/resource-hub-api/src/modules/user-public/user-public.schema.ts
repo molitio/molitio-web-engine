@@ -1,7 +1,6 @@
 import { Field, ObjectType } from '@nestjs/graphql';
 import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { UserPublicRoles } from './user-public.types';
 
 export type UserPublicDocument = HydratedDocument<UserPublic>;
 

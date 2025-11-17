@@ -3,9 +3,6 @@
     "version": "0.2.0",
     "description": "Nginx API Gateway",
     "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\""
-    },
-    "author": "Peter Koller",
+    "author": "Peter Koller, Molitio LLC",
     "license": "MIT"
 }

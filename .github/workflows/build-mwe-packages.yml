@@ -1,0 +1,66 @@
+name: MWE Build
+
+permissions:
+  contents: read
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        description: Node.js Version
+        default: "24"
+
+jobs:
+  build-project:
+    name: Build MWE Packages
+    runs-on: ubuntu-latest
+    env:
+      NODE_ENV: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Restore Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .pnp.cjs
+            .yarn/install-state.gz
+          key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
+
+      - name: Install Dependencies
+        run: yarn install --immutable --immutable-cache
+
+      - name: Build All Packages
+        run: |
+          yarn build
+
+      - name: Upload UI Core
+        uses: actions/upload-artifact@v4
+        with:
+          name: mwe-ui-core
+          path: packages-ui/mwe-ui-core/dist
+
+      - name: Upload John-Glenn
+        uses: actions/upload-artifact@v4
+        with:
+          name: john-glenn
+          path: apps-ui/john-glenn-ui/.next
+
+      - name: Upload Sleeping-Dragon
+        uses: actions/upload-artifact@v4
+        with:
+          name: sleeping-dragon
+          path: apps-ui/sleeping-dragon-ui/.next

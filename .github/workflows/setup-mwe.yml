@@ -1,0 +1,43 @@
+name: MWE Setup
+
+permissions:
+  contents: read
+
+on:
+  workflow_call:
+    inputs:
+      node-version:
+        required: false
+        type: string
+        description: Node.js Version
+        default: "24"
+
+jobs:
+  setup:
+    name: Setup Yarn Cache
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ inputs.node-version }}
+
+      - name: Cache Yarn cache
+        uses: actions/cache@v4
+        with:
+          path: |
+            .yarn/cache
+            .pnp.cjs
+            .yarn/install-state.gz
+          key: node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            node-${{ runner.os }}-node-${{ inputs.node-version }}-yarn-
+
+      - name: Install dependencies
+        run: yarn install --immutable --check-cache

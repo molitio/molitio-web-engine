@@ -1,15 +1,22 @@
 import React from 'react';
-import './globals.css';
-import { MWERootLayout } from '@molitio/mwe-ui-core';
+import { Metadata } from 'next';
 import { Context } from '@/context/AppContext';
+import { NavBar } from '@molitio/mwe-ui-core/rsc';
+import ClientRoot from './ClientRoot';
+import './globals.css';
 
-export const metadata = {
-    title: 'Sleeping Dragon',
+export const metadata: Metadata = {
+    title: Context.appDisplayTitle,
 };
 
-const RootLayout: React.FC<React.PropsWithChildren> = (props) => {
-    const { children } = props;
-    return <MWERootLayout appContext={{ ...Context }}>{children}hi1</MWERootLayout>;
-};
-
-export default RootLayout;
+export default function RootLayout({ children }: React.PropsWithChildren) {
+    return (
+        <html lang="en">
+            <body className="bg-secondary min-h-screen">
+                <NavBar headerText="Molito" />
+                {children}
+                <ClientRoot />
+            </body>
+        </html>
+    );
+}

@@ -2,7 +2,7 @@ import { Args, Query, Resolver } from '@nestjs/graphql';
 import { ResourceService } from './resource.service';
 import { Resource } from './resource.schema';
 
-@Resolver((of: any) => Resource)
+@Resolver(() => Resource)
 export class ResourceQuery {
     constructor(private readonly resouceService: ResourceService) {}
 

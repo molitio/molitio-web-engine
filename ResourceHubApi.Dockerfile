@@ -1,35 +1,33 @@
-ARG WORK_DIR="usr/src/base"
-ARG APP_DIR="usr/src/app"
-ARG WORKSPACE="apps-api/resource-hub-api"
-ARG APP_MODULES="packages-api/resource-hub-modules"
 
+ARG MONOREPO_ROOT=/home/node/app
 
-FROM node:24-alpine AS builder
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+FROM mwe-resource-hub-builder AS builder
 
-WORKDIR $WORK_DIR
+FROM node:24-alpine AS production
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
 
-COPY  . ./
+COPY --from=builder $MONOREPO_ROOT/package.json ./
+COPY --from=builder $MONOREPO_ROOT/yarn.lock ./
+COPY --from=builder $MONOREPO_ROOT/.yarnrc.yml ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.cjs ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.loader.mjs ./
+COPY --from=builder $MONOREPO_ROOT/tsconfig.json ./
+COPY --from=builder $MONOREPO_ROOT/README.md ./
+COPY --from=builder $MONOREPO_ROOT/LICENSE ./
+COPY --from=builder $MONOREPO_ROOT/.yarn ./.yarn
+COPY --from=builder $MONOREPO_ROOT/apps-api/resource-hub-api apps-api/resource-hub-api
 
-RUN yarn install
+ENV YARN_CACHE_FOLDER=$MONOREPO_ROOT/.yarn/cache
 
-RUN yarn add global @nestjs/cli
-RUN yarn build-resource-hub
+RUN chown -R node:node $MONOREPO_ROOT
 
-FROM node:24-alpine
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
 
-WORKDIR $APP_DIR
+USER node
 
-COPY  .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock ./
+RUN yarn workspaces focus --production @molitio/mwe-resource-hub-api
 
-COPY --from=builder $WORK_DIR/.yarn ./.yarn
-COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
-
-ENV  YARN_CACHE_FOLDER=/.yarn/cache
 
 CMD ["yarn", "workspace", "@molitio/mwe-resource-hub-api", "start"]

@@ -1,10 +1,8 @@
-import { HydratedDocument, Schema as MongooseSchema } from 'mongoose';
+import { Schema as MongooseSchema } from 'mongoose';
 import { IsString } from 'class-validator';
 import { Field, ObjectType } from '@nestjs/graphql';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { SpecificationLabel } from '../specification-label';
-
-export type ResourceDocument = HydratedDocument<Resource>;
 
 @ObjectType()
 @Schema()
@@ -12,28 +10,28 @@ export class Resource {
     @Field(() => String)
     _id: MongooseSchema.Types.ObjectId;
 
-    @Field(() => String)
+    @Field(() => Number)
     @Prop({ required: true })
-    createdAt: string;
+    createdAt: number;
 
-    @Field({ nullable: true })
+    @Field(() => Number, { nullable: true })
     @Prop()
-    updatedAt?: string;
+    updatedAt?: number;
 
-    @Field()
+    @Field(() => String)
     @Prop()
     createdBy: string;
 
-    @Field({ nullable: true })
+    @Field(() => String, { nullable: true })
     @Prop()
     updatedBy?: string;
 
-    @Field()
+    @Field(() => String)
     @Prop()
     @IsString()
     name: string;
 
-    @Field({ nullable: true })
+    @Field(() => String, { nullable: true })
     @Prop()
     @IsString()
     description?: string;
@@ -43,6 +41,6 @@ export class Resource {
     specificationLabels: SpecificationLabel[];
 }
 
-export interface CreateResourceDto extends Omit<Resource, '_id' | 'createdAt' | 'createdBy' | 'specificationLabels'> {}
+export type CreateResourceDto = Omit<Resource, '_id' | 'createdAt' | 'createdBy' | 'specificationLabels'>;
 
 export const ResourceSchema = SchemaFactory.createForClass(Resource);

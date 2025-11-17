@@ -1,52 +1,37 @@
-# syntax=docker/dockerfile:1
+ARG MONOREPO_ROOT=/home/node/app
 
-ARG WORK_DIR="/usr/src/base"
-ARG APP_DIR="/usr/src/app"
-ARG WORKSPACE="apps-ui/sleeping-dragon-ui"
-ARG PACKAGE_WORKSPACE="@molitio/mwe-sleeping-dragon-ui"
-ARG APP_MODULES="packages-ui"
+FROM mwe-resource-hub-builder AS builder
 
-# --- Build Stage ---
-FROM node:24-alpine AS builder
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+FROM node:24-alpine AS production
+ARG MONOREPO_ROOT
+WORKDIR $MONOREPO_ROOT
 
-WORKDIR $WORK_DIR
+RUN apk add --no-cache curl
 
-# Copy all files
-COPY . ./
+COPY --from=builder $MONOREPO_ROOT/package.json ./
+COPY --from=builder $MONOREPO_ROOT/yarn.lock ./
+COPY --from=builder $MONOREPO_ROOT/.yarnrc.yml ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.cjs ./
+COPY --from=builder $MONOREPO_ROOT/.pnp.loader.mjs ./
+COPY --from=builder $MONOREPO_ROOT/tsconfig.json ./
+COPY --from=builder $MONOREPO_ROOT/README.md ./
+COPY --from=builder $MONOREPO_ROOT/LICENSE ./
+COPY --from=builder $MONOREPO_ROOT/.yarn ./.yarn
+COPY --from=builder $MONOREPO_ROOT/apps-ui/sleeping-dragon-ui apps-ui/sleeping-dragon-ui
+COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-ui-core packages-ui/mwe-ui-core
+COPY --from=builder $MONOREPO_ROOT/packages-ui/mwe-tailwindcss-config packages-ui/mwe-tailwindcss-config
 
-# Copy all monorepo workspaces and root files
-COPY package.json yarn.lock .yarnrc.yml .pnp.cjs .pnp.loader.mjs tsconfig.json README.md LICENSE process.yml ./
-COPY apps-ui/sleeping-dragon-ui ./apps-ui/sleeping-dragon-ui
-COPY packages-ui/ui-core ./packages-ui/ui-core
-COPY packages-ui/mwe-tailwindcss-config ./packages-ui/mwe-tailwindcss-config
-# If prettier config is needed for build, uncomment below
-# COPY packages-ui/mwe-prettier-config ./packages-ui/mwe-prettier-config
+ENV YARN_CACHE_FOLDER=$MONOREPO_ROOT/.yarn/cache
 
-# Install dependencies and build the app
-RUN yarn install
-RUN yarn build-sleeping-dragon-ui
+RUN chown -R node:node $MONOREPO_ROOT
 
-# --- Production Stage ---
-FROM node:24-alpine
-ARG WORK_DIR
-ARG APP_DIR
-ARG WORKSPACE
+RUN corepack enable
+RUN corepack prepare yarn@4.9.2 --activate
 
-WORKDIR $APP_DIR
+USER node
 
-# Copy necessary files for production
-COPY .pnp.cjs .pnp.loader.mjs .yarnrc.yml package.json tsconfig.json README.md LICENSE yarn.lock process.yml ./
-COPY --from=builder $WORK_DIR/.yarn ./.yarn
-COPY --from=builder $WORK_DIR/$WORKSPACE ./$WORKSPACE
+ENV PORT=3301
 
-# Set Yarn cache folder
-ENV YARN_CACHE_FOLDER=/.yarn/cache
+RUN yarn workspaces focus --production @molitio/mwe-sleeping-dragon-ui
 
-# Expose Next.js default port
-EXPOSE 3000
-
-# Start the Next.js standalone server
-CMD ["yarn", "node", "apps-ui/sleeping-dragon-ui/.next/standalone/apps-ui/sleeping-dragon-ui/server.js"]
+CMD ["yarn", "workspace", "@molitio/mwe-sleeping-dragon-ui", "next", "start", "-H", "0.0.0.0", "-p", "3301"]

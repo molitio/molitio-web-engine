@@ -1,15 +1,22 @@
 {
-    "include": ["**/*.ts", "**/*.tsx"],
-    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "packages_off_build"],
+    "include": [
+        "**/*.ts",
+        "**/*.tsx",
+        "apps-ui/john-glenn-ui/tailwind.config.cjs",
+        "apps-ui/sleeping-dragon-ui/tailwind.config.cjs",
+        "apps-ui/mwe-friday-ui/tailwind.config.cjs",
+        "apps-ui/sleeping-dragon-ui/next.config.mjs"
+    ],
+    "exclude": ["node_modules", "**/.artifacts", "**/.yarn/cache", "molitio-wiki/**"],
     "compilerOptions": {
-        "jsx": "react",
+        "jsx": "react-jsx",
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
         "baseUrl": "./",
         "moduleResolution": "Node16",
         "target": "es2022",
         "module": "Node16",
         "paths": {
-            "@molitio/*": ["./packages/*"]
+            "@molitio/*": ["./packages-ui/*", "./apps-ui/*", "./apps-api/*"]
         },
         "isolatedModules": true,
         "importHelpers": true,

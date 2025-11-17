@@ -1,14 +1,21 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql';
 import { ResourceService } from './resource.service';
 import { Resource } from './resource.schema';
+import { HttpException, HttpStatus } from '@nestjs/common';
+import { logError } from 'src/logger';
 
-@Resolver((of: any) => Resource)
+@Resolver(() => Resource)
 export class ResourceMutation {
     constructor(private readonly resouceService: ResourceService) {}
 
     @Mutation(() => Resource)
     async createResource(@Args('name') name: string, @Args('description') description?: string): Promise<Resource> {
-        return this.resouceService.create({ name: name, description: description });
+        try {
+            return this.resouceService.create({ name: name, description: description });
+        } catch (error) {
+            logError(error, 'ResourceMutation');
+            throw new HttpException('Failed to create resource', HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Mutation(() => Resource)
@@ -17,16 +24,25 @@ export class ResourceMutation {
         @Args('name') name?: string,
         @Args('description', { nullable: true }) description?: string,
     ): Promise<Resource> {
-        return;
-
-        // Implementation to update an existing Resource
-        // Return the updated Resource instance
+        try {
+            const resource = await this.resouceService.findOne(id);
+            if (!resource) return;
+            if (name !== undefined) resource.name = name;
+            if (description !== undefined) resource.description = description;
+            return this.resouceService.update(resource);
+        } catch (error) {
+            logError(error, 'ResourceMutation');
+            throw new HttpException('Failed to update resource', HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Mutation(() => Resource)
     async deleteResource(@Args('id') id: string): Promise<void> {
-        this.resouceService.delete(id);
-        // Implementation to delete a Resource
-        // Return the deleted Resource instance (or null/undefined if it doesn't exist)
+        try {
+            await this.resouceService.delete(id);
+        } catch (error) {
+            logError(error, 'ResourceMutation');
+            throw new HttpException('Failed to delete resource', HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 }

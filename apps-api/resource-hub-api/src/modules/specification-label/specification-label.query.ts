@@ -2,7 +2,7 @@ import { Args, Query, Resolver } from '@nestjs/graphql';
 import { SpecificationLabelService } from './specification-label.service';
 import { SpecificationLabel } from './specification-label.schema';
 
-@Resolver((of: any) => SpecificationLabel)
+@Resolver(() => SpecificationLabel)
 export class SpecificationLabelQuery {
     constructor(private readonly resouceService: SpecificationLabelService) {}
 

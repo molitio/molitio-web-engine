@@ -10,10 +10,9 @@
 !LICENSE
 
 !apps-api/**/*
-!packages-api/**/*
 !apps-ui/**/*
-!packages-ui/ui-core/**/*
-!packages-ui/mwe-tailwindcss-config/**/*
+!packages-ui/**/*
+!molitio-wiki/mwe-docs/**/*
 
 .yarn/*
 !.yarn/cache
