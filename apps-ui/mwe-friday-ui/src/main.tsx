@@ -6,12 +6,14 @@ import { i18n, MWEClientAppProvider, SupportedLocale } from '@molitio/mwe-ui-cor
 import './globals.css';
 
 const config: ClientConfig = {
-    projectId: 'm95inqn3',
-    dataset: 'production',
-    useCdn: true, // set to `false` to bypass the edge cache
+    projectId: 'wzyge8ne',
+    dataset: 'development',
+    useCdn: false, // set to `false` to bypass the edge cache
     apiVersion: '2025-11-15', // use current date (YYYY-MM-DD) to target the latest API version. Note: this should always be hard coded. Setting API version based on a dynamic value (e.g. new Date()) may break your application at a random point in the future.
 };
 export const client = createClient(config);
+
+console.log('client:', client);
 
 const locale = (i18n.language as SupportedLocale) || 'en';
 

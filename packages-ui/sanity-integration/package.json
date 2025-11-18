@@ -1,0 +1,33 @@
+{
+    "name": "@molitio/mhs-dev-sanity-integration",
+    "version": "0.2.0",
+    "author": "Peter Koller, Molitio LLC",
+    "description": "Sanity development project for CMS integration.",
+    "main": "package.json",
+    "license": "MIT",
+    "scripts": {
+        "dev": "sanity dev",
+        "start": "sanity start",
+        "build": "sanity build",
+        "deploy": "sanity deploy",
+        "deploy-graphql": "sanity graphql deploy"
+    },
+    "keywords": [
+        "sanity"
+    ],
+    "dependencies": {
+        "@portabletext/sanity-bridge": "1.2.2",
+        "@sanity/document-internationalization": "4.1.0",
+        "@sanity/eslint-config-studio": "5.0.2",
+        "@sanity/schema": "4.15.0",
+        "@sanity/types": "^4.15.0",
+        "@sanity/vision": "4.15.0",
+        "@types/react": "^19.1",
+        "@types/react-is": "^19",
+        "eslint": "9.39.0",
+        "react": "19.2.0",
+        "react-dom": "19.2.0",
+        "sanity": "4.15.0",
+        "styled-components": "6.1.19"
+    }
+}
