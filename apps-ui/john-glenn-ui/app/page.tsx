@@ -224,8 +224,8 @@ export default function Home() {
                                 description="Card with multiple actions."
                                 variant="actions"
                                 actions={[
-                                    { text: "Save", onClick: () => alert("Save"), color: "bg-primary text-white" },
-                                    { text: "Share", onClick: () => alert("Share"), color: "bg-accent text-white" }
+                                    { text: 'Save', onClick: () => alert('Save'), color: 'bg-primary text-white' },
+                                    { text: 'Share', onClick: () => alert('Share'), color: 'bg-accent text-white' },
                                 ]}
                             />
                             <Card
@@ -240,14 +240,14 @@ export default function Home() {
                                 description="Loading card component."
                                 variant="accent"
                                 buttonText="Loading"
-                                status='loading'
+                                status="loading"
                             />
                             <Card
                                 title="Disabled Card"
                                 description="Disabled card."
                                 variant="default"
                                 buttonText="Disabled"
-                                status='disabled'
+                                status="disabled"
                             />
                         </CardContainer>
                     </section>

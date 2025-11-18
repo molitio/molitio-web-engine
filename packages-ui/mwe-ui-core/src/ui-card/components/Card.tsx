@@ -53,12 +53,12 @@ const variantClasses = {
         description: 'text-secondary mb-4',
         button: 'bg-primary text-white px-3 py-1 rounded hover:bg-accent transition',
     },
-	icon: {
-		container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center',
-		title: 'font-semibold text-lg text-primary mb-2 text-center',
-		description: 'text-secondary mb-4 text-center',
-		button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
-	},
+    icon: {
+        container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center',
+        title: 'font-semibold text-lg text-primary mb-2 text-center',
+        description: 'text-secondary mb-4 text-center',
+        button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
+    },
     actions: {
         container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col',
         title: 'font-semibold text-lg text-primary mb-2',
@@ -66,7 +66,6 @@ const variantClasses = {
         button: 'bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition',
     },
 };
-
 
 export default function Card({
     title,
@@ -77,7 +76,7 @@ export default function Card({
     imageSrc,
     icon,
     actions,
-    status = 'ready'
+    status = 'ready',
 }: CardData) {
     const classes = variantClasses[variant];
     const isLoading = status === 'loading';
@@ -96,26 +95,23 @@ export default function Card({
 
             {imageSrc && variant === 'image' && (
                 <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                    <img
-                        src={imageSrc}
-                        alt={title}
-                        className="w-full h-full object-contain"
-                    />
+                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" />
                 </div>
             )}
 
-            <div className={
-                variant === 'image' ? 'p-6 flex-1 flex flex-col' :
-                variant === 'icon' ? 'w-full flex flex-col items-center justify-center' : ''
-            }>
-                {icon && variant === 'icon' && (
-                    <span className="material-icons text-accent text-3xl mb-2">{icon}</span>
-                )}
+            <div
+                className={
+                    variant === 'image'
+                        ? 'p-6 flex-1 flex flex-col'
+                        : variant === 'icon'
+                          ? 'w-full flex flex-col items-center justify-center'
+                          : ''
+                }
+            >
+                {icon && variant === 'icon' && <span className="material-icons text-accent text-3xl mb-2">{icon}</span>}
 
                 <h3 className={classes.title}>{title}</h3>
-                <p className={classes.description}>
-                    {description}
-                </p>
+                <p className={classes.description}>{description}</p>
 
                 {variant === 'actions' && Array.isArray(actions) && actions.length > 0 ? (
                     <div className="flex gap-2 mt-2">
@@ -135,10 +131,13 @@ export default function Card({
                     buttonText && (
                         <Button
                             variant={
-                                variant === 'accent' ? 'primary' :
-                                variant === 'muted' ? 'secondary' :
-                                variant === 'status' ? 'danger' :
-                                'primary'
+                                variant === 'accent'
+                                    ? 'primary'
+                                    : variant === 'muted'
+                                      ? 'secondary'
+                                      : variant === 'status'
+                                        ? 'danger'
+                                        : 'primary'
                             }
                             size="sm"
                             color={classes.button}
