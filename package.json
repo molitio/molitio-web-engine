@@ -71,6 +71,7 @@
         "@parcel/watcher": "2.5.1",
         "@playwright/test": "1.56.1",
         "@tailwindcss/typography": "0.5.19",
+        "@tanstack/react-router": "1.136.4",
         "@tanstack/router-cli": "1.136.6",
         "@types/node": "24.9.2",
         "@types/ws": "8.18.1",
@@ -94,6 +95,7 @@
         "prettier-eslint": "16.4.2",
         "protobufjs": "7.5.4",
         "rimraf": "6.1.0",
+        "styled-components": "6.1.19",
         "stylelint": "16.25.0",
         "stylelint-config-standard": "39.0.1",
         "stylelint-order": "7.0.0",
@@ -126,9 +128,5 @@
         "vite@7.1.12": {
             "unplugged": true
         }
-    },
-    "dependencies": {
-        "@tanstack/react-router": "1.136.4",
-        "styled-components": "6.1.19"
     }
 }
