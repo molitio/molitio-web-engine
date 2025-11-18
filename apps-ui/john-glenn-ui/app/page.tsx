@@ -183,7 +183,15 @@ export default function Home() {
                     <section>
                         <h2 className="text-2xl font-bold text-primary mb-4">Cards Showcase</h2>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <Card title='test' description='test' variant='status' buttonText='accept' buttonAction={() => {alert('accepted')}}/>
+                            <Card
+                                title="test"
+                                description="test"
+                                variant="status"
+                                buttonText="accept"
+                                buttonAction={() => {
+                                    alert('accepted');
+                                }}
+                            />
                             {/* Default Card */}
                             <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
                                 <h3 className="font-semibold text-lg text-primary mb-2">Default Card</h3>

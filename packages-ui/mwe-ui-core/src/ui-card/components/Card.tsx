@@ -90,7 +90,7 @@ export default function Card({
 				<p className={classes.description}>
 					{description}
 				</p>
-				
+
 				{buttonText && (
 					<button onClick={buttonAction} className={classes.button}>
 						{buttonText}
