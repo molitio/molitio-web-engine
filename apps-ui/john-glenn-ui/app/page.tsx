@@ -272,7 +272,52 @@ export default function Home() {
 
                     {/* Section: Card Container */}
                     <section>
-                        <CardContainer />
+                        <CardContainer columns={3} gap="gap-6" title="Test Card Container">
+                            <Card
+                                title="Default Card"
+                                description="This is a default card with primary and secondary text."
+                                variant="default"
+                                buttonText="Primary Action"
+                                buttonAction={() => alert('Default Card')}
+                            />
+                            <Card
+                                title="Accent Card"
+                                description="Accent border and text color."
+                                variant="accent"
+                                buttonText="Accent Action"
+                                buttonAction={() => alert('Accent Card')}
+                            />
+                            <Card
+                                title="Muted Card"
+                                description="Muted background and secondary text."
+                                variant="muted"
+                                buttonText="Secondary Action"
+                                buttonAction={() => alert('Muted Card')}
+                            />
+                            <Card
+                                title="Image Card"
+                                description="Card with image header."
+                                variant="image"
+                                imageSrc="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
+                                buttonText="View"
+                                buttonAction={() => alert('Image Card')}
+                            />
+                            <Card
+                                title="Icon Card"
+                                description="Card with icon and action."
+                                variant="icon"
+                                icon="star"
+                                buttonText="Favorite"
+                                buttonAction={() => alert('Icon Card')}
+                            />
+                            <Card
+                                title="Status Card"
+                                description="Card with success status border and text."
+                                variant="status"
+                                buttonText="Success"
+                                buttonAction={() => alert('Status Card')}
+                            />
+                        </CardContainer>
                     </section>
 
                     {/* Section: Input Controls */}
