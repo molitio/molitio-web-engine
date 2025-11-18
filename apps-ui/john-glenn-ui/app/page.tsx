@@ -179,100 +179,9 @@ export default function Home() {
                         </div>
                     </section>
 
-                    {/* Section: Cards */}
-                    <section>
-                        <h2 className="text-2xl font-bold text-primary mb-4">Cards Showcase</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <Card
-                                title="test"
-                                description="test"
-                                variant="status"
-                                buttonText="accept"
-                                buttonAction={() => {
-                                    alert('accepted');
-                                }}
-                            />
-                            {/* Default Card */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Default Card</h3>
-                                <p className="text-secondary mb-4">
-                                    This is a default card with primary and secondary text.
-                                </p>
-                                <button className="bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition">
-                                    Primary Action
-                                </button>
-                            </div>
-                            {/* Accent Card */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-accent">
-                                <h3 className="font-semibold text-lg text-accent mb-2">Accent Card</h3>
-                                <p className="text-secondary mb-4">Accent border and text color.</p>
-                                <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                    Accent Action
-                                </button>
-                            </div>
-                            {/* Muted Card */}
-                            <div className="bg-muted rounded-lg shadow-inner p-6 border border-gray-300">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Muted Card</h3>
-                                <p className="text-secondary mb-4">Muted background and secondary text.</p>
-                                <button className="bg-secondary text-white px-3 py-1 rounded hover:bg-primary transition">
-                                    Secondary Action
-                                </button>
-                            </div>
-                            {/* Card with Image */}
-                            <div className="bg-white rounded-lg shadow-lg p-0 border border-gray-200 flex flex-col overflow-hidden">
-                                <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                                    <Image
-                                        src="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
-                                        alt="Random"
-                                        fill
-                                        style={{ objectFit: 'contain', objectPosition: 'center' }}
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                </div>
-                                <div className="p-6 flex-1 flex flex-col">
-                                    <h3 className="font-semibold text-lg text-primary mb-2">Image Card</h3>
-                                    <p className="text-secondary mb-4">Card with image header.</p>
-                                    <button className="bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
-                                        View
-                                    </button>
-                                </div>
-                            </div>
-                            {/* Card with Icon */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center">
-                                <span className="material-icons text-accent text-3xl mb-2">star</span>
-                                <h3 className="font-semibold text-lg text-primary mb-2">Icon Card</h3>
-                                <p className="text-secondary mb-4">Card with icon and action.</p>
-                                <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                    Favorite
-                                </button>
-                            </div>
-                            {/* Card with Actions */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Actions Card</h3>
-                                <p className="text-secondary mb-4">Card with multiple actions.</p>
-                                <div className="flex gap-2">
-                                    <button className="bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition">
-                                        Save
-                                    </button>
-                                    <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                        Share
-                                    </button>
-                                </div>
-                            </div>
-                            {/* Card with Status */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-success">
-                                <h3 className="font-semibold text-lg text-success mb-2">Status Card</h3>
-                                <p className="text-secondary mb-4">Card with success status border and text.</p>
-                                <button className="bg-success text-white px-3 py-1 rounded hover:bg-success/80 transition">
-                                    Success
-                                </button>
-                            </div>
-                        </div>
-                    </section>
-
                     {/* Section: Card Container */}
                     <section>
-                        <CardContainer columns={3} gap="gap-6" title="Test Card Container">
+                        <CardContainer columns={3} gap="gap-6" title="Card Showcase">
                             <Card
                                 title="Default Card"
                                 description="This is a default card with primary and secondary text."
@@ -325,6 +234,20 @@ export default function Home() {
                                 variant="status"
                                 buttonText="Success"
                                 buttonAction={() => alert('Status Card')}
+                            />
+                            <Card
+                                title="Loading Card"
+                                description="Loading card component."
+                                variant="accent"
+                                buttonText="Loading"
+                                status='loading'
+                            />
+                            <Card
+                                title="Disabled Card"
+                                description="Disabled card."
+                                variant="default"
+                                buttonText="Disabled"
+                                status='disabled'
                             />
                         </CardContainer>
                     </section>
