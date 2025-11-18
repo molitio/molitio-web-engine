@@ -6758,6 +6758,7 @@ __metadata:
     "@parcel/watcher": "npm:2.5.1"
     "@playwright/test": "npm:1.56.1"
     "@tailwindcss/typography": "npm:0.5.19"
+    "@tanstack/react-router": "npm:1.136.4"
     "@tanstack/router-cli": "npm:1.136.6"
     "@types/node": "npm:24.9.2"
     "@types/ws": "npm:8.18.1"

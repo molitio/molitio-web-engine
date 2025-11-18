@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@molitio/mwe-ui-core';
-import { Card } from '@molitio/mwe-ui-core';
+import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
 
 export default function Home() {
@@ -268,6 +268,11 @@ export default function Home() {
                                 </button>
                             </div>
                         </div>
+                    </section>
+
+                    {/* Section: Card Container */}
+                    <section>
+                        <CardContainer />
                     </section>
 
                     {/* Section: Input Controls */}
