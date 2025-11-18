@@ -8,26 +8,28 @@ services:
         build:
             context: .
             dockerfile: ResourceHubDB.Dockerfile
+        # Exposed only during API development. Remove or comment out in production.
         expose:
             - '27017'
         ports:
             - 27017:27017
         volumes:
-            - 'resource-hub-db-volume:/Users/vycos-zen/data/resource-hub-db-volume'
+            - 'resource-hub-db-volume:/home/node/db/resource-hub-db-volume'
         environment:
             MONGO_INITDB_DATABASE: ${MONGO_DB}
             MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
             MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
     resource-hub-api:
         container_name: resource-hub-api
+        restart: always
         depends_on:
             - resource-hub-db
-        restart: 'no'
         env_file:
             - .env
         build:
             context: .
             dockerfile: ResourceHubApi.Dockerfile
+        # Exposed only during API development. Remove or comment out in production.
         expose:
             - '4000'
         ports:
@@ -40,17 +42,14 @@ services:
 
     mwe-sleeping-dragon-ui:
         container_name: mwe-sleeping-dragon-ui
+        restart: 'always'
         build:
             context: .
             dockerfile: ResourceHubUI.Dockerfile
         depends_on:
             - resource-hub-api
-        expose:
-            - '3000'
-        ports:
-            - 3000:3000
         healthcheck:
-            test: ['CMD', 'curl', '-f', 'http://localhost:3000/v1']
+            test: ['CMD', 'curl', '-f', 'http://${MWE_RH_UI_HOST}:${MWE_RH_UI_PORT}/v1']
             interval: 10s
             timeout: 5s
             retries: 5
@@ -59,6 +58,7 @@ services:
 
     resource-hub-gateway:
         container_name: resource-hub-gateway
+        restart: always
         env_file:
             - .env
         depends_on:
@@ -72,14 +72,19 @@ services:
             args:
                 NGINX_PORT: ${NGINX_PORT}
                 MWE_HOST: ${MWE_HOST}
-        platform: linux/amd64
+                MWE_RH_UI_PORT: ${MWE_RH_UI_PORT}
+                MWE_RH_UI_HOST: ${MWE_RH_UI_HOST}
         expose:
             - '${NGINX_PORT}'
         ports:
             - ${NGINX_PORT}:${NGINX_PORT}
             - ${NGINX_PORT}:443/udp
-        volumes:
-            - ./apps-ui/mwe-friday-ui/dist:/base/static:ro
+
+    resource-hub-builder:
+        build:
+            context: .
+            dockerfile: ResourceHubBuilder.Dockerfile
+            target: resource-hub-builder
 
 volumes:
     resource-hub-db-volume:

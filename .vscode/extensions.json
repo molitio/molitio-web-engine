@@ -1,12 +1,12 @@
 {
-    "recommendations": [
-        "arcanis.vscode-zipfs",
-        "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
-        "rvest.vs-code-prettier-eslint",
-        "bradlc.vscode-tailwindcss",
-        "naumovs.color-highlight",
-        "stylelint.vscode-stylelint"
-    ],
-    "unwantedRecommendations": []
+  "recommendations": [
+    "arcanis.vscode-zipfs",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "rvest.vs-code-prettier-eslint",
+    "bradlc.vscode-tailwindcss",
+    "naumovs.color-highlight",
+    "stylelint.vscode-stylelint"
+  ],
+  "unwantedRecommendations": []
 }

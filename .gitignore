@@ -147,5 +147,13 @@ storybook-build
 
 .vercel
 
+# Playwright
+**/test-results/
+**/playwright-report/
+**/blob-report/
+**/playwright/.cache/
+**/playwright/.auth/
 
-resource-hub-api/documentation/
+# Tanstack Router cache
+.tanstack
+
