@@ -311,6 +311,15 @@ export default function Home() {
                                 buttonAction={() => alert('Icon Card')}
                             />
                             <Card
+                                title="Actions Card"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actions={[
+                                    { text: "Save", onClick: () => alert("Save"), color: "bg-primary text-white" },
+                                    { text: "Share", onClick: () => alert("Share"), color: "bg-accent text-white" }
+                                ]}
+                            />
+                            <Card
                                 title="Status Card"
                                 description="Card with success status border and text."
                                 variant="status"

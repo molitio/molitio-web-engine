@@ -20,6 +20,7 @@ export type ButtonProps = PropsWithChildren & {
     size?: 'sm' | 'md' | 'lg';
     fullWidth?: boolean;
     rounded?: 'sm' | 'md' | 'lg' | '';
+    color?: string;
     disabled?: boolean;
     loading?: boolean;
     startIcon?: ReactNode;
@@ -35,6 +36,7 @@ export function Button({
     size = 'md',
     fullWidth = false,
     rounded = '',
+    color = '',
     disabled = false,
     loading = false,
     startIcon,
@@ -45,7 +47,7 @@ export function Button({
 }: ButtonProps) {
     const classes = [
         'inline-flex items-center justify-center font-semibold rounded transition focus:outline-none',
-        variantClasses[variant],
+        color ? color : variantClasses[variant],
         sizeClasses[size],
         fullWidth ? 'w-full' : '',
         rounded ? `rounded-${rounded}` : '',

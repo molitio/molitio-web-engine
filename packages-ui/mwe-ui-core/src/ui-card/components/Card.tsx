@@ -1,15 +1,23 @@
+import { Button } from '../../ui-interactive/components/Button';
 import React from 'react';
 
 type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
 
+type CardAction = {
+    text: string;
+    onClick?: () => void;
+    color?: string;
+};
+
 type CardData = {
-	title: string;
-	description: string;
-	variant?: CardVariant;
-	buttonText?: string;
-	buttonAction?: () => void;
-	imageSrc?: string;
-	icon?: string;
+    title: string;
+    description: string;
+    variant?: CardVariant;
+    buttonText?: string;
+    buttonAction?: () => void;
+    imageSrc?: string;
+    icon?: string;
+    actions?: CardAction[];
 };
 
 const variantClasses = {
@@ -43,12 +51,12 @@ const variantClasses = {
         description: 'text-secondary mb-4',
         button: 'bg-primary text-white px-3 py-1 rounded hover:bg-accent transition',
     },
-    icon: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center',
-        title: 'font-semibold text-lg text-primary mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
-    },
+	icon: {
+		container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center',
+		title: 'font-semibold text-lg text-primary mb-2 text-center',
+		description: 'text-secondary mb-4 text-center',
+		button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
+	},
     actions: {
         container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col',
         title: 'font-semibold text-lg text-primary mb-2',
@@ -65,7 +73,8 @@ export default function Card({
 	buttonText,
 	buttonAction,
 	imageSrc,
-	icon
+	icon,
+	actions
 }: CardData) {
 	const classes = variantClasses[variant];
 
@@ -81,7 +90,10 @@ export default function Card({
 				</div>
 			)}
 
-			<div className={variant === 'image' ? 'p-6 flex-1 flex flex-col' : ''}>
+			<div className={
+				variant === 'image' ? 'p-6 flex-1 flex flex-col' :
+				variant === 'icon' ? 'w-full flex flex-col items-center justify-center' : ''
+			}>
 				{icon && variant === 'icon' && (
 					<span className="material-icons text-accent text-3xl mb-2">{icon}</span>
 				)}
@@ -91,10 +103,37 @@ export default function Card({
 					{description}
 				</p>
 
-				{buttonText && (
-					<button onClick={buttonAction} className={classes.button}>
-						{buttonText}
-					</button>
+				{variant === 'actions' && Array.isArray(actions) && actions.length > 0 ? (
+					<div className="flex gap-2 mt-2">
+						{actions.map((action, idx) => (
+							<Button
+								key={idx}
+								size="sm"
+								color={action.color || classes.button}
+								onClick={action.onClick}
+							>
+								{action.text}
+							</Button>
+						))}
+					</div>
+				) : (
+					buttonText && (
+						<Button
+							variant={
+								variant === 'accent' ? 'primary' :
+								variant === 'muted' ? 'secondary' :
+								variant === 'status' ? 'danger' :
+								'primary'
+							}
+							size="sm"
+							color={classes.button}
+							onClick={buttonAction}
+							className={classes.button}
+							disabled={false}
+						>
+							{buttonText}
+						</Button>
+					)
 				)}
 			</div>
 		</div>
