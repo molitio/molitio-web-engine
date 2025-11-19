@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import { UserPublicRoles } from './user-public.types';
 import { CreateUserPublicInput } from './user-public.input';
-import { newTimestamp } from 'src/utils/dateTime';
+import { newTimestamp } from '../../utils/dateTime';
 
 @Injectable()
 export class UserPublicService {

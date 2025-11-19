@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "moduleResolution": "node",
+        "module": "nodenext",
+        "moduleResolution": "nodenext",
         "skipLibCheck": true,
         "declaration": true,
         "removeComments": true,
@@ -11,10 +11,9 @@
         "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
         "esModuleInterop": true,
-        "target": "ES2019",
+        "target": "ESNext",
         "sourceMap": true,
-        "outDir": "./dist",
-        "baseUrl": "."
+        "outDir": "./dist"
     },
 
     "exclude": ["./dist"]

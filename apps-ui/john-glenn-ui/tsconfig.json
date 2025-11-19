@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "target": "ESNext",
-        "module": "esnext",
+        "module": "preserve",
         "jsx": "preserve",
-        "moduleResolution": "Node",
+        "moduleResolution": "bundler",
         "lib": ["dom", "dom.iterable", "esnext"],
         "plugins": [
             {

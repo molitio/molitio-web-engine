@@ -12,10 +12,9 @@
     "compilerOptions": {
         "jsx": "react-jsx",
         "lib": ["es6", "dom", "dom.iterable", "esnext", "es2020", "es2022"],
-        "baseUrl": "./",
-        "moduleResolution": "Node16",
-        "target": "es2022",
-        "module": "Node16",
+        "moduleResolution": "bundler",
+        "target": "esnext",
+        "module": "preserve",
         "paths": {
             "@molitio/*": ["./packages-ui/*", "./apps-ui/*", "./apps-api/*"]
         },

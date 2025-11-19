@@ -33,7 +33,7 @@
         "@vercel/build-utils": "12.2.3",
         "eslint": "9.39.0",
         "tslib": "2.8.1",
-        "typescript": "5.9.3",
+        "typescript": "6.0.0-dev.20251119",
         "vercel": "48.8.0"
     }
 }
