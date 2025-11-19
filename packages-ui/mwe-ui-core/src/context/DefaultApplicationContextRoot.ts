@@ -1,34 +1,54 @@
 import { AppContext } from './app-context';
 
 export const DefaultApplicationContextRoot: AppContext = {
-    appName: 'Default App',
     appId: 'default-app-id',
+    appName: 'Default App',
+    appVersion: '0.2.0',
+    appDisplayTitle: 'Default Application',
     nodeTree: {
         root: {
-            resourceId: 'root',
-            type: 'nav',
-            navigation: {
-                path: '/',
-                label: 'Home',
+            resourceId: 'some-application-root',
+            type: 'app',
+            textContent: {
+                appTitle: {
+                    textValue: 'Welcome to the Default Application',
+                },
             },
             nodeTree: {
-                about: {
-                    resourceId: 'about',
-                    type: 'nav',
+                home: {
+                    resourceId: 'locale-home',
+                    type: 'document',
                     navigation: {
-                        path: '/about',
-                        label: 'About',
+                        path: '/$locale',
+                        label: 'Home',
                     },
-                },
-                welcome: {
-                    resourceId: 'welcome',
-                    type: 'text',
                     textContent: {
-                        main: {
-                            textValue: 'Welcome to the Default Application!',
+                        welcome: {
+                            textValue: 'This is the home page of the Default Application.',
                         },
-                        description: {
-                            textValue: 'This is a demonstration of the text content node concept.',
+                    },
+                    nodeTree: {
+                        about: {
+                            resourceId: 'about',
+                            type: 'nav',
+                            navigation: {
+                                path: '/about',
+                                label: 'About',
+                            },
+                            nodeTree: {
+                                welcome: {
+                                    resourceId: 'welcome',
+                                    type: 'text',
+                                    textContent: {
+                                        main: {
+                                            textValue: 'Welcome to the Default Application!',
+                                        },
+                                        description: {
+                                            textValue: 'This is a demonstration of the text content node concept.',
+                                        },
+                                    },
+                                },
+                            },
                         },
                     },
                 },

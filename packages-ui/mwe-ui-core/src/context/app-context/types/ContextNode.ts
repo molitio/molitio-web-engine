@@ -1,7 +1,7 @@
 import { TextContentNode } from './TextContentSegment';
 import { NavigationSegment } from './NavigationSegment';
 
-export type ContextNodeType = 'element' | 'nav' | 'text' | 'media' | 'root' | string;
+export type ContextNodeType = 'document' | 'nav' | 'text' | 'media' | 'root' | string;
 
 export type ContextNode = {
     resourceId: string;
