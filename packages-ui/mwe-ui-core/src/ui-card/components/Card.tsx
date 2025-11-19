@@ -1,5 +1,4 @@
 import { Button } from '../../ui-interactive/components/Button';
-import React from 'react';
 
 type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
 type CardStatus = 'ready' | 'loading' | 'disabled';
