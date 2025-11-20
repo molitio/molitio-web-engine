@@ -14,7 +14,7 @@ export const appContext = defineType({
         defineField({
             name: 'rootNode',
             title: 'Root Node',
-            type: 'contextNode',
+            type: 'rootNode',
         }),
     ],
 });
