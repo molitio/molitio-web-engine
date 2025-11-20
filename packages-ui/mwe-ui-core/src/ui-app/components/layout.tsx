@@ -16,10 +16,8 @@ export default function LocaleLayout({ locale }: LocaleLayoutProps) {
         appId: 'mwe-client-app',
         rootNode: {
             id: 'root',
-            slug: '',
             title: 'Home',
-            type: 'page',
-            language: locale,
+            type: 'root',
         },
     };
 

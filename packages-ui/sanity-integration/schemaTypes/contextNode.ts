@@ -21,19 +21,6 @@ export const contextNode = defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
-            name: 'language',
-            title: 'Language',
-            type: 'string',
-            options: {
-                list: [
-                    { title: 'English', value: 'en' },
-                    { title: 'Hungarian', value: 'hu' },
-                ],
-            },
-            initialValue: 'en',
-            validation: (Rule) => Rule.required(),
-        }),
-        defineField({
             name: 'type',
             title: 'Type',
             type: 'string',
@@ -48,9 +35,22 @@ export const contextNode = defineType({
         }),
         defineField({
             name: 'content',
-            title: 'Content',
-            type: 'reference',
-            to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+            title: 'Localized Content',
+            type: 'object',
+            fields: [
+                defineField({
+                    name: 'en',
+                    title: 'English Content',
+                    type: 'reference',
+                    to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+                }),
+                defineField({
+                    name: 'hu',
+                    title: 'Hungarian Content',
+                    type: 'reference',
+                    to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+                }),
+            ],
             hidden: ({ parent }) => parent?.type !== 'page',
         }),
         defineField({

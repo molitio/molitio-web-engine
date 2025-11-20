@@ -14,9 +14,22 @@ export const rootNode = defineType({
         defineField({
             name: 'homePage',
             title: 'Home Page Content',
-            description: 'Content for the root path (/)',
-            type: 'reference',
-            to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+            description: 'Localized content for the root path (/)',
+            type: 'object',
+            fields: [
+                defineField({
+                    name: 'en',
+                    title: 'English Content',
+                    type: 'reference',
+                    to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+                }),
+                defineField({
+                    name: 'hu',
+                    title: 'Hungarian Content',
+                    type: 'reference',
+                    to: [{ type: 'landingPage' }, { type: 'aboutPage' }],
+                }),
+            ],
         }),
         defineField({
             name: 'children',

@@ -11,7 +11,7 @@ export const supportedLocales = {
     },
 } as const;
 
-const supportedLocalesArray: SupportedLocale[] = Object.keys(supportedLocales) as SupportedLocale[];
+export const supportedLocalesArray: SupportedLocale[] = Object.keys(supportedLocales) as SupportedLocale[];
 
 export type SupportedLocale = keyof typeof supportedLocales;
 
