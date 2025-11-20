@@ -21,6 +21,7 @@ export default [
             '**/build',
             '**/.next',
             '**/.docusaurus',
+            '**/.sanity',
             '**/.artifacts',
             '**/*.test.*',
             '**/*.spec.*',
