@@ -2,7 +2,7 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 
 import { ClientConfig, createClient } from '@sanity/client';
-import { i18n, MWEClientAppProvider, SupportedLocale } from '@molitio/mwe-ui-core';
+import { i18n, MWEClientAppProvider, SupportedLocale, ComponentRegistry } from '@molitio/mwe-ui-core';
 import './globals.css';
 
 const config: ClientConfig = {
@@ -17,8 +17,13 @@ console.log('client:', client);
 
 const locale = (i18n.language as SupportedLocale) || 'en';
 
+const componentRegistry: ComponentRegistry = {
+    // Register your page components here
+    // 'landingPage': LandingPage,
+};
+
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <MWEClientAppProvider client={client} locale={locale} />
+        <MWEClientAppProvider client={client} locale={locale} componentRegistry={componentRegistry} />
     </StrictMode>,
 );

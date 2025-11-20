@@ -1,12 +1,16 @@
 import { createRouter } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
+import { useState, useEffect } from 'react';
 import { routeTree } from './generatedRoutes';
 import { SupportedLocale } from './constants';
 import MWEClientApp from './MWEClientApp';
+import { AppContext } from '../context/app-context/types/AppContext';
+import { AppContextRootProvider } from '../context/app-context/components';
+import { ComponentRegistry } from '../context/app-context/types/ComponentRegistry';
 
 export type AppRouter = ReturnType<typeof createMWEAppRouter>;
 
-export function createMWEAppRouter({ client, locale = 'en' }: MWEClientAppProviderProps) {
+export function createMWEAppRouter({ client, locale = 'en' }: { client: SanityClient; locale: SupportedLocale }) {
     return createRouter({
         routeTree,
         context: { client, locale },
@@ -24,10 +28,55 @@ declare module '@tanstack/react-router' {
 type MWEClientAppProviderProps = {
     client: SanityClient;
     locale: SupportedLocale;
+    componentRegistry: ComponentRegistry;
 };
 
-export default function MWEClientAppProvider({ client, locale }: MWEClientAppProviderProps) {
+export default function MWEClientAppProvider({ client, locale, componentRegistry }: MWEClientAppProviderProps) {
+    const [appContext, setAppContext] = useState<AppContext | null>(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const fetchContext = async () => {
+            try {
+                // Fetch appContext with expanded content references (up to 3 levels deep for now)
+                const query = `*[_type == "appContext"][0] {
+                    ...,
+                    rootNode {
+                        ...,
+                        content->,
+                        children[] {
+                            ...,
+                            content->,
+                            children[] {
+                                ...,
+                                content->,
+                                children[] {
+                                    ...,
+                                    content->
+                                }
+                            }
+                        }
+                    }
+                }`;
+                const data = await client.fetch(query);
+                setAppContext(data);
+            } catch (e) {
+                console.error('Failed to fetch AppContext:', e);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchContext();
+    }, [client]);
+
     const router = createMWEAppRouter({ client, locale });
 
-    return <MWEClientApp router={router} />;
+    if (loading) return <div>Loading App Context...</div>;
+    if (!appContext) return <div>Error: Could not load application context.</div>;
+
+    return (
+        <AppContextRootProvider ctx={appContext} componentRegistry={componentRegistry}>
+            <MWEClientApp router={router} />
+        </AppContextRootProvider>
+    );
 }

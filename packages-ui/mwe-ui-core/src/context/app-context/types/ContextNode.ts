@@ -1,12 +1,14 @@
-import { TextContentNode } from './TextContentSegment';
-import { NavigationSegment } from './NavigationSegment';
+export type ContextNodeType = 'page' | 'folder';
 
-export type ContextNodeType = 'document' | 'nav' | 'text' | 'media' | 'root' | string;
-
-export type ContextNode = {
-    resourceId: string;
+export interface ContextNode {
+    id: string;
+    slug: string;
+    title: string;
     type: ContextNodeType;
-    navigation?: NavigationSegment;
-    textContent?: Record<string, TextContentNode>;
-    nodeTree?: Record<string, ContextNode>;
-};
+    content?: {
+        _ref: string;
+        _type: string;
+        [key: string]: any;
+    };
+    children?: ContextNode[];
+}
