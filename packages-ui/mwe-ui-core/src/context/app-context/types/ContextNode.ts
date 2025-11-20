@@ -1,3 +1,5 @@
+import { SupportedLocale } from '../../../ui-app';
+
 export type ContextNodeType = 'page' | 'folder';
 
 export interface ContextNode {
@@ -5,6 +7,7 @@ export interface ContextNode {
     slug: string;
     title: string;
     type: ContextNodeType;
+    language: SupportedLocale;
     content?: {
         _ref: string;
         _type: string;

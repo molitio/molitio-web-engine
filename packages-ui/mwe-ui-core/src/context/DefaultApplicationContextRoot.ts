@@ -7,6 +7,7 @@ export const DefaultApplicationContextRoot: AppContext = {
         slug: '',
         title: 'Home',
         type: 'page',
+        language: 'en',
         content: {
             _ref: 'home-page-ref',
             _type: 'landingPage',
@@ -18,6 +19,7 @@ export const DefaultApplicationContextRoot: AppContext = {
                 slug: 'about',
                 title: 'About',
                 type: 'page',
+                language: 'en',
                 content: {
                     _ref: 'about-page-ref',
                     _type: 'aboutPage',

@@ -21,6 +21,19 @@ export const contextNode = defineType({
             validation: (Rule) => Rule.required(),
         }),
         defineField({
+            name: 'language',
+            title: 'Language',
+            type: 'string',
+            options: {
+                list: [
+                    { title: 'English', value: 'en' },
+                    { title: 'Hungarian', value: 'hu' },
+                ],
+            },
+            initialValue: 'en',
+            validation: (Rule) => Rule.required(),
+        }),
+        defineField({
             name: 'type',
             title: 'Type',
             type: 'string',

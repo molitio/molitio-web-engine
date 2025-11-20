@@ -19,6 +19,7 @@ export default function LocaleLayout({ locale }: LocaleLayoutProps) {
             slug: '',
             title: 'Home',
             type: 'page',
+            language: locale,
         },
     };
 
