@@ -19,7 +19,7 @@ const locale = (i18n.language as SupportedLocale) || 'en';
 
 const componentRegistry: ComponentRegistry = {
     // Register your page components here
-    // 'landingPage': LandingPage,
+    //'landingPage': LandingPage,
 };
 
 createRoot(document.getElementById('root')!).render(

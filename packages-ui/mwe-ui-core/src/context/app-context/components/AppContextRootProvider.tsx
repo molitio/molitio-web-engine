@@ -1,5 +1,3 @@
-'use client';
-
 import { ReactNode, createContext } from 'react';
 import { AppContext } from '../types';
 import { ComponentRegistry } from '../types/ComponentRegistry';

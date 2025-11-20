@@ -15,7 +15,9 @@ const client = createClient(SANITY_CONFIG);
 
 async function fetchAppContext(): Promise<AppContext> {
     const query = `*[_type == "appContext"][0]`;
-    return client.fetch(query);
+    const queryResult: AppContext = await client.fetch(query);
+    console.info('Fetched AppContext:', queryResult);
+    return queryResult;
 }
 
 function generateRoutes(node: ContextNode, parentPath: string, outputDir: string) {
