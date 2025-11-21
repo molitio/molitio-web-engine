@@ -1,21 +1,22 @@
-import { Button } from '../../ui-interactive/components/Button';
+import { Button } from '../../ui-interactive'
 
-type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
-type CardStatus = 'ready' | 'loading' | 'disabled';
+export type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
+export type CardStatus = 'ready' | 'loading' | 'disabled';
 
-type CardAction = {
+export type CardAction = {
     text: string;
     onClick?: () => void;
     color?: string;
 };
 
-type CardData = {
+export type CardData = {
     title: string;
     description: string;
     variant?: CardVariant;
     buttonText?: string;
     buttonAction?: () => void;
     imageSrc?: string;
+    imageAlt?: string;
     icon?: string;
     actions?: CardAction[];
     status?: CardStatus;
@@ -73,6 +74,7 @@ export default function Card({
     buttonText,
     buttonAction,
     imageSrc,
+    imageAlt,
     icon,
     actions,
     status = 'ready',
@@ -94,7 +96,12 @@ export default function Card({
 
             {imageSrc && variant === 'image' && (
                 <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                    <img src={imageSrc} alt={title} className="w-full h-full object-contain" />
+                    <img 
+                        src={imageSrc} 
+                        alt={imageAlt || title} 
+                        className="w-full h-full object-contain" 
+                        loading="lazy" 
+                    />
                 </div>
             )}
 
@@ -114,11 +121,11 @@ export default function Card({
 
                 {variant === 'actions' && Array.isArray(actions) && actions.length > 0 ? (
                     <div className="flex gap-2 mt-2">
-                        {actions.map((action, idx) => (
+                        {actions.map((action) => (
                             <Button
-                                key={idx}
+                                key={action.text}
                                 size="sm"
-                                color={action.color || classes.button}
+                                variant="primary"
                                 onClick={action.onClick}
                                 disabled={isInactive}
                             >
@@ -139,9 +146,7 @@ export default function Card({
                                         : 'primary'
                             }
                             size="sm"
-                            color={classes.button}
                             onClick={buttonAction}
-                            className={classes.button}
                             disabled={isInactive}
                             loading={false}
                         >

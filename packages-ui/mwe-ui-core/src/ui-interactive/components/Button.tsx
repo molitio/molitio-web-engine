@@ -19,7 +19,7 @@ export type ButtonProps = PropsWithChildren & {
     variant?: ButtonVariant;
     size?: 'sm' | 'md' | 'lg';
     fullWidth?: boolean;
-    rounded?: 'sm' | 'md' | 'lg' | '';
+    rounded?: 'sm' | 'md' | 'lg';
     color?: string;
     disabled?: boolean;
     loading?: boolean;
@@ -35,7 +35,7 @@ export function Button({
     variant = 'primary',
     size = 'md',
     fullWidth = false,
-    rounded = '',
+    rounded,
     color = '',
     disabled = false,
     loading = false,
