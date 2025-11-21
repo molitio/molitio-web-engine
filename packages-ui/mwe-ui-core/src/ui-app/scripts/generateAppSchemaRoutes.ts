@@ -1,9 +1,9 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import { Project, QuoteKind, VariableDeclarationKind } from 'ts-morph';
 import { ContextNode } from '../../context/app-context/types/ContextNode.ts';
 import { AppContext, RootNode } from '../../context/app-context/types/AppContext.ts';
 import { appSchemaRoutesConfig, AppSchemaRoutesConfig } from './appSchemaRoutes.config.ts';
+import path from 'path';
+import fs from 'fs';
 
 const PROJECT_SETTINGS = {
     manipulationSettings: {

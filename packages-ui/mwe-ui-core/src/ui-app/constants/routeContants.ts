@@ -11,6 +11,26 @@ export const supportedLocales = {
     },
 } as const;
 
+export const appContextQuery = `*[_type == "appContext"][0] {
+                    ...,
+                    rootNode {
+                        ...,
+                        content->,
+                        children[] {
+                            ...,
+                            content->,
+                            children[] {
+                                ...,
+                                content->,
+                                children[] {
+                                    ...,
+                                    content->
+                                }
+                            }
+                        }
+                    }
+                }`;
+
 export const supportedLocalesArray: SupportedLocale[] = Object.keys(supportedLocales) as SupportedLocale[];
 
 export type SupportedLocale = keyof typeof supportedLocales;

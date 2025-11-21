@@ -2,7 +2,7 @@ import { createRouter } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
 import { useState, useEffect, Suspense } from 'react';
 import { routeTree } from '../generatedRoutes';
-import { SupportedLocale } from '../constants';
+import { appContextQuery, SupportedLocale } from '../constants';
 import ClientRouteProvider from './ClientRouteProvider';
 import { AppContext } from '../../context/app-context/types/AppContext';
 import { AppContextRootProvider } from '../../context/app-context/components';
@@ -44,28 +44,9 @@ export default function ClientApp({ client, locale }: ClientAppProps) {
     useEffect(() => {
         const fetchContext = async () => {
             try {
-                // Fetch appContext with expanded content references (up to 3 levels deep for now)
-                const query = `*[_type == "appContext"][0] {
-                    ...,
-                    rootNode {
-                        ...,
-                        content->,
-                        children[] {
-                            ...,
-                            content->,
-                            children[] {
-                                ...,
-                                content->,
-                                children[] {
-                                    ...,
-                                    content->
-                                }
-                            }
-                        }
-                    }
-                }`;
-                const data = await client.fetch(query);
-                setAppContext(data);
+                const appContextData = await client.fetch(appContextQuery);
+                console.info('Current App Context: ', appContextData);
+                setAppContext(appContextData);
             } catch (e) {
                 console.error('Failed to fetch AppContext:', e);
             } finally {
