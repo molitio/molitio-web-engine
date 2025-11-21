@@ -7,15 +7,9 @@ import ClientRouteProvider from './ClientRouteProvider';
 import { AppContext } from '../../context/app-context/types/AppContext';
 import { AppContextRootProvider } from '../../context/app-context/components';
 import { Loading } from '../../ui-common';
-import { ComponentRegistry } from '../../context';
+import { ClientAppRouterContext } from '../../context';
 
 export type AppRouter = ReturnType<typeof createMWEAppRouter>;
-
-export type ClientAppRouterContext = {
-    client: SanityClient;
-    locale: SupportedLocale;
-    componentRegistry: ComponentRegistry;
-};
 
 export function createMWEAppRouter({ client, locale = 'en', componentRegistry }: ClientAppRouterContext) {
     return createRouter({

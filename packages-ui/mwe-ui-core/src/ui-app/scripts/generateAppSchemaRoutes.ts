@@ -1,15 +1,17 @@
-import { Project, QuoteKind, VariableDeclarationKind } from 'ts-morph';
+import { Project, ProjectOptions, QuoteKind, VariableDeclarationKind } from 'ts-morph';
 import { ContextNode } from '../../context/app-context/types/ContextNode.ts';
 import { AppContext, RootNode } from '../../context/app-context/types/AppContext.ts';
 import { appSchemaRoutesConfig, AppSchemaRoutesConfig } from './appSchemaRoutes.config.ts';
 import path from 'path';
 import fs from 'fs';
 
-const PROJECT_SETTINGS = {
+const PROJECT_SETTINGS: ProjectOptions = {
     manipulationSettings: {
         quoteKind: QuoteKind.Single,
     },
-    skipAddingFilesFromTsConfig: true,
+    skipAddingFilesFromTsConfig: false,
+    //TODO: switch if needed
+    skipFileDependencyResolution: false,
 };
 
 type PageRoute = {

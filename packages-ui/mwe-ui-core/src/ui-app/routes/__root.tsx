@@ -1,7 +1,5 @@
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
-import { SanityClient } from '@sanity/client';
-import { SupportedLocale } from '../constants';
-import { ClientAppRouterContext } from '../components/ClientApp';
+import { ClientAppRouterContext } from '@molitio/mwe-ui-core';
 
 export const Route = createRootRouteWithContext<ClientAppRouterContext>()({
     component: RootComponent,
