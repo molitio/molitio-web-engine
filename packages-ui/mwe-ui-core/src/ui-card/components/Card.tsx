@@ -1,4 +1,4 @@
-import { Button } from '../../ui-interactive'
+import { Button } from '../../ui-interactive';
 
 export type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
 export type CardStatus = 'ready' | 'loading' | 'disabled';
@@ -96,11 +96,11 @@ export default function Card({
 
             {imageSrc && variant === 'image' && (
                 <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                    <img 
-                        src={imageSrc} 
-                        alt={imageAlt || title} 
-                        className="w-full h-full object-contain" 
-                        loading="lazy" 
+                    <img
+                        src={imageSrc}
+                        alt={imageAlt || title}
+                        className="w-full h-full object-contain"
+                        loading="lazy"
                     />
                 </div>
             )}

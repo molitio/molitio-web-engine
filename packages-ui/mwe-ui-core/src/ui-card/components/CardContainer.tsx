@@ -16,7 +16,7 @@ const columnClasses: Record<number, string> = {
 
 export default function CardContainer({ children, columns = 3, gap = 'gap-4', title }: CardContainerProps) {
     const colClass = columnClasses[columns] || 'md:grid-cols-3';
-    
+
     return (
         <section>
             {title && <h2 className="text-2xl font-bold text-primary mb-4">{title}</h2>}
