@@ -1,5 +1,5 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
-import i18n from '../../i18n';
+import { i18n } from '@molitio/mwe-ui-core';
 
 export const Route = createFileRoute('/')({
     beforeLoad: () => {
