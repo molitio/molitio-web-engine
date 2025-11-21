@@ -1,7 +1,7 @@
 import { Outlet } from '@tanstack/react-router';
 import { AppContext } from '../../context';
 import { SupportedLocale } from '../constants';
-import MWEClientRootLayout from './MWEClientRootLayout';
+import ApplicationRootLayout from './ApplicationRootLayout';
 import { useAppContext } from '../../context/app-context/hooks';
 
 interface LocaleLayoutProps {
@@ -10,20 +10,10 @@ interface LocaleLayoutProps {
 
 export default function LocaleLayout({ locale }: LocaleLayoutProps) {
     console.log('Current locale:', locale);
-    const { componentRegistry } = useAppContext();
-
-    const ctx: AppContext = {
-        appId: 'mwe-client-app',
-        rootNode: {
-            id: 'root',
-            title: 'Home',
-            type: 'root',
-        },
-    };
 
     return (
-        <MWEClientRootLayout ctx={ctx} locale={locale} componentRegistry={componentRegistry}>
+        <ApplicationRootLayout locale={locale}>
             <Outlet />
-        </MWEClientRootLayout>
+        </ApplicationRootLayout>
     );
 }

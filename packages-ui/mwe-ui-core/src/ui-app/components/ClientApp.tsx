@@ -1,12 +1,12 @@
-import { createRouter } from '@tanstack/react-router';
+import { createRouter, ErrorComponent } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
-import { useState, useEffect } from 'react';
-import { routeTree } from './generatedRoutes';
-import { SupportedLocale } from './constants';
-import MWEClientApp from './MWEClientApp';
-import { AppContext } from '../context/app-context/types/AppContext';
-import { AppContextRootProvider } from '../context/app-context/components';
-import { ComponentRegistry } from '../context/app-context/types/ComponentRegistry';
+import { useState, useEffect, Suspense } from 'react';
+import { routeTree } from '../generatedRoutes';
+import { SupportedLocale } from '../constants';
+import ClientRouteProvider from './ClientRouteProvider';
+import { AppContext } from '../../context/app-context/types/AppContext';
+import { AppContextRootProvider } from '../../context/app-context/components';
+import { Loading } from '../../ui-common';
 
 export type AppRouter = ReturnType<typeof createMWEAppRouter>;
 
@@ -25,13 +25,12 @@ declare module '@tanstack/react-router' {
     }
 }
 
-type MWEClientAppProviderProps = {
+type ClientAppProps = {
     client: SanityClient;
     locale: SupportedLocale;
-    componentRegistry: ComponentRegistry;
 };
 
-export default function MWEClientAppProvider({ client, locale, componentRegistry }: MWEClientAppProviderProps) {
+export default function ClientApp({ client, locale }: ClientAppProps) {
     const [appContext, setAppContext] = useState<AppContext | null>(null);
     const [loading, setLoading] = useState(true);
 
@@ -75,8 +74,10 @@ export default function MWEClientAppProvider({ client, locale, componentRegistry
     if (!appContext) return <div>Error: Could not load application context.</div>;
 
     return (
-        <AppContextRootProvider ctx={appContext} componentRegistry={componentRegistry}>
-            <MWEClientApp router={router} />
-        </AppContextRootProvider>
+        <Suspense fallback={<Loading />}>
+            <AppContextRootProvider ctx={appContext}>
+                <ClientRouteProvider router={router} />
+            </AppContextRootProvider>
+        </Suspense>
     );
 }
