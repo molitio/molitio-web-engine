@@ -1,13 +1,9 @@
 import { Outlet, createRootRouteWithContext } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
 import { SupportedLocale } from '../constants';
+import { ClientAppRouterContext } from '../components/ClientApp';
 
-type MWEClientAppRouterContext = {
-    client: SanityClient;
-    locale: SupportedLocale;
-};
-
-export const Route = createRootRouteWithContext<MWEClientAppRouterContext>()({
+export const Route = createRootRouteWithContext<ClientAppRouterContext>()({
     component: RootComponent,
     notFoundComponent: () => <div>Not Found</div>,
 });

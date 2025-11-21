@@ -1,4 +1,4 @@
-import { createRouter, ErrorComponent } from '@tanstack/react-router';
+import { createRouter } from '@tanstack/react-router';
 import { SanityClient } from '@sanity/client';
 import { useState, useEffect, Suspense } from 'react';
 import { routeTree } from '../generatedRoutes';
@@ -7,13 +7,20 @@ import ClientRouteProvider from './ClientRouteProvider';
 import { AppContext } from '../../context/app-context/types/AppContext';
 import { AppContextRootProvider } from '../../context/app-context/components';
 import { Loading } from '../../ui-common';
+import { ComponentRegistry } from '../../context';
 
 export type AppRouter = ReturnType<typeof createMWEAppRouter>;
 
-export function createMWEAppRouter({ client, locale = 'en' }: { client: SanityClient; locale: SupportedLocale }) {
+export type ClientAppRouterContext = {
+    client: SanityClient;
+    locale: SupportedLocale;
+    componentRegistry: ComponentRegistry;
+};
+
+export function createMWEAppRouter({ client, locale = 'en', componentRegistry }: ClientAppRouterContext) {
     return createRouter({
         routeTree,
-        context: { client, locale },
+        context: { client, locale, componentRegistry },
         defaultPreload: 'intent',
         scrollRestoration: true,
     });
@@ -68,7 +75,8 @@ export default function ClientApp({ client, locale }: ClientAppProps) {
         fetchContext();
     }, [client]);
 
-    const router = createMWEAppRouter({ client, locale });
+    //TODO: this should load the components registry dynamically based on the app context
+    const router = createMWEAppRouter({ client, locale, componentRegistry: {} });
 
     if (loading) return <div>Loading App Context...</div>;
     if (!appContext) return <div>Error: Could not load application context.</div>;

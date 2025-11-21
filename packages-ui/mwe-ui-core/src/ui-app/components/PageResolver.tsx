@@ -1,14 +1,16 @@
-import { useAppContext } from '../hooks';
-import { findNodeById } from '../helpers';
-import { DEFAULT_LOCALE, SupportedLocale } from '../../../ui-app/constants';
+import { useAppContext } from '../../context/app-context/hooks';
+import { findNodeById } from '../../context/app-context/helpers';
+import { DEFAULT_LOCALE, SupportedLocale } from '../constants';
+import { ComponentRegistry } from '../../context';
 
 interface PageResolverProps {
     nodeId: string;
     locale?: SupportedLocale;
+    componentRegistry: ComponentRegistry;
 }
 
-export function PageResolver({ nodeId, locale }: PageResolverProps) {
-    const { ctx, componentRegistry } = useAppContext();
+export function PageResolver({ nodeId, locale, componentRegistry }: PageResolverProps) {
+    const { ctx } = useAppContext();
     const node = findNodeById(nodeId, ctx);
 
     if (!node) {
