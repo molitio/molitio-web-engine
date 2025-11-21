@@ -80,6 +80,7 @@
         "@sanity/vision": "4.17.0",
         "@tailwindcss/typography": "0.5.19",
         "@tanstack/router-cli": "1.136.6",
+        "@types/i18next": "13.0.0",
         "@types/node": "24.9.2",
         "@types/react": "19.2.2",
         "@types/react-dom": "19.2.2",

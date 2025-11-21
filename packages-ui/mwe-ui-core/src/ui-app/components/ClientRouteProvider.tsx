@@ -1,5 +1,5 @@
 import { RouterProvider } from '@tanstack/react-router';
-import { AppRouter } from '../MWEClientAppProvider';
+import { AppRouter } from './ClientApp';
 
 export type ClientRouteProviderProps = {
     router: AppRouter;

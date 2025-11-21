@@ -2534,7 +2534,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.9, @babel/runtime@npm:^7.26.10, @babel/runtime@npm:^7.27.6, @babel/runtime@npm:^7.7.6":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.1.2, @babel/runtime@npm:^7.10.3, @babel/runtime@npm:^7.12.13, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.23.2, @babel/runtime@npm:^7.25.9, @babel/runtime@npm:^7.26.10, @babel/runtime@npm:^7.27.6, @babel/runtime@npm:^7.28.4, @babel/runtime@npm:^7.7.6":
   version: 7.28.4
   resolution: "@babel/runtime@npm:7.28.4"
   checksum: 10/6c9a70452322ea80b3c9b2a412bcf60771819213a67576c8cec41e88a95bb7bf01fc983754cda35dc19603eef52df22203ccbf7777b9d6316932f9fb77c25163
@@ -7225,6 +7225,7 @@ __metadata:
     "@tanstack/router-cli": "npm:1.136.6"
     "@types/eslint": "npm:9.6.1"
     "@types/grecaptcha": "npm:3.0.9"
+    "@types/i18next": "npm:13.0.0"
     "@types/node": "npm:24.9.2"
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.2"
@@ -7294,6 +7295,7 @@ __metadata:
     "@sanity/vision": "npm:4.17.0"
     "@tailwindcss/typography": "npm:0.5.19"
     "@tanstack/router-cli": "npm:1.136.6"
+    "@types/i18next": "npm:13.0.0"
     "@types/node": "npm:24.9.2"
     "@types/react": "npm:19.2.2"
     "@types/react-dom": "npm:19.2.2"
@@ -11448,6 +11450,15 @@ __metadata:
   dependencies:
     "@types/node": "npm:*"
   checksum: 10/893e46e12be576baa471cf2fc13a4f0e413eaf30a5850de8fdbea3040e138ad4171234c59b986cf7137ff20a1582b254bf0c44cfd715d5ed772e1ab94dd75cd1
+  languageName: node
+  linkType: hard
+
+"@types/i18next@npm:13.0.0":
+  version: 13.0.0
+  resolution: "@types/i18next@npm:13.0.0"
+  dependencies:
+    i18next: "npm:*"
+  checksum: 10/da3e56065d593bea786c9a35e625064a2502f67cdddb8e19338016c4f8dc3952aa55ab915a6f76fdebd61d5c04bb9aff9f2603eb809deb811dab0729cce72fe4
   languageName: node
   linkType: hard
 
@@ -21045,6 +21056,20 @@ __metadata:
   dependencies:
     "@babel/runtime": "npm:^7.23.2"
   checksum: 10/b2e78feb256e92b219cd378b38af00404b8f667473f886d64c53588df0592bce145ad29ad7d8238c75f78a9c79f02c84d400569dd5c0ab94c751ac62a4e1f8dd
+  languageName: node
+  linkType: hard
+
+"i18next@npm:*":
+  version: 25.6.3
+  resolution: "i18next@npm:25.6.3"
+  dependencies:
+    "@babel/runtime": "npm:^7.28.4"
+  peerDependencies:
+    typescript: ^5
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: 10/1fb376aa52ccc5e636068a4aec6876d5288c7ea9dda8ac49a05a48962110fccafd3f276476ca53c248eb04aaa92a92fdd507c6793b32298ae1b2538b84517285
   languageName: node
   linkType: hard
 
