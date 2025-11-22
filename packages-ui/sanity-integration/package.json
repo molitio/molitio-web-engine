@@ -21,13 +21,13 @@
         "@sanity/eslint-config-studio": "5.0.2",
         "@sanity/schema": "4.15.0",
         "@sanity/types": "4.15.0",
-        "@sanity/vision": "4.17.0",
+        "@sanity/vision": "4.18.0",
         "@types/react": "19.2.0",
         "@types/react-is": "19.2.0",
         "eslint": "9.39.0",
         "react": "19.2.0",
         "react-dom": "19.2.0",
-        "sanity": "4.17.0",
+        "sanity": "4.18.0",
         "styled-components": "6.1.19"
     }
 }

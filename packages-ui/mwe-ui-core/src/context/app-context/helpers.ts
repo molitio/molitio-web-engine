@@ -1,68 +1,69 @@
-import { AppContext } from './types/AppContext';
+import { AppContext, RootNode } from './types/AppContext';
 import { ContextNode } from './types/ContextNode';
 
-export function findNodeById(id: string, context: AppContext): ContextNode | null {
-    if (!context.rootNode) return null;
+export function findRootNode(context: AppContext): RootNode | undefined {
+    if (!context.rootNode) return undefined;
+    else {
+        return { ...context.rootNode };
+    }
+}
 
-    const rootAsContextNode: ContextNode = {
+export function findNodeById(id: string, context: AppContext): ContextNode | undefined {
+    if (!context.rootNode) return undefined;
+
+    const rootAsContextNode: RootNode = {
         id: context.rootNode.id,
-        slug: '',
+        type: 'root',
         title: context.rootNode.title,
-        type: 'page',
         content: context.rootNode.content,
         children: context.rootNode.children,
     };
 
-    if (rootAsContextNode.id === id) {
-        return rootAsContextNode;
-    }
-
-    const traverse = (node: ContextNode): ContextNode | null => {
+    const traverse = (node: ContextNode): ContextNode | undefined => {
         if (node.id === id) {
             return node;
         }
         if (!node.children) {
-            return null;
+            return undefined;
         }
         for (const child of node.children) {
             const found = traverse(child);
             if (found) return found;
         }
-        return null;
+        return undefined;
     };
 
     const children = rootAsContextNode.children ?? [];
     for (const child of children) {
         const found = traverse(child);
         if (found) {
-            return found;
+            return { ...found };
         }
     }
 
-    return null;
+    return undefined;
 }
 
-export function findNodeByPath(path: string, context: AppContext): ContextNode | null {
-    if (!context.rootNode) return null;
-
+export function findNodeByPath(path: string, context: AppContext): ContextNode | undefined {
+    if (!context.rootNode) return undefined;
     // Normalize path: remove leading/trailing slashes
     const segments = path.split('/').filter(Boolean);
 
     if (segments.length === 0) {
-        return null;
+        return undefined;
     }
 
-    let currentNode: ContextNode | null = null;
+    let currentNode: ContextNode | undefined = undefined;
     let children = context.rootNode.children ?? [];
 
     for (const segment of segments) {
         const found = children.find((child) => child.slug === segment);
         if (!found) {
-            return null;
+            return undefined;
         }
         currentNode = found;
         children = found.children ?? [];
     }
 
-    return currentNode;
+    return { ...currentNode! };
 }
