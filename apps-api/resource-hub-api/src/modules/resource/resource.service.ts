@@ -4,7 +4,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { CreateResourceDto, Resource } from './resource.schema';
 import { SpecificationLabel } from '../specification-label';
 import { UserPublicService } from '../user-public/user-public.service';
-import { newTimestamp } from 'src/utils/dateTime';
+import { newTimestamp } from '../..//utils/dateTime';
 
 @Injectable()
 export class ResourceService {

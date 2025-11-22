@@ -1,0 +1,16 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "module": "preserve",
+        "moduleResolution": "bundler",
+        "rootDir": ".",
+        "target": "esnext",
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+        "experimentalDecorators": true,
+        "allowImportingTsExtensions": true,
+        "skipLibCheck": false,
+        "emitDeclarationOnly": false
+    },
+    "include": ["./src/ui-app/scripts/**/*", "./src/declaration.d.ts", "../**/*.ts", "../**/*.d.ts"],
+    "exclude": ["**/*.sanity.config.ts"]
+}

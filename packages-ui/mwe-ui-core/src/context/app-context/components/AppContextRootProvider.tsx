@@ -1,5 +1,3 @@
-'use client';
-
 import { ReactNode, createContext } from 'react';
 import { AppContext } from '../types';
 
@@ -9,14 +7,11 @@ type AppContextRootValues = {
 
 type AppContextRootProviderProps = AppContextRootValues & { children?: ReactNode };
 
-export const AppContextRootContext = createContext<AppContext | undefined>(undefined);
+export const AppContextRootContext = createContext<AppContextRootValues | undefined>(undefined);
 
 export default function AppContextRootProvider({ ctx, children }: AppContextRootProviderProps) {
-    const defaultAppContext: AppContext = {
-        ...ctx,
-        appId: ctx?.appId || 'default-app-id',
-        appName: ctx?.appName || 'Default App',
+    const value = {
+        ctx,
     };
-    const aggregatedAppContext = { ...defaultAppContext };
-    return <AppContextRootContext.Provider value={aggregatedAppContext}>{children}</AppContextRootContext.Provider>;
+    return <AppContextRootContext.Provider value={value}>{children}</AppContextRootContext.Provider>;
 }

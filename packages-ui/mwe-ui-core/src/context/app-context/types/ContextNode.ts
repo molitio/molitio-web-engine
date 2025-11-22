@@ -1,12 +1,23 @@
-import { TextContentNode } from './TextContentSegment';
-import { NavigationSegment } from './NavigationSegment';
+import { SupportedLocale } from '../../../ui-app';
 
-export type ContextNodeType = 'element' | 'nav' | 'text' | 'media' | 'root' | string;
+export type ContextNodeType = 'page' | 'folder';
 
-export type ContextNode = {
-    resourceId: string;
+export type LocalizedContent = Partial<
+    Record<
+        SupportedLocale,
+        {
+            _ref: string;
+            _type: string;
+            [key: string]: unknown;
+        }
+    >
+>;
+
+export interface ContextNode {
+    id: string;
+    slug: string;
+    title: string;
     type: ContextNodeType;
-    navigation?: NavigationSegment;
-    textContent?: Record<string, TextContentNode>;
-    nodeTree?: Record<string, ContextNode>;
-};
+    content?: LocalizedContent;
+    children?: ContextNode[];
+}

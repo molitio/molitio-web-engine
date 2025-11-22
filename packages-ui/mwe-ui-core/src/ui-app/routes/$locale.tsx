@@ -1,6 +1,5 @@
 import { createFileRoute, redirect } from '@tanstack/react-router';
-import { LocaleLayout } from '../components';
-import { DEFAULT_LOCALE, isSupportedLocale, supportedLocaleOrDefault } from '../constants';
+import { LocaleLayout, isSupportedLocale, supportedLocaleOrDefault, DEFAULT_LOCALE } from '@molitio/mwe-ui-core';
 
 export const Route = createFileRoute('/$locale')({
     beforeLoad: ({ params }) => {

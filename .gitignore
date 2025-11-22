@@ -157,3 +157,5 @@ storybook-build
 # Tanstack Router cache
 .tanstack
 
+# Sanity Studio
+.sanity

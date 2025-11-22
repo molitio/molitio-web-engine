@@ -1,13 +1,13 @@
 {
     "exclude": ["node_modules", "dist"],
-    "include": ["**/*.ts", "**/*.tsx", "tanstack.config.cjs", "tailwind.config.cjs"],
+    "include": ["**/*.ts", "**/*.tsx", "tanstack.config.cjs", "tailwind.config.cjs", "**/*.d.ts"],
     "compilerOptions": {
         "jsx": "react-jsx",
         "outDir": "./dist",
-        "target": "ESNext",
-        "module": "ESNext",
+        "target": "esnext",
+        "module": "preserve",
+        "moduleResolution": "bundler",
         "rootDirs": ["src"],
-        "moduleResolution": "node",
         "strict": true,
         "noEmit": false,
         "declaration": true,
@@ -15,6 +15,7 @@
         "emitDeclarationOnly": true,
         "declarationMap": false,
         "resolveJsonModule": true,
-        "allowSyntheticDefaultImports": true
+        "allowSyntheticDefaultImports": true,
+        "allowImportingTsExtensions": true
     }
 }

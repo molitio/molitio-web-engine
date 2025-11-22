@@ -1,6 +1,6 @@
-export * from './NavigationSegment';
 export * from './AppContext';
 export * from './ContextNode';
-/* export * from './ContentRoot';
-export * from './InteractivityRoot';
- */
+export * from './NavigationSegment';
+export * from './TextContentSegment';
+export * from './ComponentRegistry';
+export * from './ClientAppRouteContext';

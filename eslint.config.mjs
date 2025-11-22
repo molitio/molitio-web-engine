@@ -21,6 +21,7 @@ export default [
             '**/build',
             '**/.next',
             '**/.docusaurus',
+            '**/.sanity',
             '**/.artifacts',
             '**/*.test.*',
             '**/*.spec.*',
@@ -85,9 +86,9 @@ export default [
         files: ['packages-ui/mwe-ui-core/**/*.{js,jsx,ts,tsx}'],
         languageOptions: {
             parser: tsParser,
-            ecmaVersion: 2022,
+            ecmaVersion: 'latest',
             sourceType: 'module',
-            globals: { ...globals.browser, ...globals.es2022 },
+            globals: { ...globals.browser, ...globals.es2026 },
         },
         // use the automatic JSX runtime so React doesn't need to be in scope
         settings: { react: { version: 'detect', runtime: 'automatic' } },
