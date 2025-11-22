@@ -1,39 +1,21 @@
 import { Suspense } from 'react';
-import { Button, ButtonRounded } from '../../ui-interactive';
+import { Button } from '../../ui-interactive';
 import { Loading } from '../../ui-common';
-import { cardStyleVariants } from '../constants';
-
-export type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
-export type CardStatus = 'ready' | 'loading' | 'disabled';
-export type ButtonVariants = 'primary' | 'secondary' | 'outlined' | 'danger';
-
-export type ButtonActionVariant = {
-    color?: string;
-    backgroundColor?: string;
-    variant: ButtonVariants;
-    rounded?: ButtonRounded;
-    onClick?: () => void;
-};
-
-export type CardAction = {
-    content: string | React.ReactNode;
-    variant?: ButtonActionVariant;
-};
+import { cardStyleVariants, cardActionOrientationClasses } from '../constants';
+import { CardAction, CardActionOrientation, CardStatus, CardVariant } from '../types';
 
 /* 
 TODO: refactor card to get an array of actions, that define the ButtonActionVariant type memebers and other action related parameters
 */
-export type CardData = {
+export type CardProps = {
     title: string;
     description: string;
     variant?: CardVariant;
-    /*     buttonVariant?: ButtonVariants; */
-    /*     buttonText?: string; */
-    /*  buttonAction?: () => void; */
     imageSrc?: string;
     imageAlt?: string;
     icon?: string;
     actions?: CardAction[];
+    actionOrientation?: CardActionOrientation;
     status?: CardStatus;
 };
 
@@ -41,15 +23,13 @@ export default function Card({
     title,
     description,
     variant = 'default',
-    /*     buttonVariant = 'outlined',
-    buttonText,
-    buttonAction, */
     imageSrc,
     imageAlt,
     icon,
     actions,
+    actionOrientation = 'row',
     status = 'ready',
-}: CardData) {
+}: CardProps) {
     const classes = cardStyleVariants[variant];
     const isLoading = status === 'loading';
     const isDisabled = status === 'disabled';
@@ -110,33 +90,31 @@ export default function Card({
                 <h3 className={classes.title}>{title}</h3>
                 <p className={classes.description}>{description}</p>
 
-                {variant === 'actions' && Array.isArray(actions) && actions.length > 0 ? (
+                {Array.isArray(actions) && actions.length > 0 ? (
                     <div className="flex gap-2 mt-2">
-                        {actions.map((action) => (
-                            <Button
-                                key={action.content}
-                                size="sm"
-                                rounded=""
-                                variant={action.variant ?? buttonVariant}
-                                onClick={action.onClick}
-                                disabled={isInactive}
-                            >
-                                <div className={`${action.color ? action.color : ''}`}>{action.content}</div>
-                            </Button>
-                        ))}
+                        {/* TODOD: add classname to disable default list style.  */}
+                        <ul className={cardActionOrientationClasses[actionOrientation]}>
+                            {actions.map((action, index) => (
+                                <li key={index} className={action.variant?.fullWidth ? 'w-full' : ''}>
+                                    <Button
+                                        size={action.variant?.size}
+                                        rounded={action.variant?.rounded}
+                                        variant={action.variant?.variant}
+                                        color={action.variant?.color}
+                                        fullWidth={action.variant?.fullWidth}
+                                        onClick={action.variant?.onClick}
+                                        disabled={isInactive}
+                                    >
+                                        <div className={`${action.variant?.color ? action.variant.color : ''}`}>
+                                            {action.content}
+                                        </div>
+                                    </Button>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                 ) : (
-                    buttonText && (
-                        <Button
-                            variant={buttonVariant}
-                            size="sm"
-                            onClick={buttonAction}
-                            disabled={isInactive}
-                            loading={false}
-                        >
-                            {buttonText}
-                        </Button>
-                    )
+                    ''
                 )}
             </div>
         </div>

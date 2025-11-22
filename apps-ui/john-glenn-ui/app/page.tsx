@@ -188,55 +188,152 @@ export default function Home() {
                                 title="Default Card"
                                 description="This is a default card with primary and secondary text."
                                 variant="default"
-                                buttonText="Primary Action"
-                                buttonAction={() => alert('Default Card')}
+                                /*            actions={[
+                                    {
+                                        text: 'default',
+                                        variant: 'primary',
+                                    },
+                                ]} */
                             />
-                            <Card
-                                title="Accent Card"
-                                description="Accent border and text color."
-                                variant="accent"
-                                buttonText="Accent Action"
-                                buttonAction={() => alert('Accent Card')}
-                            />
+                            <Card title="Accent Card" description="Accent border and text color." variant="accent" />
                             <Card
                                 title="Muted Card"
                                 description="Muted background and secondary text."
                                 variant="muted"
-                                buttonText="Secondary Action"
-                                buttonAction={() => alert('Muted Card')}
                             />
                             <Card
                                 title="Image Card"
                                 description="Card with image header."
                                 variant="image"
                                 imageSrc="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
-                                buttonText="View"
-                                buttonAction={() => alert('Image Card')}
                             />
                             <Card
                                 title="Icon Card"
                                 description="Card with icon and action."
                                 variant="icon"
                                 icon="star"
-                                buttonText="Favorite"
-                                buttonAction={() => alert('Icon Card')}
                             />
                             <Card
                                 title="Actions Card"
                                 description="Card with multiple actions."
                                 variant="actions"
+                                actionOrientation="grid"
                                 actions={[
                                     {
-                                        text: 'Save',
-                                        onClick: () => alert('Save'),
-                                        variant: 'danger',
-                                        color: 'text-accent',
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            fullWidth: true,
+                                            onClick: () => alert('Save'),
+                                        },
                                     },
                                     {
-                                        text: 'Share',
-                                        onClick: () => alert('Share'),
-                                        color: 'outlined',
-                                        variant: 'outlined',
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Error',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            fullWidth: true,
+                                            onClick: () => alert('Error'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Actions Card Vertical"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actionOrientation="column"
+                                actions={[
+                                    {
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            onClick: () => alert('Edit'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Actions Card Horizontal"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actionOrientation="row"
+                                actions={[
+                                    {
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            onClick: () => alert('Edit'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'secondary',
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            onClick: () => alert('Share'),
+                                        },
                                     },
                                 ]}
                             />
@@ -244,21 +341,18 @@ export default function Home() {
                                 title="Status Card"
                                 description="Card with success status border and text."
                                 variant="status"
-                                buttonText="Success"
-                                buttonAction={() => alert('Status Card')}
+                                /*  buttonAction={() => alert('Status Card')} */
                             />
                             <Card
                                 title="Loading Card"
                                 description="Loading card component."
                                 variant="accent"
-                                buttonText="Loading"
                                 status="loading"
                             />
                             <Card
                                 title="Disabled Card"
                                 description="Disabled card."
                                 variant="default"
-                                buttonText="Disabled"
                                 status="disabled"
                             />
                         </CardContainer>

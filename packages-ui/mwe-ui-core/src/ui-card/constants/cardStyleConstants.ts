@@ -42,3 +42,9 @@ export const cardStyleVariants = {
         button: 'bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition',
     },
 };
+
+export const cardActionOrientationClasses = {
+    row: 'flex flex-row gap-2 list-none p-0 m-0',
+    column: 'flex flex-col gap-2 list-none p-0 m-0',
+    grid: 'grid grid-cols-2 gap-2 list-none p-0 m-0',
+};
