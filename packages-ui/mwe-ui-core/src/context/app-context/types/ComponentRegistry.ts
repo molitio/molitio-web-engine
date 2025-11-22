@@ -1,3 +1,3 @@
 import { ComponentType } from 'react';
 
-export type ComponentRegistry = Record<string, ComponentType<any>>;
+export type ComponentRegistry = Record<string, ComponentType<unknown>>;

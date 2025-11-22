@@ -6,7 +6,7 @@
     "main": "package.json",
     "license": "MIT",
     "scripts": {
-        "dev": "sanity dev",
+        "dev": "sanity dev --config packages-ui/sanity-integration/src/sanity.config.ts",
         "start": "sanity start",
         "build": "sanity build",
         "deploy": "sanity deploy",

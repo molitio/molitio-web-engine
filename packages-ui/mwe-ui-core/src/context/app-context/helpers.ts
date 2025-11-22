@@ -8,6 +8,7 @@ export function findRootNode(context: AppContext): RootNode | undefined {
     }
 }
 
+/* export function findNodeById<T>(id: string, context: AppContext): ContextNode | undefined { */
 export function findNodeById(id: string, context: AppContext): ContextNode | undefined {
     if (!context.rootNode) return undefined;
 
@@ -37,6 +38,7 @@ export function findNodeById(id: string, context: AppContext): ContextNode | und
     for (const child of children) {
         const found = traverse(child);
         if (found) {
+            /* return { ...found } as T; */
             return { ...found };
         }
     }

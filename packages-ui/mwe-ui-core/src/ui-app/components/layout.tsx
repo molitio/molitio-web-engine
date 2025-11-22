@@ -1,8 +1,6 @@
 import { Outlet } from '@tanstack/react-router';
-import { AppContext } from '../../context';
 import { SupportedLocale } from '../constants';
 import ApplicationRootLayout from './ApplicationRootLayout';
-import { useAppContext } from '../../context/app-context/hooks';
 
 interface LocaleLayoutProps {
     locale: SupportedLocale;
