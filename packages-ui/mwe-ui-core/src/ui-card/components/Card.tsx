@@ -1,4 +1,7 @@
+import { Suspense } from 'react';
 import { Button } from '../../ui-interactive';
+import { Loading } from '../../ui-common';
+import { cardStyleVariants } from '../constants';
 
 export type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
 export type CardStatus = 'ready' | 'loading' | 'disabled';
@@ -22,51 +25,6 @@ export type CardData = {
     status?: CardStatus;
 };
 
-const variantClasses = {
-    default: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200',
-        title: 'font-semibold text-lg text-primary mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition',
-    },
-    accent: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border-2 border-accent',
-        title: 'font-semibold text-lg text-accent mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
-    },
-    muted: {
-        container: 'bg-muted rounded-lg shadow-inner p-6 border border-gray-300',
-        title: 'font-semibold text-lg text-primary mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-secondary text-white px-3 py-1 rounded hover:bg-primary transition',
-    },
-    status: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border border-success',
-        title: 'font-semibold text-lg text-success mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-success text-white px-3 py-1 rounded hover:bg-success/80 transition',
-    },
-    image: {
-        container: 'bg-white rounded-lg shadow-lg p-0 border border-gray-200 flex flex-col overflow-hidden',
-        title: 'font-semibold text-lg text-primary mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-primary text-white px-3 py-1 rounded hover:bg-accent transition',
-    },
-    icon: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center',
-        title: 'font-semibold text-lg text-primary mb-2 text-center',
-        description: 'text-secondary mb-4 text-center',
-        button: 'bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition',
-    },
-    actions: {
-        container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col',
-        title: 'font-semibold text-lg text-primary mb-2',
-        description: 'text-secondary mb-4',
-        button: 'bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition',
-    },
-};
-
 export default function Card({
     title,
     description,
@@ -79,7 +37,7 @@ export default function Card({
     actions,
     status = 'ready',
 }: CardData) {
-    const classes = variantClasses[variant];
+    const classes = cardStyleVariants[variant];
     const isLoading = status === 'loading';
     const isDisabled = status === 'disabled';
     const isInactive = isLoading || isDisabled;
@@ -88,11 +46,24 @@ export default function Card({
     return (
         <div className={cardContainerClass} aria-disabled={isInactive}>
             {/* Spinner overlay for loading, z-50 for stacking above all */}
-            {isLoading && (
-                <span className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
-                    <span className="animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-gray-700"></span>
-                </span>
-            )}
+            <Suspense
+                fallback={
+                    <>
+                        chose:
+                        <Loading />
+                        or:
+                        <span className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
+                            <span className="animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-gray-700"></span>
+                        </span>
+                    </>
+                }
+            >
+                {isLoading && (
+                    <span className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
+                        <span className="animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-gray-700"></span>
+                    </span>
+                )}
+            </Suspense>
 
             {imageSrc && variant === 'image' && (
                 <div className="relative h-32 w-full overflow-hidden bg-gray-100">

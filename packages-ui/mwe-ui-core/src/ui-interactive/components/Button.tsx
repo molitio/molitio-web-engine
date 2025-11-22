@@ -17,8 +17,8 @@ const sizeClasses = {
 
 export type ButtonProps = PropsWithChildren & {
     variant?: ButtonVariant;
-    size?: 'sm' | 'md' | 'lg';
     fullWidth?: boolean;
+    size?: 'sm' | 'md' | 'lg';
     rounded?: 'sm' | 'md' | 'lg';
     color?: string;
     disabled?: boolean;
