@@ -44,7 +44,7 @@ We welcome collaborations and contributions from all. If you're passionate about
 
 [Discord]
 
-Please message for invite link
+Please message for invite link.
 
 ## Contact Us
 

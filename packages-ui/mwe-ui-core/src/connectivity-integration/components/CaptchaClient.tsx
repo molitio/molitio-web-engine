@@ -8,9 +8,11 @@ export type CaptchaClientProps = {
 
 export default function CaptchaClient({ recaptchaSiteKey }: CaptchaClientProps) {
     return (
-        <Script
-            strategy="lazyOnload"
-            src={`https://www.google.com/recaptcha/enterprise.js?render=${recaptchaSiteKey}`}
-        />
+        <>
+            <Script
+                strategy="lazyOnload"
+                src={`https://www.google.com/recaptcha/enterprise.js?render=${recaptchaSiteKey}`}
+            />
+        </>
     );
 }

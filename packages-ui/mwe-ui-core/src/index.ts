@@ -20,6 +20,13 @@ export * from './ui-app';
 export * from './core';
 
 /**
+ * context
+ *
+ * App context and state management
+ */
+export * from './context';
+
+/**
  * tailwind global
  *
  */
@@ -58,12 +65,6 @@ export * from './ui-common';
  *
  */
 export * from './ui-card';
-
-/**
- * context
- *
- */
-export * from './context';
 
 /**
  * Form

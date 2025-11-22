@@ -1,12 +1,12 @@
 import React from 'react';
 import { Metadata } from 'next';
-import { Context } from '@/context/AppContext';
+/* import { Context } from '@/context/AppContext'; */
 import { NavBar } from '@molitio/mwe-ui-core/rsc';
 import ClientRoot from './ClientRoot';
 import './globals.css';
 
 export const metadata: Metadata = {
-    title: Context.appDisplayTitle,
+    /*     title: Context.appId, */
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {

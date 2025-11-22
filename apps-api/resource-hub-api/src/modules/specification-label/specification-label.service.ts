@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { CreateSpecificationLabelDto, SpecificationLabel } from './specification-label.schema';
 import { LabelValue } from './label-value.schema';
-import { newTimestamp } from 'src/utils/dateTime';
+import { newTimestamp } from '../../utils/dateTime';
 
 @Injectable()
 export class SpecificationLabelService {

@@ -1,4 +1,4 @@
-import { AppContext } from '@molitio/mwe-ui-core';
+/* import { AppContext } from '@molitio/mwe-ui-core';
 
 export const Context: AppContext = {
     appId: 'sleeping-dragon-ui',
@@ -54,3 +54,4 @@ export const Context: AppContext = {
         },
     },
 };
+ */

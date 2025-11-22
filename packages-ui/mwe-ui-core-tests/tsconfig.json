@@ -2,9 +2,9 @@
     "compilerOptions": {
         "baseUrl": ".",
         "jsx": "react-jsx",
-        "target": "es2022",
-        "module": "Node16",
-        "moduleResolution": "Node16",
+        "target": "ESNext",
+        "module": "nodenext",
+        "moduleResolution": "bundler",
         "strict": true,
         "importHelpers": true,
         "skipLibCheck": false,

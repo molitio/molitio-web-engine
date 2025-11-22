@@ -1,8 +1,8 @@
 import { Args, Mutation, Resolver } from '@nestjs/graphql';
+import { HttpException, HttpStatus } from '@nestjs/common';
 import { ResourceService } from './resource.service';
 import { Resource } from './resource.schema';
-import { HttpException, HttpStatus } from '@nestjs/common';
-import { logError } from 'src/logger';
+import { logError } from '../../logger';
 
 @Resolver(() => Resource)
 export class ResourceMutation {
