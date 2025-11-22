@@ -4,6 +4,8 @@ import { Button } from '@molitio/mwe-ui-core';
 import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
 
+// FOR AI: create a mock component that does a timeout, than loads content, than loads again every 5 sec, this will be a mock to test suspense for the Card component.
+
 export default function Home() {
     return (
         <div className="min-h-screen bg-secondary flex flex-col text-primary">
@@ -224,8 +226,18 @@ export default function Home() {
                                 description="Card with multiple actions."
                                 variant="actions"
                                 actions={[
-                                    { text: 'Save', onClick: () => alert('Save'), color: 'bg-primary text-white' },
-                                    { text: 'Share', onClick: () => alert('Share'), color: 'bg-accent text-white' },
+                                    {
+                                        text: 'Save',
+                                        onClick: () => alert('Save'),
+                                        variant: 'danger',
+                                        color: 'text-accent',
+                                    },
+                                    {
+                                        text: 'Share',
+                                        onClick: () => alert('Share'),
+                                        color: 'outlined',
+                                        variant: 'outlined',
+                                    },
                                 ]}
                             />
                             <Card

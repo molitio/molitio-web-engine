@@ -1,23 +1,35 @@
 import { Suspense } from 'react';
-import { Button } from '../../ui-interactive';
+import { Button, ButtonRounded } from '../../ui-interactive';
 import { Loading } from '../../ui-common';
 import { cardStyleVariants } from '../constants';
 
 export type CardVariant = 'default' | 'accent' | 'muted' | 'image' | 'icon' | 'actions' | 'status';
 export type CardStatus = 'ready' | 'loading' | 'disabled';
+export type ButtonVariants = 'primary' | 'secondary' | 'outlined' | 'danger';
 
-export type CardAction = {
-    text: string;
-    onClick?: () => void;
+export type ButtonActionVariant = {
     color?: string;
+    backgroundColor?: string;
+    variant: ButtonVariants;
+    rounded?: ButtonRounded;
+    onClick?: () => void;
 };
 
+export type CardAction = {
+    content: string | React.ReactNode;
+    variant?: ButtonActionVariant;
+};
+
+/* 
+TODO: refactor card to get an array of actions, that define the ButtonActionVariant type memebers and other action related parameters
+*/
 export type CardData = {
     title: string;
     description: string;
     variant?: CardVariant;
-    buttonText?: string;
-    buttonAction?: () => void;
+    /*     buttonVariant?: ButtonVariants; */
+    /*     buttonText?: string; */
+    /*  buttonAction?: () => void; */
     imageSrc?: string;
     imageAlt?: string;
     icon?: string;
@@ -29,8 +41,9 @@ export default function Card({
     title,
     description,
     variant = 'default',
+    /*     buttonVariant = 'outlined',
     buttonText,
-    buttonAction,
+    buttonAction, */
     imageSrc,
     imageAlt,
     icon,
@@ -45,7 +58,14 @@ export default function Card({
 
     return (
         <div className={cardContainerClass} aria-disabled={isInactive}>
-            {/* Spinner overlay for loading, z-50 for stacking above all */}
+            {/* Spinner overlay for loading, z-50 for stacking above all 
+            TODO: 
+            - refactor variant logic ~L110 - ~L120
+            - handle suspense in the whole component 
+            - create an example in john-glenn-ui app where a task waits 10 sec to load, than loads, than waits again and so on.
+            
+            
+            */}
             <Suspense
                 fallback={
                     <>
@@ -94,28 +114,21 @@ export default function Card({
                     <div className="flex gap-2 mt-2">
                         {actions.map((action) => (
                             <Button
-                                key={action.text}
+                                key={action.content}
                                 size="sm"
-                                variant="primary"
+                                rounded=""
+                                variant={action.variant ?? buttonVariant}
                                 onClick={action.onClick}
                                 disabled={isInactive}
                             >
-                                {action.text}
+                                <div className={`${action.color ? action.color : ''}`}>{action.content}</div>
                             </Button>
                         ))}
                     </div>
                 ) : (
                     buttonText && (
                         <Button
-                            variant={
-                                variant === 'accent'
-                                    ? 'primary'
-                                    : variant === 'muted'
-                                      ? 'secondary'
-                                      : variant === 'status'
-                                        ? 'danger'
-                                        : 'primary'
-                            }
+                            variant={buttonVariant}
                             size="sm"
                             onClick={buttonAction}
                             disabled={isInactive}
