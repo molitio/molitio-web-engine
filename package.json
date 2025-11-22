@@ -79,6 +79,7 @@
         "@sanity/types": "^4.15.0",
         "@sanity/vision": "4.18.0",
         "@tailwindcss/typography": "0.5.19",
+        "@tanstack/react-router": "1.136.4",
         "@tanstack/router-cli": "1.136.6",
         "@types/i18next": "13.0.0",
         "@types/node": "24.9.2",

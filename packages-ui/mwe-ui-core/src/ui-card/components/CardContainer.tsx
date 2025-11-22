@@ -1,20 +1,26 @@
-import Card from './Card';
-import type { CardData } from '../types';
-import PageSection from '../../ui-page/components/PageSection';
-export type CardContainerProps = {
-    cards: CardData[];
+import { ReactNode } from 'react';
+
+type CardContainerProps = {
+    children: ReactNode;
+    columns?: number;
+    gap?: string;
+    title?: string;
 };
 
-export default function CardContainer({ cards }: CardContainerProps) {
+const columnClasses: Record<number, string> = {
+    1: 'md:grid-cols-1',
+    2: 'md:grid-cols-2',
+    3: 'md:grid-cols-3',
+    4: 'md:grid-cols-4',
+};
+
+export default function CardContainer({ children, columns = 3, gap = 'gap-4', title }: CardContainerProps) {
+    const colClass = columnClasses[columns] || 'md:grid-cols-3';
+
     return (
-        <PageSection>
-            <ul className="flex flex-col xl:flex-row gap-12">
-                {cards.map((card, i) => (
-                    <li key={i} className="mb-gutter-bottom">
-                        <Card data={card} />
-                    </li>
-                ))}
-            </ul>
-        </PageSection>
+        <section>
+            {title && <h2 className="text-2xl font-bold text-primary mb-4">{title}</h2>}
+            <div className={`grid grid-cols-1 ${colClass} ${gap}`}>{children}</div>
+        </section>
     );
 }

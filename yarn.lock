@@ -7294,6 +7294,7 @@ __metadata:
     "@sanity/types": "npm:^4.15.0"
     "@sanity/vision": "npm:4.18.0"
     "@tailwindcss/typography": "npm:0.5.19"
+    "@tanstack/react-router": "npm:1.136.4"
     "@tanstack/router-cli": "npm:1.136.6"
     "@types/i18next": "npm:13.0.0"
     "@types/node": "npm:24.9.2"
