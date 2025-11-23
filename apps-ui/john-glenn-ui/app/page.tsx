@@ -315,7 +315,7 @@ export default function Home() {
                                         content: 'Share',
                                         variant: {
                                             color: 'text-accent',
-                                            variant: 'secondary',
+                                            variant: 'outlined',
                                             onClick: () => alert('Share'),
                                         },
                                     },

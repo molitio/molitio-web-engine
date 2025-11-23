@@ -100,14 +100,11 @@ export default function Card({
                                         size={action.variant?.size}
                                         rounded={action.variant?.rounded}
                                         variant={action.variant?.variant}
-                                        color={action.variant?.color}
                                         fullWidth={action.variant?.fullWidth}
                                         onClick={action.variant?.onClick}
                                         disabled={isInactive}
                                     >
-                                        <div className={`${action.variant?.color ? action.variant.color : ''}`}>
-                                            {action.content}
-                                        </div>
+                                        <div className={action.variant?.color}>{action.content}</div>
                                     </Button>
                                 </li>
                             ))}
