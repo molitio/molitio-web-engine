@@ -195,7 +195,17 @@ export default function Home() {
                                     },
                                 ]} */
                             />
-                            <Card title="Accent Card" description="Accent border and text color." variant="accent" />
+                            <Card title="Accent Card" description="Accent border and text color." variant="accent"
+                                actions={[
+                                    {
+                                        content: 'accept',
+                                        variant: {
+                                            variant: 'secondary',
+                                            fullWidth: true
+                                        },
+                                    },
+                                ]}
+                            />
                             <Card
                                 title="Muted Card"
                                 description="Muted background and secondary text."
@@ -268,6 +278,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'primary',
+                                            fullWidth: true,
                                             onClick: () => alert('Edit'),
                                         },
                                     },
@@ -276,6 +287,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
+                                            fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -284,6 +296,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -292,6 +305,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -308,6 +322,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'primary',
+                                            fullWidth: true,
                                             onClick: () => alert('Edit'),
                                         },
                                     },
@@ -316,6 +331,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'outlined',
+                                            fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -324,6 +340,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
+                                            fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -332,6 +349,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
+                                            fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },

@@ -91,11 +91,19 @@ export default function Card({
                 <p className={classes.description}>{description}</p>
 
                 {Array.isArray(actions) && actions.length > 0 ? (
-                    <div className="flex gap-2 mt-2">
-                        {/* TODOD: add classname to disable default list style.  */}
-                        <ul className={cardActionOrientationClasses[actionOrientation]}>
+                    <div className="w-full mt-2">
+                        <ul className={cardActionOrientationClasses[actionOrientation] + ' w-full'}>
                             {actions.map((action, index) => (
-                                <li key={index} className={action.variant?.fullWidth ? 'w-full' : ''}>
+                                <li
+                                    key={index}
+                                    className={
+                                        action.variant?.fullWidth
+                                            ? actionOrientation === 'grid'
+                                                ? 'w-full col-span-full flex'
+                                                : 'w-full flex'
+                                            : 'flex'
+                                    }
+                                >
                                     <Button
                                         size={action.variant?.size}
                                         rounded={action.variant?.rounded}
