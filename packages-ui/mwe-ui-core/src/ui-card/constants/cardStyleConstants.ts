@@ -1,3 +1,12 @@
+export const cardInnerWrapperClasses: Record<string, string> = {
+    image: 'p-6 flex-1 flex flex-col',
+    icon: 'w-full flex flex-col items-center justify-center',
+    default: '',
+    accent: '',
+    muted: '',
+    status: '',
+    actions: '',
+};
 export const cardStyleVariants = {
     default: {
         container: 'bg-white rounded-lg shadow-lg p-6 border border-gray-200',
@@ -44,7 +53,22 @@ export const cardStyleVariants = {
 };
 
 export const cardActionOrientationClasses = {
-    row: 'flex flex-row gap-2 list-none p-0 m-0',
-    column: 'flex flex-col gap-2 list-none p-0 m-0',
-    grid: 'grid grid-cols-2 gap-2 list-none p-0 m-0',
+  row: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0',
+  column: 'flex flex-col gap-2 list-none p-0 m-0',
+  grid: 'grid grid-cols-2 gap-2 list-none p-0 m-0 sm:flex sm:flex-col', 
+};
+
+export const cardActionItemClasses: Record<'row' | 'column' | 'grid', { fullWidth: string; default: string; }> = {
+    row: {
+        fullWidth: 'w-full flex',
+        default: 'flex',
+    },
+    column: {
+        fullWidth: 'w-full flex',
+        default: 'flex',
+    },
+    grid: {
+        fullWidth: 'w-full col-span-full sm:flex',
+        default: 'sm:flex',
+    },
 };

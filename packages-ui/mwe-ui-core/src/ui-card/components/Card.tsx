@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Button } from '../../ui-interactive';
 import { Loading } from '../../ui-common';
-import { cardStyleVariants, cardActionOrientationClasses } from '../constants';
+import { cardStyleVariants, cardActionOrientationClasses, cardActionItemClasses, cardInnerWrapperClasses } from '../constants';
 import { CardAction, CardActionOrientation, CardStatus, CardVariant } from '../types';
 
 /* 
@@ -58,12 +58,12 @@ export default function Card({
                     </>
                 }
             >
-                {isLoading && (
+{/*                 {isLoading && (
                     <span className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
                         <span className="animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-gray-700"></span>
                     </span>
-                )}
-            </Suspense>
+                )} */}
+        
 
             {imageSrc && variant === 'image' && (
                 <div className="relative h-32 w-full overflow-hidden bg-gray-100">
@@ -76,15 +76,7 @@ export default function Card({
                 </div>
             )}
 
-            <div
-                className={
-                    variant === 'image'
-                        ? 'p-6 flex-1 flex flex-col'
-                        : variant === 'icon'
-                          ? 'w-full flex flex-col items-center justify-center'
-                          : ''
-                }
-            >
+            <div className={cardInnerWrapperClasses[variant]}>
                 {icon && variant === 'icon' && <span className="material-icons text-accent text-3xl mb-2">{icon}</span>}
 
                 <h3 className={classes.title}>{title}</h3>
@@ -98,10 +90,8 @@ export default function Card({
                                     key={index}
                                     className={
                                         action.variant?.fullWidth
-                                            ? actionOrientation === 'grid'
-                                                ? 'w-full col-span-full flex'
-                                                : 'w-full flex'
-                                            : 'flex'
+                                            ? cardActionItemClasses[actionOrientation].fullWidth
+                                            : cardActionItemClasses[actionOrientation].default
                                     }
                                 >
                                     <Button
@@ -122,6 +112,7 @@ export default function Card({
                     ''
                 )}
             </div>
+            </Suspense>
         </div>
     );
 }

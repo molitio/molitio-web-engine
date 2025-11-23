@@ -1,8 +1,59 @@
 'use client';
 
-import { Button } from '@molitio/mwe-ui-core';
+import { Button, Loading } from '@molitio/mwe-ui-core';
 import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
+import { useState, useEffect, Suspense, use } from 'react';
+
+export function MOCK_FetchData(delayInSec: number) {
+    return new Promise<string>((resolve) => {
+        setTimeout(() => {
+            resolve('Data loaded');
+        }, delayInSec * 1000);
+    });
+}
+
+type MOCK_FetchDataState = 'loading' | 'ready';
+
+function ExampleCardWrapper() {
+    const [status, setStatus] = useState<MOCK_FetchDataState>('ready');
+
+    function MOCK_toggleStatus() {
+        setStatus((prev) => (prev === 'ready' ? 'loading' : 'ready'));
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            MOCK_toggleStatus();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
+    async function handleMockDataFetch() {
+        if (status === 'ready') {
+            const result = await MOCK_FetchData(10);
+            alert(` Status: ${result}`);
+        }
+    }
+
+    return (
+        <Card
+            title="Accent Card"
+            description="Accent border and text color."
+            variant="accent"
+            actions={[
+                {
+                    content: 'accept',
+                    variant: {
+                        variant: 'secondary',
+                        fullWidth: true,
+                        onClick: handleMockDataFetch,
+                    },
+                },
+            ]}
+        />
+    );
+}
 
 // FOR AI: create a mock component that does a timeout, than loads content, than loads again every 5 sec, this will be a mock to test suspense for the Card component.
 
@@ -195,13 +246,16 @@ export default function Home() {
                                     },
                                 ]} */
                             />
-                            <Card title="Accent Card" description="Accent border and text color." variant="accent"
+                            <Card
+                                title="Accent Card"
+                                description="Accent border and text color."
+                                variant="accent"
                                 actions={[
                                     {
                                         content: 'accept',
                                         variant: {
                                             variant: 'secondary',
-                                            fullWidth: true
+                                            fullWidth: true,
                                         },
                                     },
                                 ]}
@@ -252,7 +306,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            fullWidth: true,
+                                            //fullWidth: true,
                                             onClick: () => alert('Error'),
                                         },
                                     },
@@ -261,7 +315,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            fullWidth: true,
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -340,7 +394,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            fullWidth: true,
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -349,7 +403,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            fullWidth: true,
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -373,6 +427,8 @@ export default function Home() {
                                 variant="default"
                                 status="disabled"
                             />
+
+                            <ExampleCardWrapper />
                         </CardContainer>
                     </section>
 
