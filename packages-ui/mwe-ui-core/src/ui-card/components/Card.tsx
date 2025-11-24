@@ -1,7 +1,12 @@
 import { Suspense } from 'react';
 import { Button } from '../../ui-interactive';
 import { Loading } from '../../ui-common';
-import { cardStyleVariants, cardActionOrientationClasses, cardActionItemClasses, cardInnerWrapperClasses } from '../constants';
+import {
+    cardStyleVariants,
+    cardActionOrientationClasses,
+    cardActionItemClasses,
+    cardInnerWrapperClasses,
+} from '../constants';
 import { CardAction, CardActionOrientation, CardStatus, CardVariant } from '../types';
 
 /* 
@@ -58,60 +63,61 @@ export default function Card({
                     </>
                 }
             >
-{/*                 {isLoading && (
+                {/*                 {isLoading && (
                     <span className="absolute inset-0 flex items-center justify-center z-50 pointer-events-none">
                         <span className="animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-gray-700"></span>
                     </span>
                 )} */}
-        
 
-            {imageSrc && variant === 'image' && (
-                <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                    <img
-                        src={imageSrc}
-                        alt={imageAlt || title}
-                        className="w-full h-full object-contain"
-                        loading="lazy"
-                    />
-                </div>
-            )}
-
-            <div className={cardInnerWrapperClasses[variant]}>
-                {icon && variant === 'icon' && <span className="material-icons text-accent text-3xl mb-2">{icon}</span>}
-
-                <h3 className={classes.title}>{title}</h3>
-                <p className={classes.description}>{description}</p>
-
-                {Array.isArray(actions) && actions.length > 0 ? (
-                    <div className="w-full mt-2">
-                        <ul className={cardActionOrientationClasses[actionOrientation] + ' w-full'}>
-                            {actions.map((action, index) => (
-                                <li
-                                    key={index}
-                                    className={
-                                        action.variant?.fullWidth
-                                            ? cardActionItemClasses[actionOrientation].fullWidth
-                                            : cardActionItemClasses[actionOrientation].default
-                                    }
-                                >
-                                    <Button
-                                        size={action.variant?.size}
-                                        rounded={action.variant?.rounded}
-                                        variant={action.variant?.variant}
-                                        fullWidth={actionOrientation === 'grid' ? true : action.variant?.fullWidth}
-                                        onClick={action.variant?.onClick}
-                                        disabled={isInactive}
-                                    >
-                                        <div className={action.variant?.color}>{action.content}</div>
-                                    </Button>
-                                </li>
-                            ))}
-                        </ul>
+                {imageSrc && variant === 'image' && (
+                    <div className="relative h-32 w-full overflow-hidden bg-gray-100">
+                        <img
+                            src={imageSrc}
+                            alt={imageAlt || title}
+                            className="w-full h-full object-contain"
+                            loading="lazy"
+                        />
                     </div>
-                ) : (
-                    ''
                 )}
-            </div>
+
+                <div className={cardInnerWrapperClasses[variant]}>
+                    {icon && variant === 'icon' && (
+                        <span className="material-icons text-accent text-3xl mb-2">{icon}</span>
+                    )}
+
+                    <h3 className={classes.title}>{title}</h3>
+                    <p className={classes.description}>{description}</p>
+
+                    {Array.isArray(actions) && actions.length > 0 ? (
+                        <div className="w-full mt-2">
+                            <ul className={cardActionOrientationClasses[actionOrientation] + ' w-full'}>
+                                {actions.map((action, index) => (
+                                    <li
+                                        key={index}
+                                        className={
+                                            action.variant?.fullWidth
+                                                ? cardActionItemClasses[actionOrientation].fullWidth
+                                                : cardActionItemClasses[actionOrientation].default
+                                        }
+                                    >
+                                        <Button
+                                            size={action.variant?.size}
+                                            rounded={action.variant?.rounded}
+                                            variant={action.variant?.variant}
+                                            fullWidth={actionOrientation === 'grid' ? true : action.variant?.fullWidth}
+                                            onClick={action.variant?.onClick}
+                                            disabled={isInactive}
+                                        >
+                                            <div className={action.variant?.color}>{action.content}</div>
+                                        </Button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ) : (
+                        ''
+                    )}
+                </div>
             </Suspense>
         </div>
     );

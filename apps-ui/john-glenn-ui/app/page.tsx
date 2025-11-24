@@ -1,9 +1,9 @@
 'use client';
 
-import { Button, Loading } from '@molitio/mwe-ui-core';
+import { Button /*Loading*/ } from '@molitio/mwe-ui-core';
 import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
-import { useState, useEffect, Suspense, use } from 'react';
+import { useState, useEffect /*, Suspense, use*/ } from 'react';
 
 export function MOCK_FetchData(delayInSec: number) {
     return new Promise<string>((resolve) => {

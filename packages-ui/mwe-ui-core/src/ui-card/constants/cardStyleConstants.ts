@@ -53,12 +53,12 @@ export const cardStyleVariants = {
 };
 
 export const cardActionOrientationClasses = {
-  row: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0',
-  column: 'flex flex-col gap-2 list-none p-0 m-0',
-  grid: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0', 
+    row: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0',
+    column: 'flex flex-col gap-2 list-none p-0 m-0',
+    grid: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0',
 };
 
-export const cardActionItemClasses: Record<'row' | 'column' | 'grid', { fullWidth: string; default: string; }> = {
+export const cardActionItemClasses: Record<'row' | 'column' | 'grid', { fullWidth: string; default: string }> = {
     row: {
         fullWidth: 'w-full flex',
         default: 'flex',
