@@ -39,7 +39,7 @@ export function Button({
     className = '',
 }: ButtonProps) {
     const classes = [
-        'inline-flex items-center justify-center font-semibold rounded transition focus:outline-none',
+        'inline-flex items-center justify-center font-semibold rounded transition focus:outline-none transition-all duration-100 active:scale-95 active:brightness-90',
         color ? color : buttonVariantClasses[variant],
         buttonSizeClasses[size],
         fullWidth ? 'w-full' : '',
