@@ -5,7 +5,7 @@ import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
 import { useState, useEffect /*, Suspense, use*/ } from 'react';
 
-export function MOCK_FetchData(delayInSec: number) {
+function MOCK_FetchData(delayInSec: number) {
     return new Promise<string>((resolve) => {
         setTimeout(() => {
             resolve('Data loaded');
