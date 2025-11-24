@@ -385,7 +385,7 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'outlined',
-                                            fullWidth: true,
+                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },

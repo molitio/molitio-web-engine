@@ -55,7 +55,7 @@ export const cardStyleVariants = {
 export const cardActionOrientationClasses = {
   row: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0',
   column: 'flex flex-col gap-2 list-none p-0 m-0',
-  grid: 'grid grid-cols-2 gap-2 list-none p-0 m-0 sm:flex sm:flex-col', 
+  grid: 'flex flex-row flex-wrap gap-2 list-none p-0 m-0', 
 };
 
 export const cardActionItemClasses: Record<'row' | 'column' | 'grid', { fullWidth: string; default: string; }> = {
@@ -68,7 +68,7 @@ export const cardActionItemClasses: Record<'row' | 'column' | 'grid', { fullWidt
         default: 'flex',
     },
     grid: {
-        fullWidth: 'w-full col-span-full sm:flex',
-        default: 'sm:flex',
+        fullWidth: 'w-full basis-full flex',
+        default: 'flex-1 min-w-0 basis-[calc(50%-0.25rem)] flex',
     },
 };

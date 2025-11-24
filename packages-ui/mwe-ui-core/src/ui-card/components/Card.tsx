@@ -98,7 +98,7 @@ export default function Card({
                                         size={action.variant?.size}
                                         rounded={action.variant?.rounded}
                                         variant={action.variant?.variant}
-                                        fullWidth={action.variant?.fullWidth}
+                                        fullWidth={actionOrientation === 'grid' ? true : action.variant?.fullWidth}
                                         onClick={action.variant?.onClick}
                                         disabled={isInactive}
                                     >
