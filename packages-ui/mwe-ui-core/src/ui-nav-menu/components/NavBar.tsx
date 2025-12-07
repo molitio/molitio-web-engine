@@ -1,7 +1,1 @@
-
-
-export default function NavBar() {
-    return (
-        <nav></nav>
-    );
-}
+import { NavItem, NavBarProps } from "./types/index.ts";
