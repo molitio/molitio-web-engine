@@ -1,40 +1,35 @@
 import { PropsWithChildren, ReactNode } from 'react';
 import { ButtonVariant } from '../types';
+import { buttonSizeClasses, buttonVariantClasses } from '../constants';
 
-const variantClasses = {
-    primary: 'bg-primary text-white hover:bg-primary-dark',
-    secondary: 'bg-secondary text-white hover:bg-secondary-dark',
-    outlined: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-white',
-    text: 'bg-transparent text-primary hover:underline',
-    danger: 'bg-error text-white hover:bg-error-dark',
-};
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
-const sizeClasses = {
-    sm: 'py-2 px-4 text-sm',
-    md: 'py-3 px-6 text-base',
-    lg: 'py-4 px-8 text-lg',
-};
+export type ButtonRounded = 'sm' | 'md' | 'lg';
 
-export type ButtonProps = PropsWithChildren & {
+export type ButtonActionType = 'button' | 'submit' | 'reset';
+
+export type ButtonProps = {
     variant?: ButtonVariant;
-    size?: 'sm' | 'md' | 'lg';
     fullWidth?: boolean;
-    rounded?: 'sm' | 'md' | 'lg' | '';
+    size?: ButtonSize;
+    rounded?: ButtonRounded;
+    color?: string;
     disabled?: boolean;
     loading?: boolean;
     startIcon?: ReactNode;
     endIcon?: ReactNode;
-    type?: 'button' | 'submit' | 'reset';
+    type?: ButtonActionType;
     onClick?: () => void;
     className?: string;
-};
+} & PropsWithChildren;
 
 export function Button({
     children,
     variant = 'primary',
     size = 'md',
     fullWidth = false,
-    rounded = '',
+    rounded,
+    color = '',
     disabled = false,
     loading = false,
     startIcon,
@@ -44,9 +39,9 @@ export function Button({
     className = '',
 }: ButtonProps) {
     const classes = [
-        'inline-flex items-center justify-center font-semibold rounded transition focus:outline-none',
-        variantClasses[variant],
-        sizeClasses[size],
+        'inline-flex items-center justify-center font-semibold rounded transition focus:outline-none transition-all duration-100 active:scale-95 active:brightness-90',
+        color ? color : buttonVariantClasses[variant],
+        buttonSizeClasses[size],
         fullWidth ? 'w-full' : '',
         rounded ? `rounded-${rounded}` : '',
         disabled || loading ? 'opacity-50 cursor-not-allowed' : '',

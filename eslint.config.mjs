@@ -25,6 +25,7 @@ export default [
             '**/.artifacts',
             '**/*.test.*',
             '**/*.spec.*',
+            'packages-ui/sanity-integration/**/*.ts',
         ],
     },
 

@@ -1,7 +1,61 @@
 'use client';
 
-import { Button } from '@molitio/mwe-ui-core';
+import { Button /*Loading*/ } from '@molitio/mwe-ui-core';
+import { Card, CardContainer } from '@molitio/mwe-ui-core';
 import Image from 'next/image';
+import { useState, useEffect /*, Suspense, use*/ } from 'react';
+
+function MOCK_FetchData(delayInSec: number) {
+    return new Promise<string>((resolve) => {
+        setTimeout(() => {
+            resolve('Data loaded');
+        }, delayInSec * 1000);
+    });
+}
+
+type MOCK_FetchDataState = 'loading' | 'ready';
+
+function ExampleCardWrapper() {
+    const [status, setStatus] = useState<MOCK_FetchDataState>('ready');
+
+    function MOCK_toggleStatus() {
+        setStatus((prev) => (prev === 'ready' ? 'loading' : 'ready'));
+    }
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            MOCK_toggleStatus();
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
+
+    async function handleMockDataFetch() {
+        if (status === 'ready') {
+            const result = await MOCK_FetchData(10);
+            alert(` Status: ${result}`);
+        }
+    }
+
+    return (
+        <Card
+            title="Accent Card"
+            description="Accent border and text color."
+            variant="accent"
+            actions={[
+                {
+                    content: 'accept',
+                    variant: {
+                        variant: 'secondary',
+                        fullWidth: true,
+                        onClick: handleMockDataFetch,
+                    },
+                },
+            ]}
+        />
+    );
+}
+
+// FOR AI: create a mock component that does a timeout, than loads content, than loads again every 5 sec, this will be a mock to test suspense for the Card component.
 
 export default function Home() {
     return (
@@ -178,86 +232,204 @@ export default function Home() {
                         </div>
                     </section>
 
-                    {/* Section: Cards */}
+                    {/* Section: Card Container */}
                     <section>
-                        <h2 className="text-2xl font-bold text-primary mb-4">Cards Showcase</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            {/* Default Card */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Default Card</h3>
-                                <p className="text-secondary mb-4">
-                                    This is a default card with primary and secondary text.
-                                </p>
-                                <button className="bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition">
-                                    Primary Action
-                                </button>
-                            </div>
-                            {/* Accent Card */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border-2 border-accent">
-                                <h3 className="font-semibold text-lg text-accent mb-2">Accent Card</h3>
-                                <p className="text-secondary mb-4">Accent border and text color.</p>
-                                <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                    Accent Action
-                                </button>
-                            </div>
-                            {/* Muted Card */}
-                            <div className="bg-muted rounded-lg shadow-inner p-6 border border-gray-300">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Muted Card</h3>
-                                <p className="text-secondary mb-4">Muted background and secondary text.</p>
-                                <button className="bg-secondary text-white px-3 py-1 rounded hover:bg-primary transition">
-                                    Secondary Action
-                                </button>
-                            </div>
-                            {/* Card with Image */}
-                            <div className="bg-white rounded-lg shadow-lg p-0 border border-gray-200 flex flex-col overflow-hidden">
-                                <div className="relative h-32 w-full overflow-hidden bg-gray-100">
-                                    <Image
-                                        src="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
-                                        alt="Random"
-                                        fill
-                                        style={{ objectFit: 'contain', objectPosition: 'center' }}
-                                        sizes="(max-width: 768px) 100vw, 33vw"
-                                    />
-                                </div>
-                                <div className="p-6 flex-1 flex flex-col">
-                                    <h3 className="font-semibold text-lg text-primary mb-2">Image Card</h3>
-                                    <p className="text-secondary mb-4">Card with image header.</p>
-                                    <button className="bg-primary text-white px-3 py-1 rounded hover:bg-accent transition">
-                                        View
-                                    </button>
-                                </div>
-                            </div>
-                            {/* Card with Icon */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col items-center">
-                                <span className="material-icons text-accent text-3xl mb-2">star</span>
-                                <h3 className="font-semibold text-lg text-primary mb-2">Icon Card</h3>
-                                <p className="text-secondary mb-4">Card with icon and action.</p>
-                                <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                    Favorite
-                                </button>
-                            </div>
-                            {/* Card with Actions */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200 flex flex-col">
-                                <h3 className="font-semibold text-lg text-primary mb-2">Actions Card</h3>
-                                <p className="text-secondary mb-4">Card with multiple actions.</p>
-                                <div className="flex gap-2">
-                                    <button className="bg-primary text-white px-3 py-1 rounded hover:bg-primary/80 transition">
-                                        Save
-                                    </button>
-                                    <button className="bg-accent text-white px-3 py-1 rounded hover:bg-accent/80 transition">
-                                        Share
-                                    </button>
-                                </div>
-                            </div>
-                            {/* Card with Status */}
-                            <div className="bg-white rounded-lg shadow-lg p-6 border border-success">
-                                <h3 className="font-semibold text-lg text-success mb-2">Status Card</h3>
-                                <p className="text-secondary mb-4">Card with success status border and text.</p>
-                                <button className="bg-success text-white px-3 py-1 rounded hover:bg-success/80 transition">
-                                    Success
-                                </button>
-                            </div>
-                        </div>
+                        <CardContainer columns={3} gap="gap-6" title="Card Showcase">
+                            <Card
+                                title="Default Card"
+                                description="This is a default card with primary and secondary text."
+                                variant="default"
+                                /*            actions={[
+                                    {
+                                        text: 'default',
+                                        variant: 'primary',
+                                    },
+                                ]} */
+                            />
+                            <Card
+                                title="Accent Card"
+                                description="Accent border and text color."
+                                variant="accent"
+                                actions={[
+                                    {
+                                        content: 'accept',
+                                        variant: {
+                                            variant: 'secondary',
+                                            fullWidth: true,
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Muted Card"
+                                description="Muted background and secondary text."
+                                variant="muted"
+                            />
+                            <Card
+                                title="Image Card"
+                                description="Card with image header."
+                                variant="image"
+                                imageSrc="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
+                            />
+                            <Card
+                                title="Icon Card"
+                                description="Card with icon and action."
+                                variant="icon"
+                                icon="star"
+                            />
+                            <Card
+                                title="Actions Card"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actionOrientation="grid"
+                                actions={[
+                                    {
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            fullWidth: true,
+                                            onClick: () => alert('Save'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Error',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Error'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Actions Card Vertical"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actionOrientation="column"
+                                actions={[
+                                    {
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            fullWidth: true,
+                                            onClick: () => alert('Edit'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Actions Card Horizontal"
+                                description="Card with multiple actions."
+                                variant="actions"
+                                actionOrientation="row"
+                                actions={[
+                                    {
+                                        content: 'Save',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'primary',
+                                            fullWidth: true,
+                                            onClick: () => alert('Edit'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'outlined',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                    {
+                                        content: 'Share',
+                                        variant: {
+                                            color: 'text-accent',
+                                            variant: 'danger',
+                                            //fullWidth: true,
+                                            onClick: () => alert('Share'),
+                                        },
+                                    },
+                                ]}
+                            />
+                            <Card
+                                title="Status Card"
+                                description="Card with success status border and text."
+                                variant="status"
+                                /*  buttonAction={() => alert('Status Card')} */
+                            />
+                            <Card
+                                title="Loading Card"
+                                description="Loading card component."
+                                variant="accent"
+                                status="loading"
+                            />
+                            <Card
+                                title="Disabled Card"
+                                description="Disabled card."
+                                variant="default"
+                                status="disabled"
+                            />
+
+                            <ExampleCardWrapper />
+                        </CardContainer>
                     </section>
 
                     {/* Section: Input Controls */}

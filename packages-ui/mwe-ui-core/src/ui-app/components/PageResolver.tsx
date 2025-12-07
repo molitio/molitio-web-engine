@@ -40,5 +40,6 @@ export function PageResolver({ nodeId, locale, componentRegistry }: PageResolver
         return <div>Component not found for type: {contentType}</div>;
     }
 
+    // @ts-expect-error - Dynamic component with unknown props from registry
     return <Component data={localizedContent} />;
 }

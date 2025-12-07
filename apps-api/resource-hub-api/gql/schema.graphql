@@ -13,25 +13,25 @@ type LabelValue {
 }
 
 type SpecificationLabel {
-  _id: String!
-  createdAt: Float!
-  updatedAt: Float
-  createdBy: String!
-  updatedBy: String
-  name: String!
-  description: String
-  labelValueCollection: [LabelValue!]!
+    _id: String!
+    createdAt: Float!
+    updatedAt: Float
+    createdBy: String!
+    updatedBy: String
+    name: String!
+    description: String
+    labelValueCollection: [LabelValue!]!
 }
 
 type Resource {
-  _id: String!
-  createdAt: Float!
-  updatedAt: Float
-  createdBy: String!
-  updatedBy: String
-  name: String!
-  description: String
-  specificationLabels: [SpecificationLabel!]!
+    _id: String!
+    createdAt: Float!
+    updatedAt: Float
+    createdBy: String!
+    updatedBy: String
+    name: String!
+    description: String
+    specificationLabels: [SpecificationLabel!]!
 }
 
 type UserPublic {
@@ -61,19 +61,33 @@ type Query {
 }
 
 type Mutation {
-  createUserPublic(input: CreateUserPublicInput!): UserPublic!
-  updateUserPublic(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPublic!
-  deleteUserPublic(id: String!): UserPublic!
-  createUserPrivate(usernamePublic: String!, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
-  updateUserPrivate(id: String!, usernamePublic: String, resourceCollectionId: String, userPersistedConfigId: String): UserPrivate!
-  deleteUserPrivate(id: String!): UserPrivate!
-  createResource(name: String!, description: String!): Resource!
-  updateResource(_id: String!, name: String!, description: String): Resource!
-  deleteResource(id: String!): Resource!
-  createSpecificationLabel(name: String!, description: String): SpecificationLabel!
-  updateSpecificationLabel(_id: String!, name: String!, description: String): SpecificationLabel!
-  deleteSpecificationLabel(id: String!): SpecificationLabel!
-  deleteLabelValue(_id: String!): LabelValue!
+    createUserPublic(input: CreateUserPublicInput!): UserPublic!
+    updateUserPublic(
+        id: String!
+        usernamePublic: String
+        resourceCollectionId: String
+        userPersistedConfigId: String
+    ): UserPublic!
+    deleteUserPublic(id: String!): UserPublic!
+    createUserPrivate(
+        usernamePublic: String!
+        resourceCollectionId: String
+        userPersistedConfigId: String
+    ): UserPrivate!
+    updateUserPrivate(
+        id: String!
+        usernamePublic: String
+        resourceCollectionId: String
+        userPersistedConfigId: String
+    ): UserPrivate!
+    deleteUserPrivate(id: String!): UserPrivate!
+    createResource(name: String!, description: String!): Resource!
+    updateResource(_id: String!, name: String!, description: String): Resource!
+    deleteResource(id: String!): Resource!
+    createSpecificationLabel(name: String!, description: String): SpecificationLabel!
+    updateSpecificationLabel(_id: String!, name: String!, description: String): SpecificationLabel!
+    deleteSpecificationLabel(id: String!): SpecificationLabel!
+    deleteLabelValue(_id: String!): LabelValue!
 }
 
 input CreateUserPublicInput {
