@@ -11,4 +11,5 @@ export type NavBarProps = {
     logoSrc: string;
     brandMessage: string;
     menuItems: NavItem[];
+    user?: { name: string; avatarUrl?: string };
 };

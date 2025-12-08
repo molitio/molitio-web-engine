@@ -2,8 +2,22 @@
 
 import { Button /*Loading*/ } from '@molitio/mwe-ui-core';
 import { Card, CardContainer } from '@molitio/mwe-ui-core';
+import { NavBar } from '@molitio/mwe-ui-core'; 
 import Image from 'next/image';
 import { useState, useEffect /*, Suspense, use*/ } from 'react';
+
+const MOCK_MENU_ITEMS = [
+    { id: '1', label: 'Home', href: '#Home' },
+    { id: '2', label: 'Features', href: '#Features' },
+    { id: '3', label: 'Pricing', href: '#Pricing' },
+    { id: '4', label: 'About', href: '#About' },
+    { id: '5', label: 'Contact', href: '#Contact' },
+];
+
+const MOCK_USER = {
+    name: 'John Glenn',
+    avatarUrl: 'https://avatars.githubusercontent.com/u/73017569?s=96&v=4'
+};
 
 function MOCK_FetchData(delayInSec: number) {
     return new Promise<string>((resolve) => {
@@ -55,103 +69,21 @@ function ExampleCardWrapper() {
     );
 }
 
-// FOR AI: create a mock component that does a timeout, than loads content, than loads again every 5 sec, this will be a mock to test suspense for the Card component.
-
 export default function Home() {
     return (
         <div className="min-h-screen bg-secondary flex flex-col text-primary">
-            {/* Navbar: Primary background, onPrimary text */}
-            <nav className="bg-primary text-white px-6 py-4 flex items-center justify-between shadow-md">
-                {/* Logo and Brand */}
-                <div className="flex items-center gap-6">
-                    <span className="font-bold text-lg">Molitio Sandbox</span>
-                    {/* Nav Menu */}
-                    <ul className="hidden md:flex gap-4">
-                        <li>
-                            <a
-                                href="#"
-                                className="px-3 py-2 rounded hover:bg-primary/80 transition bg-secondary text-white"
-                            >
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="px-3 py-2 rounded hover:bg-primary/80 transition">
-                                Features
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="px-3 py-2 rounded hover:bg-primary/80 transition">
-                                Pricing
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" className="px-3 py-2 rounded hover:bg-primary/80 transition">
-                                About
-                            </a>
-                        </li>
-                        <li className="relative group">
-                            <button className="px-3 py-2 rounded hover:bg-primary/80 transition flex items-center gap-1">
-                                More
-                                <span className="material-icons text-xs">expand_more</span>
-                            </button>
-                            {/* Dropdown */}
-                            <ul className="absolute left-0 top-full mt-2 bg-white text-primary rounded shadow-lg min-w-[120px] hidden group-hover:block">
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-tertiary">
-                                        Docs
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-tertiary">
-                                        Blog
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" className="block px-4 py-2 hover:bg-tertiary">
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                {/* Right Side: Search, CTA, Avatar */}
-                <div className="flex items-center gap-4">
-                    {/* Search */}
-                    <div className="hidden md:block">
-                        <input
-                            type="text"
-                            placeholder="Search..."
-                            className="px-3 py-2 rounded bg-tertiary text-primary border border-gray-300 focus:outline-none focus:border-accent"
-                        />
-                    </div>
-                    {/* CTA Buttons */}
-                    <button className="bg-accent text-white px-4 py-2 rounded-md hover:bg-accent/80 transition">
-                        Accent CTA
-                    </button>
-                    <button className="bg-secondary text-white px-4 py-2 rounded-md hover:bg-primary transition">
-                        Secondary
-                    </button>
-                    {/* User Avatar */}
-                    <div className="relative w-9 h-9 rounded-full bg-muted overflow-hidden shadow">
-                        <Image
-                            src="https://avatars.githubusercontent.com/u/73017569?s=96&v=4"
-                            alt="User avatar"
-                            fill
-                            style={{ objectFit: 'cover', objectPosition: 'center' }}
-                        />
-                    </div>
-                </div>
-                {/* Mobile Menu Button */}
-                <button className="md:hidden ml-4 p-2 rounded bg-secondary text-white">
-                    <span className="material-icons">menu</span>
-                </button>
-            </nav>
+            
+            <NavBar 
+                logoSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzNiODJmNiIgLz48dGV4dCB4PSI1MCIgeT0iNjUiIGZvbnQtc2l6ZT0iNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPk08L3RleHQ+PC9zdmc+"
+                // filepath: apps-ui/john-glenn-ui/app/page.tsx
+                brandMessage="Molitio Sandbox"
+                menuItems={MOCK_MENU_ITEMS}
+                user={MOCK_USER}
+            />
 
             <div className="flex flex-1">
                 {/* Sidebar: Secondary background, onSecondary text */}
-                <aside className="w-56 bg-primary text-white flex flex-col p-4 space-y-2">
+                <aside className="w-56 bg-primary text-white flex flex-col p-4 space-y-2 hidden lg:flex">
                     <div className="font-semibold mb-2 text-white">Sidebar</div>
                     <a href="#" className="hover:text-accent text-white">
                         Dashboard
@@ -239,12 +171,6 @@ export default function Home() {
                                 title="Default Card"
                                 description="This is a default card with primary and secondary text."
                                 variant="default"
-                                /*            actions={[
-                                    {
-                                        text: 'default',
-                                        variant: 'primary',
-                                    },
-                                ]} */
                             />
                             <Card
                                 title="Accent Card"
@@ -306,7 +232,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Error'),
                                         },
                                     },
@@ -315,7 +240,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -350,7 +274,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -359,7 +282,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -385,7 +307,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'outlined',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -394,7 +315,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -403,7 +323,6 @@ export default function Home() {
                                         variant: {
                                             color: 'text-accent',
                                             variant: 'danger',
-                                            //fullWidth: true,
                                             onClick: () => alert('Share'),
                                         },
                                     },
@@ -413,7 +332,6 @@ export default function Home() {
                                 title="Status Card"
                                 description="Card with success status border and text."
                                 variant="status"
-                                /*  buttonAction={() => alert('Status Card')} */
                             />
                             <Card
                                 title="Loading Card"
