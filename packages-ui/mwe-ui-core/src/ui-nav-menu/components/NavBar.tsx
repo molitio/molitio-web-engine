@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavBarProps } from './types';
+import { NavBarProps } from './types/types';
 import NavMenu from './NavMenu';
 import Logo from '../../ui-common/components/Logo';
 import BrandMessage from '../../ui-common/components/BrandMessage';
@@ -13,9 +13,9 @@ export default function NavBar({ logoSrc, brandMessage, menuItems, user }: NavBa
                 <div className="flex items-center gap-4">
                     <Logo 
                         src={logoSrc} 
-                        alt="App Logo" 
-                        heightClass="h-10" 
-                        widthClass="w-auto" 
+                        alt="App Logo"
+                        heightClass="h-10"
+                        widthClass="w-auto"
                     />
                     
                     <div className="hidden sm:block">

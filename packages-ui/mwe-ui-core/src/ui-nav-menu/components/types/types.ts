@@ -5,6 +5,7 @@ export type NavItem = {
     label: string;
     href: string;
     icon?: ReactNode;
+    isActive?: boolean;
 };
 
 export type NavBarProps = {
