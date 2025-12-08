@@ -75,10 +75,43 @@ export default function Home() {
             
             <NavBar 
                 logoSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzNiODJmNiIgLz48dGV4dCB4PSI1MCIgeT0iNjUiIGZvbnQtc2l6ZT0iNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPk08L3RleHQ+PC9zdmc+"
-                // filepath: apps-ui/john-glenn-ui/app/page.tsx
                 brandMessage="Molitio Sandbox"
                 menuItems={MOCK_MENU_ITEMS}
                 user={MOCK_USER}
+                styles={{
+                    container: {
+                        bgColor: 'bg-slate-900',
+                        borderColor: 'border-slate-800',
+                        borderWidth: 'border-b',
+                        shadow: 'shadow-lg',
+                        height: 'h-16',
+                        padding: 'px-6',
+                    },
+                    menuItem: {
+                        textColor: 'text-slate-300',
+                        hoverTextColor: 'hover:text-blue-400',
+                        hoverBgColor: 'hover:bg-slate-800',
+                        activeTextColor: 'text-blue-400',
+                        activeBgColor: 'bg-slate-800',
+                        activeFontWeight: 'font-medium',
+                        padding: 'px-4 py-2',
+                        rounded: 'rounded-lg',
+                        gap: 'gap-2',
+                    },
+                    hamburger: {
+                        textColor: 'text-slate-300',
+                        hoverTextColor: 'hover:text-blue-400',
+                        padding: 'p-2',
+                        iconSize: 'text-2xl',
+                    },
+                    dropdown: {
+                        bgColor: 'bg-slate-900',
+                        borderColor: 'border-slate-800',
+                        shadow: 'shadow-xl',
+                        padding: 'p-3',
+                        gap: 'gap-1',
+                    },
+                }}
             />
 
             <div className="flex flex-1">

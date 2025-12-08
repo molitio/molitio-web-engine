@@ -5,10 +5,23 @@ import Logo from '../../ui-common/components/Logo';
 import BrandMessage from '../../ui-common/components/BrandMessage';
 import AccountManagement from '../../ui-common/components/AccountManagement';
 
-export default function NavBar({ logoSrc, brandMessage, menuItems, user }: NavBarProps) {
+export default function NavBar({ logoSrc, brandMessage, menuItems, user, styles }: NavBarProps) {
+    const defaultStyles = {
+        container: {
+            bgColor: 'bg-white',
+            borderColor: 'border-gray-200',
+            borderWidth: 'border-b',
+            shadow: 'shadow-sm',
+            height: 'h-16',
+            padding: 'px-4',
+        },
+    };
+
+    const containerStyles = { ...defaultStyles.container, ...styles?.container };
+
     return (
-        <nav className="w-full bg-white shadow-sm border-b border-gray-200">
-            <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+        <nav className={`w-full ${containerStyles.bgColor} ${containerStyles.shadow} ${containerStyles.borderWidth} ${containerStyles.borderColor}`}>
+            <div className={`container mx-auto ${containerStyles.padding} ${containerStyles.height} flex items-center justify-between`}>
                 
                 <div className="flex items-center gap-4">
                     <Logo 
@@ -27,7 +40,7 @@ export default function NavBar({ logoSrc, brandMessage, menuItems, user }: NavBa
                     </div>
                 </div>
 
-                <NavMenu items={menuItems} />
+                <NavMenu items={menuItems} styles={styles} />
 
                 <div className="hidden md:block ml-4 pl-4 border-l border-gray-300">
                     <AccountManagement 
