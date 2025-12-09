@@ -77,7 +77,8 @@ export default function Home() {
                 logoSrc="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0NSIgZmlsbD0iIzNiODJmNiIgLz48dGV4dCB4PSI1MCIgeT0iNjUiIGZvbnQtc2l6ZT0iNTAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IndoaXRlIiBmb250LWZhbWlseT0ic2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9ImJvbGQiPk08L3RleHQ+PC9zdmc+"
                 brandMessage="Molitio Sandbox"
                 menuItems={MOCK_MENU_ITEMS}
-                user={MOCK_USER}
+                accountManagement={true}
+                //user={MOCK_USER}
                 styles={{
                     container: {
                         bgColor: 'bg-slate-900',
@@ -86,6 +87,31 @@ export default function Home() {
                         shadow: 'shadow-lg',
                         height: 'h-16',
                         padding: 'px-6',
+                    },
+                    layout: {
+                        logoSection: {
+                            padding: 'pl-[3vw]',  // 8% of viewport width
+                            margin: '',
+                        },
+                        accountSection: {
+                            padding: 'pr-[8vw]',  // 8% of viewport width
+                            margin: '',
+                        },
+                    },
+                    logo: {
+                        height: 'h-10',
+                        width: 'w-auto',
+                        shadow: 'shadow-lg shadow-blue-500/50',
+                        animation: 'hover:scale-110 hover:rotate-3 transition-all duration-300',
+                        rounded: 'rounded-full',
+                        border: '',
+                    },
+                    brandMessage: {
+                        textColor: 'text-slate-100',
+                        fontSize: 'text-xl',
+                        fontWeight: 'font-bold',
+                        fontFamily: 'font-sans',
+                        animation: 'hover:text-blue-400 transition-colors duration-300',
                     },
                     menuItem: {
                         textColor: 'text-slate-300',
@@ -97,6 +123,7 @@ export default function Home() {
                         padding: 'px-4 py-2',
                         rounded: 'rounded-lg',
                         gap: 'gap-2',
+                        animation: 'hover:scale-110 transition-all duration-200',
                     },
                     hamburger: {
                         textColor: 'text-slate-300',
@@ -110,6 +137,43 @@ export default function Home() {
                         shadow: 'shadow-xl',
                         padding: 'p-3',
                         gap: 'gap-1',
+                    },
+                    accountManagement: {
+                        dividerColor: 'border-slate-700',
+                        loginButton: {
+                            textColor: 'text-blue-400',
+                            hoverTextColor: 'hover:text-blue-300',
+                            hoverBgColor: 'hover:bg-slate-800',
+                            fontSize: 'text-sm',
+                            fontWeight: 'font-medium',
+                            padding: 'px-4 py-2',
+                            rounded: 'rounded-lg',
+                            animation: 'hover:scale-105 transition-all duration-200',
+                        },
+                        avatar: {
+                            size: 'w-9 h-9',
+                            rounded: 'rounded-full',
+                            border: 'border-2 border-blue-500',
+                            shadow: 'shadow-md shadow-blue-500/30',
+                            animation: 'hover:scale-110 hover:border-blue-400 transition-all duration-200',
+                        },
+                        avatarFallback: {
+                            bgColor: 'bg-blue-600',
+                            textColor: 'text-white',
+                            fontSize: 'text-sm',
+                            fontWeight: 'font-bold',
+                        },
+                        userName: {
+                            textColor: 'text-slate-200',
+                            fontSize: 'text-sm',
+                            fontWeight: 'font-medium',
+                        },
+                        logoutButton: {
+                            textColor: 'text-slate-400',
+                            hoverTextColor: 'hover:text-red-400',
+                            fontSize: 'text-xs',
+                            animation: 'hover:scale-105 transition-all duration-200',
+                        },
                     },
                 }}
             />

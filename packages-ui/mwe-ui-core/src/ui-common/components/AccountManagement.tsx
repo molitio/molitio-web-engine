@@ -5,14 +5,41 @@ export type UserProfile = {
     avatarUrl?: string;
 };
 
-export type AccountManagementClassNames = {
-    container?: string;
-    loginButton?: string;
-    avatar?: string;
-    avatarFallback?: string;
-    userInfoContainer?: string;
-    userName?: string;
-    logoutButton?: string;
+export type AccountManagementStyles = {
+    loginButton?: {
+        textColor?: string;
+        hoverTextColor?: string;
+        hoverBgColor?: string;
+        fontSize?: string;
+        fontWeight?: string;
+        padding?: string;
+        rounded?: string;
+        animation?: string;
+    };
+    avatar?: {
+        size?: string;
+        rounded?: string;
+        border?: string;
+        shadow?: string;
+        animation?: string;
+    };
+    avatarFallback?: {
+        bgColor?: string;
+        textColor?: string;
+        fontSize?: string;
+        fontWeight?: string;
+    };
+    userName?: {
+        textColor?: string;
+        fontSize?: string;
+        fontWeight?: string;
+    };
+    logoutButton?: {
+        textColor?: string;
+        hoverTextColor?: string;
+        fontSize?: string;
+        animation?: string;
+    };
 };
 
 export type AccountManagementProps = {
@@ -20,7 +47,7 @@ export type AccountManagementProps = {
     loginLabel?: string;
     onLogin?: () => void;
     onLogout?: () => void;
-    classNames?: AccountManagementClassNames;
+    styles?: AccountManagementStyles;
     className?: string;
 };
 
@@ -29,53 +56,84 @@ export default function AccountManagement({
     loginLabel = 'Login', 
     onLogin, 
     onLogout,
-    classNames = {},
+    styles,
     className = '' 
 }: AccountManagementProps) {
-    
-    const defaultStyles = {
-        loginButton: "text-sm font-medium text-blue-600 hover:text-blue-800 transition-colors px-3 py-2 rounded-md hover:bg-blue-50",
-        container: "flex items-center gap-3",
-        avatar: "w-8 h-8 rounded-full object-cover border border-gray-200",
-        avatarFallback: "w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-600 text-xs font-bold",
-        userInfoContainer: "flex flex-col",
-        userName: "text-sm font-medium text-gray-700",
-        logoutButton: "text-xs text-gray-500 hover:text-red-500 text-left transition-colors"
-    };
 
     if (!user) {
+        const loginBtnStyles = styles?.loginButton || {};
         return (
             <button 
                 onClick={onLogin}
-                className={`${defaultStyles.loginButton} ${classNames.loginButton || ''} ${className}`}
+                className={`
+                    ${loginBtnStyles.textColor || 'text-blue-600'}
+                    ${loginBtnStyles.hoverTextColor || 'hover:text-blue-800'}
+                    ${loginBtnStyles.hoverBgColor || 'hover:bg-blue-50'}
+                    ${loginBtnStyles.fontSize || 'text-sm'}
+                    ${loginBtnStyles.fontWeight || 'font-medium'}
+                    ${loginBtnStyles.padding || 'px-3 py-2'}
+                    ${loginBtnStyles.rounded || 'rounded-md'}
+                    ${loginBtnStyles.animation || 'transition-colors'}
+                    ${className}
+                `.trim().replace(/\s+/g, ' ')}
             >
                 {loginLabel}
             </button>
         );
     }
 
+    const avatarStyles = styles?.avatar || {};
+    const avatarFallbackStyles = styles?.avatarFallback || {};
+    const userNameStyles = styles?.userName || {};
+    const logoutBtnStyles = styles?.logoutButton || {};
+
     return (
-        <div className={`${defaultStyles.container} ${classNames.container || ''} ${className}`}>
+        <div className={`flex items-center gap-3 ${className}`}>
             {user.avatarUrl ? (
                 <img 
                     src={user.avatarUrl} 
                     alt={user.name} 
-                    className={`${defaultStyles.avatar} ${classNames.avatar || ''}`}
+                    className={`
+                        object-cover
+                        ${avatarStyles.size || 'w-8 h-8'}
+                        ${avatarStyles.rounded || 'rounded-full'}
+                        ${avatarStyles.border || 'border border-gray-200'}
+                        ${avatarStyles.shadow || ''}
+                        ${avatarStyles.animation || ''}
+                    `.trim().replace(/\s+/g, ' ')}
                 />
             ) : (
-                <div className={`${defaultStyles.avatarFallback} ${classNames.avatarFallback || ''}`}>
+                <div className={`
+                    flex items-center justify-center
+                    ${avatarStyles.size || 'w-8 h-8'}
+                    ${avatarStyles.rounded || 'rounded-full'}
+                    ${avatarFallbackStyles.bgColor || 'bg-gray-200'}
+                    ${avatarFallbackStyles.textColor || 'text-gray-600'}
+                    ${avatarFallbackStyles.fontSize || 'text-xs'}
+                    ${avatarFallbackStyles.fontWeight || 'font-bold'}
+                `.trim().replace(/\s+/g, ' ')}>
                     {user.name.charAt(0).toUpperCase()}
                 </div>
             )}
 
-            <div className={`${defaultStyles.userInfoContainer} ${classNames.userInfoContainer || ''}`}>
-                <span className={`${defaultStyles.userName} ${classNames.userName || ''}`}>
+            <div className="flex flex-col">
+                <span className={`
+                    ${userNameStyles.textColor || 'text-gray-700'}
+                    ${userNameStyles.fontSize || 'text-sm'}
+                    ${userNameStyles.fontWeight || 'font-medium'}
+                `.trim().replace(/\s+/g, ' ')}>
                     Hi, {user.name}
                 </span>
                 {onLogout && (
                     <button 
                         onClick={onLogout} 
-                        className={`${defaultStyles.logoutButton} ${classNames.logoutButton || ''}`}
+                        className={`
+                            text-left
+                            ${logoutBtnStyles.textColor || 'text-gray-500'}
+                            ${logoutBtnStyles.hoverTextColor || 'hover:text-red-500'}
+                            ${logoutBtnStyles.fontSize || 'text-xs'}
+                            ${logoutBtnStyles.animation || 'transition-colors'}
+                        `.trim().replace(/\s+/g, ' ')}
                     >
                         Logout
                     </button>

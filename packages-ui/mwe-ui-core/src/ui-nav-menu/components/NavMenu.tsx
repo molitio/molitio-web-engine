@@ -3,13 +3,19 @@
 import React, { useState } from 'react';
 import { NavItem, NavBarStyles } from './types/types';
 import NavElement from './NavElement';
+import AccountManagement from '../../ui-common/components/AccountManagement';
 
 type NavMenuProps = {
     items: NavItem[];
     styles?: NavBarStyles;
+    showAccountManagement?: boolean;
+    user?: { name: string; avatarUrl?: string };
+    onLogin?: () => void;
+    onLogout?: () => void;
+    accountManagementStyles?: any;
 };
 
-export default function NavMenu({ items, styles }: NavMenuProps) {
+export default function NavMenu({ items, styles, showAccountManagement, user, onLogin, onLogout, accountManagementStyles }: NavMenuProps) {
     const [isOpen, setIsOpen] = useState(false);
     const [activeId, setActiveId] = useState<string | null>(items[0]?.id || null);
 
@@ -63,6 +69,17 @@ export default function NavMenu({ items, styles }: NavMenuProps) {
                             </div>
                         ))}
                     </ul>
+                    
+                    {showAccountManagement && (
+                        <div className={`lg:hidden border-t ${accountManagementStyles?.dividerColor || 'border-gray-200'} mt-4 pt-6 px-6 pb-6`}>
+                            <AccountManagement 
+                                user={user}
+                                onLogin={onLogin}
+                                onLogout={onLogout}
+                                styles={accountManagementStyles}
+                            />
+                        </div>
+                    )}
                 </div>
             )}
         </>

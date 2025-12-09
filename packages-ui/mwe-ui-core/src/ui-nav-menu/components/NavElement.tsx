@@ -15,11 +15,12 @@ export default function NavElement({ label, href, icon, isActive, styles }: NavE
         padding: 'px-3 py-2',
         rounded: 'rounded-md',
         gap: 'gap-2',
+        animation: 'hover:scale-105 transition-all duration-200',
     };
 
     const menuItemStyles = { ...defaultStyles, ...styles?.menuItem };
 
-    const baseClasses = `flex items-center transition-colors ${menuItemStyles.gap} ${menuItemStyles.padding} ${menuItemStyles.rounded}`;
+    const baseClasses = `flex items-center ${menuItemStyles.gap} ${menuItemStyles.padding} ${menuItemStyles.rounded} ${menuItemStyles.animation}`;
     const stateClasses = isActive 
         ? `${menuItemStyles.activeTextColor} ${menuItemStyles.activeBgColor} ${menuItemStyles.activeFontWeight}` 
         : `${menuItemStyles.textColor} ${menuItemStyles.hoverTextColor} ${menuItemStyles.hoverBgColor}`;
