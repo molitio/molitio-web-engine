@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { NavItem, NavBarStyles } from './types/types';
 import NavElement from './NavElement';
 import AccountManagement from '../../ui-common/components/AccountManagement';
+import Control from '../../ui-common/components/Control';
 
 type NavMenuProps = {
     items: NavItem[];
@@ -48,17 +49,20 @@ export default function NavMenu({ items, styles, showAccountManagement, user, on
                 ))}
             </ul>
 
-            <button 
-                onClick={() => setIsOpen(!isOpen)}
-                className={`${hamburgerStyles.padding} ${hamburgerStyles.textColor} ${hamburgerStyles.hoverTextColor} focus:outline-none lg:hidden`}
-                aria-label="Toggle menu"
-            >
-                {isOpen ? (
-                    <span className={`${hamburgerStyles.iconSize} font-bold`}>✕</span>
-                ) : (
-                    <span className={`${hamburgerStyles.iconSize} font-bold`}>☰</span>
-                )}
-            </button>
+            <div className="lg:hidden">
+                <Control
+                    label={isOpen ? '✕' : '☰'}
+                    onClick={() => setIsOpen(!isOpen)}
+                    ariaLabel="Toggle menu"
+                    styles={{
+                        textColor: hamburgerStyles.textColor,
+                        hoverTextColor: hamburgerStyles.hoverTextColor,
+                        padding: hamburgerStyles.padding,
+                        fontSize: hamburgerStyles.iconSize,
+                        fontWeight: 'font-bold',
+                    }}
+                />
+            </div>
 
             {isOpen && (
                 <div className={`absolute top-16 left-0 w-full ${dropdownStyles.bgColor} ${dropdownStyles.shadow} border-t ${dropdownStyles.borderColor} z-50 lg:hidden`}>

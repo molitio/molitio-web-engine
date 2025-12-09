@@ -78,7 +78,7 @@ export default function Home() {
                 brandMessage="Molitio Sandbox"
                 menuItems={MOCK_MENU_ITEMS}
                 accountManagement={true}
-                //user={MOCK_USER}
+                user={MOCK_USER}
                 styles={{
                     container: {
                         bgColor: 'bg-slate-900',

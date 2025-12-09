@@ -1,4 +1,5 @@
 import React from 'react';
+import Control from './Control';
 
 export type UserProfile = {
     name: string;
@@ -61,24 +62,13 @@ export default function AccountManagement({
 }: AccountManagementProps) {
 
     if (!user) {
-        const loginBtnStyles = styles?.loginButton || {};
         return (
-            <button 
+            <Control
+                label={loginLabel}
                 onClick={onLogin}
-                className={`
-                    ${loginBtnStyles.textColor || 'text-blue-600'}
-                    ${loginBtnStyles.hoverTextColor || 'hover:text-blue-800'}
-                    ${loginBtnStyles.hoverBgColor || 'hover:bg-blue-50'}
-                    ${loginBtnStyles.fontSize || 'text-sm'}
-                    ${loginBtnStyles.fontWeight || 'font-medium'}
-                    ${loginBtnStyles.padding || 'px-3 py-2'}
-                    ${loginBtnStyles.rounded || 'rounded-md'}
-                    ${loginBtnStyles.animation || 'transition-colors'}
-                    ${className}
-                `.trim().replace(/\s+/g, ' ')}
-            >
-                {loginLabel}
-            </button>
+                className={className}
+                styles={styles?.loginButton}
+            />
         );
     }
 
@@ -116,27 +106,22 @@ export default function AccountManagement({
                 </div>
             )}
 
-            <div className="flex flex-col">
+            <div className="flex flex-col justify-center">
                 <span className={`
                     ${userNameStyles.textColor || 'text-gray-700'}
                     ${userNameStyles.fontSize || 'text-sm'}
                     ${userNameStyles.fontWeight || 'font-medium'}
+                    leading-tight
                 `.trim().replace(/\s+/g, ' ')}>
                     Hi, {user.name}
                 </span>
                 {onLogout && (
-                    <button 
-                        onClick={onLogout} 
-                        className={`
-                            text-left
-                            ${logoutBtnStyles.textColor || 'text-gray-500'}
-                            ${logoutBtnStyles.hoverTextColor || 'hover:text-red-500'}
-                            ${logoutBtnStyles.fontSize || 'text-xs'}
-                            ${logoutBtnStyles.animation || 'transition-colors'}
-                        `.trim().replace(/\s+/g, ' ')}
-                    >
-                        Logout
-                    </button>
+                    <Control
+                        label="Logout"
+                        onClick={onLogout}
+                        className="text-left mt-0.5"
+                        styles={styles?.logoutButton}
+                    />
                 )}
             </div>
         </div>
